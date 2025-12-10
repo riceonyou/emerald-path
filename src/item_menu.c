@@ -947,7 +947,11 @@ static void GetItemNameFromPocket(u8 *dest, enum Item itemId)
         else
         {
             // Get TM number
+<<<<<<< HEAD
             ConvertIntToDecimalStringN(gStringVar1, GetItemTMHMIndex(itemId), STR_CONV_MODE_LEADING_ZEROS, NUM_TECHNICAL_MACHINES >= 100 ? 3 : 2);
+=======
+            ConvertIntToDecimalStringN(gStringVar1, GetItemTMHMIndex(itemId), STR_CONV_MODE_LEADING_ZEROS, 3);
+>>>>>>> e4e2a15bdb (Implement Gen9 TMs)
             StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
         }
         break;
