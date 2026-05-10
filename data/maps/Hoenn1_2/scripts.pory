@@ -1,0 +1,23 @@
+mapscripts Hoenn1_2_MapScripts {
+}
+
+script Hoenn1_2_EventScript_Treecko{
+ 
+	trainerbattle_single(TRAINER_HOENN1_2_TREECKO, Treecko_Intro, Treecko_Outro)
+	msgbox(PostBattle_Treecko, MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+ 
+text Treecko_Intro{
+    "You'll never win"
+}
+ 
+text Treecko_Outro{
+    "Doesn't count"
+}
+ 
+text PostBattle_Treecko{
+    "I'll win next time"
+}
