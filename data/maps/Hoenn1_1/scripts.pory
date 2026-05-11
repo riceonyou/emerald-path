@@ -6,6 +6,7 @@ script Hoenn1_1_EventScript_Pokeball{
     lockall
     setflag(FLAG_SYS_POKEDEX_GET)
     setflag(FLAG_SYS_POKEMON_GET)
+    giveitem(ITEM_MASTER_BALL, 10)
     showmonpic(SPECIES_MUDKIP, 10,3)
     msgbox("Do you want to choose Mudkip?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
