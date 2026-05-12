@@ -17,12 +17,17 @@
       "map": "MAP_HOENN1_1",
       "offset": 2,
       "direction": "left"
+    },
+    {
+      "map": "MAP_HOENN1_3",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TREECKO)",
-      "x": 10,
+      "x": 8,
       "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",

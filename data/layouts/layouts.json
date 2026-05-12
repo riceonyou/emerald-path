@@ -9337,7 +9337,7 @@
     {
       "id": "LAYOUT_HOENN1_2",
       "name": "Hoenn1_2_Layout",
-      "width": 24,
+      "width": 22,
       "height": 14,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -9347,12 +9347,32 @@
     {
       "id": "LAYOUT_HOENN1_3",
       "name": "Hoenn1_3_Layout",
-      "width": 34,
-      "height": 25,
+      "width": 30,
+      "height": 29,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Hoenn1_3/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn1_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_4",
+      "name": "Hoenn1_4_Layout",
+      "width": 32,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Hoenn1_4/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_5",
+      "name": "Hoenn1_5_Layout",
+      "width": 10,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Hoenn1_5/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_5/map.bin"
     }
   ]
 }

@@ -12,118 +12,120 @@ Hoenn1_1_EventScript_Pokeball::
 # 9 "data/maps/Hoenn1_1/scripts.pory"
 	giveitem ITEM_MASTER_BALL, 10
 # 10 "data/maps/Hoenn1_1/scripts.pory"
-	showmonpic SPECIES_MUDKIP, 10, 3
+	giveitem ITEM_RARE_CANDY, 10
 # 11 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox Hoenn1_1_EventScript_Pokeball_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_MUDKIP, 10, 3
 # 12 "data/maps/Hoenn1_1/scripts.pory"
+	msgbox Hoenn1_1_EventScript_Pokeball_Text_0, MSGBOX_YESNO
+# 13 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Hoenn1_1_EventScript_Pokeball_2
-# 34 "data/maps/Hoenn1_1/scripts.pory"
-	hidemonpic
 # 35 "data/maps/Hoenn1_1/scripts.pory"
+	hidemonpic
+# 36 "data/maps/Hoenn1_1/scripts.pory"
 	msgbox Hoenn1_1__NotChosen
 Hoenn1_1_EventScript_Pokeball_1:
-# 37 "data/maps/Hoenn1_1/scripts.pory"
-	waitmessage
 # 38 "data/maps/Hoenn1_1/scripts.pory"
+	waitmessage
+# 39 "data/maps/Hoenn1_1/scripts.pory"
 	releaseall
 	end
 
 Hoenn1_1_EventScript_Pokeball_2:
-# 13 "data/maps/Hoenn1_1/scripts.pory"
-	givemon SPECIES_MUDKIP, 50, ITEM_MASTER_BALL
 # 14 "data/maps/Hoenn1_1/scripts.pory"
+	givemon SPECIES_TORCHIC, 50, ITEM_MASTER_BALL
+# 15 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Hoenn1_1_EventScript_Pokeball_5
-# 21 "data/maps/Hoenn1_1/scripts.pory"
+# 22 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq Hoenn1_1_EventScript_Pokeball_6
-# 29 "data/maps/Hoenn1_1/scripts.pory"
-	hidemonpic
 # 30 "data/maps/Hoenn1_1/scripts.pory"
+	hidemonpic
+# 31 "data/maps/Hoenn1_1/scripts.pory"
 	msgbox Hoenn1_1_EventScript_Pokeball_Text_2
 	goto Hoenn1_1_EventScript_Pokeball_1
 
 Hoenn1_1_EventScript_Pokeball_5:
-# 15 "data/maps/Hoenn1_1/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 16 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox Hoenn1_1_EventScript_Pokeball_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 17 "data/maps/Hoenn1_1/scripts.pory"
-	removeobject 1
+	msgbox Hoenn1_1_EventScript_Pokeball_Text_1
 # 18 "data/maps/Hoenn1_1/scripts.pory"
-	setflag FLAG_UNUSED_0x020
+	removeobject 1
 # 19 "data/maps/Hoenn1_1/scripts.pory"
+	setflag FLAG_UNUSED_0x020
+# 20 "data/maps/Hoenn1_1/scripts.pory"
 	call NicknamePartyMon
 	goto Hoenn1_1_EventScript_Pokeball_1
 
 Hoenn1_1_EventScript_Pokeball_6:
-# 22 "data/maps/Hoenn1_1/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 23 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox Hoenn1_1_EventScript_Pokeball_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 24 "data/maps/Hoenn1_1/scripts.pory"
-	removeobject 1
+	msgbox Hoenn1_1_EventScript_Pokeball_Text_1
 # 25 "data/maps/Hoenn1_1/scripts.pory"
-	setflag FLAG_UNUSED_0x020
+	removeobject 1
 # 26 "data/maps/Hoenn1_1/scripts.pory"
+	setflag FLAG_UNUSED_0x020
+# 27 "data/maps/Hoenn1_1/scripts.pory"
 	call NicknameBoxMon
 	goto Hoenn1_1_EventScript_Pokeball_1
 
 
 NicknamePartyMon::
-# 45 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 46 "data/maps/Hoenn1_1/scripts.pory"
-	hidemonpic
+	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 47 "data/maps/Hoenn1_1/scripts.pory"
+	hidemonpic
+# 48 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknamePartyMon_1
 	return
 
 NicknamePartyMon_1:
-# 48 "data/maps/Hoenn1_1/scripts.pory"
-	call Common_EventScript_GetGiftMonPartySlot
 # 49 "data/maps/Hoenn1_1/scripts.pory"
+	call Common_EventScript_GetGiftMonPartySlot
+# 50 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 NicknameBoxMon::
-# 57 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 58 "data/maps/Hoenn1_1/scripts.pory"
-	hidemonpic
+	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
 # 59 "data/maps/Hoenn1_1/scripts.pory"
+	hidemonpic
+# 60 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknameBoxMon_2
 NicknameBoxMon_1:
-# 62 "data/maps/Hoenn1_1/scripts.pory"
+# 63 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_TransferredToPC
 	return
 
 NicknameBoxMon_2:
-# 60 "data/maps/Hoenn1_1/scripts.pory"
+# 61 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
 
 
 Hoenn1_1_EventScript_Pokeball_Text_0:
-# 11 "data/maps/Hoenn1_1/scripts.pory"
+# 12 "data/maps/Hoenn1_1/scripts.pory"
 	.string "Do you want to choose Mudkip?$"
 
 Hoenn1_1_EventScript_Pokeball_Text_1:
-# 16 "data/maps/Hoenn1_1/scripts.pory"
+# 17 "data/maps/Hoenn1_1/scripts.pory"
 	.string "Recieved Mudkip$"
 
 Hoenn1_1_EventScript_Pokeball_Text_2:
-# 30 "data/maps/Hoenn1_1/scripts.pory"
+# 31 "data/maps/Hoenn1_1/scripts.pory"
 	.string "No More Room$"
 
 NicknamePartyMon_Text_0:
-# 45 "data/maps/Hoenn1_1/scripts.pory"
+# 46 "data/maps/Hoenn1_1/scripts.pory"
 	.string "Give it a nickname?$"
 
 Hoenn1_1__NotChosen::
-# 66 "data/maps/Hoenn1_1/scripts.pory"
+# 67 "data/maps/Hoenn1_1/scripts.pory"
 	.string "You did not choose the Pokemon$"

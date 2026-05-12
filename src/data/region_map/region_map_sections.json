@@ -1642,6 +1642,14 @@
     {
       "id": "MAPSEC_AG_Hoenn1_3",
       "name": "Area 3"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn1_4",
+      "name": "AG Hoenn1 4"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn1_5",
+      "name": "AG Hoenn1 5"
     }
   ]
 }

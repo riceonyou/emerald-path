@@ -1,9 +1,9 @@
 {
-  "id": "MAP_HOENN1_3",
-  "name": "Hoenn1_3",
-  "layout": "LAYOUT_HOENN1_3",
+  "id": "MAP_HOENN1_4",
+  "name": "Hoenn1_4",
+  "layout": "LAYOUT_HOENN1_4",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_AG_Hoenn1_3",
+  "region_map_section": "MAPSEC_AG_Hoenn1_4",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -14,14 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_HOENN1_2",
+      "map": "MAP_HOENN1_3",
       "offset": 0,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_HOENN1_4",
-      "offset": 0,
-      "direction": "down"
+      "direction": "up"
     }
   ],
   "object_events": [],
