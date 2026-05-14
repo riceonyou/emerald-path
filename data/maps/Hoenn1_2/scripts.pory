@@ -11,13 +11,34 @@ script Hoenn1_2_EventScript_Treecko{
 }
  
 text Treecko_Intro{
-    "You'll never win"
+    "Yo I'm Treecko. Grrr."
 }
  
 text Treecko_Outro{
-    "Doesn't count"
+    "Damn you got me."
 }
  
 text PostBattle_Treecko{
-    "I'll win next time"
+    "I'll get you next time."
+}
+
+script Hoenn1_2_EventScript_Zigzagoon{
+ 
+	trainerbattle_single(TRAINER_HOENN1_2_ZIGZAGOON, Zigzagoon_Intro, Zigzagoon_Outro)
+	msgbox(PostBattle_Zigzagoon, MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+ 
+text Zigzagoon_Intro{
+    "I'm Zigzagoon. I like to go in zigzags."
+}
+ 
+text Zigzagoon_Outro{
+    "Zagoon :("
+}
+ 
+text PostBattle_Zigzagoon{
+    "Goon Goon!"
 }

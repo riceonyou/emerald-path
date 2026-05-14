@@ -302,7 +302,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_TORCHIC
     [SPECIES_TORCHIC] =
     {
-        .baseHP        = 45 + 200,
+        .baseHP        = 45,
         .baseAttack    = 60,
         .baseDefense   = 40 + 5,
         .baseSpeed     = 45 + 5,
@@ -787,10 +787,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 100,
         .baseAttack    = 110,
-        .baseDefense   = 90,
+        .baseDefense   = 90 + 5,
         .baseSpeed     = 60,
-        .baseSpAttack  = 85,
-        .baseSpDefense = 90,
+        .baseSpAttack  = 85 + 15,
+        .baseSpDefense = 90 + 5,
         .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8

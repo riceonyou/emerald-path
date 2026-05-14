@@ -1645,11 +1645,23 @@
     },
     {
       "id": "MAPSEC_AG_Hoenn1_4",
-      "name": "AG Hoenn1 4"
+      "name": "Area 4"
     },
     {
       "id": "MAPSEC_AG_Hoenn1_5",
-      "name": "AG Hoenn1 5"
+      "name": "Area 5"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn1_6",
+      "name": "Area 6"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn1_7",
+      "name": "Area 7"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn1_8",
+      "name": "AG Hoenn1 8"
     }
   ]
 }

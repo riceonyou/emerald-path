@@ -1,0 +1,32 @@
+mapscripts Hoenn1_3_MapScripts {
+}
+
+script Hoenn1_3_EventScript_Poochyena{
+ 
+	trainerbattle_single(TRAINER_HOENN1_3_POOCHYENA, Poochyena_Intro, Poochyena_Outro)
+	msgbox(PostBattle_Poochyena, MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+ 
+text Poochyena_Intro{
+    "Ruff Ruff! Yena!"
+}
+ 
+text Poochyena_Outro{
+    "whimpers"
+}
+ 
+text PostBattle_Poochyena{
+    "Yena Poo Poo."
+}
+
+script Hoenn1_3_EventScript_Lotad{
+ 
+	trainerbattle_single(TRAINER_HOENN1_3_LOTAD, "Hola. Me llamo Lotad.", "Perdido.")
+	msgbox("Que pasa amigo.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}

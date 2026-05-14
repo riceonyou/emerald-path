@@ -1,4 +1,9 @@
 mapscripts Hoenn1_1_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Hoenn1_1_OnLoad
+}
+
+script Hoenn1_1_OnLoad{
+    setvar(B_LEVEL_CAP_VARIABLE, 14)
 }
 
 script Hoenn1_1_EventScript_Pokeball{
@@ -7,21 +12,21 @@ script Hoenn1_1_EventScript_Pokeball{
     setflag(FLAG_SYS_POKEDEX_GET)
     setflag(FLAG_SYS_POKEMON_GET)
     giveitem(ITEM_MASTER_BALL, 10)
-    giveitem(ITEM_RARE_CANDY, 10)
-    showmonpic(SPECIES_MUDKIP, 10,3)
-    msgbox("Do you want to choose Mudkip?", MSGBOX_YESNO)
+    giveitem(ITEM_RARE_CANDY, 100)
+    showmonpic(SPECIES_TORCHIC, 10,3)
+    msgbox("Do you want to choose Torchic?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_TORCHIC, 50, ITEM_MASTER_BALL)
+        givemon(SPECIES_TORCHIC, 5, ITEM_MASTER_BALL)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Mudkip")
+            msgbox("Recieved Torchic")
             removeobject(1)
             setflag(FLAG_UNUSED_0x020)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Mudkip")
+            msgbox("Recieved Torchic")
             removeobject(1)
             setflag(FLAG_UNUSED_0x020)
             call(NicknameBoxMon)

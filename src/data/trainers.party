@@ -79,68 +79,133 @@ Pic: Hiker
 Gender: Male
 Music: Male
 Double Battle: No
+AI: Basic Trainer
 
-Treecko
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Treecko @ Oran Berry  
+Level: 12  
+Adamant Nature
+- Leafage
+- Pound
+- Leer
 
 
-
-=== TRAINER_SAWYER_1 ===
-Name: SAWYER
-Class: Hiker
+=== TRAINER_HOENN1_2_ZIGZAGOON ===
+Name: ZIGZAGOON
+Class: Pkmn Trainer 1
 Pic: Hiker
 Gender: Male
-Music: Hiker
+Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon @ Oran Berry   
+Level: 11  
+- Tackle  
+- Quick Attack  
+- Growl
+- Sand Attack
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
+Lillipup  
+Level: 10 
+- Bite  
+- Tackle  
+- Sand Attack
+
+=== TRAINER_HOENN1_3_POOCHYENA ===
+Name: POOCHYENA
+Class: Pkmn Trainer 1
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Poochyena @ Oran Berry
+Adamant Nature
+Level: 11   
+- Bite  
+- Quick Attack  
+- Sand Attack
+
+Maschiff   
+Level: 9  
+- Snarl  
+- Tackle  
+- Bite  
+- Leer
+
+
+
+
+
+=== TRAINER_HOENN1_4_WINGULL ===
+Name: WINGULL
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Wingull @ Wacan Berry
+Level: 12
+- Water Gun
+- Wing Attack
+- Supersonic
+- Growl
+
+Taillow
+Level: 10
+- Peck
+- Quick Attack
+- Focus Energy
+- Growl
+
+Tentacool @ Black Sludge
+Level: 10
+- Bubble
+- Poison Sting
+- Supersonic
+- Constrict
+
+
+
+
+
+=== TRAINER_HOENN1_3_LOTAD ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Poochyena
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lotad @ Oran Berry
+Nature: Calm
+Level: 11
+- Mega Drain
+- Astonish
+- Rain Dance
+- Growl
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
+Surskit
+Nature: Timid
+Level: 10
+- Bubble
+- Quick Attack
+- Sweet Scent
+- Water Sport
 
-Zubat
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seedot
+Nature: Careful
+Level: 11
+- Bide
+- Harden
+- Rollout
 
-Carvanha
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
 
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
 Name: GRUNT
