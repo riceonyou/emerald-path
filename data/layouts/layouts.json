@@ -9404,6 +9404,26 @@
       "border_filepath": "data/layouts/Hoenn1_8/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn1_8/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HOENN2_1",
+      "name": "Hoenn2_1_Layout",
+      "width": 20,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Hoenn2_1/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn2_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN2_2",
+      "name": "Hoenn2_2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Hoenn2_2/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn2_2/map.bin"
     }
   ]
 }

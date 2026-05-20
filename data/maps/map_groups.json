@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_AG_Hoenn1"
+    "gMapGroup_AG_Hoenn1",
+    "gMapGroup_AG_Hoenn2"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -134,7 +135,8 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "Hoenn2_2"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1171,5 +1173,8 @@
     "Hoenn1_6",
     "Hoenn1_7",
     "Hoenn1_8"
+  ],
+  "gMapGroup_AG_Hoenn2": [
+    "Hoenn2_1"
   ]
 }

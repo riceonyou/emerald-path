@@ -9,8 +9,8 @@
 #define TRAINER_HOENN1_3_POOCHYENA          2
 #define TRAINER_HOENN1_4_WINGULL          3
 #define TRAINER_HOENN1_3_LOTAD          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
+#define TRAINER_HOENN1_5_ODDISH          5
+#define TRAINER_HOENN1_5_WURMPLE       6
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
 #define TRAINER_GABRIELLE_1                   9

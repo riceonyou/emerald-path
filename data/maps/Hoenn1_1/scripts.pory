@@ -4,13 +4,14 @@ mapscripts Hoenn1_1_MapScripts {
 
 script Hoenn1_1_OnLoad{
     setvar(B_LEVEL_CAP_VARIABLE, 14)
+    setflag(FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_SYS_POKEMON_GET)
 }
 
 script Hoenn1_1_EventScript_Pokeball{
  
     lockall
-    setflag(FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_SYS_POKEMON_GET)
+
     giveitem(ITEM_MASTER_BALL, 10)
     giveitem(ITEM_RARE_CANDY, 100)
     giveitem(ITEM_CANDY_JAR)

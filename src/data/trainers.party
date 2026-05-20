@@ -207,31 +207,77 @@ Level: 11
 
 
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
+=== TRAINER_HOENN1_5_ODDISH ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Oddish @ Miracle Seed
+Nature: Calm
+Level: 13
+- Absorb
+- Acid
+- Sleep Powder
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
+Bellsprout
+Level: 11
+- Vine Whip
+- Growth
+- Sleep Powder
+- Wrap
+
+Roselia @ Oran Berry
+Nature: Timid
+Level: 11
+- Absorb
+- Sleep Powder
+- Growth
+- Water Sport
+
+=== TRAINER_HOENN1_5_WURMPLE ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Poochyena
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wurmple
+Level: 5
+- Poison Sting
+- String Shot
+- Tackle
+
+Silcoon @ Rocky Helmet
+Nature: Bold
+Level: 10
+- Poison Sting
+- Harden
+
+Cascoon @ Rocky Helmet
+Nature: Careful
+Level: 10
+- Poison Sting
+- Harden
+
+Dustox
+Nature: Modest
+Level: 10
+- Gust
+- Confusion
+- Toxic
+
+Beautifly
+Nature: Adamant
+Level: 10
+- U-turn
+- Poison Sting
+- Aerial Ace
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
 Name: GRUNT
