@@ -8,9 +8,28 @@ script Hoenn1_1_OnLoad{
     setflag(FLAG_SYS_POKEMON_GET)
 }
 
+script Hoenn1_1_EventScript_Sign{
+    lockall
+
+    if(flag(FLAG_NUZLOCKETEST) == TRUE){
+        msgbox("Location is used")
+    }
+    else{
+        msgbox("Location is unused")
+    }    
+
+    waitmessage
+    releaseall
+}
+
 script Hoenn1_1_EventScript_Pokeball{
  
     lockall
+    //setflag(FLAG_NUZLOCKE)
+    if(flag(FLAG_NUZLOCKE) == TRUE){
+        msgbox("nuzlockemodeison")
+
+        }
 
     giveitem(ITEM_MASTER_BALL, 10)
     giveitem(ITEM_RARE_CANDY, 100)

@@ -111,6 +111,7 @@ struct CableClubPlayer
 
 extern const struct MapLayout *const gMapLayouts[];
 extern const struct MapHeader *const *const gMapGroups[];
+extern bool8 gNuzlockeEnabled;
 
 static void Overworld_ResetStateAfterWhiteOut(void);
 static void CB2_ReturnToFieldLocal(void);
@@ -1887,6 +1888,10 @@ void CB2_NewGame(void)
     StopMapMusic();
     ResetSafariZoneFlag_();
     NewGameInitData();
+    if (gNuzlockeEnabled) // <- set nuzlocke flag
+        FlagSet(FLAG_NUZLOCKE);
+    else
+        FlagClear(FLAG_NUZLOCKE);
     ResetInitialPlayerAvatarState();
     PlayTimeCounter_Start();
     ScriptContext_Init();

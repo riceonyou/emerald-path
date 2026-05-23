@@ -174,6 +174,7 @@
 
 static EWRAM_DATA bool8 sStartedPokeBallTask = 0;
 static EWRAM_DATA u16 sCurrItemAndOptionMenuCheck = 0;
+EWRAM_DATA bool8 gNuzlockeEnabled = FALSE;
 
 static u8 sBirchSpeechMainTaskId;
 static bool8 sNuzlockeModeSelected = FALSE;
@@ -1812,7 +1813,7 @@ static void Task_NewGameBirchSpeech_ProcessNuzlockeYesNoMenu(u8 taskId)
 
 static void Task_NewGameBirchSpeech_YesNuzlocke(u8 taskId)
 {
-    FlagSet(FLAG_NUZLOCKE);
+    gNuzlockeEnabled = TRUE;
     sNuzlockeModeSelected = TRUE;
     NewGameBirchSpeech_ClearWindow(0);
     StringExpandPlaceholders(gStringVar4, gText_Birch_YesNuzlocke);
@@ -1822,7 +1823,6 @@ static void Task_NewGameBirchSpeech_YesNuzlocke(u8 taskId)
 
 static void Task_NewGameBirchSpeech_NoNuzlocke(u8 taskId)
 {
-    FlagClear(FLAG_NUZLOCKE);
     NewGameBirchSpeech_ClearWindow(0);
     StringExpandPlaceholders(gStringVar4, gText_Birch_NoNuzlocke);
     AddTextPrinterForMessage(TRUE);
