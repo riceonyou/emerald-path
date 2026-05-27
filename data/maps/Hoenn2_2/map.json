@@ -3,7 +3,7 @@
   "name": "Hoenn2_2",
   "layout": "LAYOUT_HOENN2_2",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_AG_Hoenn2_2",
+  "region_map_section": "MAPSEC_AG_Hoenn2",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_HOENN2_1",
-      "offset": 0,
+      "offset": 2,
       "direction": "left"
+    },
+    {
+      "map": "MAP_HOENN2_3",
+      "offset": -4,
+      "direction": "right"
     }
   ],
   "object_events": [],

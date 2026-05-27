@@ -9419,11 +9419,71 @@
       "id": "LAYOUT_HOENN2_2",
       "name": "Hoenn2_2_Layout",
       "width": 20,
-      "height": 20,
+      "height": 22,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Hoenn2_2/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn2_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN2_3",
+      "name": "Hoenn2_3_Layout",
+      "width": 23,
+      "height": 29,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Hoenn2_3/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn2_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN2_4",
+      "name": "Hoenn2_4_Layout",
+      "width": 27,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Hoenn2_4/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn2_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN2_5",
+      "name": "Hoenn2_5_Layout",
+      "width": 31,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Hoenn2_5/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn2_5/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN2_6",
+      "name": "Hoenn2_6_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MauvilleGym",
+      "border_filepath": "data/layouts/Hoenn2_6/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn2_6/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_1",
+      "name": "Hoenn3_1_Layout",
+      "width": 20,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Hoenn3_1/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_2",
+      "name": "Hoenn3_2_Layout",
+      "width": 20,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Hoenn3_2/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_2/map.bin"
     }
   ]
 }

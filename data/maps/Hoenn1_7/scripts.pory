@@ -1,2 +1,62 @@
 mapscripts Hoenn1_7_MapScripts {
 }
+
+script Hoenn1_7_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    special(ResetBirchBagWeightedPool)
+
+    setvar(VAR_0x8000, SPECIES_MEOWTH)
+    setvar(VAR_0x8001, 25)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_GLAMEOW)
+    setvar(VAR_0x8001, 25)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_MEOWTH_ALOLA)
+    setvar(VAR_0x8001, 25)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_MEOWTH_GALAR)
+    setvar(VAR_0x8001, 25)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_SKITTY)
+    setvar(VAR_0x8001, 30)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_ESPURR)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_PURRLOIN)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_MEOWSTIC)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_SHINX)
+    setvar(VAR_0x8001, 15)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_LITLEO)
+    setvar(VAR_0x8001, 15)
+    special(AddBirchBagWeightedChoice)
+	setvar(VAR_0x8000, SPECIES_LITTEN)
+    setvar(VAR_0x8001, 5)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_EEVEE)
+    setvar(VAR_0x8001, 5)
+    special(AddBirchBagWeightedChoice)
+	
+
+    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_7_BIRCHBAG)
+    setflag(FLAG_HOENN1_7_BIRCHBAG)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+ 
+}

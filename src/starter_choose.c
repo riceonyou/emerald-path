@@ -4,6 +4,8 @@
 #include "decompress.h"
 #include "event_data.h"
 #include "gpu_regs.h"
+#include "nuzlocke.h"
+#include "overworld.h"
 #include "international_string_util.h"
 #include "main.h"
 #include "menu.h"
@@ -23,6 +25,10 @@
 #include "window.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
+#include "random.h"
+#include "script_pokemon_util.h"
+#include "caps.h"
+#include "string_util.h"
 
 #define STARTER_MON_COUNT   3
 
@@ -347,10 +353,17 @@ static const struct SpriteTemplate sSpriteTemplate_StarterCircle =
 };
 
 // .text
+static u16 sBirchBagSelectedSpecies[STARTER_MON_COUNT];
+static bool8 sUseCustomBirchBagStarters;
+
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
-    if (chosenStarterId > STARTER_MON_COUNT)
+    if (chosenStarterId >= STARTER_MON_COUNT)
         chosenStarterId = 0;
+
+    if (sUseCustomBirchBagStarters)
+        return sBirchBagSelectedSpecies[chosenStarterId];
+
     return sStarterMon[chosenStarterId];
 }
 
@@ -663,4 +676,192 @@ static void SpriteCB_StarterPokemon(struct Sprite *sprite)
         sprite->y -= 2;
     if (sprite->y < STARTER_PKMN_POS_Y)
         sprite->y += 2;
+}
+
+// ======== WEIGHTED SELECTION SYSTEM ========
+// Stores the weighted pool for Birch's bag selections
+static struct BirchBagWeightedChoice sBirchBagWeightedPool[32];
+static u8 sBirchBagWeightedPoolSize = 0;
+static u16 sBirchBagWeightedPoolTotalWeight = 0;
+
+static bool8 BirchBagPlayerOwnsSpecies(u16 species)
+{
+    //u8 i, j;
+
+    if (species == SPECIES_NONE)
+        return TRUE;
+
+    if (PlayerOwnsSpecies(species))
+        return TRUE;
+
+    return FALSE;
+}
+
+static bool8 IsSpeciesInWeightedPool(u16 species)
+{
+    u8 i;
+
+    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
+        if (sBirchBagWeightedPool[i].species == species)
+            return TRUE;
+
+    return FALSE;
+}
+
+static bool8 IsSpeciesExcluded(u16 species, const u16 *excluded, u8 excludedCount)
+{
+    u8 i;
+
+    for (i = 0; i < excludedCount; i++)
+        if (excluded[i] == species)
+            return TRUE;
+
+    return FALSE;
+}
+
+void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8 count)
+{
+    u8 i;
+    
+    if (count > ARRAY_COUNT(sBirchBagWeightedPool))
+        count = ARRAY_COUNT(sBirchBagWeightedPool);
+    
+    sBirchBagWeightedPoolSize = count;
+    sBirchBagWeightedPoolTotalWeight = 0;
+    
+    for (i = 0; i < count; i++)
+    {
+        sBirchBagWeightedPool[i] = choices[i];
+        sBirchBagWeightedPoolTotalWeight += choices[i].weight;
+    }
+}
+
+static u16 SelectPokemonFromWeightedPoolExclude(const u16 *excluded, u8 excludedCount)
+{
+    u16 totalWeight = 0;
+    u16 randValue;
+    u16 cumulativeWeight = 0;
+    u8 i;
+
+    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
+    {
+        if (!IsSpeciesExcluded(sBirchBagWeightedPool[i].species, excluded, excludedCount))
+            totalWeight += sBirchBagWeightedPool[i].weight;
+    }
+
+    if (totalWeight == 0)
+        return SPECIES_NONE;
+
+    randValue = Random() % totalWeight;
+
+    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
+    {
+        if (IsSpeciesExcluded(sBirchBagWeightedPool[i].species, excluded, excludedCount))
+            continue;
+
+        cumulativeWeight += sBirchBagWeightedPool[i].weight;
+        if (randValue < cumulativeWeight)
+            return sBirchBagWeightedPool[i].species;
+    }
+
+    return SPECIES_NONE;
+}
+
+static void PrepareBirchBagWeightedStarterChoices(void)
+{
+    u8 i, j;
+    u16 excluded[STARTER_MON_COUNT];
+    u16 species;
+
+    for (i = 0; i < STARTER_MON_COUNT; i++)
+        sBirchBagSelectedSpecies[i] = SPECIES_NONE;
+
+    for (i = 0; i < STARTER_MON_COUNT; i++)
+    {
+        species = SelectPokemonFromWeightedPoolExclude(excluded, i);
+        if (species == SPECIES_NONE)
+            break;
+
+        sBirchBagSelectedSpecies[i] = species;
+        excluded[i] = species;
+    }
+
+    for (; i < STARTER_MON_COUNT; i++)
+    {
+        for (j = 0; j < STARTER_MON_COUNT; j++)
+        {
+            u16 defaultSpecies = sStarterMon[j];
+            if (!IsSpeciesExcluded(defaultSpecies, sBirchBagSelectedSpecies, i))
+            {
+                sBirchBagSelectedSpecies[i] = defaultSpecies;
+                break;
+            }
+        }
+
+        if (sBirchBagSelectedSpecies[i] == SPECIES_NONE)
+            sBirchBagSelectedSpecies[i] = sStarterMon[0];
+    }
+
+    sUseCustomBirchBagStarters = TRUE;
+}
+
+// Reset the pool (call before building a new one from script)
+void ResetBirchBagWeightedPool(void)
+{
+    sBirchBagWeightedPoolSize = 0;
+    sBirchBagWeightedPoolTotalWeight = 0;
+    sUseCustomBirchBagStarters = FALSE;
+}
+
+// Add a single choice to the pool (called from script multiple times)
+// Set gSpecialVar_0x8000 = species, gSpecialVar_0x8001 = weight before calling
+void AddBirchBagWeightedChoice(void)
+{
+    u16 species;
+    u16 weight;
+
+    if (sBirchBagWeightedPoolSize >= ARRAY_COUNT(sBirchBagWeightedPool))
+        return;  // Pool is full
+
+    species = gSpecialVar_0x8000;
+    weight = gSpecialVar_0x8001;
+
+    if (species == SPECIES_NONE || weight == 0)
+        return;
+
+    if (BirchBagPlayerOwnsSpecies(species))
+        return;
+
+    if (IsSpeciesInWeightedPool(species))
+        return;
+
+    sBirchBagWeightedPool[sBirchBagWeightedPoolSize].species = species;
+    sBirchBagWeightedPool[sBirchBagWeightedPoolSize].weight = weight;
+    sBirchBagWeightedPoolSize++;
+    sBirchBagWeightedPoolTotalWeight += weight;
+}
+
+// Callback that gives the Pokémon without starting a battle
+static void CB2_GiveBirchBagPokemonNoBattle(void)
+{
+    u16 chosenSpecies = GetStarterPokemon(gSpecialVar_Result);
+
+    if (chosenSpecies != SPECIES_NONE)
+    {
+        ScriptGiveMon(chosenSpecies, GetCurrentLevelCap() - 9, ITEM_NONE, ITEM_NONE);
+    }
+    ScriptContext_Enable();
+    StringCopy(gStringVar1, gSpeciesInfo[chosenSpecies].speciesName);
+    SetMainCallback2(CB2_ReturnToField);
+}
+
+// Trigger weighted Pokémon selection for Birch's bag
+void ChooseBirchBagPokemonWeighted(void)
+{
+    if (sBirchBagWeightedPoolSize == 0)
+        return;
+
+    PrepareBirchBagWeightedStarterChoices();
+    gMain.savedCallback = CB2_GiveBirchBagPokemonNoBattle;
+    SetMainCallback2(CB2_ChooseStarter);
 }

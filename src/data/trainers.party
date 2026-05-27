@@ -82,7 +82,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Treecko @ Oran Berry  
-Level: 12  
+Level: 10  
 Adamant Nature
 - Leafage
 - Pound
@@ -99,14 +99,14 @@ Double Battle: No
 AI: Basic Trainer
 
 Zigzagoon @ Oran Berry   
-Level: 11  
+Level: 10  
 - Tackle  
 - Quick Attack  
 - Growl
 - Sand Attack
 
 Lillipup  
-Level: 10 
+Level: 9 
 - Bite  
 - Tackle  
 - Sand Attack
@@ -122,7 +122,7 @@ AI: Basic Trainer
 
 Poochyena @ Oran Berry
 Adamant Nature
-Level: 11   
+Level: 10   
 - Bite  
 - Quick Attack  
 - Sand Attack
@@ -148,7 +148,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Wingull @ Wacan Berry
-Level: 12
+Level: 11
 - Water Gun
 - Wing Attack
 - Supersonic
@@ -183,7 +183,7 @@ AI: Basic Trainer
 
 Lotad @ Oran Berry
 Nature: Calm
-Level: 11
+Level: 10
 - Mega Drain
 - Astonish
 - Rain Dance
@@ -191,7 +191,7 @@ Level: 11
 
 Surskit
 Nature: Timid
-Level: 10
+Level: 9
 - Bubble
 - Quick Attack
 - Sweet Scent
@@ -199,7 +199,7 @@ Level: 10
 
 Seedot
 Nature: Careful
-Level: 11
+Level: 10
 - Bide
 - Harden
 - Rollout
@@ -218,13 +218,13 @@ AI: Basic Trainer
 
 Oddish @ Miracle Seed
 Nature: Calm
-Level: 13
+Level: 10
 - Absorb
 - Acid
 - Sleep Powder
 
 Bellsprout
-Level: 11
+Level: 10
 - Vine Whip
 - Growth
 - Sleep Powder
@@ -232,7 +232,7 @@ Level: 11
 
 Roselia @ Oran Berry
 Nature: Timid
-Level: 11
+Level: 9
 - Absorb
 - Sleep Powder
 - Growth
@@ -251,18 +251,15 @@ Wurmple
 Level: 5
 - Poison Sting
 - String Shot
-- Tackle
 
 Silcoon @ Rocky Helmet
 Nature: Bold
-Level: 10
-- Poison Sting
+Level: 8
 - Harden
 
 Cascoon @ Rocky Helmet
 Nature: Careful
-Level: 10
-- Poison Sting
+Level: 8
 - Harden
 
 Dustox

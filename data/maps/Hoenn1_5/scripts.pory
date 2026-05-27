@@ -1,2 +1,83 @@
 mapscripts Hoenn1_5_MapScripts {
 }
+
+script Hoenn1_5_EventScript_Oddish{
+ 
+	trainerbattle_single(TRAINER_HOENN1_5_ODDISH, "Hello.", "Goodbye.")
+	msgbox("Hello again.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
+script Hoenn1_5_EventScript_Wurmple{
+ 
+	trainerbattle_single(TRAINER_HOENN1_5_WURMPLE, "I'm just a wurm.", "That was a good battle.")
+	msgbox("Don't talk to me right now.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
+script Hoenn1_5_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    special(ResetBirchBagWeightedPool)
+
+    setvar(VAR_0x8000, SPECIES_ODDISH)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_BELLSPROUT)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_WURMPLE)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_WEEDLE)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_CATERPIE)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_COTTONEE)
+    setvar(VAR_0x8001, 8)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_PETILIL)
+    setvar(VAR_0x8001, 8)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_RELLOR)
+    setvar(VAR_0x8001, 8)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_TANGELA)
+    setvar(VAR_0x8001, 2)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_PANSAGE)
+    setvar(VAR_0x8001, 5)
+    special(AddBirchBagWeightedChoice)
+	setvar(VAR_0x8000, SPECIES_AIPOM)
+    setvar(VAR_0x8001, 2)
+    special(AddBirchBagWeightedChoice)
+	setvar(VAR_0x8000, SPECIES_TAROUNTULA)
+    setvar(VAR_0x8001, 8)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_NYMBLE)
+    setvar(VAR_0x8001, 8)
+    special(AddBirchBagWeightedChoice)
+	
+
+    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_5_BIRCHBAG)
+    setflag(FLAG_HOENN1_5_BIRCHBAG)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+ 
+}

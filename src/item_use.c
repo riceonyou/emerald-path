@@ -48,6 +48,7 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
+#include "move_relearner.h"
 
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
@@ -1656,6 +1657,17 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     {
         gTasks[taskId].func = ItemUseOnFieldCB_TownMap;
     }
+}
+
+
+void ItemUseOutOfBattle_MemoryMushroom(u8 taskId)
+{
+    PlaySE(SE_SELECT);
+    gMoveRelearnerState = MOVE_RELEARNER_LEVEL_UP_MOVES;
+    gRelearnMode = RELEARN_MODE_PARTY_MENU;
+    gSpecialVar_0x8004 = gPartyMenu.slotId;
+    TeachMoveRelearnerMove();
+    SetUpItemUseCallback(taskId);
 }
 
 #undef tUsingRegisteredKeyItem

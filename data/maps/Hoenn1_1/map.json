@@ -3,7 +3,7 @@
   "name": "Hoenn1_1",
   "layout": "LAYOUT_HOENN1_1",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_AG_Hoenn1_1",
+  "region_map_section": "MAPSEC_AG_Hoenn1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -21,7 +21,8 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "local_id": "HOENN1_1_BIRCHBAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 6,
       "y": 8,
       "elevation": 0,

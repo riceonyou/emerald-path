@@ -1646,9 +1646,6 @@ static void FieldTask_ReturnToPcMenu(void)
 		FadeInFromBlack();
 	}
 	else {
-		//ScriptContext2_Disable();
-		//EnableBothScriptContexts();
-        //ScriptContext_Enable();
 		SetVBlankCallback(CB2_ReturnToFieldWithOpenMenu);
 		FadeInFromBlack();
 	}

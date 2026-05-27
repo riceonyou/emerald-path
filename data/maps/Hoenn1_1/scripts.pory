@@ -25,42 +25,60 @@ script Hoenn1_1_EventScript_Sign{
 script Hoenn1_1_EventScript_Pokeball{
  
     lockall
-    //setflag(FLAG_NUZLOCKE)
-    if(flag(FLAG_NUZLOCKE) == TRUE){
-        msgbox("nuzlockemodeison")
-
-        }
-
-    giveitem(ITEM_MASTER_BALL, 10)
-    giveitem(ITEM_RARE_CANDY, 100)
+    
     giveitem(ITEM_CANDY_JAR)
-    showmonpic(SPECIES_TORCHIC, 10,3)
-    msgbox("Do you want to choose Torchic?", MSGBOX_YESNO)
-    if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_TORCHIC, 5, ITEM_MASTER_BALL)
-        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
-            playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Torchic")
-            removeobject(1)
-            setflag(FLAG_UNUSED_0x020)
-            call(NicknamePartyMon)
-        }
-        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
-            playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Torchic")
-            removeobject(1)
-            setflag(FLAG_UNUSED_0x020)
-            call(NicknameBoxMon)
-        }
-        else{
-            hidemonpic
-            msgbox("No More Room")
-        }
-    }
-    else{
-        hidemonpic
-        msgbox(Hoenn1_1__NotChosen)
-    }
+    giveitem(ITEM_RARE_CANDY, 1)
+    giveitem(ITEM_ORAN_BERRY, 5)
+    giveitem(ITEM_MEMORY_MUSHROOM, 5)
+    setflag(FLAG_HEAL_EVERY_BATTLE)
+
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    special(ResetBirchBagWeightedPool)
+
+    setvar(VAR_0x8000, SPECIES_BULBASAUR)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_CHIKORITA)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_TURTWIG)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_SPRIGATITO)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_SNIVY)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_ROWLET)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_GROOKEY)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_CHESPIN)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_TREECKO)
+    setvar(VAR_0x8001, 40)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_MUDKIP)
+    setvar(VAR_0x8001, 40)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_TORCHIC)
+    setvar(VAR_0x8001, 40)
+    special(AddBirchBagWeightedChoice)
+
+    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_1_BIRCHBAG)
+    setflag(FLAG_UNUSED_0x020)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
     waitmessage
     releaseall
     end

@@ -42,3 +42,56 @@ text Zigzagoon_Outro{
 text PostBattle_Zigzagoon{
     "Goon Goon!"
 }
+
+script Hoenn1_2_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    special(ResetBirchBagWeightedPool)
+
+    setvar(VAR_0x8000, SPECIES_ZIGZAGOON)
+    setvar(VAR_0x8001, 30)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_POOCHYENA)
+    setvar(VAR_0x8001, 30)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_ZIGZAGOON_GALAR)
+    setvar(VAR_0x8001, 20)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_BIDOOF)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_WOOLOO)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_BUNNELBY)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_LILLIPUP)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_TAILLOW)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_RALTS)
+    setvar(VAR_0x8001, 10)
+    special(AddBirchBagWeightedChoice)
+    setvar(VAR_0x8000, SPECIES_STANTLER)
+    setvar(VAR_0x8001, 1)
+    special(AddBirchBagWeightedChoice)
+
+    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_2_BIRCHBAG)
+    setflag(FLAG_HOENN1_2_BIRCHBAG)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+ 
+}

@@ -54,12 +54,12 @@
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
 #define FLAG_NUZLOCKE        0x21 // Nuzlocke Challenge flag
 #define FLAG_NUZLOCKETEST    0x22 // Nuzlocke Test flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_HOENN1_2_BIRCHBAG    0x23 // Unused Flag
+#define FLAG_HOENN1_3_BIRCHBAG    0x24 // Unused Flag
+#define FLAG_HOENN1_4_BIRCHBAG    0x25 // Unused Flag
+#define FLAG_HOENN1_5_BIRCHBAG    0x26 // Unused Flag
+#define FLAG_HOENN1_6_BIRCHBAG    0x27 // Unused Flag
+#define FLAG_HOENN1_7_BIRCHBAG    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
@@ -106,7 +106,7 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
+#define FLAG_HEAL_EVERY_BATTLE                    0x54  // If on, heals party before and after every battle
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly

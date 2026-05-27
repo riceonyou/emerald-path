@@ -3,7 +3,7 @@
   "name": "Hoenn1_3",
   "layout": "LAYOUT_HOENN1_3",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_AG_Hoenn1_3",
+  "region_map_section": "MAPSEC_AG_Hoenn1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -50,6 +50,20 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Hoenn1_3_EventScript_Lotad",
       "flag": "0"
+    },
+    {
+      "local_id": "HOENN1_3_BIRCHBAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 15,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_3_EventScript_BirchBag",
+      "flag": "FLAG_HOENN1_3_BIRCHBAG"
     }
   ],
   "warp_events": [

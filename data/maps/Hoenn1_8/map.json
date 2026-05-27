@@ -3,7 +3,7 @@
   "name": "Hoenn1_8",
   "layout": "LAYOUT_HOENN1_8",
   "music": "MUS_GYM",
-  "region_map_section": "MAPSEC_AG_Hoenn1_8",
+  "region_map_section": "MAPSEC_AG_Hoenn1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

@@ -965,6 +965,7 @@ void ChooseStarter(void)
     gMain.savedCallback = CB2_GiveStarter;
 }
 
+
 static void CB2_GiveStarter(void)
 {
     u16 starterMon;
@@ -1308,6 +1309,9 @@ void ClearTrainerFlag(u16 trainerId)
 
 void BattleSetup_StartTrainerBattle(void)
 {
+    if(FlagGet(FLAG_HEAL_EVERY_BATTLE)){
+        HealPlayerParty();
+    }
     if (gNoOfApproachingTrainers == 2)
     {
         if (FollowerNPCIsBattlePartner())
@@ -1400,6 +1404,9 @@ static void CB2_EndDebugBattle(void)
 
 void BattleSetup_StartTrainerBattle_Debug(void)
 {
+    if(FlagGet(FLAG_HEAL_EVERY_BATTLE)){
+        HealPlayerParty();
+    }
     sNoOfPossibleTrainerRetScripts = gNoOfApproachingTrainers;
     gNoOfApproachingTrainers = 0;
     sShouldCheckTrainerBScript = FALSE;
@@ -1437,6 +1444,10 @@ static void HandleBattleVariantEndParty(void)
 static void CB2_EndTrainerBattle(void)
 {
     HandleBattleVariantEndParty();
+
+    if(FlagGet(FLAG_HEAL_EVERY_BATTLE)){
+        HealPlayerParty();
+    }
 
     gIsDebugBattle = FALSE;
     if (FollowerNPCIsBattlePartner())
@@ -1504,6 +1515,10 @@ static void CB2_EndTrainerBattle(void)
 
 static void CB2_EndRematchBattle(void)
 {
+    if(FlagGet(FLAG_HEAL_EVERY_BATTLE)){
+        HealPlayerParty();
+    }
+    
     if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SECRET_BASE)
     {
         DowngradeBadPoison();
@@ -1525,6 +1540,9 @@ static void CB2_EndRematchBattle(void)
 
 void BattleSetup_StartRematchBattle(void)
 {
+    if(FlagGet(FLAG_HEAL_EVERY_BATTLE)){
+        HealPlayerParty();
+    }
     gBattleTypeFlags = BATTLE_TYPE_TRAINER;
     gMain.savedCallback = CB2_EndRematchBattle;
     DoTrainerBattle();

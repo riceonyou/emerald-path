@@ -16676,6 +16676,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_CandyJar,
         .iconPalette = gItemIconPalette_CandyJar,
     },
+
+    [ITEM_MEMORY_MUSHROOM] =
+    {
+        .name = ITEM_NAME("Memory Mushroom"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Makes your pokemon\n"
+            "remember a move."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .heldSlot = 0,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_MemoryMushroom,
+        //.effect = gItemEffect_RareCandy,
+        .iconPic = gItemIcon_BigMushroom,
+        .iconPalette = gItemIconPalette_Mushroom,
+    },
 };
 
 #undef ITEM_NAME

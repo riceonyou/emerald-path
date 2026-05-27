@@ -1053,6 +1053,7 @@ enum __attribute__((packed)) Item
 
     //CUSTOM ITEMS
     ITEM_CANDY_JAR = 874,
+    ITEM_MEMORY_MUSHROOM = 875,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

@@ -23,16 +23,6 @@ static u8 GetNuzlockeLocationId(u8 currLocation)
 {
     switch (currLocation)
     {
-
-    case MAPSEC_AG_Hoenn1_1:
-    case MAPSEC_AG_Hoenn1_2:
-    case MAPSEC_AG_Hoenn1_3:
-    case MAPSEC_AG_Hoenn1_4:
-    case MAPSEC_AG_Hoenn1_5:
-    case MAPSEC_AG_Hoenn1_6:
-    case MAPSEC_AG_Hoenn1_7:
-    case MAPSEC_AG_Hoenn1_8:
-        return currLocation;
         
     // // Cities and towns that have encounters are treated as separate areas
     // case MAPSEC_LITTLEROOT_TOWN:
