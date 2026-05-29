@@ -9478,12 +9478,22 @@
     {
       "id": "LAYOUT_HOENN3_2",
       "name": "Hoenn3_2_Layout",
-      "width": 20,
+      "width": 24,
       "height": 14,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Hoenn3_2/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn3_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_3",
+      "name": "Hoenn3_3_Layout",
+      "width": 40,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Hoenn3_3/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_3/map.bin"
     }
   ]
 }

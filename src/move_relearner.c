@@ -196,6 +196,7 @@ static EWRAM_DATA struct {
 
 EWRAM_DATA enum MoveRelearnerStates gMoveRelearnerState = MOVE_RELEARNER_LEVEL_UP_MOVES;
 EWRAM_DATA enum RelearnMode gRelearnMode = RELEARN_MODE_NONE;
+EWRAM_DATA enum Item gMoveRelearnerItemId = ITEM_NONE;
 
 static const u16 sUI_Pal[] = INCBIN_U16("graphics/interface/ui_learn_move.gbapal");
 
@@ -538,6 +539,18 @@ static void RemoveRelearnerTMFromBag(enum Move move)
     }
 }
 
+static void RemoveRelearnerUsedItemFromBag(enum Move move)
+{
+    if (gMoveRelearnerItemId == ITEM_MEMORY_MUSHROOM)
+    {
+        RemoveBagItem(gMoveRelearnerItemId, 1);
+    }
+    else
+    {
+        RemoveRelearnerTMFromBag(move);
+    }
+}
+
 // See the state machine doc at the top of the file.
 static void DoMoveRelearnerMain(void)
 {
@@ -756,7 +769,15 @@ static void DoMoveRelearnerMain(void)
         if (!gPaletteFade.active)
         {
             FreeMoveRelearnerResources();
-            SetMainCallback2(CB2_ReturnToPartyMenuFromSummaryScreen);
+            if (gMoveRelearnerItemId != ITEM_NONE)
+            {
+                SetMainCallback2(CB2_ShowPartyMenuForItemUse);
+                gMoveRelearnerItemId = ITEM_NONE;
+            }
+            else
+            {
+                SetMainCallback2(CB2_ReturnToPartyMenuFromSummaryScreen);
+            }
         }
         break;
     case 22:
@@ -861,7 +882,7 @@ static void DoMoveRelearnerMain(void)
         if (!MoveRelearnerRunTextPrinters())
         {
             PlayFanfare(MUS_LEVEL_UP);
-            RemoveRelearnerTMFromBag(GetCurrentSelectedMove());
+            RemoveRelearnerUsedItemFromBag(GetCurrentSelectedMove());
             sMoveRelearnerStruct->state = MENU_STATE_WAIT_FOR_FANFARE;
         }
         break;

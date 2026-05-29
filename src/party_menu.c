@@ -4787,6 +4787,12 @@ void CB2_ShowPartyMenuForItemUse(void)
         gPartyMenu.data1 = 0;
     }
 
+    if (gSpecialVar_ItemId == ITEM_MEMORY_MUSHROOM && !CheckBagHasItem(ITEM_MEMORY_MUSHROOM, 1))
+    {
+        SetMainCallback2(callback);
+        return;
+    }
+
     if (gMain.inBattle)
     {
         menuType = PARTY_MENU_TYPE_IN_BATTLE;
@@ -5681,6 +5687,18 @@ void ItemUseCB_TMHM(u8 taskId, TaskFunc task)
         DisplayLearnMoveMessage(gText_PkmnNeedsToReplaceMove);
         gTasks[taskId].func = Task_ReplaceMoveYesNo;
     }
+}
+
+void ItemUseCB_MemoryMushroom(u8 taskId, TaskFunc task)
+{
+    PlaySE(SE_SELECT);
+    gMoveRelearnerItemId = gSpecialVar_ItemId;
+    gMoveRelearnerState = MOVE_RELEARNER_LEVEL_UP_MOVES;
+    gRelearnMode = RELEARN_MODE_PARTY_MENU;
+    gLastViewedMonIndex = gPartyMenu.slotId;
+    gSpecialVar_0x8004 = gLastViewedMonIndex;
+    FreePartyPointers();
+    TeachMoveRelearnerMove();
 }
 
 static void Task_LearnedMove(u8 taskId)
@@ -8311,6 +8329,7 @@ void IsLastMonThatKnowsSurf(void)
 static void CursorCb_ChangeLevelUpMoves(u8 taskId)
 {
     PlaySE(SE_SELECT);
+    gMoveRelearnerItemId = ITEM_NONE;
     gMoveRelearnerState = MOVE_RELEARNER_LEVEL_UP_MOVES;
     gRelearnMode = RELEARN_MODE_PARTY_MENU;
     gLastViewedMonIndex = gPartyMenu.slotId;
@@ -8322,6 +8341,7 @@ static void CursorCb_ChangeLevelUpMoves(u8 taskId)
 static void CursorCb_ChangeEggMoves(u8 taskId)
 {
     PlaySE(SE_SELECT);
+    gMoveRelearnerItemId = ITEM_NONE;
     gMoveRelearnerState = MOVE_RELEARNER_EGG_MOVES;
     gRelearnMode = RELEARN_MODE_PARTY_MENU;
     gLastViewedMonIndex = gPartyMenu.slotId;
@@ -8333,6 +8353,7 @@ static void CursorCb_ChangeEggMoves(u8 taskId)
 static void CursorCb_ChangeTMMoves(u8 taskId)
 {
     PlaySE(SE_SELECT);
+    gMoveRelearnerItemId = ITEM_NONE;
     gMoveRelearnerState = MOVE_RELEARNER_TM_MOVES;
     gRelearnMode = RELEARN_MODE_PARTY_MENU;
     gLastViewedMonIndex = gPartyMenu.slotId;
@@ -8344,6 +8365,7 @@ static void CursorCb_ChangeTMMoves(u8 taskId)
 static void CursorCb_ChangeTutorMoves(u8 taskId)
 {
     PlaySE(SE_SELECT);
+    gMoveRelearnerItemId = ITEM_NONE;
     gMoveRelearnerState = MOVE_RELEARNER_TUTOR_MOVES;
     gRelearnMode = RELEARN_MODE_PARTY_MENU;
     gLastViewedMonIndex = gPartyMenu.slotId;

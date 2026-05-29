@@ -1662,11 +1662,7 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
 
 void ItemUseOutOfBattle_MemoryMushroom(u8 taskId)
 {
-    PlaySE(SE_SELECT);
-    gMoveRelearnerState = MOVE_RELEARNER_LEVEL_UP_MOVES;
-    gRelearnMode = RELEARN_MODE_PARTY_MENU;
-    gSpecialVar_0x8004 = gPartyMenu.slotId;
-    TeachMoveRelearnerMove();
+    gItemUseCB = ItemUseCB_MemoryMushroom;
     SetUpItemUseCallback(taskId);
 }
 
