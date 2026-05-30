@@ -1771,3 +1771,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Hoenn3_2/scripts.inc"
 
 	.include "data/maps/Hoenn3_3/scripts.inc"
+
+	.include "data/maps/Hoenn3_4/scripts.inc"

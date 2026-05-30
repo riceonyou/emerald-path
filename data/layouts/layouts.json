@@ -9494,6 +9494,16 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Hoenn3_3/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn3_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_4",
+      "name": "Hoenn3_4_Layout",
+      "width": 43,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/Hoenn3_4/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_4/map.bin"
     }
   ]
 }
