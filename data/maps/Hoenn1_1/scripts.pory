@@ -1,6 +1,12 @@
 mapscripts Hoenn1_1_MapScripts {
     MAP_SCRIPT_ON_LOAD: Hoenn1_1_OnLoad
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: ONWARP]
 }
+
+script ONWARP {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_EAST)
+    }
 
 script Hoenn1_1_OnLoad{
     setvar(B_LEVEL_CAP_VARIABLE, 14)
@@ -11,12 +17,7 @@ script Hoenn1_1_OnLoad{
 script Hoenn1_1_EventScript_Sign{
     lockall
 
-    if(flag(FLAG_NUZLOCKETEST) == TRUE){
-        msgbox("Location is used")
-    }
-    else{
-        msgbox("Location is unused")
-    }    
+    msgbox("test")
 
     waitmessage
     releaseall

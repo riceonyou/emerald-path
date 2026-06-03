@@ -1,2 +1,6 @@
 mapscripts ANCIENT_GROUDON_MapScripts {
 }
+
+
+script ANCIENT_GROUDON_EventScript_Groudon{
+}

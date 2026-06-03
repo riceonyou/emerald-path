@@ -1,2 +1,5 @@
 mapscripts ANCIENT_KYOGRE_MapScripts {
 }
+
+script ANCIENT_KYOGRE_EventScript_Kyogre{
+}

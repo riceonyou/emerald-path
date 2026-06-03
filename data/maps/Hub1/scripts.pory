@@ -2,5 +2,19 @@ mapscripts Hub1_MapScripts {
 }
 
 script Hub_Event_Script_Birch{
-    
+    lockall
+    msgbox("Would you like to start a run?", MSGBOX_YESNO)
+		switch (var(VAR_RESULT)) {
+			case YES:
+				msgbox("Alright then! Here we go!")
+				random(1)
+				switch (var(VAR_RESULT)) {
+					case 0:
+						warp(MAP_HOENN1_1, 1, 8)
+						
+				}
+			case NO:
+				msgbox("Okay! Let me know when you're ready.")
+				releaseall
+		}
 }

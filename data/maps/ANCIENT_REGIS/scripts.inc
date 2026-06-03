@@ -73,14 +73,18 @@ ANCIENT_REGIS_EventScript_TalkToRegi_1:
 ANCIENT_REGIS_EventScript_TalkToRegi_4:
 # 71 "data/maps/ANCIENT_REGIS/scripts.pory"
 	waitmessage
+# 72 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_7
 # 73 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_4
-# 75 "data/maps/ANCIENT_REGIS/scripts.pory"
-	switch VAR_0x8004
+	setvar B_LEVEL_CAP_VARIABLE, 30
+# 74 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_8
 # 76 "data/maps/ANCIENT_REGIS/scripts.pory"
+	switch VAR_0x8004
+# 77 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 0, ANCIENT_REGIS_EventScript_TalkToRegi_11
 ANCIENT_REGIS_EventScript_TalkToRegi_9:
-# 81 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 82 "data/maps/ANCIENT_REGIS/scripts.pory"
 	releaseall
 	return
 
@@ -106,7 +110,7 @@ ANCIENT_REGIS_EventScript_TalkToRegi_6:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_7:
 # 51 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultichoice 0, 0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, ANCIENT_REGIS_EventScript_TalkToRegi_Text_1, ANCIENT_REGIS_EventScript_TalkToRegi_Text_2, ANCIENT_REGIS_EventScript_TalkToRegi_Text_3
+	dynmultichoice 0, 0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, ANCIENT_REGIS_EventScript_TalkToRegi_Text_4, ANCIENT_REGIS_EventScript_TalkToRegi_Text_5, ANCIENT_REGIS_EventScript_TalkToRegi_Text_6
 # 52 "data/maps/ANCIENT_REGIS/scripts.pory"
 	switch VAR_RESULT
 # 53 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -131,9 +135,9 @@ ANCIENT_REGIS_EventScript_TalkToRegi_8:
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_11:
-# 77 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_5
 # 78 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_9
+# 79 "data/maps/ANCIENT_REGIS/scripts.pory"
 	warp MAP_HOENN2_1, 7, 7
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_9
 
@@ -154,32 +158,32 @@ ANCIENT_REGIS_EventScript_TalkToRegi_15:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_17:
 # 54 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_ICE_BEAM, 1
+	giveitem ITEM_TM_REFLECT, 1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_18:
 # 56 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_FLAMETHROWER, 1
+	giveitem ITEM_TM_LIGHT_SCREEN, 1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_19:
 # 58 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_THUNDERBOLT, 1
+	giveitem ITEM_TM_SAFEGUARD, 1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_21:
 # 64 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_ICE_BEAM, 1
+	giveitem ITEM_TM_SLUDGE_BOMB, 1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_22:
 # 66 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_FLAMETHROWER, 1
+	giveitem ITEM_TM_BRICK_BREAK, 1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_23:
 # 68 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_THUNDERBOLT, 1
+	giveitem ITEM_TM_PSYCHIC, 1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 
@@ -200,9 +204,25 @@ ANCIENT_REGIS_EventScript_TalkToRegi_Text_3:
 	.string "Thunderbolt TM$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_4:
-# 73 "data/maps/ANCIENT_REGIS/scripts.pory"
-	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"
+# 51 "data/maps/ANCIENT_REGIS/scripts.pory"
+	.string "Reflect TM$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_5:
-# 77 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 51 "data/maps/ANCIENT_REGIS/scripts.pory"
+	.string "Light Screen TM$"
+
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_6:
+# 51 "data/maps/ANCIENT_REGIS/scripts.pory"
+	.string "Safeguard TM$"
+
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_7:
+# 72 "data/maps/ANCIENT_REGIS/scripts.pory"
+	.string "The level cap has been raised to 30$"
+
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_8:
+# 74 "data/maps/ANCIENT_REGIS/scripts.pory"
+	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"
+
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_9:
+# 78 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "About to warp to HOENN2_1$"

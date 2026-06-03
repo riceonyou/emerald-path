@@ -52,7 +52,7 @@
 #else
 
 #define FLAG_HOENN1_1_BIRCHBAG    0x20 // Unused Flag
-#define FLAG_NUZLOCKE        0x21 // Nuzlocke Challenge flag
+#define FLAG_NUZLOCKE        0x21 // DO NOT CLEAR ON WHITEOUT Nuzlocke Challenge flag
 #define FLAG_NUZLOCKETEST    0x22 // Nuzlocke Test flag
 #define FLAG_HOENN1_2_BIRCHBAG    0x23 // Unused Flag
 #define FLAG_HOENN1_3_BIRCHBAG    0x24 // Unused Flag

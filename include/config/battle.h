@@ -288,6 +288,12 @@
 // Flag and Var settings
 #define B_RESET_FLAGS_VARS_AFTER_WHITEOUT TRUE // If TRUE, Overworld_ResetBattleFlagsAndVars will reset battle-related Flags and Vars when the player whites out.
 
+// Whiteout preserve flags
+#define B_WHITEOUT_PRESERVE_FLAGS_LIST    FLAG_NUZLOCKE
+#define B_WHITEOUT_PRESERVE_FLAGS_COUNT   1
+
+// Flags listed above are restored after whiteout state reset. Use 0 for the count and leave the list blank to preserve none.
+
 // Ingame partner flag
 #define B_SHOW_PARTNER_TARGET             FALSE // Shows the battler partner will target.
 

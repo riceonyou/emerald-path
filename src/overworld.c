@@ -113,7 +113,13 @@ extern const struct MapLayout *const gMapLayouts[];
 extern const struct MapHeader *const *const gMapGroups[];
 extern bool8 gNuzlockeEnabled;
 
+#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
+static const u16 sWhiteoutPreserveFlags[] = { B_WHITEOUT_PRESERVE_FLAGS_LIST };
+#endif
+
 static void Overworld_ResetStateAfterWhiteOut(void);
+static void ClearWhiteoutFlags(void);
+static void ClearAllPokemonOnWhiteOut(void);
 static void CB2_ReturnToFieldLocal(void);
 static void CB2_ReturnToFieldLink(void);
 static void CB2_LoadMapOnReturnToFieldCableClub(void);
@@ -391,15 +397,16 @@ static void (*const sMovementStatusHandler[])(struct LinkPlayerObjectEvent *, st
 // code
 void DoWhiteOut(void)
 {
-    RunScriptImmediately(EventScript_WhiteOut);
-    HealPlayerParty();
+    //RunScriptImmediately(EventScript_WhiteOut);
+    //HealPlayerParty();
     
     // Handle Nuzlocke whiteout - mark all party Pokemon as dead
-    if (IsNuzlockeActive())
-        NuzlockeHandleWhiteout();
-        
+    // if (IsNuzlockeActive())
+    //     NuzlockeHandleWhiteout();
+
+    ClearAllPokemonOnWhiteOut();
     Overworld_ResetStateAfterWhiteOut();
-    SetWarpDestinationToLastHealLocation();
+    SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 18);
     WarpIntoMap();
 }
 
@@ -464,22 +471,65 @@ void Overworld_ResetBattleFlagsAndVars(void)
 static void Overworld_ResetStateAfterWhiteOut(void)
 {
     ResetInitialPlayerAvatarState();
-    FlagClear(FLAG_SYS_CYCLING_ROAD);
-    FlagClear(FLAG_SYS_CRUISE_MODE);
-    FlagClear(FLAG_SYS_SAFARI_MODE);
-    VarSet(VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0);
-    FlagClear(FLAG_SYS_USE_STRENGTH);
-    FlagClear(FLAG_SYS_USE_FLASH);
+    ClearWhiteoutFlags();
+
     if (B_RESET_FLAGS_VARS_AFTER_WHITEOUT == TRUE)
         Overworld_ResetBattleFlagsAndVars();
     // If you were defeated by Kyogre/Groudon and the step counter has
     // maxed out, end the abnormal weather.
-    if (VarGet(VAR_SHOULD_END_ABNORMAL_WEATHER) == 1)
-    {
-        VarSet(VAR_SHOULD_END_ABNORMAL_WEATHER, 0);
-        VarSet(VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_NONE);
-    }
+    // if (VarGet(VAR_SHOULD_END_ABNORMAL_WEATHER) == 1)
+    // {
+    //     VarSet(VAR_SHOULD_END_ABNORMAL_WEATHER, 0);
+    //     VarSet(VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_NONE);
+    // }
     FollowerNPC_TryRemoveFollowerOnWhiteOut();
+}
+
+static void ClearWhiteoutFlags(void)
+{
+#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
+    bool8 preserveFlagValues[ARRAY_COUNT(sWhiteoutPreserveFlags)];
+    u16 i;
+#endif
+    u16 flagId;
+
+#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
+    for (i = 0; i < ARRAY_COUNT(sWhiteoutPreserveFlags); i++)
+        preserveFlagValues[i] = FlagGet(sWhiteoutPreserveFlags[i]);
+#endif
+
+    memset(gSaveBlock1Ptr->flags, 0, sizeof(gSaveBlock1Ptr->flags));
+
+    for (flagId = SPECIAL_FLAGS_START; flagId <= SPECIAL_FLAGS_END; flagId++)
+        FlagClear(flagId);
+
+#if TESTING
+    for (flagId = TESTING_FLAGS_START; flagId < TESTING_FLAGS_START + 8; flagId++)
+        FlagClear(flagId);
+#endif
+
+#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
+    for (i = 0; i < ARRAY_COUNT(sWhiteoutPreserveFlags); i++)
+    {
+        if (preserveFlagValues[i])
+            FlagSet(sWhiteoutPreserveFlags[i]);
+    }
+#endif
+}
+
+static void ClearAllPokemonOnWhiteOut(void)
+{
+    s32 boxId, boxPosition;
+
+    ZeroPlayerPartyMons();
+    gPlayerPartyCount = 0;
+    ClearBag();
+
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+    {
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+            ZeroBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition]);
+    }
 }
 
 static void UpdateMiscOverworldStates(void)
