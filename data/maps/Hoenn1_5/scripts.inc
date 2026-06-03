@@ -4,7 +4,7 @@ Hoenn1_5_MapScripts::
 
 Hoenn1_5_EventScript_Oddish::
 # 6 "data/maps/Hoenn1_5/scripts.pory"
-	trainerbattle_single TRAINER_HOENN1_5_ODDISH, Hoenn1_5_EventScript_Oddish_Text_0, Hoenn1_5_EventScript_Oddish_Text_1
+	trainerbattle_single TRAINER_ODDISH, Hoenn1_5_EventScript_Oddish_Text_0, Hoenn1_5_EventScript_Oddish_Text_1
 # 7 "data/maps/Hoenn1_5/scripts.pory"
 	msgbox Hoenn1_5_EventScript_Oddish_Text_2, MSGBOX_AUTOCLOSE
 # 8 "data/maps/Hoenn1_5/scripts.pory"
@@ -14,7 +14,7 @@ Hoenn1_5_EventScript_Oddish::
 
 Hoenn1_5_EventScript_Wurmple::
 # 15 "data/maps/Hoenn1_5/scripts.pory"
-	trainerbattle_single TRAINER_HOENN1_5_WURMPLE, Hoenn1_5_EventScript_Wurmple_Text_0, Hoenn1_5_EventScript_Wurmple_Text_1
+	trainerbattle_single TRAINER_WURMPLE, Hoenn1_5_EventScript_Wurmple_Text_0, Hoenn1_5_EventScript_Wurmple_Text_1
 # 16 "data/maps/Hoenn1_5/scripts.pory"
 	msgbox Hoenn1_5_EventScript_Wurmple_Text_2, MSGBOX_AUTOCLOSE
 # 17 "data/maps/Hoenn1_5/scripts.pory"

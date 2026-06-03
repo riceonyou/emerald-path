@@ -1,0 +1,82 @@
+mapscripts ANCIENT_REGIS_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: ANCIENT_REGIS_TURNPLAYERNORTH]
+    MAP_SCRIPT_ON_LOAD: ANCIENT_REGIS_LOAD_REGIS
+}
+
+
+script ANCIENT_REGIS_TURNPLAYERNORTH {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
+    }
+
+script ANCIENT_REGIS_LOAD_REGIS{
+    random(3)
+    copyvar(VAR_0x8000, VAR_RESULT)
+    switch (var(VAR_0x8000)) {
+        case 0:
+            setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(REGIROCK))
+        case 1:
+            setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(REGICE))
+        case 2:
+            setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(REGISTEEL))
+    }
+}
+
+script ANCIENT_REGIS_EventScript_TalkToRegi{
+    lockall
+
+    //DECIDE AND ANNOUNCE WHICH STAGE TO GO NEXT
+    random(1)
+    copyvar(VAR_0x8004, VAR_RESULT)
+    switch (var(VAR_RESULT)) {
+        case 0:
+            msgbox("Beep boop beep.\lThe next stage will be\nthe MAUVILLE path.")
+            waitmessage
+    }
+    
+
+    //GIVE ANCIENT REWARD
+    switch (var(VAR_0x8000)) {
+        case 0://Regirock
+            dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Ice Beam TM", "Flamethrower TM", "Thunderbolt TM")
+            switch (var(VAR_RESULT)) {
+                case 0:
+                    giveitem(ITEM_TM_ICE_BEAM, 1)
+                case 1:
+                    giveitem(ITEM_TM_FLAMETHROWER, 1)
+                case 2:
+                    giveitem(ITEM_TM_THUNDERBOLT, 1)
+            }
+        case 1://Regice
+            dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Ice Beam TM", "Flamethrower TM", "Thunderbolt TM")
+            switch (var(VAR_RESULT)) {
+                case 0:
+                    giveitem(ITEM_TM_ICE_BEAM, 1)
+                case 1:
+                    giveitem(ITEM_TM_FLAMETHROWER, 1)
+                case 2:
+                    giveitem(ITEM_TM_THUNDERBOLT, 1)
+            }
+        case 2://Registeel
+            dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Ice Beam TM", "Flamethrower TM", "Thunderbolt TM")
+            switch (var(VAR_RESULT)) {
+                case 0:
+                    giveitem(ITEM_TM_ICE_BEAM, 1)
+                case 1:
+                    giveitem(ITEM_TM_FLAMETHROWER, 1)
+                case 2:
+                    giveitem(ITEM_TM_THUNDERBOLT, 1)
+            }
+    }
+    waitmessage
+
+    msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
+    //TELEPORT TO NEXT STAGE
+    switch (var(VAR_0x8004)) {
+        case 0:
+            msgbox("About to warp to HOENN2_1")
+            warp(MAP_HOENN2_1, 7, 7)
+        default:
+    }
+    releaseall
+}

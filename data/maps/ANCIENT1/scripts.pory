@@ -1,0 +1,7 @@
+mapscripts ANCIENT1_MapScripts {
+    MAP_SCRIPT_ON_LOAD: ANCIENT1_OnLoad
+}
+
+script ANCIENT1_OnLoad{
+}
+

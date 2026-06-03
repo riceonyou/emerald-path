@@ -1,2 +1,58 @@
 mapscripts Hoenn1_8_MapScripts {
 }
+
+script Hoenn1_8_EventScript_Taillow{
+ 
+	trainerbattle_single(TRAINER_TAILLOW, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
+script Hoenn1_8_EventScript_Whismur{
+ 
+	trainerbattle_single(TRAINER_WHISMUR, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
+script Hoenn1_8_EventScript_Nosepass{
+	trainerbattle_single(TRAINER_LEADER_NOSEPASS, "test.", "test.", Hoenn1_8_EventScript_Nosepass_Defeated)
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_8_EventScript_Nosepass_Defeated{
+	setflag(FLAG_DEFEATED_PATH_1_LEADER)
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+	end
+}
+
+script EventScript_AbraTeleport1{
+	lockall
+	if(!flag(FLAG_DEFEATED_PATH_1_LEADER)){
+		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next stage.")
+		releaseall
+	}
+	else{
+		msgbox("Would you like to teleport\nto the next stage?", MSGBOX_YESNO)
+		switch (var(VAR_RESULT)) {
+			case YES:
+				msgbox("Alright then! Here we go!")
+				random(1)
+				switch (var(VAR_RESULT)) {
+					case 0:
+						warp(MAP_ANCIENT_REGIS, 8, 12)
+						
+				}
+			case NO:
+				msgbox("Okay! Let me know when you're ready.")
+				releaseall
+		}
+	}
+}

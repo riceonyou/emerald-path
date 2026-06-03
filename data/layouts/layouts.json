@@ -9327,7 +9327,7 @@
     {
       "id": "LAYOUT_HOENN1_1",
       "name": "Hoenn1_1_Layout",
-      "width": 20,
+      "width": 16,
       "height": 12,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -9348,7 +9348,7 @@
       "id": "LAYOUT_HOENN1_3",
       "name": "Hoenn1_3_Layout",
       "width": 30,
-      "height": 29,
+      "height": 25,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Hoenn1_3/border.bin",
@@ -9377,7 +9377,7 @@
     {
       "id": "LAYOUT_HOENN1_6",
       "name": "Hoenn1_6_Layout",
-      "width": 36,
+      "width": 28,
       "height": 16,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
@@ -9397,7 +9397,7 @@
     {
       "id": "LAYOUT_HOENN1_8",
       "name": "Hoenn1_8_Layout",
-      "width": 11,
+      "width": 9,
       "height": 20,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_RustboroGym",
@@ -9428,7 +9428,7 @@
     {
       "id": "LAYOUT_HOENN2_3",
       "name": "Hoenn2_3_Layout",
-      "width": 23,
+      "width": 13,
       "height": 29,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
@@ -9438,7 +9438,7 @@
     {
       "id": "LAYOUT_HOENN2_4",
       "name": "Hoenn2_4_Layout",
-      "width": 27,
+      "width": 30,
       "height": 16,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -9468,7 +9468,7 @@
     {
       "id": "LAYOUT_HOENN3_1",
       "name": "Hoenn3_1_Layout",
-      "width": 20,
+      "width": 23,
       "height": 11,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -9478,7 +9478,7 @@
     {
       "id": "LAYOUT_HOENN3_2",
       "name": "Hoenn3_2_Layout",
-      "width": 24,
+      "width": 20,
       "height": 14,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
@@ -9504,6 +9504,216 @@
       "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/Hoenn3_4/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn3_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_5",
+      "name": "Hoenn3_5_Layout",
+      "width": 28,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Hoenn3_5/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_5/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_6",
+      "name": "Hoenn3_6_Layout",
+      "width": 17,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Hoenn3_6/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_6/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_7",
+      "name": "Hoenn3_7_Layout",
+      "width": 5,
+      "height": 26,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/Hoenn3_7/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_7/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_1",
+      "name": "Hoenn4_1_Layout",
+      "width": 25,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/Hoenn4_1/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_1_HOUSE",
+      "name": "Hoenn1_1_House_Layout",
+      "width": 7,
+      "height": 5,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Hoenn1_1_House/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_1_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT1",
+      "name": "ANCIENT1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/ANCIENT1/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_2",
+      "name": "Hoenn4_2_Layout",
+      "width": 29,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Hoenn4_2/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_AGSKY_PILLAR_OUTSIDE",
+      "name": "AGSkyPillarOutside_Layout",
+      "width": 28,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/AGSkyPillarOutside/border.bin",
+      "blockdata_filepath": "data/layouts/AGSkyPillarOutside/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_3",
+      "name": "Hoenn4_3_Layout",
+      "width": 32,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Hoenn4_3/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_4",
+      "name": "Hoenn4_4_Layout",
+      "width": 27,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Hoenn4_4/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_5",
+      "name": "Hoenn4_5_Layout",
+      "width": 35,
+      "height": 28,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MossdeepGym",
+      "border_filepath": "data/layouts/Hoenn4_5/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_5/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_3_HOUSE",
+      "name": "Hoenn4_3_House_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Hoenn4_3_House/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_3_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_1_HOUSE",
+      "name": "Hoenn4_1_House_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Hoenn4_1_House/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_1_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_HUB1",
+      "name": "Hub1_Layout",
+      "width": 22,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Hub1/border.bin",
+      "blockdata_filepath": "data/layouts/Hub1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT2",
+      "name": "ANCIENT2_Layout",
+      "width": 21,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ANCIENT2/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELITE4_HOENN_OUTSIDE",
+      "name": "Elite4_Hoenn_Outside_Layout",
+      "width": 26,
+      "height": 37,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/Elite4_Hoenn_Outside/border.bin",
+      "blockdata_filepath": "data/layouts/Elite4_Hoenn_Outside/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELITE4_HOENN_1",
+      "name": "Elite4_Hoenn_1_Layout",
+      "width": 12,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Elite4_Hoenn_1/border.bin",
+      "blockdata_filepath": "data/layouts/Elite4_Hoenn_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELITE4_HOENN_2",
+      "name": "Elite4_Hoenn_2_Layout",
+      "width": 11,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/Elite4_Hoenn_2/border.bin",
+      "blockdata_filepath": "data/layouts/Elite4_Hoenn_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_GROUDON",
+      "name": "ANCIENT_GROUDON_Layout",
+      "width": 18,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ANCIENT_GROUDON/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_GROUDON/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_KYOGRE",
+      "name": "ANCIENT_KYOGRE_Layout",
+      "width": 18,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ANCIENT_KYOGRE/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_KYOGRE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_REGIS",
+      "name": "ANCIENT_REGIS_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ANCIENT_REGIS/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_REGIS/map.bin"
     }
   ]
 }

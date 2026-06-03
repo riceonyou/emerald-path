@@ -3,7 +3,7 @@ mapscripts Hoenn1_4_MapScripts {
 
 script Hoenn1_4_EventScript_Wingull{
  
-	trainerbattle_single(TRAINER_HOENN1_4_WINGULL, "Howdy. I'm wingull. Let's battle!", "More like losegull. Squawk :(")
+	trainerbattle_single(TRAINER_WINGULL, "Howdy. I'm wingull. Let's battle!", "More like losegull. Squawk :(")
 	msgbox("Check out this cool flying trick!", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -15,49 +15,11 @@ script Hoenn1_4_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    special(ResetBirchBagWeightedPool)
-
-    setvar(VAR_0x8000, SPECIES_WINGULL)
-    setvar(VAR_0x8001, 40)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_CHATOT)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_FLETCHLING)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_NATU)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_STARLY)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_TAILLOW)
-    setvar(VAR_0x8001, 25)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_DUCKLETT)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_ROOKIDEE)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_WATTREL)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_SWABLU)
-    setvar(VAR_0x8001, 15)
-    special(AddBirchBagWeightedChoice)
-	setvar(VAR_0x8000, SPECIES_SQUAWKABILLY)
-    setvar(VAR_0x8001, 2)
-    special(AddBirchBagWeightedChoice)
-	setvar(VAR_0x8000, SPECIES_MURKROW)
-    setvar(VAR_0x8001, 2)
-    special(AddBirchBagWeightedChoice)
-	
-
-    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    setvar(VAR_0x8000, 3)
+    special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
+	
     
     removeobject(HOENN1_4_BIRCHBAG)
     setflag(FLAG_HOENN1_4_BIRCHBAG)

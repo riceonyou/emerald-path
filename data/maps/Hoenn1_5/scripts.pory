@@ -3,7 +3,7 @@ mapscripts Hoenn1_5_MapScripts {
 
 script Hoenn1_5_EventScript_Oddish{
  
-	trainerbattle_single(TRAINER_HOENN1_5_ODDISH, "Hello.", "Goodbye.")
+	trainerbattle_single(TRAINER_ODDISH, "Hello.", "Goodbye.")
 	msgbox("Hello again.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -12,7 +12,7 @@ script Hoenn1_5_EventScript_Oddish{
 
 script Hoenn1_5_EventScript_Wurmple{
  
-	trainerbattle_single(TRAINER_HOENN1_5_WURMPLE, "I'm just a wurm.", "That was a good battle.")
+	trainerbattle_single(TRAINER_WURMPLE, "I'm just a wurm.", "That was a good battle.")
 	msgbox("Don't talk to me right now.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

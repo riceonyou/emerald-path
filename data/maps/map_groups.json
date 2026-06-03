@@ -77,7 +77,11 @@
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_AG_Hoenn1",
     "gMapGroup_AG_Hoenn2",
-    "gMapGroup_AG_Hoenn3"
+    "gMapGroup_AG_Hoenn3",
+    "gMapGroup_AG_Hoenn4",
+    "gMapGroup_AG_ANCIENTS",
+    "gMapGroup_AG_Elite_4",
+    "gMapGroup_AG_Hub"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1173,7 +1177,8 @@
     "Hoenn1_5",
     "Hoenn1_6",
     "Hoenn1_7",
-    "Hoenn1_8"
+    "Hoenn1_8",
+    "Hoenn1_1_House"
   ],
   "gMapGroup_AG_Hoenn2": [
     "Hoenn2_1",
@@ -1186,6 +1191,34 @@
     "Hoenn3_1",
     "Hoenn3_2",
     "Hoenn3_3",
-    "Hoenn3_4"
+    "Hoenn3_4",
+    "Hoenn3_5",
+    "Hoenn3_6",
+    "Hoenn3_7"
+  ],
+  "gMapGroup_AG_Hoenn4": [
+    "Hoenn4_1",
+    "Hoenn4_2",
+    "Hoenn4_3",
+    "Hoenn4_4",
+    "Hoenn4_5",
+    "Hoenn4_1_House",
+    "Hoenn4_3_House"
+  ],
+  "gMapGroup_AG_ANCIENTS": [
+    "ANCIENT1",
+    "ANCIENT2",
+    "ANCIENT_GROUDON",
+    "ANCIENT_KYOGRE",
+    "ANCIENT_REGIS"
+  ],
+  "gMapGroup_AG_Elite_4": [
+    "AGSkyPillarOutside",
+    "Elite4_Hoenn_Outside",
+    "Elite4_Hoenn_1",
+    "Elite4_Hoenn_2"
+  ],
+  "gMapGroup_AG_Hub": [
+    "Hub1"
   ]
 }

@@ -51,7 +51,7 @@
 
 #else
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
+#define FLAG_HOENN1_1_BIRCHBAG    0x20 // Unused Flag
 #define FLAG_NUZLOCKE        0x21 // Nuzlocke Challenge flag
 #define FLAG_NUZLOCKETEST    0x22 // Nuzlocke Test flag
 #define FLAG_HOENN1_2_BIRCHBAG    0x23 // Unused Flag
@@ -1316,7 +1316,7 @@
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
-#define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
+#define FLAG_DEFEATED_PATH_1_LEADER                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3

@@ -4,19 +4,19 @@
 #include "constants/battle_partner.h"
 #include "constants/opponents_frlg.h"
 
-#define TRAINER_HOENN1_2_TREECKO                          0
-#define TRAINER_HOENN1_2_ZIGZAGOON                      1
-#define TRAINER_HOENN1_3_POOCHYENA          2
-#define TRAINER_HOENN1_4_WINGULL          3
-#define TRAINER_HOENN1_3_LOTAD          4
-#define TRAINER_HOENN1_5_ODDISH          5
-#define TRAINER_HOENN1_5_WURMPLE       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
+#define TRAINER_TREECKO                          0
+#define TRAINER_ZIGZAGOON                      1
+#define TRAINER_POOCHYENA          2
+#define TRAINER_WINGULL          3
+#define TRAINER_LOTAD          4
+#define TRAINER_ODDISH          5
+#define TRAINER_WURMPLE       6
+#define TRAINER_SHROOMISH       7
+#define TRAINER_SURSKIT       8
+#define TRAINER_SKITTY                   9
+#define TRAINER_TAILLOW        10
+#define TRAINER_WHISMUR                       11
+#define TRAINER_LEADER_NOSEPASS                      12
 #define TRAINER_ED                           13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15

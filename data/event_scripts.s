@@ -1062,8 +1062,8 @@ EventScript_AfterWhiteOutHeal::
 	lockall
 	msgbox gText_FirstShouldRestoreMonsHealth
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgPreFirstBoss
-	call_if_set FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsg
+	call_if_unset FLAG_DEFEATED_PATH_1_LEADER, EventScript_AfterWhiteOutHealMsgPreFirstBoss
+	call_if_set FLAG_DEFEATED_PATH_1_LEADER, EventScript_AfterWhiteOutHealMsg
 	applymovement VAR_LAST_TALKED, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	fadedefaultbgm
@@ -1773,3 +1773,45 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Hoenn3_3/scripts.inc"
 
 	.include "data/maps/Hoenn3_4/scripts.inc"
+
+	.include "data/maps/Hoenn3_5/scripts.inc"
+
+	.include "data/maps/Hoenn3_6/scripts.inc"
+
+	.include "data/maps/Hoenn3_7/scripts.inc"
+
+	.include "data/maps/Hoenn4_1/scripts.inc"
+
+	.include "data/maps/Hoenn1_1_House/scripts.inc"
+
+	.include "data/maps/ANCIENT1/scripts.inc"
+
+	.include "data/maps/Hoenn4_2/scripts.inc"
+
+	.include "data/maps/AGSkyPillarOutside/scripts.inc"
+
+	.include "data/maps/Hoenn4_3/scripts.inc"
+
+	.include "data/maps/Hoenn4_4/scripts.inc"
+
+	.include "data/maps/Hoenn4_5/scripts.inc"
+
+	.include "data/maps/Hoenn4_3_House/scripts.inc"
+
+	.include "data/maps/Hoenn4_1_House/scripts.inc"
+
+	.include "data/maps/Hub1/scripts.inc"
+
+	.include "data/maps/ANCIENT2/scripts.inc"
+
+	.include "data/maps/Elite4_Hoenn_Outside/scripts.inc"
+
+	.include "data/maps/Elite4_Hoenn_1/scripts.inc"
+
+	.include "data/maps/Elite4_Hoenn_2/scripts.inc"
+
+	.include "data/maps/ANCIENT_GROUDON/scripts.inc"
+
+	.include "data/maps/ANCIENT_KYOGRE/scripts.inc"
+
+	.include "data/maps/ANCIENT_REGIS/scripts.inc"

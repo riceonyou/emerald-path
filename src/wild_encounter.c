@@ -484,19 +484,19 @@ void CreateWildMon(u16 species, u8 level)
     u32 personality = GetMonPersonality(species, GetSynchronizedGender(WILDMON_ORIGIN, species), PickWildMonNature(species), RANDOM_UNOWN_LETTER);
     CreateMonWithIVs(&gEnemyParty[0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
     GiveMonInitialMoveset(&gEnemyParty[0]);
-    bool32 checkCuteCharm = TRUE;
+    //bool32 checkCuteCharm = TRUE;
 
     // Reset Nuzlocke indicator state - will be set after Pokemon is created
     gWildPokemonIsCatchableInNuzlocke = FALSE;
 
-    switch (gSpeciesInfo[species].genderRatio)
-    {
-    case MON_MALE:
-    case MON_FEMALE:
-    case MON_GENDERLESS:
-        checkCuteCharm = FALSE;
-        break;
-    }
+    // switch (gSpeciesInfo[species].genderRatio)
+    // {
+    // case MON_MALE:
+    // case MON_FEMALE:
+    // case MON_GENDERLESS:
+    //     checkCuteCharm = FALSE;
+    //     break;
+    // }
     
     // NOW check Nuzlocke indicator after Pokemon is created and has personality
     if (IsNuzlockeActive() && FlagGet(FLAG_SYS_POKEDEX_GET))

@@ -1,55 +1,32 @@
 mapscripts Hoenn1_6_MapScripts {
 }
 
+script Hoenn1_6_EventScript_Shroomish{
+ 
+	trainerbattle_single(TRAINER_SHROOMISH, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
+script Hoenn1_6_EventScript_Surskit{
+ 
+	trainerbattle_single(TRAINER_SURSKIT, "Hola. Me llamo Lotad.", "He perdido.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
+
 script Hoenn1_6_EventScript_BirchBag{
  
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    special(ResetBirchBagWeightedPool)
-
-    setvar(VAR_0x8000, SPECIES_AZURILL)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_BUDEW)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_FLABEBE)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_SUNKERN)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_CHERUBI)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_GOSSIFLEUR)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_SEWADDLE)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_BURMY_PLANT)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_CUTIEFLY)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_LOTAD)
-    setvar(VAR_0x8001, 25)
-    special(AddBirchBagWeightedChoice)
-	setvar(VAR_0x8000, SPECIES_SEEDOT)
-    setvar(VAR_0x8001, 25)
-    special(AddBirchBagWeightedChoice)
-	setvar(VAR_0x8000, SPECIES_FOMANTIS)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_COMFEY)
-    setvar(VAR_0x8001, 5)
-    special(AddBirchBagWeightedChoice)
-	
-
-    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    setvar(VAR_0x8000, 0)
+    special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
     

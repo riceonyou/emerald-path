@@ -52,125 +52,61 @@ Hoenn1_1_EventScript_Pokeball::
 # 36 "data/maps/Hoenn1_1/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 37 "data/maps/Hoenn1_1/scripts.pory"
-	special ResetBirchBagWeightedPool
+	setvar VAR_0x8000, 0
+# 38 "data/maps/Hoenn1_1/scripts.pory"
+	special LoadBirchBagPoolById
 # 39 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_BULBASAUR
-# 40 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 41 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 42 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_CHIKORITA
-# 43 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 44 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 45 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_TURTWIG
-# 46 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 47 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 48 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_SPRIGATITO
-# 49 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 50 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 51 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_SNIVY
-# 52 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 53 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 54 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_ROWLET
-# 55 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 56 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 57 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_GROOKEY
-# 58 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 59 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 60 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_CHESPIN
-# 61 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 20
-# 62 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 63 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_TREECKO
-# 64 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 40
-# 65 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 66 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_MUDKIP
-# 67 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 40
-# 68 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 69 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, SPECIES_TORCHIC
-# 70 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8001, 40
-# 71 "data/maps/Hoenn1_1/scripts.pory"
-	special AddBirchBagWeightedChoice
-# 74 "data/maps/Hoenn1_1/scripts.pory"
 	special ChooseBirchBagPokemonWeighted
-# 75 "data/maps/Hoenn1_1/scripts.pory"
+# 40 "data/maps/Hoenn1_1/scripts.pory"
 	waitstate
-# 77 "data/maps/Hoenn1_1/scripts.pory"
+# 42 "data/maps/Hoenn1_1/scripts.pory"
 	removeobject HOENN1_1_BIRCHBAG
-# 78 "data/maps/Hoenn1_1/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 79 "data/maps/Hoenn1_1/scripts.pory"
+# 43 "data/maps/Hoenn1_1/scripts.pory"
+	setflag FLAG_HOENN1_1_BIRCHBAG
+# 44 "data/maps/Hoenn1_1/scripts.pory"
 	playfanfare MUS_EVOLVED
-# 80 "data/maps/Hoenn1_1/scripts.pory"
+# 45 "data/maps/Hoenn1_1/scripts.pory"
 	msgbox Hoenn1_1_EventScript_Pokeball_Text_0
-# 82 "data/maps/Hoenn1_1/scripts.pory"
+# 47 "data/maps/Hoenn1_1/scripts.pory"
 	waitmessage
-# 83 "data/maps/Hoenn1_1/scripts.pory"
+# 48 "data/maps/Hoenn1_1/scripts.pory"
 	releaseall
 	end
 
 
 NicknamePartyMon::
-# 90 "data/maps/Hoenn1_1/scripts.pory"
+# 55 "data/maps/Hoenn1_1/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 91 "data/maps/Hoenn1_1/scripts.pory"
+# 56 "data/maps/Hoenn1_1/scripts.pory"
 	hidemonpic
-# 92 "data/maps/Hoenn1_1/scripts.pory"
+# 57 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknamePartyMon_1
 	return
 
 NicknamePartyMon_1:
-# 93 "data/maps/Hoenn1_1/scripts.pory"
+# 58 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_GetGiftMonPartySlot
-# 94 "data/maps/Hoenn1_1/scripts.pory"
+# 59 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 NicknameBoxMon::
-# 102 "data/maps/Hoenn1_1/scripts.pory"
+# 67 "data/maps/Hoenn1_1/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 103 "data/maps/Hoenn1_1/scripts.pory"
+# 68 "data/maps/Hoenn1_1/scripts.pory"
 	hidemonpic
-# 104 "data/maps/Hoenn1_1/scripts.pory"
+# 69 "data/maps/Hoenn1_1/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknameBoxMon_2
 NicknameBoxMon_1:
-# 107 "data/maps/Hoenn1_1/scripts.pory"
+# 72 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_TransferredToPC
 	return
 
 NicknameBoxMon_2:
-# 105 "data/maps/Hoenn1_1/scripts.pory"
+# 70 "data/maps/Hoenn1_1/scripts.pory"
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
 
@@ -184,13 +120,13 @@ Hoenn1_1_EventScript_Sign_Text_1:
 	.string "Location is unused$"
 
 Hoenn1_1_EventScript_Pokeball_Text_0:
-# 80 "data/maps/Hoenn1_1/scripts.pory"
+# 45 "data/maps/Hoenn1_1/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"
 
 NicknamePartyMon_Text_0:
-# 90 "data/maps/Hoenn1_1/scripts.pory"
+# 55 "data/maps/Hoenn1_1/scripts.pory"
 	.string "Give it a nickname?$"
 
 Hoenn1_1__NotChosen::
-# 111 "data/maps/Hoenn1_1/scripts.pory"
+# 76 "data/maps/Hoenn1_1/scripts.pory"
 	.string "You did not choose the Pokemon$"

@@ -1638,6 +1638,26 @@
     {
       "id": "MAPSEC_AG_Hoenn3",
       "name": "AG Hoenn3"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn4",
+      "name": "AG Hoenn4"
+    },
+    {
+      "id": "MAPSEC_AG_Elite4_SkyPillar",
+      "name": "AG Elite4 SkyPillar"
+    },
+    {
+      "id": "MAPSEC_AG_Hub",
+      "name": "AG Hub"
+    },
+    {
+      "id": "MAPSEC_AG_Ancients",
+      "name": "Regi's Cave"
+    },
+    {
+      "id": "MAPSEC_AG_Elite4_Hoenn",
+      "name": "AG Elite4 Hoenn"
     }
   ]
 }

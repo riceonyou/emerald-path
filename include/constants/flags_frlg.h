@@ -2472,7 +2472,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0
 
-#define FLAG_DEFEATED_RUSTBORO_GYM                                  0
+#define FLAG_DEFEATED_PATH_1_LEADER                                  0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0

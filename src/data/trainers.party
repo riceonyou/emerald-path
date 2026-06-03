@@ -72,7 +72,7 @@ Comments can be added as C comment blocks
 
 /*Comments can also be on a single line*/
 
-=== TRAINER_HOENN1_2_TREECKO ===
+=== TRAINER_TREECKO ===
 Name: Treecko
 Class: Pkmn Trainer 1
 Pic: Hiker
@@ -89,7 +89,7 @@ Adamant Nature
 - Leer
 
 
-=== TRAINER_HOENN1_2_ZIGZAGOON ===
+=== TRAINER_ZIGZAGOON ===
 Name: ZIGZAGOON
 Class: Pkmn Trainer 1
 Pic: Hiker
@@ -111,7 +111,7 @@ Level: 9
 - Tackle  
 - Sand Attack
 
-=== TRAINER_HOENN1_3_POOCHYENA ===
+=== TRAINER_POOCHYENA ===
 Name: POOCHYENA
 Class: Pkmn Trainer 1
 Pic: Hiker
@@ -138,7 +138,7 @@ Level: 9
 
 
 
-=== TRAINER_HOENN1_4_WINGULL ===
+=== TRAINER_WINGULL ===
 Name: WINGULL
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -172,7 +172,7 @@ Level: 10
 
 
 
-=== TRAINER_HOENN1_3_LOTAD ===
+=== TRAINER_LOTAD ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -207,7 +207,7 @@ Level: 10
 
 
 
-=== TRAINER_HOENN1_5_ODDISH ===
+=== TRAINER_ODDISH ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -238,7 +238,7 @@ Level: 9
 - Growth
 - Water Sport
 
-=== TRAINER_HOENN1_5_WURMPLE ===
+=== TRAINER_WURMPLE ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -276,7 +276,7 @@ Level: 10
 - Poison Sting
 - Aerial Ace
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
+=== TRAINER_SHROOMISH ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -289,7 +289,7 @@ Carvanha
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_3 ===
+=== TRAINER_SURSKIT ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -302,7 +302,7 @@ Zubat
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GABRIELLE_1 ===
+=== TRAINER_SKITTY ===
 Name: GABRIELLE
 Class: Pkmn Breeder
 Pic: Pokemon Breeder F
@@ -335,7 +335,7 @@ Taillow
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_PETALBURG_WOODS ===
+=== TRAINER_TAILLOW ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -348,7 +348,7 @@ Poochyena
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MARCEL ===
+=== TRAINER_WHISMUR ===
 Name: MARCEL
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -366,7 +366,7 @@ Shiftry
 Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ALBERTO ===
+=== TRAINER_LEADER_NOSEPASS ===
 Name: ALBERTO
 Class: Bird Keeper
 Pic: Bird Keeper

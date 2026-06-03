@@ -1,0 +1,42 @@
+{
+  "id": "MAP_ELITE4_HOENN_1",
+  "name": "Elite4_Hoenn_1",
+  "layout": "LAYOUT_ELITE4_HOENN_1",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_AG_Elite4_Hoenn",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 2,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ELITE4_HOENN_OUTSIDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ELITE4_HOENN_OUTSIDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ELITE4_HOENN_2",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

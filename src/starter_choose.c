@@ -29,6 +29,8 @@
 #include "script_pokemon_util.h"
 #include "caps.h"
 #include "string_util.h"
+#include "data/choose_random_pool.h"
+
 
 #define STARTER_MON_COUNT   3
 
@@ -736,17 +738,18 @@ void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8
     }
 }
 
-static u16 SelectPokemonFromWeightedPoolExclude(const u16 *excluded, u8 excludedCount)
+static u16 SelectPokemonFromWeightedPoolExclude(const struct BirchBagWeightedChoice *pool, u8 poolSize, const u16 *excluded, u8 excludedCount)
 {
     u16 totalWeight = 0;
     u16 randValue;
     u16 cumulativeWeight = 0;
     u8 i;
 
-    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
+    for (i = 0; i < poolSize; i++)
     {
-        if (!IsSpeciesExcluded(sBirchBagWeightedPool[i].species, excluded, excludedCount))
-            totalWeight += sBirchBagWeightedPool[i].weight;
+        if (!IsSpeciesExcluded(pool[i].species, excluded, excludedCount) && 
+            !BirchBagPlayerOwnsSpecies(pool[i].species))
+            totalWeight += pool[i].weight;
     }
 
     if (totalWeight == 0)
@@ -754,14 +757,15 @@ static u16 SelectPokemonFromWeightedPoolExclude(const u16 *excluded, u8 excluded
 
     randValue = Random() % totalWeight;
 
-    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
+    for (i = 0; i < poolSize; i++)
     {
-        if (IsSpeciesExcluded(sBirchBagWeightedPool[i].species, excluded, excludedCount))
+        if (IsSpeciesExcluded(pool[i].species, excluded, excludedCount) ||
+            BirchBagPlayerOwnsSpecies(pool[i].species))
             continue;
 
-        cumulativeWeight += sBirchBagWeightedPool[i].weight;
+        cumulativeWeight += pool[i].weight;
         if (randValue < cumulativeWeight)
-            return sBirchBagWeightedPool[i].species;
+            return pool[i].species;
     }
 
     return SPECIES_NONE;
@@ -778,7 +782,7 @@ static void PrepareBirchBagWeightedStarterChoices(void)
 
     for (i = 0; i < STARTER_MON_COUNT; i++)
     {
-        species = SelectPokemonFromWeightedPoolExclude(excluded, i);
+        species = SelectPokemonFromWeightedPoolExclude(sBirchBagWeightedPool, sBirchBagWeightedPoolSize, excluded, i);
         if (species == SPECIES_NONE)
             break;
 
@@ -865,3 +869,4 @@ void ChooseBirchBagPokemonWeighted(void)
     gMain.savedCallback = CB2_GiveBirchBagPokemonNoBattle;
     SetMainCallback2(CB2_ChooseStarter);
 }
+

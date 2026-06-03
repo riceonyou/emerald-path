@@ -3,7 +3,7 @@ mapscripts Hoenn1_2_MapScripts {
 
 script Hoenn1_2_EventScript_Treecko{
  
-	trainerbattle_single(TRAINER_HOENN1_2_TREECKO, Treecko_Intro, Treecko_Outro)
+	trainerbattle_single(TRAINER_TREECKO, Treecko_Intro, Treecko_Outro)
 	msgbox(PostBattle_Treecko, MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -24,7 +24,7 @@ text PostBattle_Treecko{
 
 script Hoenn1_2_EventScript_Zigzagoon{
  
-	trainerbattle_single(TRAINER_HOENN1_2_ZIGZAGOON, Zigzagoon_Intro, Zigzagoon_Outro)
+	trainerbattle_single(TRAINER_ZIGZAGOON, Zigzagoon_Intro, Zigzagoon_Outro)
 	msgbox(PostBattle_Zigzagoon, MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -48,40 +48,8 @@ script Hoenn1_2_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    special(ResetBirchBagWeightedPool)
-
-    setvar(VAR_0x8000, SPECIES_ZIGZAGOON)
-    setvar(VAR_0x8001, 30)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_POOCHYENA)
-    setvar(VAR_0x8001, 30)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_ZIGZAGOON_GALAR)
-    setvar(VAR_0x8001, 20)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_BIDOOF)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_WOOLOO)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_BUNNELBY)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_LILLIPUP)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_TAILLOW)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_RALTS)
-    setvar(VAR_0x8001, 10)
-    special(AddBirchBagWeightedChoice)
-    setvar(VAR_0x8000, SPECIES_STANTLER)
-    setvar(VAR_0x8001, 1)
-    special(AddBirchBagWeightedChoice)
-
-    // Opens the Birch bag 3-choice UI populated from the weighted pool
+    setvar(VAR_0x8000, 1)
+    special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
     

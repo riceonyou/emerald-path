@@ -10,7 +10,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -23,7 +23,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(WINGULL)",
       "x": 11,
-      "y": 5,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -36,8 +36,8 @@
     {
       "local_id": "HOENN1_4_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 16,
-      "y": 9,
+      "x": 17,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
