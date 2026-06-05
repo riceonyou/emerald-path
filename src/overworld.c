@@ -113,6 +113,12 @@ extern const struct MapLayout *const gMapLayouts[];
 extern const struct MapHeader *const *const gMapGroups[];
 extern bool8 gNuzlockeEnabled;
 
+// Whiteout preserve flags
+#define B_WHITEOUT_PRESERVE_FLAGS_LIST    FLAG_NUZLOCKE, FLAG_SYS_POKEDEX_GET, FLAG_SYS_POKEMON_GET, FLAG_HEAL_EVERY_BATTLE, FLAG_SYS_B_DASH, FLAG_RECEIVED_RUNNING_SHOES, FLAG_SYS_NEW_GAME
+#define B_WHITEOUT_PRESERVE_FLAGS_COUNT   7
+
+// Flags listed above are restored after whiteout state reset. Use 0 for the count and leave the list blank to preserve none.
+
 #if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
 static const u16 sWhiteoutPreserveFlags[] = { B_WHITEOUT_PRESERVE_FLAGS_LIST };
 #endif
@@ -404,7 +410,13 @@ void DoWhiteOut(void)
     // if (IsNuzlockeActive())
     //     NuzlockeHandleWhiteout();
 
+    // Clear Pokemon and give back starter
     ClearAllPokemonOnWhiteOut();
+    
+    // Clear Bag and give back starting items
+    ClearBag();
+    AddBagItem(ITEM_CANDY_JAR, 1);
+
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 18);
     WarpIntoMap();
@@ -523,7 +535,7 @@ static void ClearAllPokemonOnWhiteOut(void)
 
     ZeroPlayerPartyMons();
     gPlayerPartyCount = 0;
-    ClearBag();
+
 
     for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
     {
@@ -1938,10 +1950,18 @@ void CB2_NewGame(void)
     StopMapMusic();
     ResetSafariZoneFlag_();
     NewGameInitData();
-    if (gNuzlockeEnabled) // <- set nuzlocke flag
-        FlagSet(FLAG_NUZLOCKE);
-    else
-        FlagClear(FLAG_NUZLOCKE);
+    // if (gNuzlockeEnabled) // <- set nuzlocke flag
+    //     FlagSet(FLAG_NUZLOCKE);
+    // else
+    //     FlagClear(FLAG_NUZLOCKE);
+    FlagSet(FLAG_NUZLOCKE);
+    FlagSet(FLAG_SYS_POKEDEX_GET);
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    FlagSet(FLAG_HEAL_EVERY_BATTLE);
+    FlagSet(FLAG_SYS_B_DASH);
+    FlagSet(FLAG_RECEIVED_RUNNING_SHOES);
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
+    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     ResetInitialPlayerAvatarState();
     PlayTimeCounter_Start();
     ScriptContext_Init();
@@ -1949,7 +1969,8 @@ void CB2_NewGame(void)
     if (IS_FRLG)
         gFieldCallback = FieldCB_WarpExitFadeFromBlack;
     else
-        gFieldCallback = ExecuteTruckSequence;
+        //gFieldCallback = ExecuteTruckSequence;
+        gFieldCallback = FieldCB_WarpExitFadeFromBlack;
     gFieldCallback2 = NULL;
     DoMapLoadLoop(&gMain.state);
     SetFieldVBlankCallback();

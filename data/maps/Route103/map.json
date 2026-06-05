@@ -193,7 +193,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_GUARD_SPEC",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_103_GUARD_SPEC"
+      "flag": "FLAG_ITEM_4_5"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",

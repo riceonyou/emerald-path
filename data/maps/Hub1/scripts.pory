@@ -1,4 +1,24 @@
 mapscripts Hub1_MapScripts {
+	MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: HUB1_ONWARP]
+	MAP_SCRIPT_ON_FRAME_TABLE[ VAR_TEMP_2, 0: HUB1_ONFRAME]
+
+}
+
+script HUB1_ONWARP {
+    setvar(VAR_TEMP_1, 1)
+	
+}
+
+script HUB1_ONFRAME {
+	setvar(VAR_TEMP_2, 1)
+	if(!flag(FLAG_SYS_NEW_GAME)){
+		lockall
+		msgbox("Welcome to Pokemon Path!\lTo start a run, talk to\nProfessor Birch up ahead.")
+		giveitem(ITEM_CANDY_JAR)
+		setflag(FLAG_SYS_NEW_GAME)
+		waitmessage
+		releaseall
+	}
 }
 
 script Hub_Event_Script_Birch{

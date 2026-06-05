@@ -1,17 +1,20 @@
 mapscripts Hoenn1_1_MapScripts {
     MAP_SCRIPT_ON_LOAD: Hoenn1_1_OnLoad
-    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: ONWARP]
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: Hoenn1_1_ONWARP]
+    MAP_SCRIPT_ON_FRAME_TABLE[ VAR_TEMP_2, 0: Hoenn1_1_ONFRAME]
 }
 
-script ONWARP {
+script Hoenn1_1_ONWARP {
     setvar(VAR_TEMP_1, 1)
     turnobject(LOCALID_PLAYER, DIR_EAST)
-    }
+}
+
+script Hoenn1_1_ONFRAME {
+	setvar(VAR_TEMP_2, 1)
+}
 
 script Hoenn1_1_OnLoad{
     setvar(B_LEVEL_CAP_VARIABLE, 14)
-    setflag(FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_SYS_POKEMON_GET)
 }
 
 script Hoenn1_1_EventScript_Sign{
@@ -27,11 +30,11 @@ script Hoenn1_1_EventScript_Pokeball{
  
     lockall
     
-    giveitem(ITEM_CANDY_JAR)
-    giveitem(ITEM_RARE_CANDY, 1)
-    giveitem(ITEM_ORAN_BERRY, 5)
-    giveitem(ITEM_MEMORY_MUSHROOM, 5)
-    setflag(FLAG_HEAL_EVERY_BATTLE)
+    // giveitem(ITEM_CANDY_JAR)
+    // giveitem(ITEM_RARE_CANDY, 1)
+    // giveitem(ITEM_ORAN_BERRY, 5)
+    // giveitem(ITEM_MEMORY_MUSHROOM, 5)
+
 
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
@@ -41,7 +44,7 @@ script Hoenn1_1_EventScript_Pokeball{
     waitstate
     
     removeobject(HOENN1_1_BIRCHBAG)
-    setflag(FLAG_HOENN1_1_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_1)
     playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 

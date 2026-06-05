@@ -7,11 +7,11 @@ ANCIENT_REGIS_MapScripts::
 
 ANCIENT_REGIS_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 # 2 "data/maps/ANCIENT_REGIS/scripts.pory"
-	map_script_2 VAR_TEMP_1, 0, ANCIENT_REGIS_TURNPLAYERNORTH
+	map_script_2 VAR_TEMP_1, 0, ANCIENT_REGIS_ONWARP
 	.2byte 0
 
 
-ANCIENT_REGIS_TURNPLAYERNORTH::
+ANCIENT_REGIS_ONWARP::
 # 8 "data/maps/ANCIENT_REGIS/scripts.pory"
 	setvar VAR_TEMP_1, 1
 # 9 "data/maps/ANCIENT_REGIS/scripts.pory"

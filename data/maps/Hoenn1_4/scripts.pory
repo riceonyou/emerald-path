@@ -22,7 +22,7 @@ script Hoenn1_4_EventScript_BirchBag{
 	
     
     removeobject(HOENN1_4_BIRCHBAG)
-    setflag(FLAG_HOENN1_4_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_4)
     playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 

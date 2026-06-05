@@ -40,7 +40,7 @@ Hoenn1_6_EventScript_BirchBag::
 # 33 "data/maps/Hoenn1_6/scripts.pory"
 	removeobject HOENN1_6_BIRCHBAG
 # 34 "data/maps/Hoenn1_6/scripts.pory"
-	setflag FLAG_HOENN1_6_BIRCHBAG
+	setflag FLAG_BIRCHBAG_1_6
 # 35 "data/maps/Hoenn1_6/scripts.pory"
 	playfanfare MUS_EVOLVED
 # 36 "data/maps/Hoenn1_6/scripts.pory"
