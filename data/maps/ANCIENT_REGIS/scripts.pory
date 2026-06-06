@@ -38,34 +38,43 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     //GIVE ANCIENT REWARD
     switch (var(VAR_0x8000)) {
         case 0://Regirock
-            dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Ice Beam TM", "Flamethrower TM", "Thunderbolt TM")
+            dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
+            dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
+            dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
+            dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
             switch (var(VAR_RESULT)) {
-                case 0:
+                case ITEM_TM_ICE_BEAM:
                     giveitem(ITEM_TM_ICE_BEAM, 1)
-                case 1:
+                case ITEM_TM_FLAMETHROWER:
                     giveitem(ITEM_TM_FLAMETHROWER, 1)
-                case 2:
+                case ITEM_TM_THUNDERBOLT:
                     giveitem(ITEM_TM_THUNDERBOLT, 1)
             }
         case 1://Regice
-            dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Reflect TM", "Light Screen TM", "Safeguard TM")
+            dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
+            dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
+            dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
+            dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
             switch (var(VAR_RESULT)) {
-                case 0:
-                    giveitem(ITEM_TM_REFLECT, 1)
-                case 1:
-                    giveitem(ITEM_TM_LIGHT_SCREEN, 1)
-                case 2:
-                    giveitem(ITEM_TM_SAFEGUARD, 1)
+                case ITEM_TM_ICE_BEAM:
+                    giveitem(ITEM_TM_ICE_BEAM, 1)
+                case ITEM_TM_FLAMETHROWER:
+                    giveitem(ITEM_TM_FLAMETHROWER, 1)
+                case ITEM_TM_THUNDERBOLT:
+                    giveitem(ITEM_TM_THUNDERBOLT, 1)
             }
         case 2://Registeel
-            dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Ice Beam TM", "Flamethrower TM", "Thunderbolt TM")
+            dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
+            dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
+            dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
+            dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
             switch (var(VAR_RESULT)) {
-                case 0:
-                    giveitem(ITEM_TM_SLUDGE_BOMB, 1)
-                case 1:
-                    giveitem(ITEM_TM_BRICK_BREAK, 1)
-                case 2:
-                    giveitem(ITEM_TM_PSYCHIC, 1)
+                case ITEM_TM_ICE_BEAM:
+                    giveitem(ITEM_TM_ICE_BEAM, 1)
+                case ITEM_TM_FLAMETHROWER:
+                    giveitem(ITEM_TM_FLAMETHROWER, 1)
+                case ITEM_TM_THUNDERBOLT:
+                    giveitem(ITEM_TM_THUNDERBOLT, 1)
             }
     }
     waitmessage

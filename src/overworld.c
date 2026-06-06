@@ -113,8 +113,9 @@ extern const struct MapLayout *const gMapLayouts[];
 extern const struct MapHeader *const *const gMapGroups[];
 extern bool8 gNuzlockeEnabled;
 
-// Whiteout preserve flags
-#define B_WHITEOUT_PRESERVE_FLAGS_LIST    FLAG_NUZLOCKE, FLAG_SYS_POKEDEX_GET, FLAG_SYS_POKEMON_GET, FLAG_HEAL_EVERY_BATTLE, FLAG_SYS_B_DASH, FLAG_RECEIVED_RUNNING_SHOES, FLAG_SYS_NEW_GAME
+// Preserve these flags after whiteout
+#define B_WHITEOUT_PRESERVE_FLAGS_LIST    FLAG_NUZLOCKE, FLAG_SYS_NEW_GAME, \
+                                        FLAG_SYS_POKEDEX_GET, FLAG_SYS_POKEMON_GET, FLAG_HEAL_EVERY_BATTLE, FLAG_SYS_B_DASH, FLAG_RECEIVED_RUNNING_SHOES
 #define B_WHITEOUT_PRESERVE_FLAGS_COUNT   7
 
 // Flags listed above are restored after whiteout state reset. Use 0 for the count and leave the list blank to preserve none.

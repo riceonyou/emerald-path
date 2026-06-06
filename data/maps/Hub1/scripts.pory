@@ -13,7 +13,95 @@ script HUB1_ONFRAME {
 	setvar(VAR_TEMP_2, 1)
 	if(!flag(FLAG_SYS_NEW_GAME)){
 		lockall
-		msgbox("Welcome to Pokemon Path!\lTo start a run, talk to\nProfessor Birch up ahead.")
+		msgbox("Welcome to Pokemon Path!\pTo start a run, talk to\nProfessor Birch up ahead.\pNow choose a pokemon to\nstart your adventure with.")
+		
+		dynmultipush("Bulbasaur", SPECIES_BULBASAUR)
+		dynmultipush("Charmander", SPECIES_CHARMANDER)
+		dynmultipush("Squirtle", SPECIES_SQUIRTLE)
+		dynmultipush("Chikorita", SPECIES_CHIKORITA)
+		dynmultipush("Cyndaquil", SPECIES_CYNDAQUIL)
+		dynmultipush("Totodile", SPECIES_TOTODILE)
+		dynmultipush("Treecko", SPECIES_TREECKO)
+		dynmultipush("Torchic", SPECIES_TORCHIC)
+		dynmultipush("Mudkip", SPECIES_MUDKIP)
+		dynmultipush("Turtwig", SPECIES_TURTWIG)
+		dynmultipush("Chimchar", SPECIES_CHIMCHAR)
+		dynmultipush("Piplup", SPECIES_PIPLUP)
+		dynmultipush("Snivy", SPECIES_SNIVY)
+		dynmultipush("Tepig", SPECIES_TEPIG)
+		dynmultipush("Oshawott", SPECIES_OSHAWOTT)
+		dynmultipush("Chespin", SPECIES_CHESPIN)
+		dynmultipush("Fennekin", SPECIES_FENNEKIN)
+		dynmultipush("Froakie", SPECIES_FROAKIE)
+		dynmultipush("Rowlet", SPECIES_ROWLET)
+		dynmultipush("Litten", SPECIES_LITTEN)
+		dynmultipush("Popplio", SPECIES_POPPLIO)
+		dynmultipush("Grookey", SPECIES_GROOKEY)
+		dynmultipush("Scorbunny", SPECIES_SCORBUNNY)
+		dynmultipush("Sobble", SPECIES_SOBBLE)
+		dynmultipush("Sprigatito", SPECIES_SPRIGATITO)
+		dynmultipush("Fuecoco", SPECIES_FUECOCO)
+		dynmultipush("Quaxly", SPECIES_QUAXLY)
+		dynmultistack(0, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_MON)
+
+		
+		switch (var(VAR_RESULT)) {
+			case SPECIES_BULBASAUR:
+				givemon(SPECIES_BULBASAUR, 5)
+			case SPECIES_CHARMANDER:
+				givemon(SPECIES_CHARMANDER, 5)
+			case SPECIES_SQUIRTLE:
+				givemon(SPECIES_SQUIRTLE, 5)
+			case SPECIES_CHIKORITA:
+				givemon(SPECIES_CHIKORITA, 5)
+			case SPECIES_CYNDAQUIL:
+				givemon(SPECIES_CYNDAQUIL, 5)
+			case SPECIES_TOTODILE:
+				givemon(SPECIES_TOTODILE, 5)
+			case SPECIES_TREECKO:
+				givemon(SPECIES_TREECKO, 5)
+			case SPECIES_TORCHIC:
+				givemon(SPECIES_TORCHIC, 5)
+			case SPECIES_MUDKIP:
+				givemon(SPECIES_MUDKIP, 5)
+			case SPECIES_TURTWIG:
+				givemon(SPECIES_TURTWIG, 5)
+			case SPECIES_CHIMCHAR:
+				givemon(SPECIES_CHIMCHAR, 5)
+			case SPECIES_PIPLUP:
+				givemon(SPECIES_PIPLUP, 5)
+			case SPECIES_SNIVY:
+				givemon(SPECIES_SNIVY, 5)
+			case SPECIES_TEPIG:
+				givemon(SPECIES_TEPIG, 5)
+			case SPECIES_OSHAWOTT:
+				givemon(SPECIES_OSHAWOTT, 5)
+			case SPECIES_CHESPIN:
+				givemon(SPECIES_CHESPIN, 5)
+			case SPECIES_FENNEKIN:
+				givemon(SPECIES_FENNEKIN, 5)
+			case SPECIES_FROAKIE:
+				givemon(SPECIES_FROAKIE, 5)
+			case SPECIES_ROWLET:
+				givemon(SPECIES_ROWLET, 5)
+			case SPECIES_LITTEN:
+				givemon(SPECIES_LITTEN, 5)
+			case SPECIES_POPPLIO:
+				givemon(SPECIES_POPPLIO, 5)
+			case SPECIES_GROOKEY:
+				givemon(SPECIES_GROOKEY, 5)
+			case SPECIES_SCORBUNNY:
+				givemon(SPECIES_SCORBUNNY, 5)
+			case SPECIES_SOBBLE:
+				givemon(SPECIES_SOBBLE, 5)
+			case SPECIES_SPRIGATITO:
+				givemon(SPECIES_SPRIGATITO, 5)
+			case SPECIES_FUECOCO:
+				givemon(SPECIES_FUECOCO, 5)
+			case SPECIES_QUAXLY:
+				givemon(SPECIES_QUAXLY, 5)
+		}
+		special(UpdatePlayerSprite)
 		giveitem(ITEM_CANDY_JAR)
 		setflag(FLAG_SYS_NEW_GAME)
 		waitmessage

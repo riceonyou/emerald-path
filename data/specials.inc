@@ -642,3 +642,5 @@ gSpecials::
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
 	def_special LoadBirchBagPoolById
+	def_special UpdatePlayerSprite
+	

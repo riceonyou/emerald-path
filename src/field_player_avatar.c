@@ -1,5 +1,6 @@
 #include "global.h"
 #include "main.h"
+#include "pokemon.h"
 #include "bike.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -1282,7 +1283,7 @@ static void UNUSED PlayerWalkSlow(enum Direction direction)
 
 static void PlayerRunSlow(enum Direction direction)
 {
-    PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
+    PlayerSetAnimId(GetWalkFastMovementAction(direction), COPY_MOVE_WALK);
 }
 
 // normal speed (1 speed)
@@ -1308,7 +1309,7 @@ void PlayerWalkFaster(enum Direction direction)
 
 static void PlayerRun(enum Direction direction)
 {
-    PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
+    PlayerSetAnimId(GetWalkFastMovementAction(direction), COPY_MOVE_WALK);
 }
 
 void PlayerOnBikeCollide(enum Direction direction)
@@ -1589,8 +1590,74 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
         return sRivalAvatarGfxIds[state][gender];
 }
 
+static struct Pokemon *GetFirstAlivePokemon(void)
+{
+    struct Pokemon *mon;
+    u16 species;
+    u8 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        mon = &gPlayerParty[i];
+        species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+        if (species == SPECIES_NONE)
+            break;
+        if (species == SPECIES_EGG)
+            continue;
+        if (GetMonData(mon, MON_DATA_HP) == 0)
+            continue;
+        return mon;
+    }
+    return NULL;
+}
+
+static u16 GetPlayerAvatarGraphicsIdForFirstAlivePokemon(void)
+{
+    struct Pokemon *mon;
+    u16 species;
+    u16 gfxId;
+
+    mon = GetFirstAlivePokemon();
+    species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+
+    gfxId = species + OBJ_EVENT_MON;
+    if (GetMonData(mon, MON_DATA_OT_GENDER) == MON_FEMALE)
+        gfxId += OBJ_EVENT_MON_FEMALE;
+    if (IsMonShiny(mon))
+        gfxId += OBJ_EVENT_MON_SHINY;
+        return gfxId;
+
+    return 0;
+}
+
+
+
+
+
+void UpdateTransformedPlayerPalette(struct ObjectEvent* playerObj)
+{
+    u32 species = GetMonData(GetFirstAlivePokemon(), MON_DATA_SPECIES);
+    struct SpritePalette spritePalette;
+    spritePalette.data = gSpeciesInfo[species].overworldPalette;
+    spritePalette.tag = species + OBJ_EVENT_MON;
+    struct Sprite* sprite = &gSprites[playerObj->spriteId];
+    sprite->oam.paletteNum = LoadSpritePalette(&spritePalette);
+}
+
+void UpdatePlayerSprite()
+{
+    struct ObjectEvent* playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+    ObjectEventSetGraphicsId(playerObj, GetPlayerAvatarGraphicsIdForFirstAlivePokemon());
+    UpdateTransformedPlayerPalette(playerObj);
+    UpdateFollowingPokemon();
+}
+
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
+
+    u16 gfxId = GetPlayerAvatarGraphicsIdForFirstAlivePokemon();
+    if (gfxId != 0)
+        return gfxId;
     return sPlayerAvatarGfxIds[state][gender];
 }
 

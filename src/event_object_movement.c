@@ -3098,9 +3098,21 @@ u8 UpdateSpritePaletteByTemplate(const struct SpriteTemplate *template, struct S
 static void ObjectEventSetGraphics(struct ObjectEvent *objectEvent, const struct ObjectEventGraphicsInfo *graphicsInfo)
 {
     struct Sprite *sprite = &gSprites[objectEvent->spriteId];
-    u32 i = FindObjectEventPaletteIndexByTag(graphicsInfo->paletteTag);
-    if (i != 0xFF)
-        UpdateSpritePalette(&sObjectEventSpritePalettes[i], sprite);
+    
+    // Handle dynamic palettes for species-based object events
+    if (graphicsInfo->paletteTag == OBJ_EVENT_PAL_TAG_DYNAMIC && (objectEvent->graphicsId & OBJ_EVENT_MON))
+    {
+        sprite->inUse = FALSE;
+        FieldEffectFreePaletteIfUnused(sprite->oam.paletteNum);
+        sprite->inUse = TRUE;
+        sprite->oam.paletteNum = LoadDynamicFollowerPalette(OW_SPECIES(objectEvent), OW_SHINY(objectEvent), OW_FEMALE(objectEvent));
+    }
+    else
+    {
+        u32 i = FindObjectEventPaletteIndexByTag(graphicsInfo->paletteTag);
+        if (i != 0xFF)
+            UpdateSpritePalette(&sObjectEventSpritePalettes[i], sprite);
+    }
 
     // If gfx size changes, we need to reallocate tiles
     if (OW_LARGE_OW_SUPPORT && !OW_GFX_COMPRESS && graphicsInfo->oam->size != sprite->oam.size)
@@ -3108,12 +3120,18 @@ static void ObjectEventSetGraphics(struct ObjectEvent *objectEvent, const struct
 
     #if OW_GFX_COMPRESS
     LoadSheetGraphicsInfo(graphicsInfo, objectEvent->graphicsId, sprite);
+    if (sprite->usingSheet)
+        sprite->sheetSpan = GetSpanPerImage(graphicsInfo->oam->shape, graphicsInfo->oam->size);
     #endif
 
     sprite->oam.shape = graphicsInfo->oam->shape;
     sprite->oam.size = graphicsInfo->oam->size;
     sprite->images = graphicsInfo->images;
     sprite->anims = graphicsInfo->anims;
+    if (graphicsInfo->subspriteTables != NULL)
+        SetSubspriteTables(sprite, graphicsInfo->subspriteTables);
+    else
+        sprite->subspriteMode = SUBSPRITES_OFF;
     sprite->subspriteTables = graphicsInfo->subspriteTables;
     objectEvent->inanimate = graphicsInfo->inanimate;
     SetSpritePosToMapCoords(objectEvent->currentCoords.x, objectEvent->currentCoords.y, &sprite->x, &sprite->y);
