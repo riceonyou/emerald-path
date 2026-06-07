@@ -6,13 +6,14 @@ mapscripts Hub1_MapScripts {
 
 script HUB1_ONWARP {
     setvar(VAR_TEMP_1, 1)
-	
+
 }
 
 script HUB1_ONFRAME {
-	setvar(VAR_TEMP_2, 1)
 	setvar(VAR_CURRENT_ACT, 1)
 	special(UpdateLevelCap)
+
+	setvar(VAR_TEMP_2, 1)
 	if(!flag(FLAG_SYS_NEW_GAME)){
 		lockall
 		msgbox("Welcome to Pokemon Path!\pTo start a run, talk to\nProfessor Birch up ahead.\pNow choose a pokemon to\nstart your adventure with.")
@@ -594,150 +595,221 @@ script Hub_Event_Script_Chansey{
 }
 
 script Hub_Event_Script_Kecleon {
-
+	lockall
+    setvar(VAR_TEMP_A, 0)
 	msgbox("Would you like to buy a starter item?")
 	if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)){
 		dynmultipush("Memory Mushroom (¥2000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)){
 		dynmultipush("Memory Mushroom (¥10000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)){
 		dynmultipush("Memory Mushroom (¥20000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)){
 		dynmultipush("Memory Mushroom (¥30000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)){
 		dynmultipush("Memory Mushroom (¥40000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)){
 		dynmultipush("Memory Mushroom (¥50000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)){
 		dynmultipush("Memory Mushroom (¥80000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)){
 		dynmultipush("Memory Mushroom (¥100000)",ITEM_MEMORY_MUSHROOM)
+		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_RARE_CANDY_UNLOCKED_1)){
 		dynmultipush("Rare Candy (¥30000)",ITEM_RARE_CANDY)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
 		dynmultipush("Rare Candy (¥500000)",ITEM_RARE_CANDY)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
 		dynmultipush("Rare Candy (¥100000)",ITEM_RARE_CANDY)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
 		dynmultipush("Rare Candy (¥200000)",ITEM_RARE_CANDY)
+		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
 		dynmultipush("Rare Candy (¥300000)",ITEM_RARE_CANDY)
+		addvar(VAR_TEMP_A, 1)
 	}
-	showmoneybox(17, 10)
-	dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
-	switch(var(VAR_RESULT)){
-		case ITEM_MEMORY_MUSHROOM:
-			if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)){
-				if(checkmoney(2000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(2000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)){
-				if(checkmoney(10000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(10000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)){
-				if(checkmoney(20000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(20000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)){
-				if(checkmoney(30000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(30000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)){
-				if(checkmoney(40000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(40000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)){
-				if(checkmoney(50000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(50000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)){
-				if(checkmoney(80000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(80000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)){
-				if(checkmoney(100000)){
-						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)
-						giveitem(ITEM_MEMORY_MUSHROOM, 1)
-						removemoney(100000)
-						updatemoneybox
-						playse(SE_SHOP)
-						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
-					}
-					else{
-						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
-					}
-			}
-		case ITEM_RARE_CANDY:
-			if(!flag(FLAG_RARE_CANDY_UNLOCKED_1)){
-				dynmultipush("Rare Candy (¥30000)",ITEM_RARE_CANDY)
-				if(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
-					dynmultipush("Rare Candy (¥500000)",ITEM_RARE_CANDY)
-					if(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
-						dynmultipush("Rare Candy (¥100000)",ITEM_RARE_CANDY)
-						if(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
-							dynmultipush("Rare Candy (¥200000)",ITEM_RARE_CANDY)
-							if(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
-								dynmultipush("Rare Candy (¥300000)",ITEM_RARE_CANDY)
-			}}}}}
-	}
+
+	if(var(VAR_TEMP_A) != 0){
+		showmoneybox(17, 10)
+		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+		switch(var(VAR_RESULT)){
+			case ITEM_MEMORY_MUSHROOM:
+				if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)){
+					if(checkmoney(2000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(2000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)){
+					if(checkmoney(10000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(10000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)){
+					if(checkmoney(20000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(20000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)){
+					if(checkmoney(30000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(30000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)){
+					if(checkmoney(40000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(40000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)){
+					if(checkmoney(50000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(50000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)){
+					if(checkmoney(80000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(80000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)){
+					if(checkmoney(100000)){
+							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)
+							giveitem(ITEM_MEMORY_MUSHROOM, 1)
+							removemoney(100000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}
+			case ITEM_RARE_CANDY:
+				if(!flag(FLAG_RARE_CANDY_UNLOCKED_1)){
+					if(checkmoney(30000)){
+							setflag(FLAG_RARE_CANDY_UNLOCKED_1)
+							giveitem(ITEM_RARE_CANDY, 1)
+							removemoney(30000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
+					if(checkmoney(50000)){
+							setflag(FLAG_RARE_CANDY_UNLOCKED_2)
+							giveitem(ITEM_RARE_CANDY, 1)
+							removemoney(50000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
+					if(checkmoney(100000)){
+							setflag(FLAG_RARE_CANDY_UNLOCKED_3)
+							giveitem(ITEM_RARE_CANDY, 1)
+							removemoney(100000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
+					if(checkmoney(200000)){
+							setflag(FLAG_RARE_CANDY_UNLOCKED_4)
+							giveitem(ITEM_RARE_CANDY, 1)
+							removemoney(200000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
+					if(checkmoney(300000)){
+							setflag(FLAG_RARE_CANDY_UNLOCKED_5)
+							giveitem(ITEM_RARE_CANDY, 1)
+							removemoney(300000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+						}
+				}
+		}
+	}else{
+		msgbox("You don't have anything left\nto puchase right now. Thank you for\lyour consistent patronage!\p")
+		waitmessage
+		releaseall}
+
 	hidemoneybox
 	releaseall
 	

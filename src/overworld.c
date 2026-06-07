@@ -443,12 +443,13 @@ void GiveSavedStarter(void)
 
 void UpdateLevelCap(void)
 {
-    switch (VarGet(VAR_CURRENT_ACT)){
-    case (1): VarSet(VAR_LEVEL_CAP, 14);
-    case (2): VarSet(VAR_LEVEL_CAP, 30);
-    case (3): VarSet(VAR_LEVEL_CAP, 42);
-    case (4): VarSet(VAR_LEVEL_CAP, 60);
-    case (5): VarSet(VAR_LEVEL_CAP, 80);
+    u8 currentact = VarGet(VarGet(VAR_CURRENT_ACT));
+    switch (currentact){
+        case (1): VarSet(VAR_LEVEL_CAP, 14); break;
+        case (2): VarSet(VAR_LEVEL_CAP, 30); break;
+        case (3): VarSet(VAR_LEVEL_CAP, 42); break;
+        case (4): VarSet(VAR_LEVEL_CAP, 60); break;
+        case (5): VarSet(VAR_LEVEL_CAP, 80); break;
     }
 }
 

@@ -14,7 +14,8 @@ script Hoenn1_1_ONFRAME {
 }
 
 script Hoenn1_1_OnLoad{
-    setvar(B_LEVEL_CAP_VARIABLE, 14)
+    setvar(VAR_CURRENT_ACT, 1)
+    special(UpdateLevelCap)
 }
 
 script Hoenn1_1_EventScript_Sign{
