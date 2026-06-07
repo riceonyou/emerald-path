@@ -175,8 +175,6 @@ gSpecials::
 	def_special StartWallClock
 	def_special Special_ViewWallClock
 	def_special ChooseStarter
-	def_special ResetBirchBagWeightedPool
-	def_special AddBirchBagWeightedChoice
 	def_special ChooseBirchBagPokemonWeighted
 	def_special StartWallyTutorialBattle
 	def_special ChangePokemonNickname

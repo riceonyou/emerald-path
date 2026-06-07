@@ -142,17 +142,24 @@ FLAG_SCORBUNNY_UNLOCKED,\
 FLAG_SOBBLE_UNLOCKED,\
 FLAG_SPRIGATITO_UNLOCKED,\
 FLAG_FUECOCO_UNLOCKED,\
-FLAG_QUAXLY_UNLOCKED
+FLAG_QUAXLY_UNLOCKED,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_1,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_2,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_3,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_4,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_5,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_6,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_7,\
+FLAG_MEMORY_MUSHROOM_UNLOCKED_8,\
+FLAG_RARE_CANDY_UNLOCKED_1,\
+FLAG_RARE_CANDY_UNLOCKED_2,\
+FLAG_RARE_CANDY_UNLOCKED_3,\
+FLAG_RARE_CANDY_UNLOCKED_4,\
+FLAG_RARE_CANDY_UNLOCKED_5
 
+// Flags listed above are restored after whiteout state reset
 
-
-#define B_WHITEOUT_PRESERVE_FLAGS_COUNT   7
-
-// Flags listed above are restored after whiteout state reset. Use 0 for the count and leave the list blank to preserve none.
-
-#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
 static const u16 sWhiteoutPreserveFlags[] = { B_WHITEOUT_PRESERVE_FLAGS_LIST };
-#endif
 
 static void Overworld_ResetStateAfterWhiteOut(void);
 static void ClearWhiteoutFlags(void);
@@ -565,16 +572,12 @@ static void Overworld_ResetStateAfterWhiteOut(void)
 
 static void ClearWhiteoutFlags(void)
 {
-#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
     bool8 preserveFlagValues[ARRAY_COUNT(sWhiteoutPreserveFlags)];
     u16 i;
-#endif
     u16 flagId;
 
-#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
     for (i = 0; i < ARRAY_COUNT(sWhiteoutPreserveFlags); i++)
         preserveFlagValues[i] = FlagGet(sWhiteoutPreserveFlags[i]);
-#endif
 
     memset(gSaveBlock1Ptr->flags, 0, sizeof(gSaveBlock1Ptr->flags));
 
@@ -586,13 +589,11 @@ static void ClearWhiteoutFlags(void)
         FlagClear(flagId);
 #endif
 
-#if B_WHITEOUT_PRESERVE_FLAGS_COUNT > 0
     for (i = 0; i < ARRAY_COUNT(sWhiteoutPreserveFlags); i++)
     {
         if (preserveFlagValues[i])
             FlagSet(sWhiteoutPreserveFlags[i]);
     }
-#endif
 }
 
 static void ClearAllPokemonOnWhiteOut(void)

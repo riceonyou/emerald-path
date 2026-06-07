@@ -699,16 +699,6 @@ static bool8 BirchBagPlayerOwnsSpecies(u16 species)
     return FALSE;
 }
 
-static bool8 IsSpeciesInWeightedPool(u16 species)
-{
-    u8 i;
-
-    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
-        if (sBirchBagWeightedPool[i].species == species)
-            return TRUE;
-
-    return FALSE;
-}
 
 static bool8 IsSpeciesExcluded(u16 species, const u16 *excluded, u8 excludedCount)
 {
@@ -724,10 +714,6 @@ static bool8 IsSpeciesExcluded(u16 species, const u16 *excluded, u8 excludedCoun
 void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8 count)
 {
     u8 i;
-    
-    if (count > ARRAY_COUNT(sBirchBagWeightedPool))
-        count = ARRAY_COUNT(sBirchBagWeightedPool);
-    
     sBirchBagWeightedPoolSize = count;
     sBirchBagWeightedPoolTotalWeight = 0;
     
@@ -784,26 +770,11 @@ static void PrepareBirchBagWeightedStarterChoices(void)
     {
         species = SelectPokemonFromWeightedPoolExclude(sBirchBagWeightedPool, sBirchBagWeightedPoolSize, excluded, i);
         if (species == SPECIES_NONE)
+            sBirchBagSelectedSpecies[i] = SPECIES_LUVDISC
             break;
 
         sBirchBagSelectedSpecies[i] = species;
         excluded[i] = species;
-    }
-
-    for (; i < STARTER_MON_COUNT; i++)
-    {
-        for (j = 0; j < STARTER_MON_COUNT; j++)
-        {
-            u16 defaultSpecies = sStarterMon[j];
-            if (!IsSpeciesExcluded(defaultSpecies, sBirchBagSelectedSpecies, i))
-            {
-                sBirchBagSelectedSpecies[i] = defaultSpecies;
-                break;
-            }
-        }
-
-        if (sBirchBagSelectedSpecies[i] == SPECIES_NONE)
-            sBirchBagSelectedSpecies[i] = sStarterMon[0];
     }
 
     sUseCustomBirchBagStarters = TRUE;
@@ -815,34 +786,6 @@ void ResetBirchBagWeightedPool(void)
     sBirchBagWeightedPoolSize = 0;
     sBirchBagWeightedPoolTotalWeight = 0;
     sUseCustomBirchBagStarters = FALSE;
-}
-
-// Add a single choice to the pool (called from script multiple times)
-// Set gSpecialVar_0x8000 = species, gSpecialVar_0x8001 = weight before calling
-void AddBirchBagWeightedChoice(void)
-{
-    u16 species;
-    u16 weight;
-
-    if (sBirchBagWeightedPoolSize >= ARRAY_COUNT(sBirchBagWeightedPool))
-        return;  // Pool is full
-
-    species = gSpecialVar_0x8000;
-    weight = gSpecialVar_0x8001;
-
-    if (species == SPECIES_NONE || weight == 0)
-        return;
-
-    if (BirchBagPlayerOwnsSpecies(species))
-        return;
-
-    if (IsSpeciesInWeightedPool(species))
-        return;
-
-    sBirchBagWeightedPool[sBirchBagWeightedPoolSize].species = species;
-    sBirchBagWeightedPool[sBirchBagWeightedPoolSize].weight = weight;
-    sBirchBagWeightedPoolSize++;
-    sBirchBagWeightedPoolTotalWeight += weight;
 }
 
 // Callback that gives the Pokémon without starting a battle

@@ -18,7 +18,6 @@ u16 GetStarterPokemon(u16 chosenStarterId);
 void CB2_ChooseStarter(void);
 void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8 count);
 void ResetBirchBagWeightedPool(void);
-void AddBirchBagWeightedChoice(void);
 void ChooseBirchBagPokemonWeighted(void);
 
 #endif // GUARD_STARTER_CHOOSE_H
