@@ -5542,132 +5542,139 @@ s32 CalculateFriendshipBonuses(struct Pokemon *mon, s32 modifier)
 
 void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
 {
-    u8 evs[NUM_STATS];
-    u16 evIncrease = 0;
-    u16 totalEVs = 0;
-    u16 heldItem;
-    u8 holdEffect;
-    enum Stat i;
-    int j;
-    int multiplier = 1;
-    u8 stat;
-    u8 bonus;
-    u32 currentEVCap = GetCurrentEVCap();
-    u16 braceCount = 0;
-
-    for (j = 0; j < MAX_MON_ITEMS; j++)
-    {
-        if (GetItemHoldEffect(GetMonData(mon, MON_DATA_HELD_ITEM + j)) == HOLD_EFFECT_MACHO_BRACE
-        && (braceCount == 0 || GetConfig(B_ALLOW_HELD_DUPES)))
-        {
-            braceCount++;
-        }
-    }
-
-    for (j = 0; j < MAX_MON_ITEMS; j++)
-    {
-        heldItem = GetMonData(mon, MON_DATA_HELD_ITEM + j, 0);
+    if (DISABLE_EVS == 0){
         
-        if (heldItem == ITEM_ENIGMA_BERRY_E_READER)
+        u8 evs[NUM_STATS];
+        u16 evIncrease = 0;
+        u16 totalEVs = 0;
+        u16 heldItem;
+        u8 holdEffect;
+        enum Stat i;
+        int j;
+        int multiplier = 1;
+        u8 stat;
+        u8 bonus;
+        u32 currentEVCap = GetCurrentEVCap();
+        u16 braceCount = 0;
+
+        for (j = 0; j < MAX_MON_ITEMS; j++)
         {
-            if (gMain.inBattle)
-                holdEffect = gEnigmaBerries[0].holdEffect;
-            else
-            #if FREE_ENIGMA_BERRY == FALSE
-                holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
-            #else
-                holdEffect = 0;
-            #endif //FREE_ENIGMA_BERRY
-        }
-        else
-        {
-            holdEffect = GetItemHoldEffect(heldItem);
+            if (GetItemHoldEffect(GetMonData(mon, MON_DATA_HELD_ITEM + j)) == HOLD_EFFECT_MACHO_BRACE
+            && (braceCount == 0 || GetConfig(B_ALLOW_HELD_DUPES)))
+            {
+                braceCount++;
+            }
         }
 
-        stat = GetItemSecondaryId(heldItem);
-        bonus = GetItemHoldEffectParam(heldItem);
-
-        for (i = 0; i < NUM_STATS; i++)
+        for (j = 0; j < MAX_MON_ITEMS; j++)
         {
-            evs[i] = GetMonData(mon, MON_DATA_HP_EV + i, 0);
-            totalEVs += evs[i];
-        }
-        
-        for (i = 0; i < NUM_STATS; i++)
-        {
-            evIncrease = 0;
+            heldItem = GetMonData(mon, MON_DATA_HELD_ITEM + j, 0);
             
-            if (totalEVs >= currentEVCap)
-                break;
-
-            switch (i)
+            if (heldItem == ITEM_ENIGMA_BERRY_E_READER)
             {
-            case STAT_HP:
-                if (j == 0) // Base defeated pokemon EVs should only be added once
-                    evIncrease += gSpeciesInfo[defeatedSpecies].evYield_HP;
-                if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP)
-                    evIncrease += bonus;
-                break;
-            case STAT_ATK:
-                if (j == 0)
-                    evIncrease += gSpeciesInfo[defeatedSpecies].evYield_Attack;
-                if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_ATK)
-                    evIncrease += bonus;
-                break;
-            case STAT_DEF:
-                if (j == 0)
-                    evIncrease += gSpeciesInfo[defeatedSpecies].evYield_Defense;
-                if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_DEF)
-                    evIncrease += bonus;
-                break;
-            case STAT_SPEED:
-                if (j == 0)
-                    evIncrease += gSpeciesInfo[defeatedSpecies].evYield_Speed;
-                if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPEED)
-                    evIncrease += bonus;
-                break;
-            case STAT_SPATK:
-                if (j == 0)
-                    evIncrease += gSpeciesInfo[defeatedSpecies].evYield_SpAttack;
-                if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPATK)
-                    evIncrease += bonus;
-                break;
-            case STAT_SPDEF:
-                if (j == 0)
-                    evIncrease += gSpeciesInfo[defeatedSpecies].evYield_SpDefense;
-                if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPDEF)
-                    evIncrease += bonus;
-                break;
-            default:
-                break;
+                if (gMain.inBattle)
+                    holdEffect = gEnigmaBerries[0].holdEffect;
+                else
+                #if FREE_ENIGMA_BERRY == FALSE
+                    holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
+                #else
+                    holdEffect = 0;
+                #endif //FREE_ENIGMA_BERRY
+            }
+            else
+            {
+                holdEffect = GetItemHoldEffect(heldItem);
             }
 
-            if (CheckMonHasHadPokerus(mon))
-                multiplier *= 2;
+            stat = GetItemSecondaryId(heldItem);
+            bonus = GetItemHoldEffectParam(heldItem);
 
-            if (braceCount > 0)
-                multiplier *= braceCount + 1;
-             
-            evIncrease *= multiplier; // Multiplier split out so that multi item additions happen first and then the multiplier is only applied once
-
-            if (totalEVs + (s16)evIncrease > currentEVCap)
-                evIncrease = ((s16)evIncrease + currentEVCap) - (totalEVs + evIncrease);
-
-            if (evs[i] + (s16)evIncrease > MAX_PER_STAT_EVS)
+            for (i = 0; i < NUM_STATS; i++)
             {
-                int val1 = (s16)evIncrease + MAX_PER_STAT_EVS;
-                int val2 = evs[i] + evIncrease;
-                evIncrease = val1 - val2;
+                evs[i] = GetMonData(mon, MON_DATA_HP_EV + i, 0);
+                totalEVs += evs[i];
             }
-            evs[i] += evIncrease;
-            totalEVs += evIncrease;
-            SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]);
+            
+            for (i = 0; i < NUM_STATS; i++)
+            {
+                evIncrease = 0;
+                
+                if (totalEVs >= currentEVCap)
+                    break;
+
+                switch (i)
+                {
+                case STAT_HP:
+                    if (j == 0) // Base defeated pokemon EVs should only be added once
+                        evIncrease += gSpeciesInfo[defeatedSpecies].evYield_HP;
+                    if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_HP)
+                        evIncrease += bonus;
+                    break;
+                case STAT_ATK:
+                    if (j == 0)
+                        evIncrease += gSpeciesInfo[defeatedSpecies].evYield_Attack;
+                    if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_ATK)
+                        evIncrease += bonus;
+                    break;
+                case STAT_DEF:
+                    if (j == 0)
+                        evIncrease += gSpeciesInfo[defeatedSpecies].evYield_Defense;
+                    if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_DEF)
+                        evIncrease += bonus;
+                    break;
+                case STAT_SPEED:
+                    if (j == 0)
+                        evIncrease += gSpeciesInfo[defeatedSpecies].evYield_Speed;
+                    if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPEED)
+                        evIncrease += bonus;
+                    break;
+                case STAT_SPATK:
+                    if (j == 0)
+                        evIncrease += gSpeciesInfo[defeatedSpecies].evYield_SpAttack;
+                    if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPATK)
+                        evIncrease += bonus;
+                    break;
+                case STAT_SPDEF:
+                    if (j == 0)
+                        evIncrease += gSpeciesInfo[defeatedSpecies].evYield_SpDefense;
+                    if (holdEffect == HOLD_EFFECT_POWER_ITEM && stat == STAT_SPDEF)
+                        evIncrease += bonus;
+                    break;
+                default:
+                    break;
+                }
+
+                if (CheckMonHasHadPokerus(mon))
+                    multiplier *= 2;
+
+                if (braceCount > 0)
+                    multiplier *= braceCount + 1;
+                
+                evIncrease *= multiplier; // Multiplier split out so that multi item additions happen first and then the multiplier is only applied once
+
+                if (totalEVs + (s16)evIncrease > currentEVCap)
+                    evIncrease = ((s16)evIncrease + currentEVCap) - (totalEVs + evIncrease);
+
+                if (evs[i] + (s16)evIncrease > MAX_PER_STAT_EVS)
+                {
+                    int val1 = (s16)evIncrease + MAX_PER_STAT_EVS;
+                    int val2 = evs[i] + evIncrease;
+                    evIncrease = val1 - val2;
+                }
+                evs[i] += evIncrease;
+                totalEVs += evIncrease;
+                SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]);
+            }
         }
     }
 }
 
 u16 GetMonEVCount(struct Pokemon *mon)
 {
+    if (DISABLE_EVS == 1){
+        return 0;
+    }
+    
     int i;
     u16 count = 0;
 

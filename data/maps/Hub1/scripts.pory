@@ -11,6 +11,8 @@ script HUB1_ONWARP {
 
 script HUB1_ONFRAME {
 	setvar(VAR_TEMP_2, 1)
+	setvar(VAR_CURRENT_ACT, 1)
+	special(UpdateLevelCap)
 	if(!flag(FLAG_SYS_NEW_GAME)){
 		lockall
 		msgbox("Welcome to Pokemon Path!\pTo start a run, talk to\nProfessor Birch up ahead.\pNow choose a pokemon to\nstart your adventure with.")
@@ -43,68 +45,126 @@ script HUB1_ONFRAME {
 		dynmultipush("Fuecoco", SPECIES_FUECOCO)
 		dynmultipush("Quaxly", SPECIES_QUAXLY)
 		dynmultistack(0, 0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_MON)
-
 		
 		switch (var(VAR_RESULT)) {
 			case SPECIES_BULBASAUR:
 				givemon(SPECIES_BULBASAUR, 5)
+				setflag(FLAG_BULBASAUR_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_BULBASAUR)
 			case SPECIES_CHARMANDER:
 				givemon(SPECIES_CHARMANDER, 5)
+				setflag(FLAG_CHARMANDER_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_CHARMANDER)
 			case SPECIES_SQUIRTLE:
 				givemon(SPECIES_SQUIRTLE, 5)
+				setflag(FLAG_SQUIRTLE_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_SQUIRTLE)
 			case SPECIES_CHIKORITA:
 				givemon(SPECIES_CHIKORITA, 5)
+				setflag(FLAG_CHIKORITA_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_CHIKORITA)
 			case SPECIES_CYNDAQUIL:
 				givemon(SPECIES_CYNDAQUIL, 5)
+				setflag(FLAG_CYNDAQUIL_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_CYNDAQUIL)
 			case SPECIES_TOTODILE:
 				givemon(SPECIES_TOTODILE, 5)
+				setflag(FLAG_TOTODILE_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_TOTODILE)
 			case SPECIES_TREECKO:
 				givemon(SPECIES_TREECKO, 5)
+				setflag(FLAG_TREECKO_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_TREECKO)
 			case SPECIES_TORCHIC:
 				givemon(SPECIES_TORCHIC, 5)
+				setflag(FLAG_TORCHIC_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_TORCHIC)
 			case SPECIES_MUDKIP:
 				givemon(SPECIES_MUDKIP, 5)
+				setflag(FLAG_MUDKIP_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_MUDKIP)
 			case SPECIES_TURTWIG:
 				givemon(SPECIES_TURTWIG, 5)
+				setflag(FLAG_TURTWIG_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_TURTWIG)
 			case SPECIES_CHIMCHAR:
 				givemon(SPECIES_CHIMCHAR, 5)
+				setflag(FLAG_CHIMCHAR_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_CHIMCHAR)
 			case SPECIES_PIPLUP:
 				givemon(SPECIES_PIPLUP, 5)
+				setflag(FLAG_PIPLUP_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_PIPLUP)
 			case SPECIES_SNIVY:
 				givemon(SPECIES_SNIVY, 5)
+				setflag(FLAG_SNIVY_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_SNIVY)
 			case SPECIES_TEPIG:
 				givemon(SPECIES_TEPIG, 5)
+				setflag(FLAG_TEPIG_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_TEPIG)
 			case SPECIES_OSHAWOTT:
 				givemon(SPECIES_OSHAWOTT, 5)
+				setflag(FLAG_OSHAWOTT_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_OSHAWOTT)
 			case SPECIES_CHESPIN:
 				givemon(SPECIES_CHESPIN, 5)
+				setflag(FLAG_CHESPIN_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_CHESPIN)
 			case SPECIES_FENNEKIN:
 				givemon(SPECIES_FENNEKIN, 5)
+				setflag(FLAG_FENNEKIN_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_FENNEKIN)
 			case SPECIES_FROAKIE:
 				givemon(SPECIES_FROAKIE, 5)
+				setflag(FLAG_FROAKIE_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_FROAKIE)
 			case SPECIES_ROWLET:
 				givemon(SPECIES_ROWLET, 5)
+				setflag(FLAG_ROWLET_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_ROWLET)
 			case SPECIES_LITTEN:
 				givemon(SPECIES_LITTEN, 5)
+				setflag(FLAG_LITTEN_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_LITTEN)
 			case SPECIES_POPPLIO:
 				givemon(SPECIES_POPPLIO, 5)
+				setflag(FLAG_POPPLIO_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_POPPLIO)
 			case SPECIES_GROOKEY:
 				givemon(SPECIES_GROOKEY, 5)
+				setflag(FLAG_GROOKEY_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_GROOKEY)
 			case SPECIES_SCORBUNNY:
 				givemon(SPECIES_SCORBUNNY, 5)
+				setflag(FLAG_SCORBUNNY_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_SCORBUNNY)
 			case SPECIES_SOBBLE:
 				givemon(SPECIES_SOBBLE, 5)
+				setflag(FLAG_SOBBLE_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_SOBBLE)
 			case SPECIES_SPRIGATITO:
 				givemon(SPECIES_SPRIGATITO, 5)
+				setflag(FLAG_SPRIGATITO_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_SPRIGATITO)
 			case SPECIES_FUECOCO:
 				givemon(SPECIES_FUECOCO, 5)
+				setflag(FLAG_FUECOCO_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_FUECOCO)
 			case SPECIES_QUAXLY:
 				givemon(SPECIES_QUAXLY, 5)
+				setflag(FLAG_QUAXLY_UNLOCKED)
+				setvar(VAR_STARTER_MON, SPECIES_QUAXLY)
 		}
 		special(UpdatePlayerSprite)
+		special(UpdateTransformedPlayerPalette)
+		releaseall
+		
+		lockall
+		msgbox("Use this item to level up your\nPokemon.")
 		giveitem(ITEM_CANDY_JAR)
 		setflag(FLAG_SYS_NEW_GAME)
-		waitmessage
+
 		releaseall
 	}
 }
@@ -125,4 +185,560 @@ script Hub_Event_Script_Birch{
 				msgbox("Okay! Let me know when you're ready.")
 				releaseall
 		}
+}
+
+script Hub_Event_Script_Miltank{
+    lockall
+	setvar(VAR_TEMP_A, 0)
+    
+	if(!flag(FLAG_BULBASAUR_UNLOCKED)){dynmultipush("Bulbasaur (¥5000)",SPECIES_BULBASAUR) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHARMANDER_UNLOCKED)){dynmultipush("Charmander (¥5000)",SPECIES_CHARMANDER) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SQUIRTLE_UNLOCKED)){dynmultipush("Squirtle (¥5000)",SPECIES_SQUIRTLE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHIKORITA_UNLOCKED)){dynmultipush("Chikorita (¥5000)",SPECIES_CHIKORITA) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CYNDAQUIL_UNLOCKED)){dynmultipush("Cyndaquil (¥5000)",SPECIES_CYNDAQUIL) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TOTODILE_UNLOCKED)){dynmultipush("Totodile (¥5000)",SPECIES_TOTODILE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TREECKO_UNLOCKED)){dynmultipush("Treecko (¥5000)",SPECIES_TREECKO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TORCHIC_UNLOCKED)){dynmultipush("Torchic (¥5000)",SPECIES_TORCHIC) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_MUDKIP_UNLOCKED)){dynmultipush("Mudkip (¥5000)",SPECIES_MUDKIP) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TURTWIG_UNLOCKED)){dynmultipush("Turtwig (¥5000)",SPECIES_TURTWIG) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHIMCHAR_UNLOCKED)){dynmultipush("Chimchar (¥5000)",SPECIES_CHIMCHAR) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_PIPLUP_UNLOCKED)){dynmultipush("Piplup (¥5000)",SPECIES_PIPLUP) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SNIVY_UNLOCKED)){dynmultipush("Snivy (¥5000)",SPECIES_SNIVY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TEPIG_UNLOCKED)){dynmultipush("Tepig (¥5000)",SPECIES_TEPIG) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_OSHAWOTT_UNLOCKED)){dynmultipush("Oshawott (¥5000)",SPECIES_OSHAWOTT) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHESPIN_UNLOCKED)){dynmultipush("Chespin (¥5000)",SPECIES_CHESPIN) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_FENNEKIN_UNLOCKED)){dynmultipush("Fennekin (¥5000)",SPECIES_FENNEKIN) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_FROAKIE_UNLOCKED)){dynmultipush("Froakie (¥5000)",SPECIES_FROAKIE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_ROWLET_UNLOCKED)){dynmultipush("Rowlet (¥5000)",SPECIES_ROWLET) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_LITTEN_UNLOCKED)){dynmultipush("Litten (¥5000)",SPECIES_LITTEN) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_POPPLIO_UNLOCKED)){dynmultipush("Popplio (¥5000)",SPECIES_POPPLIO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_GROOKEY_UNLOCKED)){dynmultipush("Grookey (¥5000)",SPECIES_GROOKEY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SCORBUNNY_UNLOCKED)){dynmultipush("Scorbunny (¥5000)",SPECIES_SCORBUNNY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SOBBLE_UNLOCKED)){dynmultipush("Sobble (¥5000)",SPECIES_SOBBLE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SPRIGATITO_UNLOCKED)){dynmultipush("Sprigatito (¥5000)",SPECIES_SPRIGATITO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_FUECOCO_UNLOCKED)){dynmultipush("Fuecoco (¥5000)",SPECIES_FUECOCO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_QUAXLY_UNLOCKED)){dynmultipush("Quaxly (¥5000)",SPECIES_QUAXLY) addvar(VAR_TEMP_A,1)}
+	
+	if (var(VAR_TEMP_A) != 0){
+		showmoneybox(17, 10)
+		msgbox("Would you like to adopt a pokemon?")
+		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_MON)
+				switch (var(VAR_RESULT)) {
+					case MULTI_B_PRESSED:
+						releaseall
+					case SPECIES_BULBASAUR:
+						if(checkmoney(5000)){
+							setflag(FLAG_BULBASAUR_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Bulbasaur as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_CHARMANDER:
+						if(checkmoney(5000)){
+							setflag(FLAG_CHARMANDER_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Charmander as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_SQUIRTLE:
+						if(checkmoney(5000)){
+							setflag(FLAG_SQUIRTLE_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Squirtle as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_CHIKORITA:
+						if(checkmoney(5000)){
+							setflag(FLAG_CHIKORITA_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Chikorita as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_CYNDAQUIL:
+						if(checkmoney(5000)){
+							setflag(FLAG_CYNDAQUIL_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Cyndaquil as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_TOTODILE:
+						if(checkmoney(5000)){
+							setflag(FLAG_TOTODILE_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Totodile as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_TREECKO:
+						if(checkmoney(5000)){
+							setflag(FLAG_TREECKO_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Treecko as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_TORCHIC:
+						if(checkmoney(5000)){
+							setflag(FLAG_TORCHIC_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Torchic as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_MUDKIP:
+						if(checkmoney(5000)){
+							setflag(FLAG_MUDKIP_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Mudkip as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_TURTWIG:
+						if(checkmoney(5000)){
+							setflag(FLAG_TURTWIG_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Turtwig as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_CHIMCHAR:
+						if(checkmoney(5000)){
+							setflag(FLAG_CHIMCHAR_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Chimchar as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_PIPLUP:
+						if(checkmoney(5000)){
+							setflag(FLAG_PIPLUP_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Piplup as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_SNIVY:
+						if(checkmoney(5000)){
+							setflag(FLAG_SNIVY_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Snivy as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_TEPIG:
+						if(checkmoney(5000)){
+							setflag(FLAG_TEPIG_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Tepig as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_OSHAWOTT:
+						if(checkmoney(5000)){
+							setflag(FLAG_OSHAWOTT_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Oshawott as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_CHESPIN:
+						if(checkmoney(5000)){
+							setflag(FLAG_CHESPIN_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Chespin as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_FENNEKIN:
+						if(checkmoney(5000)){
+							setflag(FLAG_FENNEKIN_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Fennekin as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_FROAKIE:
+						if(checkmoney(5000)){
+							setflag(FLAG_FROAKIE_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Froakie as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_ROWLET:
+						if(checkmoney(5000)){
+							setflag(FLAG_ROWLET_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Rowlet as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_LITTEN:
+						if(checkmoney(5000)){
+							setflag(FLAG_LITTEN_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Litten as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_POPPLIO:
+						if(checkmoney(5000)){
+							setflag(FLAG_POPPLIO_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Popplio as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_GROOKEY:
+						if(checkmoney(5000)){
+							setflag(FLAG_GROOKEY_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Grookey as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_SCORBUNNY:
+						if(checkmoney(5000)){
+							setflag(FLAG_SCORBUNNY_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Scorbunny as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_SOBBLE:
+						if(checkmoney(5000)){
+							setflag(FLAG_SOBBLE_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Sobble as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_SPRIGATITO:
+						if(checkmoney(5000)){
+							setflag(FLAG_SPRIGATITO_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Sprigatito as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_FUECOCO:
+						if(checkmoney(5000)){
+							setflag(FLAG_FUECOCO_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Fuecoco as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+					case SPECIES_QUAXLY:
+						if(checkmoney(5000)){
+							setflag(FLAG_QUAXLY_UNLOCKED)
+							removemoney(5000)
+							updatemoneybox
+							playse(SE_SHOP)
+							msgbox("You unlocked Quaxly as a starter!\pThank you for your adoption!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the money to\nadopt that pokemon.")
+						}
+				}
+		hidemoneybox
+		releaseall
+	}else{
+		msgbox("You have no more starters left to adopt!")
+		waitmessage
+		releaseall
+	}
+
+}
+
+script Hub_Event_Script_Chansey{
+    lockall
+    setvar(VAR_TEMP_A, 0)
+	if(flag(FLAG_BULBASAUR_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_BULBASAUR){dynmultipush("Bulbasaur",SPECIES_BULBASAUR) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_CHARMANDER_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_CHARMANDER){dynmultipush("Charmander",SPECIES_CHARMANDER) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_SQUIRTLE_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_SQUIRTLE){dynmultipush("Squirtle",SPECIES_SQUIRTLE) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_CHIKORITA_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_CHIKORITA){dynmultipush("Chikorita",SPECIES_CHIKORITA) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_CYNDAQUIL_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_CYNDAQUIL){dynmultipush("Cyndaquil",SPECIES_CYNDAQUIL) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_TOTODILE_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_TOTODILE){dynmultipush("Totodile",SPECIES_TOTODILE) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_TREECKO_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_TREECKO){dynmultipush("Treecko",SPECIES_TREECKO) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_TORCHIC_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_TORCHIC){dynmultipush("Torchic",SPECIES_TORCHIC) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_MUDKIP_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_MUDKIP){dynmultipush("Mudkip",SPECIES_MUDKIP) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_TURTWIG_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_TURTWIG){dynmultipush("Turtwig",SPECIES_TURTWIG) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_CHIMCHAR_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_CHIMCHAR){dynmultipush("Chimchar",SPECIES_CHIMCHAR) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_PIPLUP_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_PIPLUP){dynmultipush("Piplup",SPECIES_PIPLUP) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_SNIVY_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_SNIVY){dynmultipush("Snivy",SPECIES_SNIVY) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_TEPIG_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_TEPIG){dynmultipush("Tepig",SPECIES_TEPIG) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_OSHAWOTT_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_OSHAWOTT){dynmultipush("Oshawott",SPECIES_OSHAWOTT) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_CHESPIN_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_CHESPIN){dynmultipush("Chespin",SPECIES_CHESPIN) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_FENNEKIN_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_FENNEKIN){dynmultipush("Fennekin",SPECIES_FENNEKIN) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_FROAKIE_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_FROAKIE){dynmultipush("Froakie",SPECIES_FROAKIE) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_ROWLET_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_ROWLET){dynmultipush("Rowlet",SPECIES_ROWLET) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_LITTEN_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_LITTEN){dynmultipush("Litten",SPECIES_LITTEN) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_POPPLIO_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_POPPLIO){dynmultipush("Popplio",SPECIES_POPPLIO) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_GROOKEY_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_GROOKEY){dynmultipush("Grookey",SPECIES_GROOKEY) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_SCORBUNNY_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_SCORBUNNY){dynmultipush("Scorbunny",SPECIES_SCORBUNNY) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_SOBBLE_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_SOBBLE){dynmultipush("Sobble",SPECIES_SOBBLE) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_SPRIGATITO_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_SPRIGATITO){dynmultipush("Sprigatito",SPECIES_SPRIGATITO) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_FUECOCO_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_FUECOCO){dynmultipush("Fuecoco",SPECIES_FUECOCO) addvar(VAR_TEMP_A,1)}
+	if(flag(FLAG_QUAXLY_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_QUAXLY){dynmultipush("Quaxly",SPECIES_QUAXLY) addvar(VAR_TEMP_A,1)}
+	
+	if(var(VAR_TEMP_A) != 0){
+		setvar(VAR_RESULT, 0)
+		msgbox("Would you like to change your starter?")
+		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_MON)
+
+		if(!(var(VAR_RESULT) == MULTI_B_PRESSED)){
+			copyvar(VAR_STARTER_MON, VAR_RESULT)
+			special(ZeroPlayerPartyMons)
+			special(GiveSavedStarter)
+			special(UpdatePlayerSprite)
+			special(UpdateTransformedPlayerPalette)
+			playfanfare(MUS_LEVEL_UP)
+			releaseall
+			lockall
+			playse(SE_SUCCESS)
+			msgbox("There you go!")
+			waitmessage
+			releaseall
+		}
+		else{
+			releaseall
+		}
+	}else{
+		msgbox("You don't have any starter pokemon yet.\pPlease consider adopting some pokemon\nfrom my friend Miltank to the right.")
+		waitmessage
+		releaseall}
+}
+
+script Hub_Event_Script_Kecleon {
+
+	msgbox("Would you like to buy a starter item?")
+	if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)){
+		dynmultipush("Memory Mushroom (¥2000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)){
+		dynmultipush("Memory Mushroom (¥10000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)){
+		dynmultipush("Memory Mushroom (¥20000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)){
+		dynmultipush("Memory Mushroom (¥30000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)){
+		dynmultipush("Memory Mushroom (¥40000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)){
+		dynmultipush("Memory Mushroom (¥50000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)){
+		dynmultipush("Memory Mushroom (¥80000)",ITEM_MEMORY_MUSHROOM)
+	}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)){
+		dynmultipush("Memory Mushroom (¥100000)",ITEM_MEMORY_MUSHROOM)
+	}
+	if(!flag(FLAG_RARE_CANDY_UNLOCKED_1)){
+		dynmultipush("Rare Candy (¥30000)",ITEM_RARE_CANDY)
+	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
+		dynmultipush("Rare Candy (¥500000)",ITEM_RARE_CANDY)
+	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
+		dynmultipush("Rare Candy (¥100000)",ITEM_RARE_CANDY)
+	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
+		dynmultipush("Rare Candy (¥200000)",ITEM_RARE_CANDY)
+	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
+		dynmultipush("Rare Candy (¥300000)",ITEM_RARE_CANDY)
+	}
+	showmoneybox(17, 10)
+	dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+	switch(var(VAR_RESULT)){
+		case ITEM_MEMORY_MUSHROOM:
+			if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)){
+				if(checkmoney(2000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(2000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)){
+				if(checkmoney(10000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_2)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)){
+				if(checkmoney(20000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_3)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(20000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)){
+				if(checkmoney(30000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_4)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(30000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)){
+				if(checkmoney(40000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_5)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(40000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)){
+				if(checkmoney(50000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_6)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(50000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)){
+				if(checkmoney(80000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_7)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(80000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}elif(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)){
+				if(checkmoney(100000)){
+						setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED_8)
+						giveitem(ITEM_MEMORY_MUSHROOM, 1)
+						removemoney(100000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
+					}
+			}
+		case ITEM_RARE_CANDY:
+			if(!flag(FLAG_RARE_CANDY_UNLOCKED_1)){
+				dynmultipush("Rare Candy (¥30000)",ITEM_RARE_CANDY)
+				if(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
+					dynmultipush("Rare Candy (¥500000)",ITEM_RARE_CANDY)
+					if(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
+						dynmultipush("Rare Candy (¥100000)",ITEM_RARE_CANDY)
+						if(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
+							dynmultipush("Rare Candy (¥200000)",ITEM_RARE_CANDY)
+							if(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
+								dynmultipush("Rare Candy (¥300000)",ITEM_RARE_CANDY)
+			}}}}}
+	}
+	hidemoneybox
+	releaseall
+	
 }

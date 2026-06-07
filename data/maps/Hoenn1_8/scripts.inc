@@ -94,11 +94,11 @@ Hoenn1_8_EventScript_Taillow_Text_0:
 
 EventScript_AbraTeleport1_Text_0:
 # 39 "data/maps/Hoenn1_8/scripts.pory"
-	.string "You'll have to defeat the leader first\nbefore I can teleport you\lto the next stage.$"
+	.string "You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.$"
 
 EventScript_AbraTeleport1_Text_1:
 # 43 "data/maps/Hoenn1_8/scripts.pory"
-	.string "Would you like to teleport\nto the next stage?$"
+	.string "Would you like to teleport\nto the next act?$"
 
 EventScript_AbraTeleport1_Text_2:
 # 46 "data/maps/Hoenn1_8/scripts.pory"

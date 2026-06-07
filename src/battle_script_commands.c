@@ -6246,14 +6246,14 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         if (party == NULL)
             return 20;
         lastMonLevel = party[GetTrainerPartySizeFromId(trainerId) - 1].lvl;
-        trainerMoney = gTrainerClasses[GetTrainerClassFromId(trainerId)].money ?: 5;
+        trainerMoney = gTrainerClasses[GetTrainerClassFromId(trainerId)].money ?: 1;
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = 100 * VarGet(VAR_CURRENT_ACT) * gBattleStruct->moneyMultiplier * trainerMoney;
         else if (IsDoubleBattle())
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
+            moneyReward = 100 * VarGet(VAR_CURRENT_ACT) * gBattleStruct->moneyMultiplier * trainerMoney;
         else
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = 100 * VarGet(VAR_CURRENT_ACT) * gBattleStruct->moneyMultiplier * trainerMoney;
     }
 
     return moneyReward;

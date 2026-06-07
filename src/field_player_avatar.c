@@ -1648,8 +1648,6 @@ void UpdatePlayerSprite()
 {
     struct ObjectEvent* playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
     ObjectEventSetGraphicsId(playerObj, GetPlayerAvatarGraphicsIdForFirstAlivePokemon());
-    UpdateTransformedPlayerPalette(playerObj);
-    UpdateFollowingPokemon();
 }
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)

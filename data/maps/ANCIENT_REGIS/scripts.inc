@@ -76,15 +76,17 @@ ANCIENT_REGIS_EventScript_TalkToRegi_4:
 # 81 "data/maps/ANCIENT_REGIS/scripts.pory"
 	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_4
 # 82 "data/maps/ANCIENT_REGIS/scripts.pory"
-	setvar B_LEVEL_CAP_VARIABLE, 30
+	addvar VAR_CURRENT_ACT, 1
 # 83 "data/maps/ANCIENT_REGIS/scripts.pory"
+	special UpdateLevelCap
+# 84 "data/maps/ANCIENT_REGIS/scripts.pory"
 	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_5
-# 85 "data/maps/ANCIENT_REGIS/scripts.pory"
-	switch VAR_0x8004
 # 86 "data/maps/ANCIENT_REGIS/scripts.pory"
+	switch VAR_0x8004
+# 87 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 0, ANCIENT_REGIS_EventScript_TalkToRegi_11
 ANCIENT_REGIS_EventScript_TalkToRegi_9:
-# 91 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 92 "data/maps/ANCIENT_REGIS/scripts.pory"
 	releaseall
 	return
 
@@ -153,9 +155,9 @@ ANCIENT_REGIS_EventScript_TalkToRegi_8:
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_11:
-# 87 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_6
 # 88 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_6
+# 89 "data/maps/ANCIENT_REGIS/scripts.pory"
 	warp MAP_HOENN2_1, 7, 7
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_9
 
@@ -207,7 +209,7 @@ ANCIENT_REGIS_EventScript_TalkToRegi_23:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_0:
 # 33 "data/maps/ANCIENT_REGIS/scripts.pory"
-	.string "Beep boop beep.\lThe next stage will be\nthe MAUVILLE path.$"
+	.string "Beep boop beep.\lThe next act will be\nthe MAUVILLE path.$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_1:
 # 41 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -226,9 +228,9 @@ ANCIENT_REGIS_EventScript_TalkToRegi_Text_4:
 	.string "The level cap has been raised to 30$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_5:
-# 83 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 84 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_6:
-# 87 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 88 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "About to warp to HOENN2_1$"

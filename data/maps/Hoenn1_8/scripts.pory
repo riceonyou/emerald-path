@@ -36,11 +36,11 @@ script Hoenn1_8_EventScript_Nosepass_Defeated{
 script EventScript_AbraTeleport1{
 	lockall
 	if(!flag(FLAG_DEFEATED_PATH_1_LEADER)){
-		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next stage.")
+		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.")
 		releaseall
 	}
 	else{
-		msgbox("Would you like to teleport\nto the next stage?", MSGBOX_YESNO)
+		msgbox("Would you like to teleport\nto the next act?", MSGBOX_YESNO)
 		switch (var(VAR_RESULT)) {
 			case YES:
 				msgbox("Alright then! Here we go!")

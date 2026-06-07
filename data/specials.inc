@@ -643,4 +643,8 @@ gSpecials::
 	def_special CheckAddCoins
 	def_special LoadBirchBagPoolById
 	def_special UpdatePlayerSprite
-	
+	def_special UpdateTransformedPlayerPalette
+	def_special GiveSavedStarter
+	def_special ZeroPlayerPartyMons
+	def_special UpdateLevelCap
+	def_special ResetPokemonAndItems

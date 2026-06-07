@@ -30,7 +30,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     copyvar(VAR_0x8004, VAR_RESULT)
     switch (var(VAR_RESULT)) {
         case 0:
-            msgbox("Beep boop beep.\lThe next stage will be\nthe MAUVILLE path.")
+            msgbox("Beep boop beep.\lThe next act will be\nthe MAUVILLE path.")
             waitmessage
     }
     
@@ -79,7 +79,8 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     }
     waitmessage
     msgbox("The level cap has been raised to 30")
-    setvar(B_LEVEL_CAP_VARIABLE, 30)
+    addvar(VAR_CURRENT_ACT, 1)
+    special(UpdateLevelCap)
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE
     switch (var(VAR_0x8004)) {

@@ -115,7 +115,37 @@ extern bool8 gNuzlockeEnabled;
 
 // Preserve these flags after whiteout
 #define B_WHITEOUT_PRESERVE_FLAGS_LIST    FLAG_NUZLOCKE, FLAG_SYS_NEW_GAME, \
-                                        FLAG_SYS_POKEDEX_GET, FLAG_SYS_POKEMON_GET, FLAG_HEAL_EVERY_BATTLE, FLAG_SYS_B_DASH, FLAG_RECEIVED_RUNNING_SHOES
+FLAG_SYS_POKEDEX_GET, FLAG_SYS_POKEMON_GET, FLAG_HEAL_EVERY_BATTLE, FLAG_SYS_B_DASH, FLAG_RECEIVED_RUNNING_SHOES,\
+FLAG_BULBASAUR_UNLOCKED,\
+FLAG_CHARMANDER_UNLOCKED,\
+FLAG_SQUIRTLE_UNLOCKED,\
+FLAG_CHIKORITA_UNLOCKED,\
+FLAG_CYNDAQUIL_UNLOCKED,\
+FLAG_TOTODILE_UNLOCKED,\
+FLAG_TREECKO_UNLOCKED,\
+FLAG_TORCHIC_UNLOCKED,\
+FLAG_MUDKIP_UNLOCKED,\
+FLAG_TURTWIG_UNLOCKED,\
+FLAG_CHIMCHAR_UNLOCKED,\
+FLAG_PIPLUP_UNLOCKED,\
+FLAG_SNIVY_UNLOCKED,\
+FLAG_TEPIG_UNLOCKED,\
+FLAG_OSHAWOTT_UNLOCKED,\
+FLAG_CHESPIN_UNLOCKED,\
+FLAG_FENNEKIN_UNLOCKED,\
+FLAG_FROAKIE_UNLOCKED,\
+FLAG_ROWLET_UNLOCKED,\
+FLAG_LITTEN_UNLOCKED,\
+FLAG_POPPLIO_UNLOCKED,\
+FLAG_GROOKEY_UNLOCKED,\
+FLAG_SCORBUNNY_UNLOCKED,\
+FLAG_SOBBLE_UNLOCKED,\
+FLAG_SPRIGATITO_UNLOCKED,\
+FLAG_FUECOCO_UNLOCKED,\
+FLAG_QUAXLY_UNLOCKED
+
+
+
 #define B_WHITEOUT_PRESERVE_FLAGS_COUNT   7
 
 // Flags listed above are restored after whiteout state reset. Use 0 for the count and leave the list blank to preserve none.
@@ -401,23 +431,57 @@ static void (*const sMovementStatusHandler[])(struct LinkPlayerObjectEvent *, st
     MovementStatusHandler_TryAdvanceScript,
 };
 
-// code
-void DoWhiteOut(void)
-{
-    //RunScriptImmediately(EventScript_WhiteOut);
-    //HealPlayerParty();
-    
-    // Handle Nuzlocke whiteout - mark all party Pokemon as dead
-    // if (IsNuzlockeActive())
-    //     NuzlockeHandleWhiteout();
+// Actual Game useful macros for the game loop to put in specials
 
+void GiveSavedStarter(void)
+{
+    u16 species = VarGet(VAR_STARTER_MON);
+
+    if (species != SPECIES_NONE)
+        ScriptGiveMon(species, 5, ITEM_NONE, ITEM_NONE);
+}
+
+void UpdateLevelCap(void)
+{
+    switch (VarGet(VAR_CURRENT_ACT)){
+    case (1): VarSet(VAR_LEVEL_CAP, 14);
+    case (2): VarSet(VAR_LEVEL_CAP, 30);
+    case (3): VarSet(VAR_LEVEL_CAP, 42);
+    case (4): VarSet(VAR_LEVEL_CAP, 60);
+    case (5): VarSet(VAR_LEVEL_CAP, 80);
+    }
+}
+
+void ResetPokemonAndItems(void)
+{
     // Clear Pokemon and give back starter
     ClearAllPokemonOnWhiteOut();
+    GiveSavedStarter();
     
     // Clear Bag and give back starting items
     ClearBag();
     AddBagItem(ITEM_CANDY_JAR, 1);
 
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_1){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_2){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_3){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_4){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_5){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_6){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_7){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+    if(FLAG_MEMORY_MUSHROOM_UNLOCKED_8){AddBagItem(ITEM_MEMORY_MUSHROOM, 1);}
+
+    if(FLAG_RARE_CANDY_UNLOCKED_1){AddBagItem(ITEM_RARE_CANDY, 1);}
+    if(FLAG_RARE_CANDY_UNLOCKED_2){AddBagItem(ITEM_RARE_CANDY, 1);}
+    if(FLAG_RARE_CANDY_UNLOCKED_3){AddBagItem(ITEM_RARE_CANDY, 1);}
+    if(FLAG_RARE_CANDY_UNLOCKED_4){AddBagItem(ITEM_RARE_CANDY, 1);}
+    if(FLAG_RARE_CANDY_UNLOCKED_5){AddBagItem(ITEM_RARE_CANDY, 1);}
+}
+
+// code
+void DoWhiteOut(void)
+{
+    ResetPokemonAndItems();
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 18);
     WarpIntoMap();

@@ -3120,18 +3120,18 @@ static void ObjectEventSetGraphics(struct ObjectEvent *objectEvent, const struct
 
     #if OW_GFX_COMPRESS
     LoadSheetGraphicsInfo(graphicsInfo, objectEvent->graphicsId, sprite);
-    if (sprite->usingSheet)
-        sprite->sheetSpan = GetSpanPerImage(graphicsInfo->oam->shape, graphicsInfo->oam->size);
+    // if (sprite->usingSheet)
+    //     sprite->sheetSpan = GetSpanPerImage(graphicsInfo->oam->shape, graphicsInfo->oam->size);
     #endif
 
     sprite->oam.shape = graphicsInfo->oam->shape;
     sprite->oam.size = graphicsInfo->oam->size;
     sprite->images = graphicsInfo->images;
     sprite->anims = graphicsInfo->anims;
-    if (graphicsInfo->subspriteTables != NULL)
-        SetSubspriteTables(sprite, graphicsInfo->subspriteTables);
-    else
-        sprite->subspriteMode = SUBSPRITES_OFF;
+    // if (graphicsInfo->subspriteTables != NULL)
+    //     SetSubspriteTables(sprite, graphicsInfo->subspriteTables);
+    // else
+    //     sprite->subspriteMode = SUBSPRITES_OFF;
     sprite->subspriteTables = graphicsInfo->subspriteTables;
     objectEvent->inanimate = graphicsInfo->inanimate;
     SetSpritePosToMapCoords(objectEvent->currentCoords.x, objectEvent->currentCoords.y, &sprite->x, &sprite->y);
