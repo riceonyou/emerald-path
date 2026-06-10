@@ -23,7 +23,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(WINGULL)",
       "x": 11,
-      "y": 6,
+      "y": 1,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -37,7 +37,7 @@
       "local_id": "HOENN1_4_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 17,
-      "y": 8,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

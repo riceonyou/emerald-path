@@ -1315,11 +1315,11 @@ void CreateMon(struct Pokemon *mon, u16 species, u8 level, u32 personality, stru
 void CreateMonWithIVs(struct Pokemon *mon, u16 species, u8 level, u32 personality, struct OriginalTrainerId trainerId, u8 fixedIV)
 {
     CreateMon(mon, species, level, personality, trainerId);
-    SetBoxMonIVs(&mon->box, fixedIV);
+    SetBoxMonIVs(&mon->box, fixedIV, 0);
     CalculateMonStats(mon);
 }
 
-void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV)
+void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV, u8 perfectIVs)
 {
     u32 i, value;
     enum Stat availableIVs[NUM_STATS];
@@ -1353,7 +1353,9 @@ void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV)
     iv = (value & (MAX_IV_MASK << 10)) >> 10;
     SetBoxMonData(mon, MON_DATA_SPDEF_IV, &iv);
 
-    if (gSpeciesInfo[species].perfectIVCount != 0)
+    u8 NumPerfectIVs = gSpeciesInfo[species].perfectIVCount + perfectIVs;
+
+    if (NumPerfectIVs != 0)
     {
         iv = MAX_PER_STAT_IVS;
         // Initialize a list of IV indices.
@@ -1361,7 +1363,7 @@ void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV)
             availableIVs[i] = i;
 
         // Select the IVs that will be perfected.
-        for (i = 0; i < NUM_STATS && i < gSpeciesInfo[species].perfectIVCount; i++)
+        for (i = 0; i < NUM_STATS && i < NumPerfectIVs; i++)
         {
             u8 index = Random() % (NUM_STATS - i);
             selectedIvs[i] = availableIVs[index];
@@ -1760,7 +1762,7 @@ void CreateEnemyEventMon(void)
     ZeroEnemyPartyMons();
 
     CreateEventMon(&gEnemyParty[0], species, level, Random32(), OTID_STRUCT_PLAYER_ID);
-    SetBoxMonIVs(&gEnemyParty[0].box, USE_RANDOM_IVS);
+    SetBoxMonIVs(&gEnemyParty[0].box, USE_RANDOM_IVS, 0);
     GiveMonInitialMoveset(&gEnemyParty[0]);
     if (itemId)
     {

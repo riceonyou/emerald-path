@@ -18,24 +18,10 @@ script Hoenn1_1_OnLoad{
     special(UpdateLevelCap)
 }
 
-script Hoenn1_1_EventScript_Sign{
-    lockall
-
-    msgbox("test")
-
-    waitmessage
-    releaseall
-}
 
 script Hoenn1_1_EventScript_Pokeball{
  
     lockall
-    
-    // giveitem(ITEM_CANDY_JAR)
-    // giveitem(ITEM_RARE_CANDY, 1)
-    // giveitem(ITEM_ORAN_BERRY, 5)
-    // giveitem(ITEM_MEMORY_MUSHROOM, 5)
-
 
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
@@ -54,30 +40,67 @@ script Hoenn1_1_EventScript_Pokeball{
     end
  
 }
+
+
+script Hoenn1_2_EventScript_Treecko{
  
-script NicknamePartyMon{
- 
-    msgbox("Give it a nickname?", MSGBOX_YESNO)
-    hidemonpic
-    if(var(VAR_RESULT) == YES){
-        call(Common_EventScript_GetGiftMonPartySlot)
-        call(Common_EventScript_NameReceivedPartyMon)
-    }
- 
+	trainerbattle_single(TRAINER_TREECKO, Treecko_Intro, Treecko_Outro)
+	msgbox(PostBattle_Treecko, MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
  
 }
  
-script NicknameBoxMon{
+text Treecko_Intro{
+    "Yo I'm Treecko. Grrr."
+}
  
-    msgbox("Give it a nickname?", MSGBOX_YESNO)
-    hidemonpic
-    if(var(VAR_RESULT) == YES){
-        call(Common_EventScript_NameReceivedBoxMon)
-    }
-    call(Common_EventScript_TransferredToPC)
+text Treecko_Outro{
+    "Damn you got me."
+}
+ 
+text PostBattle_Treecko{
+    "I'll get you next time."
+}
+
+script Hoenn1_2_EventScript_Zigzagoon{
+ 
+	trainerbattle_single(TRAINER_ZIGZAGOON, Zigzagoon_Intro, Zigzagoon_Outro)
+	msgbox(PostBattle_Zigzagoon, MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
  
 }
  
-text Hoenn1_1__NotChosen{
-    "You did not choose the Pokemon"
+text Zigzagoon_Intro{
+    "I'm Zigzagoon. I like to go in zigzags."
+}
+ 
+text Zigzagoon_Outro{
+    "Zagoon :("
+}
+ 
+text PostBattle_Zigzagoon{
+    "Goon Goon!"
+}
+
+script Hoenn1_2_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 1)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_2_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_2)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+ 
 }

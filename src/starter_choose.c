@@ -25,11 +25,13 @@
 #include "window.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
+#include "graphics.h"
 #include "random.h"
 #include "script_pokemon_util.h"
 #include "caps.h"
 #include "string_util.h"
 #include "data/choose_random_pool.h"
+#include <stdbool.h>
 
 
 #define STARTER_MON_COUNT   3
@@ -56,6 +58,10 @@ static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y);
 static void SpriteCB_SelectionHand(struct Sprite *sprite);
 static void SpriteCB_Pokeball(struct Sprite *sprite);
 static void SpriteCB_StarterPokemon(struct Sprite *sprite);
+static void SpriteCB_Sparkle(struct Sprite *sprite);
+static u8 CreatePokemonFrontSpriteShiny(u16 species, u8 x, u8 y);
+static void CreateSparkleOnPokeball(u8 x, u8 y);
+static void DestroyPokeballSparkles(void);
 
 static u16 sStarterLabelWindowId;
 
@@ -313,6 +319,27 @@ static const struct CompressedSpriteSheet sSpriteSheet_StarterCircle[] =
     {}
 };
 
+#define TAG_STARTER_CHOOSE_SPARKLE 0x1002
+
+static const struct CompressedSpriteSheet sSpriteSheet_StarterChooseSparkle[] =
+{
+    {
+        .data = gIntroSparkle_Gfx,
+        .size = 0x0400,
+        .tag = TAG_STARTER_CHOOSE_SPARKLE
+    },
+    {}
+};
+
+static const struct SpritePalette sSpritePalette_StarterChooseSparkle[] =
+{
+    {
+        .data = gIntroLightning_Pal,
+        .tag = TAG_STARTER_CHOOSE_SPARKLE
+    },
+    {}
+};
+
 static const struct SpritePalette sSpritePalettes_StarterChoose[] =
 {
     {
@@ -324,6 +351,47 @@ static const struct SpritePalette sSpritePalettes_StarterChoose[] =
         .tag = TAG_STARTER_CIRCLE
     },
     {},
+};
+
+static const struct OamData sOam_Sparkle =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(16x16),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(16x16),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const union AnimCmd sAnim_Sparkle[] =
+{
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_FRAME(8, 2),
+    ANIMCMD_FRAME(12, 2),
+    ANIMCMD_FRAME(16, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnims_Sparkle[] =
+{
+    sAnim_Sparkle,
+};
+
+static const struct SpriteTemplate sSpriteTemplate_Sparkle =
+{
+    .tileTag = TAG_STARTER_CHOOSE_SPARKLE,
+    .paletteTag = TAG_STARTER_CHOOSE_SPARKLE,
+    .oam = &sOam_Sparkle,
+    .anims = sAnims_Sparkle,
+    .callback = SpriteCB_Sparkle
 };
 
 static const struct SpriteTemplate sSpriteTemplate_Hand =
@@ -356,17 +424,12 @@ static const struct SpriteTemplate sSpriteTemplate_StarterCircle =
 
 // .text
 static u16 sBirchBagSelectedSpecies[STARTER_MON_COUNT];
-static bool8 sUseCustomBirchBagStarters;
 
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId >= STARTER_MON_COUNT)
         chosenStarterId = 0;
-
-    if (sUseCustomBirchBagStarters)
-        return sBirchBagSelectedSpecies[chosenStarterId];
-
-    return sStarterMon[chosenStarterId];
+    return sBirchBagSelectedSpecies[chosenStarterId];
 }
 
 static void VblankCB_StarterChoose(void)
@@ -385,10 +448,29 @@ static void VblankCB_StarterChoose(void)
 #define sTaskId data[0]
 #define sBallId data[1]
 
+static bool IsSelectionShiny[STARTER_MON_COUNT];
+
+static void ResetIsSelectionShiny(void){
+    u8 i;
+    for (i = 0; i < ARRAY_COUNT(IsSelectionShiny); i++)
+        IsSelectionShiny[i] = FALSE;
+}
+
 void CB2_ChooseStarter(void)
 {
     u8 taskId;
     u8 spriteId;
+    u8 i;
+    //Roll Shinies
+    ResetIsSelectionShiny();
+    u16 rand;
+    u16 ShinyRate = VarGet(VAR_SHINY_RATE);
+    
+    for (i = 0; i < STARTER_MON_COUNT; i++){
+        rand = Random() & (ShinyRate - 1);
+        if (rand == 0)
+            IsSelectionShiny[i] = TRUE;
+    }
 
     SetVBlankCallback(NULL);
 
@@ -433,7 +515,9 @@ void CB2_ChooseStarter(void)
     LoadPalette(gBirchBagGrass_Pal, BG_PLTT_ID(0), sizeof(gBirchBagGrass_Pal));
     LoadCompressedSpriteSheet(&sSpriteSheet_PokeballSelect[0]);
     LoadCompressedSpriteSheet(&sSpriteSheet_StarterCircle[0]);
+    LoadCompressedSpriteSheet(&sSpriteSheet_StarterChooseSparkle[0]);
     LoadSpritePalettes(sSpritePalettes_StarterChoose);
+    LoadSpritePalettes(sSpritePalette_StarterChooseSparkle);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0x10, 0, RGB_BLACK);
 
     EnableInterrupts(DISPSTAT_VBLANK);
@@ -465,6 +549,7 @@ void CB2_ChooseStarter(void)
     gSprites[spriteId].sTaskId = taskId;
     gSprites[spriteId].sBallId = 0;
 
+
     spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[1][0], sPokeballCoords[1][1], 2);
     gSprites[spriteId].sTaskId = taskId;
     gSprites[spriteId].sBallId = 1;
@@ -472,6 +557,10 @@ void CB2_ChooseStarter(void)
     spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[2][0], sPokeballCoords[2][1], 2);
     gSprites[spriteId].sTaskId = taskId;
     gSprites[spriteId].sBallId = 2;
+
+    for (i = 0; i < STARTER_MON_COUNT; i++){
+        if((IsSelectionShiny[i]))CreateSparkleOnPokeball(sPokeballCoords[i][0], sPokeballCoords[i][1]);
+    }
 
     sStarterLabelWindowId = WINDOW_NONE;
 }
@@ -505,12 +594,22 @@ static void Task_HandleStarterChooseInput(u8 taskId)
 
         ClearStarterLabel();
 
+        DestroyPokeballSparkles();
+
         // Create white circle background
         spriteId = CreateSprite(&sSpriteTemplate_StarterCircle, sPokeballCoords[selection][0], sPokeballCoords[selection][1], 1);
         gTasks[taskId].tCircleSpriteId = spriteId;
 
         // Create Pokémon sprite
-        spriteId = CreatePokemonFrontSprite(GetStarterPokemon(gTasks[taskId].tStarterSelection), sPokeballCoords[selection][0], sPokeballCoords[selection][1]);
+        if (IsSelectionShiny[selection]) // Check if shiny
+        {
+            PlaySE(SE_SHINY);
+            spriteId = CreatePokemonFrontSpriteShiny(GetStarterPokemon(gTasks[taskId].tStarterSelection), sPokeballCoords[selection][0], sPokeballCoords[selection][1]);
+        }
+        else
+        {
+            spriteId = CreatePokemonFrontSprite(GetStarterPokemon(gTasks[taskId].tStarterSelection), sPokeballCoords[selection][0], sPokeballCoords[selection][1]);
+        }
         gSprites[spriteId].affineAnims = &sAffineAnims_StarterPokemon;
         gSprites[spriteId].callback = SpriteCB_StarterPokemon;
 
@@ -552,11 +651,13 @@ static void Task_AskConfirmStarter(u8 taskId)
 static void Task_HandleConfirmStarterInput(u8 taskId)
 {
     u8 spriteId;
+    u8 i;
 
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
     case 0:  // YES
         // Return the starter choice and exit.
+        if (IsSelectionShiny[gTasks[taskId].tStarterSelection]){FlagSet(FLAG_GIVE_SHINY_NEXT_MON);}
         gSpecialVar_Result = gTasks[taskId].tStarterSelection;
         ResetAllPicSprites();
         SetMainCallback2(gMain.savedCallback);
@@ -567,10 +668,12 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
         spriteId = gTasks[taskId].tPkmnSpriteId;
         FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
         FreeAndDestroyMonPicSprite(spriteId);
-
         spriteId = gTasks[taskId].tCircleSpriteId;
         FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
         DestroySprite(&gSprites[spriteId]);
+        for (i = 0; i < STARTER_MON_COUNT; i++){
+            if((IsSelectionShiny[i]))CreateSparkleOnPokeball(sPokeballCoords[i][0], sPokeballCoords[i][1]);
+        }
         gTasks[taskId].func = Task_DeclineStarter;
         break;
     }
@@ -649,6 +752,41 @@ static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y)
     return spriteId;
 }
 
+static u8 CreatePokemonFrontSpriteShiny(u16 species, u8 x, u8 y)
+{
+    u8 spriteId;
+
+    spriteId = CreateMonPicSprite_Affine(species, TRUE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
+    gSprites[spriteId].oam.priority = 0;
+    return spriteId;
+}
+
+static void CreateSparkleOnPokeball(u8 x, u8 y)
+{
+    u8 spriteId = CreateSprite(&sSpriteTemplate_Sparkle, x + 5, y - 4, 0);
+
+    if (spriteId != MAX_SPRITES)
+        gSprites[spriteId].oam.priority = 0;
+}
+
+static void DestroyPokeballSparkles(void)
+{
+    u8 i;
+
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        if (gSprites[i].inUse && gSprites[i].template == &sSpriteTemplate_Sparkle)
+            DestroySprite(&gSprites[i]);
+    }
+}
+
+static void SpriteCB_Sparkle(struct Sprite *sprite)
+{
+    // Let the sparkle animation loop continuously.
+    if (sprite->animEnded)
+        StartSpriteAnimIfDifferent(sprite, 0);
+}
+
 static void SpriteCB_SelectionHand(struct Sprite *sprite)
 {
     // Float up and down above selected Poké Ball
@@ -714,10 +852,14 @@ static bool8 IsSpeciesExcluded(u16 species, const u16 *excluded, u8 excludedCoun
 void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8 count)
 {
     u8 i;
+    
+    if (count > ARRAY_COUNT(sBirchBagWeightedPool))
+        count = ARRAY_COUNT(sBirchBagWeightedPool);
+    
     sBirchBagWeightedPoolSize = count;
     sBirchBagWeightedPoolTotalWeight = 0;
     
-    for (i = 0; i < count; i++)
+    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
     {
         sBirchBagWeightedPool[i] = choices[i];
         sBirchBagWeightedPoolTotalWeight += choices[i].weight;
@@ -757,9 +899,11 @@ static u16 SelectPokemonFromWeightedPoolExclude(const struct BirchBagWeightedCho
     return SPECIES_NONE;
 }
 
+
+
 static void PrepareBirchBagWeightedStarterChoices(void)
 {
-    u8 i, j;
+    u8 i;
     u16 excluded[STARTER_MON_COUNT];
     u16 species;
 
@@ -770,14 +914,14 @@ static void PrepareBirchBagWeightedStarterChoices(void)
     {
         species = SelectPokemonFromWeightedPoolExclude(sBirchBagWeightedPool, sBirchBagWeightedPoolSize, excluded, i);
         if (species == SPECIES_NONE)
-            sBirchBagSelectedSpecies[i] = SPECIES_LUVDISC
+        {
+            sBirchBagSelectedSpecies[i] = SPECIES_LUVDISC;
             break;
+        }
 
         sBirchBagSelectedSpecies[i] = species;
         excluded[i] = species;
     }
-
-    sUseCustomBirchBagStarters = TRUE;
 }
 
 // Reset the pool (call before building a new one from script)
@@ -785,18 +929,36 @@ void ResetBirchBagWeightedPool(void)
 {
     sBirchBagWeightedPoolSize = 0;
     sBirchBagWeightedPoolTotalWeight = 0;
-    sUseCustomBirchBagStarters = FALSE;
 }
 
-// Callback that gives the Pokémon without starting a battle
+
 static void CB2_GiveBirchBagPokemonNoBattle(void)
 {
     u16 chosenSpecies = GetStarterPokemon(gSpecialVar_Result);
+    struct Pokemon mon;
 
     if (chosenSpecies != SPECIES_NONE)
     {
-        ScriptGiveMon(chosenSpecies, GetCurrentLevelCap() - 9, ITEM_NONE, ITEM_NONE);
+        u32 personality = GetMonPersonality(chosenSpecies, MON_GENDER_RANDOM, NATURE_RANDOM, RANDOM_UNOWN_LETTER);
+        if (FLAG_GIVE_SHINY_NEXT_MON){
+            u8 isShiny = TRUE;
+            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP) - 9, personality, OTID_STRUCT_PLAYER_ID);
+            SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 3);
+            SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
+            CalculateMonStats(&mon);
+            GiveMonInitialMoveset(&mon);
+            GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
+            FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
+        }else{
+            u8 isShiny = FALSE;
+            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP) - 9, personality, OTID_STRUCT_PLAYER_ID);
+            CalculateMonStats(&mon);
+            GiveMonInitialMoveset(&mon);
+            SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
+            GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
+        }
     }
+    
     ScriptContext_Enable();
     StringCopy(gStringVar1, gSpeciesInfo[chosenSpecies].speciesName);
     SetMainCallback2(CB2_ReturnToField);
@@ -805,9 +967,6 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
 // Trigger weighted Pokémon selection for Birch's bag
 void ChooseBirchBagPokemonWeighted(void)
 {
-    if (sBirchBagWeightedPoolSize == 0)
-        return;
-
     PrepareBirchBagWeightedStarterChoices();
     gMain.savedCallback = CB2_GiveBirchBagPokemonNoBattle;
     SetMainCallback2(CB2_ChooseStarter);

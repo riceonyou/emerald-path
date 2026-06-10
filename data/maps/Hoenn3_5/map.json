@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_HOENN3_6",
-      "offset": 7,
+      "offset": 4,
       "direction": "right"
     }
   ],

@@ -12,18 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_HOENN2_2",
-      "offset": 4,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_HOENN2_4",
-      "offset": 2,
-      "direction": "right"
-    }
-  ],
+  "connections": null,
   "object_events": [],
   "warp_events": [],
   "coord_events": [],

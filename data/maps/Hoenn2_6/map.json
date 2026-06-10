@@ -16,17 +16,17 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 4,
-      "y": 19,
+      "x": 2,
+      "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_HOENN2_6",
+      "dest_map": "MAP_HOENN2_4",
       "dest_warp_id": "0"
     },
     {
-      "x": 5,
-      "y": 19,
+      "x": 3,
+      "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_HOENN2_5",
+      "dest_map": "MAP_HOENN2_4",
       "dest_warp_id": "0"
     }
   ],

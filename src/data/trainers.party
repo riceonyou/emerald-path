@@ -173,7 +173,7 @@ Level: 10
 
 
 === TRAINER_LOTAD ===
-Name: GRUNT
+Name: LOTAD
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -208,7 +208,7 @@ Level: 10
 
 
 === TRAINER_ODDISH ===
-Name: GRUNT
+Name: ODDISH
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -239,7 +239,7 @@ Level: 9
 - Water Sport
 
 === TRAINER_WURMPLE ===
-Name: GRUNT
+Name: WURMPLE
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -277,7 +277,7 @@ Level: 10
 - Aerial Ace
 
 === TRAINER_SHROOMISH ===
-Name: GRUNT
+Name: SHROOMISH
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -290,7 +290,7 @@ Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SURSKIT ===
-Name: GRUNT
+Name: SURSKIT
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -302,8 +302,63 @@ Zubat
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_SEEDOT ===
+Name: SEEDOT
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Zubat
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Poochyena
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TRAINER_SLAKOTH ===
+Name: SLAKOTH
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_NINCADA ===
+Name: NINCADA
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zubat
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Carvanha
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_SKITTY ===
-Name: GABRIELLE
+Name: SKITTY
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
@@ -336,7 +391,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TAILLOW ===
-Name: GRUNT
+Name: TAILLOW
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -349,7 +404,7 @@ Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WHISMUR ===
-Name: MARCEL
+Name: WHISMUR
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -367,7 +422,7 @@ Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LEADER_NOSEPASS ===
-Name: ALBERTO
+Name: NOSEPASS
 Class: Leader
 Pic: Substitute
 Gender: Male
@@ -383,10 +438,10 @@ Xatu
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ED ===
-Name: ED
-Class: Collector
-Pic: Collector
+=== TRAINER_PELIPPER ===
+Name: PELIPPER
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Suspicious
 Double Battle: No
@@ -400,10 +455,10 @@ Seviper
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+=== TRAINER_CRAWDAUNT ===
+Name: CRAWDAUNT
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -413,10 +468,10 @@ Carvanha
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DECLAN ===
-Name: DECLAN
-Class: Swimmer M
-Pic: Swimmer M
+=== TRAINER_SHARPEDO ===
+Name: SHARPEDO
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -426,10 +481,10 @@ Gyarados
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_WAILMER ===
+Name: WAILMER
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -439,65 +494,12 @@ Poochyena
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
 
-Zubat
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_WEATHER_INST_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_WEATHER_INST_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zubat
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_MUSEUM_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_AZUMARILL ===
+Name: AZUMARILL
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -507,10 +509,31 @@ Carvanha
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MUSEUM_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_DODRIO ===
+Name: DODRIO
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Cool
+Items: Full Restore
+Double Battle: No
+AI: Basic Trainer
+
+Medicham
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Psychic
+
+Claydol
+Level: 43
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Skill Swap
+- Earthquake
+
+=== TRAINER_LOUDRED ===
+Name: LOUDRED
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -524,10 +547,27 @@ Carvanha
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SPACE_CENTER_1 ===
-Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+=== TRAINER_ELECTRODE ===
+Name: ELECTRODE
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Roselia
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gloom
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PLUSLE_MINUN ===
+Name: PLUSLE_MINUN
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -537,10 +577,10 @@ Numel
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_VOLBEAT_ILLUMISE ===
+Name: VOLBEAT_ILLUMISE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -550,10 +590,10 @@ Zubat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_ROSELIA ===
+Name: ROSELIA
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -563,10 +603,10 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_SWALOT ===
+Name: SWALOT
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -580,10 +620,10 @@ Carvanha
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+=== TRAINER_MANECTRIC ===
+Name: MANECTRIC
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -593,10 +633,10 @@ Carvanha
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_5 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+=== TRAINER_MAGNETON ===
+Name: MAGNETON
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -606,10 +646,10 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_6 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+=== TRAINER_FLYGON ===
+Name: FLYGON
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -619,10 +659,10 @@ Zubat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FREDRICK ===
-Name: FREDRICK
-Class: Expert
-Pic: Expert M
+=== TRAINER_CACTURNE ===
+Name: CACTURNE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -636,10 +676,10 @@ Machoke
 Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MATT ===
-Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
+=== TRAINER_CLAYDOL ===
+Name: CLAYDOL
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Items: Super Potion
@@ -654,10 +694,10 @@ Golbat
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_ZANDER ===
-Name: ZANDER
-Class: Black Belt
-Pic: Black Belt
+=== TRAINER_SKARMORY ===
+Name: SKARMORY
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -667,10 +707,10 @@ Hariyama
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_SHELLY_WEATHER_INSTITUTE ===
-Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
+=== TRAINER_ZANGOOSE ===
+Name: ZANGOOSE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -684,10 +724,10 @@ Mightyena
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_SHELLY_SEAFLOOR_CAVERN ===
-Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
+=== TRAINER_SEVIPER ===
+Name: SEVIPER
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -701,10 +741,10 @@ Mightyena
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ARCHIE ===
-Name: ARCHIE
-Class: Aqua Leader
-Pic: Aqua Leader Archie
+=== TRAINER_CRADILY ===
+Name: CRADILY
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Items: Super Potion / Super Potion
@@ -723,10 +763,10 @@ Sharpedo
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_LEAH ===
-Name: LEAH
-Class: Hex Maniac
-Pic: Hex Maniac
+=== TRAINER_ARMALDO ===
+Name: ARMALDO
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Suspicious
 Double Battle: No
@@ -736,10 +776,10 @@ Spoink
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DAISY ===
-Name: DAISY
-Class: Aroma Lady
-Pic: Aroma Lady
+=== TRAINER_WHISCASH ===
+Name: WHISCASH
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -753,10 +793,10 @@ Roselia
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ROSE_1 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
+=== TRAINER_SANDSLASH ===
+Name: SANDSLASH
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -774,48 +814,12 @@ Roselia
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FELIX ===
-Name: FELIX
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
 
-Medicham
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Psychic
 
-Claydol
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Skill Swap
-- Earthquake
-
-=== TRAINER_VIOLET ===
-Name: VIOLET
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Roselia
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Gloom
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ROSE_2 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
+=== TRAINER_WIGGLYTUFF ===
+Name: WIGGLYTUFF
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -829,10 +833,10 @@ Roselia
 Level: 26
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_ROSE_3 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
+=== TRAINER_SLAKING ===
+Name: SLAKING
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -850,10 +854,10 @@ Roselia
 Level: 28
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_ROSE_4 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
+=== TRAINER_GOLDUCK ===
+Name: GOLDUCK
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -871,10 +875,10 @@ Roselia
 Level: 31
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_ROSE_5 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
+=== TRAINER_WOBBUFFET ===
+Name: WOBBUFFET
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -892,10 +896,10 @@ Roselia
 Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_DUSTY_1 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_XATU ===
+Name: XATU
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -909,10 +913,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_CHIP ===
-Name: CHIP
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_GLALIE ===
+Name: GLALIE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -942,10 +946,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_FOSTER ===
-Name: FOSTER
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_LANTURN ===
+Name: LANTURN
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -967,10 +971,10 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_2 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_STARMIE ===
+Name: STARMIE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -984,10 +988,10 @@ IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_3 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_FARIGIRAF ===
+Name: FARIGIRAF
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -1001,10 +1005,10 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_4 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_HERACROSS ===
+Name: HERACROSS
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -1018,10 +1022,10 @@ IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_5 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+=== TRAINER_PINSIR ===
+Name: PINSIR
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -1035,10 +1039,10 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_GABBY_AND_TY_1 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
+=== TRAINER_KINGDRA ===
+Name: KINGDRA
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -1052,10 +1056,10 @@ Whismur
 Level: 17
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_GABBY_AND_TY_2 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
+=== TRAINER_METAGROSS ===
+Name: METAGROSS
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -1069,10 +1073,10 @@ Loudred
 Level: 27
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_GABBY_AND_TY_3 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
+=== TRAINER_LATIOS_LATIAS ===
+Name: LATIOS_LATIAS
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -1086,10 +1090,10 @@ Loudred
 Level: 30
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_GABBY_AND_TY_4 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
+=== TRAINER_MEGA_ABSOL ===
+Name: MEGA_ABSOL
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -1103,10 +1107,10 @@ Loudred
 Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-=== TRAINER_GABBY_AND_TY_5 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
+=== TRAINER_MEGA_SABLEYE ===
+Name: MEGA_SABLEYE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -1120,10 +1124,10 @@ Loudred
 Level: 36
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
-=== TRAINER_GABBY_AND_TY_6 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
+=== TRAINER_MEGA_GLALIE ===
+Name: MEGA_GLALIE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -1145,10 +1149,10 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Supersonic
 - Hyper Voice
 
-=== TRAINER_LOLA_1 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+=== TRAINER_MEGA_SALAMENCE ===
+Name: MEGA_SALAMENCE
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1162,10 +1166,10 @@ Azurill
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_AUSTINA ===
-Name: AUSTINA
-Class: Tuber F
-Pic: Tuber F
+=== TRAINER_MEGA_GARDEVOIR ===
+Name: MEGA_GARDEVOIR
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1175,10 +1179,10 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GWEN ===
-Name: GWEN
-Class: Tuber F
-Pic: Tuber F
+=== TRAINER_SWAMPERT ===
+Name: SWAMPERT
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1190,8 +1194,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LOLA_2 ===
 Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1207,8 +1211,8 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_LOLA_3 ===
 Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1224,8 +1228,8 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_LOLA_4 ===
 Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1241,8 +1245,8 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_LOLA_5 ===
 Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1258,8 +1262,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_RICKY_1 ===
 Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1275,8 +1279,8 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_SIMON ===
 Name: SIMON
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1292,8 +1296,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHARLIE ===
 Name: CHARLIE
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1305,8 +1309,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICKY_2 ===
 Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1322,8 +1326,8 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_RICKY_3 ===
 Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1339,8 +1343,8 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_RICKY_4 ===
 Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1356,8 +1360,8 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_RICKY_5 ===
 Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -1373,8 +1377,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_RANDALL ===
 Name: RANDALL
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1390,8 +1394,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_PARKER ===
 Name: PARKER
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1407,8 +1411,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_GEORGE ===
 Name: GEORGE
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1424,8 +1428,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BERKE ===
 Name: BERKE
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1440,8 +1444,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -1490,8 +1494,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_VINCENT ===
 Name: VINCENT
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -1512,8 +1516,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LEROY ===
 Name: LEROY
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Full Restore
@@ -1550,7 +1554,7 @@ Makuhita
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_EDGAR ===
+=== TRAINER_PELIPPERGAR ===
 Name: EDGAR
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -2857,8 +2861,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_LUIS ===
 Name: LUIS
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2870,8 +2874,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOMINIK ===
 Name: DOMINIK
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2883,8 +2887,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DOUGLAS ===
 Name: DOUGLAS
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2900,8 +2904,8 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_DARRIN ===
 Name: DARRIN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2921,8 +2925,8 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_TONY_1 ===
 Name: TONY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2934,8 +2938,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JEROME ===
 Name: JEROME
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2945,10 +2949,10 @@ Tentacruel
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MATTHEW ===
+=== TRAINER_CLAYDOLHEW ===
 Name: MATTHEW
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2960,8 +2964,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DAVID ===
 Name: DAVID
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2977,8 +2981,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SPENCER ===
 Name: SPENCER
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -2994,8 +2998,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROLAND ===
 Name: ROLAND
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3007,8 +3011,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NOLEN ===
 Name: NOLEN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3020,8 +3024,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_STAN ===
 Name: STAN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3033,8 +3037,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BARRY ===
 Name: BARRY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3046,8 +3050,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DEAN ===
 Name: DEAN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3067,8 +3071,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RODNEY ===
 Name: RODNEY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3080,8 +3084,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICHARD ===
 Name: RICHARD
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3093,8 +3097,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HERMAN ===
 Name: HERMAN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3110,8 +3114,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SANTIAGO ===
 Name: SANTIAGO
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3127,8 +3131,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GILBERT ===
 Name: GILBERT
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3140,8 +3144,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FRANKLIN ===
 Name: FRANKLIN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3153,8 +3157,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KEVIN ===
 Name: KEVIN
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3166,8 +3170,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACK ===
 Name: JACK
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3179,8 +3183,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUDLEY ===
 Name: DUDLEY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3200,8 +3204,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHAD ===
 Name: CHAD
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3217,8 +3221,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TONY_2 ===
 Name: TONY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3230,8 +3234,8 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_TONY_3 ===
 Name: TONY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3243,8 +3247,8 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_TONY_4 ===
 Name: TONY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3260,8 +3264,8 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_TONY_5 ===
 Name: TONY
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -3493,7 +3497,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_7 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Pkmn Trainer 1
 Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
@@ -3510,7 +3514,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_8 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Pkmn Trainer 1
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
@@ -4211,7 +4215,7 @@ Beautifly
 Level: 38
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_EDWARD ===
+=== TRAINER_PELIPPERWARD ===
 Name: EDWARD
 Class: Psychic
 Pic: Psychic M
@@ -6302,7 +6306,7 @@ Mightyena
 Level: 36
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_EDDIE ===
+=== TRAINER_PELIPPERDIE ===
 Name: EDDIE
 Class: Youngster
 Pic: Youngster
@@ -7504,7 +7508,7 @@ Xatu
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_EDWARDO ===
+=== TRAINER_PELIPPERWARDO ===
 Name: EDWARDO
 Class: Bird Keeper
 Pic: Bird Keeper
@@ -9066,7 +9070,7 @@ Machop
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_EDMOND ===
+=== TRAINER_PELIPPERMOND ===
 Name: EDMOND
 Class: Sailor
 Pic: Sailor
@@ -9441,7 +9445,7 @@ Hariyama
 Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-=== TRAINER_EDWIN_1 ===
+=== TRAINER_PELIPPERWIN_1 ===
 Name: EDWIN
 Class: Collector
 Pic: Collector
@@ -9496,7 +9500,7 @@ Golbat
 Level: 40
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_EDWIN_2 ===
+=== TRAINER_PELIPPERWIN_2 ===
 Name: EDWIN
 Class: Collector
 Pic: Collector
@@ -9513,7 +9517,7 @@ Nuzleaf
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_EDWIN_3 ===
+=== TRAINER_PELIPPERWIN_3 ===
 Name: EDWIN
 Class: Collector
 Pic: Collector
@@ -9530,7 +9534,7 @@ Nuzleaf
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_EDWIN_4 ===
+=== TRAINER_PELIPPERWIN_4 ===
 Name: EDWIN
 Class: Collector
 Pic: Collector
@@ -9547,7 +9551,7 @@ Nuzleaf
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_EDWIN_5 ===
+=== TRAINER_PELIPPERWIN_5 ===
 Name: EDWIN
 Class: Collector
 Pic: Collector
@@ -10598,7 +10602,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_5 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Pkmn Trainer 1
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
@@ -10632,7 +10636,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_4 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Pkmn Trainer 1
 Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
@@ -10735,8 +10739,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LEONARDO ===
 Name: LEONARDO
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -10771,8 +10775,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_HARRISON ===
 Name: HARRISON
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -10797,8 +10801,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CLARENCE ===
 Name: CLARENCE
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -11021,7 +11025,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_5 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Pkmn Trainer 1
 Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
@@ -12656,8 +12660,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_REED ===
 Name: REED
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -13662,8 +13666,8 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_PETE ===
 Name: PETE
-Class: Swimmer M
-Pic: Swimmer M
+Class: Pkmn Trainer 1
+Pic: Pkmn Trainer 1
 Gender: Male
 Music: Swimmer
 Double Battle: No

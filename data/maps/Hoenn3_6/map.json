@@ -15,14 +15,14 @@
   "connections": [
     {
       "map": "MAP_HOENN3_5",
-      "offset": -7,
+      "offset": -4,
       "direction": "left"
     }
   ],
   "object_events": [],
   "warp_events": [
     {
-      "x": 13,
+      "x": 14,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_HOENN3_7",

@@ -14,18 +14,21 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_HOENN2_3",
-      "offset": -2,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_HOENN2_5",
+      "map": "MAP_HOENN2_1",
       "offset": 0,
-      "direction": "right"
+      "direction": "left"
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 28,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_HOENN2_6",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

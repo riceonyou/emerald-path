@@ -3793,7 +3793,7 @@ static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId)
                 if (!spaceAvailable)
                     PlayBGM(MUS_RG_MYSTERY_GIFT);
                 CreateBoxMon(&boxMon, species, 100, Random32(), OTID_STRUCT_PLAYER_ID);
-                SetBoxMonIVs(&boxMon, USE_RANDOM_IVS);
+                SetBoxMonIVs(&boxMon, USE_RANDOM_IVS, 0);
                 GiveBoxMonInitialMoveset(&boxMon);
                 gPokemonStoragePtr->boxes[boxId][boxPosition] = boxMon;
                 species = (species < NUM_SPECIES - 1) ? species + 1 : 1;

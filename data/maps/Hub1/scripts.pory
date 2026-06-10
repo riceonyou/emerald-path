@@ -16,8 +16,15 @@ script HUB1_ONFRAME {
 	setvar(VAR_TEMP_2, 1)
 	if(!flag(FLAG_SYS_NEW_GAME)){
 		lockall
+
+		//Set Starter Vars and Flags
+		setflag(FLAG_SYS_NEW_GAME)
+		setvar(VAR_SHINY_RATE, 4096)//4096 originally
+
+		//Intro
 		msgbox("Welcome to Pokemon Path!\pTo start a run, talk to\nProfessor Birch up ahead.\pNow choose a pokemon to\nstart your adventure with.")
 		
+		//Give starter pokemon
 		dynmultipush("Bulbasaur", SPECIES_BULBASAUR)
 		dynmultipush("Charmander", SPECIES_CHARMANDER)
 		dynmultipush("Squirtle", SPECIES_SQUIRTLE)
@@ -164,7 +171,6 @@ script HUB1_ONFRAME {
 		lockall
 		msgbox("Use this item to level up your\nPokemon.")
 		giveitem(ITEM_CANDY_JAR)
-		setflag(FLAG_SYS_NEW_GAME)
 
 		releaseall
 	}
@@ -179,7 +185,7 @@ script Hub_Event_Script_Birch{
 				random(1)
 				switch (var(VAR_RESULT)) {
 					case 0:
-						warp(MAP_HOENN1_1, 1, 8)
+						warp(MAP_HOENN1_1, 3, 10)
 						
 				}
 			case NO:

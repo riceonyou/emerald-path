@@ -12,51 +12,9 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_HOENN1_6",
-      "offset": 0,
-      "direction": "left"
-    }
-  ],
-  "object_events": [
-    {
-      "local_id": "HOENN1_7_BIRCHBAG",
-      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 14,
-      "y": 8,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Hoenn1_7_EventScript_BirchBag",
-      "flag": "FLAG_BIRCHBAG_1_7"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SKITTY)",
-      "x": 22,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "Hoenn1_7_EventScript_Skitty",
-      "flag": "0"
-    }
-  ],
-  "warp_events": [
-    {
-      "x": 27,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_HOENN1_8",
-      "dest_warp_id": "0"
-    }
-  ],
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

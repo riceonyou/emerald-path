@@ -20,15 +20,7 @@
     }
   ],
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 20,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_HOENN4_5",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

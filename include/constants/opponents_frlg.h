@@ -311,7 +311,7 @@
 #define TRAINER_COOLTRAINER_SHANNON                305
 #define TRAINER_COOLTRAINER_NAOMI                  306
 #define TRAINER_COOLTRAINER_BROOKE                 307
-#define TRAINER_COOLTRAINER_AUSTINA                308
+#define TRAINER_COOLTRAINER_MEGA_GARDEVOIR                308
 #define TRAINER_COOLTRAINER_JULIE                  309
 #define TRAINER_ELITE_FOUR_LORELEI                 310
 #define TRAINER_ELITE_FOUR_BRUNO                   311
