@@ -32,7 +32,7 @@
 #define TRAINER_SWALOT              25
 #define TRAINER_MANECTRIC         26
 #define TRAINER_MAGNETON         27
-#define TRAINER_FLYGON         28
+#define TRAINER_VIBRAVA         28
 #define TRAINER_CACTURNE                     29
 #define TRAINER_CLAYDOL                         30
 #define TRAINER_SKARMORY                       31
@@ -64,10 +64,10 @@
 #define TRAINER_MEGA_SALAMENCE                       57
 #define TRAINER_MEGA_GARDEVOIR                      58
 #define TRAINER_SWAMPERT                         59
-#define TRAINER_LOLA_2                       60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
+#define TRAINER_SPINDA                       60
+#define TRAINER_NINETALES                       61
+#define TRAINER_SOLROCK                       62
+#define TRAINER_LUNATONE                       63
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65
 #define TRAINER_CHARLIE                      66

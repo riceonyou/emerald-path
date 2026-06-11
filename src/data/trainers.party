@@ -247,11 +247,6 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Wurmple
-Level: 5
-- Poison Sting
-- String Shot
-
 Silcoon @ Rocky Helmet
 Nature: Bold
 Level: 8
@@ -646,7 +641,7 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FLYGON ===
+=== TRAINER_VIBRAVA ===
 Name: FLYGON
 Class: Pkmn Trainer 1
 Pic: Substitute
@@ -707,6 +702,41 @@ Hariyama
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_SPINDA ===
+Name: SPINDA
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Marill
+Level: 26
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Marill
+Level: 26
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+
+=== TRAINER_NINETALES ===
+Name: NINETALES
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Marill
+Level: 29
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Marill
+Level: 29
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
 === TRAINER_ZANGOOSE ===
 Name: ZANGOOSE
 Class: Pkmn Trainer 1
@@ -740,6 +770,41 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Mightyena
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_SOLROCK ===
+Name: LOLA
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Marill
+Level: 32
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Marill
+Level: 32
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_LUNATONE ===
+Name: LOLA
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Azumarill
+Level: 35
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Azumarill
+Level: 35
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
 
 === TRAINER_CRADILY ===
 Name: CRADILY
@@ -1192,73 +1257,8 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LOLA_2 ===
-Name: LOLA
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
 
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_LOLA_3 ===
-Name: LOLA
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_LOLA_4 ===
-Name: LOLA
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_LOLA_5 ===
-Name: LOLA
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_RICKY_1 ===
 Name: RICKY

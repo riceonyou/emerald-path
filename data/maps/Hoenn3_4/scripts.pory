@@ -1,0 +1,16 @@
+mapscripts Hoenn3_4_MapScripts {
+}
+
+script Hoenn3_2_Skarmory{
+	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_2_Skarmory{
+	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

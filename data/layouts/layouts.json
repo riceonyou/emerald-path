@@ -9468,7 +9468,7 @@
     {
       "id": "LAYOUT_HOENN3_1",
       "name": "Hoenn3_1_Layout",
-      "width": 16,
+      "width": 22,
       "height": 11,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -9714,6 +9714,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ANCIENT_REGIS/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_REGIS/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN3_1_HOUSE",
+      "name": "Hoenn3_1_House_Layout",
+      "width": 15,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/Hoenn3_1_House/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn3_1_House/map.bin"
     }
   ]
 }

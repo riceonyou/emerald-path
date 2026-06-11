@@ -1,0 +1,61 @@
+mapscripts Hoenn2_6_MapScripts {
+}
+
+script Hoenn2_6_Roselia{
+	trainerbattle_single(TRAINER_ROSELIA, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_6_Swalot{
+	trainerbattle_single(TRAINER_SWALOT, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_6_Manectric{
+	trainerbattle_single(TRAINER_MANECTRIC, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_6_Manectric_Defeated{
+	setflag(FLAG_DEFEATED_PATH_2_LEADER)
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+	end
+}
+
+script Hoenn2_6_Magneton{
+	trainerbattle_single(TRAINER_MAGNETON, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_6_AbraTeleport{
+	lockall
+	if(!flag(FLAG_DEFEATED_PATH_2_LEADER)){
+		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.")
+		releaseall
+	}
+	else{
+		msgbox("Would you like to teleport\nto the next act?", MSGBOX_YESNO)
+		switch (var(VAR_RESULT)) {
+			case YES:
+				msgbox("Alright then! Here we go!")
+				random(1)
+				switch (var(VAR_RESULT)) {
+					case 0:
+						warp(MAP_ANCIENT_REGIS, 8, 12)
+						
+				}
+			case NO:
+				msgbox("Okay! Let me know when you're ready.")
+				releaseall
+		}
+	}
+}

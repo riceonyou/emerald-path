@@ -1,0 +1,40 @@
+mapscripts Hoenn2_1_MapScripts {
+}
+
+
+
+script Hoenn2_1_Pelipper{
+ 
+	trainerbattle_single(TRAINER_PELIPPER, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Hoenn2_1_Wailmer{
+ 
+	trainerbattle_single(TRAINER_WAILMER, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Hoenn2_1_Sharpedo{
+ 
+	trainerbattle_single(TRAINER_SHARPEDO, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Hoenn2_1_Crawdaunt{
+ 
+	trainerbattle_single(TRAINER_CRAWDAUNT, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}

@@ -1,0 +1,49 @@
+mapscripts Hoenn2_4_MapScripts {
+}
+
+script Hoenn2_4_Azumarill{
+	trainerbattle_single(TRAINER_AZUMARILL, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_4_Dodrio{
+	trainerbattle_single(TRAINER_DODRIO, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_4_Loudred{
+	trainerbattle_single(TRAINER_LOUDRED, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_4_Volbeat{
+	trainerbattle_double(TRAINER_VOLBEAT_ILLUMISE, "test", "test", "text")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn2_4_Illumise{
+	trainerbattle_double(TRAINER_VOLBEAT_ILLUMISE, "test", "test", "text")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn2_4_Plusle{
+	trainerbattle_double(TRAINER_PLUSLE_MINUN, "test", "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn2_4_Minun{
+	trainerbattle_double(TRAINER_PLUSLE_MINUN, "test", "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

@@ -10,6 +10,15 @@ script Hoenn1_4_EventScript_Wingull{
  
 }
 
+script Hoenn1_4_EventScript_Seedot{
+ 
+	trainerbattle_single(TRAINER_SEEDOT, "Howdy. I'm wingull. Let's battle!", "More like losegull. Squawk :(")
+	msgbox("Check out this cool flying trick!", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
 script Hoenn1_4_EventScript_BirchBag{
  
     lockall

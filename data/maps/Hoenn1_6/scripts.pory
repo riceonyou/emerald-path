@@ -50,6 +50,15 @@ script Hoenn1_7_EventScript_Skitty{
  
 }
 
+script Hoenn1_7_EventScript_Nincada{
+ 
+	trainerbattle_single(TRAINER_SKITTY, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
 
 script Hoenn1_7_EventScript_BirchBag{
 

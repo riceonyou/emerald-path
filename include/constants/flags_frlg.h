@@ -2473,9 +2473,9 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0
 
 #define FLAG_DEFEATED_PATH_1_LEADER                                  0
-#define FLAG_DEFEATED_DEWFORD_GYM                                   0
-#define FLAG_DEFEATED_MAUVILLE_GYM                                  0
-#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0
+#define FLAG_DEFEATED_PATH_2_LEADER                                   0
+#define FLAG_DEFEATED_PATH_3_LEADER                                  0
+#define FLAG_DEFEATED_PATH_4_LEADER                                 0
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0
 #define FLAG_DEFEATED_FORTREE_GYM                                   0
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0

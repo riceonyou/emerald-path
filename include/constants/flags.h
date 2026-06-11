@@ -1322,9 +1322,9 @@
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_PATH_1_LEADER                                  0x4F0
-#define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
-#define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
-#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
+#define FLAG_DEFEATED_PATH_2_LEADER                                   0x4F1
+#define FLAG_DEFEATED_PATH_3_LEADER                                  0x4F2
+#define FLAG_DEFEATED_PATH_4_LEADER                                 0x4F3
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6

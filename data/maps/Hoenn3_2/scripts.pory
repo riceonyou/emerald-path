@@ -1,0 +1,37 @@
+mapscripts Hoenn3_2_MapScripts {
+}
+
+script Hoenn3_2_Skarmory{
+	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_2_Zangoose{
+	trainerbattle_single(TRAINER_ZANGOOSE, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_2_Seviper{
+	trainerbattle_single(TRAINER_SEVIPER, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_2_Spinda{
+	trainerbattle_single(TRAINER_SPINDA, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_2_Ninetales{
+	trainerbattle_single(TRAINER_NINETALES, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

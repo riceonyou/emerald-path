@@ -19,6 +19,15 @@ script Hoenn1_5_EventScript_Wurmple{
  
 }
 
+script Hoenn1_5_EventScript_Slakoth{
+ 
+	trainerbattle_single(TRAINER_SLAKOTH, "I'm just a wurm.", "That was a good battle.")
+	msgbox("Don't talk to me right now.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+ 
+}
+
 script Hoenn1_5_EventScript_BirchBag{
 
     lockall
