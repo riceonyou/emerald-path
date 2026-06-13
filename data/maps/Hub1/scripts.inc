@@ -448,7 +448,7 @@ Hub_Event_Script_Birch_3:
 
 Hub_Event_Script_Birch_5:
 # 188 "data/maps/Hub1/scripts.pory"
-	warp MAP_HOENN1_1, 1, 8
+	warp MAP_HOENN1_1, 3, 10
 	return
 
 

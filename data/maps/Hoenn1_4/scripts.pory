@@ -28,10 +28,51 @@ script Hoenn1_4_EventScript_BirchBag{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-	
     
     removeobject(HOENN1_4_BIRCHBAG)
-    setflag(FLAG_BIRCHBAG_1_4)
+    setflag(FLAG_BIRCHBAG_1_5)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_BirchBag_5{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 3)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_5_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_5)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_BirchBag_6{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 3)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN1_6_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_6)
     playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 

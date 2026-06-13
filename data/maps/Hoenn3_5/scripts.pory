@@ -1,2 +1,23 @@
 mapscripts Hoenn3_5_MapScripts {
 }
+
+script Hoenn3_5_Cradily{
+	trainerbattle_single(TRAINER_CRADILY, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_5_Armaldo{
+	trainerbattle_single(TRAINER_ARMALDO, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_5_Linoone{
+	trainerbattle_single(TRAINER_LINOONE, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

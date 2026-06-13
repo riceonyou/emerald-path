@@ -31,7 +31,7 @@ script Hoenn1_3_EventScript_Lotad{
  
 }
 
-script Hoenn1_3_EventScript_BirchBag{
+script Hoenn1_BirchBag_4{
  
     lockall
     playse(SE_CLICK)
@@ -41,8 +41,8 @@ script Hoenn1_3_EventScript_BirchBag{
     special(ChooseBirchBagPokemonWeighted)
     waitstate
     
-    removeobject(HOENN1_3_BIRCHBAG)
-    setflag(FLAG_BIRCHBAG_1_3)
+    removeobject(HOENN1_4_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_4)
     playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 

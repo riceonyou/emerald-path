@@ -22,32 +22,42 @@ Hoenn1_5_EventScript_Wurmple::
 	end
 
 
-Hoenn1_5_EventScript_BirchBag::
+Hoenn1_5_EventScript_Slakoth::
 # 24 "data/maps/Hoenn1_5/scripts.pory"
-	lockall
+	trainerbattle_single TRAINER_SLAKOTH, Hoenn1_5_EventScript_Wurmple_Text_0, Hoenn1_5_EventScript_Wurmple_Text_1
 # 25 "data/maps/Hoenn1_5/scripts.pory"
-	playse SE_CLICK
+	msgbox Hoenn1_5_EventScript_Wurmple_Text_2, MSGBOX_AUTOCLOSE
 # 26 "data/maps/Hoenn1_5/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 27 "data/maps/Hoenn1_5/scripts.pory"
-	setvar VAR_0x8000, 4
-# 28 "data/maps/Hoenn1_5/scripts.pory"
-	special LoadBirchBagPoolById
-# 29 "data/maps/Hoenn1_5/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 30 "data/maps/Hoenn1_5/scripts.pory"
-	waitstate
-# 33 "data/maps/Hoenn1_5/scripts.pory"
-	removeobject HOENN1_5_BIRCHBAG
-# 34 "data/maps/Hoenn1_5/scripts.pory"
-	setflag FLAG_BIRCHBAG_1_5
-# 35 "data/maps/Hoenn1_5/scripts.pory"
-	playfanfare MUS_EVOLVED
-# 36 "data/maps/Hoenn1_5/scripts.pory"
-	msgbox Hoenn1_5_EventScript_BirchBag_Text_0
-# 38 "data/maps/Hoenn1_5/scripts.pory"
 	waitmessage
+	end
+
+
+Hoenn1_7_EventScript_BirchBag::
+# 33 "data/maps/Hoenn1_5/scripts.pory"
+	lockall
+# 34 "data/maps/Hoenn1_5/scripts.pory"
+	playse SE_CLICK
+# 35 "data/maps/Hoenn1_5/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 36 "data/maps/Hoenn1_5/scripts.pory"
+	setvar VAR_0x8000, 4
+# 37 "data/maps/Hoenn1_5/scripts.pory"
+	special LoadBirchBagPoolById
+# 38 "data/maps/Hoenn1_5/scripts.pory"
+	special ChooseBirchBagPokemonWeighted
 # 39 "data/maps/Hoenn1_5/scripts.pory"
+	waitstate
+# 42 "data/maps/Hoenn1_5/scripts.pory"
+	removeobject HOENN1_7_BIRCHBAG
+# 43 "data/maps/Hoenn1_5/scripts.pory"
+	setflag FLAG_BIRCHBAG_1_7
+# 44 "data/maps/Hoenn1_5/scripts.pory"
+	playfanfare MUS_EVOLVED
+# 45 "data/maps/Hoenn1_5/scripts.pory"
+	msgbox Hoenn1_7_EventScript_BirchBag_Text_0
+# 47 "data/maps/Hoenn1_5/scripts.pory"
+	waitmessage
+# 48 "data/maps/Hoenn1_5/scripts.pory"
 	releaseall
 	end
 
@@ -76,6 +86,6 @@ Hoenn1_5_EventScript_Wurmple_Text_2:
 # 16 "data/maps/Hoenn1_5/scripts.pory"
 	.string "Don't talk to me right now.$"
 
-Hoenn1_5_EventScript_BirchBag_Text_0:
-# 36 "data/maps/Hoenn1_5/scripts.pory"
+Hoenn1_7_EventScript_BirchBag_Text_0:
+# 45 "data/maps/Hoenn1_5/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"

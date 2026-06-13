@@ -16,7 +16,7 @@ script Hoenn2_6_Swalot{
 }
 
 script Hoenn2_6_Manectric{
-	trainerbattle_single(TRAINER_MANECTRIC, "test", "test")
+	trainerbattle_single(TRAINER_MANECTRIC, "test", "test", Hoenn2_6_Manectric_Defeated)
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -50,7 +50,7 @@ script Hoenn2_6_AbraTeleport{
 				random(1)
 				switch (var(VAR_RESULT)) {
 					case 0:
-						warp(MAP_ANCIENT_REGIS, 8, 12)
+						warp(MAP_ANCIENT_MANAPHY, 8, 11)
 						
 				}
 			case NO:

@@ -1,2 +1,44 @@
 mapscripts Hoenn4_2_MapScripts {
 }
+
+script Hoenn4_2_Golduck{
+	trainerbattle_single(TRAINER_GOLDUCK, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn4_2_Wobbuffet{
+	trainerbattle_single(TRAINER_WOBBUFFET, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn4_2_Ludicolo{
+	trainerbattle_single(TRAINER_LUDICOLO, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn4_2_Vileplume{
+	trainerbattle_single(TRAINER_VILEPLUME, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn4_2_Xatu{
+	trainerbattle_single(TRAINER_XATU, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn4_2_Glalie{
+	trainerbattle_single(TRAINER_GLALIE, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

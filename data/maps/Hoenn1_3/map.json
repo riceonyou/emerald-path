@@ -57,7 +57,7 @@
       "flag": "0"
     },
     {
-      "local_id": "HOENN1_3_BIRCHBAG",
+      "local_id": "HOENN1_4_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 18,
       "y": 16,
@@ -67,8 +67,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Hoenn1_3_EventScript_BirchBag",
-      "flag": "FLAG_BIRCHBAG_1_3"
+      "script": "Hoenn1_BirchBag_4",
+      "flag": "FLAG_BIRCHBAG_1_4"
     }
   ],
   "warp_events": [

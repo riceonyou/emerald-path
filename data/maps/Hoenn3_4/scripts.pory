@@ -1,15 +1,22 @@
 mapscripts Hoenn3_4_MapScripts {
 }
 
-script Hoenn3_2_Skarmory{
-	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
+script Hoenn3_4_Lunatone{
+	trainerbattle_double(TRAINER_SOLROCKLUNATONE, "test", "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
-script Hoenn3_2_Skarmory{
-	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
+script Hoenn3_4_Solrock{
+	trainerbattle_double(TRAINER_SOLROCKLUNATONE, "test", "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_4_Whiscash{
+	trainerbattle_single(TRAINER_WHISCASH, "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

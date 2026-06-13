@@ -9519,7 +9519,7 @@
       "id": "LAYOUT_HOENN3_6",
       "name": "Hoenn3_6_Layout",
       "width": 10,
-      "height": 13,
+      "height": 14,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Hoenn3_6/border.bin",
@@ -9724,6 +9724,16 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/Hoenn3_1_House/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn3_1_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_MANAPHY",
+      "name": "ANCIENT_MANAPHY_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/ANCIENT_MANAPHY/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_MANAPHY/map.bin"
     }
   ]
 }

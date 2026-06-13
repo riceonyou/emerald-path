@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "HOENN1_6_BIRCHBAG",
+      "local_id": "HOENN1_8_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 6,
       "y": 6,
@@ -25,8 +25,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Hoenn1_6_EventScript_BirchBag",
-      "flag": "FLAG_BIRCHBAG_1_6"
+      "script": "Hoenn1_8_EventScript_BirchBag",
+      "flag": "FLAG_BIRCHBAG_1_8"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHROOMISH)",
@@ -68,7 +68,7 @@
       "flag": "0"
     },
     {
-      "local_id": "HOENN1_7_BIRCHBAG",
+      "local_id": "HOENN1_9_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 23,
       "y": 11,
@@ -78,8 +78,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Hoenn1_7_EventScript_BirchBag",
-      "flag": "FLAG_BIRCHBAG_1_7"
+      "script": "Hoenn1_9_EventScript_BirchBag",
+      "flag": "FLAG_BIRCHBAG_1_9"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(NINCADA)",
@@ -93,6 +93,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Hoenn1_7_EventScript_Nincada",
       "flag": "0"
+    },
+    {
+      "local_id": "HOENN1_4_ITEM",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_1_Itemball_4",
+      "flag": "FLAG_ITEM_1_4"
+    },
+    {
+      "local_id": "HOENN1_5_ITEM",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 10,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_1_Itemball_5",
+      "flag": "FLAG_ITEM_1_5"
     }
   ],
   "warp_events": [

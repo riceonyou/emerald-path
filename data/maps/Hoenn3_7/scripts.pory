@@ -1,2 +1,57 @@
 mapscripts Hoenn3_7_MapScripts {
 }
+
+script Hoenn3_7_Wigglytuff{
+	trainerbattle_single(TRAINER_WIGGLYTUFF, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_7_Sandslash{
+	trainerbattle_single(TRAINER_SANDSLASH, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn3_7_Slaking{
+	trainerbattle_single(TRAINER_SLAKING, "test", "test", Hoenn3_7_Slaking_Defeated)
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+
+script Hoenn3_7_Slaking_Defeated{
+	setflag(FLAG_DEFEATED_PATH_3_LEADER)
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+	end
+}
+
+script Hoenn3_7_AbraTeleport{
+	lockall
+	if(!flag(FLAG_DEFEATED_PATH_3_LEADER)){
+		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.")
+		releaseall
+	}
+	else{
+		msgbox("Would you like to teleport\nto the next act?", MSGBOX_YESNO)
+		switch (var(VAR_RESULT)) {
+			case YES:
+				msgbox("Alright then! Here we go!")
+				random(2)
+				switch (var(VAR_RESULT)) {
+					case 0:
+						warp(MAP_ANCIENT_KYOGRE, 8, 11)
+					case 1:
+						warp(MAP_ANCIENT_GROUDON, 8, 11)
+						
+				}
+			case NO:
+				msgbox("Okay! Let me know when you're ready.")
+				releaseall
+		}
+	}
+}

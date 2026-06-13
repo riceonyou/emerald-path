@@ -20,18 +20,18 @@ script Hoenn1_6_EventScript_Surskit{
 }
 
 
-script Hoenn1_6_EventScript_BirchBag{
+script Hoenn1_8_EventScript_BirchBag{
  
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 0)
+    setvar(VAR_0x8000, 5)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
     
-    removeobject(HOENN1_6_BIRCHBAG)
-    setflag(FLAG_BIRCHBAG_1_6)
+    removeobject(HOENN1_8_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_8)
     playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 
@@ -60,23 +60,40 @@ script Hoenn1_7_EventScript_Nincada{
 }
 
 
-script Hoenn1_7_EventScript_BirchBag{
+script Hoenn1_9_EventScript_BirchBag{
 
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 0)
+    setvar(VAR_0x8000, 6)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
     
-    removeobject(HOENN1_7_BIRCHBAG)
-    setflag(FLAG_BIRCHBAG_1_7)
+    removeobject(HOENN1_9_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_9)
     playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 
     waitmessage
     releaseall
     end
-    
+}
+
+script Hoenn1_1_Itemball_4{
+    lockall
+    giveitem(ITEM_RARE_CANDY, 1)
+    removeobject(HOENN1_4_ITEM)
+    setflag(FLAG_ITEM_1_4)
+    releaseall
+    end
+}
+
+script Hoenn1_1_Itemball_5{
+    lockall
+    giveitem(ITEM_TM_TOXIC, 1)
+    removeobject(HOENN1_5_ITEM)
+    setflag(FLAG_ITEM_1_5)
+    releaseall
+    end
 }

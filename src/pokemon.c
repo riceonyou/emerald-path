@@ -3545,48 +3545,52 @@ u8 CalculateEnemyPartyCountInSide(enum BattlerId battler)
 
 u8 GetMonsStateToDoubles(void)
 {
-    s32 aliveCount = 0;
-    s32 i;
-    CalculatePlayerPartyCount();
+    // s32 aliveCount = 0;
+    // s32 i;
+    // CalculatePlayerPartyCount();
 
-    if (OW_DOUBLE_APPROACH_WITH_ONE_MON)
-        return PLAYER_HAS_TWO_USABLE_MONS;
+    // if (OW_DOUBLE_APPROACH_WITH_ONE_MON)
+    //     return PLAYER_HAS_TWO_USABLE_MONS;
 
-    if (gPlayerPartyCount == 1)
-        return gPlayerPartyCount; // PLAYER_HAS_ONE_MON
+    // if (gPlayerPartyCount == 1)
+    //     return gPlayerPartyCount; // PLAYER_HAS_ONE_MON
 
-    for (i = 0; i < gPlayerPartyCount; i++)
-    {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_EGG
-         && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0
-         && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_NONE)
-            aliveCount++;
-    }
+    // for (i = 0; i < gPlayerPartyCount; i++)
+    // {
+    //     if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_EGG
+    //      && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0
+    //      && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_NONE)
+    //         aliveCount++;
+    // }
 
-    return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
+    // return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
+
+    return PLAYER_HAS_TWO_USABLE_MONS;
 }
 
 u8 GetMonsStateToDoubles_2(void)
 {
-    s32 aliveCount = 0;
-    s32 i;
+    // s32 aliveCount = 0;
+    // s32 i;
 
-    if (OW_DOUBLE_APPROACH_WITH_ONE_MON
-     || FollowerNPCIsBattlePartner())
-        return PLAYER_HAS_TWO_USABLE_MONS;
+    // if (OW_DOUBLE_APPROACH_WITH_ONE_MON
+    //  || FollowerNPCIsBattlePartner())
+    //     return PLAYER_HAS_TWO_USABLE_MONS;
 
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
-        if (species != SPECIES_EGG && species != SPECIES_NONE
-         && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
-            aliveCount++;
-    }
+    // for (i = 0; i < PARTY_SIZE; i++)
+    // {
+    //     u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
+    //     if (species != SPECIES_EGG && species != SPECIES_NONE
+    //      && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
+    //         aliveCount++;
+    // }
 
-    if (aliveCount == 1)
-        return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
+    // if (aliveCount == 1)
+    //     return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
 
-    return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
+    // return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
+
+    return PLAYER_HAS_TWO_USABLE_MONS;
 }
 
 enum Ability GetAbilityBySpecies(u16 species, u8 abilityNum)

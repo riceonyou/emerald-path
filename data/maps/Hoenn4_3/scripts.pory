@@ -1,2 +1,33 @@
 mapscripts Hoenn4_3_MapScripts {
 }
+
+script Hoenn4_3_Lanturn{
+	trainerbattle_single(TRAINER_LANTURN, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn4_3_Starmie{
+	trainerbattle_single(TRAINER_STARMIE, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn4_3_Slowbro{
+	trainerbattle_single(TRAINER_SLOWBRO, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn4_3_Heracross{
+	trainerbattle_single(TRAINER_HERACROSS, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn4_3_Pinsir{
+	trainerbattle_single(TRAINER_PINSIR, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

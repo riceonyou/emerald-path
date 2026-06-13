@@ -22,7 +22,7 @@ Hoenn1_3_EventScript_Lotad::
 	end
 
 
-Hoenn1_3_EventScript_BirchBag::
+Hoenn1_BirchBag_4::
 # 36 "data/maps/Hoenn1_3/scripts.pory"
 	lockall
 # 37 "data/maps/Hoenn1_3/scripts.pory"
@@ -38,13 +38,13 @@ Hoenn1_3_EventScript_BirchBag::
 # 42 "data/maps/Hoenn1_3/scripts.pory"
 	waitstate
 # 44 "data/maps/Hoenn1_3/scripts.pory"
-	removeobject HOENN1_3_BIRCHBAG
+	removeobject HOENN1_4_BIRCHBAG
 # 45 "data/maps/Hoenn1_3/scripts.pory"
-	setflag FLAG_BIRCHBAG_1_3
+	setflag FLAG_BIRCHBAG_1_4
 # 46 "data/maps/Hoenn1_3/scripts.pory"
 	playfanfare MUS_EVOLVED
 # 47 "data/maps/Hoenn1_3/scripts.pory"
-	msgbox Hoenn1_3_EventScript_BirchBag_Text_0
+	msgbox Hoenn1_BirchBag_4_Text_0
 # 49 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
 # 50 "data/maps/Hoenn1_3/scripts.pory"
@@ -64,7 +64,7 @@ Hoenn1_3_EventScript_Lotad_Text_2:
 # 28 "data/maps/Hoenn1_3/scripts.pory"
 	.string "Que pasa amigo.$"
 
-Hoenn1_3_EventScript_BirchBag_Text_0:
+Hoenn1_BirchBag_4_Text_0:
 # 47 "data/maps/Hoenn1_3/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"
 

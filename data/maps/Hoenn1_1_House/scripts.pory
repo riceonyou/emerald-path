@@ -1,0 +1,11 @@
+mapscripts Hoenn1_1_House_MapScripts {
+}
+
+script Hoenn1_1_Itemball_3{
+    lockall
+    giveitem(ITEM_QUICK_CLAW, 1)
+    removeobject(HOENN1_3_ITEM)
+    setflag(FLAG_ITEM_1_3)
+    releaseall
+    end
+}

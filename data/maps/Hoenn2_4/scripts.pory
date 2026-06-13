@@ -23,26 +23,26 @@ script Hoenn2_4_Loudred{
 }
 
 script Hoenn2_4_Volbeat{
-	trainerbattle_double(TRAINER_VOLBEAT_ILLUMISE, "test", "test", "text")
+	trainerbattle_double(TRAINER_VOLBEATILLUMISE, "test", "test", "text")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn2_4_Illumise{
-	trainerbattle_double(TRAINER_VOLBEAT_ILLUMISE, "test", "test", "text")
+	trainerbattle_double(TRAINER_VOLBEATILLUMISE, "test", "test", "text")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_4_Plusle{
-	trainerbattle_double(TRAINER_PLUSLE_MINUN, "test", "test", "test")
+	trainerbattle_double(TRAINER_PLUSLEMINUN, "test", "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn2_4_Minun{
-	trainerbattle_double(TRAINER_PLUSLE_MINUN, "test", "test", "test")
+	trainerbattle_double(TRAINER_PLUSLEMINUN, "test", "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

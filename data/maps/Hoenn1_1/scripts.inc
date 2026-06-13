@@ -120,6 +120,64 @@ Hoenn1_2_EventScript_BirchBag::
 	end
 
 
+Hoenn1_3_EventScript_BirchBag::
+# 110 "data/maps/Hoenn1_1/scripts.pory"
+	lockall
+# 111 "data/maps/Hoenn1_1/scripts.pory"
+	playse SE_CLICK
+# 112 "data/maps/Hoenn1_1/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 113 "data/maps/Hoenn1_1/scripts.pory"
+	setvar VAR_0x8000, 1
+# 114 "data/maps/Hoenn1_1/scripts.pory"
+	special LoadBirchBagPoolById
+# 115 "data/maps/Hoenn1_1/scripts.pory"
+	special ChooseBirchBagPokemonWeighted
+# 116 "data/maps/Hoenn1_1/scripts.pory"
+	waitstate
+# 118 "data/maps/Hoenn1_1/scripts.pory"
+	removeobject HOENN1_3_BIRCHBAG
+# 119 "data/maps/Hoenn1_1/scripts.pory"
+	setflag FLAG_BIRCHBAG_1_3
+# 120 "data/maps/Hoenn1_1/scripts.pory"
+	playfanfare MUS_EVOLVED
+# 121 "data/maps/Hoenn1_1/scripts.pory"
+	msgbox Hoenn1_1_EventScript_Pokeball_Text_0
+# 123 "data/maps/Hoenn1_1/scripts.pory"
+	waitmessage
+# 124 "data/maps/Hoenn1_1/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn1_1_Itemball_1::
+# 130 "data/maps/Hoenn1_1/scripts.pory"
+	lockall
+# 131 "data/maps/Hoenn1_1/scripts.pory"
+	giveitem ITEM_ORAN_BERRY, 10
+# 132 "data/maps/Hoenn1_1/scripts.pory"
+	removeobject HOENN1_1_ITEM
+# 133 "data/maps/Hoenn1_1/scripts.pory"
+	setflag FLAG_ITEM_1_1
+# 134 "data/maps/Hoenn1_1/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn1_1_Itemball_2::
+# 139 "data/maps/Hoenn1_1/scripts.pory"
+	lockall
+# 140 "data/maps/Hoenn1_1/scripts.pory"
+	giveitem ITEM_LUM_BERRY, 5
+# 141 "data/maps/Hoenn1_1/scripts.pory"
+	removeobject HOENN1_2_ITEM
+# 142 "data/maps/Hoenn1_1/scripts.pory"
+	setflag FLAG_ITEM_1_2
+# 143 "data/maps/Hoenn1_1/scripts.pory"
+	releaseall
+	end
+
+
 Hoenn1_1_EventScript_Pokeball_Text_0:
 # 36 "data/maps/Hoenn1_1/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"

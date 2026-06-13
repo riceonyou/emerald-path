@@ -1,13 +1,13 @@
 #include "starter_choose.h"
 
 enum BirchBagPoolId {
-    BIRCH_BAG_POOL_HOENN1_1,
-    BIRCH_BAG_POOL_HOENN1_2,
-    BIRCH_BAG_POOL_HOENN1_3,
-    BIRCH_BAG_POOL_HOENN1_4,
-    BIRCH_BAG_POOL_HOENN1_5,
-    BIRCH_BAG_POOL_HOENN1_6,
-    BIRCH_BAG_POOL_HOENN1_7,
+    BIRCH_BAG_POOL_STARTERS,
+    BIRCH_BAG_POOL_HOENN1_EARLY_MONS,
+    BIRCH_BAG_POOL_HOENN1_BEFORE_WOODS,
+    BIRCH_BAG_POOL_HOENN1_BEACH_FLYING_TYPES,
+    BIRCH_BAG_POOL_HOENN1_INSIDE_WOODS,
+    BIRCH_BAG_POOL_HOENN1_AFTER_WOODS,
+    BIRCH_BAG_POOL_HOENN1_RUSTBORO,
     BIRCH_BAG_POOL_HOENN2_1,
     BIRCH_BAG_POOL_HOENN2_2,
     BIRCH_BAG_POOL_HOENN2_3,
@@ -29,20 +29,23 @@ enum BirchBagPoolId {
     BIRCH_BAG_POOL_HOENN4_5,
     BIRCH_BAG_POOL_HOENN4_6,
     BIRCH_BAG_POOL_HOENN4_7,
+    BIRCH_BAG_POOL_FOSSILS,
+    BIRCH_BAG_POOL_MANAPHY,
+    BIRCH_BAG_POOL_GROUDON,
 };
 
 
 
-const struct BirchBagWeightedChoice Hoenn1_1_Pool[] = {
+const struct BirchBagWeightedChoice Starters_Pool[] = {
     {SPECIES_BULBASAUR, 2},
     {SPECIES_CHARMANDER, 2},
     {SPECIES_SQUIRTLE, 2},
     {SPECIES_CHIKORITA, 2},
     {SPECIES_CYNDAQUIL, 2},
     {SPECIES_TOTODILE, 2},
-    {SPECIES_TREECKO, 6},
-    {SPECIES_TORCHIC, 6},
-    {SPECIES_MUDKIP, 6},
+    {SPECIES_TREECKO, 2},
+    {SPECIES_TORCHIC, 2},
+    {SPECIES_MUDKIP, 2},
     {SPECIES_TURTWIG, 2},
     {SPECIES_CHIMCHAR, 2},
     {SPECIES_PIPLUP, 2},
@@ -64,43 +67,76 @@ const struct BirchBagWeightedChoice Hoenn1_1_Pool[] = {
     {SPECIES_EEVEE, 2},
 };
 
-static const struct BirchBagWeightedChoice Hoenn1_2_Pool[] = {
+static const struct BirchBagWeightedChoice Hoenn1_Early_Mons_Pool[] = {
     {SPECIES_RATTATA, 2},
     {SPECIES_PIDGEY, 2},
-    {SPECIES_CATERPIE, 1},
-    {SPECIES_WEEDLE, 1},
+    {SPECIES_CATERPIE, 2},
+    {SPECIES_WEEDLE, 2},
     {SPECIES_SENTRET, 2},
     {SPECIES_HOOTHOOT, 2},
-    {SPECIES_ZIGZAGOON, 4},
-    {SPECIES_POOCHYENA, 4},
-    {SPECIES_WURMPLE, 1},
-    {SPECIES_TAILLOW, 1},
+    {SPECIES_ZIGZAGOON, 6},
+    {SPECIES_POOCHYENA, 6},
+    {SPECIES_WURMPLE, 2},
+    {SPECIES_TAILLOW, 3},
     {SPECIES_RALTS, 2},
     {SPECIES_BIDOOF, 2},
     {SPECIES_STARLY, 2},
-    {SPECIES_KRICKETOT, 1},
-    {SPECIES_SHINX, 1},
+    {SPECIES_KRICKETOT, 3},
+    {SPECIES_SHINX, 3},
     {SPECIES_PATRAT, 2},
     {SPECIES_PIDOVE, 2},
     {SPECIES_LILLIPUP, 2},
-    {SPECIES_PURRLOIN, 1},
+    {SPECIES_PURRLOIN, 2},
     {SPECIES_BUNNELBY, 2},
     {SPECIES_FLETCHLING, 2},
-    {SPECIES_SCATTERBUG, 1},
+    {SPECIES_SCATTERBUG, 2},
     {SPECIES_YUNGOOS, 2},
     {SPECIES_PIKIPEK, 2},
-    {SPECIES_GRUBBIN, 1},
+    {SPECIES_GRUBBIN, 2},
     {SPECIES_SKWOVET, 2},
     {SPECIES_ROOKIDEE, 2},
-    {SPECIES_BLIPBUG, 1},
-    {SPECIES_WOOLOO, 1},
+    {SPECIES_BLIPBUG, 2},
+    {SPECIES_WOOLOO, 2},
     {SPECIES_LECHONK, 2},
-    {SPECIES_TAROUNTULA, 1},
-    {SPECIES_NYMBLE, 1},
-    {SPECIES_ZIGZAGOON_GALAR, 3},
+    {SPECIES_TAROUNTULA, 2},
+    {SPECIES_NYMBLE, 2},
+    {SPECIES_HELIOPTILE, 2},
+    {SPECIES_SMOLIV, 2},
+    {SPECIES_STANTLER, 1},
+    {SPECIES_ZIGZAGOON_GALAR, 4},
 };
 
-static const struct BirchBagWeightedChoice Hoenn1_3_Pool[] = {
+static const struct BirchBagWeightedChoice Fossil_Pool[] = {
+    {SPECIES_OMANYTE,15},
+    {SPECIES_KABUTO,15},
+    {SPECIES_AERODACTYL,5},
+    {SPECIES_LILEEP,20},
+    {SPECIES_ANORITH,20},
+    {SPECIES_CRANIDOS,15},
+    {SPECIES_SHIELDON,15},
+    {SPECIES_TIRTOUGA,12},
+    {SPECIES_ARCHEN,12},
+    {SPECIES_TYRUNT,10},
+    {SPECIES_AMAURA,10},
+    {SPECIES_DRACOZOLT,1},
+    {SPECIES_ARCTOZOLT,1},
+    {SPECIES_DRACOVISH,1},
+    {SPECIES_ARCTOVISH,1},
+};
+
+static const struct BirchBagWeightedChoice Groudon_Pool[] = {
+    {SPECIES_CAMERUPT,5},
+    {SPECIES_MAGCARGO,5},
+    {SPECIES_COALOSSAL,5},
+    {SPECIES_HEATMOR,5},
+    {SPECIES_TORKOAL,5},
+    {SPECIES_TURTONATOR,5},
+    {SPECIES_MAGMORTAR,5},
+    {SPECIES_VOLCARONA,2},
+    {SPECIES_VOLCANION,2},
+};
+
+static const struct BirchBagWeightedChoice Hoenn1_Before_Woods_Pool[] = {
     {SPECIES_SLAKOTH, 15},
     {SPECIES_SKIDDO, 15},
     {SPECIES_SURSKIT, 15},
@@ -115,22 +151,29 @@ static const struct BirchBagWeightedChoice Hoenn1_3_Pool[] = {
     {SPECIES_SCYTHER, 2},
 };
 
-static const struct BirchBagWeightedChoice Hoenn1_4_Pool[] = {
+static const struct BirchBagWeightedChoice Hoenn1_Beach_Flying_Types_Pool[] = {
     {SPECIES_WINGULL, 40},
     {SPECIES_CHATOT, 15},
     {SPECIES_FLETCHLING, 15},
-    {SPECIES_NATU, 10},
+    {SPECIES_NATU, 15},
     {SPECIES_STARLY, 15},
     {SPECIES_TAILLOW, 25},
     {SPECIES_DUCKLETT, 15},
     {SPECIES_ROOKIDEE, 15},
-    {SPECIES_WATTREL, 15},
+    {SPECIES_HOOTHOOT, 15},
+    {SPECIES_WATTREL, 20},
     {SPECIES_SWABLU, 15},
-    {SPECIES_SQUAWKABILLY, 2},
-    {SPECIES_MURKROW, 2},
+    {SPECIES_RUFFLET,10},
+    {SPECIES_VULLABY,10},
+    {SPECIES_GLIGAR, 2},
+    {SPECIES_DODUO, 2},
+    {SPECIES_SQUAWKABILLY, 1},
+    {SPECIES_MURKROW, 1},
+    {SPECIES_FARFETCHD, 1},
+    {SPECIES_FARFETCHD_GALAR, 1},
 };
 
-static const struct BirchBagWeightedChoice Hoenn1_5_Pool[] = {
+static const struct BirchBagWeightedChoice Hoenn1_Inside_Woods_Pool[] = {
     {SPECIES_ODDISH, 20},
     {SPECIES_BELLSPROUT, 10},
     {SPECIES_WURMPLE, 20},
@@ -140,18 +183,25 @@ static const struct BirchBagWeightedChoice Hoenn1_5_Pool[] = {
     {SPECIES_PETILIL, 8},
     {SPECIES_RELLOR, 8},
     {SPECIES_TANGELA, 2},
-    {SPECIES_PANSAGE, 5},
     {SPECIES_AIPOM, 2},
     {SPECIES_TAROUNTULA, 8},
     {SPECIES_NYMBLE, 8},
+    {SPECIES_SHROOMISH, 8},
+    {SPECIES_SEWADDLE, 8},
+    {SPECIES_SPINARAK, 8},
+    {SPECIES_PARAS, 5},
+    {SPECIES_PANSAGE, 5},
+    {SPECIES_PANPOUR, 5},
+    {SPECIES_PANSEAR, 5},
 };
 
-static const struct BirchBagWeightedChoice Hoenn1_6_Pool[] = {
-    {SPECIES_AZURILL, 20},
-    {SPECIES_BUDEW, 20},
+static const struct BirchBagWeightedChoice Hoenn1_After_Woods_Pool[] = {
+    {SPECIES_AZURILL, 30},
+    {SPECIES_BUDEW, 30},
     {SPECIES_FLABEBE, 20},
     {SPECIES_SUNKERN, 20},
     {SPECIES_CHERUBI, 20},
+    {SPECIES_MORELULL, 10},
     {SPECIES_GOSSIFLEUR, 20},
     {SPECIES_SEWADDLE, 20},
     {SPECIES_BURMY_PLANT, 20},
@@ -159,10 +209,16 @@ static const struct BirchBagWeightedChoice Hoenn1_6_Pool[] = {
     {SPECIES_LOTAD, 25},
     {SPECIES_SEEDOT, 25},
     {SPECIES_FOMANTIS, 20},
+    {SPECIES_SNUBBULL, 20},
     {SPECIES_COMFEY, 5},
+    {SPECIES_MIME_JR, 5},
+    {SPECIES_TOGEPI,5},
+    {SPECIES_SKIDDO,10},
+    {SPECIES_DEERLING,10},
+    {SPECIES_MINCCINO,10},
 };
 
-static const struct BirchBagWeightedChoice Hoenn1_7_Pool[] = {
+static const struct BirchBagWeightedChoice Hoenn1_Rustboro_Pool[] = {
     {SPECIES_MEOWTH, 25},
     {SPECIES_GLAMEOW, 25},
     {SPECIES_MEOWTH_ALOLA, 25},
@@ -173,8 +229,17 @@ static const struct BirchBagWeightedChoice Hoenn1_7_Pool[] = {
     {SPECIES_MEOWSTIC, 10},
     {SPECIES_SHINX, 15},
     {SPECIES_LITLEO, 15},
-    {SPECIES_LITTEN, 5},
-    {SPECIES_EEVEE, 5},
+    {SPECIES_LITTEN, 15},
+    {SPECIES_EEVEE, 15},
+};
+
+static const struct BirchBagWeightedChoice Manaphy_Pool[] = {
+    {SPECIES_LAPRAS,2},
+    {SPECIES_FEEBAS,2},
+    {SPECIES_HORSEA,2},
+    {SPECIES_MANTYKE,2},
+    {SPECIES_FINIZEN,2},
+    {SPECIES_RELICANTH,2},
 };
 
 void LoadBirchBagPoolById(void)
@@ -185,26 +250,35 @@ void LoadBirchBagPoolById(void)
     
     switch (poolId)
     {
-    case BIRCH_BAG_POOL_HOENN1_1:
-        SetBirchBagWeightedChoices(Hoenn1_1_Pool, ARRAY_COUNT(Hoenn1_1_Pool));
+    case BIRCH_BAG_POOL_STARTERS:
+        SetBirchBagWeightedChoices(Starters_Pool, ARRAY_COUNT(Starters_Pool));
         break;
-    case BIRCH_BAG_POOL_HOENN1_2:
-        SetBirchBagWeightedChoices(Hoenn1_2_Pool, ARRAY_COUNT(Hoenn1_2_Pool));
+    case BIRCH_BAG_POOL_HOENN1_EARLY_MONS:
+        SetBirchBagWeightedChoices(Hoenn1_Early_Mons_Pool, ARRAY_COUNT(Hoenn1_Early_Mons_Pool));
         break;
-    case BIRCH_BAG_POOL_HOENN1_3:
-        SetBirchBagWeightedChoices(Hoenn1_3_Pool, ARRAY_COUNT(Hoenn1_3_Pool));
+    case BIRCH_BAG_POOL_HOENN1_BEFORE_WOODS:
+        SetBirchBagWeightedChoices(Hoenn1_Before_Woods_Pool, ARRAY_COUNT(Hoenn1_Before_Woods_Pool));
         break;
-    case BIRCH_BAG_POOL_HOENN1_4:
-        SetBirchBagWeightedChoices(Hoenn1_4_Pool, ARRAY_COUNT(Hoenn1_4_Pool));
+    case BIRCH_BAG_POOL_HOENN1_BEACH_FLYING_TYPES:
+        SetBirchBagWeightedChoices(Hoenn1_Beach_Flying_Types_Pool, ARRAY_COUNT(Hoenn1_Beach_Flying_Types_Pool));
         break;
-    case BIRCH_BAG_POOL_HOENN1_5:
-        SetBirchBagWeightedChoices(Hoenn1_5_Pool, ARRAY_COUNT(Hoenn1_5_Pool));
+    case BIRCH_BAG_POOL_HOENN1_INSIDE_WOODS:
+        SetBirchBagWeightedChoices(Hoenn1_Inside_Woods_Pool, ARRAY_COUNT(Hoenn1_Inside_Woods_Pool));
         break;
-    case BIRCH_BAG_POOL_HOENN1_6:
-        SetBirchBagWeightedChoices(Hoenn1_6_Pool, ARRAY_COUNT(Hoenn1_6_Pool));
+    case BIRCH_BAG_POOL_HOENN1_AFTER_WOODS:
+        SetBirchBagWeightedChoices(Hoenn1_After_Woods_Pool, ARRAY_COUNT(Hoenn1_After_Woods_Pool));
         break;
-    case BIRCH_BAG_POOL_HOENN1_7:
-        SetBirchBagWeightedChoices(Hoenn1_7_Pool, ARRAY_COUNT(Hoenn1_7_Pool));
+    case BIRCH_BAG_POOL_HOENN1_RUSTBORO:
+        SetBirchBagWeightedChoices(Hoenn1_Rustboro_Pool, ARRAY_COUNT(Hoenn1_Rustboro_Pool));
+        break;
+    case BIRCH_BAG_POOL_FOSSILS:
+        SetBirchBagWeightedChoices(Fossil_Pool, ARRAY_COUNT(Fossil_Pool));
+        break;
+    case BIRCH_BAG_POOL_MANAPHY:
+        SetBirchBagWeightedChoices(Manaphy_Pool, ARRAY_COUNT(Manaphy_Pool));
+        break;
+    case BIRCH_BAG_POOL_GROUDON:
+        SetBirchBagWeightedChoices(Groudon_Pool, ARRAY_COUNT(Groudon_Pool));
         break;
     }
 }

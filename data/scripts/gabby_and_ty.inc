@@ -9,7 +9,7 @@
 @ Route 111 and Route 118 have 3 object events each (parties 1,4,6 and 2,5,6 respectively)
 @ and Route 120 has 2 object events each (parties 3 and 6).
 GabbyAndTy_EventScript_UpdateLocation::
-	cleartrainerflag TRAINER_MEGA_GLALIE  @ Clear flag for their final party to allow infinite rematches.
+	cleartrainerflag TRAINER_MEGAGLALIE  @ Clear flag for their final party to allow infinite rematches.
 	specialvar VAR_RESULT, GabbyAndTyGetBattleNum
 	switch VAR_RESULT
 	case 0, GabbyAndTy_EventScript_MoveForBattle1
@@ -168,37 +168,37 @@ GabbyAndTy_EventScript_TyBattle3::
 	end
 
 GabbyAndTy_EventScript_GabbyBattle4::
-	trainerbattle_double TRAINER_MEGA_ABSOL, GabbyAndTy_Text_GabbyIntro, GabbyAndTy_Text_GabbyDefeat, GabbyAndTy_Text_GabbyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_MEGAABSOL, GabbyAndTy_Text_GabbyIntro, GabbyAndTy_Text_GabbyDefeat, GabbyAndTy_Text_GabbyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
 	msgbox GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 GabbyAndTy_EventScript_TyBattle4::
-	trainerbattle_double TRAINER_MEGA_ABSOL, GabbyAndTy_Text_TyIntro, GabbyAndTy_Text_TyDefeat, GabbyAndTy_Text_TyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_MEGAABSOL, GabbyAndTy_Text_TyIntro, GabbyAndTy_Text_TyDefeat, GabbyAndTy_Text_TyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
 	msgbox GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 GabbyAndTy_EventScript_GabbyBattle5::
-	trainerbattle_double TRAINER_MEGA_SABLEYE, GabbyAndTy_Text_GabbyIntro, GabbyAndTy_Text_GabbyDefeat, GabbyAndTy_Text_GabbyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_MEGASABLEYE, GabbyAndTy_Text_GabbyIntro, GabbyAndTy_Text_GabbyDefeat, GabbyAndTy_Text_GabbyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
 	msgbox GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 GabbyAndTy_EventScript_TyBattle5::
-	trainerbattle_double TRAINER_MEGA_SABLEYE, GabbyAndTy_Text_TyIntro, GabbyAndTy_Text_TyDefeat, GabbyAndTy_Text_TyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_MEGASABLEYE, GabbyAndTy_Text_TyIntro, GabbyAndTy_Text_TyDefeat, GabbyAndTy_Text_TyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
 	msgbox GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 GabbyAndTy_EventScript_GabbyBattle6::
-	trainerbattle_double TRAINER_MEGA_GLALIE, GabbyAndTy_Text_GabbyIntro, GabbyAndTy_Text_GabbyDefeat, GabbyAndTy_Text_GabbyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_MEGAGLALIE, GabbyAndTy_Text_GabbyIntro, GabbyAndTy_Text_GabbyDefeat, GabbyAndTy_Text_GabbyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
 	msgbox GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 GabbyAndTy_EventScript_TyBattle6::
-	trainerbattle_double TRAINER_MEGA_GLALIE, GabbyAndTy_Text_TyIntro, GabbyAndTy_Text_TyDefeat, GabbyAndTy_Text_TyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_MEGAGLALIE, GabbyAndTy_Text_TyIntro, GabbyAndTy_Text_TyDefeat, GabbyAndTy_Text_TyNotEnoughMons, GabbyAndTy_EventScript_RequestInterview
 	msgbox GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
