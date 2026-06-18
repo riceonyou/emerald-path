@@ -71,7 +71,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Hoenn1_2_EventScript_BirchBag",
+      "script": "Hoenn1_3_EventScript_BirchBag",
       "flag": "FLAG_BIRCHBAG_1_2"
     },
     {

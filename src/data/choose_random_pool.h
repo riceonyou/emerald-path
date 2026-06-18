@@ -32,9 +32,39 @@ enum BirchBagPoolId {
     BIRCH_BAG_POOL_FOSSILS,
     BIRCH_BAG_POOL_MANAPHY,
     BIRCH_BAG_POOL_GROUDON,
+    BIRCH_BAG_POOL_REGISTEEL,
+    BIRCH_BAG_POOL_REGICE,
 };
 
+static const struct BirchBagWeightedChoice Registeel_Pool[] = {
+    {SPECIES_ARON,5},
+    {SPECIES_MAWILE,5},
+    {SPECIES_BRONZOR,5},
+    {SPECIES_SKARMORY,3},
+    {SPECIES_BELDUM,3},
+    {SPECIES_RIOLU,5},
+    {SPECIES_PAWNIARD,5},
+    {SPECIES_HONEDGE,3},
+    {SPECIES_TINKATINK,3},
+    {SPECIES_VAROOM,5},
+    {SPECIES_DURALUDON,2},
+};
 
+static const struct BirchBagWeightedChoice Regice_Pool[] = {
+    {SPECIES_VANILLITE,5},
+    {SPECIES_CUBCHOO,5},
+    {SPECIES_BERGMITE,5},
+    {SPECIES_SNORUNT,5},
+    {SPECIES_SPHEAL,5},
+    {SPECIES_SNEASEL,5},
+    {SPECIES_VULPIX_ALOLA,5},
+    {SPECIES_SANDSHREW_ALOLA,5},
+    {SPECIES_SNOM,5},
+    {SPECIES_CRYOGONAL,3},
+    {SPECIES_LAPRAS,3},
+    {SPECIES_CETODDLE,5},
+    {SPECIES_DELIBIRD,5},
+};
 
 const struct BirchBagWeightedChoice Starters_Pool[] = {
     {SPECIES_BULBASAUR, 2},
@@ -279,6 +309,12 @@ void LoadBirchBagPoolById(void)
         break;
     case BIRCH_BAG_POOL_GROUDON:
         SetBirchBagWeightedChoices(Groudon_Pool, ARRAY_COUNT(Groudon_Pool));
+        break;
+    case BIRCH_BAG_POOL_REGISTEEL:
+        SetBirchBagWeightedChoices(Registeel_Pool, ARRAY_COUNT(Registeel_Pool));
+        break;
+    case BIRCH_BAG_POOL_REGICE:
+        SetBirchBagWeightedChoices(Regice_Pool, ARRAY_COUNT(Regice_Pool));
         break;
     }
 }

@@ -657,7 +657,9 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
     {
     case 0:  // YES
         // Return the starter choice and exit.
-        if (IsSelectionShiny[gTasks[taskId].tStarterSelection]){FlagSet(FLAG_GIVE_SHINY_NEXT_MON);}
+        if (IsSelectionShiny[gTasks[taskId].tStarterSelection]){
+            FlagSet(FLAG_GIVE_SHINY_NEXT_MON);
+        }
         gSpecialVar_Result = gTasks[taskId].tStarterSelection;
         ResetAllPicSprites();
         SetMainCallback2(gMain.savedCallback);
@@ -940,21 +942,23 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
     if (chosenSpecies != SPECIES_NONE)
     {
         u32 personality = GetMonPersonality(chosenSpecies, MON_GENDER_RANDOM, NATURE_RANDOM, RANDOM_UNOWN_LETTER);
-        if (FLAG_GIVE_SHINY_NEXT_MON){
+        if (FlagGet(FLAG_GIVE_SHINY_NEXT_MON)){
             u8 isShiny = TRUE;
-            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP) - 9, personality, OTID_STRUCT_PLAYER_ID);
+            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
             SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 3);
             SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
             CalculateMonStats(&mon);
             GiveMonInitialMoveset(&mon);
             GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
             FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
+
         }else{
             u8 isShiny = FALSE;
-            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP) - 9, personality, OTID_STRUCT_PLAYER_ID);
+            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
+            SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 0);
+            SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
             CalculateMonStats(&mon);
             GiveMonInitialMoveset(&mon);
-            SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
             GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
         }
     }

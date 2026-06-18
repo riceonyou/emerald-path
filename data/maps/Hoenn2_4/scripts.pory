@@ -8,8 +8,8 @@ script Hoenn2_4_Azumarill{
     end
 }
 
-script Hoenn2_4_Dodrio{
-	trainerbattle_single(TRAINER_DODRIO, "test", "test")
+script Hoenn2_4_Doduo{
+	trainerbattle_single(TRAINER_DODUO, "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

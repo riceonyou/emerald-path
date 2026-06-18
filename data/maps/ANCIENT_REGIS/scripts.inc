@@ -68,25 +68,25 @@ ANCIENT_REGIS_EventScript_TalkToRegi_1:
 	case 0, ANCIENT_REGIS_EventScript_TalkToRegi_6
 # 49 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 1, ANCIENT_REGIS_EventScript_TalkToRegi_7
-# 62 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 69 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 2, ANCIENT_REGIS_EventScript_TalkToRegi_8
 ANCIENT_REGIS_EventScript_TalkToRegi_4:
-# 76 "data/maps/ANCIENT_REGIS/scripts.pory"
-	waitmessage
-# 77 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_5
 # 78 "data/maps/ANCIENT_REGIS/scripts.pory"
-	addvar VAR_CURRENT_ACT, 1
+	waitmessage
 # 79 "data/maps/ANCIENT_REGIS/scripts.pory"
-	special UpdateLevelCap
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_2
 # 80 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_6
+	addvar VAR_CURRENT_ACT, 1
+# 81 "data/maps/ANCIENT_REGIS/scripts.pory"
+	special UpdateLevelCap
 # 82 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_3
+# 84 "data/maps/ANCIENT_REGIS/scripts.pory"
 	switch VAR_0x8004
-# 83 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 85 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 0, ANCIENT_REGIS_EventScript_TalkToRegi_11
 ANCIENT_REGIS_EventScript_TalkToRegi_9:
-# 88 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 90 "data/maps/ANCIENT_REGIS/scripts.pory"
 	releaseall
 	return
 
@@ -116,78 +116,44 @@ ANCIENT_REGIS_EventScript_TalkToRegi_6:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_7:
 # 50 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_2, ITEM_TM_ICE_BEAM
+	fadescreen FADE_TO_BLACK
 # 51 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_3, ITEM_TM_FLAMETHROWER
+	setvar VAR_0x8000, 32
 # 52 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_4, ITEM_TM_THUNDERBOLT
+	special LoadBirchBagPoolById
 # 53 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultistack 0, 0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM
+	special ChooseBirchBagPokemonWeighted
 # 54 "data/maps/ANCIENT_REGIS/scripts.pory"
-	switch VAR_RESULT
+	waitstate
 # 55 "data/maps/ANCIENT_REGIS/scripts.pory"
-	case ITEM_TM_ICE_BEAM, ANCIENT_REGIS_EventScript_TalkToRegi_13
-# 57 "data/maps/ANCIENT_REGIS/scripts.pory"
-	case ITEM_TM_FLAMETHROWER, ANCIENT_REGIS_EventScript_TalkToRegi_14
-# 59 "data/maps/ANCIENT_REGIS/scripts.pory"
-	case ITEM_TM_THUNDERBOLT, ANCIENT_REGIS_EventScript_TalkToRegi_15
+	playfanfare MUS_EVOLVED
+# 56 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_8:
-# 63 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_2, ITEM_TM_ICE_BEAM
-# 64 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_3, ITEM_TM_FLAMETHROWER
-# 65 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_4, ITEM_TM_THUNDERBOLT
-# 66 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultistack 0, 0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM
-# 67 "data/maps/ANCIENT_REGIS/scripts.pory"
-	switch VAR_RESULT
-# 68 "data/maps/ANCIENT_REGIS/scripts.pory"
-	case ITEM_TM_ICE_BEAM, ANCIENT_REGIS_EventScript_TalkToRegi_17
 # 70 "data/maps/ANCIENT_REGIS/scripts.pory"
-	case ITEM_TM_FLAMETHROWER, ANCIENT_REGIS_EventScript_TalkToRegi_18
+	fadescreen FADE_TO_BLACK
+# 71 "data/maps/ANCIENT_REGIS/scripts.pory"
+	setvar VAR_0x8000, 31
 # 72 "data/maps/ANCIENT_REGIS/scripts.pory"
-	case ITEM_TM_THUNDERBOLT, ANCIENT_REGIS_EventScript_TalkToRegi_19
+	special LoadBirchBagPoolById
+# 73 "data/maps/ANCIENT_REGIS/scripts.pory"
+	special ChooseBirchBagPokemonWeighted
+# 74 "data/maps/ANCIENT_REGIS/scripts.pory"
+	waitstate
+# 75 "data/maps/ANCIENT_REGIS/scripts.pory"
+	playfanfare MUS_EVOLVED
+# 76 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 ANCIENT_REGIS_EventScript_TalkToRegi_11:
-# 84 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_7
-# 85 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 86 "data/maps/ANCIENT_REGIS/scripts.pory"
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_4
+# 87 "data/maps/ANCIENT_REGIS/scripts.pory"
 	warp MAP_HOENN2_1, 7, 7
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_9
-
-ANCIENT_REGIS_EventScript_TalkToRegi_13:
-# 56 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_ICE_BEAM, 1
-	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
-
-ANCIENT_REGIS_EventScript_TalkToRegi_14:
-# 58 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_FLAMETHROWER, 1
-	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
-
-ANCIENT_REGIS_EventScript_TalkToRegi_15:
-# 60 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_THUNDERBOLT, 1
-	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
-
-ANCIENT_REGIS_EventScript_TalkToRegi_17:
-# 69 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_ICE_BEAM, 1
-	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
-
-ANCIENT_REGIS_EventScript_TalkToRegi_18:
-# 71 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_FLAMETHROWER, 1
-	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
-
-ANCIENT_REGIS_EventScript_TalkToRegi_19:
-# 73 "data/maps/ANCIENT_REGIS/scripts.pory"
-	giveitem ITEM_TM_THUNDERBOLT, 1
-	goto ANCIENT_REGIS_EventScript_TalkToRegi_4
 
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_0:
@@ -199,25 +165,13 @@ ANCIENT_REGIS_EventScript_TalkToRegi_Text_1:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_2:
-# 50 "data/maps/ANCIENT_REGIS/scripts.pory"
-	.string "Ice Beam TM$"
-
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_3:
-# 51 "data/maps/ANCIENT_REGIS/scripts.pory"
-	.string "Flamethrower TM$"
-
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_4:
-# 52 "data/maps/ANCIENT_REGIS/scripts.pory"
-	.string "Thunderbolt TM$"
-
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_5:
-# 77 "data/maps/ANCIENT_REGIS/scripts.pory"
+# 79 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "The level cap has been raised to 30$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_6:
-# 80 "data/maps/ANCIENT_REGIS/scripts.pory"
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_3:
+# 82 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_7:
-# 84 "data/maps/ANCIENT_REGIS/scripts.pory"
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_4:
+# 86 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "About to warp to HOENN2_1$"

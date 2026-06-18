@@ -99,14 +99,14 @@ Double Battle: No
 AI: Basic Trainer
 
 Zigzagoon @ Oran Berry   
-Level: 10  
+Level: 11  
 - Tackle  
 - Quick Attack  
 - Growl
 - Sand Attack
 
 Lillipup  
-Level: 9   
+Level: 10   
 - Tackle  
 - Sand Attack
 
@@ -121,20 +121,20 @@ AI: Basic Trainer
 
 Poochyena @ Oran Berry
 Adamant Nature
-Level: 10   
+Level: 11   
 - Bite  
 - Quick Attack  
 - Sand Attack
 
 Maschiff   
-Level: 9  
+Level: 10  
 - Snarl  
 - Tackle  
 - Bite  
 - Leer
 
 Houndour
-Level: 9
+Level: 10
 - Ember
 - Bite
 - Smog
@@ -153,7 +153,7 @@ AI: Basic Trainer
 
 Wingull @ Wacan Berry
 Level: 11
-- Water Gun
+- Water Pulse
 - Wing Attack
 - Supersonic
 - Growl
@@ -165,7 +165,7 @@ Level: 11
 - Supersonic
 
 Tentacool @ Black Sludge
-Level: 10
+Level: 11
 - Bubble
 - Poison Sting
 - Supersonic
@@ -182,30 +182,31 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer / Powerful Status
 
-Lotad @ Oran Berry
-Nature: Calm
-Ability: Rain Dish
-Level: 10
-- Mega Drain
-- Astonish
-- Rain Dance
-- Icy Wind
-
 Surskit
 Ability: Rain Dish
-Level: 9
+Level: 12
 - Bubble
 - Aqua Jet
 - Bug Bite
 - Rain Dance
 
+Lotad @ Oran Berry
+Nature: Calm
+Ability: Rain Dish
+Level: 12
+- Mega Drain
+- Astonish
+- Rain Dance
+- Icy Wind
+
 Arrokuda
 Nature: Adamant
 Ability: Swift Swim
-Level: 10
+Level: 12
 - Peck
 - Fury Attack
 - Protect
+- Aqua Jet
 
 
 === TRAINER_ODDISH ===
@@ -219,19 +220,19 @@ AI: Basic Trainer
 
 Oddish @ Miracle Seed
 Nature: Calm
-Level: 10
+Level: 11
 - Mega Drain
 - Acid
 - Sleep Powder
 
 Bellsprout @ Oran Berry
-Level: 10
+Level: 11
 - Vine Whip
 - Acid Spray
 
 Roselia @ Big Root
 Nature: Timid
-Level: 10
+Level: 11
 - Mega Drain
 - Sleep Powder
 - Stun Spore
@@ -245,26 +246,26 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Beautifly
-Nature: Adamant
-Level: 10
+Beautifly @ Coba Berry
+Nature: Impish
+Level: 12
 - U-turn
 - Poison Sting
 - Aerial Ace
 
 Silcoon @ Rocky Helmet
 Nature: Bold
-Level: 8
+Level: 14
 - Harden
 
 Cascoon @ Rocky Helmet
 Nature: Careful
-Level: 8
+Level: 14
 - Harden
 
-Dustox
+Dustox @ Oran Berry
 Nature: Modest
-Level: 10
+Level: 12
 - Gust
 - Confusion
 - Toxic
@@ -280,7 +281,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Shroomish @ Toxic Orb
-Level: 11
+Level: 13
 Ability: Poison Heal
 Sassy Nature
 - Leech Seed
@@ -290,7 +291,7 @@ Sassy Nature
 
 Makuhita @ Flame Orb
 Ability: Guts
-Level: 10
+Level: 12
 Jolly Nature
 - Bullet Punch
 - Fake Out
@@ -299,7 +300,7 @@ Jolly Nature
 
 Bergmite
 Ability: Sturdy
-Level: 11
+Level: 12
 - Avalanche
 - Curse
 - Protect
@@ -316,14 +317,14 @@ AI: Basic Trainer / Powerful Status
 
 Surskit @ Oran Berry
 Ability: Rain Dish
-Level: 11
+Level: 12
 - Sticky Web
 - Lunge
 - Psybeam
 
 Zubat
 Ability: Infiltrator
-Level: 10
+Level: 12
 - Leech Life
 - Hypnosis
 - Poison Fang
@@ -331,14 +332,14 @@ Level: 10
 
 Magby
 Ability: Flame Body
-Level: 10
+Level: 11
 - Flame Wheel
 - Smog
 - Mach Punch
 
 Elekid
 Ability: Static
-Level: 10
+Level: 11
 - Volt Switch
 - Brick Break
 - Light Screen
@@ -354,21 +355,22 @@ AI: Basic Trainer / Powerful Status
 
 Seedot @ Heat Rock
 Ability: Chlorophyll
-Level: 11
+Level: 12
 - Sunny Day
 - Astonish
 - Headbutt
+- Synthesis
 
 Slugma
 Ability: Flame Body
-Level: 10
+Level: 12
 - Incinerate
 - Fire Spin
 - Rock Throw
 
 Capsakid
 Ability: Chlorophyll
-Level: 10
+Level: 12
 - Trailblaze
 - Bite
 - Growth
@@ -385,15 +387,15 @@ Double Battle: No
 AI: Basic Trainer
 
 Slakoth @ Oran Berry
-Level: 11
+Level: 13
 - Play Rough
 - Throat Chop
 - Take Down
-- Flail
+- Counter
 
 Spoink @  Starf Berry
 Ability: Gluttony
-Level: 11
+Level: 13
 - Psyshock
 - Power Gem
 - Rest
@@ -408,13 +410,6 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Nincada @ Oran Berry
-Nature: Adamant
-Level: 11
-- Fury Swipes
-- Mud-Slap
-- Bug Bite
-
 Foongus
 Ability: Effect Spore
 Level: 12
@@ -423,9 +418,16 @@ Level: 12
 - Protect
 - Astonish
 
+Nincada @ Oran Berry
+Nature: Adamant
+Level: 12
+- Fury Swipes
+- Mud-Slap
+- Bug Bite
+
 Mareanie @ Loaded Dice
 Ability: Merciless
-Level: 10
+Level: 12
 - Pin Missile
 - Peck
 - Poison Sting
@@ -440,16 +442,16 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Skitty
-Level: 10
+Skitty @ Focus Sash
+Level: 13
 - Metronome
 
-Cleffa
-Level: 10
+Cleffa @ Focus Sash
+Level: 13
 - Metronome
 
-Togepi
-Level: 10
+Togepi @ Focus Sash
+Level: 13
 - Metronome
 
 
@@ -462,9 +464,35 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow @ Silk Scarf
+Nature: Brave
+Level: 13
+- Wing Attack
+- Quick Attack
+- Facade
+
+Cetoddle
+Ability: Thick Fat
+Level: 13
+- Ice Shard
+- Charm
+- Body Slam
+
+Pumpkaboo
+Ability: Insomnia
+Level: 13
+- Shadow Sneak
+- Confuse Ray
+- Bullet Seed
+- Self-Destruct
+
+Buizel @ Wacan Berry
+Ability: Water Veil
+Level: 12
+- Aqua Jet
+- Bite
+- Bulk Up
+- Flip Turn
 
 === TRAINER_WHISMUR ===
 Name: WHISMUR
@@ -476,13 +504,26 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Manectric
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Electrike @ Oran Berry
+Level: 13
+- Spark
+- Quick Attack
+- Roar
 
-Shiftry
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Whismur @ Oran Berry
+Nature: Quiet
+Level: 13
+- Uproar
+- Astonish
+- Roar
+- Swagger
+
+Growlithe
+Level: 13
+- Flame Wheel
+- Leer
+- Roar
+- Dig
 
 === TRAINER_LEADER_NOSEPASS ===
 Name: NOSEPASS
@@ -493,13 +534,55 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Pelipper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nosepass @ Berry Juice
+Nature: Relaxed
+Ability: Sturdy
+Level: 14
+- Stealth Rock
+- Rock Tomb
+- Body Press
+- Harden
 
-Xatu
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ferroseed @ Rocky Helmet
+Ability: Iron Barbs
+Level: 14
+- Spikes
+- Metal Claw
+- Giga Drain
+- Self-Destruct
+
+Wooper
+Ability: Water Absorb
+Level: 14
+- Mud Shot
+- Yawn
+- Muddy Water
+- Tail Whip
+
+Bronzor @ Lum Berry
+Nature: Relaxed
+Ability: Heatproof
+Level: 13
+- Hypnosis
+- Gyro Ball
+- Calm Mind
+- Confusion
+
+Corsola @ Rindo Berry
+Ability: Regenerator
+Level: 14
+- Whirlpool
+- Recover
+- Ancient Power
+- Earth Power
+
+Deino
+Ability: Hustle
+Level: 14
+- Dragon Breath
+- Roar
+- Bite
+- Fire Fang
 
 === TRAINER_PELIPPER ===
 Name: PELIPPER
@@ -510,13 +593,29 @@ Music: Suspicious
 Double Battle: No
 AI: Basic Trainer
 
-Zangoose
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Wacan Berry
+Ability: Drizzle
+Level: 25
+- Weather Ball
+- Tailwind
+- Wing Attack
+- Supersonic
 
-Seviper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Rabsca
+Ability: Synchronize
+Level: 23
+- Weather Ball
+- Extrasensory
+- Bug Bite
+- Recover
+
+Gumshoos
+Ability: Stakeout
+Level: 26
+- Super Fang
+- Double-Edge
+- Yawn
+- Knock Off
 
 === TRAINER_CRAWDAUNT ===
 Name: CRAWDAUNT
@@ -527,9 +626,32 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Crawdaunt @ Berry Juice
+Ability: Hyper Cutter
+Nature: Adamant
+Level: 26
+- Thief
+- Brick Break
+- Razor Shell
+- Taunt
+
+Frogadier
+Ability: Torrent
+Level: 24
+- Night Slash
+- Flip Turn
+- Waterfall
+- Protect
+
+Nuzleaf
+Ability: Early Bird
+Nature: Adamant
+Level: 28
+- Astonish
+- Sucker Punch
+- Fake Out
+- Leaf Blade
+
 
 === TRAINER_SHARPEDO ===
 Name: SHARPEDO
@@ -540,9 +662,39 @@ Music: Swimmer
 Double Battle: No
 AI: Basic Trainer
 
-Gyarados
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sharpedo
+Ability: Rough Skin
+Nature: Jolly
+Level: 24
+- Crunch
+- Ice Fang
+- Poison Fang
+- Psychic Fangs
+
+Luxio
+Ability: Intimidate
+Nature: Adamant
+Level: 27
+- Thunder Fang
+- Fire Fang
+- Bite
+- Thunder Wave
+
+Gabite
+Ability: Rough Skin
+Level: 27
+- Dragon Claw
+- Sand Tomb
+- Bite
+- Rock Slide
+
+Clauncher
+Ability: Mega Launcher
+Nature: Modest
+Level: 28
+- Water Pulse
+- Aura Sphere
+- Sludge Wave
 
 === TRAINER_WAILMER ===
 Name: WAILMER
@@ -553,9 +705,32 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Poochyena
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wailmer @ Sitrus Berry
+Ability: Water Veil
+Nature: Sassy
+Level: 27
+- Waterfall
+- Heavy Slam
+- Body Slam
+- Curse
+
+Munchlax @ Sitrus Berry
+Ability: Thick Fat
+Nature: Careful
+Level: 28
+- Body Slam
+- Covet
+- Curse
+- Zen Headbutt
+
+Numel @ Charcoal
+Ability: Simple
+Nature: Quiet
+Level: 28
+- Magnitude
+- Bulldoze
+- Heat Crash
+- Curse
 
 
 
@@ -568,12 +743,42 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azumarill @ Life Orb  
+Level: 24
+Ability: Huge Power  
+Adamant Nature  
+- Aqua Jet  
+- Covet  
+- Superpower  
+- Bounce
 
-=== TRAINER_DODRIO ===
-Name: DODRIO
+Ribombee @ Silver Powder
+Ability: Shield Dust
+Level: 25
+- Pollen Puff
+- Draining Kiss
+- Stun Spore
+- Struggle Bug
+
+Kadabra
+Ability: Synchronize
+Level: 25
+- Psybeam
+- Charge Beam
+- Reflect
+- Recover
+
+Misdreavus
+Ability: Levitate
+Nature: Timid
+Level: 26
+- Perish Song
+- Hex
+- Future Sight
+- Will-O-Wisp
+
+=== TRAINER_DODUO ===
+Name: DODUO
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -582,16 +787,31 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
 
-Medicham
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Psychic
+Doduo @ Sharp Beak
+Ability: Early Bird
+Nature: Jolly
+Level: 28
+- Double Hit
+- Drill Peck
+- Pursuit
+- Agility
 
-Claydol
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Skill Swap
-- Earthquake
+Klang
+Ability: Clear Body
+Level: 26
+- Charge Beam
+- Gear Grind
+- Thunder Wave
+- Hyper Beam
+
+Minccino @ Chople Berry
+Ability: Skill Link
+Nature: Naughty
+Level: 28
+- Tail Slap
+- Bullet Seed
+- Protect
+- Sing
 
 === TRAINER_LOUDRED ===
 Name: LOUDRED
@@ -602,13 +822,30 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Zubat
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Noibat @ Lum Berry
+Ability: Infiltrator
+Level: 28
+- Dual Wingbeat
+- X-Scissor
+- Tailwind
+- Hyper Voice
 
-Carvanha
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Loudred @ Silk Scarf
+Ability: Soundproof
+Nature: Modest
+Level: 28
+- Hyper Voice
+- Fire Blast
+- Sleep Talk
+- Rest
+
+SPECIES_TOXTRICITY_AMPED 
+Ability: Punk Rock
+Level: 25
+- Overdrive
+- Boomburst
+- Poison Jab
+- Nuzzle
 
 === TRAINER_ELECTRODE ===
 Name: ELECTRODE
@@ -619,13 +856,40 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Roselia
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Electrode @ Focus Band
+Ability: Aftermath
+Nature: Lax
+Level: 27
+- Electro Ball
+- Light Screen
+- Thunder Wave
+- Self-Destruct
 
-Gloom
+Foongus @ Leftovers
+Ability: Regenerator
+Nature: Impish
+Level: 28
+- Spore
+- Toxic
+- Giga Drain
+- Sludge Bomb
+
+Sneasel
+Ability: Inner Focus
+Nature: Adamant
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ice Shard
+- Feint Attack
+- Pursuit
+- Poison Jab
+
+Haunter
+Ability: Levitate
+Level: 26
+- Shadow Ball
+- Curse
+- Hypnosis
+- Destiny Bond
 
 === TRAINER_PLUSLEMINUN ===
 Name: PM
@@ -636,13 +900,50 @@ Music: Magma
 Double Battle: Yes
 AI: Basic Trainer
 
-Numel
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Plusle
+Ability: Plus
+Nature: Modest
+Level: 27
+- Thunderbolt
+- Grass Knot
+- Hidden Power 
+- Encore
+IVs: 31 HP / 30 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Numel
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Minun
+Ability: Minus
+Nature: Timid
+Level: 27
+- Helping Hand
+- Super Fang
+- Sing
+- Charm
+
+Togetic @ Eviolite
+Ability: Serene Grace
+Level: 26
+- Follow Me
+- Air Cutter
+- Yawn
+- Wish
+
+Mienfoo @ Black Belt
+Ability: Regenerator
+Nature: Jolly
+Level: 28
+- Drain Punch
+- Fake Out
+- Knock Off
+- Aerial Ace
+
+Raboot
+Ability: Blaze
+Nature: Jolly
+Level: 27
+- Fire Spin
+- Low Sweep
+- Bounce
+- Temper Flare
 
 === TRAINER_VOLBEATILLUMISE ===
 Name: VI
@@ -653,13 +954,48 @@ Music: Aqua
 Double Battle: Yes
 AI: Basic Trainer
 
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Volbeat @ Light Clay
+Ability: Illuminate
+Nature: Bold
+Level: 27
+- Tail Glow
+- Dazzling Gleam
+- Light Screen
+- Bug Buzz
 
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Illumise @ Sitrus Berry
+Ability: Prankster
+Nature: Calm
+Level: 27
+- Encore
+- Charm
+- Tailwind
+- Bug Buzz
+
+Gloom @ Miracle Seed
+Ability: Chlorophyll
+Nature: Calm
+Level: 28
+- Sludge Bomb
+- Strength Sap
+- Giga Drain
+- Bullet Seed
+
+Shroodle @ Black Sludge
+Ability: Prankster
+Level: 28
+- Parting Shot
+- Knock Off
+- Taunt
+- Poison Jab
+
+Baltoy @ Salac Berry
+Ability: Levitate
+Level: 29
+- Extrasensory
+- Self-Destruct
+- Rock Slide
+- Earthquake
 
 === TRAINER_ROSELIA ===
 Name: ROSELIA
@@ -670,9 +1006,40 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Thwackey
+Ability: Grassy Surge
+Nature: Careful
+Level: 27
+- Knock Off
+- Grassy Glide
+- Double Hit
+- Screech
+
+Roselia @ Big Root
+Ability: Natural Cure
+Nature: Modest
+Level: 26
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Leech Seed
+
+Comfey @ Black Sludge
+Ability: Natural Cure
+Level: 26
+- Draining Kiss
+- Vine Whip
+- Sleep Powder
+- Petal Blizzard
+
+Chimecho @ Focus Sash
+Ability: Levitate
+Nature: Calm
+Level: 28
+- Icy Wind
+- Psychic
+- Charge Beam
+- Reflect
 
 === TRAINER_SWALOT ===
 Name: SWALOT
@@ -683,26 +1050,50 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Poochyena
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MANECTRIC ===
-Name: MANECTRIC
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-Carvanha
+Swalot @ Chesto Berry
+Ability: Liquid Ooze
+Nature: Careful
 Level: 28
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Curse
+- Poison Jab
+- Body Slam
+- Rest
+
+Magcargo
+Ability: Flame Body
+Nature: Bold
+Level: 28
+- Fire Spin
+- Ancient Power
+- Stealth Rock
+- Will-O-Wisp
+
+Gastrodon @ Leftovers
+Ability: Storm Drain
+Nature: Calm
+Level: 28
+- Muddy Water
+- Earth Power
+- Recover
+- Yawn
+
+Duosion @ Twisted Spoon
+Ability: Magic Guard
+Nature: Modest
+Level: 28
+- Future Sight
+- Trick Room
+- Flash Cannon
+- Shadow Ball
+
+Sliggoo @ Sitrus Berry
+Ability: Gooey
+Nature: Modest
+Level: 30
+- Dragon Pulse
+- Acid Spray
+- Thunderbolt
+- Protect
 
 === TRAINER_MAGNETON ===
 Name: MAGNETON
@@ -713,9 +1104,34 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magneton @ Magnet
+Ability: Sturdy
+Nature: Modest
+Level: 30
+- Shock Wave
+- Mirror Shot
+- Thunder Wave
+- Volt Switch
+
+=== TRAINER_MANECTRIC ===
+Name: MANECTRIC
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Pawmo @ Eviolite
+Ability: Iron Fist
+Nature: Jolly
+Level: 26
+- Thunder Punch
+- Mach Punch
+- Fake Out
+- Arm Thrust
+
+
 
 === TRAINER_VIBRAVA ===
 Name: FLYGON

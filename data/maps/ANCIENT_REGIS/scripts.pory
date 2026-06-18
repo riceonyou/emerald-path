@@ -47,31 +47,33 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             msgbox("You received a\n{STR_VAR_1}!")
             
         case 1://Regice
-            dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
-            dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
-            dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
-            dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
-            switch (var(VAR_RESULT)) {
-                case ITEM_TM_ICE_BEAM:
-                    giveitem(ITEM_TM_ICE_BEAM, 1)
-                case ITEM_TM_FLAMETHROWER:
-                    giveitem(ITEM_TM_FLAMETHROWER, 1)
-                case ITEM_TM_THUNDERBOLT:
-                    giveitem(ITEM_TM_THUNDERBOLT, 1)
-            }
+            fadescreen(FADE_TO_BLACK)
+            setvar(VAR_0x8000, 32)
+            special(LoadBirchBagPoolById)
+            special(ChooseBirchBagPokemonWeighted)
+            waitstate
+            playfanfare(MUS_EVOLVED)
+            msgbox("You received a\n{STR_VAR_1}!")
+            // dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
+            // dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
+            // dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
+            // dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+            // switch (var(VAR_RESULT)) {
+            //     case ITEM_TM_ICE_BEAM:
+            //         giveitem(ITEM_TM_ICE_BEAM, 1)
+            //     case ITEM_TM_FLAMETHROWER:
+            //         giveitem(ITEM_TM_FLAMETHROWER, 1)
+            //     case ITEM_TM_THUNDERBOLT:
+            //         giveitem(ITEM_TM_THUNDERBOLT, 1)
+            // }
         case 2://Registeel
-            dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
-            dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
-            dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
-            dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
-            switch (var(VAR_RESULT)) {
-                case ITEM_TM_ICE_BEAM:
-                    giveitem(ITEM_TM_ICE_BEAM, 1)
-                case ITEM_TM_FLAMETHROWER:
-                    giveitem(ITEM_TM_FLAMETHROWER, 1)
-                case ITEM_TM_THUNDERBOLT:
-                    giveitem(ITEM_TM_THUNDERBOLT, 1)
-            }
+            fadescreen(FADE_TO_BLACK)
+            setvar(VAR_0x8000, 31)
+            special(LoadBirchBagPoolById)
+            special(ChooseBirchBagPokemonWeighted)
+            waitstate
+            playfanfare(MUS_EVOLVED)
+            msgbox("You received a\n{STR_VAR_1}!")
     }
     waitmessage
     msgbox("The level cap has been raised to 30")

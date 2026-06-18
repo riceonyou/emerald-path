@@ -17,11 +17,6 @@
       "map": "MAP_HOENN4_2",
       "offset": -8,
       "direction": "left"
-    },
-    {
-      "map": "MAP_HOENN4_4",
-      "offset": -3,
-      "direction": "right"
     }
   ],
   "object_events": [

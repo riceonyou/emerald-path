@@ -21,7 +21,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DODRIO)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DODUO)",
       "x": 7,
       "y": 11,
       "elevation": 0,
@@ -30,7 +30,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "Hoenn2_4_Dodrio",
+      "script": "Hoenn2_4_Doduo",
       "flag": "0"
     },
     {

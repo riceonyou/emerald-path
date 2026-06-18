@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_HOENN1_2",
-      "offset": 4,
-      "direction": "left"
-    },
-    {
       "map": "MAP_HOENN1_4",
       "offset": 0,
       "direction": "down"
