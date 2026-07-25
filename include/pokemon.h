@@ -957,10 +957,6 @@ u32 SwitchInCandidateHeldItemWithEffect(struct BattlePokemon switchinCandidate, 
 
 u32 SpeciesHasInnate(u32 species, enum Ability ability);
 enum Ability GetSpeciesInnate(u32 species, u32 traitNum);
-enum Ability GetMonInnate(struct Pokemon *mon, u32 traitNum);
-enum Ability GetBoxMonInnate(struct BoxPokemon *boxMon, u32 traitNum);
-void SetMonInnate(struct Pokemon *mon, enum Ability ability);
-//void SetBoxMonInnate(struct BoxPokemon *boxMon, enum Ability ability);
 bool32 BoxMonHasInnate(struct BoxPokemon* boxmon, enum Ability ability);
 bool32 MonHasTrait(struct Pokemon* mon, enum Ability ability);
 #endif // GUARD_POKEMON_H

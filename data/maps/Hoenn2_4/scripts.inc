@@ -12,9 +12,9 @@ Hoenn2_4_Azumarill::
 	end
 
 
-Hoenn2_4_Doduo::
+Hoenn2_4_Dodrio::
 # 12 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_single TRAINER_DODUO, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_single TRAINER_DODRIO, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
 # 13 "data/maps/Hoenn2_4/scripts.pory"
 	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
 # 14 "data/maps/Hoenn2_4/scripts.pory"

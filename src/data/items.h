@@ -17826,24 +17826,6 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_BigMushroom,
         .iconPalette = gItemIconPalette_Mushroom,
     },
-
-    [ITEM_IC_INTIMIDATE] =
-    {
-        .name = ITEM_NAME("IC Intimidate"),
-        .price = 1000,
-        .holdEffectParam = 0,
-        .description = COMPOUND_STRING(
-            "Gives a Pokémon the\n"
-            "ability Intimidate."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_FIELD_USE,
-        .heldSlot = 0,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_InnateTutor,
-        .iconPic = gItemIcon_AbilityCapsule,
-        .iconPalette = gItemIconPalette_AbilityCapsule,
-        .secondaryId = ABILITY_INTIMIDATE,
-    },
 };
 
 #undef ITEM_NAME

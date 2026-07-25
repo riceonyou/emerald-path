@@ -24,7 +24,7 @@ Hoenn2_6_Swalot::
 
 Hoenn2_6_Manectric::
 # 19 "data/maps/Hoenn2_6/scripts.pory"
-	trainerbattle_single TRAINER_LEADER_MANECTRIC, Hoenn2_6_Roselia_Text_0, Hoenn2_6_Roselia_Text_0, Hoenn2_6_Manectric_Defeated
+	trainerbattle_single TRAINER_MANECTRIC, Hoenn2_6_Roselia_Text_0, Hoenn2_6_Roselia_Text_0, Hoenn2_6_Manectric_Defeated
 # 20 "data/maps/Hoenn2_6/scripts.pory"
 	msgbox Hoenn2_6_Roselia_Text_0, MSGBOX_AUTOCLOSE
 # 21 "data/maps/Hoenn2_6/scripts.pory"
@@ -63,7 +63,7 @@ Hoenn2_6_AbraTeleport::
 	switch VAR_RESULT
 # 48 "data/maps/Hoenn2_6/scripts.pory"
 	case YES, Hoenn2_6_AbraTeleport_5
-# 51 "data/maps/Hoenn2_6/scripts.pory"
+# 56 "data/maps/Hoenn2_6/scripts.pory"
 	case NO, Hoenn2_6_AbraTeleport_6
 	return
 
@@ -78,14 +78,23 @@ Hoenn2_6_AbraTeleport_5:
 # 49 "data/maps/Hoenn2_6/scripts.pory"
 	msgbox Hoenn2_6_AbraTeleport_Text_2
 # 50 "data/maps/Hoenn2_6/scripts.pory"
-	special WarpToNextAncient
+	random 1
+# 51 "data/maps/Hoenn2_6/scripts.pory"
+	switch VAR_RESULT
+# 52 "data/maps/Hoenn2_6/scripts.pory"
+	case 0, Hoenn2_6_AbraTeleport_8
 	return
 
 Hoenn2_6_AbraTeleport_6:
-# 52 "data/maps/Hoenn2_6/scripts.pory"
+# 57 "data/maps/Hoenn2_6/scripts.pory"
 	msgbox Hoenn2_6_AbraTeleport_Text_3
-# 53 "data/maps/Hoenn2_6/scripts.pory"
+# 58 "data/maps/Hoenn2_6/scripts.pory"
 	releaseall
+	return
+
+Hoenn2_6_AbraTeleport_8:
+# 53 "data/maps/Hoenn2_6/scripts.pory"
+	warp MAP_ANCIENT_MANAPHY, 8, 11
 	return
 
 
@@ -110,5 +119,5 @@ Hoenn2_6_AbraTeleport_Text_2:
 	.string "Alright then! Here we go!$"
 
 Hoenn2_6_AbraTeleport_Text_3:
-# 52 "data/maps/Hoenn2_6/scripts.pory"
+# 57 "data/maps/Hoenn2_6/scripts.pory"
 	.string "Okay! Let me know when you're ready.$"

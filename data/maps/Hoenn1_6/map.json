@@ -30,7 +30,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHROOMISH)",
-      "x": 18,
+      "x": 9,
       "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -43,10 +43,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SURSKIT)",
-      "x": 13,
-      "y": 7,
+      "x": 12,
+      "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -121,19 +121,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Hoenn1_1_Itemball_5",
       "flag": "FLAG_ITEM_1_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
-      "x": 9,
-      "y": 3,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Hoenn1_6_EventScript_Rival",
-      "flag": "0"
     }
   ],
   "warp_events": [

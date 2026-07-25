@@ -53,7 +53,7 @@ EventScript_AbraTeleport1::
 	switch VAR_RESULT
 # 45 "data/maps/Hoenn1_8/scripts.pory"
 	case YES, EventScript_AbraTeleport1_5
-# 48 "data/maps/Hoenn1_8/scripts.pory"
+# 53 "data/maps/Hoenn1_8/scripts.pory"
 	case NO, EventScript_AbraTeleport1_6
 	return
 
@@ -68,14 +68,23 @@ EventScript_AbraTeleport1_5:
 # 46 "data/maps/Hoenn1_8/scripts.pory"
 	msgbox EventScript_AbraTeleport1_Text_2
 # 47 "data/maps/Hoenn1_8/scripts.pory"
-	special WarpToNextAncient
+	random 1
+# 48 "data/maps/Hoenn1_8/scripts.pory"
+	switch VAR_RESULT
+# 49 "data/maps/Hoenn1_8/scripts.pory"
+	case 0, EventScript_AbraTeleport1_8
 	return
 
 EventScript_AbraTeleport1_6:
-# 49 "data/maps/Hoenn1_8/scripts.pory"
+# 54 "data/maps/Hoenn1_8/scripts.pory"
 	msgbox EventScript_AbraTeleport1_Text_3
-# 50 "data/maps/Hoenn1_8/scripts.pory"
+# 55 "data/maps/Hoenn1_8/scripts.pory"
 	releaseall
+	return
+
+EventScript_AbraTeleport1_8:
+# 50 "data/maps/Hoenn1_8/scripts.pory"
+	warp MAP_ANCIENT_REGIS, 8, 12
 	return
 
 
@@ -96,5 +105,5 @@ EventScript_AbraTeleport1_Text_2:
 	.string "Alright then! Here we go!$"
 
 EventScript_AbraTeleport1_Text_3:
-# 49 "data/maps/Hoenn1_8/scripts.pory"
+# 54 "data/maps/Hoenn1_8/scripts.pory"
 	.string "Okay! Let me know when you're ready.$"

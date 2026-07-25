@@ -9,6 +9,16 @@ script ANCIENT_MANAPHY_ONWARP {
 script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
     lockall
 
+    //DECIDE AND ANNOUNCE WHICH STAGE TO GO NEXT
+    random(1)
+    copyvar(VAR_0x8004, VAR_RESULT)
+    switch (var(VAR_0x8004)) {
+        case 0:
+            msgbox("Heyo!\lThe next act will be\nthe PETALBURG path!")
+            waitmessage
+    }
+    
+
     //GIVE ANCIENT REWARD
     msgbox("Take a water pokemon with you!")
     waitmessage
@@ -26,6 +36,11 @@ script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
     special(UpdateLevelCap)
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE
-    special(WarpToNextAct)
+    switch (var(VAR_0x8004)) {
+        case 0:
+            msgbox("About to warp to HOENN3_1")
+            warp(MAP_HOENN3_1, 3, 7)
+        default:
+    }
     releaseall
 }

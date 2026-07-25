@@ -57,10 +57,10 @@ LavaridgeTown_Gym_SetGymTrainers::
 	return
 
 PetalburgCity_Gym_SetGymTrainers::
-	settrainerflag TRAINER_COMBUSKEN
-	settrainerflag TRAINER_BLAZIKEN
-	settrainerflag TRAINER_MBLAZIKEN
-	settrainerflag TRAINER_DODUO
+	settrainerflag TRAINER_RANDALL
+	settrainerflag TRAINER_PARKER
+	settrainerflag TRAINER_GEORGE
+	settrainerflag TRAINER_BERKE
 	settrainerflag TRAINER_MARY
 	settrainerflag TRAINER_ALEXIA
 	settrainerflag TRAINER_JODY

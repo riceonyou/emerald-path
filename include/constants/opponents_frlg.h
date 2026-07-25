@@ -296,13 +296,13 @@
 #define TRAINER_TEAM_ROCKET_GRUNT_40               290
 #define TRAINER_TEAM_ROCKET_GRUNT_41               291
 #define TRAINER_COOLTRAINER_SAMUEL                 292
-#define TRAINER_COOLTRAINER_MBLAZIKEN                 293
+#define TRAINER_COOLTRAINER_GEORGE                 293
 #define TRAINER_COOLTRAINER_COLBY                  294
 #define TRAINER_COOLTRAINER_PAUL                   295
 #define TRAINER_COOLTRAINER_ROLANDO                296
 #define TRAINER_COOLTRAINER_GILBERT                297
 #define TRAINER_COOLTRAINER_OWEN                   298
-#define TRAINER_COOLTRAINER_DODUO                  299
+#define TRAINER_COOLTRAINER_BERKE                  299
 #define TRAINER_COOLTRAINER_YUJI                   300
 #define TRAINER_COOLTRAINER_WARREN                 301
 #define TRAINER_COOLTRAINER_MARY                   302

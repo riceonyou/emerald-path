@@ -26,20 +26,6 @@ TEST("Nature independent from Hidden Nature")
     EXPECT_EQ(GetMonData(&mon, MON_DATA_HIDDEN_NATURE), hiddenNature);
 }
 
-TEST("mon-specific innates are stored per Pokémon without affecting others of the same species")
-{
-    struct Pokemon mon1, mon2;
-    enum Ability innate = ABILITY_STORM_DRAIN;
-
-    CreateMon(&mon1, SPECIES_PIDGEY, 5, 0, OTID_STRUCT_PRESET(0));
-    CreateMon(&mon2, SPECIES_PIDGEY, 5, 0, OTID_STRUCT_PRESET(0));
-
-    SetMonData(&mon1, MON_DATA_INNATE1, &innate);
-
-    EXPECT(MonHasTrait(&mon1, innate));
-    EXPECT(!MonHasTrait(&mon2, innate));
-}
-
 TEST("Terastallization type defaults to primary or secondary type")
 {
     u32 i;

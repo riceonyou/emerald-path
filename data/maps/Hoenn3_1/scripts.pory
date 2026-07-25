@@ -2,7 +2,7 @@ mapscripts Hoenn3_1_MapScripts {
 }
 
 script Hoenn3_1_Vibrava{
-	trainerbattle_single(TRAINER_FLYGON, "test", "test")
+	trainerbattle_single(TRAINER_VIBRAVA, "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

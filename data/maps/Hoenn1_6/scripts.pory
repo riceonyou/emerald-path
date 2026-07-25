@@ -1,22 +1,6 @@
 mapscripts Hoenn1_6_MapScripts {
 }
 
-script Hoenn1_6_EventScript_Rival{
-
-    switch (var(VAR_CURRENT_RIVAL)){
-        case 0:
-            trainerbattle_single(TRAINER_TREECKO, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
-            waitmessage
-            end
-        case 1:
-            trainerbattle_single(TRAINER_TORCHIC, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
-            waitmessage
-            end
-    }
-}
-
 script Hoenn1_6_EventScript_Shroomish{
  
 	trainerbattle_single(TRAINER_SHROOMISH, "test.", "test.")

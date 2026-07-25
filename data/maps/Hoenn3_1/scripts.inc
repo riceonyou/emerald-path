@@ -4,7 +4,7 @@ Hoenn3_1_MapScripts::
 
 Hoenn3_1_Vibrava::
 # 5 "data/maps/Hoenn3_1/scripts.pory"
-	trainerbattle_single TRAINER_FLYGON, Hoenn3_1_Vibrava_Text_0, Hoenn3_1_Vibrava_Text_0
+	trainerbattle_single TRAINER_VIBRAVA, Hoenn3_1_Vibrava_Text_0, Hoenn3_1_Vibrava_Text_0
 # 6 "data/maps/Hoenn3_1/scripts.pory"
 	msgbox Hoenn3_1_Vibrava_Text_0, MSGBOX_AUTOCLOSE
 # 7 "data/maps/Hoenn3_1/scripts.pory"

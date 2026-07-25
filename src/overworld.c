@@ -440,105 +440,6 @@ static void (*const sMovementStatusHandler[])(struct LinkPlayerObjectEvent *, st
 
 // Actual Game useful macros for the game loop to put in specials
 
-void DetermineRival(void)
-{
-    u8 rand = Random() % 2;
-    VarSet(VAR_CURRENT_RIVAL, rand);
-    //Set sprite of rival objects
-    switch(VarGet(VAR_CURRENT_RIVAL)){
-        case(0):
-            VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(TREECKO));
-            VarSet(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_SPECIES(GROVYLE));
-            VarSet(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_SPECIES(SCEPTILE));
-            VarSet(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_SPECIES(SCEPTILE_MEGA));
-        case(1):
-            VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(TORCHIC));
-            VarSet(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_SPECIES(COMBUSKEN));
-            VarSet(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_SPECIES(BLAZIKEN));
-            VarSet(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_SPECIES(BLAZIKEN_MEGA));
-    }
-}
-
-void WarpToNextAncient(void)
-{
-    u8 currentact = VarGet(VarGet(VAR_CURRENT_ACT));
-
-    switch (currentact){
-        case (1):
-                u8 rand1 = Random() % 1;
-				switch (rand1) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_REGIS), MAP_NUM(MAP_ANCIENT_REGIS), WARP_ID_NONE, 8, 12);
-						DoWarp();
-				}; 
-                break;
-        case (2):
-                u8 rand2 = Random() % 1;
-				switch (rand2) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_MANAPHY), MAP_NUM(MAP_ANCIENT_MANAPHY), WARP_ID_NONE, 8, 11);
-						DoWarp();
-				}; 
-                break;
-        case (3):
-                u8 rand3 = Random() % 2;
-				switch (rand3) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_KYOGRE), MAP_NUM(MAP_ANCIENT_KYOGRE), WARP_ID_NONE, 8, 11);
-						DoWarp();
-                    case 1:
-                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_GROUDON), MAP_NUM(MAP_ANCIENT_GROUDON), WARP_ID_NONE, 8, 11);
-						DoWarp();
-				}; 
-                break;
-    }
-}
-
-void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
-{
-    
-    u8 currentact = VarGet(VAR_CURRENT_ACT);
-
-    VarSet(VAR_CURRENT_ACT, currentact + 1);
-    UpdateLevelCap();
-
-    switch (currentact){
-        case (0):
-                u8 rand0 = Random() % 1; //CHANGE THIS NUMBER ASS YOU ADD MORE ACTS
-                DetermineRival();//Only for act 0.
-				switch (rand0) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN1_1), MAP_NUM(MAP_HOENN1_1), WARP_ID_NONE, 3, 10);
-						DoWarp();
-				}; 
-                break;
-        case (1):
-                u8 rand1 = Random() % 1;
-				switch (rand1) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN2_1), MAP_NUM(MAP_HOENN2_1), WARP_ID_NONE, 7, 7);
-						DoWarp();
-				}; 
-                break;
-        case (2):
-                u8 rand2 = Random() % 1;
-				switch (rand2) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN3_1), MAP_NUM(MAP_HOENN3_1), WARP_ID_NONE, 3, 7);
-						DoWarp();
-				}; 
-                break;
-        case (3):
-                u8 rand3 = Random() % 1;
-				switch (rand3) {
-					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_ELITE4_HOENN_OUTSIDE), MAP_NUM(MAP_ELITE4_HOENN_OUTSIDE), WARP_ID_NONE, 13, 24);
-						DoWarp();
-				}; 
-                break;
-    }
-}
-
 void GiveSavedStarter(void)
 {
     u16 species = VarGet(VAR_STARTER_MON);
@@ -551,7 +452,6 @@ void UpdateLevelCap(void)
 {
     u8 currentact = VarGet(VarGet(VAR_CURRENT_ACT));
     switch (currentact){
-        case (0): VarSet(VAR_LEVEL_CAP, 14); break;
         case (1): VarSet(VAR_LEVEL_CAP, 14); break;
         case (2): VarSet(VAR_LEVEL_CAP, 30); break;
         case (3): VarSet(VAR_LEVEL_CAP, 42); break;

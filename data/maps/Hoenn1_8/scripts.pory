@@ -44,7 +44,12 @@ script EventScript_AbraTeleport1{
 		switch (var(VAR_RESULT)) {
 			case YES:
 				msgbox("Alright then! Here we go!")
-				special(WarpToNextAncient)
+				random(1)
+				switch (var(VAR_RESULT)) {
+					case 0:
+						warp(MAP_ANCIENT_REGIS, 8, 12)
+						
+				}
 			case NO:
 				msgbox("Okay! Let me know when you're ready.")
 				releaseall

@@ -16,7 +16,7 @@ script Hoenn2_6_Swalot{
 }
 
 script Hoenn2_6_Manectric{
-	trainerbattle_single(TRAINER_LEADER_MANECTRIC, "test", "test", Hoenn2_6_Manectric_Defeated)
+	trainerbattle_single(TRAINER_MANECTRIC, "test", "test", Hoenn2_6_Manectric_Defeated)
 	msgbox("test", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -47,7 +47,12 @@ script Hoenn2_6_AbraTeleport{
 		switch (var(VAR_RESULT)) {
 			case YES:
 				msgbox("Alright then! Here we go!")
-				special(WarpToNextAncient)
+				random(1)
+				switch (var(VAR_RESULT)) {
+					case 0:
+						warp(MAP_ANCIENT_MANAPHY, 8, 11)
+						
+				}
 			case NO:
 				msgbox("Okay! Let me know when you're ready.")
 				releaseall

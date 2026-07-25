@@ -3907,7 +3907,7 @@ void PokemonToBattleMon(struct Pokemon *src, struct BattlePokemon *dst)
 
     for (i = 0; i < MAX_MON_INNATES; i++)
     {
-        dst->innates[i] = GetMonInnate(src, i + 1);
+        dst->innates[i] = GetSpeciesInnate(dst->species, i + 1);
     }
 
     memset(&dst->volatiles, 0, sizeof(struct Volatiles));
@@ -7530,95 +7530,18 @@ u32 SpeciesHasInnate(u32 species, enum Ability ability) {
         return innateNum;
 }
 
-enum Ability GetMonInnate(struct Pokemon *mon, u32 traitNum)
+bool32 BoxMonHasInnate(struct BoxPokemon *boxmon,  enum Ability ability)
 {
-    enum Ability innate = ABILITY_NONE;
+    u32 species = GetBoxMonData(boxmon, MON_DATA_SPECIES, NULL);
 
-    if (MAX_MON_INNATES > 0)
-        innate = GetMonData(mon, MON_DATA_INNATE1 + (traitNum - 1));
-
-    if (innate != ABILITY_NONE)
-        return innate;
-
-    return GetSpeciesInnate(GetMonData(mon, MON_DATA_SPECIES, NULL), traitNum);
+    return SpeciesHasInnate(species, ability);
 }
 
-enum Ability GetBoxMonInnate(struct BoxPokemon *boxMon, u32 traitNum)
+bool32 MonHasTrait(struct Pokemon *mon,  enum Ability ability)
 {
-    enum Ability innate = ABILITY_NONE;
+    u32 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
 
-    if (MAX_MON_INNATES > 0)
-        innate = GetBoxMonData(boxMon, MON_DATA_INNATE1 + (traitNum - 1), NULL);
-
-    if (innate != ABILITY_NONE)
-        return innate;
-
-    return GetSpeciesInnate(GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL), traitNum);
-}
-
-void SetMonInnate(struct Pokemon *mon, enum Ability ability)
-{
-    //if (GetMonAbility(mon) == ability)
-        //return FALSE;
-
-    for (u32 i = 0; i < MAX_MON_INNATES; i++)
-    {
-        enum Ability currentInnate = GetMonData(mon, MON_DATA_INNATE1 + i);
-        if (currentInnate == ability)
-            //return FALSE;
-        if (currentInnate == ABILITY_NONE)
-        {
-            SetMonData(mon, MON_DATA_INNATE1 + i, &ability);
-            //return TRUE;
-        }
-    }
-
-    //return FALSE;
-}
-
-// void SetBoxMonInnate(struct BoxPokemon *boxMon, enum Ability ability)
-// {
-//     if (GetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, NULL) == ability)
-//         return FALSE;
-
-//     for (u32 i = 0; i < MAX_MON_INNATES; i++)
-//     {
-//         enum Ability currentInnate = GetBoxMonData(boxMon, MON_DATA_INNATE1 + i, NULL);
-//         if (currentInnate == ability)
-//             //return FALSE;
-//         if (currentInnate == ABILITY_NONE)
-//         {
-//             SetBoxMonData(boxMon, MON_DATA_INNATE1 + i, &ability);
-//             //return TRUE;
-//         }
-//     }
-
-//     //return FALSE;
-// }
-
-bool32 BoxMonHasInnate(struct BoxPokemon *boxmon, enum Ability ability)
-{
-    for (u32 i = 0; i < MAX_MON_INNATES; i++)
-    {
-        if (GetBoxMonInnate(boxmon, i + 1) == ability)
-            return TRUE;
-    }
-
-    return FALSE;
-}
-
-bool32 MonHasTrait(struct Pokemon *mon, enum Ability ability)
-{
-    if (GetMonAbility(mon) == ability)
-        return TRUE;
-
-    for (u32 i = 0; i < MAX_MON_INNATES; i++)
-    {
-        if (GetMonInnate(mon, i + 1) == ability)
-            return TRUE;
-    }
-
-    return FALSE;
+    return (GetMonAbility(mon) == ability || SpeciesHasInnate(species, ability));
 } 
 
 enum Ability GetSpeciesInnate(u32 species, u32 traitNum)

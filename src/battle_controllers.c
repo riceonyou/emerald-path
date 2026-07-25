@@ -1497,7 +1497,7 @@ static u32 GetBattlerMonData(enum BattlerId battler, struct Pokemon *party, u32 
                  gBattleMons[battler].innates[i] = TestRunner_Battle_GetForcedInnates(array, monId, i);
              }
              #else
-                 battleMon.innates[i] = GetMonInnate(&party[monId], i + 1);
+                 battleMon.innates[i] = GetSpeciesInnate(battleMon.species, i + 1);
              #endif
          }
 
