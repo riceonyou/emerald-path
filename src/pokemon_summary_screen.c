@@ -3989,7 +3989,7 @@ static void PrintEggMemo(void)
         if (innateIndex == 0)
             trait = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
         else if (innateIndex <= MAX_MON_INNATES)
-            trait = gSpeciesInfo[sum->species].innates[innateIndex-1];
+            trait = sum->innates[innateIndex - 1];
             
         int x = GetStringRightAlignXOffset(FONT_NORMAL, gAbilitiesInfo[trait].name, 18*8);
 

@@ -646,3 +646,5 @@ gSpecials::
 	def_special ZeroPlayerPartyMons
 	def_special UpdateLevelCap
 	def_special ResetPokemonAndItems
+	def_special WarpToNextAncient
+	def_special WarpToNextAct

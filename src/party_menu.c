@@ -5229,11 +5229,128 @@ void ItemUseCB_AbilityPatch(u8 taskId, TaskFunc task)
     gTasks[taskId].func = Task_AbilityPatch;
 }
 
+#undef tAbilityNum
+#define tInnateToTeach data[2]
+
+void Task_InnateTutor(u8 taskId)
+{
+    static const u8 sText_askText[] = _("Would you like to give the ability\n{STR_VAR_2} to {STR_VAR_1}?");
+    static const u8 sText_doneText[] = _("{STR_VAR_1} gained the\nability {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    s16 *data = gTasks[taskId].data;
+
+    u32 i;
+
+    switch (tState)
+    {
+    case 0:
+        if (tInnateToTeach == ABILITY_NONE || !tSpecies)
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_WontHaveEffect, 1);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+            return;
+        }
+
+        if (MonHasTrait(&gPlayerParty[tMonId], tInnateToTeach))
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_WontHaveEffect, 1);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+            return;
+        }
+
+        for (i = 0; i < MAX_MON_INNATES; i++)
+        {
+            if (GetMonInnate(&gPlayerParty[tMonId], i + 1) != ABILITY_NONE)
+                continue;
+            break;
+        }
+
+        if (i >= MAX_MON_INNATES)
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_WontHaveEffect, 1);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+            return;
+        }
+
+        gPartyMenuUseExitCallback = TRUE;
+        GetMonNickname(&gPlayerParty[tMonId], gStringVar1);
+        StringCopy(gStringVar2, gAbilitiesInfo[tInnateToTeach].name);
+        StringExpandPlaceholders(gStringVar4, sText_askText);
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 1:
+        if (!IsPartyMenuTextPrinterActive())
+        {
+            PartyMenuDisplayYesNoMenu();
+            tState++;
+        }
+        break;
+    case 2:
+        switch (Menu_ProcessInputNoWrapClearOnChoose())
+        {
+        case 0:
+            tState++;
+            break;
+        case 1:
+        case MENU_B_PRESSED:
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            ScheduleBgCopyTilemapToVram(2);
+            ClearStdWindowAndFrameToTransparent(6, 0);
+            ClearWindowTilemap(6);
+            DisplayPartyMenuStdMessage(5);
+            gTasks[taskId].func = (void *)GetWordTaskArg(taskId, tOldFunc);
+            return;
+        }
+        break;
+    case 3:
+        PlaySE(SE_USE_ITEM);
+        StringExpandPlaceholders(gStringVar4, sText_doneText);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 4:
+        if (!IsPartyMenuTextPrinterActive())
+            tState++;
+        break;
+    case 5:
+        SetMonInnate(&gPlayerParty[tMonId], tInnateToTeach);
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+        gTasks[taskId].func = Task_ClosePartyMenu;
+        break;
+    }
+}
+
+void ItemUseCB_InnateTutor(u8 taskId, TaskFunc task)
+{
+    s16 *data = gTasks[taskId].data;
+
+    tState = 0;
+    tMonId = gPartyMenu.slotId;
+    tSpecies = GetMonData(&gPlayerParty[tMonId], MON_DATA_SPECIES);
+    tInnateToTeach = GetItemSecondaryId(gSpecialVar_ItemId);
+    SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
+    gTasks[taskId].func = Task_InnateTutor;
+}
+
 #undef tState
 #undef tSpecies
 #undef tAbilityNum
 #undef tMonId
 #undef tOldFunc
+#undef tInnateToTeach
 
 #define tState      data[0]
 #define tMonId      data[1]
@@ -5968,7 +6085,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         }
         else
         {
-            gPartyMenuUseExitCallback = FALSE;
+            gPartyMenuUseExitCallback = TRUE; //Try TRUE to stop exiting party menu when using on level cap mon.
             DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
             ScheduleBgCopyTilemapToVram(2);
             gTasks[taskId].func = task;

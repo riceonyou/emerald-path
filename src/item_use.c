@@ -874,6 +874,12 @@ void ItemUseOutOfBattle_AbilityPatch(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
+void ItemUseOutOfBattle_InnateTutor(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_InnateTutor;
+    SetUpItemUseCallback(taskId);
+}
+
 void ItemUseOutOfBattle_Mint(u8 taskId)
 {
     gItemUseCB = ItemUseCB_Mint;
