@@ -72,21 +72,7 @@ Comments can be added as C comment blocks
 
 /*Comments can also be on a single line*/
 
-=== TRAINER_TREECKO ===
-Name: Treecko
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
 
-Treecko @ Oran Berry  
-Level: 10  
-Adamant Nature
-- Leafage
-- Pound
-- Leer
 
 
 === TRAINER_ZIGZAGOON ===
@@ -98,15 +84,15 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Zigzagoon @ Oran Berry   
-Level: 11  
+Zigzagoon 
+Level: 12  
 - Tackle  
 - Quick Attack  
 - Growl
 - Sand Attack
 
 Lillipup  
-Level: 10   
+Level: 12  
 - Tackle  
 - Sand Attack
 
@@ -732,7 +718,14 @@ Level: 28
 - Heat Crash
 - Curse
 
-
+Eelektrik
+Ability: Levitate
+Nature: Modest
+Level: 27
+- Thunderbolt
+- Volt Switch
+- Acid Spray
+- Thunder Wave
 
 === TRAINER_AZUMARILL ===
 Name: AZUMARILL
@@ -839,7 +832,7 @@ Level: 28
 - Sleep Talk
 - Rest
 
-SPECIES_TOXTRICITY_AMPED 
+SPECIES_TOXTRICITY_AMPED @ Sitrus Berry
 Ability: Punk Rock
 Level: 25
 - Overdrive
@@ -908,7 +901,7 @@ Level: 27
 - Grass Knot
 - Hidden Power 
 - Encore
-IVs: 31 HP / 30 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
 
 Minun
 Ability: Minus
@@ -1009,7 +1002,7 @@ AI: Basic Trainer
 Thwackey
 Ability: Grassy Surge
 Nature: Careful
-Level: 27
+Level: 29
 - Knock Off
 - Grassy Glide
 - Double Hit
@@ -1018,7 +1011,7 @@ Level: 27
 Roselia @ Big Root
 Ability: Natural Cure
 Nature: Modest
-Level: 26
+Level: 28
 - Giga Drain
 - Sludge Bomb
 - Sleep Powder
@@ -1026,7 +1019,7 @@ Level: 26
 
 Comfey @ Black Sludge
 Ability: Natural Cure
-Level: 26
+Level: 28
 - Draining Kiss
 - Vine Whip
 - Sleep Powder
@@ -1062,7 +1055,7 @@ Level: 28
 Magcargo
 Ability: Flame Body
 Nature: Bold
-Level: 28
+Level: 29
 - Fire Spin
 - Ancient Power
 - Stealth Rock
@@ -1080,7 +1073,7 @@ Level: 28
 Duosion @ Twisted Spoon
 Ability: Magic Guard
 Nature: Modest
-Level: 28
+Level: 29
 - Future Sight
 - Trick Room
 - Flash Cannon
@@ -1104,16 +1097,43 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Magneton @ Magnet
+Magneton @ Chople Berry
 Ability: Sturdy
 Nature: Modest
-Level: 30
+Level: 29
 - Shock Wave
 - Mirror Shot
 - Thunder Wave
 - Volt Switch
 
-=== TRAINER_MANECTRIC ===
+Metang @ Occa Berry
+Ability: Clear Body
+Nature: Adamant
+Level: 29
+- Zen Headbutt
+- Bullet Punch
+- Metal Claw
+- Agility
+
+Beheeyem @ Lum Berry
+Ability: Analytic
+Nature: Bold
+Level: 28
+- Psybeam
+- Charge Beam
+- Shadow Ball
+- Accelerock
+
+SPECIES_ROTOM_WASH @ Lum Berry
+Ability: Levitate
+Nature: Modest
+Level: 28
+- Surf
+- Shock Wave
+- Will-O-Wisp
+- Volt Switch
+
+=== TRAINER_LEADER_MANECTRIC ===
 Name: MANECTRIC
 Class: Pkmn Trainer 1
 Pic: Substitute
@@ -1122,18 +1142,58 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
+Manectric @ Air Balloon
+Ability: Electric Surge
+Level: 30
+- Thunderbolt
+- Thunder Fang
+- Flamethrower
+- Ice Fang
+
 Pawmo @ Eviolite
 Ability: Iron Fist
 Nature: Jolly
-Level: 26
+Level: 29
 - Thunder Punch
 - Mach Punch
 - Fake Out
 - Arm Thrust
 
+Porygon2 @ Sitrus Berry
+Ability: Download
+Level: 28
+- Tri Attack
+- Charge Beam
+- Confuse Ray
+- Thunder Wave
 
+Vaporeon @ Leftovers
+Ability: Water Absorb
+Nature: Bold
+Level: 28
+- Scald
+- Toxic
+- Wish
+- Protect
 
-=== TRAINER_VIBRAVA ===
+Lycanroc
+Ability: Keen Eye
+Nature: Adamant
+Level: 29
+- Rock Slide
+- Crunch
+- Accelerock
+- Howl
+
+Centiskorch @ Lansat Berry
+Ability: Flash Fire
+Level: 28
+- Flame Wheel
+- Bug Bite
+- Crunch
+- Coil
+
+=== TRAINER_FLYGON ===
 Name: FLYGON
 Class: Pkmn Trainer 1
 Pic: Substitute
@@ -1142,9 +1202,30 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Flygon @ Choice Scarf
+Ability: Levitate
+Nature: Jolly
+Level: 40
+- Earthquake
+- Outrage
+- U-turn
+- Stone Edge
+
+Flamigo
+Ability: Scrappy
+Level: 38
+- Swords Dance
+- Close Combat
+- Acrobatics
+- Roost
+
+Tsareena
+Ability: Queenly Majesty
+Level: 38
+- Power Whip
+- Knock Off
+- Rapid Spin
+- Triple Axel
 
 === TRAINER_CACTURNE ===
 Name: CACTURNE
@@ -1155,13 +1236,41 @@ Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Makuhita
-Level: 30
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Cacturne @ Rocky Helmet
+Ability: Water Absorb
+Nature: Adamant
+Level: 40
+- Seed Bomb
+- Sucker Punch
+- Spikes
+- Swords Dance
 
-Machoke
-Level: 30
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mightyena @ Life Orb
+Ability: Intimidate
+Adamant Nature
+Level: 39
+- Crunch
+- Sucker Punch
+- Play Rough
+- Iron Tail
+
+Jellicent @ Rocky Helmet
+Ability: Water Absorb
+Nature: Calm
+Level: 40
+- Surf
+- Shadow Ball
+- Dazzling Gleam
+- Will-O-Wisp
+
+Druddigon @ Rocky Helmet
+Ability: Rough Skin
+Nature: Adamant
+Level: 40
+- Dragon Claw
+- Glare
+- Fire Punch
+- Stealth Rock
 
 === TRAINER_CLAYDOL ===
 Name: CLAYDOL
@@ -1173,13 +1282,32 @@ Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Claydol @ Mental Herb
+Ability: Levitate
+Nature: Relaxed
+Level: 40
+- Trick Room
+- Earth Power
+- Psychic
+- Explosion
 
-Golbat
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Golurk @ Soft Sand
+Ability: Iron Fist
+Nature: Brave
+Level: 40
+- Earthquake
+- Shadow Punch
+- Drain Punch
+- Ice Punch
+
+Escavalier @ Metal Coat
+Ability: Overcoat
+Nature: Brave
+Level: 40
+- Iron Head
+- Megahorn
+- Knock Off
+- Swords Dance
 
 === TRAINER_SKARMORY ===
 Name: SKARMORY
@@ -1190,9 +1318,41 @@ Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Hariyama
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Skarmory @ Rocky Helmet
+Ability: Sturdy
+Nature: Impish
+Level: 40
+- Spikes
+- Iron Head
+- Roost
+- Whirlwind
+
+Frosmoth @ Focus Sash
+Ability: Ice Scales
+Nature: Timid
+Level: 39
+- Quiver Dance
+- Ice Beam
+- Bug Buzz
+- Stun Spore
+
+Revavroom @ Air Balloon
+Ability: Filter
+Nature: Adamant
+Level: 40
+- Shift Gear
+- Iron Head
+- Poison Jab
+- Zen Headbutt
+
+Gourgeist @ Leftovers
+Ability: Frisk
+Nature: Impish
+Level: 40
+- Power Whip
+- Shadow Sneak
+- Leech Seed
+- Will-O-Wisp
 
 === TRAINER_SPINDA ===
 Name: SPINDA
@@ -1203,14 +1363,41 @@ Music: Girl
 Double Battle: No
 AI: Basic Trainer
 
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Spinda @ Silk Scarf
+Ability: Contrary
+Nature: Jolly
+Level: 40
+- Superpower
+- Body Slam
+- Sucker Punch
+- Dizzy Punch
 
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Noivern @ Wide Lens
+Ability: Infiltrator
+Nature: Timid
+Level: 39
+- Hurricane
+- Air Slash
+- Flamethrower
+- Roost
 
+Crobat @ Sharp Beak
+Ability: Inner Focus
+Nature: Jolly
+Level: 39
+- Confuse Ray
+- Cross Poison
+- Acrobatics
+- U-turn
+
+Slowking @ Leftovers
+Ability: Own Tempo
+Nature: Calm
+Level: 39
+- Water Pulse
+- Psychic
+- Yawn
+- Psybeam
 
 === TRAINER_NINETALES ===
 Name: NINETALES
@@ -1221,13 +1408,41 @@ Music: Girl
 Double Battle: No
 AI: Basic Trainer
 
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ninetales @ Charcoal
+Ability: Drought
+Nature: Timid
+Level: 40
+- Flamethrower
+- Solar Beam
+- Will-O-Wisp
+- Nasty Plot
 
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ninetales-Alola @ Light Clay
+Ability: Snow Warning
+Nature: Timid
+Level: 40
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Encore
+
+Floatzel @ Mystic Water
+Ability: Water Veil
+Nature: Jolly
+Level: 39
+- Wave Crash
+- Ice Fang
+- Crunch
+- Aqua Jet
+
+Cinccino @ Silk Scarf
+Ability: Skill Link
+Nature: Jolly
+Level: 39
+- Tail Slap
+- Bullet Seed
+- Rock Blast
+- U-turn
 
 === TRAINER_ZANGOOSE ===
 Name: ZANGOOSE
@@ -1238,13 +1453,33 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Mightyena
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Zangoose @ Toxic Orb
+Ability: Toxic Boost
+Nature: Jolly
+Level: 40
+- Slash
+- Close Combat
+- Knock Off
+- Quick Attack
+
+Lycanroc-Dusk @ Hard Stone
+Ability: Tough Claws
+Nature: Jolly
+Level: 39
+- Accelerock
+- Rock Slide
+- Fire Fang
+- Crunch
+
+Clawitzer
+Ability: Mega Launcher
+Nature: Modest
+Level: 40
+- Water Pulse
+- Dark Pulse
+- Aura Sphere
+- Dragon Pulse
 
 === TRAINER_SEVIPER ===
 Name: SEVIPER
@@ -1255,13 +1490,41 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Sharpedo
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Seviper @ Black Sludge
+Ability: Infiltrator
+Nature: Adamant
+Level: 40
+- Poison Jab
+- Crunch
+- Aqua Tail
+- Sucker Punch
 
-Mightyena
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Arbok @ Black Sludge
+Ability: Intimidate
+Nature: Jolly
+Level: 39
+- Gunk Shot
+- Crunch
+- Earthquake
+- Glare
+
+Kingdra @ Dragon Fang
+Ability: Sniper
+Nature: Modest
+Level: 38
+- Surf
+- Dragon Pulse
+- Ice Beam
+- Focus Energy
+
+Drapion @ Scope Lens
+Ability: Sniper
+Nature: Jolly
+Level: 39
+- Cross Poison
+- Night Slash
+- Ice Fang
+- Swords Dance
 
 === TRAINER_SOLROCKLUNATONE ===
 Name: SL
@@ -1272,13 +1535,41 @@ Music: Girl
 Double Battle: Yes
 AI: Basic Trainer
 
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Solrock @ Heat Rock
+Ability: Levitate
+Nature: Adamant
+Level: 40
+- Rock Slide
+- Zen Headbutt
+- Sunny Day
+- Will-O-Wisp
 
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Lunatone @ Light Clay
+Ability: Levitate
+Nature: Modest
+Level: 40
+- Psychic
+- Power Gem
+- Light Screen
+- Moonlight
+
+Heliolisk @ Magnet
+Ability: Solar Power
+Nature: Timid
+Level: 39
+- Thunderbolt
+- Hyper Voice
+- Surf
+- Volt Switch
+
+Clefable @ Leftovers
+Ability: Magic Guard
+Nature: Bold
+Level: 39
+- Moonblast
+- Follow Me
+- Helping Hand
+- Life Dew
 
 === TRAINER_LINOONE ===
 Name: LINOONE
@@ -1289,13 +1580,41 @@ Music: Girl
 Double Battle: No
 AI: Basic Trainer
 
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Linoone @ Silk Scarf
+Ability: Gluttony
+Nature: Jolly
+Level: 40
+- Extreme Speed
+- Double-Edge
+- Shadow Claw
+- Belly Drum
 
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Grafaiai @ Black Sludge
+Ability: Prankster
+Nature: Jolly
+Level: 39
+- Poison Jab
+- Knock Off
+- Encore
+- Parting Shot
+
+Kilowattrel @ Magnet
+Ability: Wind Power
+Nature: Timid
+Level: 39
+- Thunderbolt
+- Air Slash
+- Volt Switch
+- Roost
+
+Obstagoon
+Ability: Defiant
+Nature: Jolly
+Level: 40
+- Facade
+- Sucker Punch
+- Close Combat
+- Parting Shot
 
 
 === TRAINER_CRADILY ===
@@ -1308,17 +1627,32 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
-Level: 41
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Cradily @ Leftovers
+Ability: Storm Drain
+Nature: Calm
+Level: 40
+- Ingrain
+- Giga Drain
+- Ancient Power
+- Recover
 
-Crobat
-Level: 41
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Milotic @ Leftovers
+Ability: Marvel Scale
+Nature: Bold
+Level: 39
+- Aqua Ring
+- Scald
+- Ice Beam
+- Recover
 
-Sharpedo
-Level: 43
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Goodra @ Leftovers
+Ability: Sap Sipper
+Nature: Calm
+Level: 40
+- Life Dew
+- Dragon Pulse
+- Flamethrower
+- Thunderbolt
 
 === TRAINER_ARMALDO ===
 Name: ARMALDO
@@ -1329,9 +1663,42 @@ Music: Suspicious
 Double Battle: No
 AI: Basic Trainer
 
-Spoink
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Armaldo @ Silver Powder
+Ability: Battle Armor
+Nature: Adamant
+Level: 40
+- X-Scissor
+- Rock Slide
+- Aqua Jet
+- Swords Dance
+
+Tyrantrum @ Hard Stone
+Ability: Strong Jaw
+Nature: Jolly
+Level: 40
+- Rock Slide
+- Dragon Claw
+- Psychic Fangs
+- Crunch
+
+Dragalge @ Black Sludge
+Ability: Adaptability
+Nature: Modest
+Level: 39
+- Sludge Bomb
+- Dragon Pulse
+- Surf
+- Flip Turn
+
+Copperajah @ Metal Coat
+Ability: Sheer Force
+Nature: Adamant
+Level: 40
+- Heavy Slam
+- High Horsepower
+- Rock Slide
+- Play Rough
+
 
 === TRAINER_WHISCASH ===
 Name: WHISCASH
@@ -1342,13 +1709,41 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Whiscash @ Leftovers
+Ability: Oblivious
+Nature: Adamant
+Level: 40
+- Earthquake
+- Waterfall
+- Dragon Dance
+- Ice Fang
 
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toedscruel
+Ability: Mycelium Might
+Nature: Timid
+Level: 39
+- Earth Power
+- Giga Drain
+- Spore
+- Rapid Spin
+
+Eelektrik @ Eviolite
+Ability: Levitate
+Nature: Modest
+Level: 40
+- Thunderbolt
+- Flamethrower
+- Giga Drain
+- Volt Switch
+
+Weezing-Galar
+Ability: Neutralizing Gas
+Nature: Bold
+Level: 40
+- Strange Steam
+- Sludge Bomb
+- Will-O-Wisp
+- Pain Split
 
 === TRAINER_SANDSLASH ===
 Name: SANDSLASH
@@ -1359,19 +1754,41 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandslash @ Soft Sand
+Ability: Sand Veil
+Nature: Adamant
+Level: 40
+- Earthquake
+- Iron Head
+- Rock Slide
+- Swords Dance
 
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gliscor @ Sharp Beak
+Ability: Hyper Cutter
+Nature: Jolly
+Level: 39
+- Earthquake
+- Acrobatics
+- U-turn
+- Roost
 
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Durant @ Metal Coat
+Ability: Hustle
+Nature: Jolly
+Level: 39
+- Iron Head
+- X-Scissor
+- Crunch
+- Hone Claws
 
-
+Sandslash-Alola @ Assault Vest
+Ability: Slush Rush
+Nature: Adamant
+Level: 40
+- Icicle Crash
+- Iron Head
+- Earthquake
+- Rock Slide
 
 === TRAINER_WIGGLYTUFF ===
 Name: WIGGLYTUFF
@@ -1382,13 +1799,41 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Shroomish
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Wigglytuff @ Throat Spray
+Ability: Competitive
+Nature: Modest
+Level: 40
+- Hyper Voice
+- Moonblast
+- Thunderbolt
+- Sing
 
-Roselia
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Drifblim @ Sitrus Berry
+Ability: Unburden
+Nature: Timid
+Level: 39
+- Shadow Ball
+- Air Slash
+- Strength Sap
+- Will-O-Wisp
+
+Bellibolt @ Leftovers
+Ability: Electromorphosis
+Nature: Modest
+Level: 39
+- Thunderbolt
+- Parabolic Charge
+- Mud Shot
+- Slack Off
+
+Qwilfish-Hisui @ Black Sludge
+Ability: Intimidate
+Nature: Jolly
+Level: 40
+- Barb Barrage
+- Aqua Tail
+- Crunch
+- Swords Dance
 
 === TRAINER_SLAKING ===
 Name: SLAKING
@@ -1399,17 +1844,56 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Shroomish
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Zoroark-Hisui @ Leftovers
+Ability: Illusion
+Nature: Timid
+Level: 40
+- Will-O-Wisp
+- Hex
+- Hyper Voice
+- Shadow Ball
 
-Gloom
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Porygon-Z @ Choice Specs
+Ability: Adaptability
+Nature: Timid
+Level: 40
+- Tri Attack
 
-Roselia
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Clodsire @ Black Sludge
+Ability: Water Absorb
+Nature: Careful
+Level: 39
+- Earthquake
+- Poison Jab
+- Recover
+- Toxic
+
+Basculegion @ Mystic Water
+Ability: Adaptability
+Nature: Adamant
+Level: 40
+- Wave Crash
+- Last Respects
+- Aqua Jet
+- Crunch
+
+Snorlax @ Chesto Berry
+Ability: Thick Fat
+Nature: Adamant
+Level: 40
+- Body Slam
+- Crunch
+- Rest
+- Earthquake
+
+Slaking @ Silk Scarf
+Ability: Truant
+Nature: Adamant
+Level: 42
+- Double-Edge
+- Earthquake
+- Shadow Claw
+- Sucker Punch
 
 === TRAINER_GOLDUCK ===
 Name: GOLDUCK
@@ -1798,13 +2282,42 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 
 
+=== TRAINER_TREECKO ===
+Name: Treecko
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Treecko
+Level: 12
+- Absorb
+- Quick Attack
+- Pursuit
+- Leafage
+
+Shinx
+Level: 11
+Ability: Intimidate
+- Spark
+- Bite
+- Thunder Wave
+- Quick Attack
+
+Starly
+Ability: Keen Eye
+Nature: Jolly
+Level: 12
+- Quick Attack
+- Wing Attack
+- Tackle
+- Growl
 
 
-
-
-
-=== TRAINER_RICKY_2 ===
-Name: RICKY
+=== TRAINER_GROVYLE ===
+Name: Grovyle
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -1812,33 +2325,98 @@ Music: Girl
 Double Battle: No
 AI: Basic Trainer
 
-Linoone
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
-
-=== TRAINER_RICKY_3 ===
-Name: RICKY
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Basic Trainer
-
-Linoone
+Grovyle @ Miracle Seed
+Ability: Overgrow
+Nature: Jolly
 Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
+- Leaf Blade
+- Quick Attack
+- Mega Drain
+- Detect
 
-=== TRAINER_RICKY_4 ===
-Name: RICKY
+Luxio @ Magnet
+Ability: Intimidate
+Nature: Adamant
+Level: 27
+- Spark
+- Bite
+- Thunder Wave
+- Ice Fang
+
+Staravia @ Sharp Beak
+Ability: Intimidate
+Nature: Jolly
+Level: 27
+- Aerial Ace
+- Quick Attack
+- Double Team
+- U-turn
+
+Pinsir @ Silver Powder
+Ability: Mold Breaker
+Nature: Jolly
+Level: 26
+- X-Scissor
+- Brick Break
+- Rock Tomb
+- Swords Dance
+
+=== TRAINER_SCEPTILE ===
+Name: Sceptile
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+Sceptile @ Miracle Seed
+Ability: Overgrow
+Nature: Jolly
+Level: 40
+- Leaf Blade
+- Dragon Claw
+- Rock Slide
+- Swords Dance
+
+Luxray @ Magnet
+Ability: Intimidate
+Nature: Adamant
+Level: 39
+- Wild Charge
+- Crunch
+- Ice Fang
+- Volt Switch
+
+Staraptor @ Sharp Beak
+Ability: Intimidate
+Nature: Jolly
+Level: 39
+- Brave Bird
+- Close Combat
+- U-turn
+- Quick Attack
+
+Pinsir @ Silver Powder
+Ability: Mold Breaker
+Nature: Jolly
+Level: 39
+- X-Scissor
+- Brick Break
+- Rock Tomb
+- Swords Dance
+
+Gothitelle @ Leftovers
+Ability: Competitive
+Nature: Bold
+Level: 39
+- Psychic
+- Thunder Wave
+- Reflect
+- Rest
+
+=== TRAINER_MSCEPTILE ===
+Name: MSCEPTILE
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -1854,8 +2432,8 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_RICKY_5 ===
-Name: RICKY
+=== TRAINER_TORCHIC ===
+Name: Torchic
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -1871,8 +2449,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_RANDALL ===
-Name: RANDALL
+=== TRAINER_COMBUSKEN ===
+Name: Combusken
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -1888,8 +2466,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Agility
 - Wing Attack
 
-=== TRAINER_PARKER ===
-Name: PARKER
+=== TRAINER_BLAZIKEN ===
+Name: BLAZIKEN
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -1905,8 +2483,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dizzy Punch
 - Focus Punch
 
-=== TRAINER_GEORGE ===
-Name: GEORGE
+=== TRAINER_MBLAZIKEN ===
+Name: MBLAZIKEN
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -1922,21 +2500,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Counter
 - Shadow Ball
 
-=== TRAINER_BERKE ===
-Name: BERKE
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Vigoroth
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Energy
-- Slash
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON

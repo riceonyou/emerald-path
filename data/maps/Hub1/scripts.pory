@@ -6,15 +6,16 @@ mapscripts Hub1_MapScripts {
 
 script HUB1_ONWARP {
     setvar(VAR_TEMP_1, 1)
-
 }
 
 script HUB1_ONFRAME {
-	setvar(VAR_CURRENT_ACT, 1)
+	//STUFF FOR WHEN A RUN FINISHES
+	setvar(VAR_TEMP_2, 1)
+
+	setvar(VAR_CURRENT_ACT, 0)
 	special(UpdateLevelCap)
 
-	setvar(VAR_TEMP_2, 1)
-	if(!flag(FLAG_SYS_NEW_GAME)){
+	if(!flag(FLAG_SYS_NEW_GAME)){// STUFF FOR NEW GAME
 		lockall
 
 		//Set Starter Vars and Flags
@@ -182,12 +183,7 @@ script Hub_Event_Script_Birch{
 		switch (var(VAR_RESULT)) {
 			case YES:
 				msgbox("Alright then! Here we go!")
-				random(1)
-				switch (var(VAR_RESULT)) {
-					case 0:
-						warp(MAP_HOENN1_1, 3, 10)
-						
-				}
+				special(WarpToNextAct)
 			case NO:
 				msgbox("Okay! Let me know when you're ready.")
 				releaseall
@@ -534,7 +530,7 @@ script Hub_Event_Script_Miltank{
 		hidemoneybox
 		releaseall
 	}else{
-		msgbox("You have no more starters left to adopt!")
+		msgbox("You have no more starters left\nto adopt!")
 		waitmessage
 		releaseall
 	}

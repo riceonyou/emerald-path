@@ -30,7 +30,7 @@ VictoryRoad_3F_EventScript_FloorSwitchAlreadyPressed::
 	end
 
 VictoryRoad_3F_EventScript_George::
-	trainerbattle_single TRAINER_COOLTRAINER_GEORGE, VictoryRoad_3F_Text_GeorgeIntro, VictoryRoad_3F_Text_GeorgeDefeat
+	trainerbattle_single TRAINER_COOLTRAINER_MBLAZIKEN, VictoryRoad_3F_Text_GeorgeIntro, VictoryRoad_3F_Text_GeorgeDefeat
 	msgbox VictoryRoad_3F_Text_GeorgePostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -8,7 +8,7 @@ enum BirchBagPoolId {
     BIRCH_BAG_POOL_HOENN1_INSIDE_WOODS,
     BIRCH_BAG_POOL_HOENN1_AFTER_WOODS,
     BIRCH_BAG_POOL_HOENN1_RUSTBORO,
-    BIRCH_BAG_POOL_HOENN2_1,
+    BIRCH_BAG_POOL_HOENN2_BEACH,
     BIRCH_BAG_POOL_HOENN2_2,
     BIRCH_BAG_POOL_HOENN2_3,
     BIRCH_BAG_POOL_HOENN2_4,
@@ -272,6 +272,24 @@ static const struct BirchBagWeightedChoice Manaphy_Pool[] = {
     {SPECIES_RELICANTH,2},
 };
 
+static const struct BirchBagWeightedChoice Hoenn2_Beach_Pool[] = {
+    {SPECIES_WINGULL, 3},
+    {SPECIES_TENTACOOL, 3},
+    {SPECIES_SHELLDER, 3},
+    {SPECIES_STARYU, 3},
+    {SPECIES_CORPHISH, 3},
+    {SPECIES_CLAMPERL, 3},
+    {SPECIES_CHINCHOU, 3},
+    {SPECIES_MANTYKE, 3},
+    {SPECIES_WAILMER,1},
+    {SPECIES_SANDYGAST,3},
+    {SPECIES_CRABRAWLER,3},
+    {SPECIES_BINACLE,3},
+    {SPECIES_SKRELP,3},
+    {SPECIES_CLAUNCHER,3},
+    {SPECIES_DHELMISE,3},
+};
+
 void LoadBirchBagPoolById(void)
 {
     u8 poolId = gSpecialVar_0x8000;
@@ -315,6 +333,9 @@ void LoadBirchBagPoolById(void)
         break;
     case BIRCH_BAG_POOL_REGICE:
         SetBirchBagWeightedChoices(Regice_Pool, ARRAY_COUNT(Regice_Pool));
+        break;
+    case BIRCH_BAG_POOL_HOENN2_BEACH:
+        SetBirchBagWeightedChoices(Hoenn2_Beach_Pool, ARRAY_COUNT(Hoenn2_Beach_Pool));
         break;
     }
 }

@@ -42,27 +42,6 @@ script Hoenn1_1_EventScript_Pokeball{
 }
 
 
-script Hoenn1_2_EventScript_Treecko{
- 
-	trainerbattle_single(TRAINER_TREECKO, Treecko_Intro, Treecko_Outro)
-	msgbox(PostBattle_Treecko, MSGBOX_AUTOCLOSE) 
-	waitmessage
-    end
- 
-}
- 
-text Treecko_Intro{
-    "Yo I'm Treecko. Grrr."
-}
- 
-text Treecko_Outro{
-    "Damn you got me."
-}
- 
-text PostBattle_Treecko{
-    "I'll get you next time."
-}
-
 script Hoenn1_2_EventScript_Zigzagoon{
  
 	trainerbattle_single(TRAINER_ZIGZAGOON, Zigzagoon_Intro, Zigzagoon_Outro)

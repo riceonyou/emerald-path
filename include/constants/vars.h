@@ -31,11 +31,11 @@
 // These 0x10 vars are used to dynamically control a map object's sprite.
 // For example, the rival's sprite id is dynamically set based on the player's gender.
 // See VarGetObjectEventGraphicsId().
-#define VAR_OBJ_GFX_ID_0           0x4010
-#define VAR_OBJ_GFX_ID_1           0x4011
-#define VAR_OBJ_GFX_ID_2           0x4012
-#define VAR_OBJ_GFX_ID_3           0x4013
-#define VAR_OBJ_GFX_ID_4           0x4014
+#define VAR_OBJ_GFX_ID_0           0x4010//Used for temporary stuff like ANCIENT_REGIS
+#define VAR_OBJ_GFX_ID_1           0x4011// 1-4 is used for Rivals
+#define VAR_OBJ_GFX_ID_2           0x4012//
+#define VAR_OBJ_GFX_ID_3           0x4013//
+#define VAR_OBJ_GFX_ID_4           0x4014// ---------------Don't use 1-4------------
 #define VAR_OBJ_GFX_ID_5           0x4015
 #define VAR_OBJ_GFX_ID_6           0x4016
 #define VAR_OBJ_GFX_ID_7           0x4017
@@ -105,7 +105,7 @@
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_SHINY_RATE                        0x4055
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+#define VAR_CURRENT_RIVAL                      0x4056 // 0 is treecko, 1 is torchic,
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var

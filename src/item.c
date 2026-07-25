@@ -95,6 +95,7 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     {
     case POCKET_ITEMS:
     case POCKET_KEY_ITEMS:
+    case POCKET_CHARMS:
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
     case POCKET_BERRIES:
@@ -118,6 +119,7 @@ void NONNULL BagPocket_SetSlotData(struct BagPocket *pocket, u32 pocketPos, stru
     {
     case POCKET_ITEMS:
     case POCKET_KEY_ITEMS:
+    case POCKET_CHARMS:
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
     case POCKET_BERRIES:
@@ -149,6 +151,10 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_KEY_ITEMS].itemSlots = gSaveBlock1Ptr->bag.keyItems;
     gBagPockets[POCKET_KEY_ITEMS].capacity = BAG_KEYITEMS_COUNT;
     gBagPockets[POCKET_KEY_ITEMS].id = POCKET_KEY_ITEMS;
+
+    gBagPockets[POCKET_CHARMS].itemSlots = gSaveBlock1Ptr->bag.charms;
+    gBagPockets[POCKET_CHARMS].capacity = BAG_CHARMS_COUNT;
+    gBagPockets[POCKET_CHARMS].id = POCKET_CHARMS;
 
     gBagPockets[POCKET_POKE_BALLS].itemSlots = gSaveBlock1Ptr->bag.pokeBalls;
     gBagPockets[POCKET_POKE_BALLS].capacity = BAG_POKEBALLS_COUNT;

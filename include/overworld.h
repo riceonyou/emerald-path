@@ -84,6 +84,8 @@ extern const struct UCoords32 gDirectionToVectors[];
 
 void GiveSavedStarter(void);
 void UpdateLevelCap(void);
+void WarpToNextAct(void);
+void WarpToNextAncient(void);
 void DoWhiteOut(void);
 void Overworld_ResetStateAfterFly(void);
 void Overworld_ResetStateAfterTeleport(void);

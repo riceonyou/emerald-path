@@ -5980,7 +5980,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Poison Sting
 - Focus Energy
 
-=== TRAINER_COOLTRAINER_GEORGE ===
+=== TRAINER_COOLTRAINER_MBLAZIKEN ===
 Name: GEORGE
 Class: Cooltrainer Frlg
 Pic: Cooltrainer M Frlg
@@ -6280,7 +6280,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Stomp
 - Tail Whip
 
-=== TRAINER_COOLTRAINER_BERKE ===
+=== TRAINER_COOLTRAINER_DODUO ===
 Name: BERKE
 Class: Cooltrainer Frlg
 Pic: Cooltrainer M Frlg

@@ -7,6 +7,7 @@
 #include "nuzlocke.h"
 #include "overworld.h"
 #include "international_string_util.h"
+#include "item.h"
 #include "main.h"
 #include "menu.h"
 #include "palette.h"
@@ -465,6 +466,16 @@ void CB2_ChooseStarter(void)
     ResetIsSelectionShiny();
     u16 rand;
     u16 ShinyRate = VarGet(VAR_SHINY_RATE);
+    u8 shinyCharmCount = CountTotalItemQuantityInBag(ITEM_SHINY_CHARM);
+
+    // Each shiny charm halves the denominator, with a floor of 1.
+    while (shinyCharmCount > 0 && ShinyRate > 1)
+    {
+        ShinyRate >>= 1;
+        shinyCharmCount--;
+    }
+    if (ShinyRate == 0)
+        ShinyRate = 1;
     
     for (i = 0; i < STARTER_MON_COUNT; i++){
         rand = Random() & (ShinyRate - 1);

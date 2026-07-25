@@ -15382,7 +15382,7 @@ const struct ItemInfo gItemsInfo[] =
             "Raises the chance\n"
             "of finding eggs\n"
             "at the daycare."),
-        .pocket = POCKET_KEY_ITEMS,
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -15399,7 +15399,7 @@ const struct ItemInfo gItemsInfo[] =
             "A charm that will\n"
             "raise the chance\n"
             "of Shiny Pokémon."),
-        .pocket = POCKET_KEY_ITEMS,
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -15416,7 +15416,7 @@ const struct ItemInfo gItemsInfo[] =
             "A charm that raises\n"
             "the chance of\n"
             "Critical Captures."),
-        .pocket = POCKET_KEY_ITEMS,
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -15433,7 +15433,7 @@ const struct ItemInfo gItemsInfo[] =
             "A charm that raises\n"
             "the amount of Exp.\n"
             "earned in battle."),
-        .pocket = POCKET_KEY_ITEMS,
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -17506,7 +17506,7 @@ const struct ItemInfo gItemsInfo[] =
             "A charm that will\n"
             "raise the shards\n"
             "from Tera Raids."),
-        .pocket = POCKET_KEY_ITEMS,
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

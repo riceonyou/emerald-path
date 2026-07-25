@@ -5,21 +5,11 @@ mapscripts ANCIENT_GROUDON_MapScripts {
 script ANCIENT_GROUDON_EventScript_Groudon{
     lockall
 
-    //DECIDE AND ANNOUNCE WHICH STAGE TO GO NEXT
-    random(1)
-    copyvar(VAR_0x8004, VAR_RESULT)
-    switch (var(VAR_0x8004)) {
-        case 0:
-            msgbox("Heyo!\lThe next act will be\nthe MOSSDEEP path!")
-            waitmessage
-    }
-    
-
     //GIVE ANCIENT REWARD
-    msgbox("Take a water pokemon with you!")
+    msgbox("Take a pokemon with you!")
     waitmessage
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 29)
+    setvar(VAR_0x8000, 30)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
@@ -27,16 +17,11 @@ script ANCIENT_GROUDON_EventScript_Groudon{
     msgbox("You received a\n{STR_VAR_1}!")
     waitmessage
 
-    msgbox("The level cap has been raised to 30")
+    msgbox("The level cap has been raised to 42")
     addvar(VAR_CURRENT_ACT, 1)
     special(UpdateLevelCap)
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE
-    switch (var(VAR_0x8004)) {
-        case 0:
-            msgbox("About to warp to HOENN4_1")
-            warp(MAP_HOENN4_1, 4, 6)
-        default:
-    }
+    special(WarpToNextAct)
     releaseall
 }
