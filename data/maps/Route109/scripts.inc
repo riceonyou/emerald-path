@@ -437,12 +437,12 @@ Route109_EventScript_LolaRematch::
 	end
 
 Route109_EventScript_Austina::
-	trainerbattle_single TRAINER_MEGA_GARDEVOIR, Route109_Text_AustinaIntro, Route109_Text_AustinaDefeated
+	trainerbattle_single TRAINER_MEGAGARDEVOIR, Route109_Text_AustinaIntro, Route109_Text_AustinaDefeated
 	msgbox Route109_Text_AustinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Gwen::
-	trainerbattle_single TRAINER_SWAMPERT, Route109_Text_GwenIntro, Route109_Text_GwenDefeated
+	trainerbattle_single TRAINER_MEGASWAMPERT, Route109_Text_GwenIntro, Route109_Text_GwenDefeated
 	msgbox Route109_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
 	end
 

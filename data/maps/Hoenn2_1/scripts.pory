@@ -38,3 +38,66 @@ script Hoenn2_1_Crawdaunt{
     end
 
 }
+
+script Hoenn2_1_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_1_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_1)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn2_2_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_2_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_2)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn2_3_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_3_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_3)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}

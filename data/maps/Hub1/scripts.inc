@@ -1930,7 +1930,7 @@ Hub_Event_Script_Kecleon_18:
 	compare VAR_TEMP_A, 0
 	goto_if_ne Hub_Event_Script_Kecleon_30
 # 811 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_17
+	msgbox Hub_Event_Script_Kecleon_Text_14
 # 812 "data/maps/Hub1/scripts.pory"
 	waitmessage
 # 813 "data/maps/Hub1/scripts.pory"
@@ -2014,21 +2014,21 @@ Hub_Event_Script_Kecleon_20:
 
 Hub_Event_Script_Kecleon_21:
 # 635 "data/maps/Hub1/scripts.pory"
-	dynmultipush Hub_Event_Script_Kecleon_Text_11, ITEM_RARE_CANDY
+	dynmultipush Hub_Event_Script_Kecleon_Text_10, ITEM_RARE_CANDY
 # 636 "data/maps/Hub1/scripts.pory"
 	addvar VAR_TEMP_A, 1
 	goto Hub_Event_Script_Kecleon_18
 
 Hub_Event_Script_Kecleon_22:
 # 638 "data/maps/Hub1/scripts.pory"
-	dynmultipush Hub_Event_Script_Kecleon_Text_12, ITEM_RARE_CANDY
+	dynmultipush Hub_Event_Script_Kecleon_Text_10, ITEM_RARE_CANDY
 # 639 "data/maps/Hub1/scripts.pory"
 	addvar VAR_TEMP_A, 1
 	goto Hub_Event_Script_Kecleon_18
 
 Hub_Event_Script_Kecleon_23:
 # 641 "data/maps/Hub1/scripts.pory"
-	dynmultipush Hub_Event_Script_Kecleon_Text_13, ITEM_RARE_CANDY
+	dynmultipush Hub_Event_Script_Kecleon_Text_10, ITEM_RARE_CANDY
 # 642 "data/maps/Hub1/scripts.pory"
 	addvar VAR_TEMP_A, 1
 	goto Hub_Event_Script_Kecleon_18
@@ -2084,7 +2084,7 @@ Hub_Event_Script_Kecleon_36:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_62
 # 660 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_37:
@@ -2093,7 +2093,7 @@ Hub_Event_Script_Kecleon_37:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_65
 # 672 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_38:
@@ -2102,7 +2102,7 @@ Hub_Event_Script_Kecleon_38:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_68
 # 684 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_39:
@@ -2111,7 +2111,7 @@ Hub_Event_Script_Kecleon_39:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_71
 # 696 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_40:
@@ -2120,7 +2120,7 @@ Hub_Event_Script_Kecleon_40:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_74
 # 708 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_41:
@@ -2129,7 +2129,7 @@ Hub_Event_Script_Kecleon_41:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_77
 # 720 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_42:
@@ -2138,7 +2138,7 @@ Hub_Event_Script_Kecleon_42:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_80
 # 732 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_43:
@@ -2147,7 +2147,7 @@ Hub_Event_Script_Kecleon_43:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_83
 # 744 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_52:
@@ -2156,43 +2156,43 @@ Hub_Event_Script_Kecleon_52:
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_86
 # 758 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_53:
-	checkmoney 50000
+	checkmoney 9999999
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_89
 # 770 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_54:
-	checkmoney 100000
+	checkmoney 9999999
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_92
 # 782 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_55:
-	checkmoney 200000
+	checkmoney 9999999
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_95
 # 794 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_56:
-	checkmoney 300000
+	checkmoney 9999999
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_98
 # 806 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_15
+	msgbox Hub_Event_Script_Kecleon_Text_12
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_62:
@@ -2207,7 +2207,7 @@ Hub_Event_Script_Kecleon_62:
 # 656 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 657 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_65:
@@ -2222,7 +2222,7 @@ Hub_Event_Script_Kecleon_65:
 # 668 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 669 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_68:
@@ -2237,7 +2237,7 @@ Hub_Event_Script_Kecleon_68:
 # 680 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 681 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_71:
@@ -2252,7 +2252,7 @@ Hub_Event_Script_Kecleon_71:
 # 692 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 693 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_74:
@@ -2267,7 +2267,7 @@ Hub_Event_Script_Kecleon_74:
 # 704 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 705 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_77:
@@ -2282,7 +2282,7 @@ Hub_Event_Script_Kecleon_77:
 # 716 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 717 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_80:
@@ -2297,7 +2297,7 @@ Hub_Event_Script_Kecleon_80:
 # 728 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 729 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_83:
@@ -2312,7 +2312,7 @@ Hub_Event_Script_Kecleon_83:
 # 740 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 741 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
+	msgbox Hub_Event_Script_Kecleon_Text_11
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_86:
@@ -2327,7 +2327,7 @@ Hub_Event_Script_Kecleon_86:
 # 754 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 755 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_16
+	msgbox Hub_Event_Script_Kecleon_Text_13
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_89:
@@ -2336,13 +2336,13 @@ Hub_Event_Script_Kecleon_89:
 # 763 "data/maps/Hub1/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
 # 764 "data/maps/Hub1/scripts.pory"
-	removemoney 50000
+	removemoney 9999999
 # 765 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 766 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 767 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_16
+	msgbox Hub_Event_Script_Kecleon_Text_13
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_92:
@@ -2351,13 +2351,13 @@ Hub_Event_Script_Kecleon_92:
 # 775 "data/maps/Hub1/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
 # 776 "data/maps/Hub1/scripts.pory"
-	removemoney 100000
+	removemoney 9999999
 # 777 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 778 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 779 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_16
+	msgbox Hub_Event_Script_Kecleon_Text_13
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_95:
@@ -2366,13 +2366,13 @@ Hub_Event_Script_Kecleon_95:
 # 787 "data/maps/Hub1/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
 # 788 "data/maps/Hub1/scripts.pory"
-	removemoney 200000
+	removemoney 9999999
 # 789 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 790 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 791 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_16
+	msgbox Hub_Event_Script_Kecleon_Text_13
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_98:
@@ -2381,13 +2381,13 @@ Hub_Event_Script_Kecleon_98:
 # 799 "data/maps/Hub1/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
 # 800 "data/maps/Hub1/scripts.pory"
-	removemoney 300000
+	removemoney 9999999
 # 801 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 802 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
 # 803 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_16
+	msgbox Hub_Event_Script_Kecleon_Text_13
 	goto Hub_Event_Script_Kecleon_29
 
 
@@ -2801,32 +2801,20 @@ Hub_Event_Script_Kecleon_Text_9:
 
 Hub_Event_Script_Kecleon_Text_10:
 # 632 "data/maps/Hub1/scripts.pory"
-	.string "Rare Candy (¥500000)$"
+	.string "Rare Candy (¥9999999)$"
 
 Hub_Event_Script_Kecleon_Text_11:
-# 635 "data/maps/Hub1/scripts.pory"
-	.string "Rare Candy (¥100000)$"
-
-Hub_Event_Script_Kecleon_Text_12:
-# 638 "data/maps/Hub1/scripts.pory"
-	.string "Rare Candy (¥200000)$"
-
-Hub_Event_Script_Kecleon_Text_13:
-# 641 "data/maps/Hub1/scripts.pory"
-	.string "Rare Candy (¥300000)$"
-
-Hub_Event_Script_Kecleon_Text_14:
 # 657 "data/maps/Hub1/scripts.pory"
 	.string "You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!$"
 
-Hub_Event_Script_Kecleon_Text_15:
+Hub_Event_Script_Kecleon_Text_12:
 # 660 "data/maps/Hub1/scripts.pory"
 	.string "I'm sorry. You don't have the money to\nbuy that item, kec.$"
 
-Hub_Event_Script_Kecleon_Text_16:
+Hub_Event_Script_Kecleon_Text_13:
 # 755 "data/maps/Hub1/scripts.pory"
 	.string "You got a Rare Candy as a starter\nitem!\pThank you for your purchase!$"
 
-Hub_Event_Script_Kecleon_Text_17:
+Hub_Event_Script_Kecleon_Text_14:
 # 811 "data/maps/Hub1/scripts.pory"
 	.string "You don't have anything left\nto puchase right now. Thank you for\lyour consistent patronage!\p$"

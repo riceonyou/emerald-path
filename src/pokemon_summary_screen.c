@@ -337,11 +337,13 @@ static void WriteToStatsTilemapBuffer(u32 length, u32 block, u32 statsCoordX, u3
 void ExtractMonSkillStatsData(struct Pokemon *mon, struct PokeSummary *sum);
 void ExtractMonSkillIvData(struct Pokemon *mon, struct PokeSummary *sum);
 void ExtractMonSkillEvData(struct Pokemon *mon, struct PokeSummary *sum);
+void ExtractMonSkillBaseData(struct Pokemon *mon, struct PokeSummary *sum);
 static void PrintTextOnWindow(u8 windowId, const u8 *string, u8 x, u8 y, u8 lineSpacing, u8 colorId);
 static void PrintTextOnWindowWithFont(u8 windowId, const u8 *string, u8 x, u8 y, u8 lineSpacing, u8 colorId, u32 fontId);
 static const u8 *GetLetterGrade(u32 stat);
 static u8 AddWindowFromTemplateList(const struct WindowTemplate *template, u8 templateId);
 static u8 IncrementSkillsStatsMode(u8 mode);
+static u8 GetNextSkillsStatsMode(u8 mode);
 static void ClearStatLabel(u32 length, u32 statsCoordX, u32 statsCoordY);
 u32 GetAdjustedIvData(struct Pokemon *mon, u32 stat);
 static void TryUpdateRelearnType(enum IncrDecrUpdateValues delta);
@@ -1297,16 +1299,16 @@ void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, 
     case SUMMARY_MODE_RELEARNER_BATTLE:
     case SUMMARY_MODE_RELEARNER_CONTEST:
         sMonSummaryScreen->minPageIndex = 0;
-        sMonSummaryScreen->maxPageIndex = PSS_PAGE_COUNT - 1;
+        sMonSummaryScreen->maxPageIndex = PSS_PAGE_BATTLE_MOVES;
         break;
     case SUMMARY_MODE_LOCK_MOVES:
         sMonSummaryScreen->minPageIndex = 0;
-        sMonSummaryScreen->maxPageIndex = PSS_PAGE_COUNT - 1;
+        sMonSummaryScreen->maxPageIndex = PSS_PAGE_BATTLE_MOVES;
         sMonSummaryScreen->lockMovesFlag = TRUE;
         break;
     case SUMMARY_MODE_SELECT_MOVE:
         sMonSummaryScreen->minPageIndex = PSS_PAGE_BATTLE_MOVES;
-        sMonSummaryScreen->maxPageIndex = PSS_PAGE_COUNT - 1;
+        sMonSummaryScreen->maxPageIndex = PSS_PAGE_BATTLE_MOVES;
         sMonSummaryScreen->lockMonFlag = TRUE;
         break;
     }
@@ -1314,7 +1316,7 @@ void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, 
     if (mode == SUMMARY_MODE_RELEARNER_BATTLE)
         sMonSummaryScreen->currPageIndex = PSS_PAGE_BATTLE_MOVES;
     else if (mode == SUMMARY_MODE_RELEARNER_CONTEST)
-        sMonSummaryScreen->currPageIndex = PSS_PAGE_CONTEST_MOVES;
+        sMonSummaryScreen->currPageIndex = PSS_PAGE_BATTLE_MOVES;
     else
         sMonSummaryScreen->currPageIndex = sMonSummaryScreen->minPageIndex;
 
@@ -1781,6 +1783,9 @@ static void ChangeStatLabel(s16 mode)
     case SUMMARY_SKILLS_MODE_EVS:
         WriteToStatsTilemapBuffer(ivEvLength, evsBlock, statsCoordX, statsCoordY);
         break;
+    case SUMMARY_SKILLS_MODE_BASE:
+        WriteToStatsTilemapBuffer(statsLength, statsBlock, statsCoordX, statsCoordY);
+        break;
     }
     CopyBgTilemapBufferToVram(1);
 }
@@ -1925,37 +1930,42 @@ static void Task_HandleInput(u8 taskId)
 
 static u8 IncrementSkillsStatsMode(u8 mode)
 {
+    sMonSummaryScreen->skillsPageMode = GetNextSkillsStatsMode(mode);
+    return sMonSummaryScreen->skillsPageMode;
+}
+
+static bool8 IsSkillsStatsModeEnabled(u8 mode)
+{
     switch (mode)
     {
     case SUMMARY_SKILLS_MODE_STATS:
-        if (P_SUMMARY_SCREEN_EV_ONLY)
-        {
-            sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_EVS;
-            return SUMMARY_SKILLS_MODE_EVS;
-        }
-        else
-        {
-            sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_IVS;
-            return SUMMARY_SKILLS_MODE_IVS;
-        }
-
+    case SUMMARY_SKILLS_MODE_BASE:
+        return TRUE;
     case SUMMARY_SKILLS_MODE_IVS:
-        if (P_SUMMARY_SCREEN_IV_ONLY)
-        {
-            sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
-            return SUMMARY_SKILLS_MODE_STATS;
-        }
-        else
-        {
-            sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_EVS;
-            return SUMMARY_SKILLS_MODE_EVS;
-        }
+        return !P_SUMMARY_SCREEN_EV_ONLY;
     case SUMMARY_SKILLS_MODE_EVS:
+        return !P_SUMMARY_SCREEN_IV_ONLY;
     default:
-        sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
-        return SUMMARY_SKILLS_MODE_STATS;
+        return FALSE;
+    }
+}
+
+static u8 GetNextSkillsStatsMode(u8 mode)
+{
+    u8 i;
+    u8 nextMode = mode;
+
+    for (i = 0; i < SUMMARY_SKILLS_MODE_BASE + 1; i++)
+    {
+        nextMode++;
+        if (nextMode > SUMMARY_SKILLS_MODE_BASE)
+            nextMode = SUMMARY_SKILLS_MODE_STATS;
+
+        if (IsSkillsStatsModeEnabled(nextMode))
+            return nextMode;
     }
 
+    return SUMMARY_SKILLS_MODE_STATS;
 }
 
 static void ShowMonSkillsInfo(u8 taskId, s16 mode)
@@ -1985,6 +1995,11 @@ static void ShowMonSkillsInfo(u8 taskId, s16 mode)
     else if (mode == SUMMARY_SKILLS_MODE_EVS)
     {
         ExtractMonSkillEvData(mon, sum);
+        BufferLeftColumnIvEvStats();
+    }
+    else if (mode == SUMMARY_SKILLS_MODE_BASE)
+    {
+        ExtractMonSkillBaseData(mon, sum);
         BufferLeftColumnIvEvStats();
     }
 
@@ -2025,6 +2040,18 @@ void ExtractMonSkillEvData(struct Pokemon *mon, struct PokeSummary *sum)
     sum->spatk = GetMonData(mon, MON_DATA_SPATK_EV);
     sum->spdef = GetMonData(mon, MON_DATA_SPDEF_EV);
     sum->speed = GetMonData(mon, MON_DATA_SPEED_EV);
+}
+
+void ExtractMonSkillBaseData(struct Pokemon *mon, struct PokeSummary *sum)
+{
+    u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL);
+
+    sum->currentHP = gSpeciesInfo[species].baseHP;
+    sum->atk = gSpeciesInfo[species].baseAttack;
+    sum->def = gSpeciesInfo[species].baseDefense;
+    sum->spatk = gSpeciesInfo[species].baseSpAttack;
+    sum->spdef = gSpeciesInfo[species].baseSpDefense;
+    sum->speed = gSpeciesInfo[species].baseSpeed;
 }
 
 bool32 HasAnyRelearnableMoves(enum MoveRelearnerStates state)
@@ -3479,7 +3506,6 @@ static void PrintPageNamesAndStats(void)
     #endif
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_TITLE, gText_PkmnSkills, 2, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE, gText_BattleMoves, 2, 1, 0, 1);
-    PrintTextOnWindow(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE, gText_ContestMoves, 2, 1, 0, 1);
 
     ShowUtilityPrompt(SUMMARY_MODE_NORMAL);
 
@@ -3523,7 +3549,6 @@ static void PutPageWindowTilemaps(u8 page)
     #endif
     ClearWindowTilemap(PSS_LABEL_WINDOW_POKEMON_SKILLS_TITLE);
     ClearWindowTilemap(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE);
-    ClearWindowTilemap(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE);
 
     switch (page)
     {
@@ -3844,10 +3869,13 @@ static bool8 DoesMonOTMatchOwner(void)
 
     if (sMonSummaryScreen->monList.mons == gEnemyParty)
     {
-        u8 multiID = GetMultiplayerId() ^ 1;
-        trainerId = gLinkPlayers[multiID].trainerId & 0xFFFF;
-        gender = gLinkPlayers[multiID].gender;
-        StringCopy(gStringVar1, gLinkPlayers[multiID].name);
+        
+        return FALSE;
+
+        // u8 multiID = GetMultiplayerId() ^ 1;
+        // trainerId = gLinkPlayers[multiID].trainerId & 0xFFFF;
+        // gender = gLinkPlayers[multiID].gender;
+        // StringCopy(gStringVar1, gLinkPlayers[multiID].name);
     }
     else
     {
@@ -5073,6 +5101,7 @@ static inline void ShowUtilityPrompt(s16 mode)
     const u8* gText_SkillPageIvs = COMPOUND_STRING("IVs");
     const u8* gText_SkillPageEvs = COMPOUND_STRING("EVs");
     const u8* gText_SkillPageStats = COMPOUND_STRING("STATS");
+    const u8* gText_SkillPageBase = COMPOUND_STRING("BASE");
     const u8* gText_Rename = COMPOUND_STRING("RENAME");
 
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
@@ -5086,23 +5115,20 @@ static inline void ShowUtilityPrompt(s16 mode)
     {
         if (ShouldShowIvEvPrompt())
         {
-            if (mode == SUMMARY_SKILLS_MODE_STATS)
+            switch (GetNextSkillsStatsMode(mode))
             {
-                if (P_SUMMARY_SCREEN_EV_ONLY)
-                    promptText = gText_SkillPageEvs;
-                else
-                    promptText = gText_SkillPageIvs;
-            }
-            else if (mode == SUMMARY_SKILLS_MODE_IVS)
-            {
-                if (P_SUMMARY_SCREEN_IV_ONLY)
-                    promptText = gText_SkillPageStats;
-                else
-                    promptText = gText_SkillPageEvs;
-            }
-            else if (mode == SUMMARY_SKILLS_MODE_EVS)
-            {
+            case SUMMARY_SKILLS_MODE_STATS:
                 promptText = gText_SkillPageStats;
+                break;
+            case SUMMARY_SKILLS_MODE_IVS:
+                promptText = gText_SkillPageIvs;
+                break;
+            case SUMMARY_SKILLS_MODE_EVS:
+                promptText = gText_SkillPageEvs;
+                break;
+            case SUMMARY_SKILLS_MODE_BASE:
+                promptText = gText_SkillPageBase;
+                break;
             }
         }
     }

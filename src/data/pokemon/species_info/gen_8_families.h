@@ -129,7 +129,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sThwackeyLevelUpLearnset,
         .teachableLearnset = sThwackeyTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_RILLABOOM}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_RILLABOOM}),
     },
 
     [SPECIES_RILLABOOM] =
@@ -381,7 +381,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sRabootLevelUpLearnset,
         .teachableLearnset = sRabootTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_CINDERACE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_CINDERACE}),
     },
 
     [SPECIES_CINDERACE] =
@@ -636,7 +636,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sDrizzileLevelUpLearnset,
         .teachableLearnset = sDrizzileTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_INTELEON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_INTELEON}),
     },
 
     [SPECIES_INTELEON] =
@@ -827,7 +827,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSkwovetLevelUpLearnset,
         .teachableLearnset = sSkwovetTeachableLearnset,
         .eggMoveLearnset = sSkwovetEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_GREEDENT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GREEDENT}),
     },
 
     [SPECIES_GREEDENT] =
@@ -966,7 +966,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sRookideeLevelUpLearnset,
         .teachableLearnset = sRookideeTeachableLearnset,
         .eggMoveLearnset = sRookideeEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_CORVISQUIRE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CORVISQUIRE}),
     },
 
     [SPECIES_CORVISQUIRE] =
@@ -1039,7 +1039,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sCorvisquireLevelUpLearnset,
         .teachableLearnset = sCorvisquireTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_CORVIKNIGHT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_CORVIKNIGHT}),
     },
 
     [SPECIES_CORVIKNIGHT] =
@@ -1234,7 +1234,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sBlipbugLevelUpLearnset,
         .teachableLearnset = sBlipbugTeachableLearnset,
         .eggMoveLearnset = sBlipbugEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_DOTTLER}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_DOTTLER}),
     },
 
     [SPECIES_DOTTLER] =
@@ -1299,7 +1299,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sDottlerLevelUpLearnset,
         .teachableLearnset = sDottlerTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_ORBEETLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_ORBEETLE}),
     },
 
     [SPECIES_ORBEETLE] =
@@ -1493,7 +1493,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sNickitLevelUpLearnset,
         .teachableLearnset = sNickitTeachableLearnset,
         .eggMoveLearnset = sNickitEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_THIEVUL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_THIEVUL}),
     },
 
     [SPECIES_THIEVUL] =
@@ -1623,7 +1623,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sGossifleurLevelUpLearnset,
         .teachableLearnset = sGossifleurTeachableLearnset,
         .eggMoveLearnset = sGossifleurEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_ELDEGOSS}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_ELDEGOSS}),
     },
 
     [SPECIES_ELDEGOSS] =
@@ -1753,7 +1753,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sWoolooLevelUpLearnset,
         .teachableLearnset = sWoolooTeachableLearnset,
         .eggMoveLearnset = sWoolooEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_DUBWOOL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_DUBWOOL}),
     },
 
     [SPECIES_DUBWOOL] =
@@ -1886,7 +1886,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sChewtleLevelUpLearnset,
         .teachableLearnset = sChewtleTeachableLearnset,
         .eggMoveLearnset = sChewtleEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_DREDNAW}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_DREDNAW}),
     },
 
     [SPECIES_DREDNAW] =
@@ -2080,7 +2080,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sYamperLevelUpLearnset,
         .teachableLearnset = sYamperTeachableLearnset,
         .eggMoveLearnset = sYamperEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_BOLTUND}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_BOLTUND}),
     },
 
     [SPECIES_BOLTUND] =
@@ -2210,7 +2210,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sRolycolyLevelUpLearnset,
         .teachableLearnset = sRolycolyTeachableLearnset,
         .eggMoveLearnset = sRolycolyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_CARKOL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CARKOL}),
     },
 
     [SPECIES_CARKOL] =
@@ -2273,7 +2273,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sCarkolLevelUpLearnset,
         .teachableLearnset = sCarkolTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_COALOSSAL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_COALOSSAL}),
     },
 
     [SPECIES_COALOSSAL] =
@@ -2465,10 +2465,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sApplinLevelUpLearnset,
         .teachableLearnset = sApplinTeachableLearnset,
         .eggMoveLearnset = sApplinEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_TART_APPLE, SPECIES_FLAPPLE},
-                                {EVO_ITEM, ITEM_SWEET_APPLE, SPECIES_APPLETUN}
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_FLAPPLE},
+                                {EVO_LEVEL, 16, SPECIES_APPLETUN}
                             #if P_GEN_9_CROSS_EVOS
-                                ,{EVO_ITEM, ITEM_SYRUPY_APPLE, SPECIES_DIPPLIN}
+                                ,{EVO_LEVEL, 16, SPECIES_DIPPLIN}
                             #endif
                             ),
     },
@@ -2781,7 +2781,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sDipplinLevelUpLearnset,
         .teachableLearnset = sDipplinTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_HYDRAPPLE, CONDITIONS({IF_KNOWS_MOVE, MOVE_DRAGON_CHEER})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_HYDRAPPLE, CONDITIONS({IF_KNOWS_MOVE, MOVE_DRAGON_CHEER})}),
     },
 
     [SPECIES_HYDRAPPLE] =
@@ -2911,7 +2911,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSilicobraLevelUpLearnset,
         .teachableLearnset = sSilicobraTeachableLearnset,
         .eggMoveLearnset = sSilicobraEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SANDACONDA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_SANDACONDA}),
     },
 
     [SPECIES_SANDACONDA] =
@@ -3283,7 +3283,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sArrokudaLevelUpLearnset,
         .teachableLearnset = sArrokudaTeachableLearnset,
         .eggMoveLearnset = sArrokudaEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_BARRASKEWDA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_BARRASKEWDA}),
     },
 
     [SPECIES_BARRASKEWDA] =
@@ -3413,8 +3413,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sToxelLevelUpLearnset,
         .teachableLearnset = sToxelTeachableLearnset,
         .eggMoveLearnset = sToxelEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_TOXTRICITY_AMPED, CONDITIONS({IF_AMPED_NATURE})},
-                                {EVO_LEVEL, 30, SPECIES_TOXTRICITY_LOW_KEY, CONDITIONS({IF_LOW_KEY_NATURE})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_TOXTRICITY_AMPED, CONDITIONS({IF_AMPED_NATURE})},
+                                {EVO_LEVEL, 16, SPECIES_TOXTRICITY_LOW_KEY, CONDITIONS({IF_LOW_KEY_NATURE})}),
     },
 
     [SPECIES_TOXTRICITY_AMPED] =
@@ -3723,7 +3723,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSizzlipedeLevelUpLearnset,
         .teachableLearnset = sSizzlipedeTeachableLearnset,
         .eggMoveLearnset = sSizzlipedeEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_CENTISKORCH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CENTISKORCH}),
     },
 
     [SPECIES_CENTISKORCH] =
@@ -3918,7 +3918,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sClobbopusLevelUpLearnset,
         .teachableLearnset = sClobbopusTeachableLearnset,
         .eggMoveLearnset = sClobbopusEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_GRAPPLOCT, CONDITIONS({IF_KNOWS_MOVE, MOVE_TAUNT})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GRAPPLOCT, CONDITIONS({IF_KNOWS_MOVE, MOVE_TAUNT})}),
     },
 
     [SPECIES_GRAPPLOCT] =
@@ -4047,7 +4047,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSinisteaLevelUpLearnset,
         .teachableLearnset = sSinisteaTeachableLearnset,
         .formSpeciesIdTable = sSinisteaFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_CRACKED_POT, SPECIES_POLTEAGEIST_PHONY}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_POLTEAGEIST_PHONY}),
     },
 
     [SPECIES_SINISTEA_ANTIQUE] =
@@ -4113,7 +4113,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSinisteaLevelUpLearnset,
         .teachableLearnset = sSinisteaTeachableLearnset,
         .formSpeciesIdTable = sSinisteaFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_CHIPPED_POT, SPECIES_POLTEAGEIST_ANTIQUE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_POLTEAGEIST_ANTIQUE}),
     },
 
     [SPECIES_POLTEAGEIST_PHONY] =
@@ -4309,7 +4309,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sHatennaLevelUpLearnset,
         .teachableLearnset = sHatennaTeachableLearnset,
         .eggMoveLearnset = sHatennaEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_HATTREM}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_HATTREM}),
     },
 
     [SPECIES_HATTREM] =
@@ -4372,7 +4372,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sHattremLevelUpLearnset,
         .teachableLearnset = sHattremTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_HATTERENE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_HATTERENE}),
     },
 
     [SPECIES_HATTERENE] =
@@ -4561,7 +4561,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sImpidimpLevelUpLearnset,
         .teachableLearnset = sImpidimpTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_MORGREM}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_MORGREM}),
     },
 
     [SPECIES_MORGREM] =
@@ -4625,7 +4625,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sMorgremLevelUpLearnset,
         .teachableLearnset = sMorgremTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_GRIMMSNARL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_GRIMMSNARL}),
     },
 
 
@@ -4817,193 +4817,193 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .teachableLearnset = sMilceryTeachableLearnset,
         .eggMoveLearnset = sMilceryEggMoveLearnset,
         .evolutions = EVOLUTION(
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_STRAWBERRY_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_STRAWBERRY_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_STRAWBERRY_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_STRAWBERRY_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_STRAWBERRY_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_STRAWBERRY_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_STRAWBERRY_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STRAWBERRY_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STRAWBERRY_SWEET},
                                            {IF_TIME, TIME_EVENING})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_BERRY_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_BERRY_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_BERRY_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_BERRY_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_BERRY_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_BERRY_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_BERRY_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_BERRY_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_BERRY_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_BERRY_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_BERRY_SWEET},
                                            {IF_TIME, TIME_EVENING})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_LOVE_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_LOVE_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_LOVE_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_LOVE_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_LOVE_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_LOVE_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_LOVE_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_LOVE_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_LOVE_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_LOVE_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_LOVE_SWEET},
                                            {IF_TIME, TIME_EVENING})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_STAR_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_STAR_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_STAR_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_STAR_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_STAR_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_STAR_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_STAR_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_STAR_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_STAR_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_STAR_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_STAR_SWEET},
                                            {IF_TIME, TIME_EVENING})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_CLOVER_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_CLOVER_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_CLOVER_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_CLOVER_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_CLOVER_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_CLOVER_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_CLOVER_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_CLOVER_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_CLOVER_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_CLOVER_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_CLOVER_SWEET},
                                            {IF_TIME, TIME_EVENING})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_FLOWER_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_FLOWER_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_FLOWER_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_FLOWER_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_FLOWER_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_FLOWER_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_FLOWER_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_FLOWER_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_FLOWER_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_FLOWER_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_FLOWER_SWEET},
                                            {IF_TIME, TIME_EVENING})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_RIBBON_VANILLA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_VANILLA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_RIBBON_RUBY_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_RUBY_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_SHORT, SPECIES_ALCREMIE_RIBBON_MATCHA_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_MATCHA_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_RIBBON_MINT_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_MINT_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_RIBBON_LEMON_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_LEMON_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_SHORT, SPECIES_ALCREMIE_RIBBON_SALTED_CREAM,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_SALTED_CREAM,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_NIGHT})},
-                                {EVO_SPIN, SPIN_CCW_LONG, SPECIES_ALCREMIE_RIBBON_RUBY_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_RUBY_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_CW_LONG, SPECIES_ALCREMIE_RIBBON_CARAMEL_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_CARAMEL_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_DAY})},
-                                {EVO_SPIN, SPIN_EITHER, SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL,
+                                {EVO_LEVEL, 16, SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL,
                                 CONDITIONS({IF_HOLD_ITEM, ITEM_RIBBON_SWEET},
                                            {IF_TIME, TIME_EVENING})}
                         )
@@ -5435,7 +5435,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sSnomLevelUpLearnset,
         .teachableLearnset = sSnomTeachableLearnset,
         .eggMoveLearnset = sSnomEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_FROSMOTH, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD},{IF_TIME, TIME_NIGHT})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_FROSMOTH, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD},{IF_TIME, TIME_NIGHT})}),
     },
 
     [SPECIES_FROSMOTH] =
@@ -6014,7 +6014,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sCufantLevelUpLearnset,
         .teachableLearnset = sCufantTeachableLearnset,
         .eggMoveLearnset = sCufantEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_COPPERAJAH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_COPPERAJAH}),
     },
 
     [SPECIES_COPPERAJAH] =
@@ -6471,7 +6471,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formSpeciesIdTable = sDuraludonFormSpeciesIdTable,
         .formChangeTable = sDuraludonFormChangeTable,
     #if P_GEN_9_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_METAL_ALLOY, SPECIES_ARCHALUDON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_ARCHALUDON}),
     #endif
     },
 
@@ -6665,7 +6665,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sDreepyLevelUpLearnset,
         .teachableLearnset = sDreepyTeachableLearnset,
         .eggMoveLearnset = sDreepyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_DRAKLOAK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_DRAKLOAK}),
     },
 
     [SPECIES_DRAKLOAK] =
@@ -6729,7 +6729,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sDrakloakLevelUpLearnset,
         .teachableLearnset = sDrakloakTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 60, SPECIES_DRAGAPULT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_DRAGAPULT}),
     },
 
     [SPECIES_DRAGAPULT] =
@@ -7264,10 +7264,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sKubfuLevelUpLearnset,
         .teachableLearnset = sKubfuTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_SCRIPT_TRIGGER, 0, SPECIES_URSHIFU_SINGLE_STRIKE},
-                                {EVO_SCRIPT_TRIGGER, 1, SPECIES_URSHIFU_RAPID_STRIKE},
-                                {EVO_ITEM, ITEM_SCROLL_OF_DARKNESS, SPECIES_URSHIFU_SINGLE_STRIKE},
-                                {EVO_ITEM, ITEM_SCROLL_OF_WATERS,   SPECIES_URSHIFU_RAPID_STRIKE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_URSHIFU_SINGLE_STRIKE},
+                                {EVO_LEVEL, 16, SPECIES_URSHIFU_RAPID_STRIKE},
+                                {EVO_LEVEL, 16, SPECIES_URSHIFU_SINGLE_STRIKE},
+                                {EVO_LEVEL, 16, SPECIES_URSHIFU_RAPID_STRIKE}),
     },
 
     [SPECIES_URSHIFU_SINGLE_STRIKE] =

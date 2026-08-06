@@ -40,7 +40,7 @@ Hoenn1_1_OnLoad::
 	return
 
 
-Hoenn1_1_EventScript_Pokeball::
+Hoenn1_1_EventScript_BirchBag::
 # 24 "data/maps/Hoenn1_1/scripts.pory"
 	lockall
 # 26 "data/maps/Hoenn1_1/scripts.pory"
@@ -48,7 +48,7 @@ Hoenn1_1_EventScript_Pokeball::
 # 27 "data/maps/Hoenn1_1/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 28 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, 0
+	setvar VAR_0x8000, 33
 # 29 "data/maps/Hoenn1_1/scripts.pory"
 	special LoadBirchBagPoolById
 # 30 "data/maps/Hoenn1_1/scripts.pory"
@@ -62,7 +62,7 @@ Hoenn1_1_EventScript_Pokeball::
 # 35 "data/maps/Hoenn1_1/scripts.pory"
 	playfanfare MUS_EVOLVED
 # 36 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox Hoenn1_1_EventScript_Pokeball_Text_0
+	msgbox Hoenn1_1_EventScript_BirchBag_Text_0
 # 38 "data/maps/Hoenn1_1/scripts.pory"
 	waitmessage
 # 39 "data/maps/Hoenn1_1/scripts.pory"
@@ -88,7 +88,7 @@ Hoenn1_2_EventScript_BirchBag::
 # 70 "data/maps/Hoenn1_1/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 71 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, 1
+	setvar VAR_0x8000, 33
 # 72 "data/maps/Hoenn1_1/scripts.pory"
 	special LoadBirchBagPoolById
 # 73 "data/maps/Hoenn1_1/scripts.pory"
@@ -102,7 +102,7 @@ Hoenn1_2_EventScript_BirchBag::
 # 78 "data/maps/Hoenn1_1/scripts.pory"
 	playfanfare MUS_EVOLVED
 # 79 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox Hoenn1_1_EventScript_Pokeball_Text_0
+	msgbox Hoenn1_1_EventScript_BirchBag_Text_0
 # 81 "data/maps/Hoenn1_1/scripts.pory"
 	waitmessage
 # 82 "data/maps/Hoenn1_1/scripts.pory"
@@ -118,7 +118,7 @@ Hoenn1_3_EventScript_BirchBag::
 # 91 "data/maps/Hoenn1_1/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 92 "data/maps/Hoenn1_1/scripts.pory"
-	setvar VAR_0x8000, 1
+	setvar VAR_0x8000, 33
 # 93 "data/maps/Hoenn1_1/scripts.pory"
 	special LoadBirchBagPoolById
 # 94 "data/maps/Hoenn1_1/scripts.pory"
@@ -132,7 +132,7 @@ Hoenn1_3_EventScript_BirchBag::
 # 99 "data/maps/Hoenn1_1/scripts.pory"
 	playfanfare MUS_EVOLVED
 # 100 "data/maps/Hoenn1_1/scripts.pory"
-	msgbox Hoenn1_1_EventScript_Pokeball_Text_0
+	msgbox Hoenn1_1_EventScript_BirchBag_Text_0
 # 102 "data/maps/Hoenn1_1/scripts.pory"
 	waitmessage
 # 103 "data/maps/Hoenn1_1/scripts.pory"
@@ -144,7 +144,7 @@ Hoenn1_1_Itemball_1::
 # 109 "data/maps/Hoenn1_1/scripts.pory"
 	lockall
 # 110 "data/maps/Hoenn1_1/scripts.pory"
-	giveitem ITEM_ORAN_BERRY, 10
+	giveitem ITEM_ORAN_BERRY, 1
 # 111 "data/maps/Hoenn1_1/scripts.pory"
 	removeobject HOENN1_1_ITEM
 # 112 "data/maps/Hoenn1_1/scripts.pory"
@@ -158,7 +158,7 @@ Hoenn1_1_Itemball_2::
 # 118 "data/maps/Hoenn1_1/scripts.pory"
 	lockall
 # 119 "data/maps/Hoenn1_1/scripts.pory"
-	giveitem ITEM_LUM_BERRY, 5
+	giveitem ITEM_LUM_BERRY, 1
 # 120 "data/maps/Hoenn1_1/scripts.pory"
 	removeobject HOENN1_2_ITEM
 # 121 "data/maps/Hoenn1_1/scripts.pory"
@@ -168,7 +168,7 @@ Hoenn1_1_Itemball_2::
 	end
 
 
-Hoenn1_1_EventScript_Pokeball_Text_0:
+Hoenn1_1_EventScript_BirchBag_Text_0:
 # 36 "data/maps/Hoenn1_1/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"
 

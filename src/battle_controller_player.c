@@ -83,6 +83,8 @@ static void MoveSelectionDisplayMoveType(enum BattlerId battler);
 static void MoveSelectionDisplayMoveNames(enum BattlerId battler);
 static void TryMoveSelectionDisplayMoveDescription(enum BattlerId battler);
 static void MoveSelectionDisplayMoveDescription(enum BattlerId battler);
+static void OpenEnemyPartyMenu(enum BattlerId battler);
+static void WaitForEnemyPartyMenu(enum BattlerId battler);
 static void WaitForMonSelection(enum BattlerId battler);
 static void CompleteWhenChoseItem(enum BattlerId battler);
 static void Task_LaunchLvlUpAnim(u8);
@@ -310,18 +312,22 @@ static void HandleInputChooseAction(enum BattlerId battler)
         {
         case 0: // Top left
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_USE_MOVE, 0);
+            BtlController_Complete(battler);
             break;
         case 1: // Top right
-            BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_USE_ITEM, 0);
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
+            gBattlerControllerFuncs[battler] = OpenEnemyPartyMenu;
+            gBattlerInMenuId = battler;
             break;
         case 2: // Bottom left
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_SWITCH, 0);
+            BtlController_Complete(battler);
             break;
         case 3: // Bottom right
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_RUN, 0);
+            BtlController_Complete(battler);
             break;
         }
-        BtlController_Complete(battler);
     }
     else if (JOY_NEW(DPAD_LEFT))
     {
@@ -1594,6 +1600,23 @@ static void OpenPartyMenuToChooseMon(enum BattlerId battler)
         FreeAllWindowBuffers();
         OpenPartyMenuInBattle(caseId);
     }
+}
+
+static void OpenEnemyPartyMenu(enum BattlerId battler)
+{
+    if (!gPaletteFade.active)
+    {
+        gBattlerControllerFuncs[battler] = WaitForEnemyPartyMenu;
+        ReshowBattleScreenDummy();
+        FreeAllWindowBuffers();
+        OpenOpponentPartyMenuInBattle();
+    }
+}
+
+static void WaitForEnemyPartyMenu(enum BattlerId battler)
+{
+    if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active)
+        gBattlerControllerFuncs[battler] = PlayerHandleChooseAction;
 }
 
 static void WaitForMonSelection(enum BattlerId battler)

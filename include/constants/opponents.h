@@ -62,8 +62,8 @@
 #define TRAINER_MEGASABLEYE               55
 #define TRAINER_MEGAGLALIE               56
 #define TRAINER_MEGASALAMENCE                       57
-#define TRAINER_MEGA_GARDEVOIR                      58
-#define TRAINER_SWAMPERT                         59
+#define TRAINER_MEGAGARDEVOIR                      58
+#define TRAINER_MEGASWAMPERT                         59
 #define TRAINER_SPINDA                       60
 #define TRAINER_NINETALES                       61
 #define TRAINER_SOLROCKLUNATONE                       62
@@ -73,7 +73,7 @@
 #define TRAINER_SLOWBRO                      66
 #define TRAINER_GROVYLE                      67
 #define TRAINER_SCEPTILE                      68
-#define TRAINER_MSCEPTILE                      69
+#define TRAINER_MEGASCEPTILE                      69
 #define TRAINER_TORCHIC                      70
 #define TRAINER_COMBUSKEN                      71
 #define TRAINER_BLAZIKEN                       72

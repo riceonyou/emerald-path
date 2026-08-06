@@ -19,13 +19,13 @@ script Hoenn1_1_OnLoad{
 }
 
 
-script Hoenn1_1_EventScript_Pokeball{
+script Hoenn1_1_EventScript_BirchBag{
  
     lockall
 
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 0)
+    setvar(VAR_0x8000, 33)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
@@ -68,7 +68,7 @@ script Hoenn1_2_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 1)
+    setvar(VAR_0x8000, 33)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
@@ -89,7 +89,7 @@ script Hoenn1_3_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 1)
+    setvar(VAR_0x8000, 33)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
@@ -107,7 +107,7 @@ script Hoenn1_3_EventScript_BirchBag{
 
 script Hoenn1_1_Itemball_1{
     lockall
-    giveitem(ITEM_ORAN_BERRY, 10)
+    giveitem(ITEM_ORAN_BERRY, 1)
     removeobject(HOENN1_1_ITEM)
     setflag(FLAG_ITEM_1_1)
     releaseall
@@ -116,7 +116,7 @@ script Hoenn1_1_Itemball_1{
 
 script Hoenn1_1_Itemball_2{
     lockall
-    giveitem(ITEM_LUM_BERRY, 5)
+    giveitem(ITEM_LUM_BERRY, 1)
     removeobject(HOENN1_2_ITEM)
     setflag(FLAG_ITEM_1_2)
     releaseall

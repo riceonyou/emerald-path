@@ -791,7 +791,6 @@ static bool32 ShouldSwitchIfBadlyStatused(enum BattlerId battler)
                 && !SearchTraits(AIBattlerTraits, ABILITY_UNAWARE)
                 && !SearchTraits(AIBattlerTraits, ABILITY_KEEN_EYE)
                 && !SearchTraits(AIBattlerTraits, ABILITY_MINDS_EYE)
-                && GetConfig(B_ILLUMINATE_EFFECT) >= GEN_9 && !(SearchTraits(AIBattlerTraits, ABILITY_ILLUMINATE))
                 && !gBattleMons[battler].volatiles.foresight
                 && !gBattleMons[battler].volatiles.miracleEye)
                 switchMon = FALSE;
@@ -2037,6 +2036,7 @@ static inline bool32 IsFreeSwitch(enum SwitchType switchType, enum BattlerId bat
             u32 species = gBattleMons[opposingBattler].species;
             // If faster, not a free switch; likely lowered own stats
             if (!movedSecond && (opposingAbility != ABILITY_INTIMIDATE && !SpeciesHasInnate(species, ABILITY_INTIMIDATE))
+                 && (opposingAbility != ABILITY_ILLUMINATE && !SpeciesHasInnate(species, ABILITY_ILLUMINATE))
              && opposingAbility != ABILITY_SUPERSWEET_SYRUP && !SpeciesHasInnate(species, ABILITY_SUPERSWEET_SYRUP)) // Intimidate triggers switches before turn starts
                 return FALSE;
             // Otherwise, free switch

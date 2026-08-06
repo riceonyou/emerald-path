@@ -13,6 +13,7 @@
 #include "palette.h"
 #include "pokedex.h"
 #include "pokemon.h"
+#include "pokemon_storage_system.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "sprite.h"
@@ -60,6 +61,7 @@ static void SpriteCB_SelectionHand(struct Sprite *sprite);
 static void SpriteCB_Pokeball(struct Sprite *sprite);
 static void SpriteCB_StarterPokemon(struct Sprite *sprite);
 static void SpriteCB_Sparkle(struct Sprite *sprite);
+static void BuildBirchBagOwnedSpeciesCache(void);
 static u8 CreatePokemonFrontSpriteShiny(u16 species, u8 x, u8 y);
 static void CreateSparkleOnPokeball(u8 x, u8 y);
 static void DestroyPokeballSparkles(void);
@@ -833,21 +835,51 @@ static void SpriteCB_StarterPokemon(struct Sprite *sprite)
 
 // ======== WEIGHTED SELECTION SYSTEM ========
 // Stores the weighted pool for Birch's bag selections
-static struct BirchBagWeightedChoice sBirchBagWeightedPool[32];
-static u8 sBirchBagWeightedPoolSize = 0;
-static u16 sBirchBagWeightedPoolTotalWeight = 0;
+static const struct BirchBagWeightedChoice *sBirchBagWeightedPool = NULL;
+static u16 sBirchBagWeightedPoolSize = 0;
+static EWRAM_DATA bool8 sBirchBagOwnedSpecies[NUM_SPECIES] = {0};
+
+static void BuildBirchBagOwnedSpeciesCache(void)
+{
+    u8 i;
+    u8 j;
+
+    memset(sBirchBagOwnedSpecies, FALSE, sizeof(sBirchBagOwnedSpecies));
+
+    if (!IsNuzlockeActive())
+        return;
+
+    // Cache party ownership once instead of rescanning for each candidate.
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 partySpecies = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+        if (partySpecies != SPECIES_NONE && partySpecies < NUM_SPECIES)
+            sBirchBagOwnedSpecies[partySpecies] = TRUE;
+    }
+
+    // Cache boxed ownership once for fast O(1) lookups during weighted draws.
+    for (i = 0; i < TOTAL_BOXES_COUNT; i++)
+    {
+        for (j = 0; j < IN_BOX_COUNT; j++)
+        {
+            struct BoxPokemon *boxMon = GetBoxedMonPtr(i, j);
+            u16 boxSpecies = GetBoxMonData(boxMon, MON_DATA_SPECIES);
+
+            if (boxSpecies != SPECIES_NONE && boxSpecies < NUM_SPECIES)
+                sBirchBagOwnedSpecies[boxSpecies] = TRUE;
+        }
+    }
+}
 
 static bool8 BirchBagPlayerOwnsSpecies(u16 species)
 {
-    //u8 i, j;
-
     if (species == SPECIES_NONE)
         return TRUE;
 
-    if (PlayerOwnsSpecies(species))
-        return TRUE;
+    if (species >= NUM_SPECIES)
+        return FALSE;
 
-    return FALSE;
+    return sBirchBagOwnedSpecies[species];
 }
 
 
@@ -862,29 +894,18 @@ static bool8 IsSpeciesExcluded(u16 species, const u16 *excluded, u8 excludedCoun
     return FALSE;
 }
 
-void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8 count)
+void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u16 count)
 {
-    u8 i;
-    
-    if (count > ARRAY_COUNT(sBirchBagWeightedPool))
-        count = ARRAY_COUNT(sBirchBagWeightedPool);
-    
+    sBirchBagWeightedPool = choices;
     sBirchBagWeightedPoolSize = count;
-    sBirchBagWeightedPoolTotalWeight = 0;
-    
-    for (i = 0; i < sBirchBagWeightedPoolSize; i++)
-    {
-        sBirchBagWeightedPool[i] = choices[i];
-        sBirchBagWeightedPoolTotalWeight += choices[i].weight;
-    }
 }
 
-static u16 SelectPokemonFromWeightedPoolExclude(const struct BirchBagWeightedChoice *pool, u8 poolSize, const u16 *excluded, u8 excludedCount)
+static u16 SelectPokemonFromWeightedPoolExclude(const struct BirchBagWeightedChoice *pool, u16 poolSize, const u16 *excluded, u8 excludedCount)
 {
-    u16 totalWeight = 0;
-    u16 randValue;
-    u16 cumulativeWeight = 0;
-    u8 i;
+    u32 totalWeight = 0;
+    u32 randValue;
+    u32 cumulativeWeight = 0;
+    u16 i;
 
     for (i = 0; i < poolSize; i++)
     {
@@ -896,7 +917,7 @@ static u16 SelectPokemonFromWeightedPoolExclude(const struct BirchBagWeightedCho
     if (totalWeight == 0)
         return SPECIES_NONE;
 
-    randValue = Random() % totalWeight;
+    randValue = Random32() % totalWeight;
 
     for (i = 0; i < poolSize; i++)
     {
@@ -920,6 +941,8 @@ static void PrepareBirchBagWeightedStarterChoices(void)
     u16 excluded[STARTER_MON_COUNT];
     u16 species;
 
+    BuildBirchBagOwnedSpeciesCache();
+
     for (i = 0; i < STARTER_MON_COUNT; i++)
         sBirchBagSelectedSpecies[i] = SPECIES_NONE;
 
@@ -940,8 +963,8 @@ static void PrepareBirchBagWeightedStarterChoices(void)
 // Reset the pool (call before building a new one from script)
 void ResetBirchBagWeightedPool(void)
 {
+    sBirchBagWeightedPool = NULL;
     sBirchBagWeightedPoolSize = 0;
-    sBirchBagWeightedPoolTotalWeight = 0;
 }
 
 

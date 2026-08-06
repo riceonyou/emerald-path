@@ -990,7 +990,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #define PP_UP_SHIFTS(val)           val,        (val) << 2,        (val) << 4,        (val) << 6
 #define PP_UP_SHIFTS_INV(val) (u8)~(val), (u8)~((val) << 2), (u8)~((val) << 4), (u8)~((val) << 6)
 
-// PP Up bonuses are stored for a Pokémon as a single byte.
+// PP Up bonuses are stored for a Pokemon as a single byte.
 // There are 2 bits (a value 0-3) for each move slot that
 // represent how many PP Ups have been applied.
 // The following arrays take a move slot id and return:
@@ -2117,7 +2117,7 @@ enum Move MonTryLearningNewMoveAtLevel(struct Pokemon *mon, bool32 firstMove, u3
         }
     }
 
-    //  Handler for Pokémon whose moves change upon form change.
+    //  Handler for Pokemon whose moves change upon form change.
     //  For example, if Zacian or Zamazenta should learn Iron Head,
     //  they're prevented from doing if they have Behemoth Blade/Bash,
     //  since it transforms into them while in their Crowned forms.
@@ -2566,9 +2566,9 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
                     retVal++;
                 }
 
-                // Vanilla Pokémon have 0s in nickname11 and nickname12
+                // Vanilla Pokemon have 0s in nickname11 and nickname12
                 // so if both are 0 we assume that this is a vanilla
-                // Pokémon and replace them with EOS. This means that
+                // Pokemon and replace them with EOS. This means that
                 // two CHAR_SPACE at the end of a nickname are trimmed.
                 struct PokemonSubstruct0 *substruct0 = GetSubstruct0(boxMon);
                 if (field != MON_DATA_NICKNAME10 && POKEMON_NAME_LENGTH >= 12)
@@ -3695,9 +3695,20 @@ bool8 IsPokemonStorageFull(void)
 
 const u8 *GetSpeciesName(u16 species)
 {
+    static const u8 sText_MegaPrefix[] = _("Mega ");
     species = SanitizeSpeciesId(species);
     if (gSpeciesInfo[species].speciesName[0] == 0)
         return gSpeciesInfo[SPECIES_NONE].speciesName;
+
+    if (gSpeciesInfo[species].isMegaEvolution)
+    {
+        static u8 sMegaSpeciesName[32];
+
+        StringCopy(sMegaSpeciesName, sText_MegaPrefix);
+        StringAppend(sMegaSpeciesName, gSpeciesInfo[species].speciesName);
+        return sMegaSpeciesName;
+    }
+
     return gSpeciesInfo[species].speciesName;
 }
 
@@ -3953,7 +3964,7 @@ const u32 sExpCandyExperienceTable[] = {
     [EXP_30000 - 1] = 30000,
 };
 
-// Returns TRUE if the item has no effect on the Pokémon, FALSE otherwise
+// Returns TRUE if the item has no effect on the Pokemon, FALSE otherwise
 bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, u8 moveIndex, bool8 usedByAI)
 {
     u32 dataUnsigned;
@@ -3976,6 +3987,20 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
 
     // Determine the EV cap to use
     u32 maxAllowedEVs = !B_EV_ITEMS_CAP ? MAX_TOTAL_EVS : GetCurrentEVCap();
+
+    if (!usedByAI && GetItemHoldEffect(item) == HOLD_EFFECT_MEGA_STONE)
+    {
+        bool32 canStopEvo = TRUE;
+        u32 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_ITEM_USE, item, NULL, &canStopEvo, CHECK_EVO);
+
+        if (targetSpecies != SPECIES_NONE)
+        {
+            GetEvolutionTargetSpecies(mon, EVO_MODE_ITEM_USE, item, NULL, &canStopEvo, DO_EVO);
+            BeginEvolutionScene(mon, targetSpecies, canStopEvo, partyIndex);
+            return FALSE;
+        }
+        return TRUE;
+    }
 
     // Skip using the item if it won't do anything
     if (GetItemEffect(item) == NULL && item != ITEM_ENIGMA_BERRY_E_READER)
@@ -4372,9 +4397,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
                     }
                     case 5: // ITEM5_FRIENDSHIP_LOW
                         // Changes to friendship are given differently depending on
-                        // how much friendship the Pokémon already has.
-                        // In general, Pokémon with lower friendship receive more,
-                        // and Pokémon with higher friendship receive less.
+                        // how much friendship the Pokemon already has.
+                        // In general, Pokemon with lower friendship receive more,
+                        // and Pokemon with higher friendship receive less.
                         if (GetMonData(mon, MON_DATA_FRIENDSHIP) < 100)
                             UPDATE_FRIENDSHIP_FROM_ITEM();
                         itemEffectParam++;
@@ -4976,6 +5001,24 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
     u32 species = GetMonData(mon, MON_DATA_SPECIES, 0);
     u32 level = GetMonData(mon, MON_DATA_LEVEL, 0);
     const struct Evolution *evolutions = GetSpeciesEvolutions(species);
+    const struct FormChange *formChanges;
+
+    if ((mode == EVO_MODE_ITEM_USE || mode == EVO_MODE_ITEM_CHECK)
+     && GetItemHoldEffect(evolutionItem) == HOLD_EFFECT_MEGA_STONE)
+    {
+        formChanges = GetSpeciesFormChanges(species);
+        for (i = 0; formChanges != NULL && formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+        {
+            if (formChanges[i].method == FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM
+             && formChanges[i].param1 == evolutionItem
+             && SanitizeSpeciesId(formChanges[i].targetSpecies) != SPECIES_NONE)
+            {
+                if (canStopEvo != NULL)
+                    *canStopEvo = FALSE;
+                return formChanges[i].targetSpecies;
+            }
+        }
+    }
 
     if (evolutions == NULL)
         return SPECIES_NONE;
@@ -5070,6 +5113,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
                 break;
             }
         }
+
         break;
     // Battle evolution without leveling; party slot is being passed into the evolutionItem arg.
     case EVO_MODE_BATTLE_SPECIAL:
@@ -6414,7 +6458,7 @@ bool8 ShouldSkipFriendshipChange(void)
 }
 
 // The below functions are for the 'MonSpritesGfxManager', a method of allocating
-// space for Pokémon sprites. These are only used for the summary screen Pokémon
+// space for Pokemon sprites. These are only used for the summary screen Pokemon
 // sprites (unless gMonSpritesGfxPtr is in use), but were set up for more general use.
 // Only the 'default' mode (MON_SPR_GFX_MODE_NORMAL) is used, which is set
 // up to allocate 4 sprites using the battler sprite templates (gBattlerSpriteTemplates).
@@ -6687,7 +6731,19 @@ u32 GetFormChangeTargetSpecies_Internal(struct FormChangeContext ctx)
 
     for (i = 0; formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
     {
-        if (!(ctx.method == formChanges[i].method && ctx.currentSpecies != formChanges[i].targetSpecies))
+        bool32 methodMatches = ctx.method == formChanges[i].method;
+
+        if (!methodMatches
+         && !(ctx.method == FORM_CHANGE_ITEM_USE
+          && formChanges[i].method == FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM
+          && GetItemHoldEffect(ctx.partyItemUsed) == HOLD_EFFECT_MEGA_STONE))
+            continue;
+
+        if (ctx.currentSpecies == formChanges[i].targetSpecies)
+            continue;
+
+        if ((ctx.method == FORM_CHANGE_END_BATTLE || ctx.method == FORM_CHANGE_FAINT)
+         && gSpeciesInfo[ctx.currentSpecies].isMegaEvolution)
             continue;
 
         switch (ctx.method)

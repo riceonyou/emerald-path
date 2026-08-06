@@ -270,8 +270,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ILLUMINATE] =
     {
         .name = _("Illuminate"),
-        .description = COMPOUND_STRING("Encounter rate increases."),
-        .aiRating = 0,
+        .description = COMPOUND_STRING("Lowers the foe's Sp. Atk."),
+        .aiRating = 7,
         .breakable = TRUE,
     },
 
@@ -354,7 +354,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PRESSURE] =
     {
         .name = _("Pressure"),
-        .description = COMPOUND_STRING("Raises foe's PP usage."),
+        .description = COMPOUND_STRING("Raises foe's PP usage. Resets stat buffs."),
         .aiRating = 5,
     },
 
@@ -383,7 +383,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_RUN_AWAY] =
     {
         .name = _("Run Away"),
-        .description = COMPOUND_STRING("Makes escaping easier."),
+        .description = COMPOUND_STRING("Always able to switch out."),
         .aiRating = 0,
     },
 
@@ -406,7 +406,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PICKUP] =
     {
         .name = _("Pickup"),
-        .description = COMPOUND_STRING("May pick up items."),
+        .description = COMPOUND_STRING("Removes hazards on entry."),
         .aiRating = 1,
     },
 
@@ -771,7 +771,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_KLUTZ] =
     {
         .name = _("Klutz"),
-        .description = COMPOUND_STRING("Can't use hold items."),
+        .description = COMPOUND_STRING("Can't use items. Opponents sometimes miss."),
         .aiRating = -1,
     },
 
@@ -806,7 +806,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FOREWARN] =
     {
         .name = _("Forewarn"),
-        .description = COMPOUND_STRING("Determines a foe's move."),
+        .description = COMPOUND_STRING("Reduces opponent's move PP."),
         .aiRating = 2,
     },
 
@@ -891,7 +891,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FRISK] =
     {
         .name = _("Frisk"),
-        .description = COMPOUND_STRING("Checks a foe's item."),
+        .description = COMPOUND_STRING("Checks items and removes on hit."),
         .aiRating = 3,
     },
 
@@ -1960,7 +1960,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PASTEL_VEIL] =
     {
         .name = _("Pastel Veil"),
-        .description = COMPOUND_STRING("Protects team from poison."),
+        .description = COMPOUND_STRING("Immune to poison moves."),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -2419,5 +2419,55 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Strong Kicks"),
         .description = COMPOUND_STRING("Boosts kicking moves."),
         .aiRating = 6,
+    },
+
+    [ABILITY_SCREEN_SETTER] =
+    {
+        .name = _("Screen Setter"),
+        .description = COMPOUND_STRING("Lengthens screen moves."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_PIERCING_DRILL] =
+    {
+        .name = _("Piercing Drill"),
+        .description = COMPOUND_STRING("Contact evades protection."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_DRAGONIZE] =
+    {
+        .name = _("Dragonize"),
+        .description = COMPOUND_STRING("Normal moves turn Dragon."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_MEGA_SOL] =
+    {
+        .name = _("Mega Sol"),
+        .description = COMPOUND_STRING("Acts like under sun."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_SPICY_SPRAY] =
+    {
+        .name = _("Spicy Spray"),
+        .description = COMPOUND_STRING("Burns attacker when hit."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_FIRE_MANE] =
+    {
+        .name = _("Fire Mane"),
+        .description = COMPOUND_STRING("Boosts Fire-type moves."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_SHIELD_OF_LEGEND] =
+    {
+        .name = _("Shield of Legend"),
+        .description = COMPOUND_STRING("Halves damage at full HP."),
+        .aiRating = 8,
+        .breakable = TRUE,
     },
 };

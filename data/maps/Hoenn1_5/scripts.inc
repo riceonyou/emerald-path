@@ -40,7 +40,7 @@ Hoenn1_7_EventScript_BirchBag::
 # 35 "data/maps/Hoenn1_5/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 36 "data/maps/Hoenn1_5/scripts.pory"
-	setvar VAR_0x8000, 4
+	setvar VAR_0x8000, 33
 # 37 "data/maps/Hoenn1_5/scripts.pory"
 	special LoadBirchBagPoolById
 # 38 "data/maps/Hoenn1_5/scripts.pory"

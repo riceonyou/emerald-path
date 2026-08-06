@@ -47,3 +47,102 @@ script Hoenn2_4_Minun{
 	waitmessage
     end
 }
+
+script Hoenn2_4_Rival{
+    switch (var(VAR_CURRENT_RIVAL)){
+        case 0:
+            trainerbattle_single(TRAINER_GROVYLE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
+            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            waitmessage
+            end
+        case 1:
+            trainerbattle_single(TRAINER_COMBUSKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
+            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            waitmessage
+            end
+    }
+}
+
+script Hoenn2_4_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_4_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_4)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn2_5_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_5_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_5)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn2_6_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_6_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_6)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn2_7_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN2_7_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_2_7)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}

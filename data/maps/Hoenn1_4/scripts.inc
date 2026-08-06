@@ -30,7 +30,7 @@ Hoenn1_4_EventScript_BirchBag::
 # 26 "data/maps/Hoenn1_4/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 27 "data/maps/Hoenn1_4/scripts.pory"
-	setvar VAR_0x8000, 3
+	setvar VAR_0x8000, 33
 # 28 "data/maps/Hoenn1_4/scripts.pory"
 	special LoadBirchBagPoolById
 # 29 "data/maps/Hoenn1_4/scripts.pory"
@@ -60,7 +60,7 @@ Hoenn1_BirchBag_5::
 # 47 "data/maps/Hoenn1_4/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 48 "data/maps/Hoenn1_4/scripts.pory"
-	setvar VAR_0x8000, 3
+	setvar VAR_0x8000, 33
 # 49 "data/maps/Hoenn1_4/scripts.pory"
 	special LoadBirchBagPoolById
 # 50 "data/maps/Hoenn1_4/scripts.pory"
@@ -90,7 +90,7 @@ Hoenn1_BirchBag_6::
 # 68 "data/maps/Hoenn1_4/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 69 "data/maps/Hoenn1_4/scripts.pory"
-	setvar VAR_0x8000, 3
+	setvar VAR_0x8000, 33
 # 70 "data/maps/Hoenn1_4/scripts.pory"
 	special LoadBirchBagPoolById
 # 71 "data/maps/Hoenn1_4/scripts.pory"

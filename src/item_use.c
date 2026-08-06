@@ -227,6 +227,8 @@ u8 CheckIfItemIsTMHMOrEvolutionStone(enum Item itemId)
         return ITEM_IS_TM_HM;
     else if (GetItemFieldFunc(itemId) == ItemUseOutOfBattle_EvolutionStone)
         return ITEM_IS_EVOLUTION_STONE;
+    else if (GetItemHoldEffect(itemId) == HOLD_EFFECT_MEGA_STONE)
+        return ITEM_IS_EVOLUTION_STONE;
     else
         return ITEM_IS_OTHER;
 }
@@ -1526,6 +1528,12 @@ void ItemUseOutOfBattle_Honey(u8 taskId)
 
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
+    if (GetItemHoldEffect(gSpecialVar_ItemId) == HOLD_EFFECT_MEGA_STONE)
+    {
+        ItemUseOutOfBattle_EvolutionStone(taskId);
+        return;
+    }
+
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 

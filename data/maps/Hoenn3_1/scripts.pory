@@ -21,3 +21,24 @@ script Hoenn3_1_Claydol{
 	waitmessage
     end
 }
+
+script Hoenn3_1_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN3_1_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_3_1)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}

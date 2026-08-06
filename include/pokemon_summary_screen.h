@@ -51,6 +51,7 @@ enum PokemonSummarySkillsMode
     SUMMARY_SKILLS_MODE_STATS,
     SUMMARY_SKILLS_MODE_IVS,
     SUMMARY_SKILLS_MODE_EVS,
+    SUMMARY_SKILLS_MODE_BASE,
 };
 
 void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, void (*callback)(void));

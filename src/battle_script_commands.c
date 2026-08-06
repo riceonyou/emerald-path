@@ -2294,6 +2294,10 @@ static inline bool32 TrySetReflect(enum BattlerId battler)
                 gSideTimers[side].reflectTimer += 3;
         }
 
+        if (BattlerHasTrait(battler, ABILITY_SCREEN_SETTER)
+         && (gSideTimers[side].reflectTimer == 5 || GetConfig(B_ALLOW_HELD_DUPES)))
+            gSideTimers[side].reflectTimer += 3;
+
         if (IsDoubleBattle() && CountAliveMonsInBattle(BATTLE_ALIVE_SIDE, battler) == 2)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_REFLECT_DOUBLE;
         else
@@ -2318,6 +2322,10 @@ static inline bool32 TrySetLightScreen(enum BattlerId battler)
              && (gSideTimers[side].lightscreenTimer == 5 || GetConfig(B_ALLOW_HELD_DUPES)))
                 gSideTimers[side].lightscreenTimer += 3;
         }
+
+        if (BattlerHasTrait(battler, ABILITY_SCREEN_SETTER)
+         && (gSideTimers[side].lightscreenTimer == 5 || GetConfig(B_ALLOW_HELD_DUPES)))
+            gSideTimers[side].lightscreenTimer += 3;
 
         if (IsDoubleBattle() && CountAliveMonsInBattle(BATTLE_ALIVE_SIDE, battler) == 2)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_LIGHTSCREEN_DOUBLE;
@@ -3455,6 +3463,10 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
                  && (gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer == 5 || GetConfig(B_ALLOW_HELD_DUPES)))
                     gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer += 3;
             }
+
+                if (BattlerHasTrait(gBattlerAttacker, ABILITY_SCREEN_SETTER)
+             && (gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer == 5 || GetConfig(B_ALLOW_HELD_DUPES)))
+                gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer += 3;
                 
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SET_SAFEGUARD;
             BattleScriptPush(battleScript);
@@ -5544,7 +5556,10 @@ static void Cmd_jumpifcantswitch(void)
     CMD_ARGS(u8 battler:7, u8 ignoreEscapePrevention:1, const u8 *jumpInstr);
 
     enum BattlerId battler = GetBattlerForBattleScript(cmd->battler);
-    if (!cmd->ignoreEscapePrevention && !CanBattlerEscape(battler) && !BattlerHasHeldItemEffect(battler, HOLD_EFFECT_SHED_SHELL, TRUE))
+    if (!cmd->ignoreEscapePrevention
+        && !CanBattlerEscape(battler)
+        && !BattlerHasHeldItemEffect(battler, HOLD_EFFECT_SHED_SHELL, TRUE)
+        && !BattlerHasTrait(battler, ABILITY_RUN_AWAY))
     {
         gBattlescriptCurrInstr = cmd->jumpInstr;
     }
@@ -7773,7 +7788,6 @@ static void TryPlayStatChangeAnimation(enum BattlerId battler, enum Ability abil
                     }
                 }
                 else if (!((SearchTraits(battlerTraits, ABILITY_KEEN_EYE) || SearchTraits(battlerTraits, ABILITY_MINDS_EYE)) && currStat == STAT_ACC)
-                        && !(GetConfig(B_ILLUMINATE_EFFECT) >= GEN_9 && SearchTraits(battlerTraits, ABILITY_ILLUMINATE) && currStat == STAT_ACC)
                         && !(SearchTraits(battlerTraits, ABILITY_HYPER_CUTTER) && currStat == STAT_ATK)
                         && !(SearchTraits(battlerTraits, ABILITY_BIG_PECKS) && currStat == STAT_DEF))
                 {
@@ -7946,7 +7960,6 @@ static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statI
         }
         else if (!flags.certain
                 && (((SearchTraits(battlerTraits, ABILITY_KEEN_EYE) || SearchTraits(battlerTraits, ABILITY_MINDS_EYE)) && statId == STAT_ACC)
-                || (GetConfig(B_ILLUMINATE_EFFECT) >= GEN_9 && SearchTraits(battlerTraits, ABILITY_ILLUMINATE) && statId == STAT_ACC)
                 || (SearchTraits(battlerTraits, ABILITY_HYPER_CUTTER) && statId == STAT_ATK)
                 || (SearchTraits(battlerTraits, ABILITY_BIG_PECKS) && statId == STAT_DEF)))
         {
@@ -7956,8 +7969,6 @@ static u32 ChangeStatBuffs(enum BattlerId battler, s8 statValue, enum Stat statI
                     battlerAbility = ABILITY_KEEN_EYE;
                 else if (SearchTraits(battlerTraits, ABILITY_MINDS_EYE) && statId == STAT_ACC)
                     battlerAbility = ABILITY_MINDS_EYE;
-                else if (SearchTraits(battlerTraits, ABILITY_ILLUMINATE) && statId == STAT_ACC)
-                    battlerAbility = ABILITY_ILLUMINATE;
                 else if (SearchTraits(battlerTraits, ABILITY_HYPER_CUTTER) && statId == STAT_ATK)
                     battlerAbility = ABILITY_HYPER_CUTTER;
                 else if (SearchTraits(battlerTraits, ABILITY_BIG_PECKS)&& statId == STAT_DEF)
@@ -9601,7 +9612,9 @@ static void Cmd_recoverbasedonsunlight(void)
         }
         else if (GetConfig(B_TIME_OF_DAY_HEALING_MOVES) != GEN_2)
         {
-            if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || BattlerHasHeldItemEffect(gBattlerAttacker, HOLD_EFFECT_UTILITY_UMBRELLA, TRUE))
+            if (BattlerHasTrait(gBattlerAttacker, ABILITY_MEGA_SOL))
+                recoverAmount = 20 * GetNonDynamaxMaxHP(gBattlerAttacker) / 30;
+            else if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || BattlerHasHeldItemEffect(gBattlerAttacker, HOLD_EFFECT_UTILITY_UMBRELLA, TRUE))
                 recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
             else if (gBattleWeather & B_WEATHER_SUN)
                 recoverAmount = 20 * GetNonDynamaxMaxHP(gBattlerAttacker) / 30;
@@ -9633,7 +9646,9 @@ static void Cmd_recoverbasedonsunlight(void)
                 break;
             }
 
-            if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || BattlerHasHeldItemEffect(gBattlerAttacker, HOLD_EFFECT_UTILITY_UMBRELLA, TRUE))
+            if (BattlerHasTrait(gBattlerAttacker, ABILITY_MEGA_SOL))
+                recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
+            else if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || BattlerHasHeldItemEffect(gBattlerAttacker, HOLD_EFFECT_UTILITY_UMBRELLA, TRUE))
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
             else if (gBattleWeather & B_WEATHER_SUN)
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
@@ -10406,7 +10421,7 @@ static void Cmd_pickup(void)
             if (lvlDivBy10 > 9)
                 lvlDivBy10 = 9;
 
-            if (MonHasTrait(&gPlayerParty[i], ABILITY_PICKUP)
+            if (FALSE && MonHasTrait(&gPlayerParty[i], ABILITY_PICKUP)
                 && species != SPECIES_NONE
                 && species != SPECIES_EGG
                 && (Random() % 1) == 0)
@@ -15013,6 +15028,10 @@ void BS_SetAuroraVeil(void)
                 gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer += 3;
         }
 
+        if (BattlerHasTrait(gBattlerAttacker, ABILITY_SCREEN_SETTER)
+         && (gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer == 5 || GetConfig(B_ALLOW_HELD_DUPES)))
+            gSideTimers[GetBattlerSide(gBattlerAttacker)].auroraVeilTimer += 3;
+
         if (IsDoubleBattle() && CountAliveMonsInBattle(BATTLE_ALIVE_SIDE, gBattlerAttacker) == 2)
             gBattleCommunication[MULTISTRING_CHOOSER] = 5;
         else
@@ -15332,7 +15351,8 @@ void BS_JumpIfWeatherAffected(void)
 {
     NATIVE_ARGS(u16 flags, const u8 *jumpInstr);
     u32 weather = cmd->flags;
-    if (IsBattlerWeatherAffected(gBattlerAttacker, weather))
+    if ((weather & B_WEATHER_SUN && BattlerHasTrait(gBattlerAttacker, ABILITY_MEGA_SOL))
+     || IsBattlerWeatherAffected(gBattlerAttacker, weather))
         gBattlescriptCurrInstr = cmd->jumpInstr;
     else
         gBattlescriptCurrInstr = cmd->nextInstr;

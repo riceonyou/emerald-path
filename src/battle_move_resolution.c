@@ -120,13 +120,11 @@ static enum CancelerResult CancelerAsleepOrFrozen(struct BattleContext *ctx)
         }
         else
         {
-            u32 toSub;
+            u32 toSub = 1;
             if (IsAbilityAndRecord(ctx->battlerAtk, ABILITY_EARLY_BIRD))
-                toSub = 2;
-            else
-                toSub = 1;
+                toSub = gBattleMons[ctx->battlerAtk].status1 & STATUS1_SLEEP;
 
-            if ((gBattleMons[ctx->battlerAtk].status1 & STATUS1_SLEEP) < toSub)
+            if ((gBattleMons[ctx->battlerAtk].status1 & STATUS1_SLEEP) <= toSub)
                 gBattleMons[ctx->battlerAtk].status1 &= ~STATUS1_SLEEP;
             else
                 gBattleMons[ctx->battlerAtk].status1 -= toSub;
@@ -1498,8 +1496,11 @@ static enum CancelerResult CancelerExplosion(struct BattleContext *ctx)
 static bool32 CanTwoTurnMoveFireThisTurn(struct BattleContext *ctx)
 {
     if (gBattleMoveEffects[GetMoveEffect(ctx->move)].semiInvulnerableEffect
-     || GetMoveEffect(ctx->move) == EFFECT_GEOMANCY
-     || !IsBattlerWeatherAffected(ctx->battlerAtk, GetMoveTwoTurnAttackWeather(ctx->move)))
+     || GetMoveEffect(ctx->move) == EFFECT_GEOMANCY)
+        return FALSE;
+    if (GetMoveTwoTurnAttackWeather(ctx->move) & B_WEATHER_SUN && BattlerHasTrait(ctx->battlerAtk, ABILITY_MEGA_SOL))
+        return TRUE;
+    if (!IsBattlerWeatherAffected(ctx->battlerAtk, GetMoveTwoTurnAttackWeather(ctx->move)))
         return FALSE;
     return TRUE;
 }
@@ -2091,7 +2092,8 @@ static enum MoveEndResult MoveEndProtectLikeEffect(void)
     }
 
     if (method != PROTECT_MAX_GUARD
-     && BattlerHasTrait(gBattlerAttacker, ABILITY_UNSEEN_FIST)
+     && (BattlerHasTrait(gBattlerAttacker, ABILITY_UNSEEN_FIST)
+      || BattlerHasTrait(gBattlerAttacker, ABILITY_PIERCING_DRILL))
      && IsMoveMakingContact(gBattlerAttacker, gBattlerTarget, gCurrentMove))
     {
         gBattleScripting.moveendState++;

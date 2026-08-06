@@ -6285,7 +6285,7 @@ BattleScript_IntimidateActivates::
 	call BattleScript_AbilityPopUp
 	setbyte gBattlerTarget, 0
 BattleScript_IntimidateLoop:
-	setbyte gDisplayAbility ABILITY_INTIMIDATE
+	sethword gDisplayAbility, ABILITY_INTIMIDATE
 	jumpiftargetally BattleScript_IntimidateLoopIncrement
 	jumpifabsent BS_TARGET, BattleScript_IntimidateLoopIncrement
 	jumpifvolatile BS_TARGET, VOLATILE_SUBSTITUTE, BattleScript_IntimidateLoopIncrement
@@ -6334,9 +6334,58 @@ BattleScript_IntimidateInReverse::
 	copybyte sBATTLER, gBattlerTarget
 	call BattleScript_AbilityPopUpTarget
 	pause B_WAIT_TIME_SHORT
+	jumpifhalfword CMP_EQUAL, gDisplayAbility, ABILITY_ILLUMINATE, BattleScript_IntimidateInReverseIlluminate
 	modifybattlerstatstage BS_TARGET, STAT_ATK, INCREASE, 1, BattleScript_IntimidateLoopIncrement, ANIM_ON
 	call BattleScript_TryIntimidateHoldEffects
 	goto BattleScript_IntimidateLoopIncrement
+BattleScript_IntimidateInReverseIlluminate:
+	modifybattlerstatstage BS_TARGET, STAT_SPATK, INCREASE, 1, BattleScript_IntimidateLoopIncrement, ANIM_ON
+	call BattleScript_TryIntimidateHoldEffects
+	goto BattleScript_IntimidateLoopIncrement
+
+BattleScript_IlluminateActivates::
+	savetarget
+	call BattleScript_AbilityPopUp
+	setbyte gBattlerTarget, 0
+BattleScript_IlluminateLoop:
+	sethword gDisplayAbility, ABILITY_ILLUMINATE
+	jumpiftargetally BattleScript_IlluminateLoopIncrement
+	jumpifabsent BS_TARGET, BattleScript_IlluminateLoopIncrement
+	jumpifvolatile BS_TARGET, VOLATILE_SUBSTITUTE, BattleScript_IlluminateLoopIncrement
+	jumpifintimidateabilityprevented
+BattleScript_IlluminateEffect:
+	copybyte sBATTLER, gBattlerAttacker
+	setstatchanger STAT_SPATK, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_IlluminateLoopIncrement
+	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_IlluminateContrary
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_CHANGE, BattleScript_IlluminateWontDecrease
+	printfromtable gStatDownStringIds
+BattleScript_IlluminateEffect_WaitString:
+	waitmessage B_WAIT_TIME_LONG
+	saveattacker
+	savetarget
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_TryIntimidateHoldEffects
+	restoreattacker
+	restoretarget
+BattleScript_IlluminateLoopIncrement:
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_IlluminateLoop
+	copybyte sBATTLER, gBattlerAttacker
+	destroyabilitypopup
+	restoretarget
+	restoreattacker
+	pause B_WAIT_TIME_MED
+	return
+
+BattleScript_IlluminateWontDecrease:
+	printstring STRINGID_STATSWONTDECREASE
+	goto BattleScript_IlluminateEffect_WaitString
+
+BattleScript_IlluminateContrary:
+	pushtraitstack BS_TARGET ABILITY_CONTRARY
+	printstring STRINGID_DEFENDERSSTATROSE
+	goto BattleScript_IlluminateEffect_WaitString
 
 BattleScript_SupersweetSyrupActivates::
  	savetarget
@@ -7221,6 +7270,12 @@ BattleScript_ComatoseActivates::
 BattleScript_ScreenCleanerActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_SCREENCLEANERENTERS
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_PickUpClearsHazards::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PICKUPCLEAREDHAZARDS
 	waitmessage B_WAIT_TIME_LONG
 	return
 
@@ -8240,6 +8295,13 @@ BattleScript_NeutralizingGasExitsLoopIncrement:
 BattleScript_MagicianActivates::
 	call BattleScript_AbilityPopUp
 	call BattleScript_ItemSteal
+	return
+
+BattleScript_FriskKnockedOff::
+	call BattleScript_AbilityPopUp
+	playanimation BS_TARGET, B_ANIM_ITEM_KNOCKOFF
+	printstring STRINGID_PKMNKNOCKEDOFF
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_SymbiosisActivates::

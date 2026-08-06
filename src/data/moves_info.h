@@ -450,7 +450,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
                 "2 critical-hit ratio."),
         #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 80,
+        .power = 75,
         .type = TYPE_NORMAL,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_3 ? 100 : 75,
         #if B_UPDATED_MOVE_DATA >= GEN_4
@@ -1357,7 +1357,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 65,
-        .pp = 15,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -2203,7 +2203,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_GRASS,
         .accuracy = 75,
-        .pp = 15,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -2622,7 +2622,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 70,
-        .pp = 20,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -4147,7 +4147,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Crabhammer"),
         .description = COMPOUND_STRING(
             "Hammers with a pincer. Has a\n"
-            "high critical-hit ratio."),
+            "2 critical-hit ratio."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 100 : 90,
         .type = TYPE_WATER,
@@ -20852,7 +20852,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Aqua Cutter"),
         .description = COMPOUND_STRING(
             "Pressurized water cut with a\n"
-            "high critical-hit ratio."),
+            "1 critical-hit ratio."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_WATER,

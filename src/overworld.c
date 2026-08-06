@@ -536,6 +536,11 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 						DoWarp();
 				}; 
                 break;
+        case (4):
+                //YOU BEAT THE CHAMPION
+                SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 18);
+				DoWarp();
+                break;
     }
 }
 

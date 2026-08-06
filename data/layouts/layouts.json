@@ -9439,7 +9439,7 @@
       "id": "LAYOUT_HOENN2_4",
       "name": "Hoenn2_4_Layout",
       "width": 34,
-      "height": 19,
+      "height": 21,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Hoenn2_4/border.bin",

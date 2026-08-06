@@ -629,16 +629,16 @@ script Hub_Event_Script_Kecleon {
 		dynmultipush("Rare Candy (¥30000)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
-		dynmultipush("Rare Candy (¥500000)",ITEM_RARE_CANDY)
+		dynmultipush("Rare Candy (¥9999999)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
-		dynmultipush("Rare Candy (¥100000)",ITEM_RARE_CANDY)
+		dynmultipush("Rare Candy (¥9999999)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
-		dynmultipush("Rare Candy (¥200000)",ITEM_RARE_CANDY)
+		dynmultipush("Rare Candy (¥9999999)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
-		dynmultipush("Rare Candy (¥300000)",ITEM_RARE_CANDY)
+		dynmultipush("Rare Candy (¥9999999)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}
 
@@ -758,10 +758,10 @@ script Hub_Event_Script_Kecleon {
 							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
 						}
 				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_2)){
-					if(checkmoney(50000)){
+					if(checkmoney(9999999)){
 							setflag(FLAG_RARE_CANDY_UNLOCKED_2)
 							giveitem(ITEM_RARE_CANDY, 1)
-							removemoney(50000)
+							removemoney(9999999)
 							updatemoneybox
 							playse(SE_SHOP)
 							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
@@ -770,10 +770,10 @@ script Hub_Event_Script_Kecleon {
 							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
 						}
 				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_3)){
-					if(checkmoney(100000)){
+					if(checkmoney(9999999)){
 							setflag(FLAG_RARE_CANDY_UNLOCKED_3)
 							giveitem(ITEM_RARE_CANDY, 1)
-							removemoney(100000)
+							removemoney(9999999)
 							updatemoneybox
 							playse(SE_SHOP)
 							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
@@ -782,10 +782,10 @@ script Hub_Event_Script_Kecleon {
 							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
 						}
 				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_4)){
-					if(checkmoney(200000)){
+					if(checkmoney(9999999)){
 							setflag(FLAG_RARE_CANDY_UNLOCKED_4)
 							giveitem(ITEM_RARE_CANDY, 1)
-							removemoney(200000)
+							removemoney(9999999)
 							updatemoneybox
 							playse(SE_SHOP)
 							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")
@@ -794,10 +794,10 @@ script Hub_Event_Script_Kecleon {
 							msgbox("I'm sorry. You don't have the money to\nbuy that item, kec.")
 						}
 				}elif(!flag(FLAG_RARE_CANDY_UNLOCKED_5)){
-					if(checkmoney(300000)){
+					if(checkmoney(9999999)){
 							setflag(FLAG_RARE_CANDY_UNLOCKED_5)
 							giveitem(ITEM_RARE_CANDY, 1)
-							removemoney(300000)
+							removemoney(9999999)
 							updatemoneybox
 							playse(SE_SHOP)
 							msgbox("You got a Rare Candy as a starter\nitem!\pThank you for your purchase!")

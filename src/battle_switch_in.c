@@ -237,6 +237,16 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
         {
             gBattleStruct->eventState.battlerSwitchIn++;
         }
+        else if (BattlerHasTrait(battler, ABILITY_PICKUP)
+              && AreAnyHazardsOnSide(GetBattlerSide(battler)))
+        {
+            RemoveAllHazardsFromField(GetBattlerSide(battler));
+            gBattleScripting.battler = gBattlerAbility = battler;
+            PushTraitStack(battler, ABILITY_PICKUP);
+            BattleScriptCall(BattleScript_PickUpClearsHazards);
+            gBattleStruct->eventState.battlerSwitchIn++;
+            effect = TRUE;
+        }
         else if (EmergencyExitCanBeTriggered(battler))
         {
             gBattleScripting.battler = gBattlerAbility = battler;

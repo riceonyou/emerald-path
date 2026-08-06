@@ -477,6 +477,8 @@ bool32 AI_BattlerAtMaxHp(enum BattlerId battlerId)
 
 bool32 AI_CanBattlerEscape(enum BattlerId battler)
 {
+    if (AI_BATTLER_HAS_TRAIT(battler, ABILITY_RUN_AWAY))
+        return TRUE;
     if (GetConfig(B_GHOSTS_ESCAPE) >= GEN_6 && IS_BATTLER_OF_TYPE(battler, TYPE_GHOST))
         return TRUE;
     if (Ai_BattlerHasHoldEffect(battler, HOLD_EFFECT_SHED_SHELL, gAiLogicData))
@@ -2333,8 +2335,7 @@ bool32 CanLowerStat(enum BattlerId battlerAtk, enum BattlerId battlerDef, struct
         if (SearchTraits(battlerTraits, ABILITY_BIG_PECKS))
             if (stat == STAT_DEF)
                 return FALSE;
-        if ((SearchTraits(battlerTraits, ABILITY_ILLUMINATE) && GetConfig(B_ILLUMINATE_EFFECT) >= GEN_9)
-         || SearchTraits(battlerTraits, ABILITY_KEEN_EYE)
+        if (SearchTraits(battlerTraits, ABILITY_KEEN_EYE)
          || SearchTraits(battlerTraits, ABILITY_MINDS_EYE))
             if (stat == STAT_ACC)
                 return FALSE;
@@ -3455,7 +3456,9 @@ bool32 BattlerHasMaxHPProtection(enum BattlerId battler)
         return TRUE;
     if (B_STURDY >= GEN_5 && AI_BATTLER_HAS_TRAIT(battler, ABILITY_STURDY))
         return TRUE;
-    if (AI_BATTLER_HAS_TRAIT(battler, ABILITY_MULTISCALE) || AI_BATTLER_HAS_TRAIT(battler, ABILITY_SHADOW_SHIELD))
+    if (AI_BATTLER_HAS_TRAIT(battler, ABILITY_MULTISCALE)
+     || AI_BATTLER_HAS_TRAIT(battler, ABILITY_SHIELD_OF_LEGEND)
+     || AI_BATTLER_HAS_TRAIT(battler, ABILITY_SHADOW_SHIELD))
         return TRUE;
     return FALSE;
 }
@@ -3814,18 +3817,15 @@ bool32 AI_HasChoiceEffect(enum BattlerId battler)
 bool32 IsWakeupTurn(enum BattlerId battler)
 {
     u32 sleepTurns = gBattleMons[battler].status1 & STATUS1_SLEEP;
-    u32 toSub;
 
     if (sleepTurns == 0)
         return FALSE;
 
-    // Early Bird reduces the sleep timer twice as fast.
+    // Early Bird now wakes immediately when acting while asleep.
     if (gAiLogicData->abilities[battler] == ABILITY_EARLY_BIRD)
-        toSub = 2;
-    else
-        toSub = 1;
+        return TRUE;
 
-    return sleepTurns <= toSub;
+    return sleepTurns <= 1;
 }
 
 bool32 AnyPartyMemberStatused(enum BattlerId battlerId, bool32 checkSoundproof)
@@ -5138,7 +5138,8 @@ bool32 IsUnseenFistContactMove(enum BattlerId battlerAtk, enum BattlerId battler
 {
     if (move == MOVE_NONE || move == MOVE_UNAVAILABLE)
         return FALSE;
-    if (gAiLogicData->abilities[battlerAtk] != ABILITY_UNSEEN_FIST)
+    if (gAiLogicData->abilities[battlerAtk] != ABILITY_UNSEEN_FIST
+     && gAiLogicData->abilities[battlerAtk] != ABILITY_PIERCING_DRILL)
         return FALSE;
     if (GetMoveEffect(move) == EFFECT_SHELL_SIDE_ARM)
     {
@@ -5840,6 +5841,24 @@ bool32 DoesIntimidateRaiseStats(u32 battler)
     return FALSE;
 }
 
+static bool32 DoesIlluminateRaiseStats(u32 battler)
+{
+    enum Ability battlerTraits[MAX_MON_TRAITS];
+    STORE_BATTLER_TRAITS(battler);
+
+    // Use AI Ability knowledge if this is an AI check
+    if(gAiLogicData->aiCalcInProgress)
+        battlerTraits[0] = gAiLogicData->abilities[battler];
+
+    if ((SearchTraits(battlerTraits, ABILITY_COMPETITIVE))
+     || (SearchTraits(battlerTraits, ABILITY_CONTRARY))
+     || (SearchTraits(battlerTraits, ABILITY_DEFIANT))
+     || (SearchTraits(battlerTraits, ABILITY_GUARD_DOG)))
+        return TRUE;
+
+    return FALSE;
+}
+
 // TODO: work out when to attack into the player's contextually 'beneficial' ability
 bool32 ShouldTriggerAbility(enum BattlerId battlerAtk, enum BattlerId battlerDef)
 {
@@ -6187,6 +6206,33 @@ enum AIScore BattlerBenefitsFromAbilityScore(enum BattlerId battler, enum Abilit
                 }
             }
             return IncreaseStatDownScore(battler, LEFT_FOE(battler), STAT_ATK);
+        }
+    }
+    case ABILITY_ILLUMINATE:
+    {
+        if (DoesIlluminateRaiseStats(LEFT_FOE(battler)))
+        {
+            return AWFUL_EFFECT;
+        }
+        else
+        {
+            if (HasTwoOpponents(battler))
+            {
+                if (DoesIlluminateRaiseStats(RIGHT_FOE(battler)))
+                {
+                    return AWFUL_EFFECT;
+                }
+                else
+                {
+                    enum AIScore score1 = IncreaseStatDownScore(battler, LEFT_FOE(battler), STAT_SPATK);
+                    enum AIScore score2 = IncreaseStatDownScore(battler, RIGHT_FOE(battler), STAT_SPATK);
+                    if (score1 > score2)
+                        return score1;
+                    else
+                        return score2;
+                }
+            }
+            return IncreaseStatDownScore(battler, LEFT_FOE(battler), STAT_SPATK);
         }
     }
     case ABILITY_NO_GUARD:

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokemon Species Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Species Editor</h1>
+                <label for="familyFile">Family file</label>
+                <select id="familyFile"></select>
+                <input id="speciesFilter" type="search" placeholder="Filter species..." />
+            </div>
+            <ul id="speciesList" class="species-list"></ul>
+        </aside>
+
+        <main class="editor-pane">
+            <header class="editor-header">
+                <div>
+                    <h2 id="speciesTitle">Choose a species</h2>
+                    <p id="speciesSubtitle">Select a species on the left to edit its data.</p>
+                </div>
+                <div class="actions">
+                    <button id="reloadButton" type="button">Reload File</button>
+                    <button id="saveButton" type="button" class="primary" disabled>Save</button>
+                </div>
+            </header>
+
+            <section class="editor-grid">
+                <div class="card">
+                    <h3>Base Stats</h3>
+                    <div class="stats-grid">
+                        <label>HP <input id="baseHP" type="text" /></label>
+                        <label>Attack <input id="baseAttack" type="text" /></label>
+                        <label>Defense <input id="baseDefense" type="text" /></label>
+                        <label>Speed <input id="baseSpeed" type="text" /></label>
+                        <label>Sp. Attack <input id="baseSpAttack" type="text" /></label>
+                        <label>Sp. Defense <input id="baseSpDefense" type="text" /></label>
+                    </div>
+                    <div class="stat-total-box">
+                        <span>Base Stat Total</span>
+                        <strong id="baseStatTotal">N/A</strong>
+                    </div>
+                    <p class="hint">Stats accept raw expressions, like 80 + 4.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Abilities</h3>
+                    <div class="field-stack">
+                        <label>Ability 1 (regular)<input id="ability1" class="ability-input" type="text" list="abilityOptions" /></label>
+                        <label>Ability 2 (regular)<input id="ability2" class="ability-input" type="text" list="abilityOptions" /></label>
+                        <label>Ability 3 (hidden)<input id="ability3" class="ability-input" type="text" list="abilityOptions" /></label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Innates</h3>
+                    <div id="innatesContainer" class="field-stack"></div>
+                    <div class="inline-actions">
+                        <button id="addInnateButton" type="button">Add innate</button>
+                    </div>
+                    <p class="hint">If no innates are present, the .innates line is removed from file.</p>
+                </div>
+
+                <div class="card card-wide">
+                    <h3>Evolutions</h3>
+                    <textarea id="evolutions" rows="5" spellcheck="false"></textarea>
+                    <p class="hint">Edit as raw expression, e.g. EVOLUTION({EVO_LEVEL, 16, SPECIES_IVYSAUR})</p>
+                </div>
+            </section>
+
+            <footer id="statusBar" class="status">Ready.</footer>
+        </main>
+    </div>
+
+    <datalist id="abilityOptions"></datalist>
+    <template id="innateRowTemplate">
+        <div class="innate-row">
+            <input class="innate-input" type="text" list="abilityOptions" />
+            <button type="button" class="danger remove-innate">Remove</button>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>

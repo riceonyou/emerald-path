@@ -1,0 +1,48 @@
+mapscripts Elite4_Hoenn_2_MapScripts {
+}
+
+script Elite4_Hoenn_2_EventScript_MegaAbsol{
+
+	trainerbattle_single(TRAINER_MEGAABSOL, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Elite4_Hoenn_2_EventScript_MegaSableye{
+
+	trainerbattle_single(TRAINER_MEGASABLEYE, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Elite4_Hoenn_2_EventScript_MegaGlalie{
+
+	trainerbattle_single(TRAINER_MEGAGLALIE, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Elite4_Hoenn_2_EventScript_MegaSalamence{
+
+	trainerbattle_single(TRAINER_MEGASALAMENCE, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+script Elite4_Hoenn_2_EventScript_MegaSwampert{
+
+	trainerbattle_single(TRAINER_MEGASWAMPERT, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+

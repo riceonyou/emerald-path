@@ -36,7 +36,7 @@ script Hoenn1_BirchBag_4{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 2)
+    setvar(VAR_0x8000, 33)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate

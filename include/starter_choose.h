@@ -16,7 +16,7 @@ struct BirchBagWeightedChoice
 
 u16 GetStarterPokemon(u16 chosenStarterId);
 void CB2_ChooseStarter(void);
-void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u8 count);
+void SetBirchBagWeightedChoices(const struct BirchBagWeightedChoice *choices, u16 count);
 void ResetBirchBagWeightedPool(void);
 void ChooseBirchBagPokemonWeighted(void);
 

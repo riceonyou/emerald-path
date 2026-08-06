@@ -1,0 +1,11 @@
+mapscripts Elite4_Hoenn_1_MapScripts {
+}
+
+script Elite4_Hoenn_1_EventScript_MSceptile{
+
+	trainerbattle_single(TRAINER_MEGASCEPTILE, "test.", "test.")
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}

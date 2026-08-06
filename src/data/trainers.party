@@ -82,7 +82,11 @@ Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
+
+Blissey @ Leftovers
+Level: 10
+- Howl
 
 Zigzagoon 
 Level: 12  
@@ -103,7 +107,7 @@ Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena @ Oran Berry
 Adamant Nature
@@ -135,7 +139,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull @ Wacan Berry
 Level: 11
@@ -166,7 +170,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer / Powerful Status
+AI: Basic Trainer / Randomize Party Indices / Powerful Status
 
 Surskit
 Ability: Rain Dish
@@ -202,7 +206,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Oddish @ Miracle Seed
 Nature: Calm
@@ -216,7 +220,7 @@ Level: 11
 - Vine Whip
 - Acid Spray
 
-Roselia @ Big Root
+Budew @ Big Root
 Nature: Timid
 Level: 11
 - Mega Drain
@@ -230,9 +234,9 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
-Beautifly @ Coba Berry
+Wurmple @ Coba Berry
 Nature: Impish
 Level: 12
 - U-turn
@@ -264,7 +268,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish @ Toxic Orb
 Level: 13
@@ -299,7 +303,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer / Powerful Status
+AI: Basic Trainer / Randomize Party Indices / Powerful Status
 
 Surskit @ Oran Berry
 Ability: Rain Dish
@@ -337,7 +341,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer / Powerful Status
+AI: Basic Trainer / Randomize Party Indices / Powerful Status
 
 Seedot @ Heat Rock
 Ability: Chlorophyll
@@ -370,7 +374,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slakoth @ Oran Berry
 Level: 13
@@ -394,7 +398,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Foongus
 Ability: Effect Spore
@@ -426,7 +430,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty @ Focus Sash
 Level: 13
@@ -448,7 +452,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Taillow @ Silk Scarf
 Nature: Brave
@@ -488,7 +492,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike @ Oran Berry
 Level: 13
@@ -518,7 +522,7 @@ Pic: Substitute
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nosepass @ Berry Juice
 Nature: Relaxed
@@ -577,7 +581,7 @@ Pic: Substitute
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper @ Wacan Berry
 Ability: Drizzle
@@ -610,7 +614,7 @@ Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Crawdaunt @ Berry Juice
 Ability: Hyper Cutter
@@ -646,7 +650,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sharpedo
 Ability: Rough Skin
@@ -689,7 +693,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer @ Sitrus Berry
 Ability: Water Veil
@@ -734,7 +738,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azumarill @ Life Orb  
 Level: 24
@@ -778,7 +782,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo @ Sharp Beak
 Ability: Early Bird
@@ -813,7 +817,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Noibat @ Lum Berry
 Ability: Infiltrator
@@ -847,7 +851,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrode @ Focus Band
 Ability: Aftermath
@@ -891,7 +895,7 @@ Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Ability: Plus
@@ -945,7 +949,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat @ Light Clay
 Ability: Illuminate
@@ -997,7 +1001,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Thwackey
 Ability: Grassy Surge
@@ -1041,7 +1045,7 @@ Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swalot @ Chesto Berry
 Ability: Liquid Ooze
@@ -1095,7 +1099,7 @@ Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton @ Chople Berry
 Ability: Sturdy
@@ -1140,7 +1144,7 @@ Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric @ Air Balloon
 Ability: Electric Surge
@@ -1200,7 +1204,7 @@ Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Flygon @ Choice Scarf
 Ability: Levitate
@@ -1234,7 +1238,7 @@ Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Cacturne @ Rocky Helmet
 Ability: Water Absorb
@@ -1280,7 +1284,7 @@ Gender: Male
 Music: Aqua
 Items: Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Claydol @ Mental Herb
 Ability: Levitate
@@ -1316,7 +1320,7 @@ Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skarmory @ Rocky Helmet
 Ability: Sturdy
@@ -1361,7 +1365,7 @@ Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda @ Silk Scarf
 Ability: Contrary
@@ -1406,7 +1410,7 @@ Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ninetales @ Charcoal
 Ability: Drought
@@ -1451,7 +1455,7 @@ Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 
 Zangoose @ Toxic Orb
@@ -1488,7 +1492,7 @@ Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seviper @ Black Sludge
 Ability: Infiltrator
@@ -1533,7 +1537,7 @@ Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Solrock @ Heat Rock
 Ability: Levitate
@@ -1578,7 +1582,7 @@ Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Silk Scarf
 Ability: Gluttony
@@ -1625,7 +1629,7 @@ Gender: Male
 Music: Aqua
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Cradily @ Leftovers
 Ability: Storm Drain
@@ -1661,7 +1665,7 @@ Pic: Substitute
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Armaldo @ Silver Powder
 Ability: Battle Armor
@@ -1707,7 +1711,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Whiscash @ Leftovers
 Ability: Oblivious
@@ -1752,7 +1756,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash @ Soft Sand
 Ability: Sand Veil
@@ -1797,7 +1801,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wigglytuff @ Throat Spray
 Ability: Competitive
@@ -1842,7 +1846,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zoroark-Hisui @ Leftovers
 Ability: Illusion
@@ -1902,7 +1906,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 31
@@ -1923,7 +1927,7 @@ Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 34
@@ -1944,7 +1948,7 @@ Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 13
@@ -1961,7 +1965,7 @@ Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azurill
 Level: 12
@@ -1978,7 +1982,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 23
@@ -1995,7 +1999,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 27
@@ -2028,7 +2032,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 25
@@ -2053,7 +2057,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 27
@@ -2070,7 +2074,7 @@ Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 26
@@ -2083,7 +2087,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 30
@@ -2100,7 +2104,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 33
@@ -2117,7 +2121,7 @@ Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 36
@@ -2134,7 +2138,7 @@ Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 17
@@ -2151,7 +2155,7 @@ Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 27
@@ -2168,7 +2172,7 @@ Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 30
@@ -2185,7 +2189,7 @@ Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 33
@@ -2202,7 +2206,7 @@ Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 36
@@ -2219,7 +2223,7 @@ Pic: Substitute
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 39
@@ -2244,7 +2248,7 @@ Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azurill
 Level: 12
@@ -2254,27 +2258,27 @@ Azurill
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_MEGA_GARDEVOIR ===
+=== TRAINER_MEGAGARDEVOIR ===
 Name: MGARDEVOIR
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_SWAMPERT ===
+=== TRAINER_MEGASWAMPERT ===
 Name: SWAMPERT
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 26
@@ -2289,7 +2293,7 @@ Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Treecko
 Level: 12
@@ -2323,7 +2327,7 @@ Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Grovyle @ Miracle Seed
 Ability: Overgrow
@@ -2368,7 +2372,7 @@ Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sceptile @ Miracle Seed
 Ability: Overgrow
@@ -2415,22 +2419,68 @@ Level: 39
 - Reflect
 - Rest
 
-=== TRAINER_MSCEPTILE ===
+=== TRAINER_MEGASCEPTILE ===
 Name: MSCEPTILE
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
-Linoone
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
+Sceptile-Mega @ Choice Band  
+Ability: Lightning Rod
+Nature: Jolly
+Level: 50
+- Leaf Blade
+- Dragon Claw
+- Rock Slide
+- Swords Dance
+
+Luxray @ Magnet
+Ability: Intimidate
+Nature: Adamant
+Level: 48
+- Wild Charge
+- Crunch
+- Ice Fang
+- Volt Switch
+
+Staraptor-Mega @ Sharp Beak
+Ability: Contrary
+Nature: Jolly
+Level: 48
+- Brave Bird
+- Close Combat
+- Protect
+- Roost
+
+Pinsir-Mega @ Silver Powder
+Ability: Aerilate
+Nature: Jolly
+Level: 48
+- Body Slam
+- Feint
+- Lunge
+- Swords Dance
+
+Gothitelle @ Light Clay
+Ability: Competitive
+Nature: Bold
+Level: 48
+- Psychic
+- Thunder Wave
+- Reflect
+- Light Screen
+
+Fezandipiti @ Heavy-Duty Boots
+Ability: Toxic Chain
+Nature: Bold
+Level: 48
+- Beat Up
+- Heat Wave
+- Roost
+- U-turn
 
 === TRAINER_TORCHIC ===
 Name: Torchic
@@ -2439,7 +2489,7 @@ Pic: Substitute
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 36
@@ -2457,7 +2507,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 26
@@ -2474,7 +2524,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 26
@@ -2491,7 +2541,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slakoth @ Sitrus Berry
 Level: 26
@@ -2509,7 +2559,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 28
@@ -2559,7 +2609,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sableye
 Level: 44
@@ -2581,7 +2631,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mawile
 Level: 46
@@ -2599,7 +2649,7 @@ Gender: Male
 Music: Cool
 Items: Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 17
@@ -2621,7 +2671,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Cacturne
 Level: 43
@@ -2639,7 +2689,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 43
@@ -2657,7 +2707,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 42
@@ -2679,7 +2729,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dodrio
 Level: 42
@@ -2705,7 +2755,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 42
@@ -2727,7 +2777,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 26
@@ -2749,7 +2799,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 29
@@ -2771,7 +2821,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 32
@@ -2793,7 +2843,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 35
@@ -2815,7 +2865,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Graveler
 Level: 33
@@ -2833,7 +2883,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Delcatty
 Level: 26
@@ -2849,7 +2899,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wigglytuff
 Level: 26
@@ -2866,7 +2916,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Zangoose
 Level: 26
@@ -2882,7 +2932,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Mawile
 Level: 29
@@ -2916,7 +2966,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Lairon
 Level: 45
@@ -2934,7 +2984,7 @@ Gender: Female
 Music: Cool
 Items: Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 17
@@ -2956,7 +3006,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sableye
 Level: 30
@@ -2970,7 +3020,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 45
@@ -2984,7 +3034,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Claydol
 Level: 45
@@ -2998,7 +3048,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Torkoal
 Level: 42
@@ -3020,7 +3070,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skarmory
 Level: 43
@@ -3038,7 +3088,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 42
@@ -3060,7 +3110,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 26
@@ -3082,7 +3132,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 29
@@ -3104,7 +3154,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 32
@@ -3126,7 +3176,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 34
@@ -3147,7 +3197,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Banette
 Level: 41
@@ -3164,7 +3214,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Duskull
 Level: 30
@@ -3181,7 +3231,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Duskull
 Level: 29
@@ -3198,7 +3248,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sableye
 Level: 32
@@ -3211,7 +3261,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shuppet
 Level: 32
@@ -3224,7 +3274,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sableye
 Level: 31
@@ -3241,7 +3291,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spoink
 Level: 35
@@ -3258,7 +3308,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spoink
 Level: 40
@@ -3275,7 +3325,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Duskull
 Level: 42
@@ -3297,7 +3347,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon @ Nugget
 Level: 7
@@ -3311,7 +3361,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc @ Nugget
 Level: 39
@@ -3336,7 +3386,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 26
@@ -3358,7 +3408,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon @ Nugget
 Level: 11
@@ -3374,7 +3424,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seaking @ Nugget
 Level: 40
@@ -3388,7 +3438,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia @ Nugget
 Level: 45
@@ -3402,7 +3452,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 27
@@ -3416,7 +3466,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 30
@@ -3430,7 +3480,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 33
@@ -3444,7 +3494,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 36
@@ -3461,7 +3511,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 21
@@ -3474,7 +3524,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 21
@@ -3487,7 +3537,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 21
@@ -3500,7 +3550,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 29
@@ -3525,7 +3575,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 40
@@ -3538,7 +3588,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azumarill
 Level: 40
@@ -3551,7 +3601,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Clamperl
 Level: 35
@@ -3583,7 +3633,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 39
@@ -3600,7 +3650,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 35
@@ -3625,7 +3675,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 38
@@ -3650,7 +3700,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 41
@@ -3675,7 +3725,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 44
@@ -3701,7 +3751,7 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon @ Nugget
 Level: 7
@@ -3714,7 +3764,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Whiscash
 Level: 33
@@ -3732,7 +3782,7 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azumarill @ Nugget
 Level: 45
@@ -3746,7 +3796,7 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 27
@@ -3760,7 +3810,7 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 30
@@ -3774,7 +3824,7 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 33
@@ -3788,7 +3838,7 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Nugget
 Level: 36
@@ -3805,7 +3855,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Aron
 Level: 19
@@ -3818,7 +3868,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 25
@@ -3835,7 +3885,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Rhyhorn
 Level: 31
@@ -3848,7 +3898,7 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 20
@@ -3861,7 +3911,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lairon
 Level: 27
@@ -3874,7 +3924,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lairon
 Level: 29
@@ -3891,7 +3941,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lairon
 Level: 32
@@ -3908,7 +3958,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Aggron
 Level: 35
@@ -3925,7 +3975,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 26
@@ -3938,7 +3988,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 26
@@ -3951,7 +4001,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 24
@@ -3968,7 +4018,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 24
@@ -3989,7 +4039,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 26
@@ -4002,7 +4052,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacruel
 Level: 26
@@ -4015,7 +4065,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 26
@@ -4028,7 +4078,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 25
@@ -4045,7 +4095,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 33
@@ -4062,7 +4112,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 34
@@ -4075,7 +4125,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacruel
 Level: 34
@@ -4088,7 +4138,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Horsea
 Level: 34
@@ -4101,7 +4151,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gyarados
 Level: 34
@@ -4114,7 +4164,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 31
@@ -4135,7 +4185,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gyarados
 Level: 34
@@ -4148,7 +4198,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 34
@@ -4161,7 +4211,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 33
@@ -4178,7 +4228,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacruel
 Level: 33
@@ -4195,7 +4245,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sharpedo
 Level: 34
@@ -4208,7 +4258,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sealeo
 Level: 34
@@ -4221,7 +4271,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spheal
 Level: 34
@@ -4234,7 +4284,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gyarados
 Level: 34
@@ -4247,7 +4297,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 33
@@ -4268,7 +4318,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 33
@@ -4285,7 +4335,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sharpedo
 Level: 30
@@ -4298,7 +4348,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sharpedo
 Level: 33
@@ -4311,7 +4361,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 34
@@ -4328,7 +4378,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Starmie
 Level: 37
@@ -4345,7 +4395,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 13
@@ -4358,7 +4408,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 32
@@ -4375,7 +4425,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 34
@@ -4388,7 +4438,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 24
@@ -4405,7 +4455,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 19
@@ -4418,7 +4468,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machoke
 Level: 27
@@ -4431,7 +4481,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 29
@@ -4448,7 +4498,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 31
@@ -4469,7 +4519,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 33
@@ -4494,7 +4544,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Makuhita
 Level: 26
@@ -4511,7 +4561,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 19
@@ -4524,7 +4574,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 32
@@ -4537,7 +4587,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 17
@@ -4561,7 +4611,7 @@ Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena
 Level: 31
@@ -4578,7 +4628,7 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 32
@@ -4591,7 +4641,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Voltorb
 Level: 17
@@ -4608,7 +4658,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 30
@@ -4625,7 +4675,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 15
@@ -4642,7 +4692,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 25
@@ -4663,7 +4713,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 28
@@ -4684,7 +4734,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 31
@@ -4705,7 +4755,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 34
@@ -4726,7 +4776,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 23
@@ -4739,7 +4789,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 22
@@ -4756,7 +4806,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 23
@@ -4769,7 +4819,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 23
@@ -4782,7 +4832,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 23
@@ -4795,7 +4845,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 18
@@ -4812,7 +4862,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 26
@@ -4829,7 +4879,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 29
@@ -4846,7 +4896,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 32
@@ -4863,7 +4913,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magcargo
 Level: 35
@@ -4880,7 +4930,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 23
@@ -4897,7 +4947,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 21
@@ -4930,7 +4980,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nuzleaf
 Level: 18
@@ -4943,7 +4993,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 18
@@ -4960,7 +5010,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 24
@@ -4973,7 +5023,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 20
@@ -4990,7 +5040,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 21
@@ -5003,7 +5053,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 18
@@ -5016,7 +5066,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 26
@@ -5033,7 +5083,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 29
@@ -5050,7 +5100,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 31
@@ -5071,7 +5121,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 34
@@ -5092,7 +5142,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 26
@@ -5105,7 +5155,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wurmple
 Level: 24
@@ -5126,7 +5176,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wurmple
 Level: 27
@@ -5147,7 +5197,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 27
@@ -5168,7 +5218,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dustox
 Level: 16
@@ -5185,7 +5235,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 31
@@ -5206,7 +5256,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 34
@@ -5227,7 +5277,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 36
@@ -5252,7 +5302,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 38
@@ -5281,7 +5331,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Abra
 Level: 15
@@ -5295,7 +5345,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kirlia
 Level: 36
@@ -5308,7 +5358,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 36
@@ -5321,7 +5371,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Girafarig
 Level: 36
@@ -5334,7 +5384,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 26
@@ -5355,7 +5405,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 41
@@ -5372,7 +5422,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Solrock
 Level: 31
@@ -5385,7 +5435,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 33
@@ -5402,7 +5452,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 38
@@ -5419,7 +5469,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 41
@@ -5436,7 +5486,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Solrock
 Level: 45
@@ -5453,7 +5503,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Abra
 Level: 16
@@ -5467,7 +5517,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kirlia
 Level: 36
@@ -5480,7 +5530,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Xatu
 Level: 36
@@ -5493,7 +5543,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 36
@@ -5506,7 +5556,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wobbuffet
 Level: 26
@@ -5527,7 +5577,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kirlia
 Level: 41
@@ -5544,7 +5594,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 30
@@ -5561,7 +5611,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 34
@@ -5578,7 +5628,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 37
@@ -5595,7 +5645,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 40
@@ -5612,7 +5662,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lunatone
 Level: 43
@@ -5629,7 +5679,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 29
@@ -5642,7 +5692,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 44
@@ -5659,7 +5709,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zangoose
 Level: 45
@@ -5672,7 +5722,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 34
@@ -5685,7 +5735,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 36
@@ -5710,7 +5760,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 39
@@ -5734,7 +5784,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 41
@@ -5768,7 +5818,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Force Setup First Turn
 Mugshot: Purple
 
 Mightyena
@@ -5819,7 +5869,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 Mugshot: Green
 
 Dusclops
@@ -5870,7 +5920,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 Mugshot: Pink
 
 Sealeo
@@ -5921,7 +5971,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 Mugshot: Blue
 
 Shelgon
@@ -5972,7 +6022,7 @@ Gender: Female
 Music: Female
 Items: Potion / Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 12
@@ -6006,7 +6056,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 16
@@ -6040,7 +6090,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Voltorb
 Level: 20
@@ -6082,7 +6132,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 24
@@ -6124,7 +6174,7 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 27
@@ -6166,7 +6216,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Randomize Party Indices / Risky
 
 Swablu
 Level: 29
@@ -6216,7 +6266,7 @@ Gender: Male
 Music: Female
 Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Claydol
 Level: 41
@@ -6258,7 +6308,7 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 41
@@ -6307,7 +6357,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 9
@@ -6320,7 +6370,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 17
@@ -6333,7 +6383,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 15
@@ -6354,7 +6404,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 26
@@ -6371,7 +6421,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kirlia
 Level: 29
@@ -6388,7 +6438,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kirlia
 Level: 32
@@ -6405,7 +6455,7 @@ Pic: School Kid M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kirlia
 Level: 34
@@ -6426,7 +6476,7 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 9
@@ -6439,7 +6489,7 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 16
@@ -6456,7 +6506,7 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 26
@@ -6473,7 +6523,7 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 29
@@ -6490,7 +6540,7 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 32
@@ -6507,7 +6557,7 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 35
@@ -6524,7 +6574,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 30
@@ -6549,7 +6599,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 15
@@ -6573,7 +6623,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 28
@@ -6597,7 +6647,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 31
@@ -6621,7 +6671,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 34
@@ -6645,7 +6695,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Linoone
 Level: 36
@@ -6669,7 +6719,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Taillow @ Oran Berry
 Level: 16
@@ -6686,7 +6736,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty @ Oran Berry
 Level: 15
@@ -6699,7 +6749,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty @ Oran Berry
 Level: 22
@@ -6756,7 +6806,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty @ Oran Berry
 Level: 29
@@ -6769,7 +6819,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty @ Oran Berry
 Level: 32
@@ -6782,7 +6832,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Delcatty @ Oran Berry
 Level: 35
@@ -6795,7 +6845,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Delcatty @ Sitrus Berry
 Level: 38
@@ -6808,7 +6858,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Roselia @ Oran Berry
 Level: 17
@@ -6821,7 +6871,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pikachu @ Oran Berry
 Level: 30
@@ -6834,7 +6884,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azurill @ Oran Berry
 Level: 35
@@ -6855,7 +6905,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle @ Oran Berry
 Level: 14
@@ -6872,7 +6922,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle @ Oran Berry
 Level: 26
@@ -6889,7 +6939,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle @ Oran Berry
 Level: 29
@@ -6906,7 +6956,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle @ Oran Berry
 Level: 32
@@ -6923,7 +6973,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle @ Sitrus Berry
 Level: 35
@@ -6940,7 +6990,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 27
@@ -6953,7 +7003,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 33
@@ -6970,7 +7020,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 36
@@ -6987,7 +7037,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 39
@@ -7004,7 +7054,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 42
@@ -7021,7 +7071,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 18
@@ -7038,7 +7088,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 21
@@ -7055,7 +7105,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 30
@@ -7072,7 +7122,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 33
@@ -7089,7 +7139,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 36
@@ -7106,7 +7156,7 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 39
@@ -7123,7 +7173,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena
 Level: 5
@@ -7136,7 +7186,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 5
@@ -7153,7 +7203,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 10
@@ -7167,7 +7217,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 8
@@ -7184,7 +7234,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 9
@@ -7197,7 +7247,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 17
@@ -7223,7 +7273,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slaking
 Level: 43
@@ -7249,7 +7299,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gardevoir
 Level: 43
@@ -7274,7 +7324,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Trapinch
 Level: 19
@@ -7287,7 +7337,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Aron
 Level: 19
@@ -7300,7 +7350,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 27
@@ -7313,7 +7363,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 28
@@ -7330,7 +7380,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 31
@@ -7351,7 +7401,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 34
@@ -7372,7 +7422,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 14
@@ -7389,7 +7439,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 4
@@ -7406,7 +7456,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Aron
 Level: 15
@@ -7424,7 +7474,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 Mugshot: Yellow
 
 Wailord
@@ -7482,7 +7532,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 5
@@ -7503,7 +7553,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 5
@@ -7524,7 +7574,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 16
@@ -7545,7 +7595,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 10
@@ -7566,7 +7616,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 11
@@ -7579,7 +7629,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 11
@@ -7604,7 +7654,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Barboach
 Level: 19
@@ -7617,7 +7667,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 25
@@ -7634,7 +7684,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 16
@@ -7647,7 +7697,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 25
@@ -7664,7 +7714,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 24
@@ -7685,7 +7735,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gyarados
 Level: 29
@@ -7710,7 +7760,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gyarados
 Level: 31
@@ -7735,7 +7785,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Gyarados
 Level: 33
@@ -7760,7 +7810,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 19
@@ -7793,7 +7843,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Voltorb
 Level: 6
@@ -7814,7 +7864,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 14
@@ -7831,7 +7881,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 16
@@ -7844,7 +7894,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 30
@@ -7857,7 +7907,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 33
@@ -7870,7 +7920,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 36
@@ -7883,7 +7933,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 39
@@ -7896,7 +7946,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 16
@@ -7909,7 +7959,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 14
@@ -7930,7 +7980,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 28
@@ -7943,7 +7993,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 31
@@ -7956,7 +8006,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 34
@@ -7969,7 +8019,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magneton
 Level: 37
@@ -7982,7 +8032,7 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 17
@@ -7995,7 +8045,7 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 28
@@ -8008,7 +8058,7 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 31
@@ -8021,7 +8071,7 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dodrio
 Level: 34
@@ -8034,7 +8084,7 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dodrio
 Level: 37
@@ -8047,7 +8097,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 17
@@ -8060,7 +8110,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 28
@@ -8073,7 +8123,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 31
@@ -8086,7 +8136,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dodrio
 Level: 34
@@ -8099,7 +8149,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dodrio
 Level: 37
@@ -8112,7 +8162,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 33
@@ -8129,7 +8179,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 25
@@ -8146,7 +8196,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 35
@@ -8159,7 +8209,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 33
@@ -8176,7 +8226,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 26
@@ -8193,7 +8243,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 39
@@ -8206,7 +8256,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 42
@@ -8219,7 +8269,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Starmie
 Level: 45
@@ -8232,7 +8282,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Starmie
 Level: 48
@@ -8245,7 +8295,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 34
@@ -8258,7 +8308,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 26
@@ -8275,7 +8325,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 34
@@ -8288,7 +8338,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 35
@@ -8301,7 +8351,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 27
@@ -8318,7 +8368,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 39
@@ -8331,7 +8381,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 42
@@ -8344,7 +8394,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Starmie
 Level: 45
@@ -8357,7 +8407,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Starmie
 Level: 48
@@ -8370,7 +8420,7 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 37
@@ -8387,7 +8437,7 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 41
@@ -8404,7 +8454,7 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 44
@@ -8421,7 +8471,7 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Bagon
 Level: 46
@@ -8442,7 +8492,7 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 49
@@ -8463,7 +8513,7 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Bagon
 Level: 34
@@ -8480,7 +8530,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 26
@@ -8493,7 +8543,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 25
@@ -8510,7 +8560,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 26
@@ -8523,7 +8573,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 27
@@ -8544,7 +8594,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skarmory
 Level: 30
@@ -8557,7 +8607,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 33
@@ -8574,7 +8624,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 29
@@ -8591,7 +8641,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 28
@@ -8608,7 +8658,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swablu
 Level: 29
@@ -8621,7 +8671,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 36
@@ -8642,7 +8692,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Taillow
 Level: 25
@@ -8659,7 +8709,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Natu
 Level: 32
@@ -8676,7 +8726,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Natu
 Level: 35
@@ -8693,7 +8743,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Natu
 Level: 38
@@ -8710,7 +8760,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 41
@@ -8727,7 +8777,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Natu
 Level: 33
@@ -8744,7 +8794,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 34
@@ -8757,7 +8807,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Ninjask
 Level: 26
@@ -8770,7 +8820,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Ninjask
 Level: 25
@@ -9014,7 +9064,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 13
@@ -9027,7 +9077,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 13
@@ -9040,7 +9090,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 18
@@ -9057,7 +9107,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 27
@@ -9070,7 +9120,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 27
@@ -9083,7 +9133,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 26
@@ -9100,7 +9150,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 29
@@ -9117,7 +9167,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 32
@@ -9134,7 +9184,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 35
@@ -9151,7 +9201,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 19
@@ -9168,7 +9218,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 28
@@ -9185,7 +9235,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Castform
 Level: 30
@@ -9202,7 +9252,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 29
@@ -9219,7 +9269,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 32
@@ -9236,7 +9286,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 34
@@ -9261,7 +9311,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 37
@@ -9286,7 +9336,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 25
@@ -9303,7 +9353,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 26
@@ -9316,7 +9366,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 26
@@ -9329,7 +9379,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 25
@@ -9346,7 +9396,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 26
@@ -9359,7 +9409,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Horsea
 Level: 25
@@ -9376,7 +9426,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 26
@@ -9389,7 +9439,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 24
@@ -9410,7 +9460,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 34
@@ -9423,7 +9473,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 34
@@ -9436,7 +9486,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 34
@@ -9449,7 +9499,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seaking
 Level: 34
@@ -9462,7 +9512,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 33
@@ -9479,7 +9529,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 34
@@ -9492,7 +9542,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 33
@@ -9509,7 +9559,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 34
@@ -9522,7 +9572,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seaking
 Level: 34
@@ -9535,7 +9585,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azumarill
 Level: 34
@@ -9548,7 +9598,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 33
@@ -9565,7 +9615,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seaking
 Level: 34
@@ -9578,7 +9628,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Horsea
 Level: 33
@@ -9595,7 +9645,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lanturn
 Level: 34
@@ -9612,7 +9662,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 33
@@ -9629,7 +9679,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seaking
 Level: 35
@@ -9642,7 +9692,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 38
@@ -9655,7 +9705,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 41
@@ -9668,7 +9718,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 43
@@ -9685,7 +9735,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 45
@@ -9706,7 +9756,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 22
@@ -9731,7 +9781,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 22
@@ -9756,7 +9806,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Taillow
 Level: 17
@@ -9773,7 +9823,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 18
@@ -9790,7 +9840,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty
 Level: 23
@@ -9807,7 +9857,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 19
@@ -9828,7 +9878,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wobbuffet
 Level: 32
@@ -9845,7 +9895,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 17
@@ -9862,7 +9912,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 25
@@ -9883,7 +9933,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 28
@@ -9904,7 +9954,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 31
@@ -9925,7 +9975,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 40
@@ -9946,7 +9996,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Level: 15
@@ -9963,7 +10013,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Level: 27
@@ -9980,7 +10030,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seedot
 Level: 6
@@ -9997,7 +10047,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beautifly
 Level: 26
@@ -10014,7 +10064,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Level: 9
@@ -10031,7 +10081,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Duskull
 Level: 10
@@ -10052,7 +10102,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Level: 30
@@ -10069,7 +10119,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Level: 33
@@ -10094,7 +10144,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Plusle
 Level: 36
@@ -10119,7 +10169,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 12
@@ -10136,7 +10186,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 13
@@ -10149,7 +10199,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 33
@@ -10166,7 +10216,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 11
@@ -10187,7 +10237,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacruel
 Level: 44
@@ -10204,7 +10254,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 43
@@ -10225,7 +10275,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spheal
 Level: 25
@@ -10242,7 +10292,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 36
@@ -10263,7 +10313,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 39
@@ -10284,7 +10334,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 42
@@ -10305,7 +10355,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 45
@@ -10326,7 +10376,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 23
@@ -10339,7 +10389,7 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Feebas @ Oran Berry
 Level: 39
@@ -10365,7 +10415,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Absol
 Level: 27
@@ -10378,7 +10428,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Koffing
 Level: 31
@@ -10395,7 +10445,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Castform
 Level: 31
@@ -10412,7 +10462,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 33
@@ -10429,7 +10479,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machoke
 Level: 33
@@ -10447,7 +10497,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 34
@@ -10464,7 +10514,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 33
@@ -10481,7 +10531,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 34
@@ -10494,7 +10544,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Chinchou
 Level: 33
@@ -10511,7 +10561,7 @@ Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 14
@@ -10528,7 +10578,7 @@ Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zangoose
 Level: 18
@@ -10545,7 +10595,7 @@ Pic: Magma Admin
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Camerupt
 Level: 36
@@ -10566,7 +10616,7 @@ Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 26
@@ -10583,7 +10633,7 @@ Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 29
@@ -10600,7 +10650,7 @@ Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 32
@@ -10617,7 +10667,7 @@ Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ludicolo
 Level: 35
@@ -10635,7 +10685,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 44
@@ -10684,7 +10734,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Treecko
 Level: 5
@@ -10697,7 +10747,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 18
@@ -10718,7 +10768,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 29
@@ -10739,7 +10789,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Torchic
 Level: 5
@@ -10752,7 +10802,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 18
@@ -10773,7 +10823,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 29
@@ -10794,7 +10844,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mudkip
 Level: 5
@@ -10807,7 +10857,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 18
@@ -10828,7 +10878,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 29
@@ -10849,7 +10899,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Treecko
 Level: 5
@@ -10862,7 +10912,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 18
@@ -10883,7 +10933,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 29
@@ -10904,7 +10954,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Torchic
 Level: 5
@@ -10917,7 +10967,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 18
@@ -10938,7 +10988,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 29
@@ -10959,7 +11009,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mudkip
 Level: 5
@@ -10972,7 +11022,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 18
@@ -10993,7 +11043,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 29
@@ -11014,7 +11064,7 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Whismur
 Level: 11
@@ -11047,7 +11097,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pinsir
 Level: 27
@@ -11060,7 +11110,7 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lunatone
 Level: 43
@@ -11085,7 +11135,7 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Loudred
 Level: 22
@@ -11118,7 +11168,7 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Loudred
 Level: 25
@@ -11151,7 +11201,7 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Loudred
 Level: 28
@@ -11184,7 +11234,7 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Loudred
 Level: 31
@@ -11217,7 +11267,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 11
@@ -11251,7 +11301,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sableye
 Level: 43
@@ -11268,7 +11318,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandslash
 Level: 26
@@ -11281,7 +11331,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 22
@@ -11314,7 +11364,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 25
@@ -11347,7 +11397,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 28
@@ -11380,7 +11430,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 31
@@ -11414,7 +11464,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 27
@@ -11428,7 +11478,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Seedot
 Level: 28
@@ -11450,7 +11500,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Cacturne
 Level: 39
@@ -11464,7 +11514,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Breloom
 Level: 31
@@ -11478,7 +11528,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 34
@@ -11492,7 +11542,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Breloom
 Level: 37
@@ -11506,7 +11556,7 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 39
@@ -11524,7 +11574,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Gloom
 Level: 26
@@ -11542,7 +11592,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Lotad
 Level: 28
@@ -11564,7 +11614,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swablu
 Level: 38
@@ -11582,7 +11632,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Gloom
 Level: 30
@@ -11600,7 +11650,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gloom
 Level: 33
@@ -11618,7 +11668,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Gloom
 Level: 36
@@ -11636,7 +11686,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Bellossom
 Level: 39
@@ -11653,7 +11703,7 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 21
@@ -11666,7 +11716,7 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 35
@@ -11683,7 +11733,7 @@ Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 31
@@ -11700,7 +11750,7 @@ Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 30
@@ -11717,7 +11767,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena
 Level: 22
@@ -11734,7 +11784,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 8
@@ -11751,7 +11801,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 13
@@ -11764,7 +11814,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 13
@@ -11777,7 +11827,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Makuhita
 Level: 13
@@ -11790,7 +11840,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 36
@@ -11803,7 +11853,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 34
@@ -11817,7 +11867,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 32
@@ -11839,7 +11889,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacruel
 Level: 35
@@ -11852,7 +11902,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 20
@@ -11865,7 +11915,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sharpedo
 Level: 34
@@ -11878,7 +11928,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Girafarig
 Level: 37
@@ -11891,7 +11941,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spoink
 Level: 36
@@ -11904,7 +11954,7 @@ Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 36
@@ -11917,7 +11967,7 @@ Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Girafarig
 Level: 36
@@ -11930,7 +11980,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wobbuffet
 Level: 36
@@ -11943,7 +11993,7 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 31
@@ -11960,7 +12010,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 32
@@ -11973,7 +12023,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 32
@@ -11986,7 +12036,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 32
@@ -11999,7 +12049,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 32
@@ -12012,7 +12062,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Natu
 Level: 36
@@ -12025,7 +12075,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lotad
 Level: 13
@@ -12042,7 +12092,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 13
@@ -12059,7 +12109,7 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 33
@@ -12076,7 +12126,7 @@ Pic: Swimming Triathlete F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 34
@@ -12089,7 +12139,7 @@ Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 27
@@ -12106,7 +12156,7 @@ Pic: Magma Admin
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 18
@@ -12132,7 +12182,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Kecleon
 Level: 33
@@ -12149,7 +12199,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 13
@@ -12166,7 +12216,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Wingull
 Level: 13
@@ -12184,7 +12234,7 @@ Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 37
@@ -12206,7 +12256,7 @@ Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 24
@@ -12227,7 +12277,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 4
@@ -12244,7 +12294,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lotad
 Level: 6
@@ -12261,7 +12311,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 9
@@ -12274,7 +12324,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 15
@@ -12295,7 +12345,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 26
@@ -12312,7 +12362,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 29
@@ -12329,7 +12379,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 32
@@ -12346,7 +12396,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 34
@@ -12367,7 +12417,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Oddish
 Level: 16
@@ -12380,7 +12430,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty
 Level: 14
@@ -12401,7 +12451,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 40
@@ -12414,7 +12464,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 39
@@ -12431,7 +12481,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wurmple
 Level: 4
@@ -12448,7 +12498,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wurmple
 Level: 3
@@ -12473,7 +12523,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wurmple
 Level: 8
@@ -12490,7 +12540,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nincada
 Level: 28
@@ -12507,7 +12557,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat
 Level: 25
@@ -12524,7 +12574,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ninjask
 Level: 25
@@ -12537,7 +12587,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nincada
 Level: 6
@@ -12554,7 +12604,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ninjask
 Level: 27
@@ -12567,7 +12617,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dustox
 Level: 29
@@ -12584,7 +12634,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 31
@@ -12605,7 +12655,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Surskit
 Level: 33
@@ -12630,7 +12680,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 17
@@ -12647,7 +12697,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 16
@@ -12668,7 +12718,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 18
@@ -12685,7 +12735,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 18
@@ -12702,7 +12752,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 22
@@ -12723,7 +12773,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 8
@@ -12736,7 +12786,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 20
@@ -12753,7 +12803,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 9
@@ -12768,7 +12818,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 10
@@ -12789,7 +12839,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 16
@@ -12810,7 +12860,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 24
@@ -12835,7 +12885,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 27
@@ -12860,7 +12910,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 30
@@ -12885,7 +12935,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Graveler
 Level: 33
@@ -12910,7 +12960,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Delcatty
 Level: 31
@@ -12927,7 +12977,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 45
@@ -12944,7 +12994,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat
 Level: 25
@@ -12961,7 +13011,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat
 Level: 30
@@ -12978,7 +13028,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat
 Level: 33
@@ -12995,7 +13045,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat
 Level: 36
@@ -13012,7 +13062,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Volbeat
 Level: 39
@@ -13029,7 +13079,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 13
@@ -13043,7 +13093,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kecleon
 Level: 23
@@ -13060,7 +13110,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 17
@@ -13085,7 +13135,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 23
@@ -13102,7 +13152,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Koffing
 Level: 25
@@ -13127,7 +13177,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Koffing
 Level: 28
@@ -13152,7 +13202,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer / Try To Faint
+AI: Basic Trainer / Randomize Party Indices / Try To Faint
 
 Nincada
 Level: 28
@@ -13177,7 +13227,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 29
@@ -13194,7 +13244,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swablu
 Level: 27
@@ -13215,7 +13265,7 @@ Pic: Wally
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 16
@@ -13229,7 +13279,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 47
@@ -13279,7 +13329,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 50
@@ -13329,7 +13379,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 53
@@ -13379,7 +13429,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Altaria
 Level: 56
@@ -13428,7 +13478,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 31
@@ -13453,7 +13503,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 31
@@ -13478,7 +13528,7 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 31
@@ -13503,7 +13553,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 31
@@ -13528,7 +13578,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 31
@@ -13553,7 +13603,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 31
@@ -13578,7 +13628,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 30
@@ -13599,7 +13649,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Carvanha
 Level: 31
@@ -13616,7 +13666,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 15
@@ -13638,7 +13688,7 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Gloom
 Level: 34
@@ -13656,7 +13706,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shiftry
 Level: 34
@@ -13673,7 +13723,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machoke
 Level: 34
@@ -13686,7 +13736,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 31
@@ -13707,7 +13757,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swellow
 Level: 32
@@ -13724,7 +13774,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spheal
 Level: 33
@@ -13741,7 +13791,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Chinchou
 Level: 34
@@ -13754,7 +13804,7 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 19
@@ -13771,7 +13821,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Swablu
 Level: 32
@@ -13796,7 +13846,7 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 18
@@ -13821,7 +13871,7 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dustox
 Level: 27
@@ -13846,7 +13896,7 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 39
@@ -13871,7 +13921,7 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 43
@@ -13896,7 +13946,7 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 46
@@ -13921,7 +13971,7 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
 Medicham
 Level: 49
@@ -13946,7 +13996,7 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Medicham
 Level: 52
@@ -13971,7 +14021,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Azumarill
 Level: 35
@@ -13988,7 +14038,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Chinchou
 Level: 34
@@ -14005,7 +14055,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Chinchou
 Level: 42
@@ -14022,7 +14072,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lanturn
 Level: 45
@@ -14039,7 +14089,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lanturn
 Level: 48
@@ -14056,7 +14106,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lanturn
 Level: 51
@@ -14073,7 +14123,7 @@ Pic: Sis And Bro
 Gender: Male
 Music: Swimmer
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 27
@@ -14090,7 +14140,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 29
@@ -14115,7 +14165,7 @@ Pic: Rich Boy
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon @ Nugget
 Level: 8
@@ -14133,7 +14183,7 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lotad
 Level: 8
@@ -14150,7 +14200,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magikarp
 Level: 9
@@ -14163,7 +14213,7 @@ Pic: Tuber F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 13
@@ -14176,7 +14226,7 @@ Pic: Tuber M
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 12
@@ -14193,7 +14243,7 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Minun @ Oran Berry
 Level: 14
@@ -14210,7 +14260,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 14
@@ -14227,7 +14277,7 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magnemite
 Level: 15
@@ -14240,7 +14290,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Voltorb
 Level: 15
@@ -14253,7 +14303,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Makuhita
 Level: 15
@@ -14266,7 +14316,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 19
@@ -14279,7 +14329,7 @@ Pic: Aroma Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 18
@@ -14292,7 +14342,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 18
@@ -14305,7 +14355,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 18
@@ -14318,7 +14368,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 17
@@ -14335,7 +14385,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skarmory
 Level: 17
@@ -14352,7 +14402,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 18
@@ -14369,7 +14419,7 @@ Pic: Pokemaniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Aron
 Level: 18
@@ -14386,7 +14436,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lombre
 Level: 18
@@ -14403,7 +14453,7 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Barboach
 Level: 19
@@ -14416,7 +14466,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nuzleaf
 Level: 19
@@ -14429,7 +14479,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon
 Level: 14
@@ -14450,7 +14500,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 29
@@ -14463,7 +14513,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena
 Level: 29
@@ -14476,7 +14526,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 29
@@ -14489,7 +14539,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 28
@@ -14506,7 +14556,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 28
@@ -14523,7 +14573,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 29
@@ -14536,7 +14586,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 29
@@ -14549,7 +14599,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena
 Level: 29
@@ -14562,7 +14612,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 29
@@ -14575,7 +14625,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 29
@@ -14588,7 +14638,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 29
@@ -14601,7 +14651,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 29
@@ -14614,7 +14664,7 @@ Pic: Magma Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Zubat
 Level: 29
@@ -14627,7 +14677,7 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 29
@@ -14640,7 +14690,7 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 29
@@ -14653,7 +14703,7 @@ Pic: Magma Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Baltoy
 Level: 29
@@ -14666,7 +14716,7 @@ Pic: Magma Admin
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 26
@@ -14692,7 +14742,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 33
@@ -14709,7 +14759,7 @@ Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mightyena
 Level: 42
@@ -14730,7 +14780,7 @@ Pic: Substitute
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tentacool
 Level: 15
@@ -14743,7 +14793,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 15
@@ -14756,7 +14806,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 25
@@ -14773,7 +14823,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Taillow
 Level: 25
@@ -14790,7 +14840,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 26
@@ -14803,7 +14853,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 24
@@ -14825,7 +14875,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 24
@@ -14846,7 +14896,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skarmory
 Level: 25
@@ -14863,7 +14913,7 @@ Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Marill
 Level: 22
@@ -14880,7 +14930,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 22
@@ -14897,7 +14947,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Taillow
 Level: 22
@@ -14914,7 +14964,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Numel
 Level: 18
@@ -14931,7 +14981,7 @@ Pic: Aroma Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 18
@@ -14948,7 +14998,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 26
@@ -14965,7 +15015,7 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ninjask
 Level: 26
@@ -14982,7 +15032,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Kadabra
 Level: 26
@@ -14999,7 +15049,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 26
@@ -15016,7 +15066,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 18
@@ -15033,7 +15083,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 8
@@ -15050,7 +15100,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Shroomish
 Level: 8
@@ -15067,7 +15117,7 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Doduo
 Level: 17
@@ -15080,7 +15130,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Ralts
 Level: 17
@@ -15093,7 +15143,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 17
@@ -15107,7 +15157,7 @@ Gender: Female
 Music: Intense
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Roselia
 Level: 33
@@ -15124,7 +15174,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 26
@@ -15137,7 +15187,7 @@ Pic: Kindler
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slugma
 Level: 25
@@ -15154,7 +15204,7 @@ Pic: Parasol Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Goldeen
 Level: 26
@@ -15168,7 +15218,7 @@ Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 30
@@ -15184,7 +15234,7 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Meditite
 Level: 28
@@ -15201,7 +15251,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Dustox
 Level: 29
@@ -15218,7 +15268,7 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Makuhita
 Level: 25
@@ -15251,7 +15301,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poochyena
 Level: 25
@@ -15285,7 +15335,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Loudred
 Level: 29
@@ -15302,7 +15352,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lotad
 Level: 13
@@ -15319,7 +15369,7 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Torkoal
 Level: 13
@@ -15337,7 +15387,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Golem
 Level: 32
@@ -15379,7 +15429,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Omanyte
 Level: 37
@@ -15429,7 +15479,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Omastar
 Level: 42
@@ -15479,7 +15529,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Aerodactyl
 Level: 47
@@ -15537,7 +15587,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machamp @ Sitrus Berry
 Level: 33
@@ -15579,7 +15629,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machamp @ Sitrus Berry
 Level: 38
@@ -15621,7 +15671,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hitmonchan
 Level: 40
@@ -15671,7 +15721,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hitmonlee
 Level: 46
@@ -15729,7 +15779,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Mareep
 Level: 36
@@ -15771,7 +15821,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pikachu
 Level: 39
@@ -15821,7 +15871,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Raichu
 Level: 44
@@ -15871,7 +15921,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electabuzz
 Level: 50
@@ -15929,7 +15979,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Magcargo @ White Herb
 Level: 38
@@ -15971,7 +16021,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Growlithe
 Level: 41
@@ -16021,7 +16071,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Houndour
 Level: 46
@@ -16079,7 +16129,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Arcanine
 Level: 51
@@ -16137,7 +16187,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Chansey
 Level: 42
@@ -16179,7 +16229,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slaking @ Sitrus Berry
 Level: 47
@@ -16229,7 +16279,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slaking @ Sitrus Berry
 Level: 52
@@ -16279,7 +16329,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slaking @ Sitrus Berry
 Level: 57
@@ -16337,7 +16387,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Randomize Party Indices / Risky
 
 Dratini @ Sitrus Berry
 Level: 40
@@ -16387,7 +16437,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Randomize Party Indices / Risky
 
 Hoothoot
 Level: 43
@@ -16445,7 +16495,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Randomize Party Indices / Risky
 
 Noctowl
 Level: 48
@@ -16503,7 +16553,7 @@ Gender: Female
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer / Risky
+AI: Basic Trainer / Randomize Party Indices / Risky
 
 Noctowl
 Level: 53
@@ -16561,7 +16611,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Slowpoke
 Level: 48
@@ -16611,7 +16661,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Drowzee
 Level: 53
@@ -16669,7 +16719,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hypno
 Level: 58
@@ -16727,7 +16777,7 @@ Gender: Male
 Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hypno
 Level: 63
@@ -16785,7 +16835,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poliwag
 Level: 46
@@ -16835,7 +16885,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Poliwhirl
 Level: 50
@@ -16885,7 +16935,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lapras
 Level: 56
@@ -16943,7 +16993,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Lapras
 Level: 61
@@ -17000,7 +17050,7 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Illumise
 Level: 17
@@ -17023,7 +17073,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Tropius
 Level: 30
@@ -17037,7 +17087,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skarmory
 Level: 77
@@ -17094,7 +17144,7 @@ Pic: Salon Maiden Anabel
 Gender: Female
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17107,7 +17157,7 @@ Pic: Dome Ace Tucker
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17120,7 +17170,7 @@ Pic: Palace Maven Spenser
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17133,7 +17183,7 @@ Pic: Arena Tycoon Greta
 Gender: Female
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17146,7 +17196,7 @@ Pic: Factory Head Noland
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17159,7 +17209,7 @@ Pic: Pike Queen Lucy
 Gender: Female
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17172,7 +17222,7 @@ Pic: Pyramid King Brandon
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Beldum
 Level: 5
@@ -17185,7 +17235,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Sandshrew
 Level: 31
@@ -17202,7 +17252,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nosepass
 Level: 33
@@ -17223,7 +17273,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nosepass
 Level: 35
@@ -17244,7 +17294,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Nosepass
 Level: 37
@@ -17265,7 +17315,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 30
@@ -17286,7 +17336,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 32
@@ -17307,7 +17357,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 34
@@ -17328,7 +17378,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 36
@@ -17349,7 +17399,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Staryu
 Level: 37
@@ -17366,7 +17416,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wingull
 Level: 39
@@ -17387,7 +17437,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 41
@@ -17408,7 +17458,7 @@ Pic: Swimming Triathlete M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Pelipper
 Level: 43
@@ -17429,7 +17479,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machoke
 Level: 37
@@ -17446,7 +17496,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Makuhita
 Level: 39
@@ -17467,7 +17517,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 41
@@ -17488,7 +17538,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Hariyama
 Level: 43
@@ -17510,7 +17560,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Loudred
 Level: 35
@@ -17528,7 +17578,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 37
@@ -17550,7 +17600,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 39
@@ -17572,7 +17622,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Spinda
 Level: 41
@@ -17593,7 +17643,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 35
@@ -17614,7 +17664,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Electrike
 Level: 37
@@ -17635,7 +17685,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 39
@@ -17656,7 +17706,7 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Manectric
 Level: 41
@@ -17677,7 +17727,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Geodude
 Level: 26
@@ -17694,7 +17744,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 28
@@ -17715,7 +17765,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machop
 Level: 30
@@ -17736,7 +17786,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Machoke
 Level: 33
@@ -17757,7 +17807,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty
 Level: 31
@@ -17790,7 +17840,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Skitty
 Level: 33
@@ -17823,7 +17873,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Delcatty
 Level: 35
@@ -17856,7 +17906,7 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Delcatty
 Level: 37
@@ -17889,7 +17939,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Wailmer
 Level: 34
@@ -17906,7 +17956,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 36
@@ -17927,7 +17977,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 38
@@ -17948,7 +17998,7 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Randomize Party Indices
 
 Luvdisc
 Level: 40

@@ -21,3 +21,39 @@ script Hoenn3_5_Linoone{
 	waitmessage
     end
 }
+
+script Hoenn3_5_Rival{
+    switch (var(VAR_CURRENT_RIVAL)){
+        case 0:
+            trainerbattle_single(TRAINER_SCEPTILE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
+            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            waitmessage
+            end
+        case 1:
+            trainerbattle_single(TRAINER_BLAZIKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
+            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            waitmessage
+            end
+    }
+}
+
+script Hoenn3_5_EventScript_BirchBag{
+ 
+    lockall
+    playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    
+    removeobject(HOENN3_5_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_3_5)
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+
+    waitmessage
+    releaseall
+    end
+    
+}

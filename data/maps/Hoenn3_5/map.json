@@ -22,14 +22,14 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CRADILY)",
-      "x": 12,
-      "y": 9,
+      "x": 16,
+      "y": 10,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "Hoenn3_5_Cradily",
       "flag": "0"
     },
@@ -48,6 +48,19 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ARMALDO)",
+      "x": 14,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Hoenn3_5_Armaldo",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 9,
       "y": 11,
       "elevation": 0,
@@ -55,9 +68,23 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Hoenn3_5_Armaldo",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Hoenn3_5_Rival",
       "flag": "0"
+    },
+    {
+      "local_id": "HOENN3_5_BIRCHBAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn3_5_EventScript_BirchBag",
+      "flag": "FLAG_BIRCHBAG_3_5"
     }
   ],
   "warp_events": [

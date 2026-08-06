@@ -5916,6 +5916,9 @@ const struct ItemInfo gItemsInfo[] =
 
 // Mega Stones
 
+#define ITEM_USE_BAG_MENU ITEM_USE_PARTY_MENU
+#define ItemUseOutOfBattle_CannotUse ItemUseOutOfBattle_EvolutionStone
+
     [ITEM_VENUSAURITE] =
     {
         .name = ITEM_NAME("Venusaurite"),
@@ -7582,6 +7585,9 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Glimmoranite,
         .iconPalette = gItemIconPalette_Glimmoranite,
     },
+
+#undef ItemUseOutOfBattle_CannotUse
+#undef ITEM_USE_BAG_MENU
 
 // Gems
     #if I_PRICE >= GEN_9
@@ -15393,7 +15399,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHINY_CHARM] =
     {
         .name = ITEM_NAME("Shiny Charm"),
-        .price = 0,
+        .price = 20000,
         .importance = 1,
         .description = COMPOUND_STRING(
             "A charm that will\n"

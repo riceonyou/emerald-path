@@ -148,15 +148,13 @@ u32 BattlePalace_TryEscapeStatus(enum BattlerId battler)
                 }
                 else
                 {
-                    u32 toSub;
+                    u32 toSub = 1;
 
                     if (BattlerHasTrait(battler, ABILITY_EARLY_BIRD))
-                        toSub = 2;
-                    else
-                        toSub = 1;
+                        toSub = gBattleMons[battler].status1 & STATUS1_SLEEP;
 
-                    // Reduce number of sleep turns
-                    if ((gBattleMons[battler].status1 & STATUS1_SLEEP) < toSub)
+                    // Reduce number of sleep turns.
+                    if ((gBattleMons[battler].status1 & STATUS1_SLEEP) <= toSub)
                         gBattleMons[battler].status1 &= ~(STATUS1_SLEEP);
                     else
                         gBattleMons[battler].status1 -= toSub;

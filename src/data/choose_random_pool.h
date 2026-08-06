@@ -1,4 +1,5 @@
 #include "starter_choose.h"
+#include "choose_random_pool_all_raw.h"
 
 enum BirchBagPoolId {
     BIRCH_BAG_POOL_STARTERS,
@@ -34,6 +35,9 @@ enum BirchBagPoolId {
     BIRCH_BAG_POOL_GROUDON,
     BIRCH_BAG_POOL_REGISTEEL,
     BIRCH_BAG_POOL_REGICE,
+    BIRCH_BAG_POOL_ALL_BASE_EVOLVING,
+    BIRCH_BAG_POOL_ALL_MIDDLE_OR_SINGLE,
+    BIRCH_BAG_POOL_ALL_FINAL,
 };
 
 static const struct BirchBagWeightedChoice Registeel_Pool[] = {
@@ -336,6 +340,15 @@ void LoadBirchBagPoolById(void)
         break;
     case BIRCH_BAG_POOL_HOENN2_BEACH:
         SetBirchBagWeightedChoices(Hoenn2_Beach_Pool, ARRAY_COUNT(Hoenn2_Beach_Pool));
+        break;
+    case BIRCH_BAG_POOL_ALL_BASE_EVOLVING:
+        SetBirchBagWeightedChoices(AllBaseEvolving_Pool, ARRAY_COUNT(AllBaseEvolving_Pool));
+        break;
+    case BIRCH_BAG_POOL_ALL_MIDDLE_OR_SINGLE:
+        SetBirchBagWeightedChoices(AllMiddleOrSingle_Pool, ARRAY_COUNT(AllMiddleOrSingle_Pool));
+        break;
+    case BIRCH_BAG_POOL_ALL_FINAL:
+        SetBirchBagWeightedChoices(AllFinal_Pool, ARRAY_COUNT(AllFinal_Pool));
         break;
     }
 }
