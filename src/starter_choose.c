@@ -975,26 +975,32 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
 
     if (chosenSpecies != SPECIES_NONE)
     {
-        u32 personality = GetMonPersonality(chosenSpecies, MON_GENDER_RANDOM, NATURE_RANDOM, RANDOM_UNOWN_LETTER);
-        if (FlagGet(FLAG_GIVE_SHINY_NEXT_MON)){
-            u8 isShiny = TRUE;
-            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
-            SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 3);
-            SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
-            CalculateMonStats(&mon);
-            GiveMonInitialMoveset(&mon);
-            GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
-            FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
+        u8 CopyOfMonsToCreate = 1;
+        if (SpeciesHasInnate(chosenSpecies, ABILITY_HERD)){CopyOfMonsToCreate += 1;}
+        u8 i;
+        for (i = 0; i < CopyOfMonsToCreate; i++)
+        {
+            u32 personality = GetMonPersonality(chosenSpecies, MON_GENDER_RANDOM, NATURE_RANDOM, RANDOM_UNOWN_LETTER);
+            if (FlagGet(FLAG_GIVE_SHINY_NEXT_MON)){
+                u8 isShiny = TRUE;
+                CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
+                SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 3);
+                SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
+                CalculateMonStats(&mon);
+                GiveMonInitialMoveset(&mon);
+                GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
 
-        }else{
-            u8 isShiny = FALSE;
-            CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
-            SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 0);
-            SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
-            CalculateMonStats(&mon);
-            GiveMonInitialMoveset(&mon);
-            GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
+            }else{
+                u8 isShiny = FALSE;
+                CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
+                SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 0);
+                SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
+                CalculateMonStats(&mon);
+                GiveMonInitialMoveset(&mon);
+                GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
+            }
         }
+        FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
     }
     
     ScriptContext_Enable();

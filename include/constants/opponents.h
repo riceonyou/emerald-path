@@ -550,10 +550,10 @@
 #define TRAINER_ISAAC_4                     543
 #define TRAINER_ISAAC_5                     544
 #define TRAINER_LYDIA_1                     545
-#define TRAINER_HALLE                       546
-#define TRAINER_GARRISON                    547
-#define TRAINER_LYDIA_2                     548
-#define TRAINER_LYDIA_3                     549
+#define TRAINER_RALTS                       546
+#define TRAINER_AZURILL                    547
+#define TRAINER_CARVANHA                     548
+#define TRAINER_BUDEW                     549
 #define TRAINER_LYDIA_4                     550
 #define TRAINER_LYDIA_5                     551
 #define TRAINER_JACKSON_1                   552

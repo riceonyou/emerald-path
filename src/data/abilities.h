@@ -449,7 +449,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FORECAST] =
     {
         .name = _("Forecast"),
-        .description = COMPOUND_STRING("Changes with the weather."),
+        .description = COMPOUND_STRING("Changes the weather."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
         .cantBeTraced = TRUE,
@@ -2468,6 +2468,12 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Shield of Legend"),
         .description = COMPOUND_STRING("Halves damage at full HP."),
         .aiRating = 8,
-        .breakable = TRUE,
+    },
+
+    [ABILITY_HERD] =
+    {
+        .name = _("Herd"),
+        .description = COMPOUND_STRING("Get an extra when picked."),
+        .aiRating = 0,
     },
 };

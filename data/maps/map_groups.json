@@ -81,7 +81,8 @@
     "gMapGroup_AG_Hoenn4",
     "gMapGroup_AG_ANCIENTS",
     "gMapGroup_AG_Elite_4",
-    "gMapGroup_AG_Hub"
+    "gMapGroup_AG_Hub",
+    "gMapGroup_AG_Hoenn1_Alt"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1222,5 +1223,13 @@
   ],
   "gMapGroup_AG_Hub": [
     "Hub1"
+  ],
+  "gMapGroup_AG_Hoenn1_Alt": [
+    "Hoenn1_Alt_1",
+    "Hoenn1_Alt_2",
+    "Hoenn1_Alt_3",
+    "Hoenn1_Alt_4",
+    "Hoenn1_Alt_5",
+    "Hoenn1_Alt_1_House"
   ]
 }

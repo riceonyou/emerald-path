@@ -22,7 +22,6 @@ script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
 
     waitmessage
     msgbox("The level cap has been raised to 30")
-    addvar(VAR_CURRENT_ACT, 1)
     special(UpdateLevelCap)
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE

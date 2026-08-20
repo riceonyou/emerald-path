@@ -28,14 +28,12 @@ ANCIENT_GROUDON_EventScript_Groudon::
 # 20 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_2
 # 21 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	addvar VAR_CURRENT_ACT, 1
-# 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	special UpdateLevelCap
-# 23 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_3
-# 25 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 24 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	special WarpToNextAct
-# 26 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 25 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	releaseall
 	return
 
@@ -53,5 +51,5 @@ ANCIENT_GROUDON_EventScript_Groudon_Text_2:
 	.string "The level cap has been raised to 42$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_3:
-# 23 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"

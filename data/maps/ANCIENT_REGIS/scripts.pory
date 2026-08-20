@@ -44,18 +44,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             waitstate
             playfanfare(MUS_EVOLVED)
             msgbox("You received a\n{STR_VAR_1}!")
-            // dynmultipush("Ice Beam TM", ITEM_TM_ICE_BEAM)
-            // dynmultipush("Flamethrower TM", ITEM_TM_FLAMETHROWER)
-            // dynmultipush("Thunderbolt TM", ITEM_TM_THUNDERBOLT)
-            // dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
-            // switch (var(VAR_RESULT)) {
-            //     case ITEM_TM_ICE_BEAM:
-            //         giveitem(ITEM_TM_ICE_BEAM, 1)
-            //     case ITEM_TM_FLAMETHROWER:
-            //         giveitem(ITEM_TM_FLAMETHROWER, 1)
-            //     case ITEM_TM_THUNDERBOLT:
-            //         giveitem(ITEM_TM_THUNDERBOLT, 1)
-            // }
+
         case 2://Registeel
             fadescreen(FADE_TO_BLACK)
             setvar(VAR_0x8000, 31)
@@ -66,6 +55,69 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             msgbox("You received a\n{STR_VAR_1}!")
     }
     waitmessage
+
+    setvar(VAR_0x8000, 0)
+    setvar(VAR_0x8001, 0)
+    setvar(VAR_0x8002, 0)
+    setvar(VAR_0x8003, 0)
+    while (var(VAR_0x8000) != 3) {
+        randomelement(ITEM_TM_ICE_PUNCH, ITEM_TM_FIRE_PUNCH, ITEM_TM_THUNDER_PUNCH, ITEM_TM_DRAIN_PUNCH, ITEM_TM_DIZZY_PUNCH, ITEM_TM_SHADOW_PUNCH, ITEM_TM_SUCKER_PUNCH)
+        if (var(VAR_RESULT) != VAR_0x8002 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8001) == 0){
+            copyvar(VAR_0x8001, VAR_RESULT)
+            addvar(VAR_0x8000, 1)
+        }
+        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8002) == 0){
+            copyvar(VAR_0x8002, VAR_RESULT)
+            addvar(VAR_0x8000, 1)
+        }
+        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8002 && var(VAR_0x8003) == 0){
+            copyvar(VAR_0x8003, VAR_RESULT)
+            addvar(VAR_0x8000, 1)
+        }
+    }
+    if (var(VAR_0x8001) == ITEM_TM_ICE_PUNCH || var(VAR_0x8002) == ITEM_TM_ICE_PUNCH || var(VAR_0x8003) == ITEM_TM_ICE_PUNCH){
+        dynmultipush("Ice Punch TM", ITEM_TM_ICE_PUNCH)    
+    }
+    if (var(VAR_0x8001) == ITEM_TM_FIRE_PUNCH || var(VAR_0x8002) == ITEM_TM_FIRE_PUNCH || var(VAR_0x8003) == ITEM_TM_FIRE_PUNCH) {
+        dynmultipush("Fire Punch TM", ITEM_TM_FIRE_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_THUNDER_PUNCH || var(VAR_0x8002) == ITEM_TM_THUNDER_PUNCH || var(VAR_0x8003) == ITEM_TM_THUNDER_PUNCH) {
+        dynmultipush("Thunder Punch TM", ITEM_TM_THUNDER_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_DRAIN_PUNCH || var(VAR_0x8002) == ITEM_TM_DRAIN_PUNCH || var(VAR_0x8003) == ITEM_TM_DRAIN_PUNCH) {
+        dynmultipush("Drain Punch TM", ITEM_TM_DRAIN_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_DIZZY_PUNCH || var(VAR_0x8002) == ITEM_TM_DIZZY_PUNCH || var(VAR_0x8003) == ITEM_TM_DIZZY_PUNCH) {
+        dynmultipush("Dizzy Punch TM", ITEM_TM_DIZZY_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_SHADOW_PUNCH || var(VAR_0x8002) == ITEM_TM_SHADOW_PUNCH || var(VAR_0x8003) == ITEM_TM_SHADOW_PUNCH) {
+        dynmultipush("Shadow Punch TM", ITEM_TM_SHADOW_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_SUCKER_PUNCH || var(VAR_0x8002) == ITEM_TM_SUCKER_PUNCH || var(VAR_0x8003) == ITEM_TM_SUCKER_PUNCH) {
+        dynmultipush("Sucker Punch TM", ITEM_TM_SUCKER_PUNCH)
+    }
+
+    dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+    switch (var(VAR_RESULT)) {
+        case ITEM_TM_ICE_PUNCH:
+            giveitem(ITEM_TM_ICE_PUNCH, 1)
+        case ITEM_TM_FIRE_PUNCH:
+            giveitem(ITEM_TM_FIRE_PUNCH, 1)
+        case ITEM_TM_THUNDER_PUNCH:
+            giveitem(ITEM_TM_THUNDER_PUNCH, 1)
+        case ITEM_TM_DRAIN_PUNCH:
+            giveitem(ITEM_TM_DRAIN_PUNCH, 1)
+        case ITEM_TM_DIZZY_PUNCH:
+            giveitem(ITEM_TM_DIZZY_PUNCH, 1)
+        case ITEM_TM_SHADOW_PUNCH:
+            giveitem(ITEM_TM_SHADOW_PUNCH, 1)
+        case ITEM_TM_SUCKER_PUNCH:
+            giveitem(ITEM_TM_SUCKER_PUNCH, 1)
+        
+    }
+    waitmessage
+
+
     msgbox("The level cap has been raised to 30")
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE

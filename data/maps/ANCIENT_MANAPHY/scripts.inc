@@ -43,14 +43,12 @@ ANCIENT_MANAPHY_EventScript_TalkToManaphy::
 # 24 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2
 # 25 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	addvar VAR_CURRENT_ACT, 1
-# 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	special UpdateLevelCap
-# 27 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3
-# 29 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 28 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	special WarpToNextAct
-# 30 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 29 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	releaseall
 	return
 
@@ -68,5 +66,5 @@ ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2:
 	.string "The level cap has been raised to 30$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3:
-# 27 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"

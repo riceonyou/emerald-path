@@ -3543,6 +3543,35 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
          && shouldAbilityTrigger && TryRemoveScreens(battler))
             effect += CommonSwitchInAbilities(battler, ABILITY_SCREEN_CLEANER, traitCheck, BattleScript_ScreenCleanerActivates);
 
+        if ((traitCheck = SearchTraits(battlerTraits, ABILITY_FORECAST)) && !gSpecialStatuses[battler].switchInTraitDone[traitCheck - 1]
+         && shouldAbilityTrigger
+         && gBattleStruct->battlerState[battler].switchIn)
+        {
+            const u8 *forecastScript = NULL;
+            gSpecialStatuses[battler].switchInTraitDone[traitCheck - 1] = TRUE;
+
+            switch (Random() % 3)
+            {
+            case 0:
+                if (TryChangeBattleWeather(battler, BATTLE_WEATHER_RAIN, TRUE))
+                    forecastScript = BattleScript_DrizzleActivates;
+                break;
+            case 1:
+                if (TryChangeBattleWeather(battler, BATTLE_WEATHER_SUN, TRUE))
+                    forecastScript = BattleScript_DroughtActivates;
+                break;
+            case 2:
+                if (TryChangeBattleWeather(battler, BATTLE_WEATHER_SNOW, TRUE))
+                    forecastScript = BattleScript_SnowWarningActivatesSnow;
+                break;
+            }
+
+            if (forecastScript != NULL)
+                effect += CommonSwitchInAbilities(battler, ABILITY_FORECAST, traitCheck, forecastScript);
+            else if (gBattleWeather & B_WEATHER_PRIMAL_ANY && HasWeatherEffect())
+                effect += CommonSwitchInAbilities(battler, ABILITY_FORECAST, traitCheck, BattleScript_BlockedByPrimalWeather);
+        }
+
         if ((traitCheck = SearchTraits(battlerTraits, ABILITY_DRIZZLE)) && !gSpecialStatuses[battler].switchInTraitDone[traitCheck - 1]
          && shouldAbilityTrigger)
         {
@@ -4664,7 +4693,6 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         STORE_BATTLER_TRAITS(gBattlerAttacker);
 
         if (SearchTraits(battlerTraits, ABILITY_POISON_PUPPETEER)
-         && IsRestrictedAbility(gBattlerAttacker, ABILITY_POISON_PUPPETEER)
          && gBattleStruct->poisonPuppeteerConfusion == TRUE
          && CanBeConfused(gBattlerTarget))
         {

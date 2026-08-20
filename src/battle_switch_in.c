@@ -201,8 +201,14 @@ static bool32 FirstEventBlockEvents(struct BattleCalcValues *calcValues)
     switch (gBattleStruct->eventState.battlerSwitchIn)
     {
     case FIRST_EVENT_BLOCK_HEALING_WISH:
-        if (!gBattleStruct->battlerState[battler].switchIn || !CanBattlerBeHealed(battler))
+        if (!gBattleStruct->battlerState[battler].switchIn)
         {
+            effect = FALSE;
+        }
+        else if (!CanBattlerBeHealed(battler))
+        {
+            // Z-Move replacement healing is one-time and should not carry over to future switch-ins.
+            gBattleStruct->zmove.healReplacement &= ~(1u << battler);
             effect = FALSE;
         }
         else if (gBattleStruct->battlerState[battler].storedHealingWish)

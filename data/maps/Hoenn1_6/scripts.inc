@@ -92,7 +92,7 @@ Hoenn1_7_EventScript_Skitty::
 
 Hoenn1_7_EventScript_Nincada::
 # 71 "data/maps/Hoenn1_6/scripts.pory"
-	trainerbattle_single TRAINER_SKITTY, Hoenn1_6_EventScript_Shroomish_Text_0, Hoenn1_6_EventScript_Shroomish_Text_0
+	trainerbattle_single TRAINER_NINCADA, Hoenn1_6_EventScript_Shroomish_Text_0, Hoenn1_6_EventScript_Shroomish_Text_0
 # 72 "data/maps/Hoenn1_6/scripts.pory"
 	msgbox Hoenn1_6_EventScript_Shroomish_Text_0, MSGBOX_AUTOCLOSE
 # 73 "data/maps/Hoenn1_6/scripts.pory"

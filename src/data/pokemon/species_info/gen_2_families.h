@@ -1248,8 +1248,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_LEDIAN] =
     {
-        .baseHP        = 55 + 5,
-        .baseAttack    = 35 + 35,
+        .baseHP        = 55 + 15,
+        .baseAttack    = 35 + 45,
         .baseDefense   = 50 + 10,
         .baseSpeed     = 85,
         .baseSpAttack  = 55 + 15,
@@ -1264,7 +1264,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_IRON_FIST, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_GALE_WINGS },
+        .innates = { ABILITY_SWARM, ABILITY_EARLY_BIRD },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Ledian"),
         .cryId = CRY_LEDIAN,
@@ -4115,6 +4115,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_FAST,                                                               \
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                                      \
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },                                  \
+        .innates = { ABILITY_HERD },                                  \
         .bodyColor = BODY_COLOR_BLACK,                                                                  \
         .noFlip = _noFlip,                                                                              \
         .speciesName = _("Unown"),                                                                      \
@@ -5203,7 +5204,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_SWIFT_SWIM, ABILITY_NONE },
-        .innates = { ABILITY_POISON_POINT },
+        .innates = { ABILITY_TOXIC_DEBRIS },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Qwilfish"),
         .cryId = CRY_QWILFISH,
@@ -5281,7 +5282,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_SWIFT_SWIM, ABILITY_NONE },
-        .innates = { ABILITY_POISON_POINT },
+        .innates = { ABILITY_TOXIC_DEBRIS },
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
         .speciesName = _("Qwilfish"),
@@ -5337,10 +5338,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 85,
         .baseAttack    = 115,
-        .baseDefense   = 95,
+        .baseDefense   = 95 + 10,
         .baseSpeed     = 85,
         .baseSpAttack  = 65,
-        .baseSpDefense = 65,
+        .baseSpDefense = 65 + 10,
         .types = MON_TYPES(TYPE_DARK, TYPE_POISON),
         .catchRate = 45,
         .expYield = 179,
@@ -5350,7 +5351,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_SWIFT_SWIM, ABILITY_NONE },
+        .innates = { ABILITY_TOXIC_DEBRIS, ABILITY_POISON_POINT, ABILITY_POISON_TOUCH },
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
         .speciesName = _("Overqwil"),
@@ -5422,7 +5424,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
     #if P_UPDATED_ABILITIES >= GEN_4
         .abilities = { ABILITY_CONTRARY, ABILITY_GLUTTONY, ABILITY_NONE },
-        .innates = { ABILITY_STURDY },
+        .innates = { ABILITY_STURDY, ABILITY_SHELL_ARMOR },
     #else
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_CONTRARY },
     #endif
@@ -6668,10 +6670,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 65,
         .baseAttack    = 55,
-        .baseDefense   = 95 - 10,
+        .baseDefense   = 95,
         .baseSpeed     = 35,
         .baseSpAttack  = 65,
-        .baseSpDefense = 95 - 10,
+        .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
         .catchRate = 60,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
@@ -6690,7 +6692,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_REGENERATOR, ABILITY_NATURAL_CURE, ABILITY_NONE },
-        .innates = { ABILITY_SOLID_ROCK },
+        .innates = { ABILITY_SOLID_ROCK, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Corsola"),
         .cryId = CRY_CORSOLA,
@@ -6739,7 +6741,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             gShinyOverworldPalette_Corsola
         )
         .levelUpLearnset = sCorsolaLevelUpLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_CURSOLA}),
         .teachableLearnset = sCorsolaTeachableLearnset,
         .eggMoveLearnset = sCorsolaEggMoveLearnset,
         .formSpeciesIdTable = sCorsolaFormSpeciesIdTable,
@@ -7862,7 +7863,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sStantlerTeachableLearnset,
         .eggMoveLearnset = sStantlerEggMoveLearnset,
     #if P_GEN_8_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_WYRDEER}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_WYRDEER}),
     #endif
     },
 
@@ -7871,10 +7872,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 103,
         .baseAttack    = 105,
-        .baseDefense   = 72 + 4,
+        .baseDefense   = 72 + 10,
         .baseSpeed     = 65,
         .baseSpAttack  = 105,
-        .baseSpDefense = 75 + 4,
+        .baseSpDefense = 75 + 10,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_PSYCHIC),
         .catchRate = 45,
         .expYield = 263,

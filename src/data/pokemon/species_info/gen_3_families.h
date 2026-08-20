@@ -471,10 +471,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_BLAZIKEN] =
     {
         .baseHP        = 80,
-        .baseAttack    = 120 - 5,
+        .baseAttack    = 120 - 10,
         .baseDefense   = 70,
         .baseSpeed     = 80,
-        .baseSpAttack  = 110,
+        .baseSpAttack  = 110 - 10,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 45,
@@ -807,7 +807,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_DAMP, ABILITY_HYDRATION, ABILITY_RAIN_DISH },
+        .innates = { ABILITY_HYDRATION, ABILITY_DAMP, ABILITY_DRIZZLE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Swampert"),
         .cryId = CRY_SWAMPERT,
@@ -880,7 +880,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_SWIFT_SWIM, ABILITY_HYDRATION, ABILITY_RAIN_DISH },
+        .innates = { ABILITY_HYDRATION, ABILITY_DAMP, ABILITY_RAIN_DISH },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Swampert"),
     #if P_MODIFIED_MEGA_CRIES
@@ -1542,10 +1542,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 50 + 20,
         .baseAttack    = 35,
-        .baseDefense   = 55 + 80,
+        .baseDefense   = 55 + 90,
         .baseSpeed     = 15,
         .baseSpAttack  = 25,
-        .baseSpDefense = 25 + 70,
+        .baseSpDefense = 25 + 90,
         .types = MON_TYPES(TYPE_BUG),
         .catchRate = 120,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_4) ? 72 : 71,
@@ -1709,7 +1709,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 50 + 20,
         .baseAttack    = 35,
-        .baseDefense   = 55 + 60,
+        .baseDefense   = 55 + 90,
         .baseSpeed     = 15,
         .baseSpAttack  = 25,
         .baseSpDefense = 25 + 90,
@@ -3487,11 +3487,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_SLAKOTH] =
     {
         .baseHP        = 60 + 5,
-        .baseAttack    = 60 + 13,
-        .baseDefense   = 60 + 4,
+        .baseAttack    = 60 + 33,
+        .baseDefense   = 60 + 14,
         .baseSpeed     = 30,
         .baseSpAttack  = 35,
-        .baseSpDefense = 35 + 12,
+        .baseSpDefense = 35 + 22,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 56 : 83,
@@ -3636,7 +3636,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseDefense   = 100,
         .baseSpeed     = 100,
         .baseSpAttack  = 95,
-        .baseSpDefense = 65 + 10,
+        .baseSpDefense = 65 + 20,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -4394,7 +4394,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_GEN_4_CROSS_EVOS
     [SPECIES_PROBOPASS] =
     {
-        .baseHP        = 60 + 9,
+        .baseHP        = 60 + 13,
         .baseAttack    = 55,
         .baseDefense   = 145,
         .baseSpeed     = 40,
@@ -6691,11 +6691,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_WAILMER
     [SPECIES_WAILMER] =
     {
-        .baseHP        = 130 - 10,
-        .baseAttack    = 70 - 10,
+        .baseHP        = 130,
+        .baseAttack    = 70,
         .baseDefense   = 35,
         .baseSpeed     = 60,
-        .baseSpAttack  = 70 - 10,
+        .baseSpAttack  = 70,
         .baseSpDefense = 35,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 125,
@@ -7324,12 +7324,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_SPINDA
     [SPECIES_SPINDA] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 60,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 60,
+        .baseHP        = 60 + 7,
+        .baseAttack    = 60 + 7,
+        .baseDefense   = 60 + 7,
+        .baseSpeed     = 60 + 7,
+        .baseSpAttack  = 60 + 7,
+        .baseSpDefense = 60 + 7,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 126 : 85,
@@ -10213,7 +10213,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_CHLOROPHYLL, ABILITY_RIPEN, ABILITY_NONE },
         .innates = { ABILITY_SOLAR_POWER, ABILITY_HARVEST, ABILITY_RAIN_DISH },
     #else
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_HARVEST },

@@ -250,6 +250,7 @@ static enum CancelerResult CancelerTruant(struct BattleContext *ctx)
         CancelMultiTurnMoves(ctx->battlerAtk, SKY_DROP_ATTACKCANCELER_CHECK);
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_LOAFING;
         gBattlerAbility = ctx->battlerAtk;
+        PushTraitStack(ctx->battlerAtk, ABILITY_TRUANT);
         gBattlescriptCurrInstr = BattleScript_TruantLoafingAround;
         gBattleStruct->moveResultFlags[ctx->battlerDef] |= MOVE_RESULT_MISSED;
         return CANCELER_RESULT_FAILURE;

@@ -111,7 +111,7 @@
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
 #define FLAG_HEAL_EVERY_BATTLE                    0x54  // If on, heals party before and after every battle
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_NO_TRAINER_SEE                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -682,22 +682,22 @@
 #define FLAG_RARE_CANDY_UNLOCKED_3  0x26E 
 #define FLAG_RARE_CANDY_UNLOCKED_4  0x26F 
 #define FLAG_RARE_CANDY_UNLOCKED_5  0x270 
-#define FLAG_UNUSED_0x271  0x271 
-#define FLAG_UNUSED_0x272  0x272 
-#define FLAG_UNUSED_0x273  0x273 
-#define FLAG_UNUSED_0x274  0x274 
-#define FLAG_UNUSED_0x275  0x275 
-#define FLAG_UNUSED_0x276  0x276 
-#define FLAG_UNUSED_0x277  0x277 
-#define FLAG_UNUSED_0x278  0x278 
-#define FLAG_UNUSED_0x279  0x279 
-#define FLAG_UNUSED_0x27A  0x27A 
-#define FLAG_UNUSED_0x27B  0x27B 
-#define FLAG_UNUSED_0x27C  0x27C 
-#define FLAG_UNUSED_0x27D  0x27D 
-#define FLAG_UNUSED_0x27E  0x27E 
-#define FLAG_UNUSED_0x27F  0x27F 
-#define FLAG_UNUSED_0x280  0x280 
+#define FLAG_ORAN_BERRY_UNLOCKED_1  0x271 
+#define FLAG_ORAN_BERRY_UNLOCKED_2  0x272 
+#define FLAG_LUM_BERRY_UNLOCKED_1  0x273 
+#define FLAG_LUM_BERRY_UNLOCKED_2  0x274 
+#define FLAG_SERIOUS_MINT_UNLOCKED_1  0x275 
+#define FLAG_SERIOUS_MINT_UNLOCKED_2  0x276 
+#define FLAG_TM_NOBLE_ROAR_UNLOCKED  0x277 
+#define FLAG_TM_CHARM_UNLOCKED  0x278 
+#define FLAG_TM_FAKE_TEARS_UNLOCKED  0x279 
+#define FLAG_TM_TOXIC_UNLOCKED  0x27A 
+#define FLAG_TM_THUNDER_WAVE_UNLOCKED  0x27B 
+#define FLAG_TM_WILL_O_WISP_UNLOCKED  0x27C 
+#define FLAG_TM_CONFUSE_RAY_UNLOCKED  0x27D 
+#define FLAG_TM_ROCK_SMASH_UNLOCKED  0x27E 
+#define FLAG_TM_SWIFT_UNLOCKED  0x27F 
+#define FLAG_TM_CUT_UNLOCKED  0x280 
 #define FLAG_UNUSED_0x281  0x281 
 #define FLAG_UNUSED_0x282  0x282 
 #define FLAG_UNUSED_0x283  0x283 

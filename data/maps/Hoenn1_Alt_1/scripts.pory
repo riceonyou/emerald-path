@@ -1,0 +1,29 @@
+mapscripts Hoenn1_Alt_1_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Hoenn1_1_OnLoad
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: Hoenn1_1_ONWARP]
+    MAP_SCRIPT_ON_FRAME_TABLE[ VAR_TEMP_2, 0: Hoenn1_1_ONFRAME]
+}
+
+script Hoenn1_Alt_1_ONWARP {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_WEST)
+}
+
+script Hoenn1_Alt_1_ONFRAME {
+	setvar(VAR_TEMP_2, 1)
+}
+
+script Hoenn1_Alt_1_OnLoad{
+    setvar(VAR_CURRENT_ACT, 1)
+    special(UpdateLevelCap)
+}
+
+script Hoenn1_Alt_1_EventScript_Boat{
+ 
+    lock
+    warp(MAP_HOENN1_ALT_2, 32, 7)
+    waitstate
+    release
+    end
+ 
+}

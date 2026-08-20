@@ -41,7 +41,7 @@ script Hoenn3_2_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 34)
+    setvar(VAR_0x8000, 35)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
@@ -62,7 +62,7 @@ script Hoenn3_3_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 34)
+    setvar(VAR_0x8000, 35)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
@@ -83,7 +83,7 @@ script Hoenn3_4_EventScript_BirchBag{
     lockall
     playse(SE_CLICK)
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 34)
+    setvar(VAR_0x8000, 35)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate

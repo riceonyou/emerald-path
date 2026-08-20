@@ -9347,8 +9347,8 @@
     {
       "id": "LAYOUT_HOENN1_3",
       "name": "Hoenn1_3_Layout",
-      "width": 30,
-      "height": 18,
+      "width": 34,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Hoenn1_3/border.bin",
@@ -9357,8 +9357,8 @@
     {
       "id": "LAYOUT_HOENN1_4",
       "name": "Hoenn1_4_Layout",
-      "width": 32,
-      "height": 18,
+      "width": 1,
+      "height": 1,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Hoenn1_4/border.bin",
@@ -9734,6 +9734,66 @@
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/ANCIENT_MANAPHY/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_MANAPHY/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_ALT_1",
+      "name": "Hoenn1_Alt_1_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Hoenn1_Alt_1/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_Alt_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_ALT_2",
+      "name": "Hoenn1_Alt_2_Layout",
+      "width": 42,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Hoenn1_Alt_2/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_Alt_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_ALT_4",
+      "name": "Hoenn1_Alt_4_Layout",
+      "width": 27,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Hoenn1_Alt_4/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_Alt_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_ALT_3",
+      "name": "Hoenn1_Alt_3_Layout",
+      "width": 26,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Hoenn1_Alt_3/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_Alt_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_ALT_5",
+      "name": "Hoenn1_Alt_5_Layout",
+      "width": 8,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/Hoenn1_Alt_5/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_Alt_5/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN1_ALT_1_HOUSE",
+      "name": "Hoenn1_Alt_1_House_Layout",
+      "width": 6,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Hoenn1_Alt_1_House/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn1_Alt_1_House/map.bin"
     }
   ]
 }

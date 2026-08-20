@@ -1,0 +1,13 @@
+mapscripts Hoenn1_Alt_2_MapScripts {
+
+}
+
+script Hoenn1_Alt_2_EventScript_Boat{
+ 
+    lock
+    warp(MAP_HOENN1_ALT_1, 9, 11)
+    waitstate
+    release
+    end
+ 
+}

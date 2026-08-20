@@ -155,7 +155,23 @@ FLAG_RARE_CANDY_UNLOCKED_1,\
 FLAG_RARE_CANDY_UNLOCKED_2,\
 FLAG_RARE_CANDY_UNLOCKED_3,\
 FLAG_RARE_CANDY_UNLOCKED_4,\
-FLAG_RARE_CANDY_UNLOCKED_5
+FLAG_RARE_CANDY_UNLOCKED_5,\
+FLAG_ORAN_BERRY_UNLOCKED_2,\
+FLAG_ORAN_BERRY_UNLOCKED_1,\
+FLAG_LUM_BERRY_UNLOCKED_1,\
+FLAG_LUM_BERRY_UNLOCKED_2,\
+FLAG_SERIOUS_MINT_UNLOCKED_1,\
+FLAG_SERIOUS_MINT_UNLOCKED_2,\
+FLAG_TM_NOBLE_ROAR_UNLOCKED,\
+FLAG_TM_CHARM_UNLOCKED,\
+FLAG_TM_FAKE_TEARS_UNLOCKED,\
+FLAG_TM_TOXIC_UNLOCKED,\
+FLAG_TM_THUNDER_WAVE_UNLOCKED,\
+FLAG_TM_WILL_O_WISP_UNLOCKED,\
+FLAG_TM_CONFUSE_RAY_UNLOCKED,\
+FLAG_TM_ROCK_SMASH_UNLOCKED,\
+FLAG_TM_SWIFT_UNLOCKED,\
+FLAG_TM_CUT_UNLOCKED
 
 // Flags listed above are restored after whiteout state reset
 
@@ -451,11 +467,13 @@ void DetermineRival(void)
             VarSet(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_SPECIES(GROVYLE));
             VarSet(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_SPECIES(SCEPTILE));
             VarSet(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_SPECIES(SCEPTILE_MEGA));
+            break;
         case(1):
             VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(TORCHIC));
             VarSet(VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_SPECIES(COMBUSKEN));
             VarSet(VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_SPECIES(BLAZIKEN));
             VarSet(VAR_OBJ_GFX_ID_4, OBJ_EVENT_GFX_SPECIES(BLAZIKEN_MEGA));
+            break;
     }
 }
 
@@ -470,6 +488,7 @@ void WarpToNextAncient(void)
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_REGIS), MAP_NUM(MAP_ANCIENT_REGIS), WARP_ID_NONE, 8, 12);
 						DoWarp();
+                        break;
 				}; 
                 break;
         case (2):
@@ -478,6 +497,7 @@ void WarpToNextAncient(void)
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_MANAPHY), MAP_NUM(MAP_ANCIENT_MANAPHY), WARP_ID_NONE, 8, 11);
 						DoWarp();
+                        break;
 				}; 
                 break;
         case (3):
@@ -486,9 +506,11 @@ void WarpToNextAncient(void)
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_KYOGRE), MAP_NUM(MAP_ANCIENT_KYOGRE), WARP_ID_NONE, 8, 11);
 						DoWarp();
+                        break;
                     case 1:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_GROUDON), MAP_NUM(MAP_ANCIENT_GROUDON), WARP_ID_NONE, 8, 11);
 						DoWarp();
+                        break;
 				}; 
                 break;
     }
@@ -504,20 +526,26 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 
     switch (currentact){
         case (0):
-                u8 rand0 = Random() % 1; //CHANGE THIS NUMBER ASS YOU ADD MORE ACTS
+                u8 rand0 = Random() % 2; //CHANGE THIS NUMBER ASS YOU ADD MORE ACTS
                 DetermineRival();//Only for act 0.
 				switch (rand0) {
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_HOENN1_1), MAP_NUM(MAP_HOENN1_1), WARP_ID_NONE, 3, 10);
 						DoWarp();
+                        break;
+                    case 1:
+                        SetWarpDestination(MAP_GROUP(MAP_HOENN1_ALT_1), MAP_NUM(MAP_HOENN1_ALT_1), WARP_ID_NONE, 22, 11);
+						DoWarp();
+                        break;
 				}; 
                 break;
         case (1):
                 u8 rand1 = Random() % 1;
 				switch (rand1) {
 					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN2_1), MAP_NUM(MAP_HOENN2_1), WARP_ID_NONE, 7, 7);
+                        SetWarpDestination(MAP_GROUP(MAP_HOENN2_1), MAP_NUM(MAP_HOENN2_1), WARP_ID_NONE, 4, 13);
 						DoWarp();
+                        break;
 				}; 
                 break;
         case (2):
@@ -526,6 +554,7 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_HOENN3_1), MAP_NUM(MAP_HOENN3_1), WARP_ID_NONE, 3, 7);
 						DoWarp();
+                        break;
 				}; 
                 break;
         case (3):
@@ -534,6 +563,7 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ELITE4_HOENN_OUTSIDE), MAP_NUM(MAP_ELITE4_HOENN_OUTSIDE), WARP_ID_NONE, 13, 24);
 						DoWarp();
+                        break;
 				}; 
                 break;
         case (4):
@@ -549,7 +579,7 @@ void GiveSavedStarter(void)
     u16 species = VarGet(VAR_STARTER_MON);
 
     if (species != SPECIES_NONE)
-        ScriptGiveMon(species, 5, ITEM_NONE, ITEM_NONE);
+        ScriptGiveMon(species, 14, ITEM_NONE, ITEM_NONE);
 }
 
 void UpdateLevelCap(void)
@@ -589,6 +619,24 @@ void ResetPokemonAndItems(void)
     if(FlagGet(FLAG_RARE_CANDY_UNLOCKED_3)){AddBagItem(ITEM_RARE_CANDY, 1);}
     if(FlagGet(FLAG_RARE_CANDY_UNLOCKED_4)){AddBagItem(ITEM_RARE_CANDY, 1);}
     if(FlagGet(FLAG_RARE_CANDY_UNLOCKED_5)){AddBagItem(ITEM_RARE_CANDY, 1);}
+
+    if(FlagGet(FLAG_ORAN_BERRY_UNLOCKED_1)){AddBagItem(ITEM_ORAN_BERRY, 1);}
+    if(FlagGet(FLAG_ORAN_BERRY_UNLOCKED_2)){AddBagItem(ITEM_ORAN_BERRY, 1);}
+    if(FlagGet(FLAG_LUM_BERRY_UNLOCKED_1)){AddBagItem(ITEM_LUM_BERRY, 1);}
+    if(FlagGet(FLAG_LUM_BERRY_UNLOCKED_2)){AddBagItem(ITEM_LUM_BERRY, 1);}
+    if(FlagGet(FLAG_SERIOUS_MINT_UNLOCKED_1)){AddBagItem(ITEM_SERIOUS_MINT, 1);}
+
+    if(FlagGet(FLAG_TM_NOBLE_ROAR_UNLOCKED)){AddBagItem(ITEM_TM_NOBLE_ROAR, 1);}
+    if(FlagGet(FLAG_TM_CHARM_UNLOCKED)){AddBagItem(ITEM_TM_CHARM, 1);}
+    if(FlagGet(FLAG_TM_FAKE_TEARS_UNLOCKED)){AddBagItem(ITEM_TM_FAKE_TEARS, 1);}
+    if(FlagGet(FLAG_TM_TOXIC_UNLOCKED)){AddBagItem(ITEM_TM_TOXIC, 1);}
+    if(FlagGet(FLAG_TM_THUNDER_WAVE_UNLOCKED)){AddBagItem(ITEM_TM_THUNDER_WAVE, 1);}   
+    if(FlagGet(FLAG_TM_WILL_O_WISP_UNLOCKED)){AddBagItem(ITEM_TM_WILL_O_WISP, 1);}
+    if(FlagGet(FLAG_TM_CONFUSE_RAY_UNLOCKED)){AddBagItem(ITEM_TM_CONFUSE_RAY, 1);}
+    if(FlagGet(FLAG_TM_ROCK_SMASH_UNLOCKED)){AddBagItem(ITEM_TM_ROCK_SMASH, 1);}
+    if(FlagGet(FLAG_TM_SWIFT_UNLOCKED)){AddBagItem(ITEM_TM_SWIFT, 1);}
+    if(FlagGet(FLAG_TM_CUT_UNLOCKED)){AddBagItem(ITEM_TM_CUT, 1);}
+
 }
 
 // code

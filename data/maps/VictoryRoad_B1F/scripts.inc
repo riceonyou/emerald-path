@@ -22,7 +22,7 @@ VictoryRoad_B1F_EventScript_Mitchell::
 	end
 
 VictoryRoad_B1F_EventScript_Halle::
-	trainerbattle_single TRAINER_HALLE, VictoryRoad_B1F_Text_HalleIntro, VictoryRoad_B1F_Text_HalleDefeat
+	trainerbattle_single TRAINER_RALTS, VictoryRoad_B1F_Text_HalleIntro, VictoryRoad_B1F_Text_HalleDefeat
 	msgbox VictoryRoad_B1F_Text_HallePostBattle, MSGBOX_AUTOCLOSE
 	end
 

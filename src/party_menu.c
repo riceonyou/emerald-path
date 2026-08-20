@@ -6021,12 +6021,26 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     u16 *itemPtr = &gSpecialVar_ItemId;
     bool8 cannotUseEffect;
     u8 holdEffectParam = GetItemHoldEffectParam(*itemPtr);
+    u8 levelCap = GetCurrentLevelCap();
 
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
-    if ((holdEffectParam == 0 && !(B_RARE_CANDY_CAP)) || (sInitialLevel < GetCurrentLevelCap()))
+    if ((holdEffectParam == 0 && !(B_RARE_CANDY_CAP)) || (sInitialLevel < levelCap))
     {
         //BufferMonStatsToTaskData(mon, arrayPtr);
-        cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
+        if (holdEffectParam == 1) // Candy Jar
+        {
+            cannotUseEffect = TRUE;
+            while (GetMonData(mon, MON_DATA_LEVEL) < levelCap)
+            {
+                cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
+                if (cannotUseEffect)
+                    break;
+            }
+        }
+        else
+        {
+            cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
+        }
         //BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
     }
     else

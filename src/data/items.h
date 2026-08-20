@@ -12758,9 +12758,9 @@ const struct ItemInfo gItemsInfo[] =
 
 // TMs/HMs. They don't have a set flingPower, as that's handled by GetFlingPowerFromItemId.
 
-    [ITEM_TM_TAKE_DOWN] =
+    [ITEM_TM_NOBLE_ROAR] =
     {
-        .name = ITEM_NAME("TM01"),
+        .name = ITEM_NAME("TM Noble Roar"),
         .price = 3000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -12791,9 +12791,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_AGILITY] =
+    [ITEM_TM_DIZZY_PUNCH] =
     {
-        .name = ITEM_NAME("TM04"),
+        .name = ITEM_NAME("TM Dizzy Punch"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -12802,9 +12802,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_MUD_SLAP] =
+    [ITEM_TM_ROCK_SMASH] =
     {
-        .name = ITEM_NAME("TM05"),
+        .name = ITEM_NAME("TM Rock Smash"),
         .price = 1000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -12813,9 +12813,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SCARY_FACE] =
+    [ITEM_TM_SHADOW_PUNCH] =
     {
-        .name = ITEM_NAME("TM06"),
+        .name = ITEM_NAME("TM Shadow Punch"),
         .price = 1000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -12824,9 +12824,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_PROTECT] =
+    [ITEM_TM_SUCKER_PUNCH] =
     {
-        .name = ITEM_NAME("TM07"),
+        .name = ITEM_NAME("TM Sucker Punch"),
         .price = 3000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13486,7 +13486,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_FIRE_PUNCH] =
     {
-        .name = ITEM_NAME("TM67"),
+        .name = ITEM_NAME("TM Fire Punch"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13497,7 +13497,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_THUNDER_PUNCH] =
     {
-        .name = ITEM_NAME("TM68"),
+        .name = ITEM_NAME("TM Thunder Punch"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13508,7 +13508,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_ICE_PUNCH] =
     {
-        .name = ITEM_NAME("TM69"),
+        .name = ITEM_NAME("TM Ice Punch"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13552,7 +13552,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_DRAIN_PUNCH] =
     {
-        .name = ITEM_NAME("TM73"),
+        .name = ITEM_NAME("TM Drain Punch"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -15266,9 +15266,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_UPPER_HAND] =
+    [ITEM_TM_CUT] =
     {
-        .name = ITEM_NAME("TM229"),
+        .name = ITEM_NAME("TM Cut"),
         .price = 500,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,

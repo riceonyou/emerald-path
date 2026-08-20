@@ -173,7 +173,7 @@ HUB1_ONFRAME_3:
 
 HUB1_ONFRAME_5:
 # 60 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_BULBASAUR, 5
+	givemon SPECIES_BULBASAUR, 14
 # 61 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_BULBASAUR_UNLOCKED
 # 62 "data/maps/Hub1/scripts.pory"
@@ -182,7 +182,7 @@ HUB1_ONFRAME_5:
 
 HUB1_ONFRAME_6:
 # 64 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_CHARMANDER, 5
+	givemon SPECIES_CHARMANDER, 14
 # 65 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHARMANDER_UNLOCKED
 # 66 "data/maps/Hub1/scripts.pory"
@@ -191,7 +191,7 @@ HUB1_ONFRAME_6:
 
 HUB1_ONFRAME_7:
 # 68 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_SQUIRTLE, 5
+	givemon SPECIES_SQUIRTLE, 14
 # 69 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SQUIRTLE_UNLOCKED
 # 70 "data/maps/Hub1/scripts.pory"
@@ -200,7 +200,7 @@ HUB1_ONFRAME_7:
 
 HUB1_ONFRAME_8:
 # 72 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_CHIKORITA, 5
+	givemon SPECIES_CHIKORITA, 14
 # 73 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHIKORITA_UNLOCKED
 # 74 "data/maps/Hub1/scripts.pory"
@@ -209,7 +209,7 @@ HUB1_ONFRAME_8:
 
 HUB1_ONFRAME_9:
 # 76 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_CYNDAQUIL, 5
+	givemon SPECIES_CYNDAQUIL, 14
 # 77 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CYNDAQUIL_UNLOCKED
 # 78 "data/maps/Hub1/scripts.pory"
@@ -218,7 +218,7 @@ HUB1_ONFRAME_9:
 
 HUB1_ONFRAME_10:
 # 80 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_TOTODILE, 5
+	givemon SPECIES_TOTODILE, 14
 # 81 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TOTODILE_UNLOCKED
 # 82 "data/maps/Hub1/scripts.pory"
@@ -227,7 +227,7 @@ HUB1_ONFRAME_10:
 
 HUB1_ONFRAME_11:
 # 84 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_TREECKO, 5
+	givemon SPECIES_TREECKO, 14
 # 85 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TREECKO_UNLOCKED
 # 86 "data/maps/Hub1/scripts.pory"
@@ -236,7 +236,7 @@ HUB1_ONFRAME_11:
 
 HUB1_ONFRAME_12:
 # 88 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_TORCHIC, 5
+	givemon SPECIES_TORCHIC, 14
 # 89 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TORCHIC_UNLOCKED
 # 90 "data/maps/Hub1/scripts.pory"
@@ -245,7 +245,7 @@ HUB1_ONFRAME_12:
 
 HUB1_ONFRAME_13:
 # 92 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_MUDKIP, 5
+	givemon SPECIES_MUDKIP, 14
 # 93 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_MUDKIP_UNLOCKED
 # 94 "data/maps/Hub1/scripts.pory"
@@ -254,7 +254,7 @@ HUB1_ONFRAME_13:
 
 HUB1_ONFRAME_14:
 # 96 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_TURTWIG, 5
+	givemon SPECIES_TURTWIG, 14
 # 97 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TURTWIG_UNLOCKED
 # 98 "data/maps/Hub1/scripts.pory"
@@ -263,7 +263,7 @@ HUB1_ONFRAME_14:
 
 HUB1_ONFRAME_15:
 # 100 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_CHIMCHAR, 5
+	givemon SPECIES_CHIMCHAR, 14
 # 101 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHIMCHAR_UNLOCKED
 # 102 "data/maps/Hub1/scripts.pory"
@@ -272,7 +272,7 @@ HUB1_ONFRAME_15:
 
 HUB1_ONFRAME_16:
 # 104 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_PIPLUP, 5
+	givemon SPECIES_PIPLUP, 14
 # 105 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_PIPLUP_UNLOCKED
 # 106 "data/maps/Hub1/scripts.pory"
@@ -281,7 +281,7 @@ HUB1_ONFRAME_16:
 
 HUB1_ONFRAME_17:
 # 108 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_SNIVY, 5
+	givemon SPECIES_SNIVY, 14
 # 109 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SNIVY_UNLOCKED
 # 110 "data/maps/Hub1/scripts.pory"
@@ -290,7 +290,7 @@ HUB1_ONFRAME_17:
 
 HUB1_ONFRAME_18:
 # 112 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_TEPIG, 5
+	givemon SPECIES_TEPIG, 14
 # 113 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TEPIG_UNLOCKED
 # 114 "data/maps/Hub1/scripts.pory"
@@ -299,7 +299,7 @@ HUB1_ONFRAME_18:
 
 HUB1_ONFRAME_19:
 # 116 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_OSHAWOTT, 5
+	givemon SPECIES_OSHAWOTT, 14
 # 117 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_OSHAWOTT_UNLOCKED
 # 118 "data/maps/Hub1/scripts.pory"
@@ -308,7 +308,7 @@ HUB1_ONFRAME_19:
 
 HUB1_ONFRAME_20:
 # 120 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_CHESPIN, 5
+	givemon SPECIES_CHESPIN, 14
 # 121 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHESPIN_UNLOCKED
 # 122 "data/maps/Hub1/scripts.pory"
@@ -317,7 +317,7 @@ HUB1_ONFRAME_20:
 
 HUB1_ONFRAME_21:
 # 124 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_FENNEKIN, 5
+	givemon SPECIES_FENNEKIN, 14
 # 125 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_FENNEKIN_UNLOCKED
 # 126 "data/maps/Hub1/scripts.pory"
@@ -326,7 +326,7 @@ HUB1_ONFRAME_21:
 
 HUB1_ONFRAME_22:
 # 128 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_FROAKIE, 5
+	givemon SPECIES_FROAKIE, 14
 # 129 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_FROAKIE_UNLOCKED
 # 130 "data/maps/Hub1/scripts.pory"
@@ -335,7 +335,7 @@ HUB1_ONFRAME_22:
 
 HUB1_ONFRAME_23:
 # 132 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_ROWLET, 5
+	givemon SPECIES_ROWLET, 14
 # 133 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_ROWLET_UNLOCKED
 # 134 "data/maps/Hub1/scripts.pory"
@@ -344,7 +344,7 @@ HUB1_ONFRAME_23:
 
 HUB1_ONFRAME_24:
 # 136 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_LITTEN, 5
+	givemon SPECIES_LITTEN, 14
 # 137 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_LITTEN_UNLOCKED
 # 138 "data/maps/Hub1/scripts.pory"
@@ -353,7 +353,7 @@ HUB1_ONFRAME_24:
 
 HUB1_ONFRAME_25:
 # 140 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_POPPLIO, 5
+	givemon SPECIES_POPPLIO, 14
 # 141 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_POPPLIO_UNLOCKED
 # 142 "data/maps/Hub1/scripts.pory"
@@ -362,7 +362,7 @@ HUB1_ONFRAME_25:
 
 HUB1_ONFRAME_26:
 # 144 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_GROOKEY, 5
+	givemon SPECIES_GROOKEY, 14
 # 145 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_GROOKEY_UNLOCKED
 # 146 "data/maps/Hub1/scripts.pory"
@@ -371,7 +371,7 @@ HUB1_ONFRAME_26:
 
 HUB1_ONFRAME_27:
 # 148 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_SCORBUNNY, 5
+	givemon SPECIES_SCORBUNNY, 14
 # 149 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SCORBUNNY_UNLOCKED
 # 150 "data/maps/Hub1/scripts.pory"
@@ -380,7 +380,7 @@ HUB1_ONFRAME_27:
 
 HUB1_ONFRAME_28:
 # 152 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_SOBBLE, 5
+	givemon SPECIES_SOBBLE, 14
 # 153 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SOBBLE_UNLOCKED
 # 154 "data/maps/Hub1/scripts.pory"
@@ -389,7 +389,7 @@ HUB1_ONFRAME_28:
 
 HUB1_ONFRAME_29:
 # 156 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_SPRIGATITO, 5
+	givemon SPECIES_SPRIGATITO, 14
 # 157 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SPRIGATITO_UNLOCKED
 # 158 "data/maps/Hub1/scripts.pory"
@@ -398,7 +398,7 @@ HUB1_ONFRAME_29:
 
 HUB1_ONFRAME_30:
 # 160 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_FUECOCO, 5
+	givemon SPECIES_FUECOCO, 14
 # 161 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_FUECOCO_UNLOCKED
 # 162 "data/maps/Hub1/scripts.pory"
@@ -407,7 +407,7 @@ HUB1_ONFRAME_30:
 
 HUB1_ONFRAME_31:
 # 164 "data/maps/Hub1/scripts.pory"
-	givemon SPECIES_QUAXLY, 5
+	givemon SPECIES_QUAXLY, 14
 # 165 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_QUAXLY_UNLOCKED
 # 166 "data/maps/Hub1/scripts.pory"
@@ -807,7 +807,7 @@ Hub_Event_Script_Miltank_87:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_88:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_115
@@ -816,7 +816,7 @@ Hub_Event_Script_Miltank_88:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_89:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_118
@@ -825,7 +825,7 @@ Hub_Event_Script_Miltank_89:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_90:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_121
@@ -834,7 +834,7 @@ Hub_Event_Script_Miltank_90:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_91:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_124
@@ -843,7 +843,7 @@ Hub_Event_Script_Miltank_91:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_92:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_127
@@ -852,7 +852,7 @@ Hub_Event_Script_Miltank_92:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_93:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_130
@@ -861,7 +861,7 @@ Hub_Event_Script_Miltank_93:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_94:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_133
@@ -870,7 +870,7 @@ Hub_Event_Script_Miltank_94:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_95:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_136
@@ -879,7 +879,7 @@ Hub_Event_Script_Miltank_95:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_96:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_139
@@ -888,7 +888,7 @@ Hub_Event_Script_Miltank_96:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_97:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_142
@@ -897,7 +897,7 @@ Hub_Event_Script_Miltank_97:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_98:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_145
@@ -906,7 +906,7 @@ Hub_Event_Script_Miltank_98:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_99:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_148
@@ -915,7 +915,7 @@ Hub_Event_Script_Miltank_99:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_100:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_151
@@ -924,7 +924,7 @@ Hub_Event_Script_Miltank_100:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_101:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_154
@@ -933,7 +933,7 @@ Hub_Event_Script_Miltank_101:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_102:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_157
@@ -942,7 +942,7 @@ Hub_Event_Script_Miltank_102:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_103:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_160
@@ -951,7 +951,7 @@ Hub_Event_Script_Miltank_103:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_104:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_163
@@ -960,7 +960,7 @@ Hub_Event_Script_Miltank_104:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_105:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_166
@@ -969,7 +969,7 @@ Hub_Event_Script_Miltank_105:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_106:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_169
@@ -978,7 +978,7 @@ Hub_Event_Script_Miltank_106:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_107:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_172
@@ -987,7 +987,7 @@ Hub_Event_Script_Miltank_107:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_108:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_175
@@ -996,7 +996,7 @@ Hub_Event_Script_Miltank_108:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_109:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_178
@@ -1005,7 +1005,7 @@ Hub_Event_Script_Miltank_109:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_110:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_181
@@ -1014,7 +1014,7 @@ Hub_Event_Script_Miltank_110:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_111:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_184
@@ -1023,7 +1023,7 @@ Hub_Event_Script_Miltank_111:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_112:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_187
@@ -1032,7 +1032,7 @@ Hub_Event_Script_Miltank_112:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_113:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_190
@@ -1041,7 +1041,7 @@ Hub_Event_Script_Miltank_113:
 	goto Hub_Event_Script_Miltank_85
 
 Hub_Event_Script_Miltank_114:
-	checkmoney 5000
+	checkmoney 3000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Miltank_193
@@ -1053,7 +1053,7 @@ Hub_Event_Script_Miltank_115:
 # 234 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_BULBASAUR_UNLOCKED
 # 235 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 236 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 237 "data/maps/Hub1/scripts.pory"
@@ -1066,7 +1066,7 @@ Hub_Event_Script_Miltank_118:
 # 245 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHARMANDER_UNLOCKED
 # 246 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 247 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 248 "data/maps/Hub1/scripts.pory"
@@ -1079,7 +1079,7 @@ Hub_Event_Script_Miltank_121:
 # 256 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SQUIRTLE_UNLOCKED
 # 257 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 258 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 259 "data/maps/Hub1/scripts.pory"
@@ -1092,7 +1092,7 @@ Hub_Event_Script_Miltank_124:
 # 267 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHIKORITA_UNLOCKED
 # 268 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 269 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 270 "data/maps/Hub1/scripts.pory"
@@ -1105,7 +1105,7 @@ Hub_Event_Script_Miltank_127:
 # 278 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CYNDAQUIL_UNLOCKED
 # 279 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 280 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 281 "data/maps/Hub1/scripts.pory"
@@ -1118,7 +1118,7 @@ Hub_Event_Script_Miltank_130:
 # 289 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TOTODILE_UNLOCKED
 # 290 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 291 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 292 "data/maps/Hub1/scripts.pory"
@@ -1131,7 +1131,7 @@ Hub_Event_Script_Miltank_133:
 # 300 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TREECKO_UNLOCKED
 # 301 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 302 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 303 "data/maps/Hub1/scripts.pory"
@@ -1144,7 +1144,7 @@ Hub_Event_Script_Miltank_136:
 # 311 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TORCHIC_UNLOCKED
 # 312 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 313 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 314 "data/maps/Hub1/scripts.pory"
@@ -1157,7 +1157,7 @@ Hub_Event_Script_Miltank_139:
 # 322 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_MUDKIP_UNLOCKED
 # 323 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 324 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 325 "data/maps/Hub1/scripts.pory"
@@ -1170,7 +1170,7 @@ Hub_Event_Script_Miltank_142:
 # 333 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TURTWIG_UNLOCKED
 # 334 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 335 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 336 "data/maps/Hub1/scripts.pory"
@@ -1183,7 +1183,7 @@ Hub_Event_Script_Miltank_145:
 # 344 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHIMCHAR_UNLOCKED
 # 345 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 346 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 347 "data/maps/Hub1/scripts.pory"
@@ -1196,7 +1196,7 @@ Hub_Event_Script_Miltank_148:
 # 355 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_PIPLUP_UNLOCKED
 # 356 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 357 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 358 "data/maps/Hub1/scripts.pory"
@@ -1209,7 +1209,7 @@ Hub_Event_Script_Miltank_151:
 # 366 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SNIVY_UNLOCKED
 # 367 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 368 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 369 "data/maps/Hub1/scripts.pory"
@@ -1222,7 +1222,7 @@ Hub_Event_Script_Miltank_154:
 # 377 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_TEPIG_UNLOCKED
 # 378 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 379 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 380 "data/maps/Hub1/scripts.pory"
@@ -1235,7 +1235,7 @@ Hub_Event_Script_Miltank_157:
 # 388 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_OSHAWOTT_UNLOCKED
 # 389 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 390 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 391 "data/maps/Hub1/scripts.pory"
@@ -1248,7 +1248,7 @@ Hub_Event_Script_Miltank_160:
 # 399 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_CHESPIN_UNLOCKED
 # 400 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 401 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 402 "data/maps/Hub1/scripts.pory"
@@ -1261,7 +1261,7 @@ Hub_Event_Script_Miltank_163:
 # 410 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_FENNEKIN_UNLOCKED
 # 411 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 412 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 413 "data/maps/Hub1/scripts.pory"
@@ -1274,7 +1274,7 @@ Hub_Event_Script_Miltank_166:
 # 421 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_FROAKIE_UNLOCKED
 # 422 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 423 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 424 "data/maps/Hub1/scripts.pory"
@@ -1287,7 +1287,7 @@ Hub_Event_Script_Miltank_169:
 # 432 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_ROWLET_UNLOCKED
 # 433 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 434 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 435 "data/maps/Hub1/scripts.pory"
@@ -1300,7 +1300,7 @@ Hub_Event_Script_Miltank_172:
 # 443 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_LITTEN_UNLOCKED
 # 444 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 445 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 446 "data/maps/Hub1/scripts.pory"
@@ -1313,7 +1313,7 @@ Hub_Event_Script_Miltank_175:
 # 454 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_POPPLIO_UNLOCKED
 # 455 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 456 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 457 "data/maps/Hub1/scripts.pory"
@@ -1326,7 +1326,7 @@ Hub_Event_Script_Miltank_178:
 # 465 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_GROOKEY_UNLOCKED
 # 466 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 467 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 468 "data/maps/Hub1/scripts.pory"
@@ -1339,7 +1339,7 @@ Hub_Event_Script_Miltank_181:
 # 476 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SCORBUNNY_UNLOCKED
 # 477 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 478 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 479 "data/maps/Hub1/scripts.pory"
@@ -1352,7 +1352,7 @@ Hub_Event_Script_Miltank_184:
 # 487 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SOBBLE_UNLOCKED
 # 488 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 489 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 490 "data/maps/Hub1/scripts.pory"
@@ -1365,7 +1365,7 @@ Hub_Event_Script_Miltank_187:
 # 498 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_SPRIGATITO_UNLOCKED
 # 499 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 500 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 501 "data/maps/Hub1/scripts.pory"
@@ -1378,7 +1378,7 @@ Hub_Event_Script_Miltank_190:
 # 509 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_FUECOCO_UNLOCKED
 # 510 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 511 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 512 "data/maps/Hub1/scripts.pory"
@@ -1391,7 +1391,7 @@ Hub_Event_Script_Miltank_193:
 # 520 "data/maps/Hub1/scripts.pory"
 	setflag FLAG_QUAXLY_UNLOCKED
 # 521 "data/maps/Hub1/scripts.pory"
-	removemoney 5000
+	removemoney 3000
 # 522 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
 # 523 "data/maps/Hub1/scripts.pory"
@@ -1927,18 +1927,33 @@ Hub_Event_Script_Kecleon_1:
 	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_5, Hub_Event_Script_Kecleon_23
 Hub_Event_Script_Kecleon_18:
 # 645 "data/maps/Hub1/scripts.pory"
-	compare VAR_TEMP_A, 0
-	goto_if_ne Hub_Event_Script_Kecleon_30
-# 811 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_14
-# 812 "data/maps/Hub1/scripts.pory"
-	waitmessage
-# 813 "data/maps/Hub1/scripts.pory"
-	releaseall
+	goto_if_unset FLAG_ORAN_BERRY_UNLOCKED_1, Hub_Event_Script_Kecleon_30
+# 648 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_ORAN_BERRY_UNLOCKED_2, Hub_Event_Script_Kecleon_31
 Hub_Event_Script_Kecleon_29:
-# 815 "data/maps/Hub1/scripts.pory"
+# 654 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_LUM_BERRY_UNLOCKED_1, Hub_Event_Script_Kecleon_35
+# 657 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_LUM_BERRY_UNLOCKED_2, Hub_Event_Script_Kecleon_36
+Hub_Event_Script_Kecleon_34:
+# 662 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_SERIOUS_MINT_UNLOCKED_1, Hub_Event_Script_Kecleon_40
+# 665 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_SERIOUS_MINT_UNLOCKED_2, Hub_Event_Script_Kecleon_41
+Hub_Event_Script_Kecleon_39:
+# 671 "data/maps/Hub1/scripts.pory"
+	compare VAR_TEMP_A, 0
+	goto_if_ne Hub_Event_Script_Kecleon_45
+# 918 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_23
+# 919 "data/maps/Hub1/scripts.pory"
+	waitmessage
+# 920 "data/maps/Hub1/scripts.pory"
+	releaseall
+Hub_Event_Script_Kecleon_44:
+# 922 "data/maps/Hub1/scripts.pory"
 	hidemoneybox
-# 816 "data/maps/Hub1/scripts.pory"
+# 923 "data/maps/Hub1/scripts.pory"
 	releaseall
 	return
 
@@ -2035,360 +2050,1459 @@ Hub_Event_Script_Kecleon_23:
 
 Hub_Event_Script_Kecleon_30:
 # 646 "data/maps/Hub1/scripts.pory"
-	showmoneybox 17, 10
+	dynmultipush Hub_Event_Script_Kecleon_Text_11, ITEM_ORAN_BERRY
 # 647 "data/maps/Hub1/scripts.pory"
-	dynmultistack 0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM
-# 648 "data/maps/Hub1/scripts.pory"
-	switch VAR_RESULT
-# 649 "data/maps/Hub1/scripts.pory"
-	case ITEM_MEMORY_MUSHROOM, Hub_Event_Script_Kecleon_34
-# 747 "data/maps/Hub1/scripts.pory"
-	case ITEM_RARE_CANDY, Hub_Event_Script_Kecleon_35
+	addvar VAR_TEMP_A, 1
 	goto Hub_Event_Script_Kecleon_29
 
-Hub_Event_Script_Kecleon_34:
+Hub_Event_Script_Kecleon_31:
+# 649 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Kecleon_Text_12, ITEM_ORAN_BERRY
 # 650 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_1, Hub_Event_Script_Kecleon_36
-# 662 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_2, Hub_Event_Script_Kecleon_37
-# 674 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_3, Hub_Event_Script_Kecleon_38
-# 686 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_4, Hub_Event_Script_Kecleon_39
-# 698 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_5, Hub_Event_Script_Kecleon_40
-# 710 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_6, Hub_Event_Script_Kecleon_41
-# 722 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_7, Hub_Event_Script_Kecleon_42
-# 734 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_8, Hub_Event_Script_Kecleon_43
+	addvar VAR_TEMP_A, 1
 	goto Hub_Event_Script_Kecleon_29
 
 Hub_Event_Script_Kecleon_35:
-# 748 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_1, Hub_Event_Script_Kecleon_52
-# 760 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_2, Hub_Event_Script_Kecleon_53
-# 772 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_3, Hub_Event_Script_Kecleon_54
-# 784 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_4, Hub_Event_Script_Kecleon_55
-# 796 "data/maps/Hub1/scripts.pory"
-	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_5, Hub_Event_Script_Kecleon_56
-	goto Hub_Event_Script_Kecleon_29
+# 655 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Kecleon_Text_13, ITEM_LUM_BERRY
+# 656 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Kecleon_34
 
 Hub_Event_Script_Kecleon_36:
+# 658 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Kecleon_Text_14, ITEM_LUM_BERRY
+# 659 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Kecleon_34
+
+Hub_Event_Script_Kecleon_40:
+# 663 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Kecleon_Text_15, ITEM_SERIOUS_MINT
+# 664 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Kecleon_39
+
+Hub_Event_Script_Kecleon_41:
+# 666 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Kecleon_Text_16, ITEM_SERIOUS_MINT
+# 667 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Kecleon_39
+
+Hub_Event_Script_Kecleon_45:
+# 672 "data/maps/Hub1/scripts.pory"
+	showmoneybox 17, 10
+# 673 "data/maps/Hub1/scripts.pory"
+	dynmultistack 0, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM
+# 674 "data/maps/Hub1/scripts.pory"
+	switch VAR_RESULT
+# 675 "data/maps/Hub1/scripts.pory"
+	case ITEM_ORAN_BERRY, Hub_Event_Script_Kecleon_49
+# 702 "data/maps/Hub1/scripts.pory"
+	case ITEM_LUM_BERRY, Hub_Event_Script_Kecleon_50
+# 729 "data/maps/Hub1/scripts.pory"
+	case ITEM_SERIOUS_MINT, Hub_Event_Script_Kecleon_51
+# 756 "data/maps/Hub1/scripts.pory"
+	case ITEM_MEMORY_MUSHROOM, Hub_Event_Script_Kecleon_52
+# 854 "data/maps/Hub1/scripts.pory"
+	case ITEM_RARE_CANDY, Hub_Event_Script_Kecleon_53
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_49:
+# 676 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_ORAN_BERRY_UNLOCKED_1, Hub_Event_Script_Kecleon_54
+# 688 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_ORAN_BERRY_UNLOCKED_2, Hub_Event_Script_Kecleon_55
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_50:
+# 703 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_LUM_BERRY_UNLOCKED_1, Hub_Event_Script_Kecleon_58
+# 715 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_LUM_BERRY_UNLOCKED_2, Hub_Event_Script_Kecleon_59
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_51:
+# 730 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_SERIOUS_MINT_UNLOCKED_1, Hub_Event_Script_Kecleon_62
+# 742 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_SERIOUS_MINT_UNLOCKED_2, Hub_Event_Script_Kecleon_63
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_52:
+# 757 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_1, Hub_Event_Script_Kecleon_66
+# 769 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_2, Hub_Event_Script_Kecleon_67
+# 781 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_3, Hub_Event_Script_Kecleon_68
+# 793 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_4, Hub_Event_Script_Kecleon_69
+# 805 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_5, Hub_Event_Script_Kecleon_70
+# 817 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_6, Hub_Event_Script_Kecleon_71
+# 829 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_7, Hub_Event_Script_Kecleon_72
+# 841 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_MEMORY_MUSHROOM_UNLOCKED_8, Hub_Event_Script_Kecleon_73
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_53:
+# 855 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_1, Hub_Event_Script_Kecleon_82
+# 867 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_2, Hub_Event_Script_Kecleon_83
+# 879 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_3, Hub_Event_Script_Kecleon_84
+# 891 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_4, Hub_Event_Script_Kecleon_85
+# 903 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_RARE_CANDY_UNLOCKED_5, Hub_Event_Script_Kecleon_86
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_54:
 	checkmoney 2000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_62
-# 660 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
+	goto_if_ne Hub_Event_Script_Kecleon_92
+# 686 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
-Hub_Event_Script_Kecleon_37:
+Hub_Event_Script_Kecleon_55:
 	checkmoney 10000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_65
-# 672 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_38:
-	checkmoney 20000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_68
-# 684 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_39:
-	checkmoney 30000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_71
-# 696 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_40:
-	checkmoney 40000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_74
-# 708 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_41:
-	checkmoney 50000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_77
-# 720 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_42:
-	checkmoney 80000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_80
-# 732 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_43:
-	checkmoney 100000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_83
-# 744 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_52:
-	checkmoney 30000
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_86
-# 758 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_53:
-	checkmoney 9999999
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_89
-# 770 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_54:
-	checkmoney 9999999
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Hub_Event_Script_Kecleon_92
-# 782 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_55:
-	checkmoney 9999999
-# 0 "data/maps/Hub1/scripts.pory"
-	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_95
-# 794 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
+# 698 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
-Hub_Event_Script_Kecleon_56:
-	checkmoney 9999999
+Hub_Event_Script_Kecleon_58:
+	checkmoney 5000
 # 0 "data/maps/Hub1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Hub_Event_Script_Kecleon_98
-# 806 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_12
-	goto Hub_Event_Script_Kecleon_29
+# 713 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_59:
+	checkmoney 20000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_101
+# 725 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_62:
-# 652 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_1
-# 653 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 654 "data/maps/Hub1/scripts.pory"
-	removemoney 2000
-# 655 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 656 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 657 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_104
+# 740 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
-Hub_Event_Script_Kecleon_65:
-# 664 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_2
-# 665 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 666 "data/maps/Hub1/scripts.pory"
-	removemoney 10000
-# 667 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 668 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 669 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+Hub_Event_Script_Kecleon_63:
+	checkmoney 30000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_107
+# 752 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_66:
+	checkmoney 2000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_110
+# 767 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_67:
+	checkmoney 3000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_113
+# 779 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_68:
-# 676 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_3
-# 677 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 678 "data/maps/Hub1/scripts.pory"
-	removemoney 20000
-# 679 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 680 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 681 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_116
+# 791 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_69:
+	checkmoney 5000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_119
+# 803 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_70:
+	checkmoney 6000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_122
+# 815 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_71:
-# 688 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_4
-# 689 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 690 "data/maps/Hub1/scripts.pory"
-	removemoney 30000
-# 691 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 692 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 693 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+	checkmoney 7000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_125
+# 827 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
-Hub_Event_Script_Kecleon_74:
-# 700 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_5
-# 701 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 702 "data/maps/Hub1/scripts.pory"
-	removemoney 40000
-# 703 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 704 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 705 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+Hub_Event_Script_Kecleon_72:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_128
+# 839 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
-Hub_Event_Script_Kecleon_77:
-# 712 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_6
-# 713 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 714 "data/maps/Hub1/scripts.pory"
-	removemoney 50000
-# 715 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 716 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 717 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+Hub_Event_Script_Kecleon_73:
+	checkmoney 9000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_131
+# 851 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
-Hub_Event_Script_Kecleon_80:
-# 724 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_7
-# 725 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 726 "data/maps/Hub1/scripts.pory"
-	removemoney 80000
-# 727 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 728 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 729 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+Hub_Event_Script_Kecleon_82:
+	checkmoney 30000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_134
+# 865 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_83:
-# 736 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_8
-# 737 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_MEMORY_MUSHROOM, 1
-# 738 "data/maps/Hub1/scripts.pory"
-	removemoney 100000
-# 739 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 740 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 741 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_11
-	goto Hub_Event_Script_Kecleon_29
+	checkmoney 9999999
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_137
+# 877 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_84:
+	checkmoney 9999999
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_140
+# 889 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_85:
+	checkmoney 9999999
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_143
+# 901 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_86:
-# 750 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_RARE_CANDY_UNLOCKED_1
-# 751 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 1
-# 752 "data/maps/Hub1/scripts.pory"
-	removemoney 30000
-# 753 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 754 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 755 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_13
-	goto Hub_Event_Script_Kecleon_29
-
-Hub_Event_Script_Kecleon_89:
-# 762 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_RARE_CANDY_UNLOCKED_2
-# 763 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 1
-# 764 "data/maps/Hub1/scripts.pory"
-	removemoney 9999999
-# 765 "data/maps/Hub1/scripts.pory"
-	updatemoneybox
-# 766 "data/maps/Hub1/scripts.pory"
-	playse SE_SHOP
-# 767 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_13
-	goto Hub_Event_Script_Kecleon_29
+	checkmoney 9999999
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Kecleon_146
+# 913 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_92:
-# 774 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_RARE_CANDY_UNLOCKED_3
-# 775 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 1
-# 776 "data/maps/Hub1/scripts.pory"
-	removemoney 9999999
-# 777 "data/maps/Hub1/scripts.pory"
+# 678 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_ORAN_BERRY_UNLOCKED_1
+# 679 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_ORAN_BERRY, 1
+# 680 "data/maps/Hub1/scripts.pory"
+	removemoney 2000
+# 681 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
-# 778 "data/maps/Hub1/scripts.pory"
+# 682 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
-# 779 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_13
-	goto Hub_Event_Script_Kecleon_29
+# 683 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_17
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_95:
-# 786 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_RARE_CANDY_UNLOCKED_4
-# 787 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 1
-# 788 "data/maps/Hub1/scripts.pory"
-	removemoney 9999999
-# 789 "data/maps/Hub1/scripts.pory"
+# 690 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_ORAN_BERRY_UNLOCKED_2
+# 691 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_ORAN_BERRY, 1
+# 692 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 693 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
-# 790 "data/maps/Hub1/scripts.pory"
+# 694 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
-# 791 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_13
-	goto Hub_Event_Script_Kecleon_29
+# 695 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_17
+	goto Hub_Event_Script_Kecleon_44
 
 Hub_Event_Script_Kecleon_98:
-# 798 "data/maps/Hub1/scripts.pory"
-	setflag FLAG_RARE_CANDY_UNLOCKED_5
-# 799 "data/maps/Hub1/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 1
-# 800 "data/maps/Hub1/scripts.pory"
-	removemoney 9999999
-# 801 "data/maps/Hub1/scripts.pory"
+# 705 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_LUM_BERRY_UNLOCKED_1
+# 706 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_LUM_BERRY, 1
+# 707 "data/maps/Hub1/scripts.pory"
+	removemoney 5000
+# 708 "data/maps/Hub1/scripts.pory"
 	updatemoneybox
-# 802 "data/maps/Hub1/scripts.pory"
+# 709 "data/maps/Hub1/scripts.pory"
 	playse SE_SHOP
-# 803 "data/maps/Hub1/scripts.pory"
-	msgbox Hub_Event_Script_Kecleon_Text_13
-	goto Hub_Event_Script_Kecleon_29
+# 710 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_19
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_101:
+# 717 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_LUM_BERRY_UNLOCKED_2
+# 718 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_LUM_BERRY, 1
+# 719 "data/maps/Hub1/scripts.pory"
+	removemoney 20000
+# 720 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 721 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 722 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_19
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_104:
+# 732 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_SERIOUS_MINT_UNLOCKED_1
+# 733 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_SERIOUS_MINT, 1
+# 734 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 735 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 736 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 737 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_20
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_107:
+# 744 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_SERIOUS_MINT_UNLOCKED_2
+# 745 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_SERIOUS_MINT, 1
+# 746 "data/maps/Hub1/scripts.pory"
+	removemoney 30000
+# 747 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 748 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 749 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_20
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_110:
+# 759 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_1
+# 760 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 761 "data/maps/Hub1/scripts.pory"
+	removemoney 2000
+# 762 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 763 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 764 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_113:
+# 771 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_2
+# 772 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 773 "data/maps/Hub1/scripts.pory"
+	removemoney 3000
+# 774 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 775 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 776 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_116:
+# 783 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_3
+# 784 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 785 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 786 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 787 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 788 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_119:
+# 795 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_4
+# 796 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 797 "data/maps/Hub1/scripts.pory"
+	removemoney 5000
+# 798 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 799 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 800 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_122:
+# 807 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_5
+# 808 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 809 "data/maps/Hub1/scripts.pory"
+	removemoney 6000
+# 810 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 811 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 812 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_125:
+# 819 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_6
+# 820 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 821 "data/maps/Hub1/scripts.pory"
+	removemoney 7000
+# 822 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 823 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 824 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_128:
+# 831 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_7
+# 832 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 833 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 834 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 835 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 836 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_131:
+# 843 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_MEMORY_MUSHROOM_UNLOCKED_8
+# 844 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_MEMORY_MUSHROOM, 1
+# 845 "data/maps/Hub1/scripts.pory"
+	removemoney 9000
+# 846 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 847 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 848 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_21
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_134:
+# 857 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_RARE_CANDY_UNLOCKED_1
+# 858 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+# 859 "data/maps/Hub1/scripts.pory"
+	removemoney 30000
+# 860 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 861 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 862 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_22
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_137:
+# 869 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_RARE_CANDY_UNLOCKED_2
+# 870 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+# 871 "data/maps/Hub1/scripts.pory"
+	removemoney 9999999
+# 872 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 873 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 874 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_22
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_140:
+# 881 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_RARE_CANDY_UNLOCKED_3
+# 882 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+# 883 "data/maps/Hub1/scripts.pory"
+	removemoney 9999999
+# 884 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 885 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 886 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_22
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_143:
+# 893 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_RARE_CANDY_UNLOCKED_4
+# 894 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+# 895 "data/maps/Hub1/scripts.pory"
+	removemoney 9999999
+# 896 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 897 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 898 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_22
+	goto Hub_Event_Script_Kecleon_44
+
+Hub_Event_Script_Kecleon_146:
+# 905 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_RARE_CANDY_UNLOCKED_5
+# 906 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+# 907 "data/maps/Hub1/scripts.pory"
+	removemoney 9999999
+# 908 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 909 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 910 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_22
+	goto Hub_Event_Script_Kecleon_44
+
+
+Hub_Event_Script_Shiny_Kecleon::
+# 928 "data/maps/Hub1/scripts.pory"
+	lockall
+# 929 "data/maps/Hub1/scripts.pory"
+	setvar VAR_TEMP_A, 0
+# 930 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_0
+# 931 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_ROCK_SMASH_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_2
+Hub_Event_Script_Shiny_Kecleon_1:
+# 935 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_SWIFT_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_5
+Hub_Event_Script_Shiny_Kecleon_4:
+# 939 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CUT_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_8
+Hub_Event_Script_Shiny_Kecleon_7:
+# 943 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_NOBLE_ROAR_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_11
+Hub_Event_Script_Shiny_Kecleon_10:
+# 947 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CHARM_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_14
+Hub_Event_Script_Shiny_Kecleon_13:
+# 951 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_FAKE_TEARS_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_17
+Hub_Event_Script_Shiny_Kecleon_16:
+# 955 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CONFUSE_RAY_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_20
+Hub_Event_Script_Shiny_Kecleon_19:
+# 959 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_THUNDER_WAVE_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_23
+Hub_Event_Script_Shiny_Kecleon_22:
+# 963 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_WILL_O_WISP_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_26
+Hub_Event_Script_Shiny_Kecleon_25:
+# 967 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_TOXIC_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_29
+Hub_Event_Script_Shiny_Kecleon_28:
+# 973 "data/maps/Hub1/scripts.pory"
+	compare VAR_TEMP_A, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_32
+# 1119 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_23
+# 1120 "data/maps/Hub1/scripts.pory"
+	waitmessage
+# 1121 "data/maps/Hub1/scripts.pory"
+	releaseall
+Hub_Event_Script_Shiny_Kecleon_31:
+# 1123 "data/maps/Hub1/scripts.pory"
+	hidemoneybox
+# 1124 "data/maps/Hub1/scripts.pory"
+	releaseall
+	return
+
+Hub_Event_Script_Shiny_Kecleon_2:
+# 932 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_1, ITEM_TM_ROCK_SMASH
+# 933 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_1
+
+Hub_Event_Script_Shiny_Kecleon_5:
+# 936 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_2, ITEM_TM_SWIFT
+# 937 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_4
+
+Hub_Event_Script_Shiny_Kecleon_8:
+# 940 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_3, ITEM_TM_CUT
+# 941 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_7
+
+Hub_Event_Script_Shiny_Kecleon_11:
+# 944 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_4, ITEM_TM_NOBLE_ROAR
+# 945 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_10
+
+Hub_Event_Script_Shiny_Kecleon_14:
+# 948 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_5, ITEM_TM_CHARM
+# 949 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_13
+
+Hub_Event_Script_Shiny_Kecleon_17:
+# 952 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_6, ITEM_TM_FAKE_TEARS
+# 953 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_16
+
+Hub_Event_Script_Shiny_Kecleon_20:
+# 956 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_7, ITEM_TM_CONFUSE_RAY
+# 957 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_19
+
+Hub_Event_Script_Shiny_Kecleon_23:
+# 960 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_8, ITEM_TM_THUNDER_WAVE
+# 961 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_22
+
+Hub_Event_Script_Shiny_Kecleon_26:
+# 964 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_9, ITEM_TM_WILL_O_WISP
+# 965 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_25
+
+Hub_Event_Script_Shiny_Kecleon_29:
+# 968 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_10, ITEM_TM_TOXIC
+# 969 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Shiny_Kecleon_28
+
+Hub_Event_Script_Shiny_Kecleon_32:
+# 974 "data/maps/Hub1/scripts.pory"
+	showmoneybox 17, 10
+# 975 "data/maps/Hub1/scripts.pory"
+	dynmultistack 0, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM
+# 976 "data/maps/Hub1/scripts.pory"
+	switch VAR_RESULT
+# 977 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_NOBLE_ROAR, Hub_Event_Script_Shiny_Kecleon_36
+# 991 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_ROCK_SMASH, Hub_Event_Script_Shiny_Kecleon_37
+# 1005 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_SWIFT, Hub_Event_Script_Shiny_Kecleon_38
+# 1019 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_CUT, Hub_Event_Script_Shiny_Kecleon_39
+# 1033 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_CHARM, Hub_Event_Script_Shiny_Kecleon_40
+# 1047 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_FAKE_TEARS, Hub_Event_Script_Shiny_Kecleon_41
+# 1061 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_CONFUSE_RAY, Hub_Event_Script_Shiny_Kecleon_42
+# 1075 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_THUNDER_WAVE, Hub_Event_Script_Shiny_Kecleon_43
+# 1089 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_WILL_O_WISP, Hub_Event_Script_Shiny_Kecleon_44
+# 1103 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_TOXIC, Hub_Event_Script_Shiny_Kecleon_45
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_36:
+# 978 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_NOBLE_ROAR_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_46
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_37:
+# 992 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_ROCK_SMASH_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_48
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_38:
+# 1006 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_SWIFT_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_50
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_39:
+# 1020 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CUT_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_52
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_40:
+# 1034 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CHARM_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_54
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_41:
+# 1048 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_FAKE_TEARS_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_56
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_42:
+# 1062 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CONFUSE_RAY_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_58
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_43:
+# 1076 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_THUNDER_WAVE_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_60
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_44:
+# 1090 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_WILL_O_WISP_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_62
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_45:
+# 1104 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_TOXIC_UNLOCKED, Hub_Event_Script_Shiny_Kecleon_64
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_46:
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_66
+# 988 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_48:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_69
+# 1002 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_50:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_72
+# 1016 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_52:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_75
+# 1030 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_54:
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_78
+# 1044 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_56:
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_81
+# 1058 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_58:
+	checkmoney 6000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_84
+# 1072 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_60:
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_87
+# 1086 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_62:
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_90
+# 1100 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_64:
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Shiny_Kecleon_93
+# 1114 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_66:
+# 980 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_NOBLE_ROAR_UNLOCKED
+# 981 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_NOBLE_ROAR, 1
+# 982 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 983 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 984 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 985 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_11
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_69:
+# 994 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_ROCK_SMASH_UNLOCKED
+# 995 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_ROCK_SMASH, 1
+# 996 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 997 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 998 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 999 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_12
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_72:
+# 1008 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_SWIFT_UNLOCKED
+# 1009 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_SWIFT, 1
+# 1010 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 1011 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1012 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1013 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_13
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_75:
+# 1022 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_CUT_UNLOCKED
+# 1023 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_CUT, 1
+# 1024 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 1025 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1026 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1027 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_14
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_78:
+# 1036 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_CHARM_UNLOCKED
+# 1037 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_CHARM, 1
+# 1038 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 1039 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1040 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1041 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_15
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_81:
+# 1050 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_FAKE_TEARS_UNLOCKED
+# 1051 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_FAKE_TEARS, 1
+# 1052 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 1053 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1054 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1055 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_16
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_84:
+# 1064 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_CONFUSE_RAY_UNLOCKED
+# 1065 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_CONFUSE_RAY, 1
+# 1066 "data/maps/Hub1/scripts.pory"
+	removemoney 6000
+# 1067 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1068 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1069 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_17
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_87:
+# 1078 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_THUNDER_WAVE_UNLOCKED
+# 1079 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_THUNDER_WAVE, 1
+# 1080 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 1081 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1082 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1083 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_18
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_90:
+# 1092 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_WILL_O_WISP_UNLOCKED
+# 1093 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_WILL_O_WISP, 1
+# 1094 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 1095 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1096 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1097 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_19
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+Hub_Event_Script_Shiny_Kecleon_93:
+# 1106 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_TOXIC_UNLOCKED
+# 1107 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_TOXIC, 1
+# 1108 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 1109 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1110 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1111 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_20
+	goto Hub_Event_Script_Shiny_Kecleon_31
+
+
+Hub_Event_Script_Diancie::
+# 1129 "data/maps/Hub1/scripts.pory"
+	lockall
+# 1130 "data/maps/Hub1/scripts.pory"
+	setvar VAR_TEMP_A, 0
+# 1131 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_0
+# 1132 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_ROCK_SMASH_UNLOCKED, Hub_Event_Script_Diancie_2
+Hub_Event_Script_Diancie_1:
+# 1136 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_SWIFT_UNLOCKED, Hub_Event_Script_Diancie_5
+Hub_Event_Script_Diancie_4:
+# 1140 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CUT_UNLOCKED, Hub_Event_Script_Diancie_8
+Hub_Event_Script_Diancie_7:
+# 1144 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_NOBLE_ROAR_UNLOCKED, Hub_Event_Script_Diancie_11
+Hub_Event_Script_Diancie_10:
+# 1148 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CHARM_UNLOCKED, Hub_Event_Script_Diancie_14
+Hub_Event_Script_Diancie_13:
+# 1152 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_FAKE_TEARS_UNLOCKED, Hub_Event_Script_Diancie_17
+Hub_Event_Script_Diancie_16:
+# 1156 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CONFUSE_RAY_UNLOCKED, Hub_Event_Script_Diancie_20
+Hub_Event_Script_Diancie_19:
+# 1160 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_THUNDER_WAVE_UNLOCKED, Hub_Event_Script_Diancie_23
+Hub_Event_Script_Diancie_22:
+# 1164 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_WILL_O_WISP_UNLOCKED, Hub_Event_Script_Diancie_26
+Hub_Event_Script_Diancie_25:
+# 1168 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_TOXIC_UNLOCKED, Hub_Event_Script_Diancie_29
+Hub_Event_Script_Diancie_28:
+# 1174 "data/maps/Hub1/scripts.pory"
+	compare VAR_TEMP_A, 0
+	goto_if_ne Hub_Event_Script_Diancie_32
+# 1320 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_23
+# 1321 "data/maps/Hub1/scripts.pory"
+	waitmessage
+# 1322 "data/maps/Hub1/scripts.pory"
+	releaseall
+Hub_Event_Script_Diancie_31:
+# 1324 "data/maps/Hub1/scripts.pory"
+	hidemoneybox
+# 1325 "data/maps/Hub1/scripts.pory"
+	releaseall
+	return
+
+Hub_Event_Script_Diancie_2:
+# 1133 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_1, ITEM_TM_ROCK_SMASH
+# 1134 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_1
+
+Hub_Event_Script_Diancie_5:
+# 1137 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_2, ITEM_TM_SWIFT
+# 1138 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_4
+
+Hub_Event_Script_Diancie_8:
+# 1141 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_3, ITEM_TM_CUT
+# 1142 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_7
+
+Hub_Event_Script_Diancie_11:
+# 1145 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_4, ITEM_TM_NOBLE_ROAR
+# 1146 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_10
+
+Hub_Event_Script_Diancie_14:
+# 1149 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_5, ITEM_TM_CHARM
+# 1150 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_13
+
+Hub_Event_Script_Diancie_17:
+# 1153 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_6, ITEM_TM_FAKE_TEARS
+# 1154 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_16
+
+Hub_Event_Script_Diancie_20:
+# 1157 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_7, ITEM_TM_CONFUSE_RAY
+# 1158 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_19
+
+Hub_Event_Script_Diancie_23:
+# 1161 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_8, ITEM_TM_THUNDER_WAVE
+# 1162 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_22
+
+Hub_Event_Script_Diancie_26:
+# 1165 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_9, ITEM_TM_WILL_O_WISP
+# 1166 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_25
+
+Hub_Event_Script_Diancie_29:
+# 1169 "data/maps/Hub1/scripts.pory"
+	dynmultipush Hub_Event_Script_Shiny_Kecleon_Text_10, ITEM_TM_TOXIC
+# 1170 "data/maps/Hub1/scripts.pory"
+	addvar VAR_TEMP_A, 1
+	goto Hub_Event_Script_Diancie_28
+
+Hub_Event_Script_Diancie_32:
+# 1175 "data/maps/Hub1/scripts.pory"
+	showmoneybox 17, 10
+# 1176 "data/maps/Hub1/scripts.pory"
+	dynmultistack 0, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM
+# 1177 "data/maps/Hub1/scripts.pory"
+	switch VAR_RESULT
+# 1178 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_NOBLE_ROAR, Hub_Event_Script_Diancie_36
+# 1192 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_ROCK_SMASH, Hub_Event_Script_Diancie_37
+# 1206 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_SWIFT, Hub_Event_Script_Diancie_38
+# 1220 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_CUT, Hub_Event_Script_Diancie_39
+# 1234 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_CHARM, Hub_Event_Script_Diancie_40
+# 1248 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_FAKE_TEARS, Hub_Event_Script_Diancie_41
+# 1262 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_CONFUSE_RAY, Hub_Event_Script_Diancie_42
+# 1276 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_THUNDER_WAVE, Hub_Event_Script_Diancie_43
+# 1290 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_WILL_O_WISP, Hub_Event_Script_Diancie_44
+# 1304 "data/maps/Hub1/scripts.pory"
+	case ITEM_TM_TOXIC, Hub_Event_Script_Diancie_45
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_36:
+# 1179 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_NOBLE_ROAR_UNLOCKED, Hub_Event_Script_Diancie_46
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_37:
+# 1193 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_ROCK_SMASH_UNLOCKED, Hub_Event_Script_Diancie_48
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_38:
+# 1207 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_SWIFT_UNLOCKED, Hub_Event_Script_Diancie_50
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_39:
+# 1221 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CUT_UNLOCKED, Hub_Event_Script_Diancie_52
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_40:
+# 1235 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CHARM_UNLOCKED, Hub_Event_Script_Diancie_54
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_41:
+# 1249 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_FAKE_TEARS_UNLOCKED, Hub_Event_Script_Diancie_56
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_42:
+# 1263 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_CONFUSE_RAY_UNLOCKED, Hub_Event_Script_Diancie_58
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_43:
+# 1277 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_THUNDER_WAVE_UNLOCKED, Hub_Event_Script_Diancie_60
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_44:
+# 1291 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_WILL_O_WISP_UNLOCKED, Hub_Event_Script_Diancie_62
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_45:
+# 1305 "data/maps/Hub1/scripts.pory"
+	goto_if_unset FLAG_TM_TOXIC_UNLOCKED, Hub_Event_Script_Diancie_64
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_46:
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_66
+# 1189 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_48:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_69
+# 1203 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_50:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_72
+# 1217 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_52:
+	checkmoney 8000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_75
+# 1231 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_54:
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_78
+# 1245 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_56:
+	checkmoney 4000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_81
+# 1259 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_58:
+	checkmoney 6000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_84
+# 1273 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_60:
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_87
+# 1287 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_62:
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_90
+# 1301 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_64:
+	checkmoney 10000
+# 0 "data/maps/Hub1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Hub_Event_Script_Diancie_93
+# 1315 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_66:
+# 1181 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_NOBLE_ROAR_UNLOCKED
+# 1182 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_NOBLE_ROAR, 1
+# 1183 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 1184 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1185 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1186 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_11
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_69:
+# 1195 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_ROCK_SMASH_UNLOCKED
+# 1196 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_ROCK_SMASH, 1
+# 1197 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 1198 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1199 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1200 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_12
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_72:
+# 1209 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_SWIFT_UNLOCKED
+# 1210 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_SWIFT, 1
+# 1211 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 1212 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1213 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1214 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_13
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_75:
+# 1223 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_CUT_UNLOCKED
+# 1224 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_CUT, 1
+# 1225 "data/maps/Hub1/scripts.pory"
+	removemoney 8000
+# 1226 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1227 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1228 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_14
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_78:
+# 1237 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_CHARM_UNLOCKED
+# 1238 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_CHARM, 1
+# 1239 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 1240 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1241 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1242 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_15
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_81:
+# 1251 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_FAKE_TEARS_UNLOCKED
+# 1252 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_FAKE_TEARS, 1
+# 1253 "data/maps/Hub1/scripts.pory"
+	removemoney 4000
+# 1254 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1255 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1256 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_16
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_84:
+# 1265 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_CONFUSE_RAY_UNLOCKED
+# 1266 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_CONFUSE_RAY, 1
+# 1267 "data/maps/Hub1/scripts.pory"
+	removemoney 6000
+# 1268 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1269 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1270 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_17
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_87:
+# 1279 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_THUNDER_WAVE_UNLOCKED
+# 1280 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_THUNDER_WAVE, 1
+# 1281 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 1282 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1283 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1284 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_18
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_90:
+# 1293 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_WILL_O_WISP_UNLOCKED
+# 1294 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_WILL_O_WISP, 1
+# 1295 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 1296 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1297 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1298 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_19
+	goto Hub_Event_Script_Diancie_31
+
+Hub_Event_Script_Diancie_93:
+# 1307 "data/maps/Hub1/scripts.pory"
+	setflag FLAG_TM_TOXIC_UNLOCKED
+# 1308 "data/maps/Hub1/scripts.pory"
+	giveitem ITEM_TM_TOXIC, 1
+# 1309 "data/maps/Hub1/scripts.pory"
+	removemoney 10000
+# 1310 "data/maps/Hub1/scripts.pory"
+	updatemoneybox
+# 1311 "data/maps/Hub1/scripts.pory"
+	playse SE_SHOP
+# 1312 "data/maps/Hub1/scripts.pory"
+	msgbox Hub_Event_Script_Shiny_Kecleon_Text_20
+	goto Hub_Event_Script_Diancie_31
 
 
 HUB1_ONFRAME_Text_0:
@@ -2521,111 +3635,111 @@ Hub_Event_Script_Birch_Text_2:
 
 Hub_Event_Script_Miltank_Text_0:
 # 197 "data/maps/Hub1/scripts.pory"
-	.string "Bulbasaur (¥5000)$"
+	.string "Bulbasaur (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_1:
 # 198 "data/maps/Hub1/scripts.pory"
-	.string "Charmander (¥5000)$"
+	.string "Charmander (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_2:
 # 199 "data/maps/Hub1/scripts.pory"
-	.string "Squirtle (¥5000)$"
+	.string "Squirtle (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_3:
 # 200 "data/maps/Hub1/scripts.pory"
-	.string "Chikorita (¥5000)$"
+	.string "Chikorita (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_4:
 # 201 "data/maps/Hub1/scripts.pory"
-	.string "Cyndaquil (¥5000)$"
+	.string "Cyndaquil (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_5:
 # 202 "data/maps/Hub1/scripts.pory"
-	.string "Totodile (¥5000)$"
+	.string "Totodile (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_6:
 # 203 "data/maps/Hub1/scripts.pory"
-	.string "Treecko (¥5000)$"
+	.string "Treecko (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_7:
 # 204 "data/maps/Hub1/scripts.pory"
-	.string "Torchic (¥5000)$"
+	.string "Torchic (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_8:
 # 205 "data/maps/Hub1/scripts.pory"
-	.string "Mudkip (¥5000)$"
+	.string "Mudkip (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_9:
 # 206 "data/maps/Hub1/scripts.pory"
-	.string "Turtwig (¥5000)$"
+	.string "Turtwig (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_10:
 # 207 "data/maps/Hub1/scripts.pory"
-	.string "Chimchar (¥5000)$"
+	.string "Chimchar (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_11:
 # 208 "data/maps/Hub1/scripts.pory"
-	.string "Piplup (¥5000)$"
+	.string "Piplup (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_12:
 # 209 "data/maps/Hub1/scripts.pory"
-	.string "Snivy (¥5000)$"
+	.string "Snivy (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_13:
 # 210 "data/maps/Hub1/scripts.pory"
-	.string "Tepig (¥5000)$"
+	.string "Tepig (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_14:
 # 211 "data/maps/Hub1/scripts.pory"
-	.string "Oshawott (¥5000)$"
+	.string "Oshawott (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_15:
 # 212 "data/maps/Hub1/scripts.pory"
-	.string "Chespin (¥5000)$"
+	.string "Chespin (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_16:
 # 213 "data/maps/Hub1/scripts.pory"
-	.string "Fennekin (¥5000)$"
+	.string "Fennekin (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_17:
 # 214 "data/maps/Hub1/scripts.pory"
-	.string "Froakie (¥5000)$"
+	.string "Froakie (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_18:
 # 215 "data/maps/Hub1/scripts.pory"
-	.string "Rowlet (¥5000)$"
+	.string "Rowlet (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_19:
 # 216 "data/maps/Hub1/scripts.pory"
-	.string "Litten (¥5000)$"
+	.string "Litten (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_20:
 # 217 "data/maps/Hub1/scripts.pory"
-	.string "Popplio (¥5000)$"
+	.string "Popplio (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_21:
 # 218 "data/maps/Hub1/scripts.pory"
-	.string "Grookey (¥5000)$"
+	.string "Grookey (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_22:
 # 219 "data/maps/Hub1/scripts.pory"
-	.string "Scorbunny (¥5000)$"
+	.string "Scorbunny (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_23:
 # 220 "data/maps/Hub1/scripts.pory"
-	.string "Sobble (¥5000)$"
+	.string "Sobble (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_24:
 # 221 "data/maps/Hub1/scripts.pory"
-	.string "Sprigatito (¥5000)$"
+	.string "Sprigatito (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_25:
 # 222 "data/maps/Hub1/scripts.pory"
-	.string "Fuecoco (¥5000)$"
+	.string "Fuecoco (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_26:
 # 223 "data/maps/Hub1/scripts.pory"
-	.string "Quaxly (¥5000)$"
+	.string "Quaxly (¥3000)$"
 
 Hub_Event_Script_Miltank_Text_27:
 # 227 "data/maps/Hub1/scripts.pory"
@@ -2761,7 +3875,7 @@ Hub_Event_Script_Chansey_Text_2:
 
 Hub_Event_Script_Kecleon_Text_0:
 # 602 "data/maps/Hub1/scripts.pory"
-	.string "Would you like to buy a starter item?$"
+	.string "Hey there! Would you like to\nbuy a starter item?$"
 
 Hub_Event_Script_Kecleon_Text_1:
 # 604 "data/maps/Hub1/scripts.pory"
@@ -2769,31 +3883,31 @@ Hub_Event_Script_Kecleon_Text_1:
 
 Hub_Event_Script_Kecleon_Text_2:
 # 607 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥10000)$"
+	.string "Memory Mushroom (¥3000)$"
 
 Hub_Event_Script_Kecleon_Text_3:
 # 610 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥20000)$"
+	.string "Memory Mushroom (¥4000)$"
 
 Hub_Event_Script_Kecleon_Text_4:
 # 613 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥30000)$"
+	.string "Memory Mushroom (¥5000)$"
 
 Hub_Event_Script_Kecleon_Text_5:
 # 616 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥40000)$"
+	.string "Memory Mushroom (¥6000)$"
 
 Hub_Event_Script_Kecleon_Text_6:
 # 619 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥50000)$"
+	.string "Memory Mushroom (¥7000)$"
 
 Hub_Event_Script_Kecleon_Text_7:
 # 622 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥80000)$"
+	.string "Memory Mushroom (¥8000)$"
 
 Hub_Event_Script_Kecleon_Text_8:
 # 625 "data/maps/Hub1/scripts.pory"
-	.string "Memory Mushroom (¥100000)$"
+	.string "Memory Mushroom (¥9000)$"
 
 Hub_Event_Script_Kecleon_Text_9:
 # 629 "data/maps/Hub1/scripts.pory"
@@ -2804,17 +3918,137 @@ Hub_Event_Script_Kecleon_Text_10:
 	.string "Rare Candy (¥9999999)$"
 
 Hub_Event_Script_Kecleon_Text_11:
-# 657 "data/maps/Hub1/scripts.pory"
-	.string "You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!$"
+# 646 "data/maps/Hub1/scripts.pory"
+	.string "Oran Berry (¥2000)$"
 
 Hub_Event_Script_Kecleon_Text_12:
-# 660 "data/maps/Hub1/scripts.pory"
-	.string "I'm sorry. You don't have the money to\nbuy that item, kec.$"
+# 649 "data/maps/Hub1/scripts.pory"
+	.string "Oran Berry (¥10000)$"
 
 Hub_Event_Script_Kecleon_Text_13:
-# 755 "data/maps/Hub1/scripts.pory"
-	.string "You got a Rare Candy as a starter\nitem!\pThank you for your purchase!$"
+# 655 "data/maps/Hub1/scripts.pory"
+	.string "Lum Berry (¥5000)$"
 
 Hub_Event_Script_Kecleon_Text_14:
-# 811 "data/maps/Hub1/scripts.pory"
+# 658 "data/maps/Hub1/scripts.pory"
+	.string "Lum Berry (¥20000)$"
+
+Hub_Event_Script_Kecleon_Text_15:
+# 663 "data/maps/Hub1/scripts.pory"
+	.string "Serious Mint (¥10000)$"
+
+Hub_Event_Script_Kecleon_Text_16:
+# 666 "data/maps/Hub1/scripts.pory"
+	.string "Serious Mint (¥30000)$"
+
+Hub_Event_Script_Kecleon_Text_17:
+# 683 "data/maps/Hub1/scripts.pory"
+	.string "You got a Oran Berry as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Kecleon_Text_18:
+# 686 "data/maps/Hub1/scripts.pory"
+	.string "I'm sorry. You don't have the money to\nbuy that item, kec.$"
+
+Hub_Event_Script_Kecleon_Text_19:
+# 710 "data/maps/Hub1/scripts.pory"
+	.string "You got a Lum Berry as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Kecleon_Text_20:
+# 737 "data/maps/Hub1/scripts.pory"
+	.string "You got a Serious Mint as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Kecleon_Text_21:
+# 764 "data/maps/Hub1/scripts.pory"
+	.string "You got a Memory Mushroom as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Kecleon_Text_22:
+# 862 "data/maps/Hub1/scripts.pory"
+	.string "You got a Rare Candy as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Kecleon_Text_23:
+# 918 "data/maps/Hub1/scripts.pory"
 	.string "You don't have anything left\nto puchase right now. Thank you for\lyour consistent patronage!\p$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_0:
+# 930 "data/maps/Hub1/scripts.pory"
+	.string "Howdy! Would you like to\nbuy a starter TM?$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_1:
+# 932 "data/maps/Hub1/scripts.pory"
+	.string "TM Rock Smash (¥8000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_2:
+# 936 "data/maps/Hub1/scripts.pory"
+	.string "TM Swift (¥8000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_3:
+# 940 "data/maps/Hub1/scripts.pory"
+	.string "TM Cut (¥8000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_4:
+# 944 "data/maps/Hub1/scripts.pory"
+	.string "TM Noble Roar (¥4000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_5:
+# 948 "data/maps/Hub1/scripts.pory"
+	.string "TM Charm (¥4000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_6:
+# 952 "data/maps/Hub1/scripts.pory"
+	.string "TM Fake Tears (¥4000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_7:
+# 956 "data/maps/Hub1/scripts.pory"
+	.string "TM Confuse Ray (¥6000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_8:
+# 960 "data/maps/Hub1/scripts.pory"
+	.string "TM Thunder Wave (¥10000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_9:
+# 964 "data/maps/Hub1/scripts.pory"
+	.string "TM Will-O-Wisp (¥10000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_10:
+# 968 "data/maps/Hub1/scripts.pory"
+	.string "TM Toxic (¥10000)$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_11:
+# 985 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Noble Roar as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_12:
+# 999 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Rock Smash as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_13:
+# 1013 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Swift as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_14:
+# 1027 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Cut as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_15:
+# 1041 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Charm as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_16:
+# 1055 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Fake Tears as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_17:
+# 1069 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Confuse Ray as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_18:
+# 1083 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Thunder Wave as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_19:
+# 1097 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Will O Wisp as a starter\nitem!\pThank you for your purchase!$"
+
+Hub_Event_Script_Shiny_Kecleon_Text_20:
+# 1111 "data/maps/Hub1/scripts.pory"
+	.string "You got TM Toxic as a starter\nitem!\pThank you for your purchase!$"

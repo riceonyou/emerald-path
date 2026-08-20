@@ -2,13 +2,13 @@
 #define GUARD_CONSTANTS_TMS_HMS_H
 
 #define FOREACH_TM(F) \
-    F(TAKE_DOWN) \
+    F(NOBLE_ROAR) \
     F(CHARM) \
     F(FAKE_TEARS) \
-    F(AGILITY) \
-    F(MUD_SLAP) \
-    F(SCARY_FACE) \
-    F(PROTECT) \
+    F(DIZZY_PUNCH) \
+    F(ROCK_SMASH) \
+    F(SHADOW_PUNCH) \
+    F(SUCKER_PUNCH) \
     F(FIRE_FANG) \
     F(THUNDER_FANG) \
     F(ICE_FANG) \
@@ -230,7 +230,7 @@
     F(DRAGON_CHEER) \
     F(ALLURING_VOICE) \
     F(PSYCHIC_NOISE) \
-    F(UPPER_HAND) \
+    F(CUT) \
     F(HIDDEN_POWER)
 
 #define FOREACH_HM(F)

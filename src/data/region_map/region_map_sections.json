@@ -1658,6 +1658,10 @@
     {
       "id": "MAPSEC_AG_Elite4_Hoenn",
       "name": "AG Elite4 Hoenn"
+    },
+    {
+      "id": "MAPSEC_AG_Hoenn1_Alt",
+      "name": "AG Hoenn1 Alt"
     }
   ]
 }

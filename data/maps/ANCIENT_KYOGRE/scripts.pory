@@ -18,7 +18,6 @@ script ANCIENT_KYOGRE_EventScript_Kyogre{
 
     
     msgbox("The level cap has been raised to 42")
-    addvar(VAR_CURRENT_ACT, 1)
     special(UpdateLevelCap)
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE
