@@ -2536,7 +2536,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1),
         .abilities = { ABILITY_MERCILESS, ABILITY_REGENERATOR, ABILITY_NONE },
-        .innates = { ABILITY_TOXIC_DEBRIS },
+        .innates = { ABILITY_POISON_POINT },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Mareanie"),
         .cryId = CRY_MAREANIE,
@@ -2603,7 +2603,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1),
         .abilities = { ABILITY_MERCILESS, ABILITY_REGENERATOR, ABILITY_NONE },
-        .innates = { ABILITY_TOXIC_DEBRIS },
+        .innates = { ABILITY_POISON_POINT, ABILITY_TOXIC_DEBRIS },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Toxapex"),
         .cryId = CRY_TOXAPEX,
@@ -2720,7 +2720,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
     [SPECIES_MUDSDALE] =
     {
-        .baseHP        = 100,
+        .baseHP        = 100 + 5,
         .baseAttack    = 125 - 10,
         .baseDefense   = 100,
         .baseSpeed     = 35,
@@ -3595,7 +3595,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseDefense   = 80,
         .baseSpeed     = 60,
         .baseSpAttack  = 55,
-        .baseSpDefense = 60,
+        .baseSpDefense = 60 + 5,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING),
         .catchRate = 70,
         .expYield = 175,
@@ -4904,7 +4904,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_IRON_BARBS, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_LIGHTNING_ROD, ABILITY_STURDY, ABILITY_CUTE_CHARM },
+        .innates = { ABILITY_STATIC, ABILITY_STURDY, ABILITY_CUTE_CHARM },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Togedemaru"),
         .cryId = CRY_TOGEDEMARU,
@@ -7548,7 +7548,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sPoipoleLevelUpLearnset,
         .teachableLearnset = sPoipoleTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_NAGANADEL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_NAGANADEL}),
     },
 
     [SPECIES_NAGANADEL] =
@@ -7950,14 +7950,14 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMeltanLevelUpLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_MELMETAL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_MELMETAL}),
         .teachableLearnset = sMeltanTeachableLearnset,
     },
 
     [SPECIES_MELMETAL] =
     {
         .baseHP        = 135,
-        .baseAttack    = 143 - 20,
+        .baseAttack    = 143,
         .baseDefense   = 143,
         .baseSpeed     = 34,
         .baseSpAttack  = 80,

@@ -1111,7 +1111,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
-        .abilities = { ABILITY_BIG_PECKS, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_NONE, ABILITY_NONE },
         .innates = { ABILITY_GALE_WINGS },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Fletchling"),
@@ -4286,6 +4286,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_MEGA_LAUNCHER, ABILITY_NONE, ABILITY_NONE },
+        .innates = { ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = TRUE,
         .speciesName = _("Clauncher"),
@@ -4358,7 +4359,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_MEGA_LAUNCHER, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_QUICK_DRAW },
+        .innates = { ABILITY_SHELL_ARMOR, ABILITY_QUICK_DRAW },
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = TRUE,
         .speciesName = _("Clawitzer"),
@@ -5488,7 +5489,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #if P_FAMILY_KLEFKI
     [SPECIES_KLEFKI] =
     {
-        .baseHP        = 57 + 2,
+        .baseHP        = 57 + 12,
         .baseAttack    = 80,
         .baseDefense   = 91,
         .baseSpeed     = 75,
@@ -5773,8 +5774,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sPumpkabooTeachableLearnset,
         .eggMoveLearnset = sPumpkabooEggMoveLearnset,
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GOURGEIST_AVERAGE},
-                                {EVO_LEVEL, 16, SPECIES_GOURGEIST_AVERAGE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GOURGEIST_AVERAGE}),
     },
 
     [SPECIES_PUMPKABOO_SMALL] =
@@ -5840,8 +5840,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sPumpkabooTeachableLearnset,
         .eggMoveLearnset = sPumpkabooEggMoveLearnset,
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GOURGEIST_SMALL},
-                                {EVO_LEVEL, 16, SPECIES_GOURGEIST_SMALL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GOURGEIST_SMALL}),
     },
 
     [SPECIES_PUMPKABOO_LARGE] =
@@ -5907,8 +5906,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sPumpkabooTeachableLearnset,
         .eggMoveLearnset = sPumpkabooEggMoveLearnset,
         .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GOURGEIST_LARGE},
-                                {EVO_LEVEL, 16, SPECIES_GOURGEIST_LARGE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GOURGEIST_LARGE}),
     },
 
     [SPECIES_PUMPKABOO_SUPER] =
