@@ -440,9 +440,13 @@ struct PokemonStorageSystemData
     s8 scrollDirection;
     u8 *wallpaperTiles;
     struct Sprite *movingMonSprite;
+    struct Sprite *movingMonFaintedStatusSprite;
     struct Sprite *partySprites[PARTY_SIZE];
+    struct Sprite *partyFaintedStatusSprites[PARTY_SIZE];
     struct Sprite *boxMonsSprites[IN_BOX_COUNT];
+    struct Sprite *boxFaintedStatusSprites[IN_BOX_COUNT];
     struct Sprite **shiftMonSpritePtr;
+    struct Sprite **shiftMonFaintedStatusSpritePtr;
     struct Sprite **releaseMonSpritePtr;
     u16 numIconsPerSpecies[MAX_MON_ICONS];
     u16 iconSpeciesList[MAX_MON_ICONS];
@@ -623,6 +627,9 @@ static void RemoveMenu(void);
 // Pokémon sprites
 static void InitMonIconFields(void);
 static void SpriteCB_BoxMonIconScrollOut(struct Sprite *);
+static void SpriteCB_BoxFaintedStatus(struct Sprite *);
+static void SpriteCB_PartyFaintedStatus(struct Sprite *);
+static void SpriteCB_MovingMonFaintedStatus(struct Sprite *);
 static void GetIncomingBoxMonData(u8);
 static void CreatePartyMonsSprites(bool8);
 static void CompactPartySprites(void);
@@ -637,6 +644,11 @@ static void SetMovingMonPriority(u8);
 static void SpriteCB_HeldMon(struct Sprite *);
 static struct Sprite *CreateMonIconSprite(u16 species, u32 personality, s16 x, s16 y, u8 oamPriority, u8 subpriority, bool32 isEgg);
 static void DestroyBoxMonIcon(struct Sprite *);
+static void CreateBoxFaintedStatusSprite(u8, struct Sprite *);
+static void DestroyBoxFaintedStatusSprite(u8);
+static void CreatePartyFaintedStatusSprite(u8, struct Sprite *);
+static void DestroyPartyFaintedStatusSprite(u8);
+static void CreateMovingMonFaintedStatusSprite(struct Sprite *);
 
 // Pokémon data
 static void MoveMon(void);
@@ -644,6 +656,7 @@ static void PlaceMon(void);
 static void RefreshDisplayMon(void);
 static void SetMovingMonData(u8, u8);
 static void SetPlacedMonData(u8, u8);
+static bool8 IsBoxMonFainted(u8, u8);
 static void PurgeMonOrBoxMon(u8, u8);
 static void SetShiftedMonData(u8, u8);
 static bool8 TryStorePartyMonInBox(u8);
@@ -4462,16 +4475,24 @@ static void InitMonIconFields(void)
     u16 i;
 
     LoadMonIconPalettes();
+    LoadPartyMenuAilmentGfx();
     for (i = 0; i < MAX_MON_ICONS; i++)
         sStorage->numIconsPerSpecies[i] = 0;
     for (i = 0; i < MAX_MON_ICONS; i++)
         sStorage->iconSpeciesList[i] = SPECIES_NONE;
     for (i = 0; i < PARTY_SIZE; i++)
+    {
         sStorage->partySprites[i] = NULL;
+        sStorage->partyFaintedStatusSprites[i] = NULL;
+    }
     for (i = 0; i < IN_BOX_COUNT; i++)
+    {
         sStorage->boxMonsSprites[i] = NULL;
+        sStorage->boxFaintedStatusSprites[i] = NULL;
+    }
 
     sStorage->movingMonSprite = NULL;
+    sStorage->movingMonFaintedStatusSprite = NULL;
 }
 
 static u8 GetMonIconPriorityByCursorPos(void)
@@ -4536,6 +4557,10 @@ static void InitBoxMonSprites(u8 boxId)
 
                 if (ShouldBoxmonSpriteBeTransparent(boxId, boxPosition))
                     sStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
+                if (IsBoxMonFainted(boxId, boxPosition))
+                {
+                    CreateBoxFaintedStatusSprite(boxPosition, sStorage->boxMonsSprites[count]);
+                }
             }
             else
             {
@@ -4545,6 +4570,14 @@ static void InitBoxMonSprites(u8 boxId)
             count++;
         }
     }
+}
+
+static bool8 IsBoxMonFainted(u8 boxId, u8 boxPosition)
+{
+    struct Pokemon mon;
+
+    BoxMonAtToMon(boxId, boxPosition, &mon);
+    return GetMonAilment(&mon) == AILMENT_FNT;
 }
 
 static void CreateBoxMonIconAtPos(u8 boxPosition)
@@ -4561,6 +4594,10 @@ static void CreateBoxMonIconAtPos(u8 boxPosition)
         sStorage->boxMonsSprites[boxPosition] = CreateMonIconSprite(species, personality, x, y, 2, 19 - (boxPosition % IN_BOX_COLUMNS), isEgg);
         if (ShouldBoxmonSpriteBeTransparent(StorageGetCurrentBox(), boxPosition))
             sStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
+        if (IsBoxMonFainted(StorageGetCurrentBox(), boxPosition))
+        {
+            CreateBoxFaintedStatusSprite(boxPosition, sStorage->boxMonsSprites[boxPosition]);
+        }
     }
 }
 
@@ -4631,6 +4668,7 @@ static void DestroyBoxMonIconsInColumn(u8 column)
     {
         if (sStorage->boxMonsSprites[boxPosition] != NULL)
         {
+            DestroyBoxFaintedStatusSprite(boxPosition);
             DestroyBoxMonIcon(sStorage->boxMonsSprites[boxPosition]);
             sStorage->boxMonsSprites[boxPosition] = NULL;
         }
@@ -4665,6 +4703,10 @@ static u8 CreateBoxMonIconsInColumn(u8 column, u16 distance, s16 speed)
                 sStorage->boxMonsSprites[boxPosition]->callback = SpriteCB_BoxMonIconScrollIn;
                 if (ShouldBoxmonSpriteBeTransparent(sStorage->incomingBoxId, boxPosition))
                     sStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
+                if (IsBoxMonFainted(sStorage->incomingBoxId, boxPosition))
+                {
+                    CreateBoxFaintedStatusSprite(boxPosition, sStorage->boxMonsSprites[boxPosition]);
+                }
                 iconsCreated++;
             }
         }
@@ -4770,6 +4812,7 @@ static void GetIncomingBoxMonData(u8 boxId)
 
 static void DestroyBoxMonIconAtPosition(u8 boxPosition)
 {
+    DestroyBoxFaintedStatusSprite(boxPosition);
     if (sStorage->boxMonsSprites[boxPosition] != NULL)
     {
         DestroyBoxMonIcon(sStorage->boxMonsSprites[boxPosition]);
@@ -4791,7 +4834,10 @@ static void CreatePartyMonsSprites(bool8 visible)
     u32 personality = GetMonData(&gPlayerParty[0], MON_DATA_PERSONALITY);
     bool32 hasItem = FALSE;
 
+    DestroyPartyFaintedStatusSprite(0);
     sStorage->partySprites[0] = CreateMonIconSprite(species, personality, 104, 64, 1, 12, isEgg);
+    if (sStorage->partySprites[0] != NULL && GetMonAilment(&gPlayerParty[0]) == AILMENT_FNT)
+        CreatePartyFaintedStatusSprite(0, sStorage->partySprites[0]);
     count = 1;
     for (i = 1; i < PARTY_SIZE; i++)
     {
@@ -4800,21 +4846,33 @@ static void CreatePartyMonsSprites(bool8 visible)
         if (species != SPECIES_NONE)
         {
             personality = GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY);
+            DestroyPartyFaintedStatusSprite(i);
             sStorage->partySprites[i] = CreateMonIconSprite(species, personality, 152,  8 * (3 * (i - 1)) + 16, 1, 12, isEgg);
+            if (sStorage->partySprites[i] != NULL && GetMonAilment(&gPlayerParty[i]) == AILMENT_FNT)
+                CreatePartyFaintedStatusSprite(i, sStorage->partySprites[i]);
             count++;
         }
         else
         {
             sStorage->partySprites[i] = NULL;
+            DestroyPartyFaintedStatusSprite(i);
         }
     }
 
     if (!visible)
     {
-        for (i = 0; i < count; i++)
+        for (i = 0; i < PARTY_SIZE; i++)
         {
-            sStorage->partySprites[i]->y -= DISPLAY_HEIGHT;
-            sStorage->partySprites[i]->invisible = TRUE;
+            if (sStorage->partySprites[i] != NULL)
+            {
+                sStorage->partySprites[i]->y -= DISPLAY_HEIGHT;
+                sStorage->partySprites[i]->invisible = TRUE;
+                if (sStorage->partyFaintedStatusSprites[i] != NULL)
+                {
+                    sStorage->partyFaintedStatusSprites[i]->y -= DISPLAY_HEIGHT;
+                    sStorage->partyFaintedStatusSprites[i]->invisible = TRUE;
+                }
+            }
         }
     }
 
@@ -4858,7 +4916,11 @@ static void CompactPartySprites(void)
             if (i != targetSlot)
             {
                 MovePartySpriteToNextSlot(sStorage->partySprites[i], targetSlot);
+                sStorage->partyFaintedStatusSprites[targetSlot] = sStorage->partyFaintedStatusSprites[i];
+                if (sStorage->partyFaintedStatusSprites[targetSlot] != NULL)
+                    sStorage->partyFaintedStatusSprites[targetSlot]->data[0] = targetSlot;
                 sStorage->partySprites[i] = NULL;
+                sStorage->partyFaintedStatusSprites[i] = NULL;
                 sStorage->numPartyToCompact++;
             }
             targetSlot++;
@@ -4933,6 +4995,11 @@ static void SpriteCB_MovePartyMonToNextSlot(struct Sprite *sprite)
 
 static void DestroyMovingMonIcon(void)
 {
+    if (sStorage->movingMonFaintedStatusSprite != NULL)
+    {
+        DestroySprite(sStorage->movingMonFaintedStatusSprite);
+        sStorage->movingMonFaintedStatusSprite = NULL;
+    }
     if (sStorage->movingMonSprite != NULL)
     {
         DestroyBoxMonIcon(sStorage->movingMonSprite);
@@ -4963,6 +5030,7 @@ static void DestroyPartyMonIcon(u8 partyId)
 {
     if (sStorage->partySprites[partyId] != NULL)
     {
+        DestroyPartyFaintedStatusSprite(partyId);
         DestroyBoxMonIcon(sStorage->partySprites[partyId]);
         sStorage->partySprites[partyId] = NULL;
     }
@@ -4974,6 +5042,7 @@ static void DestroyAllPartyMonIcons(void)
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
+        DestroyPartyFaintedStatusSprite(i);
         if (sStorage->partySprites[i] != NULL)
         {
             DestroyBoxMonIcon(sStorage->partySprites[i]);
@@ -4995,11 +5064,15 @@ static void SetMovingMonSprite(u8 mode, u8 id)
     if (mode == MODE_PARTY)
     {
         sStorage->movingMonSprite = sStorage->partySprites[id];
+        DestroyPartyFaintedStatusSprite(id);
+        sStorage->movingMonFaintedStatusSprite = NULL;
         sStorage->partySprites[id] = NULL;
     }
     else if (mode == MODE_BOX)
     {
         sStorage->movingMonSprite = sStorage->boxMonsSprites[id];
+        DestroyBoxFaintedStatusSprite(id);
+        sStorage->movingMonFaintedStatusSprite = NULL;
         sStorage->boxMonsSprites[id] = NULL;
     }
     else
@@ -5010,6 +5083,8 @@ static void SetMovingMonSprite(u8 mode, u8 id)
     sStorage->movingMonSprite->callback = SpriteCB_HeldMon;
     sStorage->movingMonSprite->oam.priority = GetMonIconPriorityByCursorPos();
     sStorage->movingMonSprite->subpriority = 7;
+    if (GetMonAilment(&sStorage->movingMon) == AILMENT_FNT)
+        CreateMovingMonFaintedStatusSprite(sStorage->movingMonSprite);
 }
 
 static void SetPlacedMonSprite(u8 boxId, u8 position)
@@ -5026,16 +5101,28 @@ static void SetPlacedMonSprite(u8 boxId, u8 position)
         sStorage->boxMonsSprites[position]->oam.priority = 2;
         sStorage->boxMonsSprites[position]->subpriority = 19 - (position % IN_BOX_COLUMNS);
     }
+    if (sStorage->movingMonFaintedStatusSprite != NULL)
+    {
+        DestroySprite(sStorage->movingMonFaintedStatusSprite);
+        sStorage->movingMonFaintedStatusSprite = NULL;
+    }
     sStorage->movingMonSprite->callback = SpriteCallbackDummy;
     sStorage->movingMonSprite = NULL;
+    sStorage->movingMonFaintedStatusSprite = NULL;
 }
 
 static void SaveMonSpriteAtPos(u8 boxId, u8 position)
 {
     if (boxId == TOTAL_BOXES_COUNT) // party mon
+    {
         sStorage->shiftMonSpritePtr = &sStorage->partySprites[position];
+        sStorage->shiftMonFaintedStatusSpritePtr = &sStorage->partyFaintedStatusSprites[position];
+    }
     else
+    {
         sStorage->shiftMonSpritePtr = &sStorage->boxMonsSprites[position];
+        sStorage->shiftMonFaintedStatusSpritePtr = &sStorage->boxFaintedStatusSprites[position];
+    }
 
     sStorage->movingMonSprite->callback = SpriteCallbackDummy;
     sStorage->shiftTimer = 0;
@@ -5066,10 +5153,21 @@ static bool8 MoveShiftingMons(void)
     if (sStorage->shiftTimer == 16)
     {
         struct Sprite *sprite = sStorage->movingMonSprite;
+        struct Sprite *statusSprite = sStorage->movingMonFaintedStatusSprite;
         sStorage->movingMonSprite = (*sStorage->shiftMonSpritePtr);
         *sStorage->shiftMonSpritePtr = sprite;
+        sStorage->movingMonFaintedStatusSprite = (*sStorage->shiftMonFaintedStatusSpritePtr);
+        *sStorage->shiftMonFaintedStatusSpritePtr = statusSprite;
+
+        if (*sStorage->shiftMonFaintedStatusSpritePtr != NULL)
+        {
+            (*sStorage->shiftMonFaintedStatusSpritePtr)->data[0] = sCursorPosition;
+            (*sStorage->shiftMonFaintedStatusSpritePtr)->callback = sStorage->shiftBoxId == TOTAL_BOXES_COUNT ? SpriteCB_PartyFaintedStatus : SpriteCB_BoxFaintedStatus;
+        }
 
         sStorage->movingMonSprite->callback = SpriteCB_HeldMon;
+        if (sStorage->movingMonFaintedStatusSprite != NULL)
+            sStorage->movingMonFaintedStatusSprite->callback = SpriteCB_MovingMonFaintedStatus;
         (*sStorage->shiftMonSpritePtr)->callback = SpriteCallbackDummy;
     }
 
@@ -5116,6 +5214,23 @@ static bool8 TryHideReleaseMonSprite(void)
 
 static void DestroyReleaseMonIcon(void)
 {
+    if (sStorage->releaseMonSpritePtr == &sStorage->movingMonSprite)
+    {
+        if (sStorage->movingMonFaintedStatusSprite != NULL)
+        {
+            DestroySprite(sStorage->movingMonFaintedStatusSprite);
+            sStorage->movingMonFaintedStatusSprite = NULL;
+        }
+    }
+    else if (sCursorArea == CURSOR_AREA_IN_PARTY)
+    {
+        DestroyPartyFaintedStatusSprite(sCursorPosition);
+    }
+    else
+    {
+        DestroyBoxFaintedStatusSprite(sCursorPosition);
+    }
+
     if (*sStorage->releaseMonSpritePtr != NULL)
     {
         FreeOamMatrix((*sStorage->releaseMonSpritePtr)->oam.matrixNum);
@@ -5272,6 +5387,107 @@ static void DestroyBoxMonIcon(struct Sprite *sprite)
 {
     RemoveSpeciesFromIconList(sprite->data[0]);
     DestroySprite(sprite);
+}
+
+static void CreateBoxFaintedStatusSprite(u8 boxPosition, struct Sprite *monSprite)
+{
+    u8 spriteId = CreateSprite(&gSpriteTemplate_StatusIcons, monSprite->x, monSprite->y + 12, monSprite->subpriority - 1);
+
+    if (spriteId != MAX_SPRITES)
+    {
+        sStorage->boxFaintedStatusSprites[boxPosition] = &gSprites[spriteId];
+        sStorage->boxFaintedStatusSprites[boxPosition]->oam.priority = monSprite->oam.priority;
+        sStorage->boxFaintedStatusSprites[boxPosition]->data[0] = boxPosition;
+        sStorage->boxFaintedStatusSprites[boxPosition]->data[1] = monSprite - gSprites;
+        StartSpriteAnim(sStorage->boxFaintedStatusSprites[boxPosition], AILMENT_FNT - 1);
+        sStorage->boxFaintedStatusSprites[boxPosition]->callback = SpriteCB_BoxFaintedStatus;
+    }
+}
+
+static void CreatePartyFaintedStatusSprite(u8 partyPosition, struct Sprite *monSprite)
+{
+    u8 spriteId = CreateSprite(&gSpriteTemplate_StatusIcons, monSprite->x, monSprite->y + 12, monSprite->subpriority - 1);
+
+    if (spriteId != MAX_SPRITES)
+    {
+        sStorage->partyFaintedStatusSprites[partyPosition] = &gSprites[spriteId];
+        sStorage->partyFaintedStatusSprites[partyPosition]->oam.priority = monSprite->oam.priority;
+        sStorage->partyFaintedStatusSprites[partyPosition]->data[0] = partyPosition;
+        sStorage->partyFaintedStatusSprites[partyPosition]->data[1] = monSprite - gSprites;
+        StartSpriteAnim(sStorage->partyFaintedStatusSprites[partyPosition], AILMENT_FNT - 1);
+        sStorage->partyFaintedStatusSprites[partyPosition]->callback = SpriteCB_PartyFaintedStatus;
+    }
+}
+
+static void CreateMovingMonFaintedStatusSprite(struct Sprite *monSprite)
+{
+    u8 spriteId = CreateSprite(&gSpriteTemplate_StatusIcons, monSprite->x, monSprite->y + 12, monSprite->subpriority - 1);
+
+    if (spriteId != MAX_SPRITES)
+    {
+        sStorage->movingMonFaintedStatusSprite = &gSprites[spriteId];
+        sStorage->movingMonFaintedStatusSprite->oam.priority = monSprite->oam.priority;
+        sStorage->movingMonFaintedStatusSprite->data[1] = monSprite - gSprites;
+        StartSpriteAnim(sStorage->movingMonFaintedStatusSprite, AILMENT_FNT - 1);
+        sStorage->movingMonFaintedStatusSprite->callback = SpriteCB_MovingMonFaintedStatus;
+    }
+}
+
+static void DestroyBoxFaintedStatusSprite(u8 boxPosition)
+{
+    if (sStorage->boxFaintedStatusSprites[boxPosition] != NULL)
+    {
+        DestroySprite(sStorage->boxFaintedStatusSprites[boxPosition]);
+        sStorage->boxFaintedStatusSprites[boxPosition] = NULL;
+    }
+}
+
+static void DestroyPartyFaintedStatusSprite(u8 partyPosition)
+{
+    if (sStorage->partyFaintedStatusSprites[partyPosition] != NULL)
+    {
+        DestroySprite(sStorage->partyFaintedStatusSprites[partyPosition]);
+        sStorage->partyFaintedStatusSprites[partyPosition] = NULL;
+    }
+}
+
+static void SpriteCB_BoxFaintedStatus(struct Sprite *sprite)
+{
+    struct Sprite *monSprite = &gSprites[sprite->data[1]];
+
+    sprite->x = monSprite->x;
+    sprite->y = monSprite->y + 12;
+    sprite->x2 = monSprite->x2;
+    sprite->y2 = monSprite->y2;
+    sprite->oam.priority = monSprite->oam.priority;
+    sprite->subpriority = monSprite->subpriority - 1;
+    sprite->invisible = monSprite->invisible;
+}
+
+static void SpriteCB_PartyFaintedStatus(struct Sprite *sprite)
+{
+    struct Sprite *monSprite = &gSprites[sprite->data[1]];
+
+    sprite->x = monSprite->x;
+    sprite->y = monSprite->y + 12;
+    sprite->x2 = monSprite->x2;
+    sprite->y2 = monSprite->y2;
+    sprite->oam.priority = monSprite->oam.priority;
+    sprite->subpriority = monSprite->subpriority - 1;
+    sprite->invisible = monSprite->invisible;
+}
+
+static void SpriteCB_MovingMonFaintedStatus(struct Sprite *sprite)
+{
+    struct Sprite *monSprite = &gSprites[sprite->data[1]];
+
+    sprite->x = monSprite->x;
+    sprite->y = monSprite->y + 12;
+    sprite->x2 = monSprite->x2;
+    sprite->y2 = monSprite->y2;
+    sprite->oam.priority = monSprite->oam.priority;
+    sprite->subpriority = monSprite->subpriority - 1;
+    sprite->invisible = monSprite->invisible;
 }
 
 
@@ -5911,6 +6127,8 @@ static void InitCursorOnReopen(void)
     {
         sStorage->movingMon = sSavedMovingMon;
         CreateMovingMonIcon();
+        if (GetMonAilment(&sStorage->movingMon) == AILMENT_FNT)
+            CreateMovingMonFaintedStatusSprite(sStorage->movingMonSprite);
     }
 }
 
