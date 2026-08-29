@@ -1,5 +1,11 @@
 mapscripts Elite4_Hoenn_1_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[ VAR_TEMP_1, 0: Elite4_Hoenn_1_ONFRAME]
 }
+
+script Elite4_Hoenn_1_ONFRAME {
+    setvar(VAR_TEMP_1, 1)
+}
+
 
 script Elite4_Hoenn_1_EventScript_MSceptile{
 

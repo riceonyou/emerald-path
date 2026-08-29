@@ -1,7 +1,11 @@
 mapscripts Hoenn2_1_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[ VAR_TEMP_1, 0: Hoenn2_1_ONFRAME]
 }
 
-
+script Hoenn2_1_ONFRAME {
+    setvar(VAR_TEMP_1, 1)
+    call(AfterWarpIntoNewAct)
+}
 
 script Hoenn2_1_Pelipper{
  

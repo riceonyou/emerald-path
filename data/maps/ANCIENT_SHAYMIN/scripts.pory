@@ -1,0 +1,46 @@
+mapscripts ANCIENT_SHAYMIN_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: ANCIENT_SHAYMIN_ONWARP]
+}
+script ANCIENT_SHAYMIN_ONWARP {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
+}
+
+script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
+    lockall
+    faceplayer
+    //GIVE ANCIENT REWARD
+    msgbox("Hello there! I congratulate you on
+            completing the first path! But the
+            road ahead is long and treacherous.
+
+            So I have some gifts for you prepared!
+            Please take one of these pokemon!")
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 36)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+    waitstate
+    playfanfare(MUS_EVOLVED)
+    msgbox("You received a\n{STR_VAR_1}!")
+    msgbox("And a Bullet Seed TM!")
+    giveitem(ITEM_TM_BULLET_SEED, 1)
+    waitmessage
+    msgbox("And an Oran Charm! With this charm,
+            everytime you enter a battle, your
+            pokemon without items will
+            automatically be given an oran berry!")
+    giveitem(ITEM_ORAN_CHARM, 1)
+    waitmessage
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("The level cap has been raised to 30")
+    
+    msgbox("I hope my gifts will help you out.
+    
+            Now time to get you to the next
+            path.")
+    //TELEPORT TO NEXT STAGE
+    special(WarpToNextAct)
+    releaseall
+}

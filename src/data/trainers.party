@@ -544,7 +544,6 @@ Level: 26
 - Recover
 
 Gumshoos
-Ability: Stakeout
 Level: 26
 - Super Fang
 - Double-Edge
@@ -4692,7 +4691,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TREECKO ===
 Name: Treecko
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Male
@@ -4723,7 +4722,7 @@ Level: 12
 
 === TRAINER_GROVYLE ===
 Name: Grovyle
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Girl
@@ -4764,7 +4763,7 @@ Level: 26
 
 === TRAINER_SCEPTILE ===
 Name: Sceptile
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Girl
@@ -4813,7 +4812,7 @@ Level: 39
 
 === TRAINER_MEGASCEPTILE ===
 Name: MSCEPTILE
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Girl
@@ -4870,7 +4869,7 @@ Level: 48
 
 === TRAINER_TORCHIC ===
 Name: Torchic
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Girl
@@ -4900,7 +4899,7 @@ Level: 12
 
 === TRAINER_COMBUSKEN ===
 Name: Combusken
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Cool
@@ -4938,7 +4937,7 @@ Level: 29
 
 === TRAINER_BLAZIKEN ===
 Name: BLAZIKEN
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Cool
@@ -4983,7 +4982,7 @@ Level: 38
 
 === TRAINER_MBLAZIKEN ===
 Name: MBLAZIKEN
-Class: Pkmn Trainer 1
+Class: Rival
 Pic: Substitute
 Gender: Male
 Music: Cool

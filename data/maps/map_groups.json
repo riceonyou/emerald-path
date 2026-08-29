@@ -142,7 +142,8 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "Hoenn2_2"
+    "Hoenn2_2",
+    "ANCIENT_MEWTWO"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1213,7 +1214,9 @@
     "ANCIENT_GROUDON",
     "ANCIENT_KYOGRE",
     "ANCIENT_REGIS",
-    "ANCIENT_MANAPHY"
+    "ANCIENT_MANAPHY",
+    "ANCIENT_SHAYMIN",
+    "ANCIENT_MEWTWO_2"
   ],
   "gMapGroup_AG_Elite_4": [
     "AGSkyPillarOutside",

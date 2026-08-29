@@ -9,7 +9,7 @@ TwoIsland_OnTransition::
 	end
 
 TwoIsland_EventScript_SetShopState::
-	goto_if_set FLAG_IS_CHAMPION, TwoIsland_EventScript_SetShopStateAfterHoennLink
+	goto_if_set FLAG_ITEM_HAWLUCHANITE_BUYABLE, TwoIsland_EventScript_SetShopStateAfterHoennLink
 	goto_if_set FLAG_SYS_GAME_CLEAR, TwoIsland_EventScript_SetShopStateAfterChampion
 	goto_if_set FLAG_RESCUED_LOSTELLE, TwoIsland_EventScript_SetShopStateAfterLostelleRescue
 	goto TwoIsland_EventScript_SetShopStateDefault

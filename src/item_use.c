@@ -1528,7 +1528,7 @@ void ItemUseOutOfBattle_Honey(u8 taskId)
 
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
-    if (GetItemHoldEffect(gSpecialVar_ItemId) == HOLD_EFFECT_MEGA_STONE)
+    if ((GetItemHoldEffect(gSpecialVar_ItemId) == HOLD_EFFECT_MEGA_STONE) && (VarGet(VAR_CURRENT_ACT) > 3))
     {
         ItemUseOutOfBattle_EvolutionStone(taskId);
         return;

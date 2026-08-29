@@ -2790,12 +2790,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_GEN_2_CROSS_EVOS
     [SPECIES_PICHU] =
     {
-        .baseHP        = 20 + 10,
+        .baseHP        = 20 + 20,
         .baseAttack    = 40 + 5,
-        .baseDefense   = 15 + 5,
+        .baseDefense   = 15 + 15,
         .baseSpeed     = 60,
         .baseSpAttack  = 35 + 5,
-        .baseSpDefense = 35,
+        .baseSpDefense = 35 + 10,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 41 : 42,
@@ -2942,12 +2942,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_PIKACHU] =
     {
-        .baseHP        = 35,
+        .baseHP        = 35 + 20,
         .baseAttack    = 55,
-        .baseDefense   = 40,
+        .baseDefense   = 40 + 20,
         .baseSpeed     = 90,
         .baseSpAttack  = 50,
-        .baseSpDefense = 50,
+        .baseSpDefense = 50 + 20,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 190,
         .expYield = PIKACHU_EXP_YIELD,
@@ -3966,11 +3966,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_RAICHU] =
     {
-        .baseHP        = 60 + 11,
-        .baseAttack    = 90 + 10,
-        .baseDefense   = 55,
+        .baseHP        = 60 + 20,
+        .baseAttack    = 90 + 15,
+        .baseDefense   = 55 + 15,
         .baseSpeed     = 110,
-        .baseSpAttack  = 90,
+        .baseSpAttack  = 90 + 15,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 75,
@@ -3982,7 +3982,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_STATIC, ABILITY_LIGHTNING_ROD, ABILITY_NONE },
-        .innates = { ABILITY_ILLUMINATE },
+        .innates = { ABILITY_ILLUMINATE, ABILITY_BATTERY },
 		.bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Raichu"),
         .cryId = CRY_RAICHU,
@@ -10280,7 +10280,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_ANTICIPATION, ABILITY_NONE },
+        .abilities = { ABILITY_RUN_AWAY, ABILITY_FOREWARN, ABILITY_NONE },
         .innates = { ABILITY_PASTEL_VEIL },
 		.bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Ponyta"),
@@ -10348,7 +10348,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_ANTICIPATION, ABILITY_NONE },
+        .abilities = { ABILITY_RUN_AWAY, ABILITY_FOREWARN, ABILITY_NONE },
         .innates = { ABILITY_PASTEL_VEIL, ABILITY_SPEED_BOOST },
 		.bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Rapidash"),

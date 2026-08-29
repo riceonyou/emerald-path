@@ -8767,16 +8767,20 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Shadow Punch"),
         .description = COMPOUND_STRING(
-            "An unavoidable punch that\n"
-            "is thrown from shadows."),
+            "A punch thrown from the\n"
+            "shadows. Lowers foe's defence."),
         .effect = EFFECT_HIT,
         .power = 70 + 5,
         .type = TYPE_GHOST,
-        .accuracy = 0,
+        .accuracy = 100,
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
+            .chance = 100,
+        }),
         .makesContact = TRUE,
         .punchingMove = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,

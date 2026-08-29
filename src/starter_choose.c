@@ -476,8 +476,6 @@ void CB2_ChooseStarter(void)
         ShinyRate >>= 1;
         shinyCharmCount--;
     }
-    if (ShinyRate == 0)
-        ShinyRate = 1;
     
     for (i = 0; i < STARTER_MON_COUNT; i++){
         rand = Random() & (ShinyRate - 1);
@@ -951,7 +949,7 @@ static void PrepareBirchBagWeightedStarterChoices(void)
         species = SelectPokemonFromWeightedPoolExclude(sBirchBagWeightedPool, sBirchBagWeightedPoolSize, excluded, i);
         if (species == SPECIES_NONE)
         {
-            sBirchBagSelectedSpecies[i] = SPECIES_LUVDISC;
+            sBirchBagSelectedSpecies[i] = SPECIES_UNOWN;
             break;
         }
 
@@ -977,6 +975,10 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
     {
         u8 CopyOfMonsToCreate = 1;
         if (SpeciesHasInnate(chosenSpecies, ABILITY_HERD)){CopyOfMonsToCreate += 1;}
+        if (VarGet(VAR_CLONING_CHARM_COUNT) > 0){
+            CopyOfMonsToCreate += 1;
+            VarSet(VAR_CLONING_CHARM_COUNT, VarGet(VAR_CLONING_CHARM_COUNT) - 1);
+        }
         u8 i;
         for (i = 0; i < CopyOfMonsToCreate; i++)
         {

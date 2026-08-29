@@ -3,7 +3,7 @@ Route104_PrettyPetalFlowerShop_MapScripts::
 	.byte 0
 
 Route104_PrettyPetalFlowerShop_OnTransition:
-	setflag FLAG_LANDMARK_FLOWER_SHOP
+	setflag FLAG_WARPED_INTO_NEW_ACT
 	goto_if_unset FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 	goto_if_unset FLAG_BADGE03_GET, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 	setflag FLAG_TEMP_1

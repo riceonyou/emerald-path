@@ -3,7 +3,7 @@ DewfordTown_MapScripts::
 	.byte 0
 
 DewfordTown_OnTransition:
-	setflag FLAG_VISITED_DEWFORD_TOWN
+	setflag FLAG_ITEM_FROSLASSITE_UNLOCKED
 	end
 
 DewfordTown_EventScript_Briney::

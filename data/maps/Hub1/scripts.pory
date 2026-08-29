@@ -1,7 +1,40 @@
 mapscripts Hub1_MapScripts {
 	MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: HUB1_ONWARP]
 	MAP_SCRIPT_ON_FRAME_TABLE[ VAR_TEMP_2, 0: HUB1_ONFRAME]
+}
+script AfterWarpIntoNewAct{
+    
+	if(!flag(FLAG_WARPED_INTO_NEW_ACT)){
+		setflag(FLAG_WARPED_INTO_NEW_ACT)
 
+        //Play Phione egg message
+        if (flag(FLAG_PHIONE_EGG_HATCHED)){
+            removeitem(ITEM_PHIONE_EGG_CHARM, 1)
+			givemon(SPECIES_PHIONE, 42)
+			playfanfare(MUS_EVOLVED)
+			clearflag(FLAG_PHIONE_EGG_HATCHED)
+			msgbox("Your Phione egg hatched into a Phione!")
+        }
+
+    }
+}
+
+script HUB1_Run_Stats_Sign {
+    lockall
+
+    buffernumberstring(STR_VAR_1, VAR_TOTAL_RUNS)
+    buffernumberstring(STR_VAR_2, VAR_ACT1_WINS)
+    buffernumberstring(STR_VAR_3, VAR_ACT2_WINS)
+    msgbox("Total Runs: {STR_VAR_1}\nAct 1 Wins: {STR_VAR_2}")
+    waitmessage
+
+    buffernumberstring(STR_VAR_1, VAR_ACT3_WINS)
+    buffernumberstring(STR_VAR_2, VAR_ACT4_WINS)
+	buffernumberstring(STR_VAR_3, VAR_ACT2_WINS)
+    msgbox("Act 2 Wins: {STR_VAR_3}\nAct 3 Wins: {STR_VAR_1}\pAct 4 Wins: {STR_VAR_2}")
+    waitmessage
+
+    releaseall
 }
 
 script HUB1_ONWARP {
@@ -9,11 +42,11 @@ script HUB1_ONWARP {
 }
 
 script HUB1_ONFRAME {
-	//STUFF FOR WHEN A RUN FINISHES
 	setvar(VAR_TEMP_2, 1)
 
+	//STUFF FOR WHEN A RUN FINISHES
 	setvar(VAR_CURRENT_ACT, 0)
-	special(UpdateLevelCap)
+	
 
 	if(!flag(FLAG_SYS_NEW_GAME)){// STUFF FOR NEW GAME
 		lockall
@@ -179,6 +212,7 @@ script HUB1_ONFRAME {
 
 script Hub_Event_Script_Birch{
     lockall
+	faceplayer
     msgbox("Would you like to start a run?", MSGBOX_YESNO)
 		switch (var(VAR_RESULT)) {
 			case YES:
@@ -192,6 +226,7 @@ script Hub_Event_Script_Birch{
 
 script Hub_Event_Script_Miltank{
     lockall
+	faceplayer
 	setvar(VAR_TEMP_A, 0)
     
 	if(!flag(FLAG_BULBASAUR_UNLOCKED)){dynmultipush("Bulbasaur (¥3000)",SPECIES_BULBASAUR) addvar(VAR_TEMP_A,1)}
@@ -539,6 +574,7 @@ script Hub_Event_Script_Miltank{
 
 script Hub_Event_Script_Chansey{
     lockall
+	faceplayer
     setvar(VAR_TEMP_A, 0)
 	if(flag(FLAG_BULBASAUR_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_BULBASAUR){dynmultipush("Bulbasaur",SPECIES_BULBASAUR) addvar(VAR_TEMP_A,1)}
 	if(flag(FLAG_CHARMANDER_UNLOCKED) && var(VAR_STARTER_MON) != SPECIES_CHARMANDER){dynmultipush("Charmander",SPECIES_CHARMANDER) addvar(VAR_TEMP_A,1)}
@@ -598,6 +634,7 @@ script Hub_Event_Script_Chansey{
 
 script Hub_Event_Script_Kecleon {
 	lockall
+	faceplayer
     setvar(VAR_TEMP_A, 0)
 	msgbox("Hey there! Would you like to\nbuy a starter item?")
 	if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED_1)){
@@ -926,6 +963,7 @@ script Hub_Event_Script_Kecleon {
 
 script Hub_Event_Script_Shiny_Kecleon {
 	lockall
+	faceplayer
     setvar(VAR_TEMP_A, 0)
 	msgbox("Howdy! Would you like to\nbuy a starter TM?")
 	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
@@ -1127,49 +1165,1412 @@ script Hub_Event_Script_Shiny_Kecleon {
 
 script Hub_Event_Script_Diancie {
 	lockall
-    setvar(VAR_TEMP_A, 0)
-	msgbox("Howdy! Would you like to\nbuy a starter TM?")
+	faceplayer
+	if(!flag(FLAG_MEGA_SHOP_UNLOCKED) && !flag(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)){
+		msgbox("Hey there! I'm Diancie.
+				I love collecting special gems.
+				I plan on selling some of them soon
+				but I don't have any to sell right now.
+				I hope you come visit again another
+				time.")
+	}
+	elif(flag(FLAG_MEGA_SHOP_UNLOCKED) && !flag(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)){
+		msgbox("Hiya! I've finally started selling
+				some of my precious gems.
+				To celebrate, I'll give you this
+				one on the house!")
+		giveitem(ITEM_CHARIZARDITE_X, 1)
+		setflag(FLAG_ITEM_VENUSAURITE_BUYABLE)
+		setflag(FLAG_ITEM_CHARIZARDITE_Y_BUYABLE)
+		setflag(FLAG_ITEM_BLASTOISINITE_BUYABLE)
+		setflag(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)
+		msgbox("There aren't so many gems I want to,
+				sell right now. But I might sell more
+				in the future.")
+	}
+	elif(flag(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)){
+		setvar(VAR_TEMP_A, 0)
+		if(flag(FLAG_ITEM_VENUSAURITE_BUYABLE)){
+			dynmultipush("Venusaurite (¥10000)",ITEM_VENUSAURITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CHARIZARDITE_Y_BUYABLE)){
+			dynmultipush("Charizardite Y (¥10000)",ITEM_CHARIZARDITE_Y)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_BLASTOISINITE_BUYABLE)){
+			dynmultipush("Blastoisinite (¥10000)",ITEM_BLASTOISINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_BEEDRILLITE_BUYABLE)){
+			dynmultipush("Beedrillite (¥10000)",ITEM_BEEDRILLITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_PIDGEOTITE_BUYABLE)){
+			dynmultipush("Pidgeotite (¥10000)",ITEM_PIDGEOTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_ALAKAZITE_BUYABLE)){
+			dynmultipush("Alakazite (¥10000)",ITEM_ALAKAZITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SLOWBRONITE_BUYABLE)){
+			dynmultipush("Slowbronite (¥10000)",ITEM_SLOWBRONITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GENGARITE_BUYABLE)){
+			dynmultipush("Gengarite (¥10000)",ITEM_GENGARITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_KANGASKHANITE_BUYABLE)){
+			dynmultipush("Kangaskhanite (¥10000)",ITEM_KANGASKHANITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_PINSIRITE_BUYABLE)){
+			dynmultipush("Pinsirite (¥10000)",ITEM_PINSIRITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GYARADOSITE_BUYABLE)){
+			dynmultipush("Gyaradosite (¥10000)",ITEM_GYARADOSITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_AERODACTYLITE_BUYABLE)){
+			dynmultipush("Aerodactylite (¥10000)",ITEM_AERODACTYLITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_AMPHAROSITE_BUYABLE)){
+			dynmultipush("Ampharosite (¥10000)",ITEM_AMPHAROSITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_STEELIXITE_BUYABLE)){
+			dynmultipush("Steelixite (¥10000)",ITEM_STEELIXITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SCIZORITE_BUYABLE)){
+			dynmultipush("Scizorite (¥10000)",ITEM_SCIZORITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_HERACRONITE_BUYABLE)){
+			dynmultipush("Heracronite (¥10000)",ITEM_HERACRONITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_HOUNDOOMINITE_BUYABLE)){
+			dynmultipush("Houndoominite (¥10000)",ITEM_HOUNDOOMINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_TYRANITARITE_BUYABLE)){
+			dynmultipush("Tyranitarite (¥10000)",ITEM_TYRANITARITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SCEPTILITE_BUYABLE)){
+			dynmultipush("Sceptilite (¥10000)",ITEM_SCEPTILITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_BLAZIKENITE_BUYABLE)){
+			dynmultipush("Blazikenite (¥10000)",ITEM_BLAZIKENITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SWAMPERTITE_BUYABLE)){
+			dynmultipush("Swampertite (¥10000)",ITEM_SWAMPERTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GARDEVOIRITE_BUYABLE)){
+			dynmultipush("Gardevoirite (¥10000)",ITEM_GARDEVOIRITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SABLENITE_BUYABLE)){
+			dynmultipush("Sablenite (¥10000)",ITEM_SABLENITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_MAWILITE_BUYABLE)){
+			dynmultipush("Mawilite (¥10000)",ITEM_MAWILITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_AGGRONITE_BUYABLE)){
+			dynmultipush("Aggronite (¥10000)",ITEM_AGGRONITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_MEDICHAMITE_BUYABLE)){
+			dynmultipush("Medichamite (¥10000)",ITEM_MEDICHAMITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_MANECTITE_BUYABLE)){
+			dynmultipush("Manectite (¥10000)",ITEM_MANECTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SHARPEDONITE_BUYABLE)){
+			dynmultipush("Sharpedonite (¥10000)",ITEM_SHARPEDONITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CAMERUPTITE_BUYABLE)){
+			dynmultipush("Cameruptite (¥10000)",ITEM_CAMERUPTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_ALTARIANITE_BUYABLE)){
+			dynmultipush("Altarianite (¥10000)",ITEM_ALTARIANITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_BANETTITE_BUYABLE)){
+			dynmultipush("Banettite (¥10000)",ITEM_BANETTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_ABSOLITE_BUYABLE)){
+			dynmultipush("Absolite (¥10000)",ITEM_ABSOLITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GLALITITE_BUYABLE)){
+			dynmultipush("Glalitite (¥10000)",ITEM_GLALITITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SALAMENCITE_BUYABLE)){
+			dynmultipush("Salamencite (¥10000)",ITEM_SALAMENCITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_METAGROSSITE_BUYABLE)){
+			dynmultipush("Metagrossite (¥10000)",ITEM_METAGROSSITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_LOPUNNITE_BUYABLE)){
+			dynmultipush("Lopunnite (¥10000)",ITEM_LOPUNNITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GARCHOMPITE_BUYABLE)){
+			dynmultipush("Garchompite (¥10000)",ITEM_GARCHOMPITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_LUCARIONITE_BUYABLE)){
+			dynmultipush("Lucarionite (¥10000)",ITEM_LUCARIONITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_ABOMASITE_BUYABLE)){
+			dynmultipush("Abomasite (¥10000)",ITEM_ABOMASITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GALLADITE_BUYABLE)){
+			dynmultipush("Galladite (¥10000)",ITEM_GALLADITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CLEFABLITE_BUYABLE)){
+			dynmultipush("Clefablite (¥10000)",ITEM_CLEFABLITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_VICTREEBELITE_BUYABLE)){
+			dynmultipush("Victreebelite (¥10000)",ITEM_VICTREEBELITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_STARMINITE_BUYABLE)){
+			dynmultipush("Starminite (¥10000)",ITEM_STARMINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_DRAGONINITE_BUYABLE)){
+			dynmultipush("Dragoninite (¥10000)",ITEM_DRAGONINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_MEGANIUMITE_BUYABLE)){
+			dynmultipush("Meganiumite (¥10000)",ITEM_MEGANIUMITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_FERALIGITE_BUYABLE)){
+			dynmultipush("Feraligite (¥10000)",ITEM_FERALIGITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SKARMORITE_BUYABLE)){
+			dynmultipush("Skarmorite (¥10000)",ITEM_SKARMORITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_FROSLASSITE_BUYABLE)){
+			dynmultipush("Froslassite (¥10000)",ITEM_FROSLASSITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_EMBOARITE_BUYABLE)){
+			dynmultipush("Emboarite (¥10000)",ITEM_EMBOARITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_EXCADRITE_BUYABLE)){
+			dynmultipush("Excadrite (¥10000)",ITEM_EXCADRITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SCOLIPITE_BUYABLE)){
+			dynmultipush("Scolipite (¥10000)",ITEM_SCOLIPITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SCRAFTINITE_BUYABLE)){
+			dynmultipush("Scraftinite (¥10000)",ITEM_SCRAFTINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_EELEKTROSSITE_BUYABLE)){
+			dynmultipush("Eelektrossite (¥10000)",ITEM_EELEKTROSSITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CHANDELURITE_BUYABLE)){
+			dynmultipush("Chandelurite (¥10000)",ITEM_CHANDELURITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CHESNAUGHTITE_BUYABLE)){
+			dynmultipush("Chesnaughtite (¥10000)",ITEM_CHESNAUGHTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_DELPHOXITE_BUYABLE)){
+			dynmultipush("Delphoxite (¥10000)",ITEM_DELPHOXITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GRENINJITE_BUYABLE)){
+			dynmultipush("Greninjite (¥10000)",ITEM_GRENINJITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_PYROARITE_BUYABLE)){
+			dynmultipush("Pyroarite (¥10000)",ITEM_PYROARITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_MALAMARITE_BUYABLE)){
+			dynmultipush("Malamarite (¥10000)",ITEM_MALAMARITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_BARBARACITE_BUYABLE)){
+			dynmultipush("Barbaracite (¥10000)",ITEM_BARBARACITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_DRAGALGITE_BUYABLE)){
+			dynmultipush("Dragalgite (¥10000)",ITEM_DRAGALGITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_HAWLUCHANITE_BUYABLE)){
+			dynmultipush("Hawluchanite (¥10000)",ITEM_HAWLUCHANITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_DRAMPANITE_BUYABLE)){
+			dynmultipush("Drampanite (¥10000)",ITEM_DRAMPANITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_FALINKSITE_BUYABLE)){
+			dynmultipush("Falinksite (¥10000)",ITEM_FALINKSITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_RAICHUNITE_X_BUYABLE)){
+			dynmultipush("Raichunite X (¥10000)",ITEM_RAICHUNITE_X)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_RAICHUNITE_Y_BUYABLE)){
+			dynmultipush("Raichunite Y (¥10000)",ITEM_RAICHUNITE_Y)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CHIMECHITE_BUYABLE)){
+			dynmultipush("Chimechite (¥10000)",ITEM_CHIMECHITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_STARAPTITE_BUYABLE)){
+			dynmultipush("Staraptite (¥10000)",ITEM_STARAPTITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GOLURKITE_BUYABLE)){
+			dynmultipush("Golurkite (¥10000)",ITEM_GOLURKITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_MEOWSTICITE_BUYABLE)){
+			dynmultipush("Meowsticite (¥10000)",ITEM_MEOWSTICITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_CRABOMINITE_BUYABLE)){
+			dynmultipush("Crabominite (¥10000)",ITEM_CRABOMINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GOLISOPITE_BUYABLE)){
+			dynmultipush("Golisopite (¥10000)",ITEM_GOLISOPITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_SCOVILLAINITE_BUYABLE)){
+			dynmultipush("Scovillainite (¥10000)",ITEM_SCOVILLAINITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_GLIMMORANITE_BUYABLE)){
+			dynmultipush("Glimmoranite (¥10000)",ITEM_GLIMMORANITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+		if(flag(FLAG_ITEM_BAXCALIBRITE_BUYABLE)){
+			dynmultipush("Baxcalibrite (¥10000)",ITEM_BAXCALIBRITE)
+			addvar(VAR_TEMP_A, 1)
+		}
+
+		if(var(VAR_TEMP_A) != 0){
+
+			if(flag(FLAG_NEW_MEGA_BUYABLE)){
+				msgbox("Hello! Good news! I have a new
+						Mega Stone in stock!
+						Please take a look!")
+				clearflag(FLAG_NEW_MEGA_BUYABLE)
+			}
+			else{
+				msgbox("Hello! Would you like to\nbuy a Mega Stone?")
+			}
+			showmoneybox(17, 10)
+			dynmultistack(0, 0, FALSE, 4, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+			switch(var(VAR_RESULT)){
+				case ITEM_VENUSAURITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_VENUSAURITE_UNLOCKED)
+						clearflag(FLAG_ITEM_VENUSAURITE_BUYABLE)
+						giveitem(ITEM_VENUSAURITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Venusaurite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CHARIZARDITE_Y:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CHARIZARDITE_Y_UNLOCKED)
+						clearflag(FLAG_ITEM_CHARIZARDITE_Y_BUYABLE)
+						giveitem(ITEM_CHARIZARDITE_Y, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Charizardite Y as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_BLASTOISINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_BLASTOISINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_BLASTOISINITE_BUYABLE)
+						giveitem(ITEM_BLASTOISINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Blastoisinite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_BEEDRILLITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_BEEDRILLITE_UNLOCKED)
+						clearflag(FLAG_ITEM_BEEDRILLITE_BUYABLE)
+						giveitem(ITEM_BEEDRILLITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Beedrillite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_PIDGEOTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_PIDGEOTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_PIDGEOTITE_BUYABLE)
+						giveitem(ITEM_PIDGEOTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Pidgeotite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_ALAKAZITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_ALAKAZITE_UNLOCKED)
+						clearflag(FLAG_ITEM_ALAKAZITE_BUYABLE)
+						giveitem(ITEM_ALAKAZITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Alakazite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SLOWBRONITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SLOWBRONITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SLOWBRONITE_BUYABLE)
+						giveitem(ITEM_SLOWBRONITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Slowbronite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GENGARITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GENGARITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GENGARITE_BUYABLE)
+						giveitem(ITEM_GENGARITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Gengarite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_KANGASKHANITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_KANGASKHANITE_UNLOCKED)
+						clearflag(FLAG_ITEM_KANGASKHANITE_BUYABLE)
+						giveitem(ITEM_KANGASKHANITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Kangaskhanite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_PINSIRITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_PINSIRITE_UNLOCKED)
+						clearflag(FLAG_ITEM_PINSIRITE_BUYABLE)
+						giveitem(ITEM_PINSIRITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Pinsirite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GYARADOSITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GYARADOSITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GYARADOSITE_BUYABLE)
+						giveitem(ITEM_GYARADOSITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Gyaradosite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_AERODACTYLITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_AERODACTYLITE_UNLOCKED)
+						clearflag(FLAG_ITEM_AERODACTYLITE_BUYABLE)
+						giveitem(ITEM_AERODACTYLITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Aerodactylite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_AMPHAROSITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_AMPHAROSITE_UNLOCKED)
+						clearflag(FLAG_ITEM_AMPHAROSITE_BUYABLE)
+						giveitem(ITEM_AMPHAROSITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Ampharosite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_STEELIXITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_STEELIXITE_UNLOCKED)
+						clearflag(FLAG_ITEM_STEELIXITE_BUYABLE)
+						giveitem(ITEM_STEELIXITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Steelixite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SCIZORITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SCIZORITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SCIZORITE_BUYABLE)
+						giveitem(ITEM_SCIZORITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Scizorite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_HERACRONITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_HERACRONITE_UNLOCKED)
+						clearflag(FLAG_ITEM_HERACRONITE_BUYABLE)
+						giveitem(ITEM_HERACRONITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Heracronite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_HOUNDOOMINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_HOUNDOOMINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_HOUNDOOMINITE_BUYABLE)
+						giveitem(ITEM_HOUNDOOMINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Houndoominite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_TYRANITARITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_TYRANITARITE_UNLOCKED)
+						clearflag(FLAG_ITEM_TYRANITARITE_BUYABLE)
+						giveitem(ITEM_TYRANITARITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Tyranitarite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SCEPTILITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SCEPTILITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SCEPTILITE_BUYABLE)
+						giveitem(ITEM_SCEPTILITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Sceptilite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_BLAZIKENITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_BLAZIKENITE_UNLOCKED)
+						clearflag(FLAG_ITEM_BLAZIKENITE_BUYABLE)
+						giveitem(ITEM_BLAZIKENITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Blazikenite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SWAMPERTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SWAMPERTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SWAMPERTITE_BUYABLE)
+						giveitem(ITEM_SWAMPERTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Swampertite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GARDEVOIRITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GARDEVOIRITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GARDEVOIRITE_BUYABLE)
+						giveitem(ITEM_GARDEVOIRITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Gardevoirite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SABLENITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SABLENITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SABLENITE_BUYABLE)
+						giveitem(ITEM_SABLENITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Sablenite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_MAWILITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_MAWILITE_UNLOCKED)
+						clearflag(FLAG_ITEM_MAWILITE_BUYABLE)
+						giveitem(ITEM_MAWILITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Mawilite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_AGGRONITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_AGGRONITE_UNLOCKED)
+						clearflag(FLAG_ITEM_AGGRONITE_BUYABLE)
+						giveitem(ITEM_AGGRONITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Aggronite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_MEDICHAMITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_MEDICHAMITE_UNLOCKED)
+						clearflag(FLAG_ITEM_MEDICHAMITE_BUYABLE)
+						giveitem(ITEM_MEDICHAMITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Medichamite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_MANECTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_MANECTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_MANECTITE_BUYABLE)
+						giveitem(ITEM_MANECTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Manectite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SHARPEDONITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SHARPEDONITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SHARPEDONITE_BUYABLE)
+						giveitem(ITEM_SHARPEDONITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Sharpedonite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CAMERUPTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CAMERUPTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_CAMERUPTITE_BUYABLE)
+						giveitem(ITEM_CAMERUPTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Cameruptite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_ALTARIANITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_ALTARIANITE_UNLOCKED)
+						clearflag(FLAG_ITEM_ALTARIANITE_BUYABLE)
+						giveitem(ITEM_ALTARIANITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Altarianite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_BANETTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_BANETTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_BANETTITE_BUYABLE)
+						giveitem(ITEM_BANETTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Banettite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_ABSOLITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_ABSOLITE_UNLOCKED)
+						clearflag(FLAG_ITEM_ABSOLITE_BUYABLE)
+						giveitem(ITEM_ABSOLITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Absolite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GLALITITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GLALITITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GLALITITE_BUYABLE)
+						giveitem(ITEM_GLALITITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Glalitite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SALAMENCITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SALAMENCITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SALAMENCITE_BUYABLE)
+						giveitem(ITEM_SALAMENCITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Salamencite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_LOPUNNITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_LOPUNNITE_UNLOCKED)
+						clearflag(FLAG_ITEM_LOPUNNITE_BUYABLE)
+						giveitem(ITEM_LOPUNNITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Lopunnite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GARCHOMPITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GARCHOMPITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GARCHOMPITE_BUYABLE)
+						giveitem(ITEM_GARCHOMPITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Garchompite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_LUCARIONITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_LUCARIONITE_UNLOCKED)
+						clearflag(FLAG_ITEM_LUCARIONITE_BUYABLE)
+						giveitem(ITEM_LUCARIONITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Lucarionite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_ABOMASITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_ABOMASITE_UNLOCKED)
+						clearflag(FLAG_ITEM_ABOMASITE_BUYABLE)
+						giveitem(ITEM_ABOMASITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Abomasite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GALLADITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GALLADITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GALLADITE_BUYABLE)
+						giveitem(ITEM_GALLADITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Galladite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CLEFABLITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CLEFABLITE_UNLOCKED)
+						clearflag(FLAG_ITEM_CLEFABLITE_BUYABLE)
+						giveitem(ITEM_CLEFABLITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Clefablite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_VICTREEBELITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_VICTREEBELITE_UNLOCKED)
+						clearflag(FLAG_ITEM_VICTREEBELITE_BUYABLE)
+						giveitem(ITEM_VICTREEBELITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Victreebelite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_STARMINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_STARMINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_STARMINITE_BUYABLE)
+						giveitem(ITEM_STARMINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Starminite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_DRAGONINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_DRAGONINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_DRAGONINITE_BUYABLE)
+						giveitem(ITEM_DRAGONINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Dragoninite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_MEGANIUMITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_MEGANIUMITE_UNLOCKED)
+						clearflag(FLAG_ITEM_MEGANIUMITE_BUYABLE)
+						giveitem(ITEM_MEGANIUMITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Meganiumite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_FERALIGITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_FERALIGITE_UNLOCKED)
+						clearflag(FLAG_ITEM_FERALIGITE_BUYABLE)
+						giveitem(ITEM_FERALIGITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Feraligite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SKARMORITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SKARMORITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SKARMORITE_BUYABLE)
+						giveitem(ITEM_SKARMORITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Skarmorite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_FROSLASSITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_FROSLASSITE_UNLOCKED)
+						clearflag(FLAG_ITEM_FROSLASSITE_BUYABLE)
+						giveitem(ITEM_FROSLASSITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Froslassite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_EMBOARITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_EMBOARITE_UNLOCKED)
+						clearflag(FLAG_ITEM_EMBOARITE_BUYABLE)
+						giveitem(ITEM_EMBOARITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Emboarite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_EXCADRITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_EXCADRITE_UNLOCKED)
+						clearflag(FLAG_ITEM_EXCADRITE_BUYABLE)
+						giveitem(ITEM_EXCADRITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Excadrite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SCOLIPITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SCOLIPITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SCOLIPITE_BUYABLE)
+						giveitem(ITEM_SCOLIPITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Scolipite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SCRAFTINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SCRAFTINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SCRAFTINITE_BUYABLE)
+						giveitem(ITEM_SCRAFTINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Scraftinite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_EELEKTROSSITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_EELEKTROSSITE_UNLOCKED)
+						clearflag(FLAG_ITEM_EELEKTROSSITE_BUYABLE)
+						giveitem(ITEM_EELEKTROSSITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got an Eelektrossite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CHANDELURITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CHANDELURITE_UNLOCKED)
+						clearflag(FLAG_ITEM_CHANDELURITE_BUYABLE)
+						giveitem(ITEM_CHANDELURITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Chandelurite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CHESNAUGHTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CHESNAUGHTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_CHESNAUGHTITE_BUYABLE)
+						giveitem(ITEM_CHESNAUGHTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Chesnaughtite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_DELPHOXITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_DELPHOXITE_UNLOCKED)
+						clearflag(FLAG_ITEM_DELPHOXITE_BUYABLE)
+						giveitem(ITEM_DELPHOXITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Delphoxite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GRENINJITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GRENINJITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GRENINJITE_BUYABLE)
+						giveitem(ITEM_GRENINJITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Greninjite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_PYROARITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_PYROARITE_UNLOCKED)
+						clearflag(FLAG_ITEM_PYROARITE_BUYABLE)
+						giveitem(ITEM_PYROARITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Pyroarite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_MALAMARITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_MALAMARITE_UNLOCKED)
+						clearflag(FLAG_ITEM_MALAMARITE_BUYABLE)
+						giveitem(ITEM_MALAMARITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Malamarite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_BARBARACITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_BARBARACITE_UNLOCKED)
+						clearflag(FLAG_ITEM_BARBARACITE_BUYABLE)
+						giveitem(ITEM_BARBARACITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Barbaracite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_DRAGALGITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_DRAGALGITE_UNLOCKED)
+						clearflag(FLAG_ITEM_DRAGALGITE_BUYABLE)
+						giveitem(ITEM_DRAGALGITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Dragalgite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_HAWLUCHANITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_HAWLUCHANITE_UNLOCKED)
+						clearflag(FLAG_ITEM_HAWLUCHANITE_BUYABLE)
+						giveitem(ITEM_HAWLUCHANITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Hawluchanite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_DRAMPANITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_DRAMPANITE_UNLOCKED)
+						clearflag(FLAG_ITEM_DRAMPANITE_BUYABLE)
+						giveitem(ITEM_DRAMPANITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Drampanite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_FALINKSITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_FALINKSITE_UNLOCKED)
+						clearflag(FLAG_ITEM_FALINKSITE_BUYABLE)
+						giveitem(ITEM_FALINKSITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Falinksite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_RAICHUNITE_X:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_RAICHUNITE_X_UNLOCKED)
+						clearflag(FLAG_ITEM_RAICHUNITE_X_BUYABLE)
+						giveitem(ITEM_RAICHUNITE_X, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Raichunite X as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_RAICHUNITE_Y:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_RAICHUNITE_Y_UNLOCKED)
+						clearflag(FLAG_ITEM_RAICHUNITE_Y_BUYABLE)
+						giveitem(ITEM_RAICHUNITE_Y, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Raichunite Y as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CHIMECHITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CHIMECHITE_UNLOCKED)
+						clearflag(FLAG_ITEM_CHIMECHITE_BUYABLE)
+						giveitem(ITEM_CHIMECHITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Chimechite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_STARAPTITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_STARAPTITE_UNLOCKED)
+						clearflag(FLAG_ITEM_STARAPTITE_BUYABLE)
+						giveitem(ITEM_STARAPTITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Staraptite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GOLURKITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GOLURKITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GOLURKITE_BUYABLE)
+						giveitem(ITEM_GOLURKITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Golurkite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_MEOWSTICITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_MEOWSTICITE_UNLOCKED)
+						clearflag(FLAG_ITEM_MEOWSTICITE_BUYABLE)
+						giveitem(ITEM_MEOWSTICITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Meowsticite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_CRABOMINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_CRABOMINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_CRABOMINITE_BUYABLE)
+						giveitem(ITEM_CRABOMINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Crabominite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GOLISOPITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GOLISOPITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GOLISOPITE_BUYABLE)
+						giveitem(ITEM_GOLISOPITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Golisopite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_SCOVILLAINITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_SCOVILLAINITE_UNLOCKED)
+						clearflag(FLAG_ITEM_SCOVILLAINITE_BUYABLE)
+						giveitem(ITEM_SCOVILLAINITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Scovillainite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_GLIMMORANITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_GLIMMORANITE_UNLOCKED)
+						clearflag(FLAG_ITEM_GLIMMORANITE_BUYABLE)
+						giveitem(ITEM_GLIMMORANITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Glimmoranite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+
+				case ITEM_BAXCALIBRITE:
+					if(checkmoney(10000)){
+						setflag(FLAG_ITEM_BAXCALIBRITE_UNLOCKED)
+						clearflag(FLAG_ITEM_BAXCALIBRITE_BUYABLE)
+						giveitem(ITEM_BAXCALIBRITE, 1)
+						removemoney(10000)
+						updatemoneybox
+						playse(SE_SHOP)
+						msgbox("You got a Baxcalibrite as a starter\nitem! I hope you put it to good use!")
+					}
+					else{
+						msgbox("I'm sorry, but you don't have the\n money for that right now.")
+					}
+			}
+		}else{
+			msgbox("I don't have anything on sale right now,
+					sorry.
+
+					Try doing more runs and getting far
+					with new pokemon!")
+			waitmessage
+			releaseall}
+
+		hidemoneybox
+	}
+	releaseall
+}
+
+script Hub_Event_Script_Chimecho {
+
+	if(var(VAR_TOTAL_RUNS) < 3){
+		msgbox("Heya. I sell starter charms.
+				But I'm not open just yet.
+				Try playing some more runs first, chim!")
+	}
+	else{}
+	lockall
+	faceplayer
+	setvar(VAR_TEMP_A, 0)
+	msgbox("Ding! Would you like to\nbuy a starter TM?")
 	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
 		dynmultipush("TM Rock Smash (¥8000)",ITEM_TM_ROCK_SMASH)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(!flag(FLAG_TM_SWIFT_UNLOCKED)){
-		dynmultipush("TM Swift (¥8000)",ITEM_TM_SWIFT)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_CUT_UNLOCKED)){
-		dynmultipush("TM Cut (¥8000)",ITEM_TM_CUT)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
-		dynmultipush("TM Noble Roar (¥4000)",ITEM_TM_NOBLE_ROAR)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_CHARM_UNLOCKED)){
-		dynmultipush("TM Charm (¥4000)",ITEM_TM_CHARM)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_FAKE_TEARS_UNLOCKED)){
-		dynmultipush("TM Fake Tears (¥4000)",ITEM_TM_FAKE_TEARS)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_CONFUSE_RAY_UNLOCKED)){
-		dynmultipush("TM Confuse Ray (¥6000)",ITEM_TM_CONFUSE_RAY)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_THUNDER_WAVE_UNLOCKED)){
-		dynmultipush("TM Thunder Wave (¥10000)",ITEM_TM_THUNDER_WAVE)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_WILL_O_WISP_UNLOCKED)){
-		dynmultipush("TM Will-O-Wisp (¥10000)",ITEM_TM_WILL_O_WISP)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_TOXIC_UNLOCKED)){
-		dynmultipush("TM Toxic (¥10000)",ITEM_TM_TOXIC)
-		addvar(VAR_TEMP_A, 1)
-	}
-
 
 	if(var(VAR_TEMP_A) != 0){
 		showmoneybox(17, 10)

@@ -19,7 +19,7 @@ EverGrandeCity_EventScript_PokemonLeagueSign::
 	end
 
 EverGrandeCity_EventScript_SetVisitedEverGrande::
-	setflag FLAG_VISITED_EVER_GRANDE_CITY
+	setflag FLAG_ITEM_DRAGALGITE_UNLOCKED
 	setvar VAR_TEMP_1, 1
 	end
 

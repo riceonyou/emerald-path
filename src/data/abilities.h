@@ -354,7 +354,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PRESSURE] =
     {
         .name = _("Pressure"),
-        .description = COMPOUND_STRING("Raises foe's PP usage. Resets stat buffs."),
+        .description = COMPOUND_STRING("Raises foe's PP usage."),
         .aiRating = 5,
     },
 
@@ -449,7 +449,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FORECAST] =
     {
         .name = _("Forecast"),
-        .description = COMPOUND_STRING("Changes the weather."),
+        .description = COMPOUND_STRING("Changes with the weather."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
         .cantBeTraced = TRUE,
@@ -771,7 +771,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_KLUTZ] =
     {
         .name = _("Klutz"),
-        .description = COMPOUND_STRING("Can't use items. Opponents sometimes miss."),
+        .description = COMPOUND_STRING("Can't use items. Sometimes dodges moves."),
         .aiRating = -1,
     },
 
@@ -806,7 +806,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FOREWARN] =
     {
         .name = _("Forewarn"),
-        .description = COMPOUND_STRING("Reduces opponent's move PP."),
+        .description = COMPOUND_STRING("Determines a foe's move."),
         .aiRating = 2,
     },
 
@@ -1960,7 +1960,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PASTEL_VEIL] =
     {
         .name = _("Pastel Veil"),
-        .description = COMPOUND_STRING("Immune to poison moves."),
+        .description = COMPOUND_STRING("Prevents non-volatile status."),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -2426,54 +2426,5 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Screen Setter"),
         .description = COMPOUND_STRING("Lengthens screen moves."),
         .aiRating = 6,
-    },
-
-    [ABILITY_PIERCING_DRILL] =
-    {
-        .name = _("Piercing Drill"),
-        .description = COMPOUND_STRING("Contact evades protection."),
-        .aiRating = 6,
-    },
-
-    [ABILITY_DRAGONIZE] =
-    {
-        .name = _("Dragonize"),
-        .description = COMPOUND_STRING("Normal moves turn Dragon."),
-        .aiRating = 8,
-    },
-
-    [ABILITY_MEGA_SOL] =
-    {
-        .name = _("Mega Sol"),
-        .description = COMPOUND_STRING("Acts like under sun."),
-        .aiRating = 7,
-    },
-
-    [ABILITY_SPICY_SPRAY] =
-    {
-        .name = _("Spicy Spray"),
-        .description = COMPOUND_STRING("Burns attacker when hit."),
-        .aiRating = 5,
-    },
-
-    [ABILITY_FIRE_MANE] =
-    {
-        .name = _("Fire Mane"),
-        .description = COMPOUND_STRING("Boosts Fire-type moves."),
-        .aiRating = 7,
-    },
-
-    [ABILITY_SHIELD_OF_LEGEND] =
-    {
-        .name = _("Shield of Legend"),
-        .description = COMPOUND_STRING("Halves damage at full HP."),
-        .aiRating = 8,
-    },
-
-    [ABILITY_HERD] =
-    {
-        .name = _("Herd"),
-        .description = COMPOUND_STRING("Get an extra when picked."),
-        .aiRating = 0,
     },
 };

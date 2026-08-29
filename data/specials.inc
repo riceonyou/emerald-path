@@ -648,3 +648,4 @@ gSpecials::
 	def_special ResetPokemonAndItems
 	def_special WarpToNextAncient
 	def_special WarpToNextAct
+	def_special ClearAllPokemonOnWhiteOut

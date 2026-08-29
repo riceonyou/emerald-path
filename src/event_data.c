@@ -63,7 +63,7 @@ void ClearTempFieldEventData(void)
     FlagClear(FLAG_SYS_ENC_DOWN_ITEM);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_CTRL_OBJ_DELETE);
-    FlagClear(FLAG_NURSE_UNION_ROOM_REMINDER);
+    FlagClear(FLAG_ITEM_DRAMPANITE_UNLOCKED);
 }
 
 void ClearDailyFlags(void)

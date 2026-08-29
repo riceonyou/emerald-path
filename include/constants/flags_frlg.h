@@ -1296,7 +1296,7 @@
 #define FLAG_SYS_ENC_UP_ITEM                                        (SYS_FLAGS + 0x3)
 #define FLAG_SYS_ENC_DOWN_ITEM                                      (SYS_FLAGS + 0x4)
 #define FLAG_SYS_USE_STRENGTH                                       (SYS_FLAGS + 0x5)
-#define FLAG_SYS_USE_FLASH                                          (SYS_FLAGS + 0x6)
+#define FLAG_ITEM_CRABOMINITE_UNLOCKED                                          (SYS_FLAGS + 0x6)
 #define FLAG_SYS_CTRL_OBJ_DELETE                                    (SYS_FLAGS + 0x7)
 #define FLAG_SYS_QL_DEPARTED                                        (SYS_FLAGS + 0x8)
 #define FLAG_0x809                                                  (SYS_FLAGS + 0x9)
@@ -1363,9 +1363,9 @@
 #define FLAG_SYS_CLOCK_SET                                          (SYS_FLAGS + 0x3F) // FLAG_0x83F
 #define FLAG_SYS_NATIONAL_DEX                                       (SYS_FLAGS + 0x40)
 #define FLAG_SYS_PC_STORAGE_DISABLED                                (SYS_FLAGS + 0x41)
-#define FLAG_NURSE_UNION_ROOM_REMINDER                              (SYS_FLAGS + 0x42)
+#define FLAG_ITEM_DRAMPANITE_UNLOCKED                              (SYS_FLAGS + 0x42)
 #define FLAG_SHOWN_BOX_WAS_FULL_MESSAGE                             (SYS_FLAGS + 0x43)
-#define FLAG_IS_CHAMPION                                            (SYS_FLAGS + 0x44)
+#define FLAG_ITEM_HAWLUCHANITE_BUYABLE                                            (SYS_FLAGS + 0x44)
 #define FLAG_SYS_SEVII_MAP_123                                      (SYS_FLAGS + 0x45)
 #define FLAG_SYS_SEVII_MAP_4567                                     (SYS_FLAGS + 0x46)
 #define FLAG_SYS_GOT_BERRY_POUCH                                    (SYS_FLAGS + 0x47)
@@ -2429,48 +2429,48 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_UNUSED_0x468                                           0 // Unused Flag
-#define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0
-#define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0
-#define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0
-#define FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET                           0
-#define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0 // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
-#define FLAG_ITEM_ROUTE_119_NUGGET                                  0
-#define FLAG_ITEM_ROUTE_104_POTION                                  0
-#define FLAG_UNUSED_0x470                                           0 // Unused Flag
-#define FLAG_ITEM_ROUTE_103_PP_UP                                   0
-#define FLAG_UNUSED_0x472                                           0 // Unused Flag
-#define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0
-#define FLAG_ITEM_ROUTE_109_POTION                                  0
-#define FLAG_ITEM_ROUTE_110_ELIXIR                                  0
-#define FLAG_ITEM_ROUTE_111_ELIXIR                                  0
-#define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0
-#define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0
-#define FLAG_UNUSED_0x479                                           0 // Unused Flag
-#define FLAG_ITEM_ROUTE_116_POTION                                  0
-#define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0
-#define FLAG_ITEM_ROUTE_120_REVIVE                                  0
-#define FLAG_ITEM_ROUTE_121_REVIVE                                  0
-#define FLAG_ITEM_ROUTE_121_ZINC                                    0
-#define FLAG_ITEM_MAGMA_HIDEOUT_1F_RARE_CANDY                       0
-#define FLAG_ITEM_ROUTE_123_PP_UP                                   0
-#define FLAG_ITEM_ROUTE_123_REVIVAL_HERB                            0
-#define FLAG_ITEM_ROUTE_125_BIG_PEARL                               0
-#define FLAG_ITEM_ROUTE_127_RARE_CANDY                              0
-#define FLAG_ITEM_ROUTE_132_PROTEIN                                 0
-#define FLAG_ITEM_ROUTE_133_MAX_REVIVE                              0
-#define FLAG_ITEM_ROUTE_134_CARBOS                                  0
-#define FLAG_ITEM_ROUTE_134_STAR_PIECE                              0
-#define FLAG_ITEM_ROUTE_114_ENERGY_POWDER                           0
-#define FLAG_ITEM_ROUTE_115_PP_UP                                   0
-#define FLAG_ITEM_ARTISAN_CAVE_B1F_HP_UP                            0
-#define FLAG_ITEM_ARTISAN_CAVE_1F_CARBOS                            0
-#define FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_MAX_ELIXIR                    0
-#define FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_FULL_RESTORE                  0
-#define FLAG_ITEM_MAGMA_HIDEOUT_3F_1R_NUGGET                        0
-#define FLAG_ITEM_MAGMA_HIDEOUT_3F_2R_PP_MAX                        0
-#define FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       0
-#define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0
-#define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0
+#define FLAG_ITEM_PIDGEOTITE                             0
+#define FLAG_ITEM_ALAKAZITE                            0
+#define FLAG_ITEM_SLOWBRONITE                 0
+#define FLAG_ITEM_GENGARITE                           0
+#define FLAG_ITEM_KANGASKHANITE                       0 // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
+#define FLAG_ITEM_PINSIRITE                                  0
+#define FLAG_ITEM_GYARADOSITE                                  0
+#define FLAG_ITEM_AERODACTYLITE                                           0 // Unused Flag
+#define FLAG_ITEM_AMPHAROSITE                                   0
+#define FLAG_ITEM_STEELIXITE                                           0 // Unused Flag
+#define FLAG_ITEM_SCIZORITE                              0
+#define FLAG_ITEM_HERACRONITE                                  0
+#define FLAG_ITEM_HOUNDOOMINITE                                  0
+#define FLAG_ITEM_TYRANITARITE                                  0
+#define FLAG_ITEM_SCEPTILITE                            0
+#define FLAG_ITEM_BLAZIKENITE                             0
+#define FLAG_ITEM_SWAMPERTITE                                           0 // Unused Flag
+#define FLAG_ITEM_GARDEVOIRITE                                  0
+#define FLAG_ITEM_SABLENITE                                0
+#define FLAG_ITEM_MAWILITE                                  0
+#define FLAG_ITEM_AGGRONITE                                  0
+#define FLAG_ITEM_MEDICHAMITE                                    0
+#define FLAG_ITEM_MANECTITE                       0
+#define FLAG_ITEM_SHARPEDONITE                                   0
+#define FLAG_ITEM_CAMERUPTITE                            0
+#define FLAG_ITEM_ALTARIANITE                               0
+#define FLAG_ITEM_BANETTITE                              0
+#define FLAG_ITEM_ABSOLITE                                 0
+#define FLAG_ITEM_GLALITITE                              0
+#define FLAG_ITEM_SALAMENCITE                                  0
+#define FLAG_ITEM_METAGROSSITE                              0
+#define FLAG_ITEM_LOPUNNITE                           0
+#define FLAG_ITEM_GARCHOMPITE                                   0
+#define FLAG_ITEM_LUCARIONITE                            0
+#define FLAG_ITEM_ABOMASITE                            0
+#define FLAG_ITEM_GALLADITE                    0
+#define FLAG_ITEM_AUDINITE                  0
+#define FLAG_ITEM_CLEFABLITE                        0
+#define FLAG_ITEM_VICTREEBELITE                        0
+#define FLAG_ITEM_STARMINITE                       0
+#define FLAG_ITEM_DRAGONINITE                     0
+#define FLAG_ITEM_MEGANIUMITE                  0
 
 #define FLAG_DEFEATED_PATH_1_LEADER                                  0
 #define FLAG_DEFEATED_PATH_2_LEADER                                   0
@@ -2498,38 +2498,38 @@
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 0
 
 // Towns and Cities
-#define FLAG_VISITED_LITTLEROOT_TOWN                0
-#define FLAG_VISITED_OLDALE_TOWN                    0
-#define FLAG_VISITED_DEWFORD_TOWN                   0
-#define FLAG_VISITED_LAVARIDGE_TOWN                 0
-#define FLAG_VISITED_FALLARBOR_TOWN                 0
-#define FLAG_VISITED_VERDANTURF_TOWN                0
-#define FLAG_VISITED_PACIFIDLOG_TOWN                0
-#define FLAG_VISITED_PETALBURG_CITY                 0
-#define FLAG_VISITED_SLATEPORT_CITY                 0
-#define FLAG_VISITED_MAUVILLE_CITY                  0
-#define FLAG_VISITED_RUSTBORO_CITY                  0
-#define FLAG_VISITED_FORTREE_CITY                   0
-#define FLAG_VISITED_LILYCOVE_CITY                  0
-#define FLAG_VISITED_MOSSDEEP_CITY                  0
-#define FLAG_VISITED_SOOTOPOLIS_CITY                0
-#define FLAG_VISITED_EVER_GRANDE_CITY               0
+#define FLAG_ITEM_FERALIGITE_BUYABLE                0
+#define FLAG_ITEM_SKARMORITE_BUYABLE                    0
+#define FLAG_ITEM_FROSLASSITE_BUYABLE                   0
+#define FLAG_ITEM_EMBOARITE_BUYABLE                 0
+#define FLAG_ITEM_EXCADRITE_BUYABLE                 0
+#define FLAG_ITEM_SCOLIPITE_BUYABLE                0
+#define FLAG_ITEM_SCRAFTINITE_BUYABLE                0
+#define FLAG_ITEM_EELEKTROSSITE_BUYABLE                 0
+#define FLAG_ITEM_CHANDELURITE_BUYABLE                 0
+#define FLAG_ITEM_CHESNAUGHTITE_BUYABLE                  0
+#define FLAG_ITEM_DELPHOXITE_BUYABLE                  0
+#define FLAG_ITEM_GRENINJITE_BUYABLE                   0
+#define FLAG_ITEM_PYROARITE_BUYABLE                  0
+#define FLAG_ITEM_MALAMARITE_BUYABLE                  0
+#define FLAG_ITEM_BARBARACITE_BUYABLE                0
+#define FLAG_ITEM_DRAGALGITE_BUYABLE               0
 
 #define FLAG_SYS_WEATHER_CTRL                       0
 #define FLAG_SYS_CYCLING_ROAD                       0
-#define FLAG_UNUSED_0x88E                           0 // Unused Flag
-#define FLAG_UNUSED_0x88F                           0 // Unused Flag
-#define FLAG_SYS_TV_HOME                            0
-#define FLAG_SYS_TV_WATCH                           0
-#define FLAG_SYS_TV_START                           0
-#define FLAG_SYS_CHANGED_DEWFORD_TREND              0
+#define FLAG_ITEM_GOLISOPITE                           0 // Unused Flag
+#define FLAG_ITEM_SCOVILLAINITE                           0 // Unused Flag
+#define FLAG_ITEM_BAXCALIBRITE                            0
+#define FLAG_ITEM_GLIMMORANITE                           0
+#define FLAG_NEW_MEGA_BUYABLE                           0
+#define FLAG_PHIONE_EGG_HATCHED              0
 #define FLAG_SYS_MIX_RECORD                         0
 #define FLAG_SYS_CAVE_SHIP                          0 // Unused Flag, leftover from R/S debug, presumably used by Emerald's debug too
 #define FLAG_SYS_CAVE_WONDER                        0 // Unused Flag, same as above
 #define FLAG_SYS_CAVE_BATTLE                        0 // Unused Flag, same as above
 #define FLAG_SYS_SHOAL_TIDE                         0
-#define FLAG_LANDMARK_FLOWER_SHOP                   0
-#define FLAG_LANDMARK_MR_BRINEY_HOUSE               0
+#define FLAG_WARPED_INTO_NEW_ACT                   0
+#define FLAG_PHIONE_EGG_HATCHED               0
 #define FLAG_LANDMARK_ABANDONED_SHIP                0
 #define FLAG_LANDMARK_SEASHORE_HOUSE                0
 #define FLAG_LANDMARK_NEW_MAUVILLE                  0

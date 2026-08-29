@@ -1413,23 +1413,21 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
         }
         else
         {
-            u32 totalRerolls = 0;
-            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
-                totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
-            if (LURE_STEP_COUNT != 0)
-                totalRerolls += 1;
-            totalRerolls += CalculateChainFishingShinyRolls();
-            if (gDexNavSpecies)
-                totalRerolls += CalculateDexNavShinyRolls();
+            u16 rand;
+            u16 ShinyRate = VarGet(VAR_SHINY_RATE);
+            u8 shinyCharmCount = CountTotalItemQuantityInBag(ITEM_SHINY_CHARM);
 
-            u32 shinyPersonality = personality;
-            while (GET_SHINY_VALUE(value, shinyPersonality) >= SHINY_ODDS && totalRerolls > 0)
+            // Each shiny charm halves the denominator, with a floor of 1.
+            while (shinyCharmCount > 0 && ShinyRate > 1)
             {
-                shinyPersonality = Random32();
-                totalRerolls--;
+                ShinyRate >>= 1;
+                shinyCharmCount--;
             }
 
-            isShiny = GET_SHINY_VALUE(value, shinyPersonality) < SHINY_ODDS;
+            rand = Random() & (ShinyRate - 1);
+            if (rand == 0)
+                isShiny = TRUE;
+                
         }
     }
 

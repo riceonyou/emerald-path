@@ -82,6 +82,7 @@ extern struct TimeBlendSettings gTimeBlend;
 
 extern const struct UCoords32 gDirectionToVectors[];
 
+void ClearAllPokemonOnWhiteOut(void);
 void GiveSavedStarter(void);
 void UpdateLevelCap(void);
 void WarpToNextAct(void);

@@ -1549,7 +1549,14 @@ bool8 ScrCmd_faceplayer(struct ScriptContext *ctx)
         return FALSE;
     }
     if (gObjectEvents[gSelectedObjectEvent].active)
-        ObjectEventFaceOppositeDirection(&gObjectEvents[gSelectedObjectEvent], GetPlayerFacingDirection());
+    {
+        struct ObjectEvent *objectEvent = &gObjectEvents[gSelectedObjectEvent];
+
+        if (objectEvent->graphicsId & OBJ_EVENT_MON)
+            ObjectEventTurn(objectEvent, GetOppositeDirection(GetPlayerFacingDirection()));
+        else
+            ObjectEventFaceOppositeDirection(objectEvent, GetPlayerFacingDirection());
+    }
     return FALSE;
 }
 

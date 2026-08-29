@@ -5904,8 +5904,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_SHED_SKIN, ABILITY_INTIMIDATE, ABILITY_NONE },
-        .innates = { ABILITY_MOXIE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_SHED_SKIN, ABILITY_SHED_SKIN, ABILITY_NONE },
+        .innates = { ABILITY_MOXIE, ABILITY_OVERCOAT, ABILITY_INTIMIDATE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Scrafty"),
     #if P_MODIFIED_MEGA_CRIES
@@ -9435,7 +9435,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_MINERAL),
     #if P_UPDATED_ABILITIES >= GEN_6
         .abilities = { ABILITY_IRON_BARBS, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_STALL, ABILITY_ANALYTIC, ABILITY_ANTICIPATION },
+        .innates = { ABILITY_STALL, ABILITY_ANALYTIC, ABILITY_FOREWARN },
     #else
         .abilities = { ABILITY_IRON_BARBS, ABILITY_NONE, ABILITY_NONE },
     #endif
@@ -9959,7 +9959,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
-        .innates = { ABILITY_DAMP, ABILITY_BEAST_BOOST },
+        .innates = { ABILITY_DAMP, ABILITY_BEAST_BOOST, ABILITY_WIND_RIDER },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Eelektross"),
     #if P_MODIFIED_MEGA_CRIES
@@ -10379,7 +10379,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseAttack    = 75,
         .baseDefense   = 110,
         .baseSpeed     = 90,
-        .baseSpAttack  = 175,
+        .baseSpAttack  = 175 - 15,
         .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 45,
@@ -10391,7 +10391,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_INFILTRATOR, ABILITY_FLAME_BODY, ABILITY_NONE },
-        .innates = { ABILITY_ILLUMINATE, ABILITY_BLAZE },
+        .innates = { ABILITY_ILLUMINATE, ABILITY_BLAZE, ABILITY_INTIMIDATE },
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
         .speciesName = _("Chandelure"),

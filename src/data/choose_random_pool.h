@@ -38,36 +38,46 @@ enum BirchBagPoolId {
     BIRCH_BAG_POOL_ALL_BASE_EVOLVING,
     BIRCH_BAG_POOL_ALL_MIDDLE_OR_SINGLE,
     BIRCH_BAG_POOL_ALL_FINAL,
+    BIRCH_BAG_POOL_SHAYMIN,
 };
 
 static const struct BirchBagWeightedChoice Registeel_Pool[] = {
-    {SPECIES_ARON,5},
-    {SPECIES_MAWILE,5},
-    {SPECIES_BRONZOR,5},
-    {SPECIES_SKARMORY,3},
-    {SPECIES_BELDUM,3},
-    {SPECIES_RIOLU,5},
-    {SPECIES_PAWNIARD,5},
-    {SPECIES_HONEDGE,3},
-    {SPECIES_TINKATINK,3},
-    {SPECIES_VAROOM,5},
-    {SPECIES_DURALUDON,2},
+    {SPECIES_ARON,1},
+    {SPECIES_MAWILE,1},
+    {SPECIES_BRONZOR,1},
+    {SPECIES_SKARMORY,1},
+    {SPECIES_BELDUM,1},
+    {SPECIES_RIOLU,1},
+    {SPECIES_PAWNIARD,1},
+    {SPECIES_HONEDGE,1},
+    {SPECIES_TINKATINK,1},
+    {SPECIES_VAROOM,1},
+    {SPECIES_KLINK,1},
+    {SPECIES_MEOWTH_GALAR,1},
+    {SPECIES_MELTAN,1},
+    {SPECIES_CUFANT,1},
+    {SPECIES_KLEFKI,1},
 };
 
 static const struct BirchBagWeightedChoice Regice_Pool[] = {
-    {SPECIES_VANILLITE,5},
-    {SPECIES_CUBCHOO,5},
-    {SPECIES_BERGMITE,5},
-    {SPECIES_SNORUNT,5},
-    {SPECIES_SPHEAL,5},
-    {SPECIES_SNEASEL,5},
-    {SPECIES_VULPIX_ALOLA,5},
-    {SPECIES_SANDSHREW_ALOLA,5},
-    {SPECIES_SNOM,5},
-    {SPECIES_CRYOGONAL,3},
-    {SPECIES_LAPRAS,3},
-    {SPECIES_CETODDLE,5},
-    {SPECIES_DELIBIRD,5},
+    {SPECIES_VANILLITE,1},
+    {SPECIES_CUBCHOO,1},
+    {SPECIES_BERGMITE,1},
+    {SPECIES_SNORUNT,1},
+    {SPECIES_SPHEAL,1},
+    {SPECIES_SNEASEL,1},
+    {SPECIES_VULPIX_ALOLA,1},
+    {SPECIES_SANDSHREW_ALOLA,1},
+    {SPECIES_SNOM,1},
+    {SPECIES_CRYOGONAL,1},
+    {SPECIES_CETODDLE,1},
+    {SPECIES_DELIBIRD,1},
+    {SPECIES_DARUMAKA_GALAR,1},
+    {SPECIES_EISCUE,1},
+    {SPECIES_SMOOCHUM,1},
+    {SPECIES_SWINUB,1},
+    {SPECIES_SNOVER,1},
+    {SPECIES_FRIGIBAX,1},
 };
 
 const struct BirchBagWeightedChoice Starters_Pool[] = {
@@ -141,21 +151,21 @@ static const struct BirchBagWeightedChoice Hoenn1_Early_Mons_Pool[] = {
 };
 
 static const struct BirchBagWeightedChoice Fossil_Pool[] = {
-    {SPECIES_OMANYTE,15},
-    {SPECIES_KABUTO,15},
-    {SPECIES_AERODACTYL,5},
-    {SPECIES_LILEEP,20},
-    {SPECIES_ANORITH,20},
-    {SPECIES_CRANIDOS,15},
-    {SPECIES_SHIELDON,15},
-    {SPECIES_TIRTOUGA,12},
-    {SPECIES_ARCHEN,12},
-    {SPECIES_TYRUNT,10},
-    {SPECIES_AMAURA,10},
-    {SPECIES_DRACOZOLT,1},
-    {SPECIES_ARCTOZOLT,1},
-    {SPECIES_DRACOVISH,1},
-    {SPECIES_ARCTOVISH,1},
+    {SPECIES_OMANYTE,5},
+    {SPECIES_KABUTO,5},
+    {SPECIES_AERODACTYL,4},
+    {SPECIES_LILEEP,5},
+    {SPECIES_ANORITH,5},
+    {SPECIES_CRANIDOS,5},
+    {SPECIES_SHIELDON,5},
+    {SPECIES_TIRTOUGA,5},
+    {SPECIES_ARCHEN,5},
+    {SPECIES_TYRUNT,5},
+    {SPECIES_AMAURA,5},
+    {SPECIES_DRACOZOLT,2},
+    {SPECIES_ARCTOZOLT,2},
+    {SPECIES_DRACOVISH,2},
+    {SPECIES_ARCTOVISH,2},
 };
 
 static const struct BirchBagWeightedChoice Groudon_Pool[] = {
@@ -268,12 +278,26 @@ static const struct BirchBagWeightedChoice Hoenn1_Rustboro_Pool[] = {
 };
 
 static const struct BirchBagWeightedChoice Manaphy_Pool[] = {
-    {SPECIES_LAPRAS,2},
-    {SPECIES_FEEBAS,2},
-    {SPECIES_HORSEA,2},
-    {SPECIES_MANTYKE,2},
-    {SPECIES_FINIZEN,2},
-    {SPECIES_RELICANTH,2},
+    {SPECIES_FEEBAS,1},
+    {SPECIES_HORSEA,1},
+    {SPECIES_MANTYKE,1},
+    {SPECIES_RELICANTH,1},
+    {SPECIES_REMORAID,1},
+    {SPECIES_RELICANTH,1},
+    {SPECIES_LUVDISC,1},
+    {SPECIES_POLIWAG,1},
+    {SPECIES_PSYDUCK,1},
+    {SPECIES_GOLDEEN,1},
+    {SPECIES_FINNEON,1},
+    {SPECIES_CLAMPERL,2},
+    {SPECIES_ARROKUDA},
+    {SPECIES_BASCULIN_WHITE_STRIPED,1},
+    {SPECIES_WIGLETT,1},
+    {SPECIES_ALOMOMOLA,1},
+    {SPECIES_BUIZEL,1},
+    {SPECIES_PYUKUMUKU,1},
+    {SPECIES_WISHIWASHI,1},
+    {SPECIES_DONDOZO,1},
 };
 
 static const struct BirchBagWeightedChoice Hoenn2_Beach_Pool[] = {
@@ -292,6 +316,38 @@ static const struct BirchBagWeightedChoice Hoenn2_Beach_Pool[] = {
     {SPECIES_SKRELP,3},
     {SPECIES_CLAUNCHER,3},
     {SPECIES_DHELMISE,3},
+};
+
+static const struct BirchBagWeightedChoice Shaymin_Pool[] = {
+    {SPECIES_TANGELA, 1},
+    {SPECIES_SUNKERN, 1},
+    {SPECIES_ODDISH, 1},
+    {SPECIES_SEEDOT, 1},
+    {SPECIES_CACNEA, 1},
+    {SPECIES_CHERUBI, 1},
+    {SPECIES_CARNIVINE, 1},
+    {SPECIES_PETILIL, 1},
+    {SPECIES_MARACTUS,1},
+    {SPECIES_SKIDDO,1},
+    {SPECIES_FOMANTIS,1},
+    {SPECIES_BOUNSWEET,1},
+    {SPECIES_GOSSIFLEUR,1},
+    {SPECIES_FOONGUS,1},
+    {SPECIES_BUDEW,1},
+    {SPECIES_HOPPIP,1},
+    {SPECIES_EXEGGCUTE,1},
+    {SPECIES_SNOVER,1},
+    {SPECIES_COTTONEE,1},
+    {SPECIES_FERROSEED,1},
+    {SPECIES_MORELULL,1},
+    {SPECIES_APPLIN,1},
+    {SPECIES_SMOLIV,1},
+    {SPECIES_BRAMBLIN,1},
+    {SPECIES_CAPSAKID,1},
+    {SPECIES_LOTAD,1},
+    {SPECIES_DEERLING,1},
+    {SPECIES_PUMPKABOO,1},
+    {SPECIES_TOEDSCOOL,1},
 };
 
 void LoadBirchBagPoolById(void)
@@ -349,6 +405,9 @@ void LoadBirchBagPoolById(void)
         break;
     case BIRCH_BAG_POOL_ALL_FINAL:
         SetBirchBagWeightedChoices(AllFinal_Pool, ARRAY_COUNT(AllFinal_Pool));
+        break;
+    case BIRCH_BAG_POOL_SHAYMIN:
+        SetBirchBagWeightedChoices(Shaymin_Pool, ARRAY_COUNT(Shaymin_Pool));
         break;
     }
 }

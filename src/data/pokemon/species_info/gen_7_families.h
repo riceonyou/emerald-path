@@ -1509,7 +1509,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
         .abilities = { ABILITY_HYPER_CUTTER, ABILITY_ANGER_POINT, ABILITY_NONE },
-        .innates = { ABILITY_IRON_FIST, ABILITY_SNOW_CLOAK },
+        .innates = { ABILITY_IRON_FIST, ABILITY_SNOW_CLOAK, ABILITY_SLUSH_RUSH },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Crabominable"),
     #if P_MODIFIED_MEGA_CRIES
@@ -4213,12 +4213,12 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_GEN_9_MEGA_EVOLUTIONS
     [SPECIES_GOLISOPOD_MEGA] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 150,
-        .baseDefense   = 175,
+        .baseHP        = 75 + 15,
+        .baseAttack    = 150 - 10,
+        .baseDefense   = 175 - 20,
         .baseSpeed     = 40,
         .baseSpAttack  = 70,
-        .baseSpDefense = 120,
+        .baseSpDefense = 120 - 20,
         .types = MON_TYPES(TYPE_BUG, TYPE_STEEL),
         .catchRate = 45,
         .expYield = 186,
@@ -4229,6 +4229,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_EMERGENCY_EXIT, ABILITY_NONE, ABILITY_NONE },
+        .innates = { ABILITY_SHELL_ARMOR, ABILITY_BULLETPROOF },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Golisopod"),
     #if P_MODIFIED_MEGA_CRIES

@@ -10,9 +10,7 @@ script ANCIENT_REGIS_ONWARP {
     }
 
 script ANCIENT_REGIS_LOAD_REGIS{
-    random(3)
-    copyvar(VAR_0x8000, VAR_RESULT)
-    switch (var(VAR_0x8000)) {
+    switch (var(VAR_0x8001)) {
         case 0:
             setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(REGIROCK))
         case 1:
@@ -24,10 +22,12 @@ script ANCIENT_REGIS_LOAD_REGIS{
 
 script ANCIENT_REGIS_EventScript_TalkToRegi{
     lockall
-
+    faceplayer
     //GIVE ANCIENT REWARD
-    switch (var(VAR_0x8000)) {
+    switch (var(VAR_0x8001)) {
         case 0://Regirock
+            msgbox("Boop beep boop. You have succesfully\ncompleted the first path. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a fossil pokemon.")
+            waitmessage
             fadescreen(FADE_TO_BLACK)
             setvar(VAR_0x8000, 28)
             special(LoadBirchBagPoolById)
@@ -37,6 +37,8 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             msgbox("You received a\n{STR_VAR_1}!")
             
         case 1://Regice
+            msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is an ice pokemon.")
+            waitmessage
             fadescreen(FADE_TO_BLACK)
             setvar(VAR_0x8000, 32)
             special(LoadBirchBagPoolById)
@@ -46,6 +48,8 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             msgbox("You received a\n{STR_VAR_1}!")
 
         case 2://Registeel
+            msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a steel pokemon.")
+            waitmessage
             fadescreen(FADE_TO_BLACK)
             setvar(VAR_0x8000, 31)
             special(LoadBirchBagPoolById)
@@ -55,7 +59,11 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             msgbox("You received a\n{STR_VAR_1}!")
     }
     waitmessage
-
+    msgbox("You will also be given the Regi Knuckles.\nBeep.")
+    waitmessage
+    giveitem(ITEM_REGI_KNUCKLES_CHARM, 1)
+    msgbox("The Regi Knuckles power up your\npunching moves and makes them\lunable to miss. Boop.\pIt also comes with a punching TM\nof your choice. Beep.")
+    waitmessage
     setvar(VAR_0x8000, 0)
     setvar(VAR_0x8001, 0)
     setvar(VAR_0x8002, 0)
@@ -117,9 +125,9 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     }
     waitmessage
 
-
+    playfanfare(MUS_OBTAIN_ITEM)
     msgbox("The level cap has been raised to 30")
-    msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
+    msgbox("Beep boop boop.\lYou will now proceed to the next path.")
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     

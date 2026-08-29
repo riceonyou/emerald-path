@@ -9378,7 +9378,7 @@
       "id": "LAYOUT_HOENN1_6",
       "name": "Hoenn1_6_Layout",
       "width": 34,
-      "height": 14,
+      "height": 18,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Hoenn1_6/border.bin",
@@ -9638,8 +9638,8 @@
     {
       "id": "LAYOUT_HUB1",
       "name": "Hub1_Layout",
-      "width": 22,
-      "height": 30,
+      "width": 30,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Hub1/border.bin",
@@ -9794,6 +9794,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Hoenn1_Alt_1_House/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn1_Alt_1_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_SHAYMIN",
+      "name": "ANCIENT_SHAYMIN_Layout",
+      "width": 12,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ANCIENT_SHAYMIN/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_SHAYMIN/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_MEWTWO",
+      "name": "ANCIENT_MEWTWO_Layout",
+      "width": 9,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ANCIENT_MEWTWO/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_MEWTWO/map.bin"
     }
   ]
 }

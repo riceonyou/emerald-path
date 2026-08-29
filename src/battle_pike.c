@@ -816,7 +816,7 @@ static bool8 DoesAbilityPreventStatus(struct Pokemon *mon, u32 status)
     enum Ability battlerTraits[MAX_MON_TRAITS];
     STORE_BATTLER_TRAITS(gBattlerTarget);
 
-    if (SearchTraits(battlerTraits, ABILITY_COMATOSE))
+    if (SearchTraits(battlerTraits, ABILITY_COMATOSE) || SearchTraits(battlerTraits, ABILITY_PASTEL_VEIL))
         return TRUE;
 
     switch (status)

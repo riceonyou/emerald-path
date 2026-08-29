@@ -4,7 +4,7 @@ PacifidlogTown_MapScripts::
 	.byte 0
 
 PacifidlogTown_OnTransition:
-	setflag FLAG_VISITED_PACIFIDLOG_TOWN
+	setflag FLAG_ITEM_SCRAFTINITE_UNLOCKED
 	end
 
 PacifidlogTown_OnResume:

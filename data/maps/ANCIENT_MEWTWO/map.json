@@ -1,0 +1,20 @@
+{
+  "id": "MAP_ANCIENT_MEWTWO",
+  "name": "ANCIENT_MEWTWO",
+  "layout": "LAYOUT_ANCIENT_MEWTWO",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_AG_Ancients",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

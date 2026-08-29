@@ -17,8 +17,9 @@ script ANCIENT_KYOGRE_EventScript_Kyogre{
     waitmessage
 
     
+    playfanfare(MUS_OBTAIN_ITEM)
     msgbox("The level cap has been raised to 42")
-    special(UpdateLevelCap)
+    
     msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)

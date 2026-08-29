@@ -57,9 +57,9 @@ EventScript_PkmnCenterNurse_ReturnPkmn_Frlg::
 	return
 
 EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom_Frlg::
-	goto_if_set FLAG_NURSE_UNION_ROOM_REMINDER, EventScript_PkmnCenterNurse_ReturnPkmn_Frlg
+	goto_if_set FLAG_ITEM_DRAMPANITE_UNLOCKED, EventScript_PkmnCenterNurse_ReturnPkmn_Frlg
 	msgbox Text_RestoredPkmnToFullHealth_Frlg
-	setflag FLAG_NURSE_UNION_ROOM_REMINDER
+	setflag FLAG_ITEM_DRAMPANITE_UNLOCKED
 	message Text_PlayerIsPlayingRightNowGoForIt_Frlg
 	waitmessage
 	applymovement VAR_LAST_TALKED, Movement_Bow

@@ -1831,3 +1831,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Hoenn1_Alt_5/scripts.inc"
 
 	.include "data/maps/Hoenn1_Alt_1_House/scripts.inc"
+
+	.include "data/maps/ANCIENT_SHAYMIN/scripts.inc"
+
+	.include "data/maps/ANCIENT_MEWTWO/scripts.inc"
+
+	.include "data/maps/ANCIENT_MEWTWO_2/scripts.inc"

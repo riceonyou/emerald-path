@@ -69,7 +69,7 @@ MossdeepCity_EventScript_SpaceCenterSign::
 	end
 
 MossdeepCity_EventScript_VisitedMossdeep::
-	setflag FLAG_VISITED_MOSSDEEP_CITY
+	setflag FLAG_ITEM_MALAMARITE_UNLOCKED
 	setvar VAR_TEMP_1, 1
 	end
 

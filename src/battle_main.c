@@ -86,6 +86,7 @@ extern const struct BgTemplate gBattleBgTemplates[];
 extern const struct WindowTemplate *const gBattleWindowTemplates[];
 
 static void CB2_InitBattleInternal(void);
+static void GiveOranBerriesFromCharm(void);
 static void CB2_PreInitMultiBattle(void);
 static void CB2_PreInitIngamePlayerPartnerBattle(void);
 static void CB2_HandleStartMultiPartnerBattle(void);
@@ -310,7 +311,7 @@ static const s8 sCenterToCornerVecXs[8] ={-32, -16, -16, -32, -32};
 // [TRAINER_CLASS_XYZ] = { _("name"), <money=5>, <ball=BALL_POKE> }
 const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
 {
-    [TRAINER_CLASS_PKMN_TRAINER_1] = { _("{PKMN} TRAINER"), 1 },
+    [TRAINER_CLASS_PKMN_TRAINER_1] = { _("{PKMN} TRAINER"), 2 },
     [TRAINER_CLASS_PKMN_TRAINER_2] = { _("{PKMN} TRAINER"), 2 },
     [TRAINER_CLASS_HIKER] = { _("HIKER"), 10, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_ULTRA : BALL_POKE },
     [TRAINER_CLASS_TEAM_AQUA] = { _("TEAM AQUA") },
@@ -360,7 +361,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_SAILOR] = { _("SAILOR"), 8 },
     [TRAINER_CLASS_COOLTRAINER_2] = { _("COOLTRAINER"), 5, BALL_ULTRA },
     [TRAINER_CLASS_MAGMA_ADMIN] = { _("MAGMA ADMIN"), 10 },
-    [TRAINER_CLASS_RIVAL] = { _("{PKMN} TRAINER"), 15 },
+    [TRAINER_CLASS_RIVAL] = { _("{PKMN} TRAINER"), 7 },
     [TRAINER_CLASS_BUG_CATCHER] = { _("BUG CATCHER"), 4 },
     [TRAINER_CLASS_PKMN_RANGER] = { _("{PKMN} RANGER"), 12 },
     [TRAINER_CLASS_MAGMA_LEADER] = { _("MAGMA LEADER"), 20, BALL_MASTER },
@@ -482,6 +483,34 @@ const u8 *const gStatusConditionStringsTable[][2] =
     {gStatusConditionString_LoveJpn, gText_Love}
 };
 
+static void GiveOranBerriesFromCharm(void)
+{
+    s32 i, j;
+    u16 species;
+    enum Item oranBerry = ITEM_ORAN_BERRY;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
+        return;
+    if (!CheckBagHasItem(ITEM_ORAN_CHARM, 1))
+        return;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
+        if (species == SPECIES_NONE || species == SPECIES_EGG)
+            continue;
+
+        for (j = 0; j < MAX_MON_ITEMS; j++)
+        {
+            if (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM + j) == ITEM_NONE)
+            {
+                SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM + j, &oranBerry);
+                break;
+            }
+        }
+    }
+}
+
 void CB2_InitBattle(void)
 {
     if (!gTestRunnerEnabled)
@@ -589,6 +618,7 @@ static void CB2_InitBattleInternal(void)
     FreeAllSpritePalettes();
     gReservedSpritePaletteCount = MAX_BATTLERS_COUNT;
     SetVBlankCallback(VBlankCB_Battle);
+    GiveOranBerriesFromCharm();
     SetUpBattleVarsAndBirchZigzagoon();
 
     if ((IsMultibattleTest() && gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)

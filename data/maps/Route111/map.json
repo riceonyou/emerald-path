@@ -584,7 +584,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_111_ELIXIR"
+      "flag": "FLAG_ITEM_TYRANITARITE_UNLOCKED"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",

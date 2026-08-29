@@ -1,0 +1,38 @@
+mapscripts ANCIENT_MEWTWO_2_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: ANCIENT_MEWTWO_ONWARP]
+}
+script ANCIENT_MEWTWO_ONWARP {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
+}
+
+script ANCIENT_MEWTWO_EventScript_TalkToMewtwo{
+    lockall
+    faceplayer
+    //GIVE ANCIENT REWARD
+    msgbox("You have done well to get this far.
+            And for that, I have some rewards
+            for you.
+            
+            I have gained an interest in
+            the science behind cloning and have
+            managed to develop this item.")
+    giveitem(ITEM_CLONING_CHARM, 1)
+    setvar(VAR_CLONING_CHARM_COUNT, 3)
+    waitmessage
+    msgbox("This charm allows you to clone the
+            next 3 pokemon you choose.
+            Be sure to choose them wisely.
+
+            And as an extra gift for you,
+            I shall give you this Psychic TM.")
+    giveitem(ITEM_TM_PSYCHIC, 1)
+    waitmessage
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("The level cap has been raised to 42")
+
+    msgbox("I wish you well on your next path.")
+    //TELEPORT TO NEXT STAGE
+    special(WarpToNextAct)
+    releaseall
+}

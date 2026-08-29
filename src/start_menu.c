@@ -735,6 +735,8 @@ static bool8 StartMenuBagCallback(void)
 {
     if (!gPaletteFade.active)
     {
+        //ConvertIntToDecimalStringN(gStringVar1, VarGet(VAR_CLONING_CHARM_COUNT), STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringCopy(gStringVar1, gText_OpenLevel);
         PlayRainStoppingSoundEffect();
         RemoveExtraStartMenuWindows();
         CleanupOverworldWindowsAndTilemaps();

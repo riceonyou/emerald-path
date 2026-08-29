@@ -5916,6 +5916,7 @@ const struct ItemInfo gItemsInfo[] =
 
 // Mega Stones
 
+#define POCKET_ITEMS POCKET_MEGA_STONES
 #define ITEM_USE_BAG_MENU ITEM_USE_PARTY_MENU
 #define ItemUseOutOfBattle_CannotUse ItemUseOutOfBattle_EvolutionStone
 
@@ -7588,6 +7589,7 @@ const struct ItemInfo gItemsInfo[] =
 
 #undef ItemUseOutOfBattle_CannotUse
 #undef ITEM_USE_BAG_MENU
+#undef POCKET_ITEMS
 
 // Gems
     #if I_PRICE >= GEN_9
@@ -17831,6 +17833,75 @@ const struct ItemInfo gItemsInfo[] =
         //.effect = gItemEffect_RareCandy,
         .iconPic = gItemIcon_BigMushroom,
         .iconPalette = gItemIconPalette_Mushroom,
+    },
+
+    [ITEM_PHIONE_EGG_CHARM] =
+    {
+        .name = ITEM_NAME("Phione Egg"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "An egg that will\n"
+            "hatch into Phione\n"
+            "at the third act."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_LuckyEgg,
+        .iconPalette = gItemIconPalette_LuckyEgg,
+    },
+
+    [ITEM_ORAN_CHARM] =
+    {
+        .name = ITEM_NAME("Oran Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A charm that gives\n"
+            "an Oran Berry to\n"
+            "Pokemon without\n"
+            "a held item."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OranBerry,
+        .iconPalette = gItemIconPalette_OranBerry,
+    },
+
+    [ITEM_REGI_KNUCKLES_CHARM] =
+    {
+        .name = ITEM_NAME("Regi Knuckles"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your punching moves\n"
+            "do 1.2 damage and\n"
+            "can't miss."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_CatchingCharm,
+        .iconPalette = gItemIconPalette_CatchingCharm,
+    },
+
+    [ITEM_CLONING_CHARM] =
+    {
+        .name = ITEM_NAME("Cloning Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Get an extra copy of the\n"
+            "pokemon you choose.\n"
+            "{STR_VAR_1} uses left."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
     },
 };
 

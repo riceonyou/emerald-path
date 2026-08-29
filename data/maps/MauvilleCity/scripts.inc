@@ -3,10 +3,10 @@ MauvilleCity_MapScripts::
 	.byte 0
 
 MauvilleCity_OnTransition:
-	setflag FLAG_VISITED_MAUVILLE_CITY
+	setflag FLAG_ITEM_CHESNAUGHTITE_UNLOCKED
 	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
 	clearflag FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION
-	setflag FLAG_SYS_TV_START
+	setflag FLAG_NEW_MEGA_BUYABLE
 	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
 	setvar VAR_MAUVILLE_GYM_STATE, 0
 	call_if_set FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, MauvilleCity_EventScript_MoveWattsonBackToGym

@@ -835,7 +835,7 @@ u8 FindAnyTVShowOnTheAir(void)
 
 void UpdateTVScreensOnMap(int width, int height)
 {
-    FlagSet(FLAG_SYS_TV_WATCH);
+    FlagSet(FLAG_ITEM_GLIMMORANITE_UNLOCKED);
     switch (CheckForPlayersHouseNews())
     {
     case PLAYERS_HOUSE_TV_LATI:
@@ -852,9 +852,9 @@ void UpdateTVScreensOnMap(int width, int height)
             // NPC in Lilycove Hotel is always watching TV
             SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
         }
-        else if (FlagGet(FLAG_SYS_TV_START) && (FindAnyTVShowOnTheAir() != 0xFF || FindAnyPokeNewsOnTheAir() != 0xFF || IsGabbyAndTyShowOnTheAir()))
+        else if (FlagGet(FLAG_NEW_MEGA_BUYABLE) && (FindAnyTVShowOnTheAir() != 0xFF || FindAnyPokeNewsOnTheAir() != 0xFF || IsGabbyAndTyShowOnTheAir()))
         {
-            FlagClear(FLAG_SYS_TV_WATCH);
+            FlagClear(FLAG_ITEM_GLIMMORANITE_UNLOCKED);
             SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
         }
         break;
@@ -3344,7 +3344,7 @@ u8 CheckForPlayersHouseNews(void)
     if (FlagGet(FLAG_SYS_TV_LATIAS_LATIOS) == TRUE)
         return PLAYERS_HOUSE_TV_LATI;
 
-    if (FlagGet(FLAG_SYS_TV_HOME) == TRUE)
+    if (FlagGet(FLAG_ITEM_BAXCALIBRITE_UNLOCKED) == TRUE)
         return PLAYERS_HOUSE_TV_MOVIE;
 
     return PLAYERS_HOUSE_TV_LATI;

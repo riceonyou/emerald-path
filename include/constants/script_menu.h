@@ -220,6 +220,8 @@
 #define STDSTRING_VOLCANO_BADGE    36
 #define STDSTRING_EARTH_BADGE      37
 #define STDSTRING_COINS            38
+#define STDSTRING_CHARMS           39
+#define STDSTRING_MEGA_STONES      40
 
 // Dynamic Multichoice Callbacks
 

@@ -26,14 +26,14 @@ ANCIENT_KYOGRE_EventScript_Kyogre::
 # 17 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitmessage
 # 20 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_2
+	playfanfare MUS_OBTAIN_ITEM
 # 21 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	special UpdateLevelCap
-# 22 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_2
+# 23 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_3
-# 24 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	special WarpToNextAct
 # 25 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+	special WarpToNextAct
+# 26 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	releaseall
 	return
 
@@ -47,9 +47,9 @@ ANCIENT_KYOGRE_EventScript_Kyogre_Text_1:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_KYOGRE_EventScript_Kyogre_Text_2:
-# 20 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 21 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	.string "The level cap has been raised to 42$"
 
 ANCIENT_KYOGRE_EventScript_Kyogre_Text_3:
-# 22 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 23 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"

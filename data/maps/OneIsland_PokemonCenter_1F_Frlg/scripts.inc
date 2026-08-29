@@ -7,7 +7,7 @@ OneIsland_PokemonCenter_1F_Frlg_MapScripts::
 
 OneIsland_PokemonCenter_1F_OnLoad::
 	call_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile
-	call_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
+	call_if_set FLAG_ITEM_HAWLUCHANITE_BUYABLE, OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
 	end
 
 OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile::
@@ -273,7 +273,7 @@ OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire::
 	waitmovement 0
 	msgbox OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou
 	special SetPostgameFlags
-	setflag FLAG_IS_CHAMPION
+	setflag FLAG_ITEM_HAWLUCHANITE_BUYABLE
 	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
 	setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6
@@ -382,7 +382,7 @@ OneIsland_PokemonCenter_1F_EventScript_Hiker::
 OneIsland_PokemonCenter_1F_EventScript_BattleGirl::
 	lock
 	faceplayer
-	goto_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_BattleGirlHoennLinked
+	goto_if_set FLAG_ITEM_HAWLUCHANITE_BUYABLE, OneIsland_PokemonCenter_1F_EventScript_BattleGirlHoennLinked
 	msgbox OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend
 	release
 	end
@@ -394,7 +394,7 @@ OneIsland_PokemonCenter_1F_EventScript_BattleGirlHoennLinked::
 
 OneIsland_PokemonCenter_1F_EventScript_NetworkMachine::
 	lockall
-	goto_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithHoenn
+	goto_if_set FLAG_ITEM_HAWLUCHANITE_BUYABLE, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithHoenn
 	goto_if_set FLAG_SEVII_DETOUR_FINISHED, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithKanto
 	msgbox OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment
 	releaseall

@@ -155,9 +155,9 @@ bool8 TrySetTrendyPhrase(u16 *phrase)
 
     if (!IsPhraseInSavedTrends(phrase))
     {
-        if (!FlagGet(FLAG_SYS_CHANGED_DEWFORD_TREND))
+        if (!FlagGet(FLAG_PHIONE_EGG_HATCHED))
         {
-            FlagSet(FLAG_SYS_CHANGED_DEWFORD_TREND);
+            FlagSet(FLAG_PHIONE_EGG_HATCHED);
 
             // Make sure player couldn't have received this phrase by mixing records
             if (!FlagGet(FLAG_SYS_MIX_RECORD))
