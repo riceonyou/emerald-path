@@ -332,7 +332,7 @@ static void Task_RecordMixing_Main(u8 taskId)
         if (!gTasks[tLinkTaskId].isActive)
         {
             tState = 2;
-            FlagSet(FLAG_SYS_MIX_RECORD);
+            FlagSet(FLAG_IS_STARTER_SHINY);
             DestroyRecordMixingLights();
             DestroyTask(tSoundTaskId);
         }

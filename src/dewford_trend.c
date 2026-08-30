@@ -160,7 +160,7 @@ bool8 TrySetTrendyPhrase(u16 *phrase)
             FlagSet(FLAG_PHIONE_EGG_HATCHED);
 
             // Make sure player couldn't have received this phrase by mixing records
-            if (!FlagGet(FLAG_SYS_MIX_RECORD))
+            if (!FlagGet(FLAG_IS_STARTER_SHINY))
             {
                 // This is the first time submitting a phrase
                 // No need to check saved phrases or reset rng, just set the new words

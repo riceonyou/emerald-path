@@ -669,25 +669,25 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
 // Starter Item Unlocked Flags
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_1  0x264 // Unused Flag
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_2  0x265 
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_3  0x266 
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_4  0x267 
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_5  0x268 
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_6  0x269 
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_7  0x26A 
-#define FLAG_MEMORY_MUSHROOM_UNLOCKED_8  0x26B 
-#define FLAG_RARE_CANDY_UNLOCKED_1  0x26C 
-#define FLAG_RARE_CANDY_UNLOCKED_2  0x26D 
-#define FLAG_RARE_CANDY_UNLOCKED_3  0x26E 
-#define FLAG_RARE_CANDY_UNLOCKED_4  0x26F 
-#define FLAG_RARE_CANDY_UNLOCKED_5  0x270 
-#define FLAG_ORAN_BERRY_UNLOCKED_1  0x271 
-#define FLAG_ORAN_BERRY_UNLOCKED_2  0x272 
-#define FLAG_LUM_BERRY_UNLOCKED_1  0x273 
-#define FLAG_LUM_BERRY_UNLOCKED_2  0x274 
-#define FLAG_SERIOUS_MINT_UNLOCKED_1  0x275 
-#define FLAG_SERIOUS_MINT_UNLOCKED_2  0x276 
+#define FLAG_MEMORY_MUSHROOM_UNLOCKED  0x264 // Unused Flag
+#define FLAG_RARE_CANDY_UNLOCKED  0x265 
+#define FLAG_ORAN_BERRY_UNLOCKED  0x266 
+#define FLAG_LUM_BERRY_UNLOCKED  0x267 
+#define FLAG_SERIOUS_MINT_UNLOCKED  0x268 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE1  0x269 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE2  0x26A 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE3  0x26B 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE4  0x26C 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE5  0x26D 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE6  0x26E 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE7  0x26F 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE8  0x270 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVE9  0x271 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVEq  0x272 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVEw  0x273 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVEe  0x274 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVEr  0x275 
+#define FLAG_UNUSEDBABYEEAIFOAENGIOVEt  0x276 
 #define FLAG_TM_NOBLE_ROAR_UNLOCKED  0x277 
 #define FLAG_TM_CHARM_UNLOCKED  0x278 
 #define FLAG_TM_FAKE_TEARS_UNLOCKED  0x279 
@@ -1322,10 +1322,10 @@
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
-#define FLAG_DEFEATED_PATH_1_LEADER                                  0x4F0
-#define FLAG_DEFEATED_PATH_2_LEADER                                   0x4F1
-#define FLAG_DEFEATED_PATH_3_LEADER                                  0x4F2
-#define FLAG_DEFEATED_PATH_4_LEADER                                 0x4F3
+#define FLAG_DEFEATED_PATH_LEADER                                  0x4F0
+#define FLAG_UNUSEDNIVOWE                                  0x4F1
+#define FLAG_UNUSEDQVINOGNOIEW                                  0x4F2
+#define FLAG_UNUSEDEVNIWOBNWIOB                             0x4F3
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6
@@ -1415,8 +1415,8 @@
 #define FLAG_ITEM_BAXCALIBRITE_BUYABLE                           (SYSTEM_FLAGS + 0x30)
 #define FLAG_ITEM_GLIMMORANITE_BUYABLE                           (SYSTEM_FLAGS + 0x31)
 #define FLAG_NEW_MEGA_BUYABLE                           (SYSTEM_FLAGS + 0x32)
-#define FLAG_UNUSEDDDDDDDDDDDDDDDDDDD              (SYSTEM_FLAGS + 0x33)//unused
-#define FLAG_SYS_MIX_RECORD                         (SYSTEM_FLAGS + 0x34)
+#define FLAG_NEXT_GIVE_MON_SHINY              (SYSTEM_FLAGS + 0x33)
+#define FLAG_IS_STARTER_SHINY                         (SYSTEM_FLAGS + 0x34)
 #define FLAG_SYS_CLOCK_SET                          (SYSTEM_FLAGS + 0x35)
 #define FLAG_SYS_NATIONAL_DEX                       (SYSTEM_FLAGS + 0x36)
 #define FLAG_SYS_NEW_GAME                          (SYSTEM_FLAGS + 0x37) // Unused Flag, leftover from R/S debug, presumably used by Emerald's debug too

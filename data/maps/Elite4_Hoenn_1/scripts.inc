@@ -15,16 +15,26 @@ Elite4_Hoenn_1_ONFRAME::
 	return
 
 
-Elite4_Hoenn_1_EventScript_MSceptile::
-# 12 "data/maps/Elite4_Hoenn_1/scripts.pory"
-	trainerbattle_single TRAINER_MEGASCEPTILE, Elite4_Hoenn_1_EventScript_MSceptile_Text_0, Elite4_Hoenn_1_EventScript_MSceptile_Text_0
-# 13 "data/maps/Elite4_Hoenn_1/scripts.pory"
-	msgbox Elite4_Hoenn_1_EventScript_MSceptile_Text_0, MSGBOX_AUTOCLOSE
+Elite4_Hoenn_1_Sign::
+# 10 "data/maps/Elite4_Hoenn_1/scripts.pory"
+	call KecShop_Sign
+	return
+
+
+Elite4_Hoenn_1_KecShop::
 # 14 "data/maps/Elite4_Hoenn_1/scripts.pory"
-	waitmessage
-	end
+	call KecShop
+	return
 
 
-Elite4_Hoenn_1_EventScript_MSceptile_Text_0:
-# 12 "data/maps/Elite4_Hoenn_1/scripts.pory"
-	.string "test.$"
+Elite4_Hoenn_1_KecShop_Shiny::
+# 18 "data/maps/Elite4_Hoenn_1/scripts.pory"
+	call KecShop_Shiny
+	return
+
+
+Elite4_Hoenn_1_EventScript_MSceptile::
+# 22 "data/maps/Elite4_Hoenn_1/scripts.pory"
+	call RivalFight4
+	return
+

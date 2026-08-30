@@ -6,12 +6,18 @@ script Elite4_Hoenn_1_ONFRAME {
     setvar(VAR_TEMP_1, 1)
 }
 
+script Elite4_Hoenn_1_Sign {
+    call(KecShop_Sign)
+}
+
+script Elite4_Hoenn_1_KecShop {
+    call(KecShop)
+}
+
+script Elite4_Hoenn_1_KecShop_Shiny {
+    call(KecShop_Shiny)
+}
 
 script Elite4_Hoenn_1_EventScript_MSceptile{
-
-	trainerbattle_single(TRAINER_MEGASCEPTILE, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
-	waitmessage
-    end
-
+    call(RivalFight4)
 }

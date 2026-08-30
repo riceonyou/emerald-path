@@ -17837,7 +17837,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PHIONE_EGG_CHARM] =
     {
-        .name = ITEM_NAME("Phione Egg"),
+        .name = ITEM_NAME("Phione Egg Charm"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17872,7 +17872,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_REGI_KNUCKLES_CHARM] =
     {
-        .name = ITEM_NAME("Regi Knuckles"),
+        .name = ITEM_NAME("Regi Knuckles Charm"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17896,6 +17896,54 @@ const struct ItemInfo gItemsInfo[] =
             "Get an extra copy of the\n"
             "pokemon you choose.\n"
             "{STR_VAR_1} uses left."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_SHINY_STARTER_CHARM] =
+    {
+        .name = ITEM_NAME("Shiny Starter Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your starter pokemon\n"
+            "becomes shiny."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_LUMP_SUM_CHARM] =
+    {
+        .name = ITEM_NAME("Lump Sum Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Gain ¥1500."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_BERRY_PACK_CHARM] =
+    {
+        .name = ITEM_NAME("Berry Pack Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Gain an oran berry,\n"
+            "a sitrus berry, a lum\n"
+            "berry and a berry juice."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,

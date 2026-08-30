@@ -38,7 +38,7 @@ Route110_TrickHousePuzzle6_EventScript_Benny::
 	end
 
 Route110_TrickHousePuzzle6_EventScript_Sebastian::
-	trainerbattle_single TRAINER_SEBASTIAN, Route110_TrickHousePuzzle6_Text_SebastianIntro, Route110_TrickHousePuzzle6_Text_SebastianDefeat
+	trainerbattle_single TRAINER_TRAPINCH, Route110_TrickHousePuzzle6_Text_SebastianIntro, Route110_TrickHousePuzzle6_Text_SebastianDefeat
 	msgbox Route110_TrickHousePuzzle6_Text_SebastianPostBattle, MSGBOX_AUTOCLOSE
 	end
 

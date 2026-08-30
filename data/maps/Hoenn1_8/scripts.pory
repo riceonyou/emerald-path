@@ -27,27 +27,12 @@ script Hoenn1_8_EventScript_Nosepass{
 }
 
 script Hoenn1_8_EventScript_Nosepass_Defeated{
-	setflag(FLAG_DEFEATED_PATH_1_LEADER)
+	setflag(FLAG_DEFEATED_PATH_LEADER)
 	msgbox("test.", MSGBOX_AUTOCLOSE) 
 	waitmessage
 	end
 }
 
 script EventScript_AbraTeleport1{
-	lockall
-	if(!flag(FLAG_DEFEATED_PATH_1_LEADER)){
-		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.")
-		releaseall
-	}
-	else{
-		msgbox("Would you like to teleport\nto the next act?", MSGBOX_YESNO)
-		switch (var(VAR_RESULT)) {
-			case YES:
-				msgbox("Alright then! Here we go!")
-				special(WarpToNextAncient)
-			case NO:
-				msgbox("Okay! Let me know when you're ready.")
-				releaseall
-		}
-	}
+	call(AbraTeleport)
 }

@@ -1354,7 +1354,10 @@ void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV, u8 perfectIVs)
     SetBoxMonData(mon, MON_DATA_SPDEF_IV, &iv);
 
     u8 NumPerfectIVs = gSpeciesInfo[species].perfectIVCount + perfectIVs;
-
+    if (GetBoxMonData(mon, MON_DATA_IS_SHINY))
+    {
+        NumPerfectIVs += 3;
+    }
     if (NumPerfectIVs != 0)
     {
         iv = MAX_PER_STAT_IVS;
@@ -1410,6 +1413,11 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
         else if (P_NO_SHINIES_WITHOUT_POKEBALLS && !HasAtLeastOnePokeBall())
         {
             isShiny = FALSE;
+        }
+        else if (FlagGet(FLAG_NEXT_GIVE_MON_SHINY))
+        {
+            isShiny = TRUE;
+            FlagClear(FLAG_NEXT_GIVE_MON_SHINY);
         }
         else
         {

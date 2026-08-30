@@ -34,7 +34,7 @@ Hoenn2_6_Manectric::
 
 Hoenn2_6_Manectric_Defeated::
 # 26 "data/maps/Hoenn2_6/scripts.pory"
-	setflag FLAG_DEFEATED_PATH_2_LEADER
+	setflag FLAG_DEFEATED_PATH_LEADER
 # 27 "data/maps/Hoenn2_6/scripts.pory"
 	msgbox Hoenn2_6_Manectric_Defeated_Text_0, MSGBOX_AUTOCLOSE
 # 28 "data/maps/Hoenn2_6/scripts.pory"
@@ -54,38 +54,7 @@ Hoenn2_6_Magneton::
 
 Hoenn2_6_AbraTeleport::
 # 40 "data/maps/Hoenn2_6/scripts.pory"
-	lockall
-# 41 "data/maps/Hoenn2_6/scripts.pory"
-	goto_if_unset FLAG_DEFEATED_PATH_2_LEADER, Hoenn2_6_AbraTeleport_1
-# 46 "data/maps/Hoenn2_6/scripts.pory"
-	msgbox Hoenn2_6_AbraTeleport_Text_1, MSGBOX_YESNO
-# 47 "data/maps/Hoenn2_6/scripts.pory"
-	switch VAR_RESULT
-# 48 "data/maps/Hoenn2_6/scripts.pory"
-	case YES, Hoenn2_6_AbraTeleport_5
-# 51 "data/maps/Hoenn2_6/scripts.pory"
-	case NO, Hoenn2_6_AbraTeleport_6
-	return
-
-Hoenn2_6_AbraTeleport_1:
-# 42 "data/maps/Hoenn2_6/scripts.pory"
-	msgbox Hoenn2_6_AbraTeleport_Text_0
-# 43 "data/maps/Hoenn2_6/scripts.pory"
-	releaseall
-	return
-
-Hoenn2_6_AbraTeleport_5:
-# 49 "data/maps/Hoenn2_6/scripts.pory"
-	msgbox Hoenn2_6_AbraTeleport_Text_2
-# 50 "data/maps/Hoenn2_6/scripts.pory"
-	special WarpToNextAncient
-	return
-
-Hoenn2_6_AbraTeleport_6:
-# 52 "data/maps/Hoenn2_6/scripts.pory"
-	msgbox Hoenn2_6_AbraTeleport_Text_3
-# 53 "data/maps/Hoenn2_6/scripts.pory"
-	releaseall
+	call AbraTeleport
 	return
 
 
@@ -96,19 +65,3 @@ Hoenn2_6_Roselia_Text_0:
 Hoenn2_6_Manectric_Defeated_Text_0:
 # 27 "data/maps/Hoenn2_6/scripts.pory"
 	.string "test.$"
-
-Hoenn2_6_AbraTeleport_Text_0:
-# 42 "data/maps/Hoenn2_6/scripts.pory"
-	.string "You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.$"
-
-Hoenn2_6_AbraTeleport_Text_1:
-# 46 "data/maps/Hoenn2_6/scripts.pory"
-	.string "Would you like to teleport\nto the next act?$"
-
-Hoenn2_6_AbraTeleport_Text_2:
-# 49 "data/maps/Hoenn2_6/scripts.pory"
-	.string "Alright then! Here we go!$"
-
-Hoenn2_6_AbraTeleport_Text_3:
-# 52 "data/maps/Hoenn2_6/scripts.pory"
-	.string "Okay! Let me know when you're ready.$"

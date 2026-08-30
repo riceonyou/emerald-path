@@ -2,32 +2,28 @@ Hoenn1_6_MapScripts::
 	.byte 0
 
 
-Hoenn1_6_EventScript_Rival::
-# 6 "data/maps/Hoenn1_6/scripts.pory"
-	switch VAR_CURRENT_RIVAL
-# 7 "data/maps/Hoenn1_6/scripts.pory"
-	case 0, Hoenn1_6_EventScript_Rival_2
-# 12 "data/maps/Hoenn1_6/scripts.pory"
-	case 1, Hoenn1_6_EventScript_Rival_3
+Hoenn1_6_KecShop_Sign::
+# 5 "data/maps/Hoenn1_6/scripts.pory"
+	call KecShop_Sign
 	return
 
-Hoenn1_6_EventScript_Rival_2:
-# 8 "data/maps/Hoenn1_6/scripts.pory"
-	trainerbattle_single TRAINER_TREECKO, Hoenn1_6_EventScript_Rival_Text_0, Hoenn1_6_EventScript_Rival_Text_1
-# 9 "data/maps/Hoenn1_6/scripts.pory"
-	msgbox Hoenn1_6_EventScript_Rival_Text_2, MSGBOX_AUTOCLOSE
-# 10 "data/maps/Hoenn1_6/scripts.pory"
-	waitmessage
-	end
 
-Hoenn1_6_EventScript_Rival_3:
+Hoenn1_6_KecShop::
+# 9 "data/maps/Hoenn1_6/scripts.pory"
+	call KecShop
+	return
+
+
+Hoenn1_6_KecShop_Shiny::
 # 13 "data/maps/Hoenn1_6/scripts.pory"
-	trainerbattle_single TRAINER_TORCHIC, Hoenn1_6_EventScript_Rival_Text_3, Hoenn1_6_EventScript_Rival_Text_1
-# 14 "data/maps/Hoenn1_6/scripts.pory"
-	msgbox Hoenn1_6_EventScript_Rival_Text_2, MSGBOX_AUTOCLOSE
-# 15 "data/maps/Hoenn1_6/scripts.pory"
-	waitmessage
-	end
+	call KecShop_Shiny
+	return
+
+
+Hoenn1_6_EventScript_Rival::
+# 17 "data/maps/Hoenn1_6/scripts.pory"
+	call RivalFight1
+	return
 
 
 Hoenn1_6_EventScript_Shroomish::
@@ -157,22 +153,6 @@ Hoenn1_1_Itemball_5::
 	releaseall
 	end
 
-
-Hoenn1_6_EventScript_Rival_Text_0:
-# 8 "data/maps/Hoenn1_6/scripts.pory"
-	.string "Yo I'm Treecko. Grrr.$"
-
-Hoenn1_6_EventScript_Rival_Text_1:
-# 8 "data/maps/Hoenn1_6/scripts.pory"
-	.string "Damn you got me.$"
-
-Hoenn1_6_EventScript_Rival_Text_2:
-# 9 "data/maps/Hoenn1_6/scripts.pory"
-	.string "I'll get you next time.$"
-
-Hoenn1_6_EventScript_Rival_Text_3:
-# 13 "data/maps/Hoenn1_6/scripts.pory"
-	.string "Yo I'm Torchic. Grrr.$"
 
 Hoenn1_6_EventScript_Shroomish_Text_0:
 # 22 "data/maps/Hoenn1_6/scripts.pory"

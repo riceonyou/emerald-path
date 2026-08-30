@@ -23,18 +23,7 @@ script Hoenn3_5_Linoone{
 }
 
 script Hoenn3_5_Rival{
-    switch (var(VAR_CURRENT_RIVAL)){
-        case 0:
-            trainerbattle_single(TRAINER_SCEPTILE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
-            waitmessage
-            end
-        case 1:
-            trainerbattle_single(TRAINER_BLAZIKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
-            waitmessage
-            end
-    }
+    call(RivalFight3)
 }
 
 script Hoenn3_5_EventScript_BirchBag{

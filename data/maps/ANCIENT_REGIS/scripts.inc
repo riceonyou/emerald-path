@@ -21,7 +21,7 @@ ANCIENT_REGIS_ONWARP::
 
 ANCIENT_REGIS_LOAD_REGIS::
 # 13 "data/maps/ANCIENT_REGIS/scripts.pory"
-	switch VAR_0x8001
+	switch VAR_0x8000
 # 14 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 0, ANCIENT_REGIS_LOAD_REGIS_2
 # 16 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -52,7 +52,7 @@ ANCIENT_REGIS_EventScript_TalkToRegi::
 # 25 "data/maps/ANCIENT_REGIS/scripts.pory"
 	faceplayer
 # 27 "data/maps/ANCIENT_REGIS/scripts.pory"
-	switch VAR_0x8001
+	switch VAR_0x8000
 # 28 "data/maps/ANCIENT_REGIS/scripts.pory"
 	case 0, ANCIENT_REGIS_EventScript_TalkToRegi_3
 # 39 "data/maps/ANCIENT_REGIS/scripts.pory"

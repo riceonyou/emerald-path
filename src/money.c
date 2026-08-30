@@ -75,6 +75,11 @@ void SetMoney(u32 *moneyPtr, u32 newValue)
     *moneyPtr = gSaveBlock2Ptr->encryptionKey ^ newValue;
 }
 
+void ClearMoney()
+{
+    SetMoney(&gSaveBlock1Ptr->money, 0);
+}
+
 bool8 IsEnoughMoney(u32 *moneyPtr, u32 cost)
 {
     if (GetMoney(moneyPtr) >= cost)

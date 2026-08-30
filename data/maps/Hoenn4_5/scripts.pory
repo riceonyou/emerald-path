@@ -37,7 +37,7 @@ script Hoenn4_5_Latias{
 }
 
 script Hoenn4_5_Latios_Latias_Defeated{
-	setflag(FLAG_DEFEATED_PATH_4_LEADER)
+	setflag(FLAG_DEFEATED_PATH_LEADER)
 	msgbox("test.", MSGBOX_AUTOCLOSE) 
 	waitmessage
 	end

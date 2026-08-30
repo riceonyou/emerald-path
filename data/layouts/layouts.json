@@ -9378,7 +9378,7 @@
       "id": "LAYOUT_HOENN1_6",
       "name": "Hoenn1_6_Layout",
       "width": 34,
-      "height": 18,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Hoenn1_6/border.bin",

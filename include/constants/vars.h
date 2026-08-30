@@ -150,7 +150,7 @@
 #define VAR_ACT3_WINS                               0x4080 // 
 #define VAR_ACT4_WINS                               0x4081 // 
 #define VAR_TOTAL_RUNS                  0x4082
-#define VAR_UNUSED_0x4083                                0x4083 // Unused Var
+#define VAR_UNUSEDDSEFSEVES                                0x4083///unused
 #define VAR_BIRCH_LAB_STATE                              0x4084
 #define VAR_PETALBURG_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
 #define VAR_CONTEST_HALL_STATE                           0x4086

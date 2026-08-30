@@ -54,7 +54,7 @@ Hoenn4_5_Latias::
 
 Hoenn4_5_Latios_Latias_Defeated::
 # 40 "data/maps/Hoenn4_5/scripts.pory"
-	setflag FLAG_DEFEATED_PATH_4_LEADER
+	setflag FLAG_DEFEATED_PATH_LEADER
 # 41 "data/maps/Hoenn4_5/scripts.pory"
 	msgbox Hoenn4_5_Latios_Latias_Defeated_Text_0, MSGBOX_AUTOCLOSE
 # 42 "data/maps/Hoenn4_5/scripts.pory"

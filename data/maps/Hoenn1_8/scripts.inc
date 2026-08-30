@@ -34,7 +34,7 @@ Hoenn1_8_EventScript_Nosepass::
 
 Hoenn1_8_EventScript_Nosepass_Defeated::
 # 30 "data/maps/Hoenn1_8/scripts.pory"
-	setflag FLAG_DEFEATED_PATH_1_LEADER
+	setflag FLAG_DEFEATED_PATH_LEADER
 # 31 "data/maps/Hoenn1_8/scripts.pory"
 	msgbox Hoenn1_8_EventScript_Taillow_Text_0, MSGBOX_AUTOCLOSE
 # 32 "data/maps/Hoenn1_8/scripts.pory"
@@ -44,57 +44,10 @@ Hoenn1_8_EventScript_Nosepass_Defeated::
 
 EventScript_AbraTeleport1::
 # 37 "data/maps/Hoenn1_8/scripts.pory"
-	lockall
-# 38 "data/maps/Hoenn1_8/scripts.pory"
-	goto_if_unset FLAG_DEFEATED_PATH_1_LEADER, EventScript_AbraTeleport1_1
-# 43 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox EventScript_AbraTeleport1_Text_1, MSGBOX_YESNO
-# 44 "data/maps/Hoenn1_8/scripts.pory"
-	switch VAR_RESULT
-# 45 "data/maps/Hoenn1_8/scripts.pory"
-	case YES, EventScript_AbraTeleport1_5
-# 48 "data/maps/Hoenn1_8/scripts.pory"
-	case NO, EventScript_AbraTeleport1_6
-	return
-
-EventScript_AbraTeleport1_1:
-# 39 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox EventScript_AbraTeleport1_Text_0
-# 40 "data/maps/Hoenn1_8/scripts.pory"
-	releaseall
-	return
-
-EventScript_AbraTeleport1_5:
-# 46 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox EventScript_AbraTeleport1_Text_2
-# 47 "data/maps/Hoenn1_8/scripts.pory"
-	special WarpToNextAncient
-	return
-
-EventScript_AbraTeleport1_6:
-# 49 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox EventScript_AbraTeleport1_Text_3
-# 50 "data/maps/Hoenn1_8/scripts.pory"
-	releaseall
+	call AbraTeleport
 	return
 
 
 Hoenn1_8_EventScript_Taillow_Text_0:
 # 6 "data/maps/Hoenn1_8/scripts.pory"
 	.string "test.$"
-
-EventScript_AbraTeleport1_Text_0:
-# 39 "data/maps/Hoenn1_8/scripts.pory"
-	.string "You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.$"
-
-EventScript_AbraTeleport1_Text_1:
-# 43 "data/maps/Hoenn1_8/scripts.pory"
-	.string "Would you like to teleport\nto the next act?$"
-
-EventScript_AbraTeleport1_Text_2:
-# 46 "data/maps/Hoenn1_8/scripts.pory"
-	.string "Alright then! Here we go!$"
-
-EventScript_AbraTeleport1_Text_3:
-# 49 "data/maps/Hoenn1_8/scripts.pory"
-	.string "Okay! Let me know when you're ready.$"

@@ -65,6 +65,7 @@ static void BuildBirchBagOwnedSpeciesCache(void);
 static u8 CreatePokemonFrontSpriteShiny(u16 species, u8 x, u8 y);
 static void CreateSparkleOnPokeball(u8 x, u8 y);
 static void DestroyPokeballSparkles(void);
+static void Task_WaitForStarterExitFade(u8 taskId);
 
 static u16 sStarterLabelWindowId;
 
@@ -673,7 +674,8 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
         }
         gSpecialVar_Result = gTasks[taskId].tStarterSelection;
         ResetAllPicSprites();
-        SetMainCallback2(gMain.savedCallback);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_WaitForStarterExitFade;
         break;
     case 1:  // NO
     case MENU_B_PRESSED:
@@ -689,6 +691,16 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
         }
         gTasks[taskId].func = Task_DeclineStarter;
         break;
+    }
+}
+
+static void Task_WaitForStarterExitFade(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        ResetAllPicSprites();
+        SetMainCallback2(gMain.savedCallback);
+        DestroyTask(taskId);
     }
 }
 
@@ -986,8 +998,8 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
             if (FlagGet(FLAG_GIVE_SHINY_NEXT_MON)){
                 u8 isShiny = TRUE;
                 CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
-                SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 3);
                 SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
+                SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 0);
                 CalculateMonStats(&mon);
                 GiveMonInitialMoveset(&mon);
                 GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
@@ -995,8 +1007,8 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
             }else{
                 u8 isShiny = FALSE;
                 CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
-                SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 0);
                 SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
+                SetBoxMonIVs(&mon.box, USE_RANDOM_IVS, 0);
                 CalculateMonStats(&mon);
                 GiveMonInitialMoveset(&mon);
                 GiveScriptedMonToPlayer(&mon, PARTY_SIZE);

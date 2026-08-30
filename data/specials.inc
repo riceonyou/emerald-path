@@ -649,3 +649,5 @@ gSpecials::
 	def_special WarpToNextAncient
 	def_special WarpToNextAct
 	def_special ClearAllPokemonOnWhiteOut
+	def_special ClearMoney
+	def_special GiveBufferedMon

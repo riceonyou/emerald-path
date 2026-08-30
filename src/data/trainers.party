@@ -2287,7 +2287,6 @@ Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2313,7 +2312,7 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CARVANHA ===
-Name: LYDIA
+Name: Carvanha
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
@@ -2346,7 +2345,7 @@ Level: 22
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_BUDEW ===
-Name: LYDIA
+Name: Budew
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
@@ -2378,10 +2377,10 @@ Goldeen
 Level: 25
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_LYDIA_4 ===
-Name: LYDIA
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
+=== TRAINER_BARBOACH ===
+Name: Barboach
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -2411,10 +2410,10 @@ Goldeen
 Level: 28
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_LYDIA_5 ===
-Name: LYDIA
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
+=== TRAINER_RATTATA ===
+Name: Rattata
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Female
 Double Battle: No
@@ -2444,13 +2443,12 @@ Seaking
 Level: 31
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_JACKSON_1 ===
-Name: JACKSON
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+=== TRAINER_VULPIX ===
+Name: Vulpix
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2458,13 +2456,12 @@ Breloom
 Level: 27
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_LORENZO ===
-Name: LORENZO
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+=== TRAINER_ZUBAT ===
+Name: Zubat
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2480,13 +2477,12 @@ Lombre
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_SEBASTIAN ===
-Name: SEBASTIAN
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+=== TRAINER_TRAPINCH ===
+Name: Trapinch
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2494,13 +2490,12 @@ Cacturne
 Level: 39
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_JACKSON_2 ===
-Name: JACKSON
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+=== TRAINER_SPOINK ===
+Name: Spoink
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -2508,27 +2503,25 @@ Breloom
 Level: 31
 IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 
-=== TRAINER_JACKSON_3 ===
-Name: JACKSON
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+=== TRAINER_MAWILESABELEYE ===
+Name: MS
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer / Randomize Party Indices
 
 Breloom
 Level: 34
 IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
-=== TRAINER_JACKSON_4 ===
+=== TRAINER_ARON ===
 Name: JACKSON
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -2536,13 +2529,12 @@ Breloom
 Level: 37
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-=== TRAINER_JACKSON_5 ===
+=== TRAINER_MEDITITE ===
 Name: JACKSON
-Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2554,13 +2546,12 @@ Breloom
 Level: 39
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-=== TRAINER_CATHERINE_1 ===
+=== TRAINER_MAKUHITA ===
 Name: CATHERINE
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -2574,11 +2565,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_JENNA ===
 Name: JENNA
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -2596,11 +2586,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_SOPHIA ===
 Name: SOPHIA
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2614,11 +2603,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_CATHERINE_2 ===
 Name: CATHERINE
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -2632,11 +2620,10 @@ IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 
 === TRAINER_CATHERINE_3 ===
 Name: CATHERINE
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2650,11 +2637,10 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
 === TRAINER_CATHERINE_4 ===
 Name: CATHERINE
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -2668,11 +2654,10 @@ IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
 === TRAINER_CATHERINE_5 ===
 Name: CATHERINE
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -2686,8 +2671,8 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_JULIO ===
 Name: JULIO
-Class: Triathlete
-Pic: Cycling Triathlete M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
@@ -2700,7 +2685,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_5 ===
 Name: GRUNT
 Class: Pkmn Trainer 1
-Pic: Aqua Grunt M
+Pic: Substitute
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -2716,8 +2701,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_GRUNT_UNUSED ===
 Name: GRUNT
-Class: Team Magma
-Pic: Aqua Grunt F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -2734,7 +2719,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_GRUNT_MT_PYRE_4 ===
 Name: GRUNT
 Class: Pkmn Trainer 1
-Pic: Aqua Grunt F
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -2750,8 +2735,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_JAGGED_PASS ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -2767,8 +2752,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MARC ===
 Name: MARC
-Class: Hiker
-Pic: Hiker
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -2784,8 +2769,8 @@ IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_BRENDEN ===
 Name: BRENDEN
-Class: Sailor
-Pic: Sailor
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
@@ -2797,8 +2782,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LILITH ===
 Name: LILITH
-Class: Battle Girl
-Pic: Battle Girl
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Intense
 Double Battle: No
@@ -2810,8 +2795,8 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_CRISTIAN ===
 Name: CRISTIAN
-Class: Black Belt
-Pic: Black Belt
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -2823,8 +2808,8 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_SYLVIA ===
 Name: SYLVIA
-Class: Hex Maniac
-Pic: Hex Maniac
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Suspicious
 Double Battle: No
@@ -2849,8 +2834,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ATHENA ===
 Name: ATHENA
-Class: Cooltrainer
-Pic: Cooltrainer F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Cool
 Items: Hyper Potion
@@ -2885,8 +2870,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_CHIMNEY_2 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -2911,8 +2896,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TERRY ===
 Name: TERRY
-Class: Psychic
-Pic: Psychic F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Intense
 Double Battle: No
@@ -2924,8 +2909,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NATE ===
 Name: NATE
-Class: Gentleman
-Pic: Gentleman
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Rich
 Double Battle: No
@@ -2937,8 +2922,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_KATHLEEN ===
 Name: KATHLEEN
-Class: Hex Maniac
-Pic: Hex Maniac
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Suspicious
 Double Battle: No
@@ -2950,8 +2935,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_CLIFFORD ===
 Name: CLIFFORD
-Class: Gentleman
-Pic: Gentleman
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Rich
 Double Battle: No
@@ -2963,8 +2948,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NICHOLAS ===
 Name: NICHOLAS
-Class: Psychic
-Pic: Psychic M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -2976,8 +2961,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Magma
 Double Battle: No
@@ -2993,8 +2978,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_4 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -3006,8 +2991,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_5 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -3019,8 +3004,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_6 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -3032,8 +3017,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_7 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -3045,8 +3030,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MACEY ===
 Name: MACEY
-Class: Psychic
-Pic: Psychic F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Intense
 Double Battle: No
@@ -3058,8 +3043,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
 Name: BRENDAN
-Class: Rival
-Pic: Brendan
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
@@ -3075,8 +3060,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
 Name: BRENDAN
-Class: Rival
-Pic: Brendan
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
@@ -3092,8 +3077,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_PAXTON ===
 Name: PAXTON
-Class: Expert
-Pic: Expert M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -3109,8 +3094,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISABELLA ===
 Name: ISABELLA
-Class: Triathlete
-Pic: Swimming Triathlete F
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Female
 Music: Swimmer
 Double Battle: No
@@ -3123,7 +3108,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_GRUNT_WEATHER_INST_5 ===
 Name: GRUNT
 Class: Pkmn Trainer 1
-Pic: Aqua Grunt F
+Pic: Substitute
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -3139,8 +3124,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MT_CHIMNEY ===
 Name: TABITHA
-Class: Magma Admin
-Pic: Magma Admin
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -3164,8 +3149,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_JONATHAN ===
 Name: JONATHAN
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Cool
 Items: Hyper Potion
@@ -3182,8 +3167,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_RUSTBORO_TORCHIC ===
 Name: BRENDAN
-Class: Rival
-Pic: Brendan
+Class: Pkmn Trainer 1
+Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No

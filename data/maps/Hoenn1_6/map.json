@@ -18,7 +18,7 @@
       "local_id": "HOENN1_8_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 6,
-      "y": 6,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -31,7 +31,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHROOMISH)",
       "x": 18,
-      "y": 3,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -44,7 +44,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SURSKIT)",
       "x": 13,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -57,7 +57,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SKITTY)",
       "x": 21,
-      "y": 3,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -71,7 +71,7 @@
       "local_id": "HOENN1_9_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
       "x": 23,
-      "y": 11,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -84,7 +84,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(NINCADA)",
       "x": 25,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -98,7 +98,7 @@
       "local_id": "HOENN1_4_ITEM",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
-      "y": 9,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -112,7 +112,7 @@
       "local_id": "HOENN1_5_ITEM",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -125,7 +125,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
       "x": 9,
-      "y": 3,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -134,31 +134,66 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Hoenn1_6_EventScript_Rival",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KECLEON)",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_6_KecShop",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(KECLEON)",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_6_KecShop_Shiny",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 4,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_HOENN1_5",
       "dest_warp_id": "2"
     },
     {
       "x": 5,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_HOENN1_5",
       "dest_warp_id": "3"
     },
     {
       "x": 30,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_HOENN1_8",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hoenn1_6_KecShop_Sign"
+    }
+  ]
 }

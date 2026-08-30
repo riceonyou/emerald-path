@@ -10,7 +10,7 @@ script ANCIENT_REGIS_ONWARP {
     }
 
 script ANCIENT_REGIS_LOAD_REGIS{
-    switch (var(VAR_0x8001)) {
+    switch (var(VAR_0x8000)) {
         case 0:
             setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(REGIROCK))
         case 1:
@@ -24,7 +24,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     lockall
     faceplayer
     //GIVE ANCIENT REWARD
-    switch (var(VAR_0x8001)) {
+    switch (var(VAR_0x8000)) {
         case 0://Regirock
             msgbox("Boop beep boop. You have succesfully\ncompleted the first path. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a fossil pokemon.")
             waitmessage

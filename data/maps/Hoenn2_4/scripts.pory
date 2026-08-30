@@ -1,6 +1,18 @@
 mapscripts Hoenn2_4_MapScripts {
 }
 
+script Hoenn2_4_KecShop_Sign {
+    call(KecShop_Sign)
+}
+
+script Hoenn2_4_KecShop {
+    call(KecShop)
+}
+
+script Hoenn2_4_KecShop_Shiny {
+    call(KecShop_Shiny)
+}
+
 script Hoenn2_4_Azumarill{
 	trainerbattle_single(TRAINER_AZUMARILL, "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
@@ -49,18 +61,7 @@ script Hoenn2_4_Minun{
 }
 
 script Hoenn2_4_Rival{
-    switch (var(VAR_CURRENT_RIVAL)){
-        case 0:
-            trainerbattle_single(TRAINER_GROVYLE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
-            waitmessage
-            end
-        case 1:
-            trainerbattle_single(TRAINER_COMBUSKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
-            waitmessage
-            end
-    }
+    call(RivalFight2)
 }
 
 script Hoenn2_4_EventScript_BirchBag{

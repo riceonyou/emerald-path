@@ -2427,4 +2427,46 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Lengthens screen moves."),
         .aiRating = 6,
     },
+    [ABILITY_PIERCING_DRILL] =
+    {
+        .name = _("Piercing Drill"),
+        .description = COMPOUND_STRING("Contact evades protection."),
+        .aiRating = 6,
+    },
+    [ABILITY_DRAGONIZE] =
+    {
+        .name = _("Dragonize"),
+        .description = COMPOUND_STRING("Turn normal moves dragon type."),
+        .aiRating = 6,
+    },
+    [ABILITY_MEGA_SOL] =
+    {
+        .name = _("Mega Sol"),
+        .description = COMPOUND_STRING("Moves act as if sunny"),
+        .aiRating = 6,
+    },
+    [ABILITY_SPICY_SPRAY] =
+    {
+        .name = _("Spicy Spray"),
+        .description = COMPOUND_STRING("Burns when damaged."),
+        .aiRating = 6,
+    },
+    [ABILITY_FIRE_MANE] =
+    {
+        .name = _("Fire Mane"),
+        .description = COMPOUND_STRING("Powers up Fire moves."),
+        .aiRating = 6,
+    },
+    [ABILITY_SHIELD_OF_LEGEND] =
+    {
+        .name = _("Shield of Legend"),
+        .description = COMPOUND_STRING("Halves damage at full HP."),
+        .aiRating = 6,
+    },
+    [ABILITY_HERD] =
+    {
+        .name = _("Herd"),
+        .description = COMPOUND_STRING("Get an extra mon when chosen."),
+        .aiRating = 6,
+    },
 };

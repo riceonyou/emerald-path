@@ -2472,10 +2472,10 @@
 #define FLAG_ITEM_DRAGONINITE                     0
 #define FLAG_ITEM_MEGANIUMITE                  0
 
-#define FLAG_DEFEATED_PATH_1_LEADER                                  0
-#define FLAG_DEFEATED_PATH_2_LEADER                                   0
-#define FLAG_DEFEATED_PATH_3_LEADER                                  0
-#define FLAG_DEFEATED_PATH_4_LEADER                                 0
+#define FLAG_DEFEATED_PATH_LEADER                                  0
+#define FLAG_DEFEATED_PATH_LEADER                                   0
+#define FLAG_DEFEATED_PATH_LEADER                                  0
+#define FLAG_DEFEATED_PATH_LEADER                                 0
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0
 #define FLAG_DEFEATED_FORTREE_GYM                                   0
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0
@@ -2523,7 +2523,7 @@
 #define FLAG_ITEM_GLIMMORANITE                           0
 #define FLAG_NEW_MEGA_BUYABLE                           0
 #define FLAG_PHIONE_EGG_HATCHED              0
-#define FLAG_SYS_MIX_RECORD                         0
+#define FLAG_IS_STARTER_SHINY                         0
 #define FLAG_SYS_CAVE_SHIP                          0 // Unused Flag, leftover from R/S debug, presumably used by Emerald's debug too
 #define FLAG_SYS_CAVE_WONDER                        0 // Unused Flag, same as above
 #define FLAG_SYS_CAVE_BATTLE                        0 // Unused Flag, same as above

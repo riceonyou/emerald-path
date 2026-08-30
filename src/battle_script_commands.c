@@ -75,6 +75,7 @@
 #include "follower_npc.h"
 #include "load_save.h"
 #include "test/test_runner_battle.h"
+#include "coins.h"
 
 // Helper for accessing command arguments and advancing gBattlescriptCurrInstr.
 //
@@ -6260,15 +6261,15 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         const struct TrainerMon *party = GetTrainerPartyFromId(trainerId);
         if (party == NULL)
             return 20;
-        lastMonLevel = party[GetTrainerPartySizeFromId(trainerId) - 1].lvl;
+        //lastMonLevel = party[GetTrainerPartySizeFromId(trainerId) - 1].lvl;
         trainerMoney = gTrainerClasses[GetTrainerClassFromId(trainerId)].money ?: 1;
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            moneyReward = 100 * VarGet(VAR_CURRENT_ACT) * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = trainerMoney;
         else if (IsDoubleBattle())
-            moneyReward = 100 * VarGet(VAR_CURRENT_ACT) * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = trainerMoney;
         else
-            moneyReward = 100 * VarGet(VAR_CURRENT_ACT) * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = trainerMoney;
     }
 
     return moneyReward;
@@ -6284,9 +6285,18 @@ static void Cmd_getmoneyreward(void)
     if (gBattleOutcome == B_OUTCOME_WON)
     {
         money = GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentA);
-        if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
+
+        u32 coinsamount;
+        coinsamount = (money * (90 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/2)) / 30;
+        AddCoins(coinsamount);
+        
+        money = (money * (80 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/10) + 10);
+
+        // if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
+        //     money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
         AddMoney(&gSaveBlock1Ptr->money, money);
+
+        
     }
     else
     {
