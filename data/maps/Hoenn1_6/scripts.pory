@@ -19,8 +19,8 @@ script Hoenn1_6_EventScript_Rival{
 
 script Hoenn1_6_EventScript_Shroomish{
  
-	trainerbattle_single(TRAINER_SHROOMISH, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SHROOMISH, format("Hey."), format("Ggs."))
+	msgbox(format("Oi. Did you just make fun of my monobrow?. How dare you >:("), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
@@ -28,8 +28,8 @@ script Hoenn1_6_EventScript_Shroomish{
 
 script Hoenn1_6_EventScript_Surskit{
  
-	trainerbattle_single(TRAINER_SURSKIT, "Hola. Me llamo Lotad.", "He perdido.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SURSKIT, format("Did you know I secret oil from my feet to skate on water?"), format("Did you know that I am known to compete with Dewpider over food?"))
+	msgbox(format("Did you know the antenna on my head secretes a thick, sugary syrup or a sweet scent?\n- Bulbapedia"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
@@ -59,8 +59,8 @@ script Hoenn1_8_EventScript_BirchBag{
 
 script Hoenn1_7_EventScript_Skitty{
  
-	trainerbattle_single(TRAINER_SKITTY, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SKITTY, format("My favourite football player of all time? Personally it's Jay-Jay Okocha. He was so good that they named him twice."), format("I wish they would name me twice too."))
+	msgbox(format("Hmm......\p If they did name me twice I would be called Skit-Skit Ty. How does that sound?"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
@@ -68,8 +68,8 @@ script Hoenn1_7_EventScript_Skitty{
 
 script Hoenn1_7_EventScript_Nincada{
  
-	trainerbattle_single(TRAINER_NINCADA, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_NINCADA, format("My favourite football player of all time? I don't really watch soccer but Erling Haaland I guess. I saw some reels of him and I love his smooth, voluptuous hair."), format("What? What do you mean he shaved his head?"))
+	msgbox(format("That's a shame. I'd like to have hair like him."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  

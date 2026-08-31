@@ -17951,6 +17951,71 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_OvalCharm,
         .iconPalette = gItemIconPalette_OvalCharm,
     },
+
+    [ITEM_SUPER_SHINY_CHARM] =
+    {
+        .name = ITEM_NAME("Super Shiny Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "All your current pokemon,\n"
+            "and future pokemon become\n"
+            "shiny."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_POCKET_BIRCH_BAG] =
+    {
+        .name = ITEM_NAME("Pocket Birch Bag"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Open a Birch Bag."),
+        .pocket = POCKET_ITEMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_MINTY_CHARM] =
+    {
+        .name = ITEM_NAME("Minty Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Gain a random mint at\n"
+            "the start of each path."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_BERRY_PACK_CHARM] =
+    {
+        .name = ITEM_NAME("Berry Pack Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Gain an oran berry,\n"
+            "a sitrus berry, a lum\n"
+            "berry and a berry juice."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
 };
 
 #undef ITEM_NAME

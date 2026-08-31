@@ -597,8 +597,8 @@ static void (*const sMovementStatusHandler[])(struct LinkPlayerObjectEvent *, st
     MovementStatusHandler_TryAdvanceScript,
 };
 
-// Actual Game useful macros for the game loop to put in specials
-
+//-----------------------Actual Game useful macros for the game loop to put in specials or stuff---------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------
 void DetermineRival(void)
 {
     u8 rand = Random() % 2;
@@ -755,6 +755,78 @@ static void SetOwnedMegaStoneBuyableFlags(void)
             FlagSet(FLAG_NEW_MEGA_BUYABLE);
     }
 }
+
+static const u16 CommonItems[] =
+{
+    ITEM_ORAN_BERRY,
+    ITEM_ORAN_BERRY,
+    ITEM_ORAN_BERRY,
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_CHERI_BERRY,
+    ITEM_CHESTO_BERRY,
+    ITEM_PECHA_BERRY,
+    ITEM_RAWST_BERRY,
+    ITEM_ASPEAR_BERRY,
+    ITEM_PERSIM_BERRY,
+};
+
+static const u16 UncommonItems[] =
+{
+    ITEM_RARE_CANDY,
+
+    ITEM_QUICK_CLAW,
+    ITEM_KINGS_ROCK,
+    ITEM_EXPERT_BELT,
+    ITEM_LOADED_DICE,
+    ITEM_BRIGHT_POWDER,
+    ITEM_SILK_SCARF,
+
+    ITEM_BLACK_BELT,
+    ITEM_BLACK_GLASSES,
+    ITEM_CHARCOAL,
+    ITEM_MYSTIC_WATER,
+    ITEM_MIRACLE_SEED,
+    ITEM_MAGNET,
+    ITEM_NEVER_MELT_ICE,
+    ITEM_TWISTED_SPOON,
+    ITEM_POISON_BARB,
+    ITEM_SOFT_SAND,
+    ITEM_SHARP_BEAK,
+    ITEM_SPELL_TAG,
+    ITEM_DRAGON_FANG,
+    ITEM_METAL_COAT,
+    ITEM_FAIRY_FEATHER,
+};
+
+static const u16 RareItems[] =
+{
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_FULL_RESTORE,
+};
+
+void BufferCommonItem(void)
+{
+    u16 randomItem = CommonItems[Random() % ARRAY_COUNT(CommonItems)];
+    VarSet(VAR_RESULT, randomItem);
+}
+
+void BufferUncommonItem(void)
+{
+    u16 randomItem = UncommonItems[Random() % ARRAY_COUNT(UncommonItems)];
+    VarSet(VAR_RESULT, randomItem);
+}
+
+void BufferRareItem(void)
+{
+    u16 randomItem = RareItems[Random() % ARRAY_COUNT(RareItems)];
+    VarSet(VAR_RESULT, randomItem);
+}
+
+
 
 void WarpToNextAncient(void)
 {

@@ -1342,7 +1342,7 @@ static void Task_Scene1_PanUp(u8 taskId)
 static void Task_Scene1_End(u8 taskId)
 {
     if (gIntroFrameCounter > TIMER_START_SCENE_2)
-        gTasks[taskId].func = Task_Scene2_Load;
+        gTasks[taskId].func = Task_EndIntroMovie;
 }
 
 static void Task_Scene2_Load(u8 taskId)
@@ -2592,7 +2592,7 @@ static void Task_Scene3_Rayquaza(u8 taskId)
 static void Task_EndIntroMovie(u8 taskId)
 {
     DestroyTask(taskId);
-    SetMainCallback2(MainCB2_EndIntro);
+    SetMainCallback2(CB2_InitTitleScreen);
 }
 
 static void Task_RayquazaAttack(u8 taskId)

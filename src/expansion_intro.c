@@ -14,6 +14,7 @@
 #include "expansion_intro.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "title_screen.h"
 
 #if EXPANSION_INTRO == TRUE
 
@@ -283,7 +284,7 @@ void Task_HandleExpansionIntro(u8 taskId)
             else
             {
                 CreateTask(Task_Scene1_Load, 0);
-                SetMainCallback2(MainCB2_Intro);
+                SetMainCallback2(CB2_InitTitleScreen);
             }
         }
         break;

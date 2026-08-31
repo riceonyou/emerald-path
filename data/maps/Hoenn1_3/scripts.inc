@@ -64,9 +64,9 @@ Hoenn1_4_EventScript_Wingull::
 
 Hoenn1_4_EventScript_Seedot::
 # 66 "data/maps/Hoenn1_3/scripts.pory"
-	trainerbattle_single TRAINER_SEEDOT, Hoenn1_4_EventScript_Wingull_Text_0, Hoenn1_4_EventScript_Wingull_Text_1
+	trainerbattle_single TRAINER_SEEDOT, Hoenn1_4_EventScript_Seedot_Text_0, Hoenn1_4_EventScript_Seedot_Text_1
 # 67 "data/maps/Hoenn1_3/scripts.pory"
-	msgbox Hoenn1_4_EventScript_Wingull_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_4_EventScript_Seedot_Text_2, MSGBOX_AUTOCLOSE
 # 68 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
 	end
@@ -142,7 +142,7 @@ Hoenn1_3_EventScript_Lotad_Text_1:
 
 Hoenn1_3_EventScript_Lotad_Text_2:
 # 28 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Que pasa amigo.$"
+	.string "Que pasa amigo. No hablo English,\nlo siento.$"
 
 Hoenn1_BirchBag_4_Text_0:
 # 47 "data/maps/Hoenn1_3/scripts.pory"
@@ -154,11 +154,29 @@ Hoenn1_4_EventScript_Wingull_Text_0:
 
 Hoenn1_4_EventScript_Wingull_Text_1:
 # 57 "data/maps/Hoenn1_3/scripts.pory"
-	.string "More like losegull. Squawk :($"
+	.string "They should call me losegull, not\nwingull. Squawk :($"
 
 Hoenn1_4_EventScript_Wingull_Text_2:
 # 58 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Check out this cool flying trick!$"
+	.string "Did you know you can nickname pokemon\n"
+	.string "by pressing A on the summary page? I'm\l"
+	.string "nicknaming myself Losegull right now.$"
+
+Hoenn1_4_EventScript_Seedot_Text_0:
+# 66 "data/maps/Hoenn1_3/scripts.pory"
+	.string "Hi. I'm about to sow some of my seed\n"
+	.string "inside of you >:)\p"
+	.string "...Just kidding. I'm going to sow it on\n"
+	.string "the ground. Because of my seed sower\l"
+	.string "ability.$"
+
+Hoenn1_4_EventScript_Seedot_Text_1:
+# 66 "data/maps/Hoenn1_3/scripts.pory"
+	.string "Sorry for that joke earlier...$"
+
+Hoenn1_4_EventScript_Seedot_Text_2:
+# 67 "data/maps/Hoenn1_3/scripts.pory"
+	.string "I wonder what noise an acorn makes...$"
 
 Poochyena_Intro::
 # 13 "data/maps/Hoenn1_3/scripts.pory"
@@ -170,4 +188,4 @@ Poochyena_Outro::
 
 PostBattle_Poochyena::
 # 21 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Yena Poo Poo.$"
+	.string "Yena Poo Poo.\p...\p......\pI can speak English by the way.$"

@@ -82,6 +82,9 @@ extern struct TimeBlendSettings gTimeBlend;
 
 extern const struct UCoords32 gDirectionToVectors[];
 
+void BufferCommonItem(void);
+void BufferUncommonItem(void);
+void BufferRareItem(void);
 void GiveBufferedMon(void);
 void ClearAllPokemonOnWhiteOut(void);
 void GiveSavedStarter(void);

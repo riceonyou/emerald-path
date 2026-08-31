@@ -3,7 +3,7 @@ mapscripts Hoenn1_5_MapScripts {
 
 script Hoenn1_5_EventScript_Oddish{
  
-	trainerbattle_single(TRAINER_ODDISH, "Hello.", "Goodbye.")
+	trainerbattle_single(TRAINER_ODDISH, format("I don't know what to write here to be honest. The maker of this mod doesn't know how to write and can't think of anything."), format("If someone wants to help me write dialogue please contact me..."))
 	msgbox("Hello again.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -12,8 +12,8 @@ script Hoenn1_5_EventScript_Oddish{
 
 script Hoenn1_5_EventScript_Wurmple{
  
-	trainerbattle_single(TRAINER_WURMPLE, "I'm just a wurm.", "That was a good battle.")
-	msgbox("Don't talk to me right now.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_WURMPLE, "I'm just a wurm.", "That was a good battle... I think.")
+	msgbox(format("Don't talk to me right now. I'm moping over my loss."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
@@ -21,8 +21,8 @@ script Hoenn1_5_EventScript_Wurmple{
 
 script Hoenn1_5_EventScript_Slakoth{
  
-	trainerbattle_single(TRAINER_SLAKOTH, "I'm just a wurm.", "That was a good battle.")
-	msgbox("Don't talk to me right now.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SLAKOTH, format("Hey. I love gudetama. He just like me fr. I wish I could sleep all day with him"), "Back to sleeping. Snork mimimi.")
+	msgbox("zzzZZZ...", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  

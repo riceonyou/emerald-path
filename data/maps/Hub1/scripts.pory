@@ -25,6 +25,21 @@ script AfterWarpIntoNewAct{
 	
 }
 
+script GiveCommonItem{
+	special(BufferCommonItem)
+	giveitem(VAR_RESULT)
+}
+
+script GiveUncommonItem{
+	special(BufferUncommonItem)
+	giveitem(VAR_RESULT)
+}
+
+script GiveRareItem{
+	special(BufferRareItem)
+	giveitem(VAR_RESULT)
+}
+
 script AbraTeleport{
 	lockall
 	if(!flag(FLAG_DEFEATED_PATH_LEADER)){

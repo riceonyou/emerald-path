@@ -24,9 +24,9 @@ Hoenn1_5_EventScript_Wurmple::
 
 Hoenn1_5_EventScript_Slakoth::
 # 24 "data/maps/Hoenn1_5/scripts.pory"
-	trainerbattle_single TRAINER_SLAKOTH, Hoenn1_5_EventScript_Wurmple_Text_0, Hoenn1_5_EventScript_Wurmple_Text_1
+	trainerbattle_single TRAINER_SLAKOTH, Hoenn1_5_EventScript_Slakoth_Text_0, Hoenn1_5_EventScript_Slakoth_Text_1
 # 25 "data/maps/Hoenn1_5/scripts.pory"
-	msgbox Hoenn1_5_EventScript_Wurmple_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_5_EventScript_Slakoth_Text_2, MSGBOX_AUTOCLOSE
 # 26 "data/maps/Hoenn1_5/scripts.pory"
 	waitmessage
 	end
@@ -64,11 +64,15 @@ Hoenn1_7_EventScript_BirchBag::
 
 Hoenn1_5_EventScript_Oddish_Text_0:
 # 6 "data/maps/Hoenn1_5/scripts.pory"
-	.string "Hello.$"
+	.string "I don't know what to write here to be\n"
+	.string "honest. The maker of this mod doesn't\l"
+	.string "know how to write and can't think of\l"
+	.string "anything.$"
 
 Hoenn1_5_EventScript_Oddish_Text_1:
 # 6 "data/maps/Hoenn1_5/scripts.pory"
-	.string "Goodbye.$"
+	.string "If someone wants to help me write\n"
+	.string "dialogue please contact me...$"
 
 Hoenn1_5_EventScript_Oddish_Text_2:
 # 7 "data/maps/Hoenn1_5/scripts.pory"
@@ -80,11 +84,25 @@ Hoenn1_5_EventScript_Wurmple_Text_0:
 
 Hoenn1_5_EventScript_Wurmple_Text_1:
 # 15 "data/maps/Hoenn1_5/scripts.pory"
-	.string "That was a good battle.$"
+	.string "That was a good battle... I think.$"
 
 Hoenn1_5_EventScript_Wurmple_Text_2:
 # 16 "data/maps/Hoenn1_5/scripts.pory"
-	.string "Don't talk to me right now.$"
+	.string "Don't talk to me right now. I'm moping\n"
+	.string "over my loss.$"
+
+Hoenn1_5_EventScript_Slakoth_Text_0:
+# 24 "data/maps/Hoenn1_5/scripts.pory"
+	.string "Hey. I love gudetama. He just like me fr.\n"
+	.string "I wish I could sleep all day with him$"
+
+Hoenn1_5_EventScript_Slakoth_Text_1:
+# 24 "data/maps/Hoenn1_5/scripts.pory"
+	.string "Back to sleeping. Snork mimimi.$"
+
+Hoenn1_5_EventScript_Slakoth_Text_2:
+# 25 "data/maps/Hoenn1_5/scripts.pory"
+	.string "zzzZZZ...$"
 
 Hoenn1_7_EventScript_BirchBag_Text_0:
 # 45 "data/maps/Hoenn1_5/scripts.pory"

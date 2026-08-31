@@ -651,3 +651,6 @@ gSpecials::
 	def_special ClearAllPokemonOnWhiteOut
 	def_special ClearMoney
 	def_special GiveBufferedMon
+	def_special BufferCommonItem
+	def_special BufferUncommonItem
+	def_special BufferRareItem
