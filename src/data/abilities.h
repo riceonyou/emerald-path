@@ -354,7 +354,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PRESSURE] =
     {
         .name = _("Pressure"),
-        .description = COMPOUND_STRING("Raises foe's PP usage."),
+        .description = COMPOUND_STRING("Removes foe's stat buffs."),
         .aiRating = 5,
     },
 
