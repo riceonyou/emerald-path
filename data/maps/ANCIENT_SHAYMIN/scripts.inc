@@ -37,30 +37,28 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin::
 # 24 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitstate
 # 25 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	playfanfare MUS_EVOLVED
-# 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1
-# 27 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2
-# 28 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 27 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	giveitem ITEM_TM_BULLET_SEED, 1
+# 28 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	waitmessage
 # 29 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	waitmessage
-# 30 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3
-# 34 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 33 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	giveitem ITEM_ORAN_CHARM, 1
-# 35 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 34 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitmessage
-# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 35 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4
-# 39 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_5
-# 44 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 43 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	special WarpToNextAct
-# 45 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 44 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	releaseall
 	return
 
@@ -74,26 +72,26 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_0:
 	.string "Please take one of these pokemon!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1:
-# 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 25 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2:
-# 27 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "And a Bullet Seed TM!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3:
-# 30 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 29 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "And an Oran Charm! With this charm,\n"
 	.string "everytime you enter a battle, your\l"
 	.string "pokemon without items will\l"
 	.string "automatically be given an oran berry!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4:
-# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "The level cap has been raised to 30$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_5:
-# 39 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "I hope my gifts will help you out.\p"
 	.string "Now time to get you to the next\n"
 	.string "path.$"

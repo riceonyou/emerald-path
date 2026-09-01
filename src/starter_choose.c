@@ -34,6 +34,7 @@
 #include "string_util.h"
 #include "data/choose_random_pool.h"
 #include <stdbool.h>
+#include "item_menu.h"
 
 
 #define STARTER_MON_COUNT   3
@@ -66,6 +67,7 @@ static u8 CreatePokemonFrontSpriteShiny(u16 species, u8 x, u8 y);
 static void CreateSparkleOnPokeball(u8 x, u8 y);
 static void DestroyPokeballSparkles(void);
 static void Task_WaitForStarterExitFade(u8 taskId);
+static void CB2_GiveBirchBagPokemonNoBattle(void);
 
 static u16 sStarterLabelWindowId;
 
@@ -699,7 +701,7 @@ static void Task_WaitForStarterExitFade(u8 taskId)
     if (!gPaletteFade.active)
     {
         ResetAllPicSprites();
-        SetMainCallback2(gMain.savedCallback);
+        SetMainCallback2(CB2_GiveBirchBagPokemonNoBattle);
         DestroyTask(taskId);
     }
 }
@@ -945,7 +947,7 @@ static u16 SelectPokemonFromWeightedPoolExclude(const struct BirchBagWeightedCho
 
 
 
-static void PrepareBirchBagWeightedStarterChoices(void)
+void PrepareBirchBagWeightedStarterChoices(void)
 {
     u8 i;
     u16 excluded[STARTER_MON_COUNT];
@@ -1019,14 +1021,14 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
     
     ScriptContext_Enable();
     StringCopy(gStringVar1, gSpeciesInfo[chosenSpecies].speciesName);
-    SetMainCallback2(CB2_ReturnToField);
+    PlayFanfare(MUS_EVOLVED);
+    SetMainCallback2(gMain.savedCallback);
 }
 
 // Trigger weighted Pokémon selection for Birch's bag
 void ChooseBirchBagPokemonWeighted(void)
 {
     PrepareBirchBagWeightedStarterChoices();
-    gMain.savedCallback = CB2_GiveBirchBagPokemonNoBattle;
+    gMain.savedCallback = CB2_ReturnToField;
     SetMainCallback2(CB2_ChooseStarter);
 }
-

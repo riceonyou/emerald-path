@@ -262,7 +262,7 @@
       "x": 22,
       "y": 34,
       "elevation": 3,
-      "item": "ITEM_PEARL",
+      "item": "ITEM_SPDEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_FOUR_ISLAND_PEARL",
       "quantity": 1,
       "underfoot": false

@@ -2981,7 +2981,7 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
 
 static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 {
-    u8 i, j;
+    u8 i;
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
@@ -6373,6 +6373,107 @@ void ItemUseCB_DynamaxCandy(u8 taskId, TaskFunc task)
 #undef tState
 #undef tMonId
 #undef tDynamaxLevel
+#undef tOldFunc
+
+#define tState        data[0]
+#define tMonId        data[1]
+#define tStat         data[2]
+#define tGold         data[3]
+#define tOldFunc      4
+
+static void Task_IVBottleCap(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    struct Pokemon *mon = &gPlayerParty[tMonId];
+    u8 ivIndex = tStat;
+    u8 currentIv = GetMonData(mon, MON_DATA_HP_IV + ivIndex);
+    u8 newIv = currentIv;
+
+    switch (tState)
+    {
+    case 0:
+        if (tGold)
+            newIv = MAX_PER_STAT_IVS;
+        else if (currentIv < MAX_PER_STAT_IVS)
+            newIv = currentIv + 10;
+
+        if (newIv > MAX_PER_STAT_IVS)
+            newIv = MAX_PER_STAT_IVS;
+
+        if (newIv == currentIv)
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+            return;
+        }
+
+        gPartyMenuUseExitCallback = TRUE;
+        SetMonData(mon, MON_DATA_HP_IV + ivIndex, &newIv);
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+        GetMonNickname(mon, gStringVar1);
+        switch (ivIndex)
+        {
+        case STAT_HP:
+            StringCopy(gStringVar2, gText_HP3);
+            break;
+        case STAT_ATK:
+            StringCopy(gStringVar2, gText_Attack3);
+            break;
+        case STAT_DEF:
+            StringCopy(gStringVar2, gText_Defense3);
+            break;
+        case STAT_SPEED:
+            StringCopy(gStringVar2, gText_Speed2);
+            break;
+        case STAT_SPATK:
+            StringCopy(gStringVar2, gText_SpAtk3);
+            break;
+        case STAT_SPDEF:
+            StringCopy(gStringVar2, gText_SpDef3);
+            break;
+        default:
+            gStringVar2[0] = 0;
+            break;
+        }
+        PlaySE(SE_USE_ITEM);
+        if (tGold){
+            static const u8 sText_GoldCapdoneText[] = _("{STR_VAR_1}'s {STR_VAR_2} IV was set to 31.{PAUSE_UNTIL_PRESS}");
+            StringExpandPlaceholders(gStringVar4, sText_GoldCapdoneText);
+        }
+        else{
+            static const u8 sText_CapdoneText[] = _("{STR_VAR_1}'s {STR_VAR_2} IV increased by 10.{PAUSE_UNTIL_PRESS}");
+            StringExpandPlaceholders(gStringVar4, sText_CapdoneText);
+        }
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 1:
+        if (!IsPartyMenuTextPrinterActive())
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+        break;
+    }
+}
+
+void ItemUseCB_IVBottleCap(u8 taskId, TaskFunc task)
+{
+    s16 *data = gTasks[taskId].data;
+
+    tState = 0;
+    tMonId = gPartyMenu.slotId;
+    tStat = GetItemSecondaryId(gSpecialVar_ItemId);
+    tGold = (gSpecialVar_ItemId == ITEM_HP_GOLD_BOTTLE_CAP || gSpecialVar_ItemId == ITEM_ATK_GOLD_BOTTLE_CAP || gSpecialVar_ItemId == ITEM_DEF_GOLD_BOTTLE_CAP || gSpecialVar_ItemId == ITEM_SPEED_GOLD_BOTTLE_CAP || gSpecialVar_ItemId == ITEM_SPATK_GOLD_BOTTLE_CAP || gSpecialVar_ItemId == ITEM_SPDEF_GOLD_BOTTLE_CAP);
+    SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
+    gTasks[taskId].func = Task_IVBottleCap;
+}
+
+#undef tState
+#undef tMonId
+#undef tStat
+#undef tGold
 #undef tOldFunc
 
 #define tUsedOnSlot   data[0]

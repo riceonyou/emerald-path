@@ -621,7 +621,7 @@ SINGLE_BATTLE_TEST("Dazzling, Queenly Majesty and Armor Tail on opponents block 
         ASSUME(GetMoveTarget(MOVE_TEATIME) == TARGET_ALL_BATTLERS);
         ASSUME(GetItemHoldEffect(ITEM_ORAN_BERRY) == HOLD_EFFECT_RESTORE_HP);
         PLAYER(SPECIES_MURKROW) { Ability(ABILITY_PRANKSTER); Item(ITEM_ORAN_BERRY); HP(75); MaxHP(100); }
-        OPPONENT(species) { Ability(ability); Items(ITEM_NUGGET, ITEM_ORAN_BERRY); HP(75); MaxHP(100); }
+        OPPONENT(species) { Ability(ability); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_ORAN_BERRY); HP(75); MaxHP(100); }
     } WHEN {
         TURN { MOVE(player, MOVE_TEATIME); }
     } SCENE {
@@ -647,7 +647,7 @@ DOUBLE_BATTLE_TEST("Instruct-called moves keep their priority, which is consider
         ASSUME(GetItemHoldEffect(ITEM_EJECT_BUTTON) == HOLD_EFFECT_EJECT_BUTTON);
         PLAYER(SPECIES_WOBBUFFET) { Speed(10); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(30); }
-        OPPONENT(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_EJECT_BUTTON); Speed(20); }
+        OPPONENT(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_EJECT_BUTTON); Speed(20); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(5); }
         OPPONENT(species) { Ability(ability); Speed(15); }
     } WHEN {

@@ -20,20 +20,18 @@ ANCIENT_GROUDON_EventScript_Groudon::
 # 15 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitstate
 # 16 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	playfanfare MUS_EVOLVED
-# 17 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_1
-# 18 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 17 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitmessage
-# 20 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 19 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 21 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 20 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_2
-# 23 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_3
-# 25 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 24 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	special WarpToNextAct
-# 26 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 25 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	releaseall
 	return
 
@@ -43,13 +41,13 @@ ANCIENT_GROUDON_EventScript_Groudon_Text_0:
 	.string "Take a pokemon with you!$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_1:
-# 17 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 16 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_2:
-# 21 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 20 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "The level cap has been raised to 42$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_3:
-# 23 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"

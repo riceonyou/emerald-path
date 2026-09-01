@@ -1960,7 +1960,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PASTEL_VEIL] =
     {
         .name = _("Pastel Veil"),
-        .description = COMPOUND_STRING("Prevents non-volatile status."),
+        .description = COMPOUND_STRING("Prevents status conditions."),
         .aiRating = 4,
         .breakable = TRUE,
     },

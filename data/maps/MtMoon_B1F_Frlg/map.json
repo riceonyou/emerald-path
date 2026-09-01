@@ -81,7 +81,7 @@
       "x": 46,
       "y": 2,
       "elevation": 0,
-      "item": "ITEM_TINY_MUSHROOM",
+      "item": "ITEM_DEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM",
       "quantity": 1,
       "underfoot": false
@@ -91,7 +91,7 @@
       "x": 26,
       "y": 2,
       "elevation": 0,
-      "item": "ITEM_TINY_MUSHROOM",
+      "item": "ITEM_DEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_2",
       "quantity": 1,
       "underfoot": false
@@ -101,7 +101,7 @@
       "x": 39,
       "y": 34,
       "elevation": 0,
-      "item": "ITEM_TINY_MUSHROOM",
+      "item": "ITEM_DEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3",
       "quantity": 1,
       "underfoot": false
@@ -111,7 +111,7 @@
       "x": 24,
       "y": 35,
       "elevation": 0,
-      "item": "ITEM_BIG_MUSHROOM",
+      "item": "ITEM_SPEED_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM",
       "quantity": 1,
       "underfoot": false
@@ -121,7 +121,7 @@
       "x": 6,
       "y": 12,
       "elevation": 0,
-      "item": "ITEM_BIG_MUSHROOM",
+      "item": "ITEM_SPEED_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_2",
       "quantity": 1,
       "underfoot": false
@@ -131,7 +131,7 @@
       "x": 25,
       "y": 34,
       "elevation": 0,
-      "item": "ITEM_BIG_MUSHROOM",
+      "item": "ITEM_SPEED_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3",
       "quantity": 1,
       "underfoot": false

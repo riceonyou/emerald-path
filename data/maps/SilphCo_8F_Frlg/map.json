@@ -191,7 +191,7 @@
       "x": 29,
       "y": 10,
       "elevation": 0,
-      "item": "ITEM_NUGGET",
+      "item": "ITEM_HP_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_SILPH_CO_8F_NUGGET",
       "quantity": 1,
       "underfoot": false

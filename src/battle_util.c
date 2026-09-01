@@ -4407,6 +4407,11 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             burnAbility = ABILITY_FLAME_BODY;
             tryBurn = TRUE;
         }
+        if (SearchTraits(battlerTraits, ABILITY_SPICY_SPRAY))
+        {
+            burnAbility = ABILITY_SPICY_SPRAY;
+            tryBurn = TRUE;
+        }
         if (SearchTraits(battlerTraits, ABILITY_POISON_POINT)
         && (GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_4 ? RandomPercentage(RNG_POISON_POINT, 30) : RandomChance(RNG_POISON_POINT, 1, 3)))
         {
@@ -4452,7 +4457,8 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
          && !gBattleStruct->unableToUseMove
          && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
          && CanBeBurned(gBattlerTarget, gBattlerAttacker)
-         && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, move))
+         && (burnAbility == ABILITY_SPICY_SPRAY
+            || !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, move)))
         {
             gEffectBattler = gBattlerAttacker;
             gBattleScripting.battler = gBattlerTarget;

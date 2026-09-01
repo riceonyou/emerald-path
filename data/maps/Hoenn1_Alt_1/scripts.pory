@@ -17,3 +17,19 @@ script Hoenn1_Alt_1_EventScript_Boat{
     end
  
 }
+
+script Hoenn1_Alt_1_Sign {
+    lockall
+
+    msgbox("Talk to the boat to progress!}")
+    waitmessage
+
+    releaseall
+}
+
+script Hoenn1_Alt_1_EventScript_Rattata{
+	trainerbattle_single(TRAINER_RATTATA, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

@@ -333,7 +333,7 @@ WILD_BATTLE_TEST("Multi - Ball Fetch follows Item Categorization")
 {
     enum Item item;
     PARAMETRIZE {item = ITEM_NONE; }
-    PARAMETRIZE {item = ITEM_NUGGET; }
+    PARAMETRIZE {item = ITEM_HP_GOLD_BOTTLE_CAP; }
 
     GIVEN {
         PLAYER(SPECIES_YAMPER) { Ability(ABILITY_BALL_FETCH); Items(item); }

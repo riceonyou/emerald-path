@@ -155,7 +155,7 @@ PokemonTower_4F_EventScript_ItemGreatBall::
 	end
 
 PokemonTower_5F_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_HP_GOLD_BOTTLE_CAP
 	end
 
 PokemonTower_6F_EventScript_ItemRareCandy::
@@ -179,7 +179,7 @@ Route15_EventScript_ItemTM18::
 	end
 
 SafariZone_Center_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_HP_GOLD_BOTTLE_CAP
 	end
 
 SafariZone_East_EventScript_ItemMaxPotion::
@@ -371,7 +371,7 @@ CeruleanCave_1F_EventScript_ItemMaxElixir::
 	end
 
 CeruleanCave_1F_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_HP_GOLD_BOTTLE_CAP
 	end
 
 CeruleanCave_1F_EventScript_ItemFullRestore::
@@ -435,7 +435,7 @@ RockTunnel_1F_EventScript_ItemRepel::
 	end
 
 RockTunnel_1F_EventScript_ItemPearl::
-	finditem ITEM_PEARL
+	finditem ITEM_SPDEF_GOLD_BOTTLE_CAP
 	end
 
 RockTunnel_1F_EventScript_ItemEscapeRope::
@@ -511,7 +511,7 @@ SeafoamIslands_B1F_EventScript_ItemRevive::
 	end
 
 SeafoamIslands_B2F_EventScript_ItemBigPearl::
-	finditem ITEM_BIG_PEARL
+	finditem ITEM_SPDEF_BOTTLE_CAP
 	end
 
 SeafoamIslands_B4F_EventScript_ItemUltraBall::
@@ -583,7 +583,7 @@ SevenIsland_SevaultCanyon_EventScript_ItemMaxElixir::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_HP_GOLD_BOTTLE_CAP
 	end
 
 ThreeIsland_BerryForest_EventScript_ItemMaxEther::
@@ -627,7 +627,7 @@ FourIsland_IcefallCave_B1F_EventScript_ItemNeverMeltIce::
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemBigPearl::
-	finditem ITEM_BIG_PEARL
+	finditem ITEM_SPDEF_BOTTLE_CAP
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemTM36::
@@ -635,7 +635,7 @@ FiveIsland_RocketWarehouse_EventScript_ItemTM36::
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemPearl::
-	finditem ITEM_PEARL
+	finditem ITEM_SPDEF_GOLD_BOTTLE_CAP
 	end
 
 FiveIsland_RocketWarehouse_EventScript_ItemUpGrade::

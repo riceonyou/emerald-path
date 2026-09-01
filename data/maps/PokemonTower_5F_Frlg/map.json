@@ -292,7 +292,7 @@
       "x": 7,
       "y": 3,
       "elevation": 3,
-      "item": "ITEM_BIG_MUSHROOM",
+      "item": "ITEM_SPEED_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_POKEMON_TOWER_5F_BIG_MUSHROOM",
       "quantity": 1,
       "underfoot": false

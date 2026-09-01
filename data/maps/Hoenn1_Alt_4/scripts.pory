@@ -1,0 +1,33 @@
+mapscripts Hoenn1_Alt_4_MapScripts {
+
+}
+
+script Hoenn1_Alt_4_KecShop_Sign {
+    call(KecShop_Sign)
+}
+
+script Hoenn1_Alt_4_KecShop {
+    call(KecShop)
+}
+
+script Hoenn1_Alt_4_KecShop_Shiny {
+    call(KecShop_Shiny)
+}
+
+script Hoenn1_Alt_4_EventScript_Rival{
+    call(RivalFight1)
+}
+
+script Hoenn1_Alt_4_EventScript_Trapinch{
+	trainerbattle_single(TRAINER_TRAPINCH, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_Alt_4_EventScript_Meditite{
+	trainerbattle_single(TRAINER_MEDITITE, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

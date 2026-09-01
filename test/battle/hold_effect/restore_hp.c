@@ -189,7 +189,7 @@ SINGLE_BATTLE_TEST("Sitrus Berry restores HP immediately after Leech Seed damage
     GIVEN {
         ASSUME(GetMoveEffect(MOVE_LEECH_SEED) == EFFECT_LEECH_SEED);
         ASSUME(gItemsInfo[ITEM_SITRUS_BERRY].holdEffect == HOLD_EFFECT_RESTORE_PCT_HP);
-        PLAYER(SPECIES_WOBBUFFET) { MaxHP(80); HP(41); Items(ITEM_NUGGET, ITEM_SITRUS_BERRY); }
+        PLAYER(SPECIES_WOBBUFFET) { MaxHP(80); HP(41); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_SITRUS_BERRY); }
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {
         TURN { MOVE(opponent, MOVE_LEECH_SEED); }

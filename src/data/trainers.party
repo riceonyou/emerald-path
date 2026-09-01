@@ -109,12 +109,11 @@ Level: 11
 - Quick Attack  
 - Sand Attack
 
-Maschiff   
+Solosis 
 Level: 10  
-- Snarl  
-- Tackle  
-- Bite  
-- Leer
+- Confusion
+- Rollout
+- Charm
 
 Houndour
 Level: 10
@@ -2280,135 +2279,7 @@ Level: 49
 - Dark Void
 - Nasty Plot
 
-
-=== TRAINER_RALTS ===
-Name: Ralts
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Cool
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
-
-Sableye
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Absol
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_AZURILL ===
-Name: GARRISON
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
-
-Sandslash
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CARVANHA ===
-Name: Carvanha
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
-
-Wingull
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Shroomish
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Marill
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Roselia
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Skitty
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Goldeen
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_BUDEW ===
-Name: Budew
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
-
-Pelipper
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Breloom
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Marill
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Roselia
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Delcatty
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Goldeen
-Level: 25
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_BARBOACH ===
-Name: Barboach
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
-
-Pelipper
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Breloom
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Marill
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Roselia
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Delcatty
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Goldeen
-Level: 28
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+//-------------------------HOENN1_ALT-------------------------------------------------------
 
 === TRAINER_RATTATA ===
 Name: Rattata
@@ -2419,42 +2290,130 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Pelipper
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Rattata
+Level: 10
+- Tackle
+- Tail Whip
 
-Breloom
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Skwovet
+Level: 10
+- Tackle
+- Tail Whip
 
-Azumarill
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+=== TRAINER_AZURILL ===
+Name: Azurill
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
 
-Roselia
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Azurill  
+Level: 11
+- Tickle  
+- Aqua Jet  
+- Draining Kiss  
 
-Delcatty
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Hoothoot  
+Level: 10
+- Peck 
+- Confusion
+- Echoed Voice
 
-Seaking
-Level: 31
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Maschiff   
+Level: 10  
+- Snarl  
+- Tackle  
+- Bite  
+- Leer
 
-=== TRAINER_VULPIX ===
-Name: Vulpix
+=== TRAINER_BUDEW ===
+Name: Budew
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
+
+Budew
+Level: 11  
+- Mega Drain  
+- Stun Spore  
+- Growth
+
+Wiglett
+Level: 11  
+- Aqua Jet  
+- Mud Slap
+- Wrap
+
+Gossifleur   
+Level: 10  
+- Rapid Spin
+- Razor Leaf 
+- Sing
+
+
+=== TRAINER_BARBOACH ===
+Name: Barboach
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
+
+Barboach   
+Level: 11  
+- Water Pulse
+- Mud Bomb
+- Magnitude
+
+Teddiursa  
+Level: 11  
+- Feint Attack
+- Baby-Doll Eyes
+- Cut
+
+Rufflet  
+Level: 10  
+- Wing Attack
+- Aerial Ace
+- Hone Claws
+- Fury Attack
+
+=== TRAINER_ARON ===
+Name: Aron
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
+AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
-Breloom
-Level: 27
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Aron 
+Level: 11  
+- Rock Tomb
+- Iron Head
+- Roar
+
+Spritzee 
+Level: 12  
+- Flail
+- Draining Kiss
+- Fairy Wind
+- Sweet Kiss
+
+Bramblin 
+Level: 11  
+- Infestation
+- Astonish
+- Mega Drain
+- Defense Curl
+
+
 
 === TRAINER_ZUBAT ===
 Name: Zubat
@@ -2465,30 +2424,25 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Seedot
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Zubat 
+Level: 12  
+- Poison Fang
+- Toxic
+- Gust
+- Bite
 
-Nuzleaf
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Ponyta-Galar
+Level: 11  
+- Fairy Wind
+- Psybeam
+- Stomp
+- Tail Whip
 
-Lombre
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-=== TRAINER_TRAPINCH ===
-Name: Trapinch
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Male
-Music: Cool
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices
-
-Cacturne
-Level: 39
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Buneary
+Level: 11  
+- Double Kick
+- Dizzy Punch
+- Endure
 
 === TRAINER_SPOINK ===
 Name: Spoink
@@ -2516,18 +2470,18 @@ Breloom
 Level: 34
 IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
-=== TRAINER_ARON ===
-Name: JACKSON
+=== TRAINER_TRAPINCH ===
+Name: Trapinch
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices
 
-Breloom
-Level: 37
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+Cacturne
+Level: 39
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MEDITITE ===
 Name: JACKSON
@@ -2546,9 +2500,66 @@ Breloom
 Level: 39
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-=== TRAINER_MAKUHITA ===
-Name: CATHERINE
+=== TRAINER_RALTS ===
+Name: Ralts
 Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
+
+Ralts
+Level: 12
+- Psybeam
+- Magical Leaf
+- Will O Wisp
+- Ice Punch
+
+Yungoos  
+Level: 11 
+- Fire Fang  
+- Bite  
+- Swagger  
+- Bulldoze
+
+Shellder  
+Level: 12  
+- Toxic  
+- Whirlpool  
+- Swift  
+- Shell Smash
+
+=== TRAINER_CARVANHA ===
+Name: Carvanha
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
+
+Wingull
+Level: 22
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+
+=== TRAINER_VULPIX ===
+Name: Vulpix
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
+
+Breloom
+Level: 27
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_MAKUHITA ===
+Name: Makuhita
+Class: Leader
 Pic: Substitute
 Gender: Female
 Music: Cool
@@ -5815,7 +5826,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Zigzagoon @ Nugget
+Zigzagoon
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5829,7 +5840,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Luvdisc @ Nugget
+Luvdisc
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Attract
@@ -5837,7 +5848,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Flail
 - Water Pulse
 
-Luvdisc @ Nugget
+Luvdisc
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Attract
@@ -5876,7 +5887,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Zigzagoon @ Nugget
+Zigzagoon
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
@@ -5892,7 +5903,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Seaking @ Nugget
+Seaking
 Level: 40
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -5906,7 +5917,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Roselia @ Nugget
+Roselia
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5920,7 +5931,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 27
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -5934,7 +5945,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 30
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
@@ -5948,7 +5959,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 33
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
@@ -5962,7 +5973,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 36
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Fury Swipes
@@ -6219,7 +6230,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Zigzagoon @ Nugget
+Zigzagoon
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6250,7 +6261,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Azumarill @ Nugget
+Azumarill
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6264,7 +6275,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6278,7 +6289,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6292,7 +6303,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6306,7 +6317,7 @@ Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Linoone @ Nugget
+Linoone
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Fury Swipes
@@ -11611,7 +11622,7 @@ Music: Rich
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Zigzagoon @ Nugget
+Zigzagoon
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11633,7 +11644,7 @@ Lotad
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zigzagoon @ Nugget
+Zigzagoon
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

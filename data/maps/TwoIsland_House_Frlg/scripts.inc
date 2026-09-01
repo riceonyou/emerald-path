@@ -19,9 +19,9 @@ TwoIsland_House_EventScript_MoveManiac::
 	end
 
 TwoIsland_House_EventScript_CheckPlayerHasMushrooms::
-	checkitem ITEM_BIG_MUSHROOM
+	checkitem ITEM_SPEED_GOLD_BOTTLE_CAP
 	call_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_SetHasBigMushroom
-	checkitem ITEM_TINY_MUSHROOM, 2
+	checkitem ITEM_DEF_GOLD_BOTTLE_CAP, 2
 	call_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_SetHasTinyMushrooms
 	goto_if_set HAS_BIG_MUSHROOM, TwoIsland_House_EventScript_CheckAlsoHasTinyMushrooms
 	goto_if_set HAS_TINY_MUSHROOMS, TwoIsland_House_EventScript_CheckAlsoHasBigMushroom
@@ -66,7 +66,7 @@ TwoIsland_House_EventScript_ChooseMoveToTeach::
 	end
 
 TwoIsland_House_EventScript_GiveBigMushroom::
-	removeitem ITEM_BIG_MUSHROOM
+	removeitem ITEM_SPEED_GOLD_BOTTLE_CAP
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TwoIsland_House_Text_HandedOverOneBigMushroom
 	call EventScript_RestorePrevTextColor
@@ -74,7 +74,7 @@ TwoIsland_House_EventScript_GiveBigMushroom::
 	end
 
 TwoIsland_House_EventScript_GiveTinyMushrooms::
-	removeitem ITEM_TINY_MUSHROOM, 2
+	removeitem ITEM_DEF_GOLD_BOTTLE_CAP, 2
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TwoIsland_House_Text_HandedOverTwoTinyMushrooms
 	call EventScript_RestorePrevTextColor

@@ -102,7 +102,7 @@ SINGLE_BATTLE_TEST("Sticky Hold prevents Incinerate from destroying berries (Ite
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Moves(MOVE_INCINERATE); }
-        OPPONENT(SPECIES_GASTRODON) { Ability(ABILITY_STICKY_HOLD); Items(ITEM_NUGGET, ITEM_CHERI_BERRY); }
+        OPPONENT(SPECIES_GASTRODON) { Ability(ABILITY_STICKY_HOLD); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_CHERI_BERRY); }
     } WHEN {
         TURN { MOVE(player, MOVE_INCINERATE); }
     } THEN {

@@ -49,7 +49,7 @@
       "x": 66,
       "y": 34,
       "elevation": 3,
-      "item": "ITEM_PEARL",
+      "item": "ITEM_SPDEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL"
     },
     {
@@ -57,7 +57,7 @@
       "x": 64,
       "y": 54,
       "elevation": 3,
-      "item": "ITEM_BIG_PEARL",
+      "item": "ITEM_SPDEF_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL"
     },
     {

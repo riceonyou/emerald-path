@@ -11,3 +11,24 @@ script Hoenn1_Alt_2_EventScript_Boat{
     end
  
 }
+
+script Hoenn1_Alt_2_EventScript_Azurill{
+	trainerbattle_single(TRAINER_AZURILL, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_Alt_2_EventScript_Budew{
+	trainerbattle_single(TRAINER_BUDEW, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_Alt_2_EventScript_Barboach{
+	trainerbattle_single(TRAINER_BARBOACH, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

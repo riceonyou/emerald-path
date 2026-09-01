@@ -671,8 +671,8 @@ DOUBLE_BATTLE_TEST("Primal reversion and other switch-in effects trigger for all
         PLAYER(SPECIES_RESHIRAM) { Speed(90); }
         OPPONENT(SPECIES_CATERPIE) { Speed(9); HP(1); }
         OPPONENT(SPECIES_CATERPIE) { Speed(7); HP(1); }
-        OPPONENT(SPECIES_KYOGRE) { Speed(80); Items(ITEM_NUGGET, ITEM_BLUE_ORB); }
-        OPPONENT(SPECIES_GROUDON) { Speed(70); Items(ITEM_NUGGET, ITEM_RED_ORB); }
+        OPPONENT(SPECIES_KYOGRE) { Speed(80); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_BLUE_ORB); }
+        OPPONENT(SPECIES_GROUDON) { Speed(70); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_RED_ORB); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_STICKY_WEB);
                MOVE(opponentLeft, MOVE_SPIKES);

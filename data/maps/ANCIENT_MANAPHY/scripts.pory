@@ -17,7 +17,6 @@ script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
     msgbox("And a Rain Dance TM!")
     giveitem(ITEM_TM_RAIN_DANCE, 1)

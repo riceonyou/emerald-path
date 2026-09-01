@@ -114,7 +114,7 @@
       "x": 8,
       "y": 52,
       "elevation": 3,
-      "item": "ITEM_BIG_PEARL",
+      "item": "ITEM_SPDEF_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BIG_PEARL",
       "quantity": 1,
       "underfoot": false

@@ -41,7 +41,6 @@ script Hoenn1_7_EventScript_BirchBag{
     
     removeobject(HOENN1_7_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_7)
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 
     waitmessage

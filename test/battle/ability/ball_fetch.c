@@ -35,7 +35,7 @@ WILD_BATTLE_TEST("Ball Fetch doesn't trigger if the Pokémon is already holding 
     enum Item item = ITEM_NONE;
 
     PARAMETRIZE { item = ITEM_NONE; }
-    PARAMETRIZE { item = ITEM_NUGGET; }
+    PARAMETRIZE { item = ITEM_HP_GOLD_BOTTLE_CAP; }
 
     GIVEN {
         PLAYER(SPECIES_YAMPER) { Ability(ABILITY_BALL_FETCH); Items(item, item); }
@@ -154,10 +154,10 @@ WILD_BATTLE_TEST("Ball Fetch doesn't trigger if the Pokémon is already holding 
     enum Item item = ITEM_NONE;
 
     PARAMETRIZE { item = ITEM_NONE; }
-    PARAMETRIZE { item = ITEM_NUGGET; }
+    PARAMETRIZE { item = ITEM_HP_GOLD_BOTTLE_CAP; }
 
     GIVEN {
-        PLAYER(SPECIES_YAMPER) { Ability(ABILITY_RATTLED); Innates(ABILITY_BALL_FETCH); Items(item, ITEM_NUGGET); }
+        PLAYER(SPECIES_YAMPER) { Ability(ABILITY_RATTLED); Innates(ABILITY_BALL_FETCH); Items(item, ITEM_HP_GOLD_BOTTLE_CAP); }
         OPPONENT(SPECIES_METAGROSS);
     } WHEN {
         TURN { USE_ITEM(player, ITEM_GREAT_BALL, WITH_RNG(RNG_BALLTHROW_SHAKE, MAX_u16)); }

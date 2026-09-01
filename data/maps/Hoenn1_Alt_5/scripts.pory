@@ -1,0 +1,40 @@
+mapscripts Hoenn1_Alt_5_MapScripts {
+
+}
+
+script Hoenn1_Alt_5_EventScript_Ralts{
+	trainerbattle_single(TRAINER_RALTS, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn1_Alt_5_EventScript_Carvanha{
+	trainerbattle_single(TRAINER_CARVANHA, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn1_Alt_5_EventScript_Vulpix{
+	trainerbattle_single(TRAINER_VULPIX, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_Alt_5_EventScript_Makuhita{
+	trainerbattle_single(TRAINER_MAKUHITA, format("test"), format("test"), Hoenn1_Alt_5_EventScript_Leader_Defeated)
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_Alt_5_EventScript_Leader_Defeated{
+	setflag(FLAG_DEFEATED_PATH_LEADER)
+	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+	end
+}
+
+script Hoenn1_Alt_5_AbraTeleport1{
+	call(AbraTeleport)
+}

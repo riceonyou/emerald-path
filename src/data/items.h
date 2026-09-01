@@ -2847,136 +2847,220 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_GoldBottleCap,
     },
 
-    [ITEM_NUGGET] =
+    [ITEM_HP_BOTTLE_CAP] =
     {
-        .name = ITEM_NAME("Nugget"),
-        .price = 10000 * TREASURE_FACTOR,
+        .name = ITEM_NAME("HP Bottle Cap"),
+        .price = 2000,
         .description = COMPOUND_STRING(
-            "A nugget of pure\n"
-            "gold. Can be sold at\n"
-            "a high price."),
+            "Raises a POKéMON's\n"
+            "HP IV by 10."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = STAT_HP,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
         .flingPower = 30,
-        .iconPic = gItemIcon_Nugget,
-        .iconPalette = gItemIconPalette_Nugget,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_BottleCap,
     },
 
-    [ITEM_BIG_NUGGET] =
+    [ITEM_ATK_BOTTLE_CAP] =
     {
-        .name = ITEM_NAME("Big Nugget"),
-    #if I_PRICE >= GEN_7
-        .price = 40000 * TREASURE_FACTOR,
-    #elif I_PRICE == GEN_6
-        .price = 20000,
-    #else
-        .price = 0,
-    #endif
+        .name = ITEM_NAME("Atk Bottle Cap"),
+        .price = 2000,
         .description = COMPOUND_STRING(
-            "A big nugget made\n"
-            "of gold, sellable\n"
-            "at a high price."),
+            "Raises a POKéMON's\n"
+            "Attack IV by 10."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = B_UPDATED_MOVE_DATA >= GEN_8 ? 130 : 80,
-        .iconPic = gItemIcon_BigNugget,
-        .iconPalette = gItemIconPalette_BigNugget,
+        .secondaryId = STAT_ATK,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_BottleCap,
     },
 
-    [ITEM_TINY_MUSHROOM] =
+    [ITEM_DEF_BOTTLE_CAP] =
     {
-        .name = ITEM_NAME("Tiny Mushroom"),
-        .price = 500 * TREASURE_FACTOR,
+        .name = ITEM_NAME("Def Bottle Cap"),
+        .price = 2000,
         .description = COMPOUND_STRING(
-            "A plain mushroom\n"
-            "that would sell\n"
-            "at a cheap price."),
+            "Raises a POKéMON's\n"
+            "Defense IV by 10."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = STAT_DEF,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
         .flingPower = 30,
-        .iconPic = gItemIcon_TinyMushroom,
-        .iconPalette = gItemIconPalette_Mushroom,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_BottleCap,
     },
 
-    [ITEM_BIG_MUSHROOM] =
+    [ITEM_SPEED_BOTTLE_CAP] =
     {
-        .name = ITEM_NAME("Big Mushroom"),
-        .price = 5000 * TREASURE_FACTOR,
-        .description = sBigMushroomDesc,
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
-        .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_BigMushroom,
-        .iconPalette = gItemIconPalette_Mushroom,
-    },
-
-    [ITEM_BALM_MUSHROOM] =
-    {
-        .name = ITEM_NAME("Balm Mushroom"),
-    #if I_PRICE >= GEN_7
-        .price = 15000 * TREASURE_FACTOR,
-    #elif I_PRICE == GEN_6
-        .price = 12500,
-    #else
-        .price = 0,
-    #endif
-        .description = sBigMushroomDesc,
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
-        .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_BalmMushroom,
-        .iconPalette = gItemIconPalette_BalmMushroom,
-    },
-
-    [ITEM_PEARL] =
-    {
-        .name = ITEM_NAME("Pearl"),
-        .price = (I_PRICE >= GEN_7) ? 2000 * TREASURE_FACTOR: 1400,
+        .name = ITEM_NAME("Spe Bottle Cap"),
+        .price = 2000,
         .description = COMPOUND_STRING(
-            "A pretty pearl\n"
-            "that would sell at a\n"
-            "cheap price."),
+            "Raises a POKéMON's\n"
+            "Speed IV by 10."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = STAT_SPEED,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
         .flingPower = 30,
-        .iconPic = gItemIcon_Pearl,
-        .iconPalette = gItemIconPalette_Pearl,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_BottleCap,
     },
 
-    [ITEM_BIG_PEARL] =
+    [ITEM_SPATK_BOTTLE_CAP] =
     {
-        .name = ITEM_NAME("Big Pearl"),
-        .price = (I_PRICE >= GEN_7) ? 8000 * TREASURE_FACTOR: 7500,
+        .name = ITEM_NAME("SpAtk Bottle Cap"),
+        .price = 2000,
         .description = COMPOUND_STRING(
-            "A lovely large pearl\n"
-            "that would sell at a\n"
-            "high price."),
+            "Raises a POKéMON's\n"
+            "Sp. Atk IV by 10."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = STAT_SPATK,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
         .flingPower = 30,
-        .iconPic = gItemIcon_BigPearl,
-        .iconPalette = gItemIconPalette_Pearl,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_BottleCap,
+    },
+
+    [ITEM_SPDEF_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("SpDef Bottle Cap"),
+        .price = 2000,
+        .description = COMPOUND_STRING(
+            "Raises a POKéMON's\n"
+            "Sp. Def IV by 10."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_SPDEF,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_BottleCap,
+    },
+
+    [ITEM_HP_GOLD_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("HP Gold Bottle Cap"),
+        .price = 6000,
+        .description = COMPOUND_STRING(
+            "Sets a POKéMON's\n"
+            "HP IV to 31."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_HP,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_GoldBottleCap,
+    },
+
+    [ITEM_ATK_GOLD_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("Atk Gold Bottle Cap"),
+        .price = 6000,
+        .description = COMPOUND_STRING(
+            "Sets a POKéMON's\n"
+            "Attack IV to 31."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_ATK,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_GoldBottleCap,
+    },
+
+    [ITEM_DEF_GOLD_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("Def Gold Bottle Cap"),
+        .price = 6000,
+        .description = COMPOUND_STRING(
+            "Sets a POKéMON's\n"
+            "Defense IV to 31."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_DEF,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_GoldBottleCap,
+    },
+
+    [ITEM_SPEED_GOLD_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("Spe Gold Bottle Cap"),
+        .price = 6000,
+        .description = COMPOUND_STRING(
+            "Sets a POKéMON's\n"
+            "Speed IV to 31."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_SPEED,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_GoldBottleCap,
+    },
+
+    [ITEM_SPATK_GOLD_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("SpAtk Gold Btle Cap"),
+        .price = 6000,
+        .description = COMPOUND_STRING(
+            "Sets a POKéMON's\n"
+            "Sp. Atk IV to 31."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_SPATK,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_GoldBottleCap,
+    },
+
+    [ITEM_SPDEF_GOLD_BOTTLE_CAP] =
+    {
+        .name = ITEM_NAME("SpDef Gold Btle Cap"),
+        .price = 6000,
+        .description = COMPOUND_STRING(
+            "Sets a POKéMON's\n"
+            "Sp. Def IV to 31."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_SELLABLE,
+        .heldSlot = 0,
+        .secondaryId = STAT_SPDEF,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IVBottleCap,
+        .flingPower = 30,
+        .iconPic = gItemIcon_BottleCap,
+        .iconPalette = gItemIconPalette_GoldBottleCap,
     },
 
     [ITEM_PEARL_STRING] =
@@ -17931,8 +18015,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_Nugget,
+        .iconPalette = gItemIconPalette_Nugget,
     },
 
     [ITEM_BERRY_PACK_CHARM] =
@@ -17972,14 +18056,13 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POCKET_BIRCH_BAG] =
     {
         .name = ITEM_NAME("Pocket Birch Bag"),
-        .price = 0,
-        .importance = 1,
+        .price = 1000,
         .description = COMPOUND_STRING(
-            "Open a Birch Bag."),
+            "Open up a Birch Bag."),
         .pocket = POCKET_ITEMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_PocketBirchBag,
         .iconPic = gItemIcon_OvalCharm,
         .iconPalette = gItemIconPalette_OvalCharm,
     },
@@ -18000,15 +18083,30 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_OvalCharm,
     },
 
-    [ITEM_BERRY_PACK_CHARM] =
+    [ITEM_TINTED_CHARM] =
     {
-        .name = ITEM_NAME("Berry Pack Charm"),
+        .name = ITEM_NAME("Tinted Charm"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "Gain an oran berry,\n"
-            "a sitrus berry, a lum\n"
-            "berry and a berry juice."),
+            "Your not very effective moves\n"
+            "do 1.5 more damage."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_NORMAL_CHARM] =
+    {
+        .name = ITEM_NAME("Normal Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your normal moves do 1.1 times\n"
+            "more damage."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,

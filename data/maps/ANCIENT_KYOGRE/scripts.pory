@@ -12,7 +12,6 @@ script ANCIENT_KYOGRE_EventScript_Kyogre{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
     waitmessage
 

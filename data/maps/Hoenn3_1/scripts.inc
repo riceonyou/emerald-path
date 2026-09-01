@@ -67,12 +67,10 @@ Hoenn3_1_EventScript_BirchBag::
 # 42 "data/maps/Hoenn3_1/scripts.pory"
 	setflag FLAG_BIRCHBAG_3_1
 # 43 "data/maps/Hoenn3_1/scripts.pory"
-	playfanfare MUS_EVOLVED
-# 44 "data/maps/Hoenn3_1/scripts.pory"
 	msgbox Hoenn3_1_EventScript_BirchBag_Text_0
-# 46 "data/maps/Hoenn3_1/scripts.pory"
+# 45 "data/maps/Hoenn3_1/scripts.pory"
 	waitmessage
-# 47 "data/maps/Hoenn3_1/scripts.pory"
+# 46 "data/maps/Hoenn3_1/scripts.pory"
 	releaseall
 	end
 
@@ -82,5 +80,5 @@ Hoenn3_1_Vibrava_Text_0:
 	.string "test$"
 
 Hoenn3_1_EventScript_BirchBag_Text_0:
-# 44 "data/maps/Hoenn3_1/scripts.pory"
+# 43 "data/maps/Hoenn3_1/scripts.pory"
 	.string "You received a\n{STR_VAR_1}!$"

@@ -717,7 +717,7 @@ DOUBLE_BATTLE_TEST("Pickpocket checks contact/effect per target for spread moves
         ASSUME(GetSpeciesType(SPECIES_CLEFAIRY, 0) == TYPE_FAIRY);
         ASSUME(GetMoveType(MOVE_BREAKING_SWIPE) == TYPE_DRAGON);
         ASSUME(GetMoveTarget(MOVE_BREAKING_SWIPE) == TARGET_BOTH);
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); }
         OPPONENT(SPECIES_CLEFAIRY);
@@ -736,7 +736,7 @@ DOUBLE_BATTLE_TEST("Pickpocket activates for the fastest itemless target when bo
 {
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_BREAKING_SWIPE) == TARGET_BOTH);
-        PLAYER(SPECIES_WOBBUFFET) { Speed(20); Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        PLAYER(SPECIES_WOBBUFFET) { Speed(20); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
         PLAYER(SPECIES_WYNAUT) { Speed(10); }
         OPPONENT(SPECIES_SNEASEL) { Speed(40); Ability(ABILITY_PICKPOCKET); }
         OPPONENT(SPECIES_SNEASEL) { Speed(30); Ability(ABILITY_PICKPOCKET); }
@@ -758,8 +758,8 @@ SINGLE_BATTLE_TEST("Pickpocket steals the attacker's item unless it already has 
     PARAMETRIZE { targetHasItem = FALSE; }
     PARAMETRIZE { targetHasItem = TRUE; }
     GIVEN {
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, targetHasItem ? ITEM_EVIOLITE : ITEM_NONE); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, targetHasItem ? ITEM_EVIOLITE : ITEM_NONE); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
     } SCENE {
@@ -786,7 +786,7 @@ SINGLE_BATTLE_TEST("Pickpocket steals the attacker's item unless it already has 
 SINGLE_BATTLE_TEST("Pickpocket does not activate if the user faints (Items)")
 {
     GIVEN {
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); HP(1); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
@@ -806,7 +806,7 @@ SINGLE_BATTLE_TEST("Pickpocket does not activate if the user faints (Items)")
 SINGLE_BATTLE_TEST("Pickpocket cannot steal from Sticky Hold (Items)")
 {
     GIVEN {
-        PLAYER(SPECIES_GRIMER) { Ability(ABILITY_STICKY_HOLD); Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        PLAYER(SPECIES_GRIMER) { Ability(ABILITY_STICKY_HOLD); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
@@ -843,7 +843,7 @@ SINGLE_BATTLE_TEST("Pickpocket activates after the final hit of a multi-strike m
     GIVEN {
         ASSUME(IsMultiHitMove(MOVE_FURY_SWIPES));
         ASSUME(MoveMakesContact(MOVE_FURY_SWIPES));
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); }
     } WHEN {
         TURN { MOVE(player, MOVE_FURY_SWIPES, WITH_RNG(RNG_HITS, 3)); }
@@ -864,7 +864,7 @@ SINGLE_BATTLE_TEST("Pickpocket activates after Magician steals an item (Items)")
 {
     GIVEN {
         PLAYER(SPECIES_DELPHOX) { Ability(ABILITY_MAGICIAN); }
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
     } SCENE {
@@ -883,7 +883,7 @@ SINGLE_BATTLE_TEST("Pickpocket activates after Sticky Barb transfers (Items)")
     GIVEN {
         ASSUME(gItemsInfo[ITEM_STICKY_BARB].holdEffect == HOLD_EFFECT_STICKY_BARB);
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, ITEM_STICKY_BARB); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_STICKY_BARB); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
     } SCENE {
@@ -905,7 +905,7 @@ SINGLE_BATTLE_TEST("Pickpocket activates after Thief or Covet steals an item (It
         ASSUME(GetMoveEffect(move) == EFFECT_STEAL_ITEM);
         ASSUME(MoveMakesContact(move));
         PLAYER(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
     } WHEN {
         TURN { MOVE(player, move); }
     } SCENE {
@@ -923,8 +923,8 @@ SINGLE_BATTLE_TEST("Pickpocket activates after Focus Sash is consumed (Items)")
     GIVEN {
         ASSUME(MoveMakesContact(MOVE_SEISMIC_TOSS));
         ASSUME(gItemsInfo[ITEM_FOCUS_SASH].holdEffect == HOLD_EFFECT_FOCUS_SASH);
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); Level(100); }
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, ITEM_FOCUS_SASH); MaxHP(6); HP(6); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); Level(100); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_FOCUS_SASH); MaxHP(6); HP(6); }
     } WHEN {
         TURN { MOVE(player, MOVE_SEISMIC_TOSS); }
     } SCENE {
@@ -946,8 +946,8 @@ SINGLE_BATTLE_TEST("Pickpocket activates after Knock Off, Bug Bite, or Pluck (It
     PARAMETRIZE { move = MOVE_PLUCK; }
     GIVEN {
         ASSUME(MoveMakesContact(move));
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_MAGOST_BERRY); }
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, ITEM_ORAN_BERRY); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_MAGOST_BERRY); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_ORAN_BERRY); }
     } WHEN {
         TURN { MOVE(player, move); }
     } SCENE {
@@ -963,7 +963,7 @@ SINGLE_BATTLE_TEST("Pickpocket steals Life Orb after it activates (Items)")
 {
     GIVEN {
         ASSUME(gItemsInfo[ITEM_LIFE_ORB].holdEffect == HOLD_EFFECT_LIFE_ORB);
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_LIFE_ORB); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_LIFE_ORB); }
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
@@ -981,7 +981,7 @@ SINGLE_BATTLE_TEST("Pickpocket steals Shell Bell after it heals the user (Items)
 {
     GIVEN {
         ASSUME(gItemsInfo[ITEM_SHELL_BELL].holdEffect == HOLD_EFFECT_SHELL_BELL);
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_SHELL_BELL); MaxHP(100); HP(66); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_SHELL_BELL); MaxHP(100); HP(66); }
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH); }
@@ -1001,7 +1001,7 @@ SINGLE_BATTLE_TEST("Pickpocket does not prevent King's Rock or Razor Fang flinch
 {
     GIVEN {
         ASSUME(gItemsInfo[ITEM_KINGS_ROCK].holdEffect == HOLD_EFFECT_FLINCH);
-        PLAYER(SPECIES_WOBBUFFET) { Speed(20); Items(ITEM_NUGGET, ITEM_KINGS_ROCK); }
+        PLAYER(SPECIES_WOBBUFFET) { Speed(20); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_KINGS_ROCK); }
         OPPONENT(SPECIES_SNEASEL) { Speed(10); Ability(ABILITY_PICKPOCKET); }
     } WHEN {
         TURN { MOVE(player, MOVE_SCRATCH, WITH_RNG(RNG_HOLD_EFFECT_FLINCH, 1)); MOVE(opponent, MOVE_SCRATCH); }
@@ -1029,8 +1029,8 @@ SINGLE_BATTLE_TEST("Pickpocket activates when user has Protective Pads, but not 
         ASSUME(GetItemHoldEffect(ITEM_PROTECTIVE_PADS) == HOLD_EFFECT_PROTECTIVE_PADS);
         ASSUME(GetItemHoldEffect(ITEM_PUNCHING_GLOVE) == HOLD_EFFECT_PUNCHING_GLOVE);
         ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
-        PLAYER(SPECIES_DECIDUEYE) { Ability(ability); Items(ITEM_NUGGET, item); }
-        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NUGGET, ITEM_FOCUS_SASH); }
+        PLAYER(SPECIES_DECIDUEYE) { Ability(ability); Items(ITEM_HP_GOLD_BOTTLE_CAP, item); }
+        OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_FOCUS_SASH); }
     } WHEN {
         TURN { MOVE(player, MOVE_MACH_PUNCH); }
     } SCENE {
@@ -1048,7 +1048,7 @@ SINGLE_BATTLE_TEST("Pickpocket activates after an Item was knocked off (Items)")
 {
     GIVEN {
         ASSUME(GetMoveEffect(MOVE_KNOCK_OFF) == EFFECT_KNOCK_OFF);
-        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_NUGGET, ITEM_POTION); }
+        PLAYER(SPECIES_WOBBUFFET) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_POTION); }
         OPPONENT(SPECIES_SNEASEL) { Ability(ABILITY_PICKPOCKET); Items(ITEM_NONE, ITEM_POTION); }
     } WHEN {
         TURN { MOVE(player, MOVE_KNOCK_OFF); }

@@ -49,6 +49,7 @@
 #include "constants/items.h"
 #include "constants/songs.h"
 #include "move_relearner.h"
+#include "starter_choose.h"
 
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
@@ -924,6 +925,12 @@ void ItemUseOutOfBattle_DynamaxCandy(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
+void ItemUseOutOfBattle_IVBottleCap(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_IVBottleCap;
+    SetUpItemUseCallback(taskId);
+}
+
 void ItemUseOutOfBattle_TMHM(u8 taskId)
 {
     if (GetItemTMHMIndex(gSpecialVar_ItemId) > NUM_TECHNICAL_MACHINES)
@@ -1672,6 +1679,30 @@ void ItemUseOutOfBattle_MemoryMushroom(u8 taskId)
 {
     gItemUseCB = ItemUseCB_MemoryMushroom;
     SetUpItemUseCallback(taskId);
+}
+
+void ItemUseOutOfBattle_PocketBirchBag(u8 taskId)
+{
+    RemoveBagItem(ITEM_POCKET_BIRCH_BAG, 1);
+    PlaySE(SE_CLICK);
+    switch (VarGet(VAR_CURRENT_ACT))
+    {
+        case 1:
+            VarSet(VAR_0x8000, 33);
+            break;
+        case 2:
+            VarSet(VAR_0x8000, 34);
+            break;
+        case 3:
+        case 4:
+            VarSet(VAR_0x8000, 35);
+            break;
+    }
+    LoadBirchBagPoolById();
+    PrepareBirchBagWeightedStarterChoices();
+    gMain.savedCallback = CB2_ReturnToField;
+    gBagMenu->newScreenCallback = CB2_ChooseStarter;
+    Task_FadeAndCloseBagMenu(taskId);
 }
 
 #undef tUsingRegisteredKeyItem

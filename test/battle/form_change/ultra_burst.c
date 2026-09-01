@@ -285,7 +285,7 @@ SINGLE_BATTLE_TEST("Necrozma returns its proper Form upon battle end after Ultra
     PARAMETRIZE { species = SPECIES_NECROZMA_DUSK_MANE; }
     PARAMETRIZE { species = SPECIES_NECROZMA_DAWN_WINGS; }
     GIVEN {
-        PLAYER(species) { Items(ITEM_NUGGET, ITEM_ULTRANECROZIUM_Z); }
+        PLAYER(species) { Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_ULTRANECROZIUM_Z); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE, gimmick: GIMMICK_ULTRA_BURST); }
@@ -301,7 +301,7 @@ SINGLE_BATTLE_TEST("Necrozma returns its proper Form upon fainting after Ultra B
     PARAMETRIZE { species = SPECIES_NECROZMA_DUSK_MANE; }
     PARAMETRIZE { species = SPECIES_NECROZMA_DAWN_WINGS; }
     GIVEN {
-        PLAYER(species) { HP(1); Items(ITEM_NUGGET, ITEM_ULTRANECROZIUM_Z); }
+        PLAYER(species) { HP(1); Items(ITEM_HP_GOLD_BOTTLE_CAP, ITEM_ULTRANECROZIUM_Z); }
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {

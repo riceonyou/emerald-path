@@ -48,7 +48,6 @@ script Hoenn3_2_EventScript_BirchBag{
     
     removeobject(HOENN3_2_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_2)
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 
     waitmessage
@@ -69,7 +68,6 @@ script Hoenn3_3_EventScript_BirchBag{
     
     removeobject(HOENN3_3_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_3)
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 
     waitmessage
@@ -90,7 +88,6 @@ script Hoenn3_4_EventScript_BirchBag{
     
     removeobject(HOENN3_4_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_4)
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
 
     waitmessage

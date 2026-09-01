@@ -83,7 +83,7 @@
       "x": 11,
       "y": 31,
       "elevation": 3,
-      "item": "ITEM_PEARL",
+      "item": "ITEM_SPDEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_PEARL",
       "quantity": 1,
       "underfoot": false
@@ -93,7 +93,7 @@
       "x": 9,
       "y": 34,
       "elevation": 3,
-      "item": "ITEM_PEARL",
+      "item": "ITEM_SPDEF_GOLD_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_PEARL_2",
       "quantity": 1,
       "underfoot": false
@@ -133,7 +133,7 @@
       "x": 8,
       "y": 27,
       "elevation": 3,
-      "item": "ITEM_BIG_PEARL",
+      "item": "ITEM_SPDEF_BOTTLE_CAP",
       "flag": "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_BIG_PEARL",
       "quantity": 1,
       "underfoot": false

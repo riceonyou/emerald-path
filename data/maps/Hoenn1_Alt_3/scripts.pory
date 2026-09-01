@@ -1,0 +1,35 @@
+mapscripts Hoenn1_Alt_3_MapScripts {
+
+}
+
+script Hoenn1_Alt_3_EventScript_Aron{
+	trainerbattle_single(TRAINER_ARON, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+
+script Hoenn1_Alt_3_EventScript_Zubat{
+	trainerbattle_single(TRAINER_ZUBAT, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn1_Alt_3_EventScript_Spoink{
+	trainerbattle_single(TRAINER_SPOINK, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn1_Alt_3_EventScript_Mawile{
+	trainerbattle_double(TRAINER_MAWILESABELEYE, format("test"), format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}
+script Hoenn1_Alt_3_EventScript_Sabeleye{
+	trainerbattle_double(TRAINER_MAWILESABELEYE, format("test"), format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+}

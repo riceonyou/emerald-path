@@ -5614,11 +5614,11 @@ static u16 SampleResortGorgeousMon(void)
 }
 
 static const u16 sResortGorgeousDeluxeRewards[] = {
-    ITEM_BIG_PEARL,
-    ITEM_PEARL,
+    ITEM_SPDEF_BOTTLE_CAP,
+    ITEM_SPDEF_GOLD_BOTTLE_CAP,
     ITEM_STARDUST,
     ITEM_STAR_PIECE,
-    ITEM_NUGGET,
+    ITEM_HP_GOLD_BOTTLE_CAP,
     ITEM_RARE_CANDY
 };
 

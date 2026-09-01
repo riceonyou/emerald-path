@@ -13,7 +13,6 @@ script ANCIENT_GROUDON_EventScript_Groudon{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    playfanfare(MUS_EVOLVED)
     msgbox("You received a\n{STR_VAR_1}!")
     waitmessage
 
