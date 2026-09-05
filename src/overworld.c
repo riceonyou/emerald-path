@@ -318,7 +318,8 @@ FLAG_NORMAL_CHARM_STARTER_UNLOCKED,\
 FLAG_MINTY_CHARM_STARTER_UNLOCKED,\
 FLAG_IV_BOTTLE_CAPS_UNLOCKED,\
 FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED,\
-FLAG_POCKET_BIRCH_BAG_UNLOCKED
+FLAG_POCKET_BIRCH_BAG_UNLOCKED,\
+FLAG_NEW_DIFFICULTY_UNLOCKED
 
 // Flags listed above are restored after whiteout state reset
 
@@ -919,6 +920,28 @@ void BufferRareItem(void)
 
 void SetKecShopBuyables(void)
 {
+    static const u16 BottleCapBuyableFlags[] =
+    {
+        FLAG_HP_BOTTLE_CAP_BUYABLE,
+        FLAG_ATK_BOTTLE_CAP_BUYABLE,
+        FLAG_DEF_BOTTLE_CAP_BUYABLE,
+        FLAG_SPEED_BOTTLE_CAP_BUYABLE,
+        FLAG_SPATK_BOTTLE_CAP_BUYABLE,
+        FLAG_SPDEF_BOTTLE_CAP_BUYABLE,
+    };
+
+    static const u16 GoldBottleCapBuyableFlags[] =
+    {
+        FLAG_HP_GOLD_BOTTLE_CAP_BUYABLE,
+        FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE,
+        FLAG_DEF_GOLD_BOTTLE_CAP_BUYABLE,
+        FLAG_SPEED_GOLD_BOTTLE_CAP_BUYABLE,
+        FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE,
+        FLAG_SPDEF_GOLD_BOTTLE_CAP_BUYABLE,
+    };
+
+
+
     FlagClear(FLAG_RARE_CANDY_BUYABLE);
     FlagClear(FLAG_LUM_BERRY_BUYABLE);
     FlagClear(FLAG_SERIOUS_MINT_BUYABLE);
@@ -946,12 +969,82 @@ void SetKecShopBuyables(void)
     FlagClear(FLAG_TM_SWIFT_BUYABLE);
     FlagClear(FLAG_TM_CUT_BUYABLE);
 
-    //Regular Shop
+    //=======================Regular Shop=============================
+    if (FLAG_RARE_CANDY_UNLOCKED){
+        FlagSet(FLAG_RARE_CANDY_BUYABLE);
+    }
+    if (FLAG_LUM_BERRY_UNLOCKED){
+        FlagSet(FLAG_LUM_BERRY_BUYABLE);
+    }
+    if (FLAG_SERIOUS_MINT_UNLOCKED){
+        FlagSet(FLAG_SERIOUS_MINT_BUYABLE);
+    }
+    if (FLAG_POCKET_BIRCH_BAG_UNLOCKED){
+        FlagSet(FLAG_POCKET_BIRCH_BAG_BUYABLE);
+    }
+
+
+    u16 AvailableBottlecapFlags[ARRAY_COUNT(BottleCapBuyableFlags)];
+    u16 AvailableGoldBottlecapFlags[ARRAY_COUNT(GoldBottleCapBuyableFlags)];
+    u8 AvailableCount = 0;
+    u8 AvailableGoldCount = 0;
+    u8 i;
+    u8 SelectedCount = 0;
+    u8 SelectedGoldCount = 0;
+    if (FlagGet(FLAG_IV_BOTTLE_CAPS_UNLOCKED))
+    {
+        for (i = 0; i < 6; i++)
+            AvailableBottlecapFlags[AvailableCount++] = BottleCapBuyableFlags[i];
+        while (SelectedCount < 3 && AvailableCount != 0)
+        {
+            u8 SelectedIndex = Random() % AvailableCount;
+            FlagSet(AvailableBottlecapFlags[SelectedIndex]);
+            AvailableBottlecapFlags[SelectedIndex] = AvailableBottlecapFlags[--AvailableCount];
+            SelectedCount++;
+        }
+    }
     
 
-    //TM Shop
+    if (FlagGet(FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED))
+    {
+        for (i = 0; i < ARRAY_COUNT(GoldBottleCapBuyableFlags); i++)
+            AvailableGoldBottlecapFlags[AvailableGoldCount++] = GoldBottleCapBuyableFlags[i];
+        while (SelectedGoldCount < 3 && AvailableGoldCount != 0)
+        {
+            u8 SelectedIndex = Random() % AvailableGoldCount;
+            FlagSet(AvailableGoldBottlecapFlags[SelectedIndex]);
+            AvailableGoldBottlecapFlags[SelectedIndex] = AvailableGoldBottlecapFlags[--AvailableGoldCount];
+            SelectedGoldCount++;
+        }
+    }
+
+    
+
+    //===========================TM Shop===========================================================
     FlagSet(FLAG_TM_CUT_BUYABLE);
     FlagSet(FLAG_TM_SWIFT_BUYABLE);
+    if (FLAG_TM_NOBLE_ROAR_UNLOCKED){
+        FlagSet(FLAG_TM_NOBLE_ROAR_BUYABLE);
+    }
+    if (FLAG_TM_CHARM_UNLOCKED){
+        FlagSet(FLAG_TM_CHARM_BUYABLE);
+    }
+    if (FLAG_TM_FAKE_TEARS_UNLOCKED){
+        FlagSet(FLAG_TM_FAKE_TEARS_BUYABLE);
+    }
+    if (FLAG_TM_TOXIC_UNLOCKED){
+        FlagSet(FLAG_TM_TOXIC_BUYABLE);
+    }
+    if (FLAG_TM_THUNDER_WAVE_UNLOCKED){
+        FlagSet(FLAG_TM_THUNDER_WAVE_BUYABLE);
+    }
+    if (FLAG_TM_WILL_O_WISP_UNLOCKED){
+        FlagSet(FLAG_TM_WILL_O_WISP_BUYABLE);
+    }
+    if (FLAG_TM_CONFUSE_RAY_UNLOCKED){
+        FlagSet(FLAG_TM_CONFUSE_RAY_BUYABLE);
+    }
+
 }
 
 
@@ -1051,14 +1144,29 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 
     // Do start of every act checks and stuff
     if(CheckBagHasItem(ITEM_MINTY_CHARM, 1)){FlagSet(FLAG_GIVE_MINTY_CHARM_MINT);}
+    SetKecShopBuyables();
+    
 
     switch (currentact){
         case (0):
-                u8 rand0 = Random() % 2; //CHANGE THIS NUMBER ASS YOU ADD MORE ACTS
+                u8 rand0 = Random() % 2; //CHANGE THIS NUMBER AS YOU ADD MORE ACTS
 
                 //Only for act 0.
                 DetermineRival();
+                SetMoney(&gSaveBlock1Ptr->money, 0);
                 VarSet(VAR_COINS_COLLECTED_IN_A_RUN, 0);
+                
+                if (VarGet(VAR_CURRENT_DIFFICULTY) > 1){
+                    FlagSet(FLAG_BIRCHBAG_1_9);
+                    FlagSet(FLAG_BIRCHBAG_2_9);
+                    FlagSet(FLAG_BIRCHBAG_3_9);
+                }
+                if (VarGet(VAR_CURRENT_DIFFICULTY) > 5){
+                    FlagSet(FLAG_BIRCHBAG_1_8);
+                    FlagSet(FLAG_BIRCHBAG_2_8);
+                    FlagSet(FLAG_BIRCHBAG_3_8);
+                }
+
 
                 VarSet(VAR_TOTAL_RUNS, VarGet(VAR_TOTAL_RUNS) + 1);
 				switch (rand0) {
@@ -1090,7 +1198,8 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                         SetWarpDestination(MAP_GROUP(MAP_HOENN3_1), MAP_NUM(MAP_HOENN3_1), WARP_ID_NONE, 3, 7);
 						DoWarp();
                         break;
-				}; 
+				};
+
                 if (CheckBagHasItem(ITEM_PHIONE_EGG_CHARM, 1)){
                     FlagSet(FLAG_PHIONE_EGG_HATCHED);
                 }
@@ -1112,6 +1221,10 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
         case (4):
                 //YOU BEAT THE CHAMPION
                 VarSet(VAR_ACT4_WINS, VarGet(VAR_ACT4_WINS) + 1);
+                if(VarGet(VAR_CURRENT_DIFFICULTY) == VarGet(VAR_UNLOCKED_DIFFICULTY)){
+                    VarSet(VAR_UNLOCKED_DIFFICULTY, VarGet(VAR_UNLOCKED_DIFFICULTY) + 1);
+                    FlagSet(FLAG_NEW_DIFFICULTY_UNLOCKED);
+                }
                 ResetPokemonAndItems();
                 VarSet(VAR_CURRENT_ACT, 0);
                 ClearMoney();

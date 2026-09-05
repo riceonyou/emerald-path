@@ -8516,13 +8516,16 @@ bool32 IsFutureSightAttackerInParty(enum BattlerId battlerAtk, enum BattlerId ba
 #undef DAMAGE_APPLY_MODIFIER
 
 // The chance is 1/N for each stage.
-static const u32 sGen7CriticalHitOdds[] = {24,  8,  2,  1,   1}; // 1/X
+static const u32 sGen7CriticalHitOdds[] = {20,  8,  2,  1,   1}; // 1/X
+static const u32 sEnemyCriticalHitOdds[] = {10,  4,  2,  1,   1}; // 1/X
 static const u32 sGen6CriticalHitOdds[] = {16,  8,  2,  1,   1}; // 1/X
 static const u32 sCriticalHitOdds[]     = {16,  8,  4,  3,   2}; // 1/X, Gens 3,4,5
 static const u32 sGen2CriticalHitOdds[] = {17, 32, 64, 85, 128}; // X/256
 
-static inline u32 GetCriticalHitOdds(u32 critChance)
+static inline u32 GetCriticalHitOdds(enum BattlerId battlerAtk, u32 critChance)
 {
+    if ((VarGet(VAR_CURRENT_DIFFICULTY) > 3) && (GetBattlerSide(battlerAtk) == B_SIDE_OPPONENT))
+        return sEnemyCriticalHitOdds[critChance];
     if (GetConfig(B_CRIT_CHANCE) >= GEN_7)
         return sGen7CriticalHitOdds[critChance];
     if (GetConfig(B_CRIT_CHANCE) == GEN_6)
@@ -8615,7 +8618,7 @@ s32 CalcCritChanceStage(struct BattleContext *ctx)
         {
             if (critChance == CRITICAL_HIT_ALWAYS)
                 RecordAbilityBattle(ctx->battlerDef, abilityDef);
-            else if (GetCriticalHitOdds(critChance) == 1)
+            else if (GetCriticalHitOdds(ctx->battlerAtk, critChance) == 1)
                 RecordAbilityBattle(ctx->battlerDef, abilityDef);
         }
         critChance = CRITICAL_HIT_BLOCKED;
@@ -8708,9 +8711,9 @@ static bool32 IsCriticalHit(struct BattleContext *ctx)
     else if (GetConfig(B_CRIT_CHANCE) == GEN_1)
         isCrit = RandomChance(RNG_CRITICAL_HIT, critChance, 256);
     else if (GetConfig(B_CRIT_CHANCE) == GEN_2)
-        isCrit = RandomChance(RNG_CRITICAL_HIT, GetCriticalHitOdds(critChance), 256);
+        isCrit = RandomChance(RNG_CRITICAL_HIT, GetCriticalHitOdds(ctx->battlerAtk, critChance), 256);
     else
-        isCrit = RandomChance(RNG_CRITICAL_HIT, 1, GetCriticalHitOdds(critChance));
+        isCrit = RandomChance(RNG_CRITICAL_HIT, 1, GetCriticalHitOdds(ctx->battlerAtk, critChance));
 
     // Counter for IF_CRITICAL_HITS_GE evolution condition.
     if (isCrit && IsOnPlayerSide(ctx->battlerAtk)

@@ -3609,7 +3609,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Constricts to inflict pain.\n"
             "Lowers Speed."),
         .effect = EFFECT_HIT,
-        .power = 20,
+        .power = 30,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 35,

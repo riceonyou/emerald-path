@@ -71,7 +71,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
 	clearflag FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_CURRENT_DIFFICULTY, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

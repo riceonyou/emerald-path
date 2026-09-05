@@ -17979,7 +17979,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Get an extra copy of the\n"
             "pokemon you choose.\n"
-            "{STR_VAR_1} uses left."),
+            "Works 3 times."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,

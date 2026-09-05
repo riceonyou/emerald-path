@@ -1898,7 +1898,7 @@
 #define FLAG_TINTED_CHARM_STARTER_UNLOCKED             0
 #define FLAG_NORMAL_CHARM_STARTER_UNLOCKED                  0
 #define FLAG_MINTY_CHARM_STARTER_UNLOCKED                  0
-#define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     0
+#define FLAG_NEW_DIFFICULTY_UNLOCKED                     0
 #define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    0
 #define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   0
 #define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                0

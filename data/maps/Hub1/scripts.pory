@@ -36,6 +36,7 @@ script AfterWarpIntoNewAct{
 			}
 
 			//UNLOCKS
+			//starter charms
 			if((!flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 0)){
 				setflag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)
 				msgbox(format("You've unlocked the Minty Charm as a starter charm!"))
@@ -47,6 +48,11 @@ script AfterWarpIntoNewAct{
 			if((!flag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 6)){
 				setflag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)
 				msgbox(format("You've unlocked the Normal Charm as a starter charm!"))
+			}
+
+			if(flag(FLAG_NEW_DIFFICULTY_UNLOCKED)){
+				msgbox(format("You've unlocked a new difficulty!"))
+				clearflag(FLAG_NEW_DIFFICULTY_UNLOCKED)
 			}
 		}
 		releaseall
@@ -379,35 +385,76 @@ script HUB1_ONFRAME {
 script Hub_Event_Script_Birch{
     lockall
 	faceplayer
-    msgbox("Would you like to start a run?", MSGBOX_YESNO)
-		switch (var(VAR_RESULT)) {
-			case YES:
-				msgbox("Alright then!")
-				closemessage
-				applymovement(Chimecho, moves(
-					walk_down
-					face_left
-				))
-				waitmovement
-				msgbox(format("Don't forget to take a starter charm with you!"))
-				call(GiveStarterCharm)
-				msgbox("Now off you go! Good luck!")
-				closemessage
-				applymovement(Birch, moves(
-					walk_up
-					walk_left
-					face_right
-				))
-				waitmovement
-				applymovement(LOCALID_PLAYER, moves(
-					walk_up * 4
-				))
-				waitmovement
-				special(WarpToNextAct)
-			case NO:
-				msgbox("Okay! Let me know when you're ready.")
-				releaseall
-		}
+	backtomain:
+	messageinstant("What would you like to do?")
+	dynmultichoice(0, 0, FALSE, 5, 0, DYN_MULTICHOICE_CB_NONE, "Start a run", "Change the difficulty")
+	closemessage
+	switch(var(VAR_RESULT)){
+		case MULTI_B_PRESSED:
+			msgbox(format("Let me know when you're ready to start a run!"))
+			releaseall
+			end
+		case 0:
+			msgbox("Would you like to start a run?", MSGBOX_YESNO)
+				switch (var(VAR_RESULT)) {
+					case YES:
+						msgbox("Alright then!")
+						closemessage
+						applymovement(Chimecho, moves(
+							walk_down
+							face_left
+						))
+						waitmovement
+						msgbox(format("Don't forget to take a starter charm with you!"))
+						call(GiveStarterCharm)
+						msgbox("Now off you go! Good luck!")
+						closemessage
+						applymovement(Birch, moves(
+							walk_up
+							walk_left
+							face_right
+						))
+						waitmovement
+						applymovement(LOCALID_PLAYER, moves(
+							walk_up * 4
+						))
+						waitmovement
+						special(WarpToNextAct)
+					case NO:
+						msgbox("Okay! Let me know when you're ready.")
+						releaseall
+				}
+			
+		case 1:
+			buffernumberstring(STR_VAR_1, VAR_CURRENT_DIFFICULTY)
+			messageinstant("Current difficulty: {STR_VAR_1}\nNote the modifiers stack at each level.")
+			dynmultipush("0 - No modifiers", 0)
+			if(var(VAR_UNLOCKED_DIFFICULTY) > 0){dynmultipush("1 - +1 Enemies Level", 1)}
+			if(var(VAR_UNLOCKED_DIFFICULTY) > 1){dynmultipush("2 - -1 Birch Bag each path", 2)}
+			if(var(VAR_UNLOCKED_DIFFICULTY) > 2){dynmultipush("3 - Less Money", 3)}
+			if(var(VAR_UNLOCKED_DIFFICULTY) > 3){dynmultipush("4 - Enemies crit more", 4)}
+			if(var(VAR_UNLOCKED_DIFFICULTY) > 4){dynmultipush("5 - +1 Enemies Level", 5)}
+			if(var(VAR_UNLOCKED_DIFFICULTY) > 5){dynmultipush("6 - -1 Birch Bag each path", 6)}
+			dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
+			closemessage
+			switch(var(VAR_RESULT)){
+				case MULTI_B_PRESSED:
+					msgbox(format("Beat all 4 paths to unlock the next difficulty!"))
+					goto(backtomain)
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+					buffernumberstring(STR_VAR_1, VAR_RESULT)
+					copyvar(VAR_CURRENT_DIFFICULTY, VAR_RESULT)
+					msgbox("Difficulty set to {STR_VAR_1}")
+					goto(backtomain)
+
+			}
+	}
 }
 
 script Hub_Event_Script_Miltank{
@@ -449,7 +496,9 @@ script Hub_Event_Script_Miltank{
 		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_MON)
 				switch (var(VAR_RESULT)) {
 					case MULTI_B_PRESSED:
+						msgbox("Come back anytime!")
 						releaseall
+						end
 					case SPECIES_BULBASAUR:
 						checkcoins(VAR_RESULT)
 						if(var(VAR_RESULT)>=500){
@@ -856,16 +905,73 @@ script KecShop {
     lockall
     msgbox("Welcome to the Kecleon Brother's shop!")
 	dynmultipush("Oran Berry (¥200)",ITEM_ORAN_BERRY)
-	if(flag(FLAG_LUM_BERRY_BUYABLE)){
-		dynmultipush("Lum Berry (¥500)",ITEM_LUM_BERRY)
-	}
 	dynmultipush("Mem. Mushroom (¥200)",ITEM_MEMORY_MUSHROOM)
+	addvar(VAR_TEMP_A, 1)
+	if(flag(FLAG_LUM_BERRY_BUYABLE)){
+		dynmultipush("Lum Berry (¥200)",ITEM_LUM_BERRY)
+		addvar(VAR_TEMP_A, 1)
+	}
 	if(flag(FLAG_RARE_CANDY_BUYABLE)){
 		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
+		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SERIOUS_MINT_BUYABLE)){
-		dynmultipush("Serious Mint (¥2000)",ITEM_SERIOUS_MINT)
+		dynmultipush("Serious Mint (¥500)",ITEM_SERIOUS_MINT)
+		addvar(VAR_TEMP_A, 1)
 	}
+	if(flag(FLAG_POCKET_BIRCH_BAG_BUYABLE)){
+		dynmultipush("Pocket Birch Bag (¥2000)",ITEM_POCKET_BIRCH_BAG)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_HP_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("HP Bottle Cap (¥300)",ITEM_HP_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_ATK_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Attack Bottle Cap (¥300)",ITEM_ATK_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_DEF_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Defense Bottle Cap (¥300)",ITEM_DEF_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_SPEED_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Speed Bottle Cap (¥300)",ITEM_SPEED_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_SPATK_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Sp. Atk Bottle Cap (¥300)",ITEM_SPATK_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_SPDEF_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Sp. Def Bottle Cap (¥300)",ITEM_SPDEF_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_HP_GOLD_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("HP Gold Bottle Cap (¥700)",ITEM_HP_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Attack Gold Bottle Cap (¥700)",ITEM_ATK_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_DEF_GOLD_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Defense Gold Bottle Cap (¥700)",ITEM_DEF_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_SPEED_GOLD_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Speed Gold Bottle Cap (¥700)",ITEM_SPEED_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Sp. Atk Gold Bottle Cap (¥700)",ITEM_SPATK_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_SPDEF_GOLD_BOTTLE_CAP_BUYABLE)){
+		dynmultipush("Sp. Def Gold Bottle Cap (¥700)",ITEM_SPDEF_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+
 
 	if(var(VAR_TEMP_A) != 0){
 		showmoneybox(18, 10)
@@ -894,8 +1000,8 @@ script KecShop {
 					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 				}
 			case ITEM_SERIOUS_MINT:
-				if(checkmoney(200)){
-					removemoney(200)
+				if(checkmoney(500)){
+					removemoney(500)
 					updatemoneybox
 					playse(SE_SHOP)
 					giveitem(ITEM_SERIOUS_MINT)
@@ -916,8 +1022,8 @@ script KecShop {
 					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 				}
 			case ITEM_RARE_CANDY:
-				if(checkmoney(200)){
-					removemoney(200)
+				if(checkmoney(2000)){
+					removemoney(2000)
 					updatemoneybox
 					playse(SE_SHOP)
 					giveitem(ITEM_RARE_CANDY)
@@ -926,6 +1032,43 @@ script KecShop {
 				else{
 					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 				}
+			case ITEM_POCKET_BIRCH_BAG:
+				if(checkmoney(2000)){
+					removemoney(2000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_POCKET_BIRCH_BAG)
+					msgbox("Thank you for your purchase!")
+				}
+				else{msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")}
+			case ITEM_HP_BOTTLE_CAP:
+			case ITEM_ATK_BOTTLE_CAP:
+			case ITEM_DEF_BOTTLE_CAP:
+			case ITEM_SPEED_BOTTLE_CAP:
+			case ITEM_SPATK_BOTTLE_CAP:
+			case ITEM_SPDEF_BOTTLE_CAP:
+				if(checkmoney(300)){
+					removemoney(300)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(VAR_RESULT)
+					msgbox("Thank you for your purchase!")
+				}
+				else{msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")}
+			case ITEM_HP_GOLD_BOTTLE_CAP:
+			case ITEM_ATK_GOLD_BOTTLE_CAP:
+			case ITEM_DEF_GOLD_BOTTLE_CAP:
+			case ITEM_SPEED_GOLD_BOTTLE_CAP:
+			case ITEM_SPATK_GOLD_BOTTLE_CAP:
+			case ITEM_SPDEF_GOLD_BOTTLE_CAP:
+				if(checkmoney(700)){
+					removemoney(700)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(VAR_RESULT)
+					msgbox("Thank you for your purchase!")
+				}
+				else{msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")}
 		}
 		hidemoneybox	
 	}else{
@@ -2934,6 +3077,7 @@ script Hub_Event_Script_Chimecho {
 		dynmultistack(0, 0, FALSE, 8, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch (var(VAR_RESULT)){
 			case MULTI_B_PRESSED:
+				msgbox(format("Keep playing more to unlock more starter charms!"))
 				releaseall
 				end
 			case ITEM_SHINY_STARTER_CHARM:

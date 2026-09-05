@@ -6288,13 +6288,15 @@ static void Cmd_getmoneyreward(void)
 
         u32 coinsamount;
         coinsamount = (money * (90 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/2)) / 30;
+        coinsamount = coinsamount * (1 + (VarGet(VAR_CURRENT_DIFFICULTY) * 2)/3);
         AddCoins(coinsamount);
         VarSet(VAR_COINS_COLLECTED_IN_A_RUN, VarGet(VAR_COINS_COLLECTED_IN_A_RUN) + coinsamount);
         
         money = (money * (80 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/10) + 10);
 
-        // if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-        //     money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
+        if (VarGet(VAR_CURRENT_DIFFICULTY) > 2)
+            money = money * 0.7;
+
         AddMoney(&gSaveBlock1Ptr->money, money);
 
         

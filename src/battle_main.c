@@ -2018,7 +2018,18 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otId.method = OT_ID_PRESET;
                 otId.value = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
-            CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, personalityValue, otId);
+            u16 Level = partyData[monIndex].lvl;
+            if (VarGet(VAR_CURRENT_DIFFICULTY) > 0)
+            {
+                if (VarGet(VAR_LEVEL_CAP) > Level)
+                    Level += 1;
+            }
+            if (VarGet(VAR_CURRENT_DIFFICULTY) > 4)
+            {
+                if (VarGet(VAR_LEVEL_CAP) > Level)
+                    Level += 1;
+            }
+            CreateMon(&party[i], partyData[monIndex].species, Level, personalityValue, otId);
             for (j = 0; j < MAX_MON_ITEMS; j++)
                 SetMonData(&party[i], MON_DATA_HELD_ITEM + j, &partyData[monIndex].heldItem[j]);
 

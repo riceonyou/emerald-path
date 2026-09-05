@@ -197,7 +197,7 @@ LittlerootTown_MaysHouse_1F_EventScript_MeetRival::
 	clearflag FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE
 	delay 30
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_CURRENT_DIFFICULTY, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

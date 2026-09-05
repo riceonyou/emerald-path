@@ -891,7 +891,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FRISK] =
     {
         .name = _("Frisk"),
-        .description = COMPOUND_STRING("Checks items and removes on hit."),
+        .description = COMPOUND_STRING("Removes item on hit."),
         .aiRating = 3,
     },
 

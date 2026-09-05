@@ -3210,7 +3210,7 @@ static void CB2_ShowPokemonSummaryScreen(void)
     {
         if (IsOpponentPartyMenu())
         {
-            ShowPokemonSummaryScreen(SUMMARY_MODE_NORMAL, party, gPartyMenu.slotId, partyCount == 0 ? 0 : partyCount - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
+            ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, party, gPartyMenu.slotId, partyCount == 0 ? 0 : partyCount - 1, CB2_ReturnToPartyMenuFromSummaryScreen);
         }
         else
         {
