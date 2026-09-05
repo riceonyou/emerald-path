@@ -32,6 +32,76 @@ Hoenn3_4_Whiscash::
 	end
 
 
+Hoenn3_Itemball_6::
+# 26 "data/maps/Hoenn3_4/scripts.pory"
+	lockall
+# 27 "data/maps/Hoenn3_4/scripts.pory"
+	call GiveUncommonItem
+# 28 "data/maps/Hoenn3_4/scripts.pory"
+	removeobject Hoenn3_Ball6
+# 29 "data/maps/Hoenn3_4/scripts.pory"
+	setflag FLAG_ITEM_3_6
+# 30 "data/maps/Hoenn3_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn3_Itemball_7::
+# 35 "data/maps/Hoenn3_4/scripts.pory"
+	lockall
+# 36 "data/maps/Hoenn3_4/scripts.pory"
+	call GiveRareItem
+# 37 "data/maps/Hoenn3_4/scripts.pory"
+	removeobject Hoenn3_Ball7
+# 38 "data/maps/Hoenn3_4/scripts.pory"
+	setflag FLAG_ITEM_3_7
+# 39 "data/maps/Hoenn3_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn3_Itemball_8::
+# 44 "data/maps/Hoenn3_4/scripts.pory"
+	lockall
+# 45 "data/maps/Hoenn3_4/scripts.pory"
+	call GiveUncommonItem
+# 46 "data/maps/Hoenn3_4/scripts.pory"
+	removeobject Hoenn3_Ball8
+# 47 "data/maps/Hoenn3_4/scripts.pory"
+	setflag FLAG_ITEM_3_8
+# 48 "data/maps/Hoenn3_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn3_Itemball_9::
+# 53 "data/maps/Hoenn3_4/scripts.pory"
+	lockall
+# 54 "data/maps/Hoenn3_4/scripts.pory"
+	call GiveCommonItem
+# 55 "data/maps/Hoenn3_4/scripts.pory"
+	removeobject Hoenn3_Ball9
+# 56 "data/maps/Hoenn3_4/scripts.pory"
+	setflag FLAG_ITEM_3_9
+# 57 "data/maps/Hoenn3_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn3_Itemball_10::
+# 62 "data/maps/Hoenn3_4/scripts.pory"
+	lockall
+# 63 "data/maps/Hoenn3_4/scripts.pory"
+	call GiveCommonItem
+# 64 "data/maps/Hoenn3_4/scripts.pory"
+	removeobject Hoenn3_Ball10
+# 65 "data/maps/Hoenn3_4/scripts.pory"
+	setflag FLAG_ITEM_3_10
+# 66 "data/maps/Hoenn3_4/scripts.pory"
+	releaseall
+	end
+
+
 Hoenn3_4_Lunatone_Text_0:
 # 5 "data/maps/Hoenn3_4/scripts.pory"
 	.string "test$"

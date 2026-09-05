@@ -28,7 +28,7 @@ Route110_TrickHousePuzzle6_EventScript_FoundScroll::
 	end
 
 Route110_TrickHousePuzzle6_EventScript_Sophia::
-	trainerbattle_single TRAINER_SOPHIA, Route110_TrickHousePuzzle6_Text_SophiaIntro, Route110_TrickHousePuzzle6_Text_SophiaDefeat
+	trainerbattle_single TRAINER_SIMISEAR, Route110_TrickHousePuzzle6_Text_SophiaIntro, Route110_TrickHousePuzzle6_Text_SophiaDefeat
 	msgbox Route110_TrickHousePuzzle6_Text_SophiaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

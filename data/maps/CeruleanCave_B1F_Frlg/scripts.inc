@@ -18,7 +18,7 @@ CeruleanCave_B1F_OnTransition::
 	end
 
 CeruleanCave_B1F_EventScript_ShowMewtwo::
-	clearflag FLAG_HIDE_MEWTWO
+	clearflag FLAG_HP_GOLD_BOTTLE_CAP_BUYABLETWO
 	return
 
 CeruleanCave_B1F_EventScript_Mewtwo::

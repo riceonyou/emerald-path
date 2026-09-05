@@ -30,7 +30,7 @@
     F(POISON_TAIL) \
     F(AERIAL_ACE) \
     F(BULLDOZE) \
-    F(HEX) \
+    F(DOOM_DESIRE) \
     F(SNARL) \
     F(METAL_CLAW) \
     F(SWIFT) \

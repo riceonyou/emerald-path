@@ -35,6 +35,7 @@
 #include "data/choose_random_pool.h"
 #include <stdbool.h>
 #include "item_menu.h"
+#include "field_screen_effect.h"
 
 
 #define STARTER_MON_COUNT   3
@@ -482,7 +483,9 @@ void CB2_ChooseStarter(void)
     
     for (i = 0; i < STARTER_MON_COUNT; i++){
         rand = Random() & (ShinyRate - 1);
-        if (rand == 0)
+        if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
+            IsSelectionShiny[i] = TRUE;
+        else if (rand == 0)
             IsSelectionShiny[i] = TRUE;
     }
 
@@ -1005,6 +1008,7 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
                 CalculateMonStats(&mon);
                 GiveMonInitialMoveset(&mon);
                 GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
+                FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
 
             }else{
                 u8 isShiny = FALSE;
@@ -1016,12 +1020,10 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
                 GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
             }
         }
-        FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
     }
     
-    ScriptContext_Enable();
     StringCopy(gStringVar1, gSpeciesInfo[chosenSpecies].speciesName);
-    PlayFanfare(MUS_EVOLVED);
+    gFieldCallback = FieldCB_ContinueScriptHandleMusic;
     SetMainCallback2(gMain.savedCallback);
 }
 

@@ -11,15 +11,15 @@ script Hoenn1_3_EventScript_Poochyena{
 }
  
 text Poochyena_Intro{
-    "Ruff Ruff! Yena!"
+    "Ruff Ruff! Yena!\pThere's no poke-centres around here,\nso when one of your pokemon faint,\lthey'll be gone for good! So be careful!"
 }
  
 text Poochyena_Outro{
-    "whimpers"
+    "Noo I lost!"
 }
  
 text PostBattle_Poochyena{
-    "Yena Poo Poo.\p...\p......\pI can speak English by the way."
+    "Ruff!."
 }
 
 script Hoenn1_3_EventScript_Lotad{
@@ -34,16 +34,11 @@ script Hoenn1_3_EventScript_Lotad{
 script Hoenn1_BirchBag_4{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_4_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_4)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -53,7 +48,7 @@ script Hoenn1_BirchBag_4{
 
 script Hoenn1_4_EventScript_Wingull{
  
-	trainerbattle_single(TRAINER_WINGULL, "Howdy. I'm wingull. Let's battle!", "They should call me losegull, not\nwingull. Squawk :(")
+	trainerbattle_single(TRAINER_WINGULL, "Howdy. I'm wingull. Let's battle!", format("They should call me losegull, not\nwingull. Squawk. By the way, did you know you can nickname pokemon by pressing A on the summary page? I'm nicknaming myself Losegull right now."))
 	msgbox(format("Did you know you can nickname pokemon by pressing A on the summary page? I'm nicknaming myself Losegull right now."), MSGBOX_AUTOCLOSE)
 	waitmessage
     end
@@ -62,8 +57,8 @@ script Hoenn1_4_EventScript_Wingull{
 
 script Hoenn1_4_EventScript_Seedot{
  
-	trainerbattle_single(TRAINER_SEEDOT, format("Hi. I'm about to sow some of my seed inside of you >:)\p...Just kidding. I'm going to sow it on the ground. Because of my seed sower ability."), "Sorry for that joke earlier...")
-	msgbox("I wonder what noise an acorn makes...", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SEEDOT, format("Hi. I'm about to sow some of my seed inside of you >:)\p...Just kidding. I'm going to sow it on the ground. Because of my seed sower ability."), format("Sorry for that joke earlier... By the way, if you already didn't know, you can access your PC through the start menu. If your party is full, any pokemon given to you will automatically go to there."))
+	msgbox(format("You can access your PC through the start menu. If your party is full, pokemon given to you will automatically go to there."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
@@ -73,16 +68,11 @@ script Hoenn1_4_EventScript_Seedot{
 script Hoenn1_BirchBag_5{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_5_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_5)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -93,16 +83,11 @@ script Hoenn1_BirchBag_5{
 script Hoenn1_BirchBag_6{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_6_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_6)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall

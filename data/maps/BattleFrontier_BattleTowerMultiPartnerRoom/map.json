@@ -39,7 +39,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner1",
-      "flag": "FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1"
+      "flag": "FLAG_POCKET_BIRCH_BAG_BUYABLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
@@ -52,7 +52,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner2",
-      "flag": "FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2"
+      "flag": "FLAG_ATK_BOTTLE_CAP_BUYABLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_2",
@@ -65,7 +65,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner3",
-      "flag": "FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3"
+      "flag": "FLAG_HP_BOTTLE_CAP_BUYABLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
@@ -78,7 +78,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner4",
-      "flag": "FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4"
+      "flag": "FLAG_DEF_BOTTLE_CAP_BUYABLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_4",
@@ -91,7 +91,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner5",
-      "flag": "FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5"
+      "flag": "FLAG_SPEED_BOTTLE_CAP_BUYABLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_5",
@@ -104,7 +104,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner6",
-      "flag": "FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6"
+      "flag": "FLAG_SPATK_BOTTLE_CAP_BUYABLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_6",

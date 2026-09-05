@@ -7201,6 +7201,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
     if (SearchTraits(battlerTraits, ABILITY_IRON_FIST) && IsPunchingMove(move))
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
+    if (GetBattlerSide(battlerAtk) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_REGI_KNUCKLES_CHARM, 1) && IsPunchingMove(move))
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
     if (SearchTraits(battlerTraits, ABILITY_SHEER_FORCE) && MoveIsAffectedBySheerForce(move))
         {modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));}
     if (SearchTraits(battlerTraits, ABILITY_SAND_FORCE) && (moveType == TYPE_STEEL || moveType == TYPE_ROCK || moveType == TYPE_GROUND)
@@ -7224,8 +7226,12 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
     if (SearchTraits(battlerTraits, ABILITY_WATER_BUBBLE) && moveType == TYPE_WATER)
         modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
+    if (SearchTraits(battlerTraits, ABILITY_FIRE_MANE) && moveType == TYPE_FIRE)
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
     if (SearchTraits(battlerTraits, ABILITY_STEELWORKER) && moveType == TYPE_STEEL)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+    if (GetBattlerSide(battlerAtk) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_NORMAL_CHARM, 1) && moveType == TYPE_NORMAL)
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.1));
     if (SearchTraits(battlerTraits, ABILITY_PIXILATE) && moveType == TYPE_FAIRY && gBattleStruct->battlerState[battlerAtk].ateBoost)
         modifier = uq4_12_multiply(modifier, UQ_4_12(GetConfig(B_ATE_MULTIPLIER) >= GEN_7 ? 1.2 : 1.3));
     if (SearchTraits(battlerTraits, ABILITY_GALVANIZE) && moveType == TYPE_ELECTRIC && gBattleStruct->battlerState[battlerAtk].ateBoost)
@@ -8058,6 +8064,7 @@ static inline uq4_12_t GetCollisionCourseElectroDriftModifier(enum Move move, uq
 static inline uq4_12_t GetAttackerAbilitiesModifier(enum BattlerId battlerAtk, uq4_12_t typeEffectivenessModifier, bool32 isCrit)
 {
     enum Ability battlerTraits[MAX_MON_TRAITS];
+
     STORE_BATTLER_TRAITS(battlerAtk);
 
     if (SearchTraits(battlerTraits, ABILITY_NEUROFORCE)
@@ -8081,9 +8088,12 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct BattleContext *ctx)
     enum Ability battlerTraits[MAX_MON_TRAITS];
     STORE_BATTLER_TRAITS(ctx->battlerDef);
 
-    if (SearchTraits(battlerTraits, ABILITY_MULTISCALE) && IsBattlerAtMaxHp(ctx->battlerDef))
+    if ((SearchTraits(battlerTraits, ABILITY_MULTISCALE) || SearchTraits(battlerTraits, ABILITY_SHIELD_OF_LEGEND)) && IsBattlerAtMaxHp(ctx->battlerDef))
     {
-        RecordAbilityBattle(ctx->battlerAtk, ABILITY_MULTISCALE);
+        if (SearchTraits(battlerTraits, ABILITY_MULTISCALE))
+            RecordAbilityBattle(ctx->battlerAtk, ABILITY_MULTISCALE);
+        if (SearchTraits(battlerTraits, ABILITY_SHIELD_OF_LEGEND))
+            RecordAbilityBattle(ctx->battlerAtk, ABILITY_SHIELD_OF_LEGEND);
         modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
     }
     if (SearchTraits(battlerTraits, ABILITY_SHADOW_SHIELD) && IsBattlerAtMaxHp(ctx->battlerDef))
@@ -8188,6 +8198,11 @@ static inline uq4_12_t GetAttackerItemsModifier(enum BattlerId battlerAtk, uq4_1
             percentBoost = uq4_12_multiply_half_down(percentBoost, UQ_4_12(1.3));
         }
     }
+
+    if (GetBattlerSide(battlerAtk) == B_SIDE_PLAYER
+     && CheckBagHasItem(ITEM_TINTED_CHARM, 1)
+     && typeEffectivenessModifier <= UQ_4_12(0.5))
+        percentBoost = uq4_12_multiply_half_down(percentBoost, UQ_4_12(1.5));
 
     return percentBoost;
 }
@@ -11103,6 +11118,10 @@ bool32 CanMoveSkipAccuracyCalc(enum BattlerId battlerAtk, enum BattlerId battler
         effect = TRUE;
     }
     else if (GetMoveAccuracy(move) == 0)
+    {
+        effect = TRUE;
+    }
+    else if (GetBattlerSide(battlerAtk) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_REGI_KNUCKLES_CHARM, 1) && IsPunchingMove(move))
     {
         effect = TRUE;
     }

@@ -13152,9 +13152,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_HEX] =
+    [ITEM_TM_DOOM_DESIRE] =
     {
-        .name = ITEM_NAME("TM29"),
+        .name = ITEM_NAME("TM Doom Desire"),
         .price = 3000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13385,7 +13385,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_RAIN_DANCE] =
     {
-        .name = ITEM_NAME("TM50"),
+        .name = ITEM_NAME("TM Rain Dance"),
         .price = 2000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14056,7 +14056,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_GIGA_DRAIN] =
     {
-        .name = ITEM_NAME("TM111"),
+        .name = ITEM_NAME("TM Giga Drain"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14155,7 +14155,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_PSYCHIC] =
     {
-        .name = ITEM_NAME("TM120"),
+        .name = ITEM_NAME("TM Psychic"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -17932,8 +17932,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_LuckyEgg,
-        .iconPalette = gItemIconPalette_LuckyEgg,
+        .iconPic = gItemIcon_PhioneEggCharm,
+        .iconPalette = gItemIconPalette_PhioneEggCharm,
     },
 
     [ITEM_ORAN_CHARM] =
@@ -17950,8 +17950,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OranBerry,
-        .iconPalette = gItemIconPalette_OranBerry,
+        .iconPic = gItemIcon_OranCharm,
+        .iconPalette = gItemIconPalette_OranCharm,
     },
 
     [ITEM_REGI_KNUCKLES_CHARM] =
@@ -17967,8 +17967,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_CatchingCharm,
-        .iconPalette = gItemIconPalette_CatchingCharm,
+        .iconPic = gItemIcon_RegiKnucklesCharm,
+        .iconPalette = gItemIconPalette_RegiKnucklesCharm,
     },
 
     [ITEM_CLONING_CHARM] =
@@ -17984,8 +17984,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_CloningCharm,
+        .iconPalette = gItemIconPalette_CloningCharm,
     },
 
     [ITEM_SHINY_STARTER_CHARM] =
@@ -18036,7 +18036,7 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_OvalCharm,
     },
 
-    [ITEM_SUPER_SHINY_CHARM] =
+    [ITEM_HOOH_FEATHER_CHARM] =
     {
         .name = ITEM_NAME("Super Shiny Charm"),
         .price = 0,
@@ -18063,8 +18063,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PocketBirchBag,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_PocketBirchBagCharm,
+        .iconPalette = gItemIconPalette_PocketBirchBagCharm,
     },
 
     [ITEM_MINTY_CHARM] =
@@ -18090,7 +18090,7 @@ const struct ItemInfo gItemsInfo[] =
         .importance = 1,
         .description = COMPOUND_STRING(
             "Your not very effective moves\n"
-            "do 1.5 more damage."),
+            "do 1.5 times more damage."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,

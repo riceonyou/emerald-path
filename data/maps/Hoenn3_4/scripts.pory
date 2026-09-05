@@ -21,3 +21,48 @@ script Hoenn3_4_Whiscash{
 	waitmessage
     end
 }
+
+script Hoenn3_Itemball_6{
+    lockall
+    call(GiveUncommonItem)
+    removeobject(Hoenn3_Ball6)
+    setflag(FLAG_ITEM_3_6)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_7{
+    lockall
+    call(GiveRareItem)
+    removeobject(Hoenn3_Ball7)
+    setflag(FLAG_ITEM_3_7)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_8{
+    lockall
+    call(GiveUncommonItem)
+    removeobject(Hoenn3_Ball8)
+    setflag(FLAG_ITEM_3_8)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_9{
+    lockall
+    call(GiveCommonItem)
+    removeobject(Hoenn3_Ball9)
+    setflag(FLAG_ITEM_3_9)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_10{
+    lockall
+    call(GiveCommonItem)
+    removeobject(Hoenn3_Ball10)
+    setflag(FLAG_ITEM_3_10)
+    releaseall
+    end
+}

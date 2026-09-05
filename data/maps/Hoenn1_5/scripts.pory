@@ -3,7 +3,7 @@ mapscripts Hoenn1_5_MapScripts {
 
 script Hoenn1_5_EventScript_Oddish{
  
-	trainerbattle_single(TRAINER_ODDISH, format("I don't know what to write here to be honest. The maker of this mod doesn't know how to write and can't think of anything."), format("If someone wants to help me write dialogue please contact me..."))
+	trainerbattle_single(TRAINER_ODDISH, format("I don't know what to write here to be honest. The maker of this mod doesn't know how to write and can't think of anything."), format("If someone wants to help me write dialogue please contact me... Though I won't be able to pay you probably..."))
 	msgbox("Hello again.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -21,7 +21,7 @@ script Hoenn1_5_EventScript_Wurmple{
 
 script Hoenn1_5_EventScript_Slakoth{
  
-	trainerbattle_single(TRAINER_SLAKOTH, format("Hey. I love gudetama. He just like me fr. I wish I could sleep all day with him"), "Back to sleeping. Snork mimimi.")
+	trainerbattle_single(TRAINER_SLAKOTH, format("Hey. I love gudetama. They're just like me fr. I wish I could sleep all day with them"), "Back to sleeping. Snork mimimi.")
 	msgbox("zzzZZZ...", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -31,17 +31,12 @@ script Hoenn1_5_EventScript_Slakoth{
 script Hoenn1_7_EventScript_BirchBag{
 
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
 	
     
     removeobject(HOENN1_7_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_7)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall

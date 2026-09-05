@@ -2,7 +2,7 @@
   "id": "MAP_HOENN1_ALT_2",
   "name": "Hoenn1_Alt_2",
   "layout": "LAYOUT_HOENN1_ALT_2",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DEWFORD",
   "region_map_section": "MAPSEC_AG_Hoenn1_Alt",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -65,6 +65,48 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Hoenn1_Alt_2_EventScript_Barboach",
       "flag": "0"
+    },
+    {
+      "local_id": "HOENN1_ALT_4_BIRCHBAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 28,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_Alt_2_EventScript_BirchBag_4",
+      "flag": "FLAG_BIRCHBAG_1_4"
+    },
+    {
+      "local_id": "HOENN1_ALT_5_BIRCHBAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_Alt_2_EventScript_BirchBag_5",
+      "flag": "FLAG_BIRCHBAG_1_5"
+    },
+    {
+      "local_id": "HOENN1_ALT_6_BIRCHBAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_Alt_2_EventScript_BirchBag_6",
+      "flag": "FLAG_BIRCHBAG_1_6"
     }
   ],
   "warp_events": [

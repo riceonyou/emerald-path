@@ -1419,6 +1419,10 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
             isShiny = TRUE;
             FlagClear(FLAG_NEXT_GIVE_MON_SHINY);
         }
+        else if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
+        {
+            isShiny = TRUE;
+        }
         else
         {
             u16 rand;
@@ -3447,6 +3451,65 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
 void CopyMon(void *dest, void *src, size_t size)
 {
     memcpy(dest, src, size);
+}
+
+void MakeAllPlayerPokemonShinyAndMaxThreeRandomIVs(void)
+{
+    u32 i, j;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
+            continue;
+
+        if (!GetMonData(mon, MON_DATA_IS_SHINY))
+        {
+            bool32 isShiny = TRUE;
+            SetMonData(mon, MON_DATA_IS_SHINY, &isShiny);
+
+            u8 availableIVs[NUM_STATS];
+            for (j = 0; j < NUM_STATS; j++)
+                availableIVs[j] = j;
+
+            for (j = 0; j < 3; j++)
+            {
+                u32 selected = Random() % (NUM_STATS - j);
+                u32 iv = MAX_PER_STAT_IVS;
+                SetMonData(mon, MON_DATA_HP_IV + availableIVs[selected], &iv);
+                availableIVs[selected] = availableIVs[NUM_STATS - j - 1];
+            }
+
+        }
+    }
+
+    for (i = 0; i < TOTAL_BOXES_COUNT; i++)
+    {
+        for (j = 0; j < IN_BOX_COUNT; j++)
+        {
+            struct BoxPokemon *boxMon = GetBoxedMonPtr(i, j);
+            if (GetBoxMonData(boxMon, MON_DATA_SPECIES) == SPECIES_NONE)
+                continue;
+
+            if (!GetBoxMonData(boxMon, MON_DATA_IS_SHINY))
+            {
+                bool32 isShiny = TRUE;
+                SetBoxMonData(boxMon, MON_DATA_IS_SHINY, &isShiny);
+            
+                u8 availableIVs[NUM_STATS];
+                for (u32 k = 0; k < NUM_STATS; k++)
+                    availableIVs[k] = k;
+
+                for (u32 k = 0; k < 3; k++)
+                {
+                    u32 selected = Random() % (NUM_STATS - k);
+                    u32 iv = MAX_PER_STAT_IVS;
+                    SetBoxMonData(boxMon, MON_DATA_HP_IV + availableIVs[selected], &iv);
+                    availableIVs[selected] = availableIVs[NUM_STATS - k - 1];
+                }
+            }
+        }
+    }
 }
 
 u8 GiveCapturedMonToPlayer(struct Pokemon *mon)

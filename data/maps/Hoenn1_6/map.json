@@ -2,7 +2,7 @@
   "id": "MAP_HOENN1_6",
   "name": "Hoenn1_6",
   "layout": "LAYOUT_HOENN1_6",
-  "music": "MUS_DUMMY",
+  "music": "MUS_RUSTBORO",
   "region_map_section": "MAPSEC_AG_Hoenn1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -27,19 +27,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Hoenn1_8_EventScript_BirchBag",
       "flag": "FLAG_BIRCHBAG_1_8"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHROOMISH)",
-      "x": 18,
-      "y": 5,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Hoenn1_6_EventScript_Shroomish",
-      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SURSKIT)",

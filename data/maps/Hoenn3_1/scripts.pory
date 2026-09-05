@@ -31,16 +31,26 @@ script Hoenn3_1_Claydol{
 script Hoenn3_1_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 35)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act3BirchBag)
     
     removeobject(HOENN3_1_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_1)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn3_5_EventScript_BirchBag{
+ 
+    lockall
+    call(Act3BirchBag)
+    
+    removeobject(HOENN3_5_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_3_5)
+    
 
     waitmessage
     releaseall

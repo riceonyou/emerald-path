@@ -2,7 +2,7 @@
   "id": "MAP_HOENN3_2",
   "name": "Hoenn3_2",
   "layout": "LAYOUT_HOENN3_2",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ROUTE113",
   "region_map_section": "MAPSEC_AG_Hoenn3",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -34,19 +34,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SPINDA)",
-      "x": 22,
-      "y": 10,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "Hoenn3_2_Spinda",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(NINETALES)",
       "x": 25,
       "y": 10,
@@ -55,33 +42,33 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "6",
       "script": "Hoenn3_2_Ninetales",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZANGOOSE)",
-      "x": 39,
+      "x": 37,
       "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "Hoenn3_2_Zangoose",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEVIPER)",
-      "x": 38,
+      "x": 36,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "Hoenn3_2_Seviper",
       "flag": "0"
     },
@@ -126,6 +113,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Hoenn3_4_EventScript_BirchBag",
       "flag": "FLAG_BIRCHBAG_3_4"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KECLEON)",
+      "x": 32,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn3_2_KecShop",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(KECLEON)",
+      "x": 33,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn3_2_KecShop_Shiny",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -138,5 +151,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hoenn3_2_KecShop_Sign"
+    }
+  ]
 }

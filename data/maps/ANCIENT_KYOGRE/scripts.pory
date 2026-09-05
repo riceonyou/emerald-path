@@ -12,7 +12,7 @@ script ANCIENT_KYOGRE_EventScript_Kyogre{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    msgbox("You received a\n{STR_VAR_1}!")
+    
     waitmessage
 
     

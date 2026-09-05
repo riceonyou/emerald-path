@@ -2,7 +2,7 @@
   "id": "MAP_HOENN1_ALT_5",
   "name": "Hoenn1_Alt_5",
   "layout": "LAYOUT_HOENN1_ALT_5",
-  "music": "MUS_DUMMY",
+  "music": "MUS_GYM",
   "region_map_section": "MAPSEC_AG_Hoenn1_Alt",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

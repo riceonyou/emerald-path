@@ -4,7 +4,6 @@ mapscripts Hoenn1_Alt_1_MapScripts {
 
 script Hoenn1_Alt_1_ONFRAME {
     setvar(VAR_TEMP_1, 1)
-    turnobject(LOCALID_PLAYER, DIR_WEST)
     call(AfterWarpIntoNewAct)
 }
 
@@ -21,7 +20,7 @@ script Hoenn1_Alt_1_EventScript_Boat{
 script Hoenn1_Alt_1_Sign {
     lockall
 
-    msgbox("Talk to the boat to progress!}")
+    msgbox("Talk to the boat to progress!")
     waitmessage
 
     releaseall
@@ -31,5 +30,71 @@ script Hoenn1_Alt_1_EventScript_Rattata{
 	trainerbattle_single(TRAINER_RATTATA, format("test"), format("test"))
 	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
+    end
+}
+
+script Hoenn1_Alt_1_EventScript_BirchBag_1{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_1_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_1)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_1_EventScript_BirchBag_2{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_2_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_2)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_1_EventScript_BirchBag_3{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_3_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_3)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_1_House_Itemball_2{
+    lockall
+    call(GiveCommonItem)
+    removeobject(HOENN1_ALT_1_ITEM_2)
+    setflag(FLAG_ITEM_1_2)
+    releaseall
+    end
+}
+
+script Hoenn1_Alt_1_House_Itemball_3{
+    lockall
+    call(GiveCommonItem)
+    removeobject(HOENN1_ALT_1_ITEM_3)
+    setflag(FLAG_ITEM_1_3)
+    releaseall
     end
 }

@@ -1,0 +1,14 @@
+mapscripts Hoenn1_Alt_1_House_MapScripts {
+
+}
+
+
+
+script Hoenn1_Alt_1_House_Itemball_1{
+    lockall
+    call(GiveUncommonItem)
+    removeobject(HOENN1_ALT_1_HOUSE_ITEM_1)
+    setflag(FLAG_ITEM_1_1)
+    releaseall
+    end
+}

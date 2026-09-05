@@ -11,16 +11,11 @@ script Hoenn1_1_EventScript_BirchBag{
  
     lockall
 
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_1_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_1)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -51,16 +46,11 @@ text PostBattle_Zigzagoon{
 script Hoenn1_2_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_2_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_2)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -71,16 +61,11 @@ script Hoenn1_2_EventScript_BirchBag{
 script Hoenn1_3_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_3_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_3)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -90,7 +75,7 @@ script Hoenn1_3_EventScript_BirchBag{
 
 script Hoenn1_1_Itemball_1{
     lockall
-    giveitem(ITEM_ORAN_BERRY, 1)
+    call(GiveCommonItem)
     removeobject(HOENN1_1_ITEM)
     setflag(FLAG_ITEM_1_1)
     releaseall
@@ -99,7 +84,7 @@ script Hoenn1_1_Itemball_1{
 
 script Hoenn1_1_Itemball_2{
     lockall
-    giveitem(ITEM_LUM_BERRY, 1)
+    call(GiveCommonItem)
     removeobject(HOENN1_2_ITEM)
     setflag(FLAG_ITEM_1_2)
     releaseall

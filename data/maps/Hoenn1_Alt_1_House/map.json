@@ -2,7 +2,7 @@
   "id": "MAP_HOENN1_ALT_1_HOUSE",
   "name": "Hoenn1_Alt_1_House",
   "layout": "LAYOUT_HOENN1_ALT_1_HOUSE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ROUTE104",
   "region_map_section": "MAPSEC_AG_Hoenn1_Alt",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,7 +13,22 @@
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "HOENN1_ALT_1_HOUSE_ITEM_1",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hoenn1_Alt_1_House_Itemball_1",
+      "flag": "FLAG_ITEM_1_1"
+    }
+  ],
   "warp_events": [
     {
       "x": 3,

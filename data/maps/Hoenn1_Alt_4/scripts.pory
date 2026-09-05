@@ -31,3 +31,35 @@ script Hoenn1_Alt_4_EventScript_Meditite{
 	waitmessage
     end
 }
+
+script Hoenn1_Alt_4_EventScript_BirchBag_8{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_8_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_8)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_4_EventScript_BirchBag_9{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_9_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_9)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}

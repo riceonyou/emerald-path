@@ -15,9 +15,10 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "Birch",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 10,
-      "y": 10,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -30,7 +31,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MILTANK)",
       "x": 18,
-      "y": 10,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -43,7 +44,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHANSEY)",
       "x": 16,
-      "y": 10,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -56,7 +57,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(KECLEON)",
       "x": 3,
-      "y": 16,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -69,7 +70,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(KECLEON)",
       "x": 5,
-      "y": 16,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -82,7 +83,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DIANCIE)",
       "x": 4,
-      "y": 24,
+      "y": 32,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -93,9 +94,10 @@
       "flag": "0"
     },
     {
+      "local_id": "Chimecho",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHIMECHO)",
-      "x": 21,
-      "y": 13,
+      "x": 11,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -104,6 +106,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Hub_Event_Script_Chimecho",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GOLEM)",
+      "x": 6,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hub_Event_Script_Golem",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAROWAK)",
+      "x": 15,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hub_Event_Script_Marowak",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TOGEDEMARU)",
+      "x": 0,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hub_Event_Script_Togedemaru",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(UNOWN)",
+      "x": 25,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hub_Event_Script_Unown",
+      "flag": "0"
     }
   ],
   "warp_events": [],
@@ -111,8 +165,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 8,
-      "y": 11,
+      "x": 9,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HUB1_Run_Stats_Sign"

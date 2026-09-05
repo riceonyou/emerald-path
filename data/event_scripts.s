@@ -1837,3 +1837,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ANCIENT_MEWTWO/scripts.inc"
 
 	.include "data/maps/ANCIENT_MEWTWO_2/scripts.inc"
+
+	.include "data/maps/ANCIENT_LUGIA/scripts.inc"
+
+	.include "data/maps/ANCIENT_JIRACHI/scripts.inc"
+
+	.include "data/maps/ANCIENT_HOOH/scripts.inc"
+
+	.include "data/maps/ANCIENT_DEOXYS/scripts.inc"

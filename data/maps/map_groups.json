@@ -1216,7 +1216,11 @@
     "ANCIENT_REGIS",
     "ANCIENT_MANAPHY",
     "ANCIENT_SHAYMIN",
-    "ANCIENT_MEWTWO_2"
+    "ANCIENT_MEWTWO_2",
+    "ANCIENT_HOOH",
+    "ANCIENT_JIRACHI",
+    "ANCIENT_LUGIA",
+    "ANCIENT_DEOXYS"
   ],
   "gMapGroup_AG_Elite_4": [
     "AGSkyPillarOutside",

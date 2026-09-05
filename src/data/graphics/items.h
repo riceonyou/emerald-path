@@ -1775,6 +1775,35 @@ const u16 gItemIconPalette_ExpCharm[] = INCBIN_U16("graphics/items/icon_palettes
 const u32 gItemIcon_GlimmeringCharm[] = INCBIN_U32("graphics/items/icons/glimmering_charm.4bpp.smol");
 const u16 gItemIconPalette_GlimmeringCharm[] = INCBIN_U16("graphics/items/icon_palettes/glimmering_charm.gbapal");
 
+// const u32 gItemIcon_CloningCharm[] = INCBIN_U32("graphics/items/icons/CloningCharm.4bpp.smol");
+// const u16 gItemIconPalette_CloningCharm[] = INCBIN_U16("graphics/items/icon_palettes/CloningCharm.gbapal");
+
+const u32 gItemIcon_PhioneEggCharm[] = INCBIN_U32("graphics/items/icons/PhioneEgg.4bpp.smol");
+const u16 gItemIconPalette_PhioneEggCharm[] = INCBIN_U16("graphics/items/icon_palettes/PhioneEgg.gbapal");
+
+const u32 gItemIcon_RegiKnucklesCharm[] = INCBIN_U32("graphics/items/icons/PhioneEgg.4bpp.smol");
+const u16 gItemIconPalette_RegiKnucklesCharm[] = INCBIN_U16("graphics/items/icon_palettes/PhioneEgg.gbapal");
+
+const u32 gItemIcon_OranCharm[] = INCBIN_U32("graphics/items/icons/PhioneEgg.4bpp.smol");
+const u16 gItemIconPalette_OranCharm[] = INCBIN_U16("graphics/items/icon_palettes/PhioneEgg.gbapal");
+
+const u32 gItemIcon_CloningCharm[] = INCBIN_U32("graphics/items/icons/PhioneEgg.4bpp.smol");
+const u16 gItemIconPalette_CloningCharm[] = INCBIN_U16("graphics/items/icon_palettes/PhioneEgg.gbapal");
+
+const u32 gItemIcon_PocketBirchBagCharm[] = INCBIN_U32("graphics/items/icons/PhioneEgg.4bpp.smol");
+const u16 gItemIconPalette_PocketBirchBagCharm[] = INCBIN_U16("graphics/items/icon_palettes/PhioneEgg.gbapal");
+
+// const u32 gItemIcon_RegiKnucklesCharm[] = INCBIN_U32("graphics/items/icons/RegiKnuckles.4bpp.smol");
+// const u16 gItemIconPalette_RegiKnucklesCharm[] = INCBIN_U16("graphics/items/icon_palettes/RegiKnuckles.gbapal");
+
+// const u32 gItemIcon_OranCharm[] = INCBIN_U32("graphics/items/icons/OranCharm.4bpp.smol");
+// const u16 gItemIconPalette_OranCharm[] = INCBIN_U16("graphics/items/icon_palettes/OranCharm.gbapal");
+
+
+
+// extern const u32 gItemIcon_PocketBirchBagCharm["graphics/items/icons/PocketBirchBag.4bpp.smol"];
+// extern const u16 gItemIconPalette_PocketBirchBagCharm["graphics/items/icon_palettes/PocketBirchBag.gbapal"];
+
 // Form-changing Key Items
 
 const u32 gItemIcon_RotomCatalog[] = INCBIN_U32("graphics/items/icons/rotom_catalog.4bpp.smol");

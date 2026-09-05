@@ -19,16 +19,14 @@ ANCIENT_KYOGRE_EventScript_Kyogre::
 	special ChooseBirchBagPokemonWeighted
 # 14 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitstate
-# 15 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_1
 # 16 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitmessage
 # 19 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 20 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_2
+	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_1
 # 22 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_3
+	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_2
 # 24 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	special WarpToNextAct
 # 25 "data/maps/ANCIENT_KYOGRE/scripts.pory"
@@ -41,13 +39,9 @@ ANCIENT_KYOGRE_EventScript_Kyogre_Text_0:
 	.string "Take a pokemon with you!$"
 
 ANCIENT_KYOGRE_EventScript_Kyogre_Text_1:
-# 15 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	.string "You received a\n{STR_VAR_1}!$"
-
-ANCIENT_KYOGRE_EventScript_Kyogre_Text_2:
 # 20 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	.string "The level cap has been raised to 42$"
 
-ANCIENT_KYOGRE_EventScript_Kyogre_Text_3:
+ANCIENT_KYOGRE_EventScript_Kyogre_Text_2:
 # 22 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"

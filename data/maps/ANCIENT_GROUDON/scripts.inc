@@ -19,16 +19,14 @@ ANCIENT_GROUDON_EventScript_Groudon::
 	special ChooseBirchBagPokemonWeighted
 # 15 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitstate
-# 16 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_1
 # 17 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitmessage
 # 19 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 20 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_2
+	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_1
 # 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_3
+	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_2
 # 24 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	special WarpToNextAct
 # 25 "data/maps/ANCIENT_GROUDON/scripts.pory"
@@ -41,13 +39,9 @@ ANCIENT_GROUDON_EventScript_Groudon_Text_0:
 	.string "Take a pokemon with you!$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_1:
-# 16 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	.string "You received a\n{STR_VAR_1}!$"
-
-ANCIENT_GROUDON_EventScript_Groudon_Text_2:
 # 20 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "The level cap has been raised to 42$"
 
-ANCIENT_GROUDON_EventScript_Groudon_Text_3:
+ANCIENT_GROUDON_EventScript_Groudon_Text_2:
 # 22 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "Boop beep boop.\lNow time to get you to the next\nstage.$"

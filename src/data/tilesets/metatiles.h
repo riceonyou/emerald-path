@@ -408,3 +408,12 @@ const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
 
 #endif // IS_FRLG
+
+const u16 gMetatiles_Space[] = INCBIN_U16("data/tilesets/secondary/space/metatiles.bin");
+const u16 gMetatileAttributes_Space[] = INCBIN_U16("data/tilesets/secondary/space/metatile_attributes.bin");
+
+const u16 gMetatiles_LugiaAltar[] = INCBIN_U16("data/tilesets/secondary/lugia_altar/metatiles.bin");
+const u16 gMetatileAttributes_LugiaAltar[] = INCBIN_U16("data/tilesets/secondary/lugia_altar/metatile_attributes.bin");
+
+const u16 gMetatiles_AutmnRuins[] = INCBIN_U16("data/tilesets/secondary/autmn_ruins/metatiles.bin");
+const u16 gMetatileAttributes_AutmnRuins[] = INCBIN_U16("data/tilesets/secondary/autmn_ruins/metatile_attributes.bin");

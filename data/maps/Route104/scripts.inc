@@ -54,7 +54,7 @@ Route104_EventScript_RivalTrigger::
 	waitmovement 0
 	delay 10
 	addobject LOCALID_ROUTE104_RIVAL
-	clearflag FLAG_HIDE_ROUTE_104_RIVAL
+	clearflag FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE
 	applymovement LOCALID_PLAYER, Route104_Movement_PlayerBackUp
 	waitmovement 0
 	applymovement LOCALID_ROUTE104_RIVAL, Route104_Movement_RivalExitBrineysCottage

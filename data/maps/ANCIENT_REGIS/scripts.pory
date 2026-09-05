@@ -34,7 +34,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
-            msgbox("You received a\n{STR_VAR_1}!")
+            
             
         case 1://Regice
             msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is an ice pokemon.")
@@ -45,7 +45,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
-            msgbox("You received a\n{STR_VAR_1}!")
+            
 
         case 2://Registeel
             msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a steel pokemon.")
@@ -56,7 +56,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
-            msgbox("You received a\n{STR_VAR_1}!")
+            
     }
     waitmessage
     msgbox("You will also be given the Regi Knuckles.\nBeep.")

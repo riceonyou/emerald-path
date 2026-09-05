@@ -39,16 +39,11 @@ script Hoenn1_6_EventScript_Surskit{
 script Hoenn1_8_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_8_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_8)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -67,7 +62,7 @@ script Hoenn1_7_EventScript_Skitty{
 
 script Hoenn1_7_EventScript_Nincada{
  
-	trainerbattle_single(TRAINER_NINCADA, format("My favourite football player of all time? I don't really watch soccer but Erling Haaland I guess. I saw some reels of him and I love his smooth, voluptuous hair."), format("What? What do you mean he shaved his head?"))
+	trainerbattle_single(TRAINER_NINCADA, format("My favourite football player of all time? I don't really watch soccer but Erling Haaland I guess. I saw some reels of him and I love his smooth, voluptuous hair."), format("What? What do you mean he's bald now?"))
 	msgbox(format("That's a shame. I'd like to have hair like him."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -78,16 +73,11 @@ script Hoenn1_7_EventScript_Nincada{
 script Hoenn1_9_EventScript_BirchBag{
 
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 33)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act1BirchBag)
     
     removeobject(HOENN1_9_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_1_9)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall

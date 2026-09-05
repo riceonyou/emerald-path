@@ -50,9 +50,9 @@ Hoenn2_4_Loudred::
 	end
 
 
-Hoenn2_4_Volbeat::
+Hoenn2_4_Electrode::
 # 38 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Volbeat_Text_0
+	trainerbattle_single TRAINER_ELECTRODE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
 # 39 "data/maps/Hoenn2_4/scripts.pory"
 	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
 # 40 "data/maps/Hoenn2_4/scripts.pory"
@@ -60,19 +60,19 @@ Hoenn2_4_Volbeat::
 	end
 
 
-Hoenn2_4_Illumise::
-# 44 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Volbeat_Text_0
+Hoenn2_4_Volbeat::
 # 45 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Volbeat_Text_0
 # 46 "data/maps/Hoenn2_4/scripts.pory"
+	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+# 47 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
 
 
-Hoenn2_4_Plusle::
+Hoenn2_4_Illumise::
 # 51 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Volbeat_Text_0
 # 52 "data/maps/Hoenn2_4/scripts.pory"
 	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
 # 53 "data/maps/Hoenn2_4/scripts.pory"
@@ -80,130 +80,166 @@ Hoenn2_4_Plusle::
 	end
 
 
-Hoenn2_4_Minun::
-# 57 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+Hoenn2_4_Plusle::
 # 58 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
 # 59 "data/maps/Hoenn2_4/scripts.pory"
+	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+# 60 "data/maps/Hoenn2_4/scripts.pory"
+	waitmessage
+	end
+
+
+Hoenn2_4_Minun::
+# 64 "data/maps/Hoenn2_4/scripts.pory"
+	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+# 65 "data/maps/Hoenn2_4/scripts.pory"
+	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+# 66 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
 
 
 Hoenn2_4_Rival::
-# 64 "data/maps/Hoenn2_4/scripts.pory"
+# 71 "data/maps/Hoenn2_4/scripts.pory"
 	call RivalFight2
 	return
 
 
 Hoenn2_4_EventScript_BirchBag::
-# 69 "data/maps/Hoenn2_4/scripts.pory"
+# 76 "data/maps/Hoenn2_4/scripts.pory"
 	lockall
-# 70 "data/maps/Hoenn2_4/scripts.pory"
-	playse SE_CLICK
-# 71 "data/maps/Hoenn2_4/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 72 "data/maps/Hoenn2_4/scripts.pory"
-	setvar VAR_0x8000, 34
-# 73 "data/maps/Hoenn2_4/scripts.pory"
-	special LoadBirchBagPoolById
-# 74 "data/maps/Hoenn2_4/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 75 "data/maps/Hoenn2_4/scripts.pory"
-	waitstate
 # 77 "data/maps/Hoenn2_4/scripts.pory"
-	removeobject HOENN2_4_BIRCHBAG
-# 78 "data/maps/Hoenn2_4/scripts.pory"
-	setflag FLAG_BIRCHBAG_2_4
+	call Act2BirchBag
 # 79 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_EventScript_BirchBag_Text_0
-# 81 "data/maps/Hoenn2_4/scripts.pory"
+	removeobject HOENN2_4_BIRCHBAG
+# 80 "data/maps/Hoenn2_4/scripts.pory"
+	setflag FLAG_BIRCHBAG_2_4
+# 83 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
-# 82 "data/maps/Hoenn2_4/scripts.pory"
+# 84 "data/maps/Hoenn2_4/scripts.pory"
 	releaseall
 	end
 
 
 Hoenn2_5_EventScript_BirchBag::
-# 89 "data/maps/Hoenn2_4/scripts.pory"
-	lockall
-# 90 "data/maps/Hoenn2_4/scripts.pory"
-	playse SE_CLICK
 # 91 "data/maps/Hoenn2_4/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	lockall
 # 92 "data/maps/Hoenn2_4/scripts.pory"
-	setvar VAR_0x8000, 34
-# 93 "data/maps/Hoenn2_4/scripts.pory"
-	special LoadBirchBagPoolById
+	call Act2BirchBag
 # 94 "data/maps/Hoenn2_4/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 95 "data/maps/Hoenn2_4/scripts.pory"
-	waitstate
-# 97 "data/maps/Hoenn2_4/scripts.pory"
 	removeobject HOENN2_5_BIRCHBAG
-# 98 "data/maps/Hoenn2_4/scripts.pory"
+# 95 "data/maps/Hoenn2_4/scripts.pory"
 	setflag FLAG_BIRCHBAG_2_5
-# 99 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_EventScript_BirchBag_Text_0
-# 101 "data/maps/Hoenn2_4/scripts.pory"
+# 98 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
-# 102 "data/maps/Hoenn2_4/scripts.pory"
+# 99 "data/maps/Hoenn2_4/scripts.pory"
 	releaseall
 	end
 
 
 Hoenn2_6_EventScript_BirchBag::
-# 109 "data/maps/Hoenn2_4/scripts.pory"
+# 106 "data/maps/Hoenn2_4/scripts.pory"
 	lockall
-# 110 "data/maps/Hoenn2_4/scripts.pory"
-	playse SE_CLICK
-# 111 "data/maps/Hoenn2_4/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 112 "data/maps/Hoenn2_4/scripts.pory"
-	setvar VAR_0x8000, 34
-# 113 "data/maps/Hoenn2_4/scripts.pory"
-	special LoadBirchBagPoolById
-# 114 "data/maps/Hoenn2_4/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 115 "data/maps/Hoenn2_4/scripts.pory"
-	waitstate
-# 117 "data/maps/Hoenn2_4/scripts.pory"
+# 107 "data/maps/Hoenn2_4/scripts.pory"
+	call Act2BirchBag
+# 109 "data/maps/Hoenn2_4/scripts.pory"
 	removeobject HOENN2_6_BIRCHBAG
-# 118 "data/maps/Hoenn2_4/scripts.pory"
+# 110 "data/maps/Hoenn2_4/scripts.pory"
 	setflag FLAG_BIRCHBAG_2_6
-# 119 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_EventScript_BirchBag_Text_0
-# 121 "data/maps/Hoenn2_4/scripts.pory"
+# 113 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
-# 122 "data/maps/Hoenn2_4/scripts.pory"
+# 114 "data/maps/Hoenn2_4/scripts.pory"
 	releaseall
 	end
 
 
 Hoenn2_7_EventScript_BirchBag::
-# 129 "data/maps/Hoenn2_4/scripts.pory"
+# 121 "data/maps/Hoenn2_4/scripts.pory"
 	lockall
-# 130 "data/maps/Hoenn2_4/scripts.pory"
-	playse SE_CLICK
-# 131 "data/maps/Hoenn2_4/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 132 "data/maps/Hoenn2_4/scripts.pory"
-	setvar VAR_0x8000, 34
-# 133 "data/maps/Hoenn2_4/scripts.pory"
-	special LoadBirchBagPoolById
-# 134 "data/maps/Hoenn2_4/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 135 "data/maps/Hoenn2_4/scripts.pory"
-	waitstate
-# 137 "data/maps/Hoenn2_4/scripts.pory"
+# 122 "data/maps/Hoenn2_4/scripts.pory"
+	call Act2BirchBag
+# 124 "data/maps/Hoenn2_4/scripts.pory"
 	removeobject HOENN2_7_BIRCHBAG
-# 138 "data/maps/Hoenn2_4/scripts.pory"
+# 125 "data/maps/Hoenn2_4/scripts.pory"
 	setflag FLAG_BIRCHBAG_2_7
-# 139 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_EventScript_BirchBag_Text_0
-# 141 "data/maps/Hoenn2_4/scripts.pory"
+# 128 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
-# 142 "data/maps/Hoenn2_4/scripts.pory"
+# 129 "data/maps/Hoenn2_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn2_8_EventScript_BirchBag::
+# 136 "data/maps/Hoenn2_4/scripts.pory"
+	lockall
+# 137 "data/maps/Hoenn2_4/scripts.pory"
+	call Act2BirchBag
+# 139 "data/maps/Hoenn2_4/scripts.pory"
+	removeobject HOENN2_8_BIRCHBAG
+# 140 "data/maps/Hoenn2_4/scripts.pory"
+	setflag FLAG_BIRCHBAG_2_8
+# 143 "data/maps/Hoenn2_4/scripts.pory"
+	waitmessage
+# 144 "data/maps/Hoenn2_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn2_9_EventScript_BirchBag::
+# 151 "data/maps/Hoenn2_4/scripts.pory"
+	lockall
+# 152 "data/maps/Hoenn2_4/scripts.pory"
+	call Act2BirchBag
+# 154 "data/maps/Hoenn2_4/scripts.pory"
+	removeobject HOENN2_9_BIRCHBAG
+# 155 "data/maps/Hoenn2_4/scripts.pory"
+	setflag FLAG_BIRCHBAG_2_9
+# 158 "data/maps/Hoenn2_4/scripts.pory"
+	waitmessage
+# 159 "data/maps/Hoenn2_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn2_4_Itemball_3::
+# 165 "data/maps/Hoenn2_4/scripts.pory"
+	lockall
+# 166 "data/maps/Hoenn2_4/scripts.pory"
+	call GiveUncommonItem
+# 167 "data/maps/Hoenn2_4/scripts.pory"
+	removeobject Hoenn2_Ball3
+# 168 "data/maps/Hoenn2_4/scripts.pory"
+	setflag FLAG_ITEM_2_3
+# 169 "data/maps/Hoenn2_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn2_4_Itemball_4::
+# 174 "data/maps/Hoenn2_4/scripts.pory"
+	lockall
+# 175 "data/maps/Hoenn2_4/scripts.pory"
+	call GiveUncommonItem
+# 176 "data/maps/Hoenn2_4/scripts.pory"
+	removeobject Hoenn2_Ball4
+# 177 "data/maps/Hoenn2_4/scripts.pory"
+	setflag FLAG_ITEM_2_4
+# 178 "data/maps/Hoenn2_4/scripts.pory"
+	releaseall
+	end
+
+
+Hoenn2_4_Itemball_5::
+# 183 "data/maps/Hoenn2_4/scripts.pory"
+	lockall
+# 184 "data/maps/Hoenn2_4/scripts.pory"
+	call GiveRareItem
+# 185 "data/maps/Hoenn2_4/scripts.pory"
+	removeobject Hoenn2_Ball5
+# 186 "data/maps/Hoenn2_4/scripts.pory"
+	setflag FLAG_ITEM_2_5
+# 187 "data/maps/Hoenn2_4/scripts.pory"
 	releaseall
 	end
 
@@ -213,9 +249,5 @@ Hoenn2_4_Azumarill_Text_0:
 	.string "test$"
 
 Hoenn2_4_Volbeat_Text_0:
-# 38 "data/maps/Hoenn2_4/scripts.pory"
+# 45 "data/maps/Hoenn2_4/scripts.pory"
 	.string "text$"
-
-Hoenn2_4_EventScript_BirchBag_Text_0:
-# 79 "data/maps/Hoenn2_4/scripts.pory"
-	.string "You received a\n{STR_VAR_1}!$"

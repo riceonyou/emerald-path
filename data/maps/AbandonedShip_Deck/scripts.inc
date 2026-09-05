@@ -3,6 +3,6 @@ AbandonedShip_Deck_MapScripts::
 	.byte 0
 
 AbandonedShip_Deck_OnTransition:
-	setflag FLAG_LANDMARK_ABANDONED_SHIP
+	setflag FLAG_GIVE_MINTY_CHARM_MINT
 	end
 

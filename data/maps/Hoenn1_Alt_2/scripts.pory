@@ -32,3 +32,51 @@ script Hoenn1_Alt_2_EventScript_Barboach{
 	waitmessage
     end
 }
+
+script Hoenn1_Alt_2_EventScript_BirchBag_4{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_4_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_4)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_2_EventScript_BirchBag_5{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_5_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_5)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_2_EventScript_BirchBag_6{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_6_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_6)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}

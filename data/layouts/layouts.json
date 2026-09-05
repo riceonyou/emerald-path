@@ -9438,7 +9438,7 @@
     {
       "id": "LAYOUT_HOENN2_4",
       "name": "Hoenn2_4_Layout",
-      "width": 34,
+      "width": 49,
       "height": 21,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -9448,8 +9448,8 @@
     {
       "id": "LAYOUT_HOENN2_5",
       "name": "Hoenn2_5_Layout",
-      "width": 3,
-      "height": 1,
+      "width": 23,
+      "height": 21,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Hoenn2_5/border.bin",
@@ -9639,7 +9639,7 @@
       "id": "LAYOUT_HUB1",
       "name": "Hub1_Layout",
       "width": 30,
-      "height": 32,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Hub1/border.bin",
@@ -9814,6 +9814,46 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/ANCIENT_MEWTWO/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_MEWTWO/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_LUGIA",
+      "name": "ANCIENT_LUGIA_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/ANCIENT_LUGIA/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_LUGIA/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_JIRACHI",
+      "name": "ANCIENT_JIRACHI_Layout",
+      "width": 26,
+      "height": 21,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/ANCIENT_JIRACHI/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_JIRACHI/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_HOOH",
+      "name": "ANCIENT_HOOH_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ANCIENT_HOOH/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_HOOH/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_DEOXYS",
+      "name": "ANCIENT_DEOXYS_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_AutmnRuins",
+      "border_filepath": "data/layouts/ANCIENT_DEOXYS/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_DEOXYS/map.bin"
     }
   ]
 }

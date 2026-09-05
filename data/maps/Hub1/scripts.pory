@@ -19,7 +19,36 @@ script AfterWarpIntoNewAct{
 			msgbox("Your Phione egg hatched into a Phione!")
         }
 
+		//Give Minty Charm Mint
+        if (flag(FLAG_GIVE_MINTY_CHARM_MINT)){
+			msgbox("Your Minty Charm activated!")
+			randomelement(ITEM_LONELY_MINT, ITEM_ADAMANT_MINT, ITEM_NAUGHTY_MINT, ITEM_BRAVE_MINT, ITEM_BOLD_MINT, ITEM_IMPISH_MINT, ITEM_LAX_MINT, ITEM_RELAXED_MINT, ITEM_MODEST_MINT, ITEM_MILD_MINT, ITEM_RASH_MINT, ITEM_QUIET_MINT, ITEM_CALM_MINT, ITEM_GENTLE_MINT, ITEM_CAREFUL_MINT, ITEM_SASSY_MINT, ITEM_SERIOUS_MINT)
+			giveitem(VAR_RESULT)
+			clearflag(FLAG_GIVE_MINTY_CHARM_MINT)
+        }
 
+		//Hub stuff
+		if (var(VAR_CURRENT_ACT) == 0){
+			
+			if(var(VAR_COINS_COLLECTED_IN_A_RUN) > 0){
+				buffernumberstring(STR_VAR_1, VAR_COINS_COLLECTED_IN_A_RUN)
+				msgbox("You managed to collect\n{STR_VAR_1} COINS in your last run!")
+			}
+
+			//UNLOCKS
+			if((!flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 0)){
+				setflag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)
+				msgbox(format("You've unlocked the Minty Charm as a starter charm!"))
+			}
+			if((!flag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 3)){
+				setflag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)
+				msgbox(format("You've unlocked the Tinted Charm as a starter charm!"))
+			}
+			if((!flag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 6)){
+				setflag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)
+				msgbox(format("You've unlocked the Normal Charm as a starter charm!"))
+			}
+		}
 		releaseall
     }
 	
@@ -38,6 +67,37 @@ script GiveUncommonItem{
 script GiveRareItem{
 	special(BufferRareItem)
 	giveitem(VAR_RESULT)
+}
+
+script Act1BirchBag{
+	playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 33)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+	waitstate
+	playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
+}
+script Act2BirchBag{
+	playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 34)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+	waitstate
+	playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
+}
+script Act3BirchBag{
+	playse(SE_CLICK)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 35)
+    special(LoadBirchBagPoolById)
+    special(ChooseBirchBagPokemonWeighted)
+	waitstate
+	playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
 }
 
 script AbraTeleport{
@@ -122,6 +182,9 @@ script RivalFight4 {
 
 
 //----------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------STUFF FOR THE ACTUAL HUB AREA----------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------
 
 script HUB1_Run_Stats_Sign {
     lockall
@@ -147,10 +210,7 @@ script HUB1_ONWARP {
 
 script HUB1_ONFRAME {
 	setvar(VAR_TEMP_2, 1)
-
-	//STUFF FOR WHEN A RUN FINISHES
-	setvar(VAR_CURRENT_ACT, 0)
-	special(ClearMoney)
+	call(AfterWarpIntoNewAct)
 
 
 	if(!flag(FLAG_SYS_NEW_GAME)){// STUFF FOR NEW GAME
@@ -322,8 +382,27 @@ script Hub_Event_Script_Birch{
     msgbox("Would you like to start a run?", MSGBOX_YESNO)
 		switch (var(VAR_RESULT)) {
 			case YES:
-				msgbox("Alright then! Here we go!")
+				msgbox("Alright then!")
+				closemessage
+				applymovement(Chimecho, moves(
+					walk_down
+					face_left
+				))
+				waitmovement
+				msgbox(format("Don't forget to take a starter charm with you!"))
 				call(GiveStarterCharm)
+				msgbox("Now off you go! Good luck!")
+				closemessage
+				applymovement(Birch, moves(
+					walk_up
+					walk_left
+					face_right
+				))
+				waitmovement
+				applymovement(LOCALID_PLAYER, moves(
+					walk_up * 4
+				))
+				waitmovement
 				special(WarpToNextAct)
 			case NO:
 				msgbox("Okay! Let me know when you're ready.")
@@ -776,25 +855,16 @@ script KecShop_Sign {
 script KecShop {
     lockall
     msgbox("Welcome to the Kecleon Brother's shop!")
-	if(flag(FLAG_MEMORY_MUSHROOM_UNLOCKED)){
-		dynmultipush("Mem. Mushroom (¥200)",ITEM_MEMORY_MUSHROOM)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(flag(FLAG_RARE_CANDY_UNLOCKED)){
-		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(flag(FLAG_ORAN_BERRY_UNLOCKED)){
-		dynmultipush("Oran Berry (¥200)",ITEM_ORAN_BERRY)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(flag(FLAG_LUM_BERRY_UNLOCKED)){
+	dynmultipush("Oran Berry (¥200)",ITEM_ORAN_BERRY)
+	if(flag(FLAG_LUM_BERRY_BUYABLE)){
 		dynmultipush("Lum Berry (¥500)",ITEM_LUM_BERRY)
-		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_SERIOUS_MINT_UNLOCKED)){
+	dynmultipush("Mem. Mushroom (¥200)",ITEM_MEMORY_MUSHROOM)
+	if(flag(FLAG_RARE_CANDY_BUYABLE)){
+		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
+	}
+	if(flag(FLAG_SERIOUS_MINT_BUYABLE)){
 		dynmultipush("Serious Mint (¥2000)",ITEM_SERIOUS_MINT)
-		addvar(VAR_TEMP_A, 1)
 	}
 
 	if(var(VAR_TEMP_A) != 0){
@@ -869,43 +939,43 @@ script KecShop {
 script KecShop_Shiny {
     lockall
     msgbox("Welcome to the Kecleon Brother's shop!")
-	if(flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
+	if(flag(FLAG_TM_ROCK_SMASH_BUYABLE)){
 		dynmultipush("TM Rock Smash (¥900)",ITEM_TM_ROCK_SMASH)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_SWIFT_UNLOCKED)){
+	if(flag(FLAG_TM_SWIFT_BUYABLE)){
 		dynmultipush("TM Swift (¥500)",ITEM_TM_SWIFT)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_CUT_UNLOCKED)){
+	if(flag(FLAG_TM_CUT_BUYABLE)){
 		dynmultipush("TM Cut (¥500)",ITEM_TM_CUT)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
+	if(flag(FLAG_TM_NOBLE_ROAR_BUYABLE)){
 		dynmultipush("TM Noble Roar (¥400)",ITEM_TM_NOBLE_ROAR)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_CHARM_UNLOCKED)){
+	if(flag(FLAG_TM_CHARM_BUYABLE)){
 		dynmultipush("TM Charm (¥400)",ITEM_TM_CHARM)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_FAKE_TEARS_UNLOCKED)){
+	if(flag(FLAG_TM_FAKE_TEARS_BUYABLE)){
 		dynmultipush("TM Fake Tears (¥400)",ITEM_TM_FAKE_TEARS)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_CONFUSE_RAY_UNLOCKED)){
+	if(flag(FLAG_TM_CONFUSE_RAY_BUYABLE)){
 		dynmultipush("TM Confuse Ray (¥800)",ITEM_TM_CONFUSE_RAY)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_THUNDER_WAVE_UNLOCKED)){
+	if(flag(FLAG_TM_THUNDER_WAVE_BUYABLE)){
 		dynmultipush("TM Thunder Wave (¥800)",ITEM_TM_THUNDER_WAVE)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_WILL_O_WISP_UNLOCKED)){
+	if(flag(FLAG_TM_WILL_O_WISP_BUYABLE)){
 		dynmultipush("TM Will-O-Wisp (¥800)",ITEM_TM_WILL_O_WISP)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_TOXIC_UNLOCKED)){
+	if(flag(FLAG_TM_TOXIC_BUYABLE)){
 		dynmultipush("TM Toxic (¥800)",ITEM_TM_TOXIC)
 		addvar(VAR_TEMP_A, 1)
 	}
@@ -1040,17 +1110,8 @@ script Hub_Event_Script_Kecleon {
 	faceplayer
     setvar(VAR_TEMP_A, 0)
 	msgbox("Hey there! Would you like me to\nstock an item?")
-	if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED)){
-		dynmultipush("Memory Mushroom (¥200)",ITEM_MEMORY_MUSHROOM)
-		addvar(VAR_TEMP_A, 1)
-	}
 	if(!flag(FLAG_RARE_CANDY_UNLOCKED)){
 		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
-		addvar(VAR_TEMP_A, 1)
-	}
-
-	if(!flag(FLAG_ORAN_BERRY_UNLOCKED)){
-		dynmultipush("Oran Berry (¥200)",ITEM_ORAN_BERRY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	
@@ -1064,26 +1125,26 @@ script Hub_Event_Script_Kecleon {
 		addvar(VAR_TEMP_A, 1)
 	}
 
+	if(!flag(FLAG_IV_BOTTLE_CAPS_UNLOCKED)){
+		dynmultipush("Bottle Caps (¥1000)",ITEM_HP_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+
+	if(!flag(FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED)){
+		dynmultipush("Gold Bottle Caps (¥2000)",ITEM_HP_GOLD_BOTTLE_CAP)
+		addvar(VAR_TEMP_A, 1)
+	}
+
+	if(!flag(FLAG_POCKET_BIRCH_BAG_UNLOCKED)){
+		dynmultipush("Pocket Birch Bag (¥1000)",ITEM_POCKET_BIRCH_BAG)
+		addvar(VAR_TEMP_A, 1)
+	}
+
 
 	if(var(VAR_TEMP_A) != 0){
 		showcoinsbox(21, 11)
 		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
-			case ITEM_ORAN_BERRY:
-				if(!flag(FLAG_ORAN_BERRY_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=200){
-							setflag(FLAG_ORAN_BERRY_UNLOCKED)
-							removecoins(200)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You've unlocked Oran Berry as a\nstocked item!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
-						}
-				}
-
 			case ITEM_LUM_BERRY:
 				if(!flag(FLAG_LUM_BERRY_UNLOCKED)){
 					checkcoins(VAR_RESULT)
@@ -1112,20 +1173,6 @@ script Hub_Event_Script_Kecleon {
 							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
 						}
 				}
-			case ITEM_MEMORY_MUSHROOM:
-				if(!flag(FLAG_MEMORY_MUSHROOM_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=200){
-							setflag(FLAG_MEMORY_MUSHROOM_UNLOCKED)
-							removecoins(200)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You've unlocked Memory Mushroom as a\nstocked item!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
-						}
-				}
 			case ITEM_RARE_CANDY:
 				if(!flag(FLAG_RARE_CANDY_UNLOCKED)){
 					checkcoins(VAR_RESULT)
@@ -1135,6 +1182,48 @@ script Hub_Event_Script_Kecleon {
 							updatecoinsbox(0,0)
 							playse(SE_SHOP)
 							msgbox("You've unlocked Rare Candy as a\nstocked item!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+						}
+				}
+			case ITEM_HP_BOTTLE_CAP:
+				if(!flag(FLAG_IV_BOTTLE_CAPS_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+						if(var(VAR_RESULT)>=2000){
+							setflag(FLAG_IV_BOTTLE_CAPS_UNLOCKED)
+							removecoins(2000)
+							updatecoinsbox(0,0)
+							playse(SE_SHOP)
+							msgbox("You've unlocked IV Bottle caps as a\nstocked item!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+						}
+				}
+			case ITEM_HP_GOLD_BOTTLE_CAP:
+				if(!flag(FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+						if(var(VAR_RESULT)>=2000){
+							setflag(FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED)
+							removecoins(2000)
+							updatecoinsbox(0,0)
+							playse(SE_SHOP)
+							msgbox("You've unlocked Gold Bottle caps as a\nstocked item!\pThank you for your purchase!")
+						}
+						else{
+							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+						}
+				}
+			case ITEM_POCKET_BIRCH_BAG:
+				if(!flag(FLAG_POCKET_BIRCH_BAG_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+						if(var(VAR_RESULT)>=2000){
+							setflag(FLAG_POCKET_BIRCH_BAG_UNLOCKED)
+							removecoins(2000)
+							updatecoinsbox(0,0)
+							playse(SE_SHOP)
+							msgbox("You've unlocked Pocket Birch bags as a\nstocked item!\pThank you for your purchase!")
 						}
 						else{
 							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
@@ -2821,216 +2910,74 @@ script Hub_Event_Script_Diancie {
 	releaseall
 }
 
+script Hub_Event_Script_Marowak {
+	msgbox(format("Hi. My dojo is closed right now. Maybe it will open in a future update."))
+	closemessage
+}
+
+
+
+
 script Hub_Event_Script_Chimecho {
 
-	if(var(VAR_TOTAL_RUNS) < 3){
-		msgbox("Heya. I sell starter charms.
-				But I'm not open just yet.
-				Try playing some more runs first, chim!")
-	}
-	else{}
-	lockall
-	faceplayer
-	setvar(VAR_TEMP_A, 0)
-	msgbox("Ding! Would you like to\nbuy a starter TM?")
-	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
-		dynmultipush("TM Rock Smash (¥8000)",ITEM_TM_ROCK_SMASH)
-		addvar(VAR_TEMP_A, 1)
-	}
-
-	if(var(VAR_TEMP_A) != 0){
-		showcoinsbox(21, 11)
-		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
-		switch(var(VAR_RESULT)){
-			case ITEM_TM_NOBLE_ROAR:
-				if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=4000){
-							setflag(FLAG_TM_NOBLE_ROAR_UNLOCKED)
-							giveitem(ITEM_TM_NOBLE_ROAR, 1)
-							removecoins(4000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Noble Roar as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_ROCK_SMASH:
-				if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=8000){
-							setflag(FLAG_TM_ROCK_SMASH_UNLOCKED)
-							giveitem(ITEM_TM_ROCK_SMASH, 1)
-							removecoins(8000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Rock Smash as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_SWIFT:
-				if(!flag(FLAG_TM_SWIFT_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=8000){
-							setflag(FLAG_TM_SWIFT_UNLOCKED)
-							giveitem(ITEM_TM_SWIFT, 1)
-							removecoins(8000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Swift as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_CUT:
-				if(!flag(FLAG_TM_CUT_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=8000){
-							setflag(FLAG_TM_CUT_UNLOCKED)
-							giveitem(ITEM_TM_CUT, 1)
-							removecoins(8000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Cut as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_CHARM:
-				if(!flag(FLAG_TM_CHARM_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=4000){
-							setflag(FLAG_TM_CHARM_UNLOCKED)
-							giveitem(ITEM_TM_CHARM, 1)
-							removecoins(4000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Charm as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_FAKE_TEARS:
-				if(!flag(FLAG_TM_FAKE_TEARS_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=4000){
-							setflag(FLAG_TM_FAKE_TEARS_UNLOCKED)
-							giveitem(ITEM_TM_FAKE_TEARS, 1)
-							removecoins(4000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Fake Tears as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_CONFUSE_RAY:
-				if(!flag(FLAG_TM_CONFUSE_RAY_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=6000){
-							setflag(FLAG_TM_CONFUSE_RAY_UNLOCKED)
-							giveitem(ITEM_TM_CONFUSE_RAY, 1)
-							removecoins(6000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Confuse Ray as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_THUNDER_WAVE:
-				if(!flag(FLAG_TM_THUNDER_WAVE_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=1000){
-							setflag(FLAG_TM_THUNDER_WAVE_UNLOCKED)
-							giveitem(ITEM_TM_THUNDER_WAVE, 1)
-							removecoins(10000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Thunder Wave as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_WILL_O_WISP:
-				if(!flag(FLAG_TM_WILL_O_WISP_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=10000){
-							setflag(FLAG_TM_WILL_O_WISP_UNLOCKED)
-							giveitem(ITEM_TM_WILL_O_WISP, 1)
-							removecoins(10000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Will O Wisp as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
-			case ITEM_TM_TOXIC:
-				if(!flag(FLAG_TM_TOXIC_UNLOCKED)){
-					checkcoins(VAR_RESULT)
-						if(var(VAR_RESULT)>=10000){
-							setflag(FLAG_TM_TOXIC_UNLOCKED)
-							giveitem(ITEM_TM_TOXIC, 1)
-							removecoins(10000)
-							updatecoinsbox(0,0)
-							playse(SE_SHOP)
-							msgbox("You got TM Toxic as a starter\nitem!\pThank you for your purchase!")
-						}
-						else{
-							msgbox("I'm sorry. You don't have the coins to\nbuy that item, kec.")
-						}
-				}
+	msgbox("Heya. Would you like to\nsee your unlocked starter charms?", type=MSGBOX_YESNO)
+	if(var(VAR_RESULT)){
+		closemessage
+	backtocharmslist:
+		dynmultipush("Shiny Starter Charm", ITEM_SHINY_STARTER_CHARM) 
+		dynmultipush("Lump Sum Charm", ITEM_LUMP_SUM_CHARM)   
+		dynmultipush("Berry Pack Charm", ITEM_BERRY_PACK_CHARM) 
+		if(flag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)){dynmultipush("Tinted Charm", ITEM_TINTED_CHARM) }
+		if(flag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)){dynmultipush("Normal Charm", ITEM_NORMAL_CHARM) }
+		if(flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)){dynmultipush("Minty Charm", ITEM_MINTY_CHARM) }
+	
+		dynmultistack(0, 0, FALSE, 8, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+		switch (var(VAR_RESULT)){
+			case MULTI_B_PRESSED:
+				releaseall
+				end
+			case ITEM_SHINY_STARTER_CHARM:
+				msgbox(format("Your starter pokemon becomes shiny."))
+			case ITEM_LUMP_SUM_CHARM:
+				msgbox(format("Gain ¥1500."))
+			case ITEM_BERRY_PACK_CHARM:
+				msgbox(format("Gain an oran berry, a sitrus berry, a lum berry and a berry juice."))
+			case ITEM_TINTED_CHARM:
+				msgbox(format("Your not very effective moves do 1.5 times more damage."))
+			case ITEM_NORMAL_CHARM:
+				msgbox(format("Your normal moves do 1.1 times more damage."))
+			case ITEM_MINTY_CHARM:
+				msgbox(format("Gain a random mint at the start of each path."))
 		}
-	}else{
-		msgbox("You don't have anything left\nto puchase right now. Thank you for\lyour consistent patronage!\p")
-		waitmessage
-		releaseall}
-
-	hidecoinsbox(0,0)
-	releaseall
+		closemessage
+		goto(backtocharmslist)	
+	}
+	else{
+		msgbox(format("Ok then! Keep playing more to unlock more starter charms!"))
+		releaseall
+	}
 	
 }
 
 script GiveStarterCharm {
-	setvar(VAR_0x8000, 0)
-    setvar(VAR_0x8001, 0)
-    setvar(VAR_0x8002, 0)
-    setvar(VAR_0x8003, 0)
-    while (var(VAR_0x8000) != 3) {
-        randomelement(ITEM_SHINY_STARTER_CHARM, ITEM_LUMP_SUM_CHARM, ITEM_BERRY_PACK_CHARM)
-        if (var(VAR_RESULT) != VAR_0x8002 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8001) == 0){
-            copyvar(VAR_0x8001, VAR_RESULT)
-            addvar(VAR_0x8000, 1)
-        }
-        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8002) == 0){
-            copyvar(VAR_0x8002, VAR_RESULT)
-            addvar(VAR_0x8000, 1)
-        }
-        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8002 && var(VAR_0x8003) == 0){
-            copyvar(VAR_0x8003, VAR_RESULT)
-            addvar(VAR_0x8000, 1)
-        }
-    }
-    if (var(VAR_0x8001) == ITEM_SHINY_STARTER_CHARM || var(VAR_0x8002) == ITEM_SHINY_STARTER_CHARM || var(VAR_0x8003) == ITEM_SHINY_STARTER_CHARM) {
+	special(BufferStarterCharms)
+	if (var(VAR_0x8001) == ITEM_SHINY_STARTER_CHARM || var(VAR_0x8002) == ITEM_SHINY_STARTER_CHARM || var(VAR_0x8003) == ITEM_SHINY_STARTER_CHARM) {
         dynmultipush("Shiny Starter Charm", ITEM_SHINY_STARTER_CHARM)    
     }
-    if (var(VAR_0x8001) == ITEM_LUMP_SUM_CHARM || var(VAR_0x8002) == ITEM_LUMP_SUM_CHARM || var(VAR_0x8003) == ITEM_LUMP_SUM_CHARM) {
-        dynmultipush("Lump Sum Charm", ITEM_LUMP_SUM_CHARM)
+	if (var(VAR_0x8001) == ITEM_LUMP_SUM_CHARM || var(VAR_0x8002) == ITEM_LUMP_SUM_CHARM || var(VAR_0x8003) == ITEM_LUMP_SUM_CHARM) {
+        dynmultipush("Lump Sum Charm", ITEM_LUMP_SUM_CHARM)    
     }
-    if (var(VAR_0x8001) == ITEM_BERRY_PACK_CHARM || var(VAR_0x8002) == ITEM_BERRY_PACK_CHARM || var(VAR_0x8003) == ITEM_BERRY_PACK_CHARM) {
-        dynmultipush("Berry Pack Charm", ITEM_BERRY_PACK_CHARM)
+	if (var(VAR_0x8001) == ITEM_BERRY_PACK_CHARM || var(VAR_0x8002) == ITEM_BERRY_PACK_CHARM || var(VAR_0x8003) == ITEM_BERRY_PACK_CHARM) {
+        dynmultipush("Berry Pack Charm", ITEM_BERRY_PACK_CHARM)    
+    }
+	if (var(VAR_0x8001) == ITEM_TINTED_CHARM || var(VAR_0x8002) == ITEM_TINTED_CHARM || var(VAR_0x8003) == ITEM_TINTED_CHARM) {
+        dynmultipush("Tinted Charm", ITEM_TINTED_CHARM)    
+    }
+	if (var(VAR_0x8001) == ITEM_NORMAL_CHARM || var(VAR_0x8002) == ITEM_NORMAL_CHARM || var(VAR_0x8003) == ITEM_NORMAL_CHARM) {
+        dynmultipush("Normal Charm", ITEM_NORMAL_CHARM)    
+    }
+	if (var(VAR_0x8001) == ITEM_MINTY_CHARM || var(VAR_0x8002) == ITEM_MINTY_CHARM || var(VAR_0x8003) == ITEM_MINTY_CHARM) {
+        dynmultipush("Minty Charm", ITEM_MINTY_CHARM)    
     }
     dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
     switch (var(VAR_RESULT)) {
@@ -3052,7 +2999,64 @@ script GiveStarterCharm {
 			giveitem(ITEM_SITRUS_BERRY, 1)
 			giveitem(ITEM_BERRY_JUICE, 1)
 			giveitem(ITEM_LUM_BERRY, 1)
+		case ITEM_TINTED_CHARM:
+            giveitem(ITEM_TINTED_CHARM, 1)
+		case ITEM_NORMAL_CHARM:
+            giveitem(ITEM_NORMAL_CHARM, 1)
+		case ITEM_MINTY_CHARM:
+            giveitem(ITEM_MINTY_CHARM, 1)
+
     }
 	msgbox("Good luck on your run!")
     waitmessage
+}
+
+
+//==================================DIALOGUE ONLY NPCS=======================================
+script Hub_Event_Script_Golem {
+
+	
+}
+
+script Hub_Event_Script_Togedemaru {
+
+	
+}
+
+script Hub_Event_Script_Klang {
+
+	
+}
+
+script Hub_Event_Script_Bruxish {
+
+	
+}
+
+script Hub_Event_Script_Simisage {
+}
+
+script Hub_Event_Script_Woobat {
+
+	
+}
+
+script Hub_Event_Script_Ekans {
+
+	
+}
+
+script Hub_Event_Script_Unown {
+
+	
+}
+
+script Hub_Event_Script_Smoliv {
+
+	
+}
+
+script Hub_Event_Script_Dachsbun {
+
+	
 }

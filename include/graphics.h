@@ -1539,6 +1539,19 @@ extern const u32 gItemIcon_ExpCharm[];
 extern const u16 gItemIconPalette_ExpCharm[];
 extern const u32 gItemIcon_GlimmeringCharm[];
 extern const u16 gItemIconPalette_GlimmeringCharm[];
+extern const u32 gItemIcon_CloningCharm[];
+extern const u16 gItemIconPalette_CloningCharm[];
+extern const u32 gItemIcon_PhioneEggCharm[];
+extern const u16 gItemIconPalette_PhioneEggCharm[];
+extern const u32 gItemIcon_RegiKnucklesCharm[];
+extern const u16 gItemIconPalette_RegiKnucklesCharm[];
+extern const u32 gItemIcon_OranCharm[];
+extern const u16 gItemIconPalette_OranCharm[];
+
+
+extern const u32 gItemIcon_PocketBirchBagCharm[];
+extern const u16 gItemIconPalette_PocketBirchBagCharm[];
+
 // Form-changing Key Items
 extern const u32 gItemIcon_RotomCatalog[];
 extern const u16 gItemIconPalette_RotomCatalog[];

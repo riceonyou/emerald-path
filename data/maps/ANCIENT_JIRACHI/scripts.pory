@@ -1,0 +1,57 @@
+mapscripts ANCIENT_JIRACHI_MapScripts {
+}
+
+
+script ANCIENT_JIRACHI_ONWARP {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
+}
+
+script ANCIENT_JIRACHI_EventScript_TalkToJirachi{
+    lockall
+    faceplayer
+    //GIVE ANCIENT REWARD
+    msgbox(format("ZZzzzzzz...\pZZzzzzz.....\p..........\pOh, hello there. Sorry I was sleeping. I am a big sleeper after all. I like to sleep for a few hundred years at a time. That's not as much as my idol Gudetama though. Anyways, you're here for some rewards, right? Here, take some Max Revives."))
+    waitmessage
+    giveitem(ITEM_MAX_REVIVE, 2)
+    msgbox(format("Oh. And I don't need this Doom Desire TM anymore."))
+    giveitem(ITEM_TM_DOOM_DESIRE, 1)
+    waitmessage
+    msgbox(format("..........\p..............\pWhat...?\pYou wanted a wish? I've already used all of them up.\pYou'll have to wait another thousand years for me to be able to grant another wish...\p...........\pI guess I can see if I have some junk I can give you lying around..."))
+    closemessage
+    applymovement(LOCALID_PLAYER, moves(
+        jump_in_place_up
+        walk_fast_left
+        face_down
+    ))
+    waitmovement
+    applymovement(1, moves(
+        walk_fast_down * 5
+        walk_fast_right * 2
+        walk_in_place_fast_down * 3
+        walk_fast_left * 4
+        walk_fast_up * 2
+        walk_in_place_fast_left * 3
+        walk_fast_right * 2
+        walk_fast_up * 3
+        face_down
+    ))
+    waitmovement
+    applymovement(LOCALID_PLAYER, moves(
+        walk_fast_right
+        face_up
+    ))
+    waitmovement
+    special(BufferCommonItem)
+    giveitem(VAR_RESULT, 1)
+    special(BufferUncommonItem)
+    giveitem(VAR_RESULT, 1)
+    msgbox(format("There ya go! Happy? Now go to the next path and let me get back to sleep!"))
+    waitmessage
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("The level cap has been raised to 30")
+    msgbox("Get on with it!\nShoo, shoo!")
+    //TELEPORT TO NEXT STAGE
+    special(WarpToNextAct)
+    releaseall
+}

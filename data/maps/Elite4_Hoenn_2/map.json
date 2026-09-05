@@ -2,7 +2,7 @@
   "id": "MAP_ELITE4_HOENN_2",
   "name": "Elite4_Hoenn_2",
   "layout": "LAYOUT_ELITE4_HOENN_2",
-  "music": "MUS_DUMMY",
+  "music": "MUS_EVER_GRANDE",
   "region_map_section": "MAPSEC_AG_Elite4_Hoenn",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

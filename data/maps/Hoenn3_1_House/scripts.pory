@@ -1,2 +1,47 @@
 mapscripts Hoenn3_1_House_MapScripts {
 }
+
+script Hoenn3_Itemball_1{
+    lockall
+    call(GiveCommonItem)
+    removeobject(Hoenn3_Ball1)
+    setflag(FLAG_ITEM_3_1)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_2{
+    lockall
+    call(GiveUncommonItem)
+    removeobject(Hoenn3_Ball2)
+    setflag(FLAG_ITEM_3_2)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_3{
+    lockall
+    call(GiveRareItem)
+    removeobject(Hoenn3_Ball3)
+    setflag(FLAG_ITEM_3_3)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_4{
+    lockall
+    call(GiveUncommonItem)
+    removeobject(Hoenn3_Ball4)
+    setflag(FLAG_ITEM_3_4)
+    releaseall
+    end
+}
+
+script Hoenn3_Itemball_5{
+    lockall
+    call(GiveCommonItem)
+    removeobject(Hoenn3_Ball5)
+    setflag(FLAG_ITEM_3_5)
+    releaseall
+    end
+}

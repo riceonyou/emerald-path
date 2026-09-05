@@ -564,8 +564,8 @@
 #define TRAINER_ARON                   557
 #define TRAINER_MEDITITE                   558
 #define TRAINER_MAKUHITA                 559
-#define TRAINER_JENNA                       560
-#define TRAINER_SOPHIA                      561
+#define TRAINER_DUSCLOPS                       560
+#define TRAINER_SIMISEAR                      561
 #define TRAINER_CATHERINE_2                 562
 #define TRAINER_CATHERINE_3                 563
 #define TRAINER_CATHERINE_4                 564

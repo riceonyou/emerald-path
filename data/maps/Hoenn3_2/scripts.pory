@@ -1,6 +1,18 @@
 mapscripts Hoenn3_2_MapScripts {
 }
 
+script Hoenn3_2_KecShop_Sign {
+    call(KecShop_Sign)
+}
+
+script Hoenn3_2_KecShop {
+    call(KecShop)
+}
+
+script Hoenn3_2_KecShop_Shiny {
+    call(KecShop_Shiny)
+}
+
 script Hoenn3_2_Skarmory{
 	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
 	msgbox("test", MSGBOX_AUTOCLOSE) 
@@ -39,16 +51,11 @@ script Hoenn3_2_Ninetales{
 script Hoenn3_2_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 35)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act3BirchBag)
     
     removeobject(HOENN3_2_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_2)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -59,16 +66,11 @@ script Hoenn3_2_EventScript_BirchBag{
 script Hoenn3_3_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 35)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act3BirchBag)
     
     removeobject(HOENN3_3_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_3)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -79,16 +81,11 @@ script Hoenn3_3_EventScript_BirchBag{
 script Hoenn3_4_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 35)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act3BirchBag)
     
     removeobject(HOENN3_4_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_3_4)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall

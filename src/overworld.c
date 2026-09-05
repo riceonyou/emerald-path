@@ -312,7 +312,13 @@ FLAG_ITEM_SCOVILLAINITE_UNLOCKED,\
 FLAG_ITEM_BAXCALIBRITE_UNLOCKED,\
 FLAG_ITEM_GLIMMORANITE_UNLOCKED,\
 FLAG_MEGA_SHOP_UNLOCKED,\
-FLAG_NEW_MEGA_BUYABLE
+FLAG_NEW_MEGA_BUYABLE,\
+FLAG_TINTED_CHARM_STARTER_UNLOCKED,\
+FLAG_NORMAL_CHARM_STARTER_UNLOCKED,\
+FLAG_MINTY_CHARM_STARTER_UNLOCKED,\
+FLAG_IV_BOTTLE_CAPS_UNLOCKED,\
+FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED,\
+FLAG_POCKET_BIRCH_BAG_UNLOCKED
 
 // Flags listed above are restored after whiteout state reset
 
@@ -761,9 +767,19 @@ static const u16 CommonItems[] =
     ITEM_ORAN_BERRY,
     ITEM_ORAN_BERRY,
     ITEM_ORAN_BERRY,
+    ITEM_ORAN_BERRY,
+    ITEM_ORAN_BERRY,
+    ITEM_ORAN_BERRY,
     ITEM_MEMORY_MUSHROOM,
     ITEM_MEMORY_MUSHROOM,
     ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+
+    ITEM_BERRY_JUICE,
+    ITEM_SITRUS_BERRY,
 
     ITEM_CHERI_BERRY,
     ITEM_CHESTO_BERRY,
@@ -771,26 +787,74 @@ static const u16 CommonItems[] =
     ITEM_RAWST_BERRY,
     ITEM_ASPEAR_BERRY,
     ITEM_PERSIM_BERRY,
+    ITEM_LUM_BERRY,
 
     ITEM_HP_BOTTLE_CAP,
+    ITEM_HP_BOTTLE_CAP,
+    ITEM_ATK_BOTTLE_CAP,
     ITEM_ATK_BOTTLE_CAP,
     ITEM_DEF_BOTTLE_CAP,
+    ITEM_DEF_BOTTLE_CAP,
+    ITEM_SPEED_BOTTLE_CAP,
     ITEM_SPEED_BOTTLE_CAP,
     ITEM_SPATK_BOTTLE_CAP,
+    ITEM_SPATK_BOTTLE_CAP,
     ITEM_SPDEF_BOTTLE_CAP,
+    ITEM_SPDEF_BOTTLE_CAP,
+    
+    ITEM_RARE_CANDY,
 };
 
 static const u16 UncommonItems[] =
 {
+    ITEM_MEMORY_MUSHROOM,
+    ITEM_MEMORY_MUSHROOM,
+
     ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY,
+
+    ITEM_BERRY_JUICE,
+    ITEM_BERRY_JUICE,
+    ITEM_BERRY_JUICE,
+    
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_SITRUS_BERRY,
+    
+    ITEM_LUM_BERRY,
+    ITEM_LUM_BERRY,
+    ITEM_LUM_BERRY,
+    ITEM_LUM_BERRY,
 
     ITEM_QUICK_CLAW,
     ITEM_KINGS_ROCK,
     ITEM_EXPERT_BELT,
     ITEM_LOADED_DICE,
     ITEM_BRIGHT_POWDER,
+    ITEM_SHELL_BELL,
+    ITEM_ROCKY_HELMET,
+    ITEM_WIDE_LENS,
+    ITEM_SCOPE_LENS,
+    ITEM_FOCUS_BAND,
+    ITEM_EJECT_BUTTON,
+    ITEM_EJECT_PACK,
+    ITEM_MUSCLE_BAND,
+    ITEM_WISE_GLASSES,
+    ITEM_MIRROR_HERB,
+    
     ITEM_SILK_SCARF,
-
     ITEM_BLACK_BELT,
     ITEM_BLACK_GLASSES,
     ITEM_CHARCOAL,
@@ -806,21 +870,33 @@ static const u16 UncommonItems[] =
     ITEM_DRAGON_FANG,
     ITEM_METAL_COAT,
     ITEM_FAIRY_FEATHER,
+    ITEM_SILVER_POWDER,
 
     ITEM_HP_GOLD_BOTTLE_CAP,
+    ITEM_HP_GOLD_BOTTLE_CAP,
+    ITEM_ATK_GOLD_BOTTLE_CAP,
     ITEM_ATK_GOLD_BOTTLE_CAP,
     ITEM_DEF_GOLD_BOTTLE_CAP,
+    ITEM_DEF_GOLD_BOTTLE_CAP,
+    ITEM_SPEED_GOLD_BOTTLE_CAP,
     ITEM_SPEED_GOLD_BOTTLE_CAP,
     ITEM_SPATK_GOLD_BOTTLE_CAP,
+    ITEM_SPATK_GOLD_BOTTLE_CAP,
+    ITEM_SPDEF_GOLD_BOTTLE_CAP,
     ITEM_SPDEF_GOLD_BOTTLE_CAP,
 };
 
 static const u16 RareItems[] =
 {
-    ITEM_POTION,
-    ITEM_SUPER_POTION,
-    ITEM_HYPER_POTION,
-    ITEM_FULL_RESTORE,
+    ITEM_LEFTOVERS,
+    ITEM_CHOICE_BAND,
+    ITEM_CHOICE_SCARF,
+    ITEM_CHOICE_SPECS,
+    ITEM_ASSAULT_VEST,
+    ITEM_FOCUS_SASH,
+    ITEM_LIFE_ORB,
+
+    ITEM_MAX_REVIVE
 };
 
 void BufferCommonItem(void)
@@ -841,7 +917,77 @@ void BufferRareItem(void)
     VarSet(VAR_RESULT, randomItem);
 }
 
+void SetKecShopBuyables(void)
+{
+    FlagClear(FLAG_RARE_CANDY_BUYABLE);
+    FlagClear(FLAG_LUM_BERRY_BUYABLE);
+    FlagClear(FLAG_SERIOUS_MINT_BUYABLE);
+    FlagClear(FLAG_POCKET_BIRCH_BAG_BUYABLE);
+    FlagClear(FLAG_ATK_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_HP_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_DEF_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_SPEED_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_SPATK_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_SPDEF_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_HP_GOLD_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_DEF_GOLD_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_SPEED_GOLD_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_SPDEF_GOLD_BOTTLE_CAP_BUYABLE);
+    FlagClear(FLAG_TM_NOBLE_ROAR_BUYABLE);
+    FlagClear(FLAG_TM_CHARM_BUYABLE);
+    FlagClear(FLAG_TM_FAKE_TEARS_BUYABLE);
+    FlagClear(FLAG_TM_TOXIC_BUYABLE);
+    FlagClear(FLAG_TM_THUNDER_WAVE_BUYABLE);
+    FlagClear(FLAG_TM_WILL_O_WISP_BUYABLE);
+    FlagClear(FLAG_TM_CONFUSE_RAY_BUYABLE);
+    FlagClear(FLAG_TM_ROCK_SMASH_BUYABLE);
+    FlagClear(FLAG_TM_SWIFT_BUYABLE);
+    FlagClear(FLAG_TM_CUT_BUYABLE);
 
+    //Regular Shop
+    
+
+    //TM Shop
+    FlagSet(FLAG_TM_CUT_BUYABLE);
+    FlagSet(FLAG_TM_SWIFT_BUYABLE);
+}
+
+
+
+#define MAX_STARTER_CHARMS 6 //CHANGE THIS NUMBER AS YOU ADD MORE STARTER CHARMS!!!
+static u16 StarterCharms[MAX_STARTER_CHARMS];
+
+void BufferStarterCharms(void)
+{
+    u8 i;
+    u8 randomIndex;
+    u16 selectedCharm;
+
+    u8 StarterCharmCount = 0;
+    StarterCharms[StarterCharmCount++] = ITEM_SHINY_STARTER_CHARM;
+    StarterCharms[StarterCharmCount++] = ITEM_LUMP_SUM_CHARM;
+    StarterCharms[StarterCharmCount++] = ITEM_BERRY_PACK_CHARM;
+    if (FlagGet(FLAG_TINTED_CHARM_STARTER_UNLOCKED))
+        StarterCharms[StarterCharmCount++] = ITEM_TINTED_CHARM;
+    if (FlagGet(FLAG_NORMAL_CHARM_STARTER_UNLOCKED))
+        StarterCharms[StarterCharmCount++] = ITEM_NORMAL_CHARM;
+    if (FlagGet(FLAG_MINTY_CHARM_STARTER_UNLOCKED))
+        StarterCharms[StarterCharmCount++] = ITEM_MINTY_CHARM;
+
+    for (i = 0; i < 3; i++)
+    {
+        randomIndex = i + (Random() % (StarterCharmCount - i));
+        selectedCharm = StarterCharms[i];
+        StarterCharms[i] = StarterCharms[randomIndex];
+        StarterCharms[randomIndex] = selectedCharm;
+    }
+
+    VarSet(VAR_0x8001, StarterCharms[0]);
+    VarSet(VAR_0x8002, StarterCharms[1]);
+    VarSet(VAR_0x8003, StarterCharms[2]);
+}
 
 void WarpToNextAncient(void)
 {
@@ -868,10 +1014,14 @@ void WarpToNextAncient(void)
 				}; 
                 break;
         case (2):
-                u8 rand2 = Random() % 1;
+                u8 rand2 = Random() % 2;
 				switch (rand2) {
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_MEWTWO_2), MAP_NUM(MAP_ANCIENT_MEWTWO_2), WARP_ID_NONE, 4, 8);
+						DoWarp();
+                        break;
+                    case 1:
+                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_JIRACHI), MAP_NUM(MAP_ANCIENT_JIRACHI), WARP_ID_NONE, 12, 11);
 						DoWarp();
                         break;
 				}; 
@@ -899,10 +1049,17 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
     VarSet(VAR_CURRENT_ACT, currentact + 1);
     UpdateLevelCap();
 
+    // Do start of every act checks and stuff
+    if(CheckBagHasItem(ITEM_MINTY_CHARM, 1)){FlagSet(FLAG_GIVE_MINTY_CHARM_MINT);}
+
     switch (currentact){
         case (0):
                 u8 rand0 = Random() % 2; //CHANGE THIS NUMBER ASS YOU ADD MORE ACTS
-                DetermineRival();//Only for act 0.
+
+                //Only for act 0.
+                DetermineRival();
+                VarSet(VAR_COINS_COLLECTED_IN_A_RUN, 0);
+
                 VarSet(VAR_TOTAL_RUNS, VarGet(VAR_TOTAL_RUNS) + 1);
 				switch (rand0) {
 					case 0:
@@ -955,7 +1112,11 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
         case (4):
                 //YOU BEAT THE CHAMPION
                 VarSet(VAR_ACT4_WINS, VarGet(VAR_ACT4_WINS) + 1);
-                SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 18);
+                ResetPokemonAndItems();
+                VarSet(VAR_CURRENT_ACT, 0);
+                ClearMoney();
+
+                SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 19);
 				DoWarp();
                 break;
     }
@@ -1004,6 +1165,8 @@ void ResetPokemonAndItems(void)
 {
     //Clear VARS that need to be cleared
     VarSet(VAR_CLONING_CHARM_COUNT, 0);
+    VarSet(VAR_CURRENT_ACT, 0);
+    ClearMoney();
     
     // Clear Bag and give back starting items
     ClearBag();
@@ -1099,7 +1262,7 @@ void DoWhiteOut(void)
 {
     ResetPokemonAndItems();
     Overworld_ResetStateAfterWhiteOut();
-    SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 18);
+    SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 19);
     WarpIntoMap();
 }
 

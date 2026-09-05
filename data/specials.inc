@@ -654,3 +654,6 @@ gSpecials::
 	def_special BufferCommonItem
 	def_special BufferUncommonItem
 	def_special BufferRareItem
+	def_special MakeAllPlayerPokemonShinyAndMaxThreeRandomIVs
+	def_special BufferStarterCharms
+	def_special SetKecShopBuyables

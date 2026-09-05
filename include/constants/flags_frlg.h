@@ -101,7 +101,7 @@
 #define FLAG_HIDE_THREE_ISLAND_ANTIBIKERS                  0x07E
 #define FLAG_0x07F                                         0x07F
 #define FLAG_HIDE_ROUTE_16_SNORLAX                         0x080
-#define FLAG_HIDE_MEWTWO                                   0x081
+#define FLAG_HP_GOLD_BOTTLE_CAP_BUYABLETWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
 #define FLAG_HIDE_TOWER_ROCKET_2                           0x083
 #define FLAG_HIDE_TOWER_ROCKET_3                           0x084
@@ -1895,9 +1895,9 @@
 #define FLAG_DEFEATED_LUGIA                  0
 
 // Hidden Items
-#define FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL             0
-#define FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET                  0
-#define FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST                  0
+#define FLAG_TINTED_CHARM_STARTER_UNLOCKED             0
+#define FLAG_NORMAL_CHARM_STARTER_UNLOCKED                  0
+#define FLAG_MINTY_CHARM_STARTER_UNLOCKED                  0
 #define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     0
 #define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    0
 #define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   0
@@ -2009,32 +2009,32 @@
 
 
 // Event Flags
-#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0
-#define FLAG_HIDE_APPRENTICE                                        0
-#define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0
-#define FLAG_HIDE_MEW                                               0
-#define FLAG_HIDE_ROUTE_104_RIVAL                                   0
-#define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0
-#define FLAG_HIDE_ROUTE_103_RIVAL                                   0
-#define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0
-#define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0
-#define FLAG_HIDE_PETALBURG_CITY_WALLY                              0
-#define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0
+#define FLAG_RARE_CANDY_BUYABLE                      0
+#define FLAG_LUM_BERRY_BUYABLE                                        0
+#define FLAG_SERIOUS_MINT_BUYABLE                0
+#define FLAG_POCKET_BIRCH_BAG_BUYABLE               0
+#define FLAG_ATK_BOTTLE_CAP_BUYABLE               0
+#define FLAG_HP_BOTTLE_CAP_BUYABLE               0
+#define FLAG_DEF_BOTTLE_CAP_BUYABLE               0
+#define FLAG_SPEED_BOTTLE_CAP_BUYABLE               0
+#define FLAG_SPATK_BOTTLE_CAP_BUYABLE               0
+#define FLAG_SPDEF_BOTTLE_CAP_BUYABLE            0
+#define FLAG_HP_GOLD_BOTTLE_CAP_BUYABLE                                               0
+#define FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE                                   0
+#define FLAG_DEF_GOLD_BOTTLE_CAP_BUYABLE                  0
+#define FLAG_SPEED_GOLD_BOTTLE_CAP_BUYABLE                  0
+#define FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE          0
+#define FLAG_SPDEF_GOLD_BOTTLE_CAP_BUYABLE                                   0
+#define FLAG_TM_NOBLE_ROAR_BUYABLE                    0
+#define FLAG_TM_CHARM_BUYABLE                        0
+#define FLAG_TM_FAKE_TEARS_BUYABLE                              0
+#define FLAG_TM_TOXIC_BUYABLE   0
+#define FLAG_TM_THUNDER_WAVE_BUYABLE                         0
 
-#define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0
-#define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0
-#define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0
-#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP              0
+#define FLAG_TM_CONFUSE_RAY_BUYABLE                     0
+#define FLAG_TM_ROCK_SMASH_BUYABLE                          0
+#define FLAG_TM_SWIFT_BUYABLE                    0
+#define FLAG_TM_CUT_BUYABLE              0
 #define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0
 #define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0
@@ -2128,7 +2128,7 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE                             0
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE                     0
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE                      0
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD                         0
+#define FLAG_TM_FAKE_TEARS_BUYABLES_DAD                         0
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS               0
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER                0
 #define FLAG_HIDE_GRANITE_CAVE_STEVEN                               0
@@ -2530,7 +2530,7 @@
 #define FLAG_SYS_SHOAL_TIDE                         0
 #define FLAG_WARPED_INTO_NEW_ACT                   0
 #define FLAG_PHIONE_EGG_HATCHED               0
-#define FLAG_LANDMARK_ABANDONED_SHIP                0
+#define FLAG_GIVE_MINTY_CHARM_MINT                0
 #define FLAG_LANDMARK_SEASHORE_HOUSE                0
 #define FLAG_LANDMARK_NEW_MAUVILLE                  0
 #define FLAG_LANDMARK_OLD_LADY_REST_SHOP            0

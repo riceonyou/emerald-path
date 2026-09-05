@@ -43,19 +43,23 @@ script Hoenn2_1_Crawdaunt{
 
 }
 
+script Hoenn2_1_Dusclops{
+ 
+	trainerbattle_single(TRAINER_DUSCLOPS, "test", "test")
+	msgbox("test", MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
 script Hoenn2_1_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 34)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act2BirchBag)
     
     removeobject(HOENN2_1_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_2_1)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -66,16 +70,11 @@ script Hoenn2_1_EventScript_BirchBag{
 script Hoenn2_2_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 34)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act2BirchBag)
     
     removeobject(HOENN2_2_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_2_2)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
@@ -86,19 +85,32 @@ script Hoenn2_2_EventScript_BirchBag{
 script Hoenn2_3_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 34)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act2BirchBag)
     
     removeobject(HOENN2_3_BIRCHBAG)
     setflag(FLAG_BIRCHBAG_2_3)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
 
     waitmessage
     releaseall
     end
     
+}
+
+script Hoenn2_4_Itemball_1{
+    lockall
+    call(GiveCommonItem)
+    removeobject(Hoenn2_Ball1)
+    setflag(FLAG_ITEM_2_1)
+    releaseall
+    end
+}
+
+script Hoenn2_4_Itemball_2{
+    lockall
+    call(GiveUncommonItem)
+    removeobject(Hoenn2_Ball2)
+    setflag(FLAG_ITEM_2_2)
+    releaseall
+    end
 }

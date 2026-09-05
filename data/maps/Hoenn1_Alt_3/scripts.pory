@@ -33,3 +33,38 @@ script Hoenn1_Alt_3_EventScript_Sabeleye{
 	waitmessage
     end
 }
+
+
+script Hoenn1_Alt_3_EventScript_BirchBag_7{
+ 
+    lockall
+
+    call(Act1BirchBag)
+    
+    removeobject(HOENN1_ALT_7_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_1_7)
+    
+
+    waitmessage
+    releaseall
+    end
+ 
+}
+
+script Hoenn1_Alt_3_Itemball_4{
+    lockall
+    call(GiveCommonItem)
+    removeobject(HOENN1_ALT_ITEM_4)
+    setflag(FLAG_ITEM_1_4)
+    releaseall
+    end
+}
+
+script Hoenn1_Alt_3_Itemball_5{
+    lockall
+    call(GiveCommonItem)
+    removeobject(HOENN1_ALT_ITEM_5)
+    setflag(FLAG_ITEM_1_5)
+    releaseall
+    end
+}

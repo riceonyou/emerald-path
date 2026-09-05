@@ -1,20 +1,31 @@
 mapscripts Hoenn3_6_MapScripts {
 }
 
-script Hoenn3_6_EventScript_BirchBag{
+script Hoenn3_9_EventScript_BirchBag{
  
     lockall
-    playse(SE_CLICK)
-    fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 35)
-    special(LoadBirchBagPoolById)
-    special(ChooseBirchBagPokemonWeighted)
-    waitstate
+    call(Act3BirchBag)
     
-    removeobject(HOENN3_6_BIRCHBAG)
-    setflag(FLAG_BIRCHBAG_3_6)
+    removeobject(HOENN3_9_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_3_9)
     playfanfare(MUS_EVOLVED)
-    msgbox("You received a\n{STR_VAR_1}!")
+    
+
+    waitmessage
+    releaseall
+    end
+    
+}
+
+script Hoenn3_8_EventScript_BirchBag{
+ 
+    lockall
+    call(Act3BirchBag)
+    
+    removeobject(HOENN3_8_BIRCHBAG)
+    setflag(FLAG_BIRCHBAG_3_8)
+    playfanfare(MUS_EVOLVED)
+    
 
     waitmessage
     releaseall

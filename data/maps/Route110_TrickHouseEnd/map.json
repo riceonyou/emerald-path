@@ -63,7 +63,7 @@
       "y": 5,
       "elevation": 3,
       "item": "ITEM_HP_GOLD_BOTTLE_CAP",
-      "flag": "FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET"
+      "flag": "FLAG_NORMAL_CHARM_STARTER_UNLOCKED"
     }
   ]
 }

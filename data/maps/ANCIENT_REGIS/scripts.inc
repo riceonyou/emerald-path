@@ -63,13 +63,13 @@ ANCIENT_REGIS_EventScript_TalkToRegi_1:
 # 61 "data/maps/ANCIENT_REGIS/scripts.pory"
 	waitmessage
 # 62 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_4
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_3
 # 63 "data/maps/ANCIENT_REGIS/scripts.pory"
 	waitmessage
 # 64 "data/maps/ANCIENT_REGIS/scripts.pory"
 	giveitem ITEM_REGI_KNUCKLES_CHARM, 1
 # 65 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_5
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_4
 # 66 "data/maps/ANCIENT_REGIS/scripts.pory"
 	waitmessage
 # 67 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -178,9 +178,9 @@ ANCIENT_REGIS_EventScript_TalkToRegi_79:
 # 128 "data/maps/ANCIENT_REGIS/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 129 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_13
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_12
 # 130 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_14
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_13
 # 132 "data/maps/ANCIENT_REGIS/scripts.pory"
 	special WarpToNextAct
 # 134 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -204,13 +204,11 @@ ANCIENT_REGIS_EventScript_TalkToRegi_3:
 	waitstate
 # 36 "data/maps/ANCIENT_REGIS/scripts.pory"
 	playfanfare MUS_EVOLVED
-# 37 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_1
 
 ANCIENT_REGIS_EventScript_TalkToRegi_4:
 # 40 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_2
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_1
 # 41 "data/maps/ANCIENT_REGIS/scripts.pory"
 	waitmessage
 # 42 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -225,13 +223,11 @@ ANCIENT_REGIS_EventScript_TalkToRegi_4:
 	waitstate
 # 47 "data/maps/ANCIENT_REGIS/scripts.pory"
 	playfanfare MUS_EVOLVED
-# 48 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_1
 
 ANCIENT_REGIS_EventScript_TalkToRegi_5:
 # 51 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_3
+	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_2
 # 52 "data/maps/ANCIENT_REGIS/scripts.pory"
 	waitmessage
 # 53 "data/maps/ANCIENT_REGIS/scripts.pory"
@@ -246,8 +242,6 @@ ANCIENT_REGIS_EventScript_TalkToRegi_5:
 	waitstate
 # 58 "data/maps/ANCIENT_REGIS/scripts.pory"
 	playfanfare MUS_EVOLVED
-# 59 "data/maps/ANCIENT_REGIS/scripts.pory"
-	msgbox ANCIENT_REGIS_EventScript_TalkToRegi_Text_1
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_1
 
 ANCIENT_REGIS_EventScript_TalkToRegi_8:
@@ -268,7 +262,7 @@ ANCIENT_REGIS_EventScript_TalkToRegi_31:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_11:
 # 87 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_6, ITEM_TM_ICE_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_5, ITEM_TM_ICE_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_10
 
 ANCIENT_REGIS_EventScript_TalkToRegi_18:
@@ -292,7 +286,7 @@ ANCIENT_REGIS_EventScript_TalkToRegi_20:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_25:
 # 90 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_7, ITEM_TM_FIRE_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_6, ITEM_TM_FIRE_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_24
 
 ANCIENT_REGIS_EventScript_TalkToRegi_32:
@@ -316,7 +310,7 @@ ANCIENT_REGIS_EventScript_TalkToRegi_34:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_39:
 # 93 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_8, ITEM_TM_THUNDER_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_7, ITEM_TM_THUNDER_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_38
 
 ANCIENT_REGIS_EventScript_TalkToRegi_45:
@@ -340,22 +334,22 @@ ANCIENT_REGIS_EventScript_TalkToRegi_47:
 
 ANCIENT_REGIS_EventScript_TalkToRegi_52:
 # 96 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_9, ITEM_TM_DRAIN_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_8, ITEM_TM_DRAIN_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_51
 
 ANCIENT_REGIS_EventScript_TalkToRegi_59:
 # 99 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_10, ITEM_TM_DIZZY_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_9, ITEM_TM_DIZZY_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_58
 
 ANCIENT_REGIS_EventScript_TalkToRegi_66:
 # 102 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_11, ITEM_TM_SHADOW_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_10, ITEM_TM_SHADOW_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_65
 
 ANCIENT_REGIS_EventScript_TalkToRegi_73:
 # 105 "data/maps/ANCIENT_REGIS/scripts.pory"
-	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_12, ITEM_TM_SUCKER_PUNCH
+	dynmultipush ANCIENT_REGIS_EventScript_TalkToRegi_Text_11, ITEM_TM_SUCKER_PUNCH
 	goto ANCIENT_REGIS_EventScript_TalkToRegi_72
 
 ANCIENT_REGIS_EventScript_TalkToRegi_81:
@@ -399,57 +393,53 @@ ANCIENT_REGIS_EventScript_TalkToRegi_Text_0:
 	.string "Boop beep boop. You have succesfully\ncompleted the first path. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a fossil pokemon.$"
 
 ANCIENT_REGIS_EventScript_TalkToRegi_Text_1:
-# 37 "data/maps/ANCIENT_REGIS/scripts.pory"
-	.string "You received a\n{STR_VAR_1}!$"
-
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_2:
 # 40 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is an ice pokemon.$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_3:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_2:
 # 51 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a steel pokemon.$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_4:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_3:
 # 62 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "You will also be given the Regi Knuckles.\nBeep.$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_5:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_4:
 # 65 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "The Regi Knuckles power up your\npunching moves and makes them\lunable to miss. Boop.\pIt also comes with a punching TM\nof your choice. Beep.$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_6:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_5:
 # 87 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Ice Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_7:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_6:
 # 90 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Fire Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_8:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_7:
 # 93 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Thunder Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_9:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_8:
 # 96 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Drain Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_10:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_9:
 # 99 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Dizzy Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_11:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_10:
 # 102 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Shadow Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_12:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_11:
 # 105 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Sucker Punch TM$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_13:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_12:
 # 129 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "The level cap has been raised to 30$"
 
-ANCIENT_REGIS_EventScript_TalkToRegi_Text_14:
+ANCIENT_REGIS_EventScript_TalkToRegi_Text_13:
 # 130 "data/maps/ANCIENT_REGIS/scripts.pory"
 	.string "Beep boop boop.\lYou will now proceed to the next path.$"

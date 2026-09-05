@@ -806,7 +806,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FOREWARN] =
     {
         .name = _("Forewarn"),
-        .description = COMPOUND_STRING("Determines a foe's move."),
+        .description = COMPOUND_STRING("Removes PP from enemy."),
         .aiRating = 2,
     },
 
@@ -2442,7 +2442,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MEGA_SOL] =
     {
         .name = _("Mega Sol"),
-        .description = COMPOUND_STRING("Moves act as if sunny"),
+        .description = COMPOUND_STRING("Moves act as if sunny."),
         .aiRating = 6,
     },
     [ABILITY_SPICY_SPRAY] =

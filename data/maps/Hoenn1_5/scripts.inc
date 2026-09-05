@@ -36,26 +36,14 @@ Hoenn1_7_EventScript_BirchBag::
 # 33 "data/maps/Hoenn1_5/scripts.pory"
 	lockall
 # 34 "data/maps/Hoenn1_5/scripts.pory"
-	playse SE_CLICK
-# 35 "data/maps/Hoenn1_5/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 36 "data/maps/Hoenn1_5/scripts.pory"
-	setvar VAR_0x8000, 33
+	call Act1BirchBag
 # 37 "data/maps/Hoenn1_5/scripts.pory"
-	special LoadBirchBagPoolById
-# 38 "data/maps/Hoenn1_5/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 39 "data/maps/Hoenn1_5/scripts.pory"
-	waitstate
-# 42 "data/maps/Hoenn1_5/scripts.pory"
 	removeobject HOENN1_7_BIRCHBAG
-# 43 "data/maps/Hoenn1_5/scripts.pory"
+# 38 "data/maps/Hoenn1_5/scripts.pory"
 	setflag FLAG_BIRCHBAG_1_7
-# 44 "data/maps/Hoenn1_5/scripts.pory"
-	msgbox Hoenn1_7_EventScript_BirchBag_Text_0
-# 46 "data/maps/Hoenn1_5/scripts.pory"
+# 41 "data/maps/Hoenn1_5/scripts.pory"
 	waitmessage
-# 47 "data/maps/Hoenn1_5/scripts.pory"
+# 42 "data/maps/Hoenn1_5/scripts.pory"
 	releaseall
 	end
 
@@ -70,7 +58,8 @@ Hoenn1_5_EventScript_Oddish_Text_0:
 Hoenn1_5_EventScript_Oddish_Text_1:
 # 6 "data/maps/Hoenn1_5/scripts.pory"
 	.string "If someone wants to help me write\n"
-	.string "dialogue please contact me...$"
+	.string "dialogue please contact me... Though I\l"
+	.string "won't be able to pay you probably...$"
 
 Hoenn1_5_EventScript_Oddish_Text_2:
 # 7 "data/maps/Hoenn1_5/scripts.pory"
@@ -91,8 +80,9 @@ Hoenn1_5_EventScript_Wurmple_Text_2:
 
 Hoenn1_5_EventScript_Slakoth_Text_0:
 # 24 "data/maps/Hoenn1_5/scripts.pory"
-	.string "Hey. I love gudetama. He just like me fr.\n"
-	.string "I wish I could sleep all day with him$"
+	.string "Hey. I love gudetama. They're just like\n"
+	.string "me fr. I wish I could sleep all day with\l"
+	.string "them$"
 
 Hoenn1_5_EventScript_Slakoth_Text_1:
 # 24 "data/maps/Hoenn1_5/scripts.pory"
@@ -101,7 +91,3 @@ Hoenn1_5_EventScript_Slakoth_Text_1:
 Hoenn1_5_EventScript_Slakoth_Text_2:
 # 25 "data/maps/Hoenn1_5/scripts.pory"
 	.string "zzzZZZ...$"
-
-Hoenn1_7_EventScript_BirchBag_Text_0:
-# 44 "data/maps/Hoenn1_5/scripts.pory"
-	.string "You received a\n{STR_VAR_1}!$"

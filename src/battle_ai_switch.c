@@ -182,6 +182,10 @@ u32 GetSwitchChance(enum ShouldSwitchScenario shouldSwitchScenario)
         return SHOULD_SWITCH_ENCORE_DAMAGE_PERCENTAGE;
     case SHOULD_SWITCH_CHOICE_LOCKED:
         return SHOULD_SWITCH_CHOICE_LOCKED_PERCENTAGE;
+    case SHOULD_SWITCH_PRESSURE:
+        return SHOULD_SWITCH_PRESSURE_PERCENTAGE;
+    case SHOULD_SWITCH_PRESSURE_STATS_RAISED:
+        return SHOULD_SWITCH_PRESSURE_STATS_RAISED_PERCENTAGE;
     case SHOULD_SWITCH_ATTACKING_STAT_MINUS_TWO:
         return SHOULD_SWITCH_ATTACKING_STAT_MINUS_TWO_PERCENTAGE;
     case SHOULD_SWITCH_ATTACKING_STAT_MINUS_THREE_PLUS:
@@ -961,7 +965,45 @@ static bool32 ShouldSwitchIfAbilityBenefit(enum BattlerId battler)
         return SetSwitchinAndSwitch(battler, PARTY_SIZE);
     }
 
+    return FALSE;
+}
+
+static bool32 ShouldSwitchIfPressureResetsPositiveBoosts(enum BattlerId battler)
+{
+    if (!(gAiThinkingStruct->aiFlags[battler] & AI_FLAG_SMART_SWITCHING))
         return FALSE;
+
+    if (CountPositiveStatStages(battler) == 0)
+        return FALSE;
+
+    enum BattlerId battlerIn1, battlerIn2;
+    s32 firstId, lastId;
+    struct Pokemon *party = GetBattlerParty(battler);
+    GetActiveBattlerIds(battler, &battlerIn1, &battlerIn2);
+    GetAIPartyIndexes(battler, &firstId, &lastId);
+
+    for (u32 monIndex = firstId; monIndex < lastId; monIndex++)
+    {
+        if (!IsValidForBattle(&party[monIndex]))
+            continue;
+        if (IsPartyMonOnFieldOrChosenToSwitch(monIndex, battlerIn1, battlerIn2))
+            continue;
+        if (MonHasTrait(&party[monIndex], ABILITY_PRESSURE))
+        {
+            if (CountPositiveStatStages(battler) > STAY_IN_STATS_RAISED)
+            {
+                if (gAiLogicData->mostSuitableMonId[battler] != PARTY_SIZE
+                 && RandomPercentage(RNG_AI_SWITCH_HASBADODDS, GetSwitchChance(SHOULD_SWITCH_PRESSURE_STATS_RAISED)))
+                    return SetSwitchinAndSwitch(battler, monIndex);
+            }
+            else if (RandomPercentage(RNG_AI_SWITCH_HASBADODDS, GetSwitchChance(SHOULD_SWITCH_PRESSURE)))
+            {
+                return SetSwitchinAndSwitch(battler, monIndex);
+            }
+        }
+    }
+
+    return FALSE;
 }
 
 static bool32 CanUseSuperEffectiveMoveAgainstOpponent(enum BattlerId battler, enum BattlerId opposingBattler)
@@ -1308,6 +1350,8 @@ bool32 ShouldSwitch(enum BattlerId battler)
     if (ShouldSwitchIfBadlyStatused(battler))
         return TRUE;
     if (ShouldSwitchIfAbilityBenefit(battler))
+        return TRUE;
+    if (ShouldSwitchIfPressureResetsPositiveBoosts(battler))
         return TRUE;
     if (ShouldSwitchIfHasBadOdds(battler))
         return TRUE;

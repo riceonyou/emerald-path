@@ -1279,7 +1279,7 @@ void EndLotteryCornerComputerEffect(void)
 void SetTrickHouseNuggetFlag(void)
 {
     u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET;
+    u16 flag = FLAG_NORMAL_CHARM_STARTER_UNLOCKED;
     *specVar = flag;
     FlagSet(flag);
 }
@@ -1287,7 +1287,7 @@ void SetTrickHouseNuggetFlag(void)
 void ResetTrickHouseNuggetFlag(void)
 {
     u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET;
+    u16 flag = FLAG_NORMAL_CHARM_STARTER_UNLOCKED;
     *specVar = flag;
     FlagClear(flag);
 }
@@ -4063,7 +4063,7 @@ void UpdateTrainerFanClubGameClear(void)
         FlagClear(FLAG_HIDE_FANCLUB_BOY);
         FlagClear(FLAG_HIDE_FANCLUB_LITTLE_BOY);
         FlagClear(FLAG_HIDE_FANCLUB_LADY);
-        FlagClear(FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER);
+        FlagClear(FLAG_TM_CONFUSE_RAY_BUYABLE);
         VarSet(VAR_LILYCOVE_FAN_CLUB_STATE, 1);
     }
 }

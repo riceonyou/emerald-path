@@ -79,17 +79,15 @@ Pic: Substitute
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Try To Faint / Check Bad Move / Randomize Party Indices
+AI: Basic Trainer / Randomize Party Indices
 
 Zigzagoon 
-Level: 12  
+Level: 10  
 - Tackle  
-- Quick Attack  
-- Growl
 - Sand Attack
 
 Lillipup  
-Level: 12  
+Level: 10  
 - Tackle  
 - Sand Attack
 
@@ -620,6 +618,36 @@ Level: 28
 - Aura Sphere
 - Sludge Wave
 
+=== TRAINER_DUSCLOPS ===
+Name: Dusclops
+Class: Pkmn Trainer 1
+Pic: Substitute
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer / Randomize Party Indices
+
+Dusclops
+Level: 28  
+- Shadow Punch
+- Fire Punch
+- Ice Punch
+- Will O Wisp
+
+Primeape
+Level: 27  
+- Cross Chop
+- Rage Fist
+- Rage
+- Stomping Tantrum
+
+Maractus
+Level: 28  
+- Giga Drain
+- Leech Seed
+- Spiky Shield
+- Spike Cannon
+
 === TRAINER_WAILMER ===
 Name: WAILMER
 Class: Pkmn Trainer 1
@@ -662,7 +690,7 @@ Level: 28
 - Thunder Wave
 
 === TRAINER_AZUMARILL ===
-Name: AZUMARILL
+Name: Marill
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -670,8 +698,8 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Azumarill @ Life Orb  
-Level: 24
+Marill @ Life Orb  
+Level: 26
 Adamant Nature  
 - Aqua Jet  
 - Covet  
@@ -781,9 +809,9 @@ Level: 27
 - Thunder Wave
 - Self-Destruct
 
-Foongus @ Leftovers
+Amoonguss @ Leftovers
 Nature: Impish
-Level: 28
+Level: 25
 - Spore
 - Toxic
 - Giga Drain
@@ -2279,7 +2307,7 @@ Level: 49
 - Dark Void
 - Nasty Plot
 
-//-------------------------HOENN1_ALT-------------------------------------------------------
+/*=======================================ACT 1 ALT=============================================================================*/
 
 === TRAINER_RATTATA ===
 Name: Rattata
@@ -2393,7 +2421,7 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
-Aron 
+Aron @ Oran Berry
 Level: 11  
 - Rock Tomb
 - Iron Head
@@ -2453,9 +2481,25 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
-Breloom
-Level: 31
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+Spoink @ Oran Berry
+Level: 11  
+- Confuse Ray
+- Psywave
+- Bounce
+
+Spinarak
+Level: 11  
+- Pounce
+- Sucker Punch
+- Spider Web
+- Infestation
+
+Tirtouga @ Rindo Berry
+Level: 11  
+- Ancient Power
+- Aqua Jet
+- Brine
+- Bite
 
 === TRAINER_MAWILESABELEYE ===
 Name: MS
@@ -2466,9 +2510,32 @@ Music: Cool
 Double Battle: Yes
 AI: Basic Trainer / Randomize Party Indices
 
-Breloom
-Level: 34
-IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+Mawile
+Level: 11  
+- Fairy Wind
+- Metal Claw
+- Vise Grip
+- Bite
+
+Sableye
+Level: 11  
+- Shadow Sneak
+- Reflect
+- Light Screen
+- Confuse Ray
+
+Roggenrola
+Level: 11  
+- Rock Blast
+- Stealth Rock
+- Sand Attack
+
+Scatterbug
+Level: 11  
+- Bug Bite
+- Stun Spore
+- String Shot
+- Lunge
 
 === TRAINER_TRAPINCH ===
 Name: Trapinch
@@ -2479,12 +2546,29 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Cacturne
-Level: 39
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Trapinch @ Lum Berry
+Level: 13  
+- Feint Attack
+- Rock Slide
+- Mud Slap
+- Bite
+
+Espurr
+Level: 12  
+- Fake Out
+- Disarming Voice
+- Covet
+- Confusion
+
+Finneon
+Level: 11  
+- Water Pulse
+- Captivate
+- Aqua Ring
+- Whirlpool
 
 === TRAINER_MEDITITE ===
-Name: JACKSON
+Name: Meditite
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
@@ -2492,13 +2576,32 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Kecleon
-Level: 39
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+Meditite @ Oran Berry
+Level: 12  
+- Force Palm
+- Low Kick
+- Confusion
+- Thunder Punch
 
-Breloom
-Level: 39
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+Toxel
+Level: 13  
+- Nuzzle
+- Tearful Look
+- Acid
+- Thunder Fang
+
+Bonsly
+Level: 11  
+- Tearful Look
+- Rock Tomb
+- Slam
+
+Igglybuff @ Focus Band
+Level: 11  
+- Tearful Look
+- Sweet Kiss
+- Draining Kiss
+- Body Slam
 
 === TRAINER_RALTS ===
 Name: Ralts
@@ -2509,21 +2612,21 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Ralts
-Level: 12
+Ralts @ Twisted Spoon
+Level: 13
 - Psybeam
 - Magical Leaf
 - Will O Wisp
 - Ice Punch
 
 Yungoos  
-Level: 11 
+Level: 12 
 - Fire Fang  
 - Bite  
 - Swagger  
 - Bulldoze
 
-Shellder  
+Shellder @ White Herb
 Level: 12  
 - Toxic  
 - Whirlpool  
@@ -2539,10 +2642,32 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Wingull
-Level: 22
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Carvanha @ Rocky Helmet
+Level: 12  
+- Aqua Jet 
+- Poison Fang  
+- Scary Face
+- Bite
 
+Gible
+Level: 12  
+- Dragon Breath 
+- Sand Tomb
+- Sand Attack
+- Take Down
+
+Sandshrew
+Level: 12  
+- Poison Sting 
+- Rollout
+- Magnitude
+- Fury Cutter
+
+Cacnea @ Lum Berry
+Level: 11  
+- Sandstorm 
+- Leech Seed
+- Needle Arm
 
 === TRAINER_VULPIX ===
 Name: Vulpix
@@ -2553,9 +2678,26 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Breloom
-Level: 27
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Vulpix @ Bright Powder
+Level: 13  
+- Fire Spin 
+- Incinerate
+- Grudge
+- Spite
+
+Timburr
+Level: 12  
+- Rock Throw
+- Bulk Up
+- Drain Punch
+
+Yamper @ Oran Berry
+Level: 13  
+- Bite
+- Spark
+- Charm
+
+
 
 === TRAINER_MAKUHITA ===
 Name: Makuhita
@@ -2564,39 +2706,51 @@ Pic: Substitute
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
+AI: Basic Trainer / Randomize Party Indices
 
-Gloom
-Level: 26
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Makuhita @ Berry Juice
+Level: 14  
+- Arm Thrust
+- Knock Off
+- Fake Out
+- Drain Punch
 
-Roselia
-Level: 26
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Seel @ Leftovers
+Level: 13  
+- Aurora Beam
+- Headbutt
+- Ice Shard
+- Dive
 
-=== TRAINER_JENNA ===
-Name: JENNA
-Class: Pkmn Trainer 1
-Pic: Substitute
-Gender: Female
-Music: Cool
-Double Battle: No
-AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
+Munchlax @ Oran Berry
+Level: 13  
+- Bite
+- Covet
+- Metronome
+- Body Slam
 
-Lotad
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Chimchar
+Level: 13  
+- Power Up Punch
+- Incinerate
+- Fire Punch
+- Taunt
 
-Lombre
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Stufful @ Lum Berry
+Level: 13  
+- Brutal Swing
+- Bounce
+- Rock Smash
+- Vacuum Wave
 
-Nuzleaf
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Vullaby @ Quick Claw
+Level: 13  
+- Air Slash
+- Dark Pulse
+- Attract
 
-=== TRAINER_SOPHIA ===
-Name: SOPHIA
+=== TRAINER_SIMISEAR ===
+Name: Simisear
 Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
@@ -2605,10 +2759,6 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Swablu
-Level: 38
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Roselia
 Level: 38
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 

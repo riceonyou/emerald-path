@@ -294,7 +294,7 @@ Route120_EventScript_Lorenzo::
 	end
 
 Route120_EventScript_Jenna::
-	trainerbattle_single TRAINER_JENNA, Route120_Text_JennaIntro, Route120_Text_JennaDefeat
+	trainerbattle_single TRAINER_DUSCLOPS, Route120_Text_JennaIntro, Route120_Text_JennaDefeat
 	msgbox Route120_Text_JennaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -26,102 +26,66 @@ Hoenn1_BirchBag_4::
 # 36 "data/maps/Hoenn1_3/scripts.pory"
 	lockall
 # 37 "data/maps/Hoenn1_3/scripts.pory"
-	playse SE_CLICK
-# 38 "data/maps/Hoenn1_3/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	call Act1BirchBag
 # 39 "data/maps/Hoenn1_3/scripts.pory"
-	setvar VAR_0x8000, 33
-# 40 "data/maps/Hoenn1_3/scripts.pory"
-	special LoadBirchBagPoolById
-# 41 "data/maps/Hoenn1_3/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 42 "data/maps/Hoenn1_3/scripts.pory"
-	waitstate
-# 44 "data/maps/Hoenn1_3/scripts.pory"
 	removeobject HOENN1_4_BIRCHBAG
-# 45 "data/maps/Hoenn1_3/scripts.pory"
+# 40 "data/maps/Hoenn1_3/scripts.pory"
 	setflag FLAG_BIRCHBAG_1_4
-# 46 "data/maps/Hoenn1_3/scripts.pory"
-	msgbox Hoenn1_BirchBag_4_Text_0
-# 48 "data/maps/Hoenn1_3/scripts.pory"
+# 43 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
-# 49 "data/maps/Hoenn1_3/scripts.pory"
+# 44 "data/maps/Hoenn1_3/scripts.pory"
 	releaseall
 	end
 
 
 Hoenn1_4_EventScript_Wingull::
-# 56 "data/maps/Hoenn1_3/scripts.pory"
+# 51 "data/maps/Hoenn1_3/scripts.pory"
 	trainerbattle_single TRAINER_WINGULL, Hoenn1_4_EventScript_Wingull_Text_0, Hoenn1_4_EventScript_Wingull_Text_1
-# 57 "data/maps/Hoenn1_3/scripts.pory"
+# 52 "data/maps/Hoenn1_3/scripts.pory"
 	msgbox Hoenn1_4_EventScript_Wingull_Text_2, MSGBOX_AUTOCLOSE
-# 58 "data/maps/Hoenn1_3/scripts.pory"
+# 53 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
 	end
 
 
 Hoenn1_4_EventScript_Seedot::
-# 65 "data/maps/Hoenn1_3/scripts.pory"
+# 60 "data/maps/Hoenn1_3/scripts.pory"
 	trainerbattle_single TRAINER_SEEDOT, Hoenn1_4_EventScript_Seedot_Text_0, Hoenn1_4_EventScript_Seedot_Text_1
-# 66 "data/maps/Hoenn1_3/scripts.pory"
+# 61 "data/maps/Hoenn1_3/scripts.pory"
 	msgbox Hoenn1_4_EventScript_Seedot_Text_2, MSGBOX_AUTOCLOSE
-# 67 "data/maps/Hoenn1_3/scripts.pory"
+# 62 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
 	end
 
 
 Hoenn1_BirchBag_5::
-# 75 "data/maps/Hoenn1_3/scripts.pory"
+# 70 "data/maps/Hoenn1_3/scripts.pory"
 	lockall
-# 76 "data/maps/Hoenn1_3/scripts.pory"
-	playse SE_CLICK
-# 77 "data/maps/Hoenn1_3/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 78 "data/maps/Hoenn1_3/scripts.pory"
-	setvar VAR_0x8000, 33
-# 79 "data/maps/Hoenn1_3/scripts.pory"
-	special LoadBirchBagPoolById
-# 80 "data/maps/Hoenn1_3/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 81 "data/maps/Hoenn1_3/scripts.pory"
-	waitstate
-# 83 "data/maps/Hoenn1_3/scripts.pory"
+# 71 "data/maps/Hoenn1_3/scripts.pory"
+	call Act1BirchBag
+# 73 "data/maps/Hoenn1_3/scripts.pory"
 	removeobject HOENN1_5_BIRCHBAG
-# 84 "data/maps/Hoenn1_3/scripts.pory"
+# 74 "data/maps/Hoenn1_3/scripts.pory"
 	setflag FLAG_BIRCHBAG_1_5
-# 85 "data/maps/Hoenn1_3/scripts.pory"
-	msgbox Hoenn1_BirchBag_4_Text_0
-# 87 "data/maps/Hoenn1_3/scripts.pory"
+# 77 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
-# 88 "data/maps/Hoenn1_3/scripts.pory"
+# 78 "data/maps/Hoenn1_3/scripts.pory"
 	releaseall
 	end
 
 
 Hoenn1_BirchBag_6::
-# 95 "data/maps/Hoenn1_3/scripts.pory"
+# 85 "data/maps/Hoenn1_3/scripts.pory"
 	lockall
-# 96 "data/maps/Hoenn1_3/scripts.pory"
-	playse SE_CLICK
-# 97 "data/maps/Hoenn1_3/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 98 "data/maps/Hoenn1_3/scripts.pory"
-	setvar VAR_0x8000, 33
-# 99 "data/maps/Hoenn1_3/scripts.pory"
-	special LoadBirchBagPoolById
-# 100 "data/maps/Hoenn1_3/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
-# 101 "data/maps/Hoenn1_3/scripts.pory"
-	waitstate
-# 103 "data/maps/Hoenn1_3/scripts.pory"
+# 86 "data/maps/Hoenn1_3/scripts.pory"
+	call Act1BirchBag
+# 88 "data/maps/Hoenn1_3/scripts.pory"
 	removeobject HOENN1_6_BIRCHBAG
-# 104 "data/maps/Hoenn1_3/scripts.pory"
+# 89 "data/maps/Hoenn1_3/scripts.pory"
 	setflag FLAG_BIRCHBAG_1_6
-# 105 "data/maps/Hoenn1_3/scripts.pory"
-	msgbox Hoenn1_BirchBag_4_Text_0
-# 107 "data/maps/Hoenn1_3/scripts.pory"
+# 92 "data/maps/Hoenn1_3/scripts.pory"
 	waitmessage
-# 108 "data/maps/Hoenn1_3/scripts.pory"
+# 93 "data/maps/Hoenn1_3/scripts.pory"
 	releaseall
 	end
 
@@ -138,26 +102,26 @@ Hoenn1_3_EventScript_Lotad_Text_2:
 # 28 "data/maps/Hoenn1_3/scripts.pory"
 	.string "Que pasa amigo. No hablo English,\nlo siento.$"
 
-Hoenn1_BirchBag_4_Text_0:
-# 46 "data/maps/Hoenn1_3/scripts.pory"
-	.string "You received a\n{STR_VAR_1}!$"
-
 Hoenn1_4_EventScript_Wingull_Text_0:
-# 56 "data/maps/Hoenn1_3/scripts.pory"
+# 51 "data/maps/Hoenn1_3/scripts.pory"
 	.string "Howdy. I'm wingull. Let's battle!$"
 
 Hoenn1_4_EventScript_Wingull_Text_1:
-# 56 "data/maps/Hoenn1_3/scripts.pory"
-	.string "They should call me losegull, not\nwingull. Squawk :($"
+# 51 "data/maps/Hoenn1_3/scripts.pory"
+	.string "They should call me losegull, not\n"
+	.string "wingull. Squawk. By the way, did you know\l"
+	.string "you can nickname pokemon by pressing A\l"
+	.string "on the summary page? I'm nicknaming\l"
+	.string "myself Losegull right now.$"
 
 Hoenn1_4_EventScript_Wingull_Text_2:
-# 57 "data/maps/Hoenn1_3/scripts.pory"
+# 52 "data/maps/Hoenn1_3/scripts.pory"
 	.string "Did you know you can nickname pokemon\n"
 	.string "by pressing A on the summary page? I'm\l"
 	.string "nicknaming myself Losegull right now.$"
 
 Hoenn1_4_EventScript_Seedot_Text_0:
-# 65 "data/maps/Hoenn1_3/scripts.pory"
+# 60 "data/maps/Hoenn1_3/scripts.pory"
 	.string "Hi. I'm about to sow some of my seed\n"
 	.string "inside of you >:)\p"
 	.string "...Just kidding. I'm going to sow it on\n"
@@ -165,21 +129,28 @@ Hoenn1_4_EventScript_Seedot_Text_0:
 	.string "ability.$"
 
 Hoenn1_4_EventScript_Seedot_Text_1:
-# 65 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Sorry for that joke earlier...$"
+# 60 "data/maps/Hoenn1_3/scripts.pory"
+	.string "Sorry for that joke earlier... By the\n"
+	.string "way, if you already didn't know, you can\l"
+	.string "access your PC through the start menu.\l"
+	.string "If your party is full, any pokemon given\l"
+	.string "to you will automatically go to there.$"
 
 Hoenn1_4_EventScript_Seedot_Text_2:
-# 66 "data/maps/Hoenn1_3/scripts.pory"
-	.string "I wonder what noise an acorn makes...$"
+# 61 "data/maps/Hoenn1_3/scripts.pory"
+	.string "You can access your PC through the\n"
+	.string "start menu. If your party is full,\l"
+	.string "pokemon given to you will automatically\l"
+	.string "go to there.$"
 
 Poochyena_Intro::
 # 13 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Ruff Ruff! Yena!$"
+	.string "Ruff Ruff! Yena!\pThere's no poke-centres around here,\nso when one of your pokemon faint,\lthey'll be gone for good! So be careful!$"
 
 Poochyena_Outro::
 # 17 "data/maps/Hoenn1_3/scripts.pory"
-	.string "whimpers$"
+	.string "Noo I lost!$"
 
 PostBattle_Poochyena::
 # 21 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Yena Poo Poo.\p...\p......\pI can speak English by the way.$"
+	.string "Ruff!.$"

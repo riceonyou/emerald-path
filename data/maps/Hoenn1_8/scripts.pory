@@ -3,8 +3,8 @@ mapscripts Hoenn1_8_MapScripts {
 
 script Hoenn1_8_EventScript_Taillow{
  
-	trainerbattle_single(TRAINER_TAILLOW, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_TAILLOW, format("Welcome to the gym! You'll always find us at the end of a path. Once you beat the leader at the end of the gym, you can teleport to the next area by talking to abra! Now let's fight!"), "Aaaa you got me!")
+	msgbox("Good luck with the rest of the run.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
