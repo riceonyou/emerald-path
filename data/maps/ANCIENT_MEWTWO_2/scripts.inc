@@ -25,26 +25,30 @@ ANCIENT_MEWTWO_EventScript_TalkToMewtwo::
 # 13 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_0
 # 20 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	giveitem ITEM_CLONING_CHARM, 1
-# 21 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	setvar VAR_CLONING_CHARM_COUNT, 3
-# 22 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	waitmessage
+# 21 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+	giveitem ITEM_CLONING_CHARM, 1
+# 22 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+	setvar VAR_CLONING_CHARM_COUNT, 3
 # 23 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+	waitmessage
+# 24 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_1
-# 29 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	giveitem ITEM_TM_PSYCHIC, 1
 # 30 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	waitmessage
 # 31 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_TM_PSYCHIC, 1
 # 32 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_2
+	waitmessage
+# 33 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
 # 34 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_3
+	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_2
 # 36 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_3
+# 38 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	special WarpToNextAct
-# 37 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+# 39 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	releaseall
 	return
 
@@ -59,7 +63,7 @@ ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_0:
 	.string "managed to develop this item.$"
 
 ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_1:
-# 23 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+# 24 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	.string "This charm allows you to clone the\n"
 	.string "next 3 pokemon you choose.\l"
 	.string "Be sure to choose them wisely.\p"
@@ -67,9 +71,9 @@ ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_1:
 	.string "I shall give you this Psychic TM.$"
 
 ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_2:
-# 32 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+# 34 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	.string "The level cap has been raised to 42$"
 
 ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_3:
-# 34 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+# 36 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	.string "I wish you well on your next path.$"

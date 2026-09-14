@@ -10,6 +10,8 @@ script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
     lockall
     faceplayer
     //GIVE ANCIENT REWARD
+    playmoncry(SPECIES_SHAYMIN, CRY_MODE_ENCOUNTER)
+    waitmoncry
     msgbox("Hello there! I congratulate you on
             completing the first path! But the
             road ahead is long and treacherous.
@@ -34,7 +36,9 @@ script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
     waitmessage
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("The level cap has been raised to 30")
-    
+    waitmessage
+    playmoncry(SPECIES_MANAPHY, CRY_MODE_ENCOUNTER)
+    waitmoncry
     msgbox("I hope my gifts will help you out.
     
             Now time to get you to the next

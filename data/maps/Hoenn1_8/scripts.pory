@@ -12,24 +12,22 @@ script Hoenn1_8_EventScript_Taillow{
 
 script Hoenn1_8_EventScript_Whismur{
  
-	trainerbattle_single(TRAINER_WHISMUR, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_WHISMUR, format("Psst. Did you know that almost all pokemon in this game evolve at either level 16 or 32? Or both if they can evolve twice."), format("I can't wait to evolve into a loudred. But this level cap is making it hard..."))
+	msgbox(format("Mumble mumble mumble...\pMaybe if I had some rare candies... Then I wouldn't have to go to the next path to evolve...\pMumble mumble..."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
  
 }
 
 script Hoenn1_8_EventScript_Nosepass{
-	trainerbattle_single(TRAINER_LEADER_NOSEPASS, "test.", "test.", Hoenn1_8_EventScript_Nosepass_Defeated)
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_LEADER_NOSEPASS, format("Hello. I am the leader of this gym. We tend to have full teams of 6 pokemon. I hope you are prepared."), format("Congratulations. You have defeated me. Talk to the Abra to continue."), Hoenn1_8_EventScript_Nosepass_Defeated)
+	msgbox(format("Talk to the Abra to continue. Before you head to the next path though, you will be teleported to a location of a legendary pokemon with special rewards for you."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_8_EventScript_Nosepass_Defeated{
 	setflag(FLAG_DEFEATED_PATH_LEADER)
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
-	waitmessage
 	end
 }
 

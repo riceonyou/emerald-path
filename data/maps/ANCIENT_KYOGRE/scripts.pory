@@ -2,24 +2,55 @@ mapscripts ANCIENT_KYOGRE_MapScripts {
 }
 
 script ANCIENT_KYOGRE_EventScript_Kyogre{
-    lockall 
-
+    lockall
+    //faceplayer
     //GIVE ANCIENT REWARD
-    msgbox("Take a pokemon with you!")
+    playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    applymovement(1, moves(
+        face_left
+        face_up
+        face_right
+        face_down
+        face_player
+    ))
+    waitmovement
+    msgbox(format("Brrrr!\pHiya! You've just beaten 3 paths! Amazing!\nHere's a gift for you."))
+    waitmessage
+    giveitem(ITEM_ARCHIES_BANDANA_CHARM, 1)
+    msgbox(format("It's a keepsake from my late friend. We once shared a dream for the world, but a lots changed since then.\pAnyways, enough reminiscing. While you have that item, all of your moves do 1.5 damage in the rain. Not just your water type moves. And a pokemon with the Drizzle ability would go along well with that item, won't it?"))
     waitmessage
     fadescreen(FADE_TO_BLACK)
-    setvar(VAR_0x8000, 29)
+    setvar(VAR_0x8000, 39)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    
+    msgbox(format("And please take a Rain Dance TM too."))
     waitmessage
-
-    
+    giveitem(ITEM_TM_RAIN_DANCE, 1)
+    waitmessage
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 42")
-    
-    msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
+    msgbox("The level cap has been raised to 50")
+    waitmessage
+    applymovement(1, moves(
+        face_left
+        face_up
+        face_right
+        face_down
+        face_player
+    ))
+    waitmovement
+    msgbox(format("Next up is the final path! It'll be different to all the earlier paths in that there won't be any birch bags or items lying around. And everyone you'll have to face will be extremely challenging. But I'm sure you can do it! I'm rooting for you!"))
+    applymovement(1, moves(
+        face_left
+        face_up
+        face_right
+        face_down
+        face_player
+    ))
+    waitmovement
+    playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
+    waitmoncry
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

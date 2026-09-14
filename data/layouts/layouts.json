@@ -9818,10 +9818,10 @@
     {
       "id": "LAYOUT_ANCIENT_LUGIA",
       "name": "ANCIENT_LUGIA_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 11,
+      "height": 15,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "secondary_tileset": "gTileset_LugiaAltar",
       "border_filepath": "data/layouts/ANCIENT_LUGIA/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_LUGIA/map.bin"
     },
@@ -9838,10 +9838,10 @@
     {
       "id": "LAYOUT_ANCIENT_HOOH",
       "name": "ANCIENT_HOOH_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 11,
+      "height": 15,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_LugiaAltar",
       "border_filepath": "data/layouts/ANCIENT_HOOH/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_HOOH/map.bin"
     },
@@ -9851,7 +9851,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_AutmnRuins",
+      "secondary_tileset": "gTileset_Space",
       "border_filepath": "data/layouts/ANCIENT_DEOXYS/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_DEOXYS/map.bin"
     }

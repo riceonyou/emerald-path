@@ -1574,3 +1574,14 @@ const struct Tileset gTileset_AutmnRuins =
     .metatileAttributes = gMetatileAttributes_AutmnRuins,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_LugiaAltar2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_LugiaAltar2,
+    .palettes = gTilesetPalettes_LugiaAltar2,
+    .metatiles = gMetatiles_LugiaAltar2,
+    .metatileAttributes = gMetatileAttributes_LugiaAltar2,
+    .callback = NULL,
+};

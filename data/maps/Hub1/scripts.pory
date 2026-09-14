@@ -6,6 +6,12 @@ mapscripts Hub1_MapScripts {
 //-----------------------------------GLOBAL SCRIPTS THAT ARE USED A BUNCH----------------------------------------------------------
 script AfterWarpIntoNewAct{
     
+	if(flag(FLAG_HOOH_FEATHER_USED)){
+		msgbox(format("Your Ho-Oh Feather activated! You were given another chance!"))
+		clearflag(FLAG_HOOH_FEATHER_USED)
+		releaseall
+	}
+
 	if(!flag(FLAG_WARPED_INTO_NEW_ACT)){
 		setflag(FLAG_WARPED_INTO_NEW_ACT)
 
@@ -49,10 +55,15 @@ script AfterWarpIntoNewAct{
 				setflag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)
 				msgbox(format("You've unlocked the Normal Charm as a starter charm!"))
 			}
-
+			//difficulty
 			if(flag(FLAG_NEW_DIFFICULTY_UNLOCKED)){
 				msgbox(format("You've unlocked a new difficulty!"))
 				clearflag(FLAG_NEW_DIFFICULTY_UNLOCKED)
+			}
+			//new alt path
+			if((!flag(FLAG_HOENN1_ALT_UNLOCKED)) && (var(VAR_ACT1_WINS) > 1)){
+				setflag(FLAG_HOENN1_ALT_UNLOCKED)
+				msgbox(format("You've unlocked an alternate first path! Each time you enter a path, you now have a chance to enter the alternate path."))
 			}
 		}
 		releaseall
@@ -129,13 +140,13 @@ script AbraTeleport{
 script RivalFight1 {
 	switch (var(VAR_CURRENT_RIVAL)){
         case 0:
-            trainerbattle_single(TRAINER_TREECKO, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_TREECKO, "Yo I'm Treecko. You seem like\nA worthy rival! Grrr!", "Damn you got me.")
+            msgbox("I'll get you next time. Just you\nwait and see!", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
         case 1:
-            trainerbattle_single(TRAINER_TORCHIC, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_TORCHIC, "Yo I'm Torchic. You seem like\nA worthy rival! Grrr!", "Damn you got me.")
+            msgbox("I'll get you next time. Just you\nwait and see!", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
     }
@@ -144,13 +155,13 @@ script RivalFight1 {
 script RivalFight2 {
     switch (var(VAR_CURRENT_RIVAL)){
         case 0:
-            trainerbattle_single(TRAINER_GROVYLE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_GROVYLE, "Sup. Let's do this.", "Grrrr...")
+            msgbox("Just you wait. I'll come back even\nstronger.", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
         case 1:
-            trainerbattle_single(TRAINER_COMBUSKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_COMBUSKEN, "I'm fired up and ready to fight!", "Noooo!")
+            msgbox("I need to train even more...", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
     }
@@ -159,13 +170,13 @@ script RivalFight2 {
 script RivalFight3 {
     switch (var(VAR_CURRENT_RIVAL)){
         case 0:
-            trainerbattle_single(TRAINER_SCEPTILE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_SCEPTILE, "You ready?", "I still can't beat you...")
+            msgbox("Let's fight again.", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
         case 1:
-            trainerbattle_single(TRAINER_BLAZIKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_BLAZIKEN, "Raaaa!\nLet's give it our all!", "I'm still not strong enough...")
+            msgbox("I'm still not strong enough...", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
     }
@@ -174,13 +185,13 @@ script RivalFight3 {
 script RivalFight4 {
     switch (var(VAR_CURRENT_RIVAL)){
         case 0:
-            trainerbattle_single(TRAINER_MEGASCEPTILE, "Yo I'm Treecko. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_MEGASCEPTILE, "One last time...", "......")
+            msgbox("Good luck.", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
         case 1:
-            trainerbattle_single(TRAINER_MBLAZIKEN, "Yo I'm Torchic. Grrr.", "Damn you got me.")
-            msgbox("I'll get you next time.", MSGBOX_AUTOCLOSE) 
+            trainerbattle_single(TRAINER_MBLAZIKEN, "I can't wait to show you how much\nstronger I've gotten!", "I'm in shock...\pYou really are the strongest.")
+            msgbox("I hope you crush it with the last\nremaining fights!", MSGBOX_AUTOCLOSE) 
             waitmessage
             end
     }
@@ -496,6 +507,7 @@ script Hub_Event_Script_Miltank{
 		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_MON)
 				switch (var(VAR_RESULT)) {
 					case MULTI_B_PRESSED:
+						hidecoinsbox(0,0)
 						msgbox("Come back anytime!")
 						releaseall
 						end
@@ -920,7 +932,7 @@ script KecShop {
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_POCKET_BIRCH_BAG_BUYABLE)){
-		dynmultipush("Pocket Birch Bag (¥2000)",ITEM_POCKET_BIRCH_BAG)
+		dynmultipush("Pkt Birch Bag (¥2000)",ITEM_POCKET_BIRCH_BAG)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_HP_BOTTLE_CAP_BUYABLE)){
@@ -1279,7 +1291,7 @@ script Hub_Event_Script_Kecleon {
 	}
 
 	if(!flag(FLAG_POCKET_BIRCH_BAG_UNLOCKED)){
-		dynmultipush("Pocket Birch Bag (¥1000)",ITEM_POCKET_BIRCH_BAG)
+		dynmultipush("Pkt Birch Bag (¥1000)",ITEM_POCKET_BIRCH_BAG)
 		addvar(VAR_TEMP_A, 1)
 	}
 
@@ -1390,14 +1402,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 	msgbox("Howdy! Would you like me to\nstock a new TM?")
 	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
 		dynmultipush("TM Rock Smash (¥900)",ITEM_TM_ROCK_SMASH)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_SWIFT_UNLOCKED)){
-		dynmultipush("TM Swift (¥500)",ITEM_TM_SWIFT)
-		addvar(VAR_TEMP_A, 1)
-	}
-	if(!flag(FLAG_TM_CUT_UNLOCKED)){
-		dynmultipush("TM Cut (¥500)",ITEM_TM_CUT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
@@ -3073,7 +3077,9 @@ script Hub_Event_Script_Chimecho {
 		if(flag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)){dynmultipush("Tinted Charm", ITEM_TINTED_CHARM) }
 		if(flag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)){dynmultipush("Normal Charm", ITEM_NORMAL_CHARM) }
 		if(flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)){dynmultipush("Minty Charm", ITEM_MINTY_CHARM) }
-	
+		if(flag(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED)){dynmultipush("Bruxish Floss Charm", ITEM_BRUXISH_FLOSS_CHARM) }
+		if(flag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)){dynmultipush("Unown Buddy Charm", ITEM_UNOWN_BUDDY_CHARM) }
+
 		dynmultistack(0, 0, FALSE, 8, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch (var(VAR_RESULT)){
 			case MULTI_B_PRESSED:
@@ -3092,6 +3098,10 @@ script Hub_Event_Script_Chimecho {
 				msgbox(format("Your normal moves do 1.1 times more damage."))
 			case ITEM_MINTY_CHARM:
 				msgbox(format("Gain a random mint at the start of each path."))
+			case ITEM_BRUXISH_FLOSS_CHARM:
+				msgbox(format("Your biting moves do 1.2 dmg."))
+			case ITEM_UNOWN_BUDDY_CHARM:
+				msgbox(format("Get an extra unown at the start of the run"))
 		}
 		closemessage
 		goto(backtocharmslist)	
@@ -3149,6 +3159,11 @@ script GiveStarterCharm {
             giveitem(ITEM_NORMAL_CHARM, 1)
 		case ITEM_MINTY_CHARM:
             giveitem(ITEM_MINTY_CHARM, 1)
+		case ITEM_BRUXISH_FLOSS_CHARM:
+            giveitem(ITEM_BRUXISH_FLOSS_CHARM, 1)
+		case ITEM_UNOWN_BUDDY_CHARM:
+            giveitem(ITEM_UNOWN_BUDDY_CHARM, 1)
+			givemon(SPECIES_UNOWN, 14,)
 
     }
 	msgbox("Good luck on your run!")
@@ -3158,49 +3173,69 @@ script GiveStarterCharm {
 
 //==================================DIALOGUE ONLY NPCS=======================================
 script Hub_Event_Script_Golem {
-
-	
+	lockall
+	if(!flag(FLAG_MEGA_SHOP_UNLOCKED)){
+		msgbox(format("Diancie over there has a large mega stone collection.\pI wonder if she'll start selling them one day... I've heard that getting to the 4th path might do it...\pNot that I would be able to make use of one anyway... I wish I had a mega evolution..."))
+	}else{
+		msgbox(format("So Diancie's finally started to sell mega stones! Apparently if you get to the 4th path with a pokemon that can mega evolve, she'll start selling that pokemon's mega stone."))
+	}
+	waitmessage
+	releaseall
 }
 
 script Hub_Event_Script_Togedemaru {
-
-	
+	lockall
+	random(2)
+	switch(var(VAR_RESULT)){
+		case 0:
+			msgbox(format("Hey. I'm Togedemaru. I'm spiky and round!"))
+		case 1:
+			msgbox(format("Hey. In this game, pokemon can have up to 4 abilities! Like me! I have Iron Barbs, Static, Sturdy and Cute Charm! But not all pokemon have as many abilites as me hehe."))
+	}
+		
+	waitmessage
+	releaseall
 }
 
 script Hub_Event_Script_Klang {
-
-	
+	lockall
+	msgbox(format(""))
+	waitmessage
+	releaseall
 }
 
 script Hub_Event_Script_Bruxish {
-
-	
+	lockall
+	msgbox(format("You want to know how I have such beatiful teeth? Well you've got to take good car of them of course! Make sure to brush twice a day, and floss every night!"))
+	waitmessage
+	releaseall
 }
 
 script Hub_Event_Script_Simisage {
+	lockall
+	msgbox(format(""))
+	waitmessage
+	releaseall	
 }
 
 script Hub_Event_Script_Woobat {
-
-	
+	lockall
+	msgbox(format("Did you know that some abilities got changed? Like my ability Klutz. It still doesn't let me use items, but it also gives me a 10% chance to dodge moves!"))
+	waitmessage
+	releaseall
 }
 
-script Hub_Event_Script_Ekans {
-
-	
-}
 
 script Hub_Event_Script_Unown {
-
-	
+	lockall
+	msgbox(format("Hi. I know I'm a pretty weak pokemon, but If you choose me, you'll get another unown for free, thanks to my Herd ability!"))
+	waitmessage
+	releaseall
 }
 
 script Hub_Event_Script_Smoliv {
-
-	
-}
-
-script Hub_Event_Script_Dachsbun {
-
-	
+	lockall
+	msgbox(format(""))
+	waitmessage
+	releaseall
 }

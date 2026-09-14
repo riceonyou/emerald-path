@@ -483,7 +483,7 @@ void CB2_ChooseStarter(void)
     
     for (i = 0; i < STARTER_MON_COUNT; i++){
         rand = Random() & (ShinyRate - 1);
-        if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
+        if (CheckBagHasItem(ITEM_SUPER_SHINY_CHARM, 1))
             IsSelectionShiny[i] = TRUE;
         else if (rand == 0)
             IsSelectionShiny[i] = TRUE;

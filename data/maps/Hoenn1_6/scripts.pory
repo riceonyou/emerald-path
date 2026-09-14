@@ -62,7 +62,7 @@ script Hoenn1_7_EventScript_Skitty{
 
 script Hoenn1_7_EventScript_Nincada{
  
-	trainerbattle_single(TRAINER_NINCADA, format("My favourite football player of all time? I don't really watch soccer but Erling Haaland I guess. I saw some reels of him and I love his smooth, voluptuous hair."), format("What? What do you mean he's bald now?"))
+	trainerbattle_single(TRAINER_NINCADA, format("My favourite football player of all time? I don't really watch soccer but Erling Haaland I guess. I saw some reels of him and I love his smooth, voluptuous hair."), format("What?\pWhat do you mean he shaved it off?"))
 	msgbox(format("That's a shame. I'd like to have hair like him."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

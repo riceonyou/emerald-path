@@ -98,7 +98,7 @@
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
 #define VAR_CURRENT_ACT                                0x404E
-#define VAR_LOTAD_SIZE_RECORD                            0x404F
+#define VAR_CURRENT_PATH                            0x404F
 #define VAR_CURRENT_DIFFICULTY                        0x4050
 #define VAR_UNLOCKED_DIFFICULTY                            0x4051
 #define VAR_LEVEL_CAP                           0x4052

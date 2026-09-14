@@ -14,9 +14,9 @@ Hoenn1_8_EventScript_Taillow::
 
 Hoenn1_8_EventScript_Whismur::
 # 15 "data/maps/Hoenn1_8/scripts.pory"
-	trainerbattle_single TRAINER_WHISMUR, Hoenn1_8_EventScript_Whismur_Text_0, Hoenn1_8_EventScript_Whismur_Text_0
+	trainerbattle_single TRAINER_WHISMUR, Hoenn1_8_EventScript_Whismur_Text_0, Hoenn1_8_EventScript_Whismur_Text_1
 # 16 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox Hoenn1_8_EventScript_Whismur_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_8_EventScript_Whismur_Text_2, MSGBOX_AUTOCLOSE
 # 17 "data/maps/Hoenn1_8/scripts.pory"
 	waitmessage
 	end
@@ -24,9 +24,9 @@ Hoenn1_8_EventScript_Whismur::
 
 Hoenn1_8_EventScript_Nosepass::
 # 23 "data/maps/Hoenn1_8/scripts.pory"
-	trainerbattle_single TRAINER_LEADER_NOSEPASS, Hoenn1_8_EventScript_Whismur_Text_0, Hoenn1_8_EventScript_Whismur_Text_0, Hoenn1_8_EventScript_Nosepass_Defeated
+	trainerbattle_single TRAINER_LEADER_NOSEPASS, Hoenn1_8_EventScript_Nosepass_Text_0, Hoenn1_8_EventScript_Nosepass_Text_1, Hoenn1_8_EventScript_Nosepass_Defeated
 # 24 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox Hoenn1_8_EventScript_Whismur_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_8_EventScript_Nosepass_Text_2, MSGBOX_AUTOCLOSE
 # 25 "data/maps/Hoenn1_8/scripts.pory"
 	waitmessage
 	end
@@ -35,15 +35,11 @@ Hoenn1_8_EventScript_Nosepass::
 Hoenn1_8_EventScript_Nosepass_Defeated::
 # 30 "data/maps/Hoenn1_8/scripts.pory"
 	setflag FLAG_DEFEATED_PATH_LEADER
-# 31 "data/maps/Hoenn1_8/scripts.pory"
-	msgbox Hoenn1_8_EventScript_Whismur_Text_0, MSGBOX_AUTOCLOSE
-# 32 "data/maps/Hoenn1_8/scripts.pory"
-	waitmessage
 	end
 
 
 EventScript_AbraTeleport1::
-# 37 "data/maps/Hoenn1_8/scripts.pory"
+# 35 "data/maps/Hoenn1_8/scripts.pory"
 	call AbraTeleport
 	return
 
@@ -66,4 +62,39 @@ Hoenn1_8_EventScript_Taillow_Text_2:
 
 Hoenn1_8_EventScript_Whismur_Text_0:
 # 15 "data/maps/Hoenn1_8/scripts.pory"
-	.string "test.$"
+	.string "Psst. Did you know that almost all\n"
+	.string "pokemon in this game evolve at either\l"
+	.string "level 16 or 32? Or both if they can\l"
+	.string "evolve twice.$"
+
+Hoenn1_8_EventScript_Whismur_Text_1:
+# 15 "data/maps/Hoenn1_8/scripts.pory"
+	.string "I can't wait to evolve into a loudred.\n"
+	.string "But this level cap is making it hard...$"
+
+Hoenn1_8_EventScript_Whismur_Text_2:
+# 16 "data/maps/Hoenn1_8/scripts.pory"
+	.string "Mumble mumble mumble...\p"
+	.string "Maybe if I had some rare candies... Then\n"
+	.string "I wouldn't have to go to the next path\l"
+	.string "to evolve...\p"
+	.string "Mumble mumble...$"
+
+Hoenn1_8_EventScript_Nosepass_Text_0:
+# 23 "data/maps/Hoenn1_8/scripts.pory"
+	.string "Hello. I am the leader of this gym. We\n"
+	.string "tend to have full teams of 6 pokemon. I\l"
+	.string "hope you are prepared.$"
+
+Hoenn1_8_EventScript_Nosepass_Text_1:
+# 23 "data/maps/Hoenn1_8/scripts.pory"
+	.string "Congratulations. You have defeated me.\n"
+	.string "Talk to the Abra to continue. Before\l"
+	.string "you head to the next path though, you\l"
+	.string "will be teleported to a location of a\l"
+	.string "legendary pokemon with special rewards\l"
+	.string "for you.$"
+
+Hoenn1_8_EventScript_Nosepass_Text_2:
+# 24 "data/maps/Hoenn1_8/scripts.pory"
+	.string "Talk to the Abra to continue.$"

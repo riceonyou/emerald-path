@@ -7222,6 +7222,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct BattleContext *ctx)
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
     if (SearchTraits(battlerTraits, ABILITY_STRONG_JAW) && IsBitingMove(move))
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+    if (GetBattlerSide(battlerAtk) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_BRUXISH_FLOSS_CHARM, 1) && IsBitingMove(move))
+        modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
     if (SearchTraits(battlerTraits, ABILITY_MEGA_LAUNCHER) && IsPulseMove(move))
         modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
     if (SearchTraits(battlerTraits, ABILITY_WATER_BUBBLE) && moveType == TYPE_WATER)
@@ -7938,6 +7940,11 @@ static inline uq4_12_t GetSameTypeAttackBonusModifier(struct BattleContext *ctx)
 // Utility Umbrella holders take normal damage from what would be rain- and sun-weakened attacks.
 static uq4_12_t GetWeatherDamageModifier(struct BattleContext *ctx)
 {
+    if (GetBattlerSide(ctx->battlerAtk) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_ARCHIES_BANDANA_CHARM, 1) && (ctx->weather & B_WEATHER_RAIN))
+        return UQ_4_12(1.5);
+    if (GetBattlerSide(ctx->battlerAtk) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_MAXIES_GLASSES_CHARM, 1) && (ctx->weather & B_WEATHER_SUN))
+        return UQ_4_12(1.5);
+
     bool32 megaSol = BattlerHasTrait(ctx->battlerAtk, ABILITY_MEGA_SOL);
     if (ctx->weather == B_WEATHER_NONE && !megaSol)
         return UQ_4_12(1.0);
@@ -8516,8 +8523,8 @@ bool32 IsFutureSightAttackerInParty(enum BattlerId battlerAtk, enum BattlerId ba
 #undef DAMAGE_APPLY_MODIFIER
 
 // The chance is 1/N for each stage.
-static const u32 sGen7CriticalHitOdds[] = {20,  8,  2,  1,   1}; // 1/X
-static const u32 sEnemyCriticalHitOdds[] = {10,  4,  2,  1,   1}; // 1/X
+static const u32 sGen7CriticalHitOdds[] = {16,  8,  2,  1,   1}; // 1/X
+static const u32 sEnemyCriticalHitOdds[] = {12,  6,  2,  1,   1}; // 1/X
 static const u32 sGen6CriticalHitOdds[] = {16,  8,  2,  1,   1}; // 1/X
 static const u32 sCriticalHitOdds[]     = {16,  8,  4,  3,   2}; // 1/X, Gens 3,4,5
 static const u32 sGen2CriticalHitOdds[] = {17, 32, 64, 85, 128}; // X/256

@@ -43,9 +43,9 @@ Hoenn1_Alt_1_Sign::
 
 Hoenn1_Alt_1_EventScript_Rattata::
 # 30 "data/maps/Hoenn1_Alt_1/scripts.pory"
-	trainerbattle_single TRAINER_RATTATA, Hoenn1_Alt_1_EventScript_Rattata_Text_0, Hoenn1_Alt_1_EventScript_Rattata_Text_0
+	trainerbattle_single TRAINER_RATTATA, Hoenn1_Alt_1_EventScript_Rattata_Text_0, Hoenn1_Alt_1_EventScript_Rattata_Text_1
 # 31 "data/maps/Hoenn1_Alt_1/scripts.pory"
-	msgbox Hoenn1_Alt_1_EventScript_Rattata_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_Alt_1_EventScript_Rattata_Text_2, MSGBOX_AUTOCLOSE
 # 32 "data/maps/Hoenn1_Alt_1/scripts.pory"
 	waitmessage
 	end
@@ -133,4 +133,15 @@ Hoenn1_Alt_1_Sign_Text_0:
 
 Hoenn1_Alt_1_EventScript_Rattata_Text_0:
 # 30 "data/maps/Hoenn1_Alt_1/scripts.pory"
-	.string "test$"
+	.string "Hey there.\p"
+	.string "...What am I doing here in Hoenn?\l"
+	.string "Well I was born here... My parents moved\l"
+	.string "here from Kanto.$"
+
+Hoenn1_Alt_1_EventScript_Rattata_Text_1:
+# 30 "data/maps/Hoenn1_Alt_1/scripts.pory"
+	.string "Yeah you beat me.$"
+
+Hoenn1_Alt_1_EventScript_Rattata_Text_2:
+# 31 "data/maps/Hoenn1_Alt_1/scripts.pory"
+	.string "Whatever.$"

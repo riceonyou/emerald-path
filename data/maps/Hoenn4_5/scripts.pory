@@ -2,36 +2,36 @@ mapscripts Hoenn4_5_MapScripts {
 }
 
 script Hoenn4_5_Farigiraf{
-	trainerbattle_single(TRAINER_FARIGIRAF, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_FARIGIRAF, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn4_5_Kingdra{
-	trainerbattle_single(TRAINER_KINGDRA, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_KINGDRA, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn4_5_Metagross{
-	trainerbattle_single(TRAINER_METAGROSS, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_METAGROSS, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn4_5_Latios{
 	trainerbattle_double(TRAINER_LATIOS_LATIAS, "test", "test", Hoenn4_5_Latios_Latias_Defeated)
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn4_5_Latias{
 	trainerbattle_double(TRAINER_LATIOS_LATIAS, "test", "test", Hoenn4_5_Latios_Latias_Defeated)
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

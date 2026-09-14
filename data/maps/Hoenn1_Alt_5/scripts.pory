@@ -3,35 +3,35 @@ mapscripts Hoenn1_Alt_5_MapScripts {
 }
 
 script Hoenn1_Alt_5_EventScript_Ralts{
-	trainerbattle_single(TRAINER_RALTS, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_RALTS, format("Hello. Would you like to battle?"), format("That was fun! Let's be friends!"))
+	msgbox(format("Hi friend! I hope your day goes well!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn1_Alt_5_EventScript_Carvanha{
-	trainerbattle_single(TRAINER_CARVANHA, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_CARVANHA, format("Aaaa. Do we have to battle now? I need to buy something from the kecleon shop real quick...\pAaah whatever. Let's start!"), format("Aaaa I knew I should've went to buy it earlier"))
+	msgbox(format("Did you know you can buy things from the kecleon shop even after you beat the gym leader? It's a good idea if you need something for the next path."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn1_Alt_5_EventScript_Vulpix{
-	trainerbattle_single(TRAINER_VULPIX, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_VULPIX, format("Let's have a fair and fun fight!"), format("That was a good battle!"))
+	msgbox(format("Good luck with leader Makuhita. He's real tough!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_Alt_5_EventScript_Makuhita{
-	trainerbattle_single(TRAINER_MAKUHITA, format("test"), format("test"), Hoenn1_Alt_5_EventScript_Leader_Defeated)
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_MAKUHITA, format("Hey there. You think you can take me on? Then let's see if you're right!"), format("Wow. You're strong."), Hoenn1_Alt_5_EventScript_Leader_Defeated)
+	msgbox(format("Talk to Abra to continue.\pC'mon, I'm sure he doesn't have all day."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_Alt_5_EventScript_Leader_Defeated{
 	setflag(FLAG_DEFEATED_PATH_LEADER)
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
-	waitmessage
+	// msgbox("I'm sure you'll do well.", MSGBOX_AUTOCLOSE) 
+	// waitmessage
 	end
 }
 

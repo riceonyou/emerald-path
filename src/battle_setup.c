@@ -1312,6 +1312,8 @@ void BattleSetup_StartTrainerBattle(void)
     if(FlagGet(FLAG_HEAL_EVERY_BATTLE)){
         HealPlayerParty();
     }
+    SavePlayerParty();
+    
     if (gNoOfApproachingTrainers == 2)
     {
         if (FollowerNPCIsBattlePartner())

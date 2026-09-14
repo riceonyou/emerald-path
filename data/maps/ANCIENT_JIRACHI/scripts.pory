@@ -13,8 +13,20 @@ script ANCIENT_JIRACHI_EventScript_TalkToJirachi{
     //GIVE ANCIENT REWARD
     msgbox(format("ZZzzzzzz...\pZZzzzzz.....\p..........\pOh, hello there. Sorry I was sleeping. I am a big sleeper after all. I like to sleep for a few hundred years at a time. That's not as much as my idol Gudetama though. Anyways, you're here for some rewards, right? Here, take some Max Revives."))
     waitmessage
+    applymovement(1, moves(
+        lock_facing_direction
+        walk_in_place_down * 2
+        unlock_facing_direction
+    ))
+    waitmovement
     giveitem(ITEM_MAX_REVIVE, 2)
     msgbox(format("Oh. And I don't need this Doom Desire TM anymore."))
+    applymovement(1, moves(
+        lock_facing_direction
+        walk_in_place_down * 2
+        unlock_facing_direction
+    ))
+    waitmovement
     giveitem(ITEM_TM_DOOM_DESIRE, 1)
     waitmessage
     msgbox(format("..........\p..............\pWhat...?\pYou wanted a wish? I've already used all of them up.\pYou'll have to wait another thousand years for me to be able to grant another wish...\p...........\pI guess I can see if I have some junk I can give you lying around..."))
@@ -39,6 +51,7 @@ script ANCIENT_JIRACHI_EventScript_TalkToJirachi{
     waitmovement
     applymovement(LOCALID_PLAYER, moves(
         walk_fast_right
+        step_end
         face_up
     ))
     waitmovement

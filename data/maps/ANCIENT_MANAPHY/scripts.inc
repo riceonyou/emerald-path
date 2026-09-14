@@ -23,60 +23,74 @@ ANCIENT_MANAPHY_EventScript_TalkToManaphy::
 # 11 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	faceplayer
 # 13 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_0
+	playmoncry SPECIES_MANAPHY, CRY_MODE_ENCOUNTER
 # 14 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	waitmessage
+	waitmoncry
 # 15 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_0
 # 16 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	setvar VAR_0x8000, 29
+	waitmessage
 # 17 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	special LoadBirchBagPoolById
+	fadescreen FADE_TO_BLACK
 # 18 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
+	setvar VAR_0x8000, 29
 # 19 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	waitstate
+	special LoadBirchBagPoolById
+# 20 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	special ChooseBirchBagPokemonWeighted
 # 21 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_1
-# 22 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	giveitem ITEM_TM_RAIN_DANCE, 1
+	waitstate
 # 23 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_1
 # 24 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2
+	giveitem ITEM_TM_RAIN_DANCE, 1
 # 25 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	giveitem ITEM_PHIONE_EGG_CHARM, 1
-# 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	waitmessage
+# 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2
 # 27 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_PHIONE_EGG_CHARM, 1
 # 28 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3
+	waitmessage
 # 29 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_4
+	playfanfare MUS_OBTAIN_ITEM
+# 30 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3
 # 31 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	special WarpToNextAct
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_4
 # 32 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	applymovement 1, ANCIENT_MANAPHY_EventScript_TalkToManaphy_Movement_0
+# 35 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	waitmovement
+# 37 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	special WarpToNextAct
+# 38 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	releaseall
 	return
 
 
+# 32 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+ANCIENT_MANAPHY_EventScript_TalkToManaphy_Movement_0:
+# 33 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	jump_in_place_left_right
+	step_end
+
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_0:
-# 13 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 15 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "Heya!\nGood job on beating the first path!\lI've got a bunch of goodies to give you!\lHere's a water pokemon!$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_1:
-# 21 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 23 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "And a Rain Dance TM!$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2:
-# 24 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "And a Phione Egg!\lThe egg will hatch into a phione\lafter you complete the next act!\lPhione is a great rain pokemon!$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3:
-# 28 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 30 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "The level cap has been raised to 30$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_4:
-# 29 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 31 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "That's all from me!\lNow lets get ya to the next path!$"

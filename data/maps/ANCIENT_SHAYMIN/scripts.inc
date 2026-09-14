@@ -23,46 +23,56 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin::
 # 11 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	faceplayer
 # 13 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	playmoncry SPECIES_SHAYMIN, CRY_MODE_ENCOUNTER
+# 14 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	waitmoncry
+# 15 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_0
-# 19 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	waitmessage
-# 20 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 21 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	setvar VAR_0x8000, 36
+	waitmessage
 # 22 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	special LoadBirchBagPoolById
+	fadescreen FADE_TO_BLACK
 # 23 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
+	setvar VAR_0x8000, 36
 # 24 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	waitstate
+	special LoadBirchBagPoolById
+# 25 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	special ChooseBirchBagPokemonWeighted
 # 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1
-# 27 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	giveitem ITEM_TM_BULLET_SEED, 1
+	waitstate
 # 28 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1
 # 29 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2
-# 33 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	giveitem ITEM_ORAN_CHARM, 1
-# 34 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	giveitem ITEM_TM_BULLET_SEED, 1
+# 30 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitmessage
+# 31 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2
 # 35 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_ORAN_CHARM, 1
 # 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3
+	waitmessage
+# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
 # 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3
+# 39 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	waitmessage
+# 40 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	playmoncry SPECIES_MANAPHY, CRY_MODE_ENCOUNTER
+# 41 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	waitmoncry
+# 42 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4
-# 43 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 47 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	special WarpToNextAct
-# 44 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 48 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	releaseall
 	return
 
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_0:
-# 13 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 15 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "Hello there! I congratulate you on\n"
 	.string "completing the first path! But the\l"
 	.string "road ahead is long and treacherous.\p"
@@ -70,22 +80,22 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_0:
 	.string "Please take one of these pokemon!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1:
-# 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 28 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "And a Bullet Seed TM!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2:
-# 29 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 31 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "And an Oran Charm! With this charm,\n"
 	.string "everytime you enter a battle, your\l"
 	.string "pokemon without items will\l"
 	.string "automatically be given an oran berry!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3:
-# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "The level cap has been raised to 30$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4:
-# 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 42 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "I hope my gifts will help you out.\p"
 	.string "Now time to get you to the next\n"
 	.string "path.$"

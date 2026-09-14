@@ -19,9 +19,9 @@ Hoenn2_1_ONFRAME::
 
 Hoenn2_1_Pelipper::
 # 12 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_PELIPPER, Hoenn2_1_Pelipper_Text_0, Hoenn2_1_Pelipper_Text_0
+	trainerbattle_single TRAINER_PELIPPER, Hoenn2_1_Pelipper_Text_0, Hoenn2_1_Pelipper_Text_1
 # 13 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Pelipper_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Pelipper_Text_2, MSGBOX_AUTOCLOSE
 # 14 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -29,9 +29,9 @@ Hoenn2_1_Pelipper::
 
 Hoenn2_1_Wailmer::
 # 21 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_WAILMER, Hoenn2_1_Pelipper_Text_0, Hoenn2_1_Pelipper_Text_0
+	trainerbattle_single TRAINER_WAILMER, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
 # 22 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Pelipper_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
 # 23 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -39,9 +39,9 @@ Hoenn2_1_Wailmer::
 
 Hoenn2_1_Sharpedo::
 # 30 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_SHARPEDO, Hoenn2_1_Pelipper_Text_0, Hoenn2_1_Pelipper_Text_0
+	trainerbattle_single TRAINER_SHARPEDO, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
 # 31 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Pelipper_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
 # 32 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -49,9 +49,9 @@ Hoenn2_1_Sharpedo::
 
 Hoenn2_1_Crawdaunt::
 # 39 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_CRAWDAUNT, Hoenn2_1_Pelipper_Text_0, Hoenn2_1_Pelipper_Text_0
+	trainerbattle_single TRAINER_CRAWDAUNT, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
 # 40 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Pelipper_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
 # 41 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -59,9 +59,9 @@ Hoenn2_1_Crawdaunt::
 
 Hoenn2_1_Dusclops::
 # 48 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_DUSCLOPS, Hoenn2_1_Pelipper_Text_0, Hoenn2_1_Pelipper_Text_0
+	trainerbattle_single TRAINER_DUSCLOPS, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
 # 49 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Pelipper_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
 # 50 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -145,4 +145,17 @@ Hoenn2_4_Itemball_2::
 
 Hoenn2_1_Pelipper_Text_0:
 # 12 "data/maps/Hoenn2_1/scripts.pory"
+	.string "I used to deliver mail for work, but I\n"
+	.string "retired and took up battling!$"
+
+Hoenn2_1_Pelipper_Text_1:
+# 12 "data/maps/Hoenn2_1/scripts.pory"
+	.string "That was exhilarating!$"
+
+Hoenn2_1_Pelipper_Text_2:
+# 13 "data/maps/Hoenn2_1/scripts.pory"
+	.string "Fly you to the next path? No thanks!$"
+
+Hoenn2_1_Wailmer_Text_0:
+# 21 "data/maps/Hoenn2_1/scripts.pory"
 	.string "test$"

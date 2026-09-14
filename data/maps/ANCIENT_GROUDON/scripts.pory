@@ -4,22 +4,50 @@ mapscripts ANCIENT_GROUDON_MapScripts {
 
 script ANCIENT_GROUDON_EventScript_Groudon{
     lockall
-
+    //faceplayer
     //GIVE ANCIENT REWARD
-    msgbox("Take a pokemon with you!")
+    playmoncry(SPECIES_GROUDON, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    applymovement(1, moves(
+        jump_in_place_down_up
+        jump_in_place_left_right
+        face_player
+    ))
+    waitmovement
+    msgbox(format("Grrooaa!\p You beat the first 3 paths! That must've been difficult!\nHere. I have something for you."))
+    waitmessage
+    giveitem(ITEM_MAXIES_GLASSES_CHARM, 1)
+    msgbox(format("It once belonged to a friend of mine. But that was a long time ago.\pWhile you have that item, all of your moves do 1.5 damage in the harsh sunlight. Not just your fire type moves.\pAnd I think a pokemon with the Drought ability would be of good use to you, no?"))
     waitmessage
     fadescreen(FADE_TO_BLACK)
     setvar(VAR_0x8000, 30)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    
+    msgbox(format("And please take a Sunny Day TM too."))
     waitmessage
-
+    giveitem(ITEM_TM_SUNNY_DAY, 1)
+    waitmessage
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 42")
-    
-    msgbox("Boop beep boop.\lNow time to get you to the next\nstage.")
+    msgbox("The level cap has been raised to 50")
+    waitmessage
+    applymovement(1, moves(
+        jump_in_place_down_up
+        jump_in_place_left_right
+        face_player
+    ))
+    waitmovement
+    msgbox(format("The final path lays before you. It'll be different to all the earlier paths in that there won't be any birch bags or items lying around. And everyone you'll have to face will be extremely challenging. But I'm sure you can do it! I'm rooting for you!"))
+    applymovement(1, moves(
+        face_left
+        face_up
+        face_right
+        face_down
+        face_player
+    ))
+    waitmovement
+    playmoncry(SPECIES_GROUDON, CRY_MODE_ENCOUNTER)
+    waitmoncry
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

@@ -53,9 +53,10 @@ const u8 gItemEffect_Revive[7] = {
     [6] = ITEM6_HEAL_HP_HALF,
 };
 
-const u8 gItemEffect_MaxRevive[7] = {
-    [4] = ITEM4_REVIVE | ITEM4_HEAL_HP,
+const u8 gItemEffect_MaxRevive[8] = {
+    [4] = ITEM4_REVIVE | ITEM4_HEAL_HP | ITEM4_HEAL_PP,
     [6] = ITEM6_HEAL_HP_FULL,
+    [7] = ITEM6_HEAL_PP_FULL,
 };
 
 const u8 gItemEffect_FreshWater[7] = {

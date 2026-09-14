@@ -17,7 +17,7 @@ ShoalCave_LowTideLowerRoom_EventScript_SetShoalItemMetatilesEnd::
 ShoalCave_LowTideLowerRoom_EventScript_ShoalSalt4::
 	lockall
 	goto_if_set FLAG_RECEIVED_SHOAL_SALT_4, ShoalCave_LowTideLowerRoom_EventScript_ReceivedShoalSalt
-	giveitem ITEM_SHOAL_SALT
+	giveitem ITEM_BRUXISH_FLOSS_CHARM
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setmetatile 18, 2, METATILE_Cave_ShoalCave_DirtPile_Small, FALSE
 	special DrawWholeMapView

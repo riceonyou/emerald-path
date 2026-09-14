@@ -34,19 +34,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MARILL)",
-      "x": 32,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "Hoenn2_4_Azumarill",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(PLUSLE)",
       "x": 10,
       "y": 5,
@@ -141,8 +128,8 @@
     {
       "local_id": "HOENN2_7_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 41,
-      "y": 12,
+      "x": 23,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -155,8 +142,8 @@
     {
       "local_id": "HOENN2_6_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 41,
-      "y": 9,
+      "x": 22,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -208,7 +195,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELECTRODE)",
-      "x": 29,
+      "x": 31,
       "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -222,8 +209,8 @@
     {
       "local_id": "HOENN2_8_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 22,
-      "y": 5,
+      "x": 40,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -236,8 +223,8 @@
     {
       "local_id": "HOENN2_9_BIRCHBAG",
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 23,
-      "y": 5,
+      "x": 41,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

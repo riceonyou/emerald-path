@@ -2,36 +2,36 @@ mapscripts Hoenn2_6_MapScripts {
 }
 
 script Hoenn2_6_Roselia{
-	trainerbattle_single(TRAINER_ROSELIA, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_ROSELIA, format("I don't usually like the indoors since I need to get my daily sunlight in. So let's make this quick!"), format("Thanks for the battle."))
+	msgbox(format("Do you like my beautiful rose hands?"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_6_Swalot{
-	trainerbattle_single(TRAINER_SWALOT, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SWALOT, format("Welcome to Swalot's mukbang. Today, I'm going to eat YOU!\lOm nom nom."), format("Rats. Looks like I was the one eaten."))
+	msgbox(format("I've always wondered what purpose the black diamonds around my body have..."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_6_Manectric{
-	trainerbattle_single(TRAINER_LEADER_MANECTRIC, "test", "test", Hoenn2_6_Manectric_Defeated)
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_LEADER_MANECTRIC, format("Hey there. I'm the leader of this path. I won't go easy on you!"), "Good battle! You were truly worthy\nof the victory!", Hoenn2_6_Manectric_Defeated)
+	msgbox(format("Congratulations of beating me.\pTalk to abra over there to continue."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_6_Manectric_Defeated{
 	setflag(FLAG_DEFEATED_PATH_LEADER)
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	msgbox("Congratulations of beating me.\pTalk to abra over there to continue.", MSGBOX_AUTOCLOSE) 
 	waitmessage
 	end
 }
 
 script Hoenn2_6_Magneton{
-	trainerbattle_single(TRAINER_MAGNETON, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_MAGNETON, format("Tontontontontonton. Let's battle baby."), format("Ouch! You're too strong!"))
+	msgbox(format("That was fun! Let's battle again someday!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

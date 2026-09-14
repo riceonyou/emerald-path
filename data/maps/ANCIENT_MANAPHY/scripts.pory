@@ -10,6 +10,8 @@ script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
     lockall
     faceplayer
     //GIVE ANCIENT REWARD
+    playmoncry(SPECIES_MANAPHY, CRY_MODE_ENCOUNTER)
+    waitmoncry
     msgbox("Heya!\nGood job on beating the first path!\lI've got a bunch of goodies to give you!\lHere's a water pokemon!")
     waitmessage
     fadescreen(FADE_TO_BLACK)
@@ -27,6 +29,10 @@ script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("The level cap has been raised to 30")
     msgbox("That's all from me!\lNow lets get ya to the next path!")
+    applymovement(1, moves(
+        jump_in_place_left_right
+    ))
+    waitmovement
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

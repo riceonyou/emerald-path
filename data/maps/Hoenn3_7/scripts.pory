@@ -2,22 +2,22 @@ mapscripts Hoenn3_7_MapScripts {
 }
 
 script Hoenn3_7_Wigglytuff{
-	trainerbattle_single(TRAINER_WIGGLYTUFF, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_WIGGLYTUFF, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_7_Sandslash{
-	trainerbattle_single(TRAINER_SANDSLASH, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SANDSLASH, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_7_Slaking{
 	trainerbattle_single(TRAINER_SLAKING, "test", "test", Hoenn3_7_Slaking_Defeated)
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

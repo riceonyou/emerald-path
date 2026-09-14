@@ -13,22 +13,22 @@ script Hoenn1_Alt_2_EventScript_Boat{
 }
 
 script Hoenn1_Alt_2_EventScript_Azurill{
-	trainerbattle_single(TRAINER_AZURILL, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_AZURILL, format("Hi! What's your dream?\pMy dream is to have a drink bar with cola, soda, cold tea, and everything in my home!"), format("Nooo. One step away from my ultimate dream!"))
+	msgbox(format("A hot drink bar with hot chocolate and coffee for winter would be nice too now that I think about it."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_Alt_2_EventScript_Budew{
-	trainerbattle_single(TRAINER_BUDEW, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_BUDEW, format("You wouldn't think of it by just my looks, but I'm actually a poison type as well as grass."), format("Darn it!"))
+	msgbox(format("Hmm should I watch One Piece?"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_Alt_2_EventScript_Barboach{
-	trainerbattle_single(TRAINER_BARBOACH, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_BARBOACH, format("I used to work for the navy, but I got tired of the sea life so I quit."), format("That was a good battle."))
+	msgbox(format("The sea life is just not for me. I am a freshwater fish after all."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

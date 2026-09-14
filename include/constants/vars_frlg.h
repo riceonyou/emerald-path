@@ -88,7 +88,7 @@
 #define VAR_POKELOT_RND2                   0x404C
 #define VAR_QL_ENTRANCE                    0x404D
 #define VAR_NATIONAL_DEX_FRLG              0x404E
-#define VAR_LOTAD_SIZE_RECORD              0x404F
+#define VAR_CURRENT_PATH              0x404F
 
 // Map Scene
 #define VAR_MAP_SCENE_PALLET_TOWN_OAK                                          0x4050

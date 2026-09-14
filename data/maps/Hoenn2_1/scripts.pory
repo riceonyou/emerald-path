@@ -9,17 +9,17 @@ script Hoenn2_1_ONFRAME {
 
 script Hoenn2_1_Pelipper{
  
-	trainerbattle_single(TRAINER_PELIPPER, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_PELIPPER, format("I used to deliver mail for work, but I retired and took up battling!"), format("That was exhilarating!"))
+	msgbox(format("You want me to fly you to the next path? No thanks!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
 }
 
 script Hoenn2_1_Wailmer{
- 
-	trainerbattle_single(TRAINER_WAILMER, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+
+	trainerbattle_single(TRAINER_WAILMER, format("Hmm...\pI have this pack of miso paste in the fridge that I haven't touched in years. You think its safe to eat?"), "Thanks for the battle.")
+	msgbox(format("I'll check my miso paste when I get home. And then maybe I'll buy some tofu and make miso soup."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -27,8 +27,8 @@ script Hoenn2_1_Wailmer{
 
 script Hoenn2_1_Sharpedo{
  
-	trainerbattle_single(TRAINER_SHARPEDO, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SHARPEDO, format("My son's been singing Baby Sharpedo on repeat and it's driving me crazy. Someone please save me."), format("You got me."))
+	msgbox(format("Daddy Sharpedo doo doo do-\pNooo!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -36,8 +36,8 @@ script Hoenn2_1_Sharpedo{
 
 script Hoenn2_1_Crawdaunt{
  
-	trainerbattle_single(TRAINER_CRAWDAUNT, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_CRAWDAUNT, format("Watch out for my Crabhammer! In this game, it has a critical ratio of 2!"), format("My Crabhammer wasn't good enough..."))
+	msgbox(format("If a move has a 1 critical ratio, then it has a 1 in 8 chance to critically strike. If it has a 2 critical ratio, it has a 1 in 2 chance to critically strike!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -45,8 +45,8 @@ script Hoenn2_1_Crawdaunt{
 
 script Hoenn2_1_Dusclops{
  
-	trainerbattle_single(TRAINER_DUSCLOPS, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_DUSCLOPS, format("Boo."), format("Boo hoo hoo."))
+	msgbox(format("Boo."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 

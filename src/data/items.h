@@ -3063,128 +3063,103 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_GoldBottleCap,
     },
 
-    [ITEM_PEARL_STRING] =
+    [ITEM_SUPER_SHINY_CHARM] =
     {
-        .name = ITEM_NAME("Pearl String"),
-    #if I_PRICE >= GEN_8
-        .price = 20000 * TREASURE_FACTOR,
-    #elif I_PRICE == GEN_7
-        .price = 30000,
-    #elif I_PRICE == GEN_6
-        .price = 15000,
-    #else
+        .name = ITEM_NAME("Super Shiny Charm"),
         .price = 0,
-    #endif
+        .importance = 1,
         .description = COMPOUND_STRING(
-            "Very large pearls\n"
-            "that would sell at a\n"
-            "high price."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
+            "All your current pokemon,\n"
+            "and future pokemon become\n"
+            "shiny."),
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_PearlString,
-        .iconPalette = gItemIconPalette_PearlString,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
     },
 
-    [ITEM_STARDUST] =
+    [ITEM_ARCHIES_BANDANA_CHARM] =
     {
-        .name = ITEM_NAME("Stardust"),
-        .price = (I_PRICE >= GEN_7) ? 3000 * TREASURE_FACTOR: 2000,
-        .description = COMPOUND_STRING(
-            "Beautiful red sand.\n"
-            "Can be sold at a\n"
-            "high price."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
-        .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_Sand,
-        .iconPalette = gItemIconPalette_Star,
-    },
-
-    [ITEM_STAR_PIECE] =
-    {
-        .name = ITEM_NAME("Star Piece"),
-        .price = (I_PRICE >= GEN_7) ? 12000 * TREASURE_FACTOR: 9800,
-        .description = COMPOUND_STRING(
-            "A red gem shard.\n"
-            "It would sell for a\n"
-            "very high price."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
-        .heldSlot = 0,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_StarPiece,
-        .iconPalette = gItemIconPalette_Star,
-    },
-
-    [ITEM_COMET_SHARD] =
-    {
-        .name = ITEM_NAME("Comet Shard"),
-    #if I_PRICE >= GEN_8
-        .price = 25000 * TREASURE_FACTOR,
-    #elif I_PRICE == GEN_7
-        .price = 60000,
-    #elif I_PRICE == GEN_6
-        .price = 30000,
-    #else
+        .name = ITEM_NAME("Archie's Bandana"),
         .price = 0,
-    #endif
+        .importance = 1,
         .description = COMPOUND_STRING(
-            "A comet's shard.\n"
-            "It would sell for a\n"
-            "high price."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
+            "Your moves of all types\n"
+            "do 1.5 dmg in the rain."),
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_StarPiece,
-        .iconPalette = gItemIconPalette_CometShard,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
     },
 
-    [ITEM_SHOAL_SALT] =
+    [ITEM_MAXIES_GLASSES_CHARM] =
     {
-        .name = ITEM_NAME("Shoal Salt"),
-        .price = 20,
+        .name = ITEM_NAME("Maxie's Glasses"),
+        .price = 0,
+        .importance = 1,
         .description = COMPOUND_STRING(
-            "Salt obtained from\n"
-            "deep inside the\n"
-            "Shoal Cave."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
+            "Your moves of all types\n"
+            "do 1.5 dmg in the harsh\n"
+            "sunlight."),
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_Powder,
-        .iconPalette = gItemIconPalette_ShoalSalt,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
     },
 
-    [ITEM_SHOAL_SHELL] =
+    [ITEM_LUGIA_PLATE_CHARM] =
     {
-        .name = ITEM_NAME("Shoal Shell"),
-        .price = 20,
+        .name = ITEM_NAME("Lugia Plate Charm"),
+        .price = 0,
+        .importance = 1,
         .description = COMPOUND_STRING(
-            "A seashell found\n"
-            "deep inside the\n"
-            "Shoal Cave."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SELLABLE,
+            "All your current pokemon,\n"
+            "and future pokemon become\n"
+            "shiny."),
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_ShoalShell,
-        .iconPalette = gItemIconPalette_Shell,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_BRUXISH_FLOSS_CHARM] =
+    {
+        .name = ITEM_NAME("Bruxish Floss Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your biting moves\n"
+            "do 1.2 dmg."),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
+    },
+
+    [ITEM_UNOWN_BUDDY_CHARM] =
+    {
+        .name = ITEM_NAME("Unown Buddy Charm"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Get an extra unown at\n"
+            "the start of the run"),
+        .pocket = POCKET_CHARMS,
+        .heldSlot = 0,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalCharm,
     },
 
     [ITEM_RED_SHARD] =
@@ -18000,8 +17975,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_StarSweet,
+        .iconPalette = gItemIconPalette_StarSweet,
     },
 
     [ITEM_LUMP_SUM_CHARM] =
@@ -18015,8 +17990,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_Nugget,
-        .iconPalette = gItemIconPalette_Nugget,
+        .iconPic = gItemIcon_RelicCoin,
+        .iconPalette = gItemIconPalette_RelicGold,
     },
 
     [ITEM_BERRY_PACK_CHARM] =
@@ -18032,25 +18007,25 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_BerryPouch,
+        .iconPalette = gItemIconPalette_BerryPouch,
     },
 
     [ITEM_HOOH_FEATHER_CHARM] =
     {
-        .name = ITEM_NAME("Super Shiny Charm"),
+        .name = ITEM_NAME("Ho-Oh Feather Charm"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "All your current pokemon,\n"
-            "and future pokemon become\n"
-            "shiny."),
+            "The next time you lose a\n"
+            "fight, you get another\n"
+            "chance."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_HoOhFeatherCharm,
+        .iconPalette = gItemIconPalette_HoOhFeatherCharm,
     },
 
     [ITEM_POCKET_BIRCH_BAG] =
@@ -18063,8 +18038,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PocketBirchBag,
-        .iconPic = gItemIcon_PocketBirchBagCharm,
-        .iconPalette = gItemIconPalette_PocketBirchBagCharm,
+        .iconPic = gItemIcon_PocketBirchBag,
+        .iconPalette = gItemIconPalette_PocketBirchBag,
     },
 
     [ITEM_MINTY_CHARM] =
@@ -18079,8 +18054,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_MintyCharm,
+        .iconPalette = gItemIconPalette_MintyCharm,
     },
 
     [ITEM_TINTED_CHARM] =
@@ -18095,8 +18070,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_TintedCharm,
+        .iconPalette = gItemIconPalette_TintedCharm,
     },
 
     [ITEM_NORMAL_CHARM] =

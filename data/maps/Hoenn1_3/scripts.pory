@@ -24,7 +24,7 @@ text PostBattle_Poochyena{
 
 script Hoenn1_3_EventScript_Lotad{
  
-	trainerbattle_single(TRAINER_LOTAD, "Hola. Me llamo Lotad.", "He perdido.")
+	trainerbattle_single(TRAINER_LOTAD, format("Hola. Me llamo Lotad. You can view a summary of my team by selecting the ENEMY option in battle."), "He perdido.")
 	msgbox("Que pasa amigo. No hablo English,\nlo siento.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
@@ -57,7 +57,7 @@ script Hoenn1_4_EventScript_Wingull{
 
 script Hoenn1_4_EventScript_Seedot{
  
-	trainerbattle_single(TRAINER_SEEDOT, format("Hi. I'm about to sow some of my seed inside of you >:)\p...Just kidding. I'm going to sow it on the ground. Because of my seed sower ability."), format("Sorry for that joke earlier... By the way, if you already didn't know, you can access your PC through the start menu. If your party is full, any pokemon given to you will automatically go to there."))
+	trainerbattle_single(TRAINER_SEEDOT, format("Hi. I'm about to sow some of my seed...\pWhere? I'm going to sow it on the ground.\nBecause of my seed sower ability."), format("By the way, if you already didn't know, you can access your PC through the start menu. If your party is full, any pokemon given to you will automatically go to there."))
 	msgbox(format("You can access your PC through the start menu. If your party is full, pokemon given to you will automatically go to there."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

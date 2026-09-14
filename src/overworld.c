@@ -319,7 +319,9 @@ FLAG_MINTY_CHARM_STARTER_UNLOCKED,\
 FLAG_IV_BOTTLE_CAPS_UNLOCKED,\
 FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED,\
 FLAG_POCKET_BIRCH_BAG_UNLOCKED,\
-FLAG_NEW_DIFFICULTY_UNLOCKED
+FLAG_NEW_DIFFICULTY_UNLOCKED,\
+FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED,\
+FLAG_UNOWN_BUDDY_CHARM_UNLOCKED
 
 // Flags listed above are restored after whiteout state reset
 
@@ -970,16 +972,16 @@ void SetKecShopBuyables(void)
     FlagClear(FLAG_TM_CUT_BUYABLE);
 
     //=======================Regular Shop=============================
-    if (FLAG_RARE_CANDY_UNLOCKED){
+    if (FlagGet(FLAG_RARE_CANDY_UNLOCKED)){
         FlagSet(FLAG_RARE_CANDY_BUYABLE);
     }
-    if (FLAG_LUM_BERRY_UNLOCKED){
+    if (FlagGet(FLAG_LUM_BERRY_UNLOCKED)){
         FlagSet(FLAG_LUM_BERRY_BUYABLE);
     }
-    if (FLAG_SERIOUS_MINT_UNLOCKED){
+    if (FlagGet(FLAG_SERIOUS_MINT_UNLOCKED)){
         FlagSet(FLAG_SERIOUS_MINT_BUYABLE);
     }
-    if (FLAG_POCKET_BIRCH_BAG_UNLOCKED){
+    if (FlagGet(FLAG_POCKET_BIRCH_BAG_UNLOCKED)){
         FlagSet(FLAG_POCKET_BIRCH_BAG_BUYABLE);
     }
 
@@ -1023,25 +1025,25 @@ void SetKecShopBuyables(void)
     //===========================TM Shop===========================================================
     FlagSet(FLAG_TM_CUT_BUYABLE);
     FlagSet(FLAG_TM_SWIFT_BUYABLE);
-    if (FLAG_TM_NOBLE_ROAR_UNLOCKED){
+    if (FlagGet(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
         FlagSet(FLAG_TM_NOBLE_ROAR_BUYABLE);
     }
-    if (FLAG_TM_CHARM_UNLOCKED){
+    if (FlagGet(FLAG_TM_CHARM_UNLOCKED)){
         FlagSet(FLAG_TM_CHARM_BUYABLE);
     }
-    if (FLAG_TM_FAKE_TEARS_UNLOCKED){
+    if (FlagGet(FLAG_TM_FAKE_TEARS_UNLOCKED)){
         FlagSet(FLAG_TM_FAKE_TEARS_BUYABLE);
     }
-    if (FLAG_TM_TOXIC_UNLOCKED){
+    if (FlagGet(FLAG_TM_TOXIC_UNLOCKED)){
         FlagSet(FLAG_TM_TOXIC_BUYABLE);
     }
-    if (FLAG_TM_THUNDER_WAVE_UNLOCKED){
+    if (FlagGet(FLAG_TM_THUNDER_WAVE_UNLOCKED)){
         FlagSet(FLAG_TM_THUNDER_WAVE_BUYABLE);
     }
-    if (FLAG_TM_WILL_O_WISP_UNLOCKED){
+    if (FlagGet(FLAG_TM_WILL_O_WISP_UNLOCKED)){
         FlagSet(FLAG_TM_WILL_O_WISP_BUYABLE);
     }
-    if (FLAG_TM_CONFUSE_RAY_UNLOCKED){
+    if (FlagGet(FLAG_TM_CONFUSE_RAY_UNLOCKED)){
         FlagSet(FLAG_TM_CONFUSE_RAY_BUYABLE);
     }
 
@@ -1049,7 +1051,7 @@ void SetKecShopBuyables(void)
 
 
 
-#define MAX_STARTER_CHARMS 6 //CHANGE THIS NUMBER AS YOU ADD MORE STARTER CHARMS!!!
+#define MAX_STARTER_CHARMS 8 //CHANGE THIS NUMBER AS YOU ADD MORE STARTER CHARMS!!!
 static u16 StarterCharms[MAX_STARTER_CHARMS];
 
 void BufferStarterCharms(void)
@@ -1068,6 +1070,10 @@ void BufferStarterCharms(void)
         StarterCharms[StarterCharmCount++] = ITEM_NORMAL_CHARM;
     if (FlagGet(FLAG_MINTY_CHARM_STARTER_UNLOCKED))
         StarterCharms[StarterCharmCount++] = ITEM_MINTY_CHARM;
+    if (FlagGet(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED))
+        StarterCharms[StarterCharmCount++] = ITEM_BRUXISH_FLOSS_CHARM;
+    if (FlagGet(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED))
+        StarterCharms[StarterCharmCount++] = ITEM_UNOWN_BUDDY_CHARM;
 
     for (i = 0; i < 3; i++)
     {
@@ -1088,7 +1094,7 @@ void WarpToNextAncient(void)
 
     switch (currentact){
         case (1):
-                u8 rand1 = Random() % 3;
+                u8 rand1 = Random() % 5;
 				switch (rand1) {
 					case 0:
                         u8 randregi = Random() % 3;
@@ -1102,6 +1108,14 @@ void WarpToNextAncient(void)
                         break;
                     case 2:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_SHAYMIN), MAP_NUM(MAP_ANCIENT_SHAYMIN), WARP_ID_NONE, 6, 13);
+						DoWarp();
+                        break;
+                    case 3:
+                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_HOOH), MAP_NUM(MAP_ANCIENT_HOOH), WARP_ID_NONE, 5, 11);
+						DoWarp();
+                        break;
+                    case 4:
+                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_LUGIA), MAP_NUM(MAP_ANCIENT_LUGIA), WARP_ID_NONE, 5, 11);
 						DoWarp();
                         break;
 				}; 
@@ -1135,6 +1149,32 @@ void WarpToNextAncient(void)
     }
 }
 
+//IDK HOW TO DECLARE AN ENUM SO I DO THIS
+static void SetWarpHub(){// VAR_CURRENT_PATH = 0
+    VarSet(VAR_CURRENT_PATH, 0);
+    SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 19);
+}
+static void SetWarpHoenn1(){// VAR_CURRENT_PATH = 1
+    VarSet(VAR_CURRENT_PATH, 1);
+    SetWarpDestination(MAP_GROUP(MAP_HOENN1_1), MAP_NUM(MAP_HOENN1_1), WARP_ID_NONE, 3, 10);
+}
+static void SetWarpHoenn1Alt(){// VAR_CURRENT_PATH = 2
+    VarSet(VAR_CURRENT_PATH, 2);
+    SetWarpDestination(MAP_GROUP(MAP_HOENN1_ALT_1), MAP_NUM(MAP_HOENN1_ALT_1), WARP_ID_NONE, 22, 11);
+}
+static void SetWarpHoenn2(){// VAR_CURRENT_PATH = 3
+    VarSet(VAR_CURRENT_PATH, 3);
+    SetWarpDestination(MAP_GROUP(MAP_HOENN2_1), MAP_NUM(MAP_HOENN2_1), WARP_ID_NONE, 4, 13);
+}
+static void SetWarpHoenn3(){// VAR_CURRENT_PATH = 4
+    VarSet(VAR_CURRENT_PATH, 4);
+    SetWarpDestination(MAP_GROUP(MAP_HOENN3_1), MAP_NUM(MAP_HOENN3_1), WARP_ID_NONE, 3, 7);
+}
+static void SetWarpHoennElite4(){// VAR_CURRENT_PATH = 5
+    VarSet(VAR_CURRENT_PATH, 5);
+    SetWarpDestination(MAP_GROUP(MAP_ELITE4_HOENN_OUTSIDE), MAP_NUM(MAP_ELITE4_HOENN_OUTSIDE), WARP_ID_NONE, 13, 24);
+}
+
 void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 {
     u8 currentact = VarGet(VAR_CURRENT_ACT);
@@ -1149,8 +1189,7 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 
     switch (currentact){
         case (0):
-                u8 rand0 = Random() % 2; //CHANGE THIS NUMBER AS YOU ADD MORE ACTS
-
+                
                 //Only for act 0.
                 DetermineRival();
                 SetMoney(&gSaveBlock1Ptr->money, 0);
@@ -1167,15 +1206,18 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                     FlagSet(FLAG_BIRCHBAG_3_8);
                 }
 
-
+                u8 numact1s = 1;
+                if (FlagGet(FLAG_HOENN1_ALT_UNLOCKED))
+                    numact1s += 1;
+                u8 rand0 = Random() % numact1s;
                 VarSet(VAR_TOTAL_RUNS, VarGet(VAR_TOTAL_RUNS) + 1);
 				switch (rand0) {
 					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN1_1), MAP_NUM(MAP_HOENN1_1), WARP_ID_NONE, 3, 10);
+                        SetWarpHoenn1();
 						DoWarp();
                         break;
                     case 1:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN1_ALT_1), MAP_NUM(MAP_HOENN1_ALT_1), WARP_ID_NONE, 22, 11);
+                        SetWarpHoenn1Alt();
 						DoWarp();
                         break;
 				}; 
@@ -1185,7 +1227,7 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                 VarSet(VAR_ACT1_WINS, VarGet(VAR_ACT1_WINS) + 1);
 				switch (rand1) {
 					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN2_1), MAP_NUM(MAP_HOENN2_1), WARP_ID_NONE, 4, 13);
+                        SetWarpHoenn2();
 						DoWarp();
                         break;
 				}; 
@@ -1195,7 +1237,7 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                 VarSet(VAR_ACT2_WINS, VarGet(VAR_ACT2_WINS) + 1);
 				switch (rand2) {
 					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_HOENN3_1), MAP_NUM(MAP_HOENN3_1), WARP_ID_NONE, 3, 7);
+                        SetWarpHoenn3();
 						DoWarp();
                         break;
 				};
@@ -1205,15 +1247,17 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                 }
                 break;
         case (3):
+                // DO MEGA STONE UNLOCKS
                 SetOwnedMegaStoneBuyableFlags();
                 if(!FlagGet(FLAG_MEGA_SHOP_UNLOCKED)){
                     FlagSet(FLAG_MEGA_SHOP_UNLOCKED);
                 }
+
                 VarSet(VAR_ACT3_WINS, VarGet(VAR_ACT3_WINS) + 1);
                 u8 rand3 = Random() % 1;
 				switch (rand3) {
 					case 0:
-                        SetWarpDestination(MAP_GROUP(MAP_ELITE4_HOENN_OUTSIDE), MAP_NUM(MAP_ELITE4_HOENN_OUTSIDE), WARP_ID_NONE, 13, 24);
+                        SetWarpHoennElite4();
 						DoWarp();
                         break;
 				}; 
@@ -1226,10 +1270,11 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                     FlagSet(FLAG_NEW_DIFFICULTY_UNLOCKED);
                 }
                 ResetPokemonAndItems();
+                ClearWhiteoutFlags();
                 VarSet(VAR_CURRENT_ACT, 0);
                 ClearMoney();
 
-                SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 19);
+                SetWarpHub();
 				DoWarp();
                 break;
     }
@@ -1373,10 +1418,41 @@ void ResetPokemonAndItems(void)
 // code
 void DoWhiteOut(void)
 {
-    ResetPokemonAndItems();
-    Overworld_ResetStateAfterWhiteOut();
-    SetWarpDestination(MAP_GROUP(MAP_HUB1), MAP_NUM(MAP_HUB1), WARP_ID_NONE, 10, 19);
-    WarpIntoMap();
+    if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
+    {
+        u8 CurrentPath = VarGet(VAR_CURRENT_PATH);
+        switch (CurrentPath)
+        {
+        case 1:
+            SetWarpHoenn1();
+            break;
+        case 2:
+            SetWarpHoenn1Alt();
+            break;
+        case 3:
+            SetWarpHoenn2();
+            break;
+        case 4:
+            SetWarpHoenn3();
+            break;
+        case 5:
+            SetWarpHoennElite4();
+            break;
+        }
+        FlagSet(FLAG_HOOH_FEATHER_USED);
+        RemoveBagItem(ITEM_HOOH_FEATHER_CHARM, 1);
+        LoadPlayerParty();
+        WarpIntoMap();
+        return;
+    }
+    else
+    {
+        ResetPokemonAndItems();
+        ClearWhiteoutFlags();
+        Overworld_ResetStateAfterWhiteOut();
+        SetWarpHub();
+        WarpIntoMap();
+    }
 }
 
 void Overworld_ResetStateAfterFly(void)
@@ -1422,7 +1498,7 @@ void Overworld_ResetBattleFlagsAndVars(void)
 static void Overworld_ResetStateAfterWhiteOut(void)
 {
     ResetInitialPlayerAvatarState();
-    ClearWhiteoutFlags();
+    
 
     if (B_RESET_FLAGS_VARS_AFTER_WHITEOUT == TRUE)
         Overworld_ResetBattleFlagsAndVars();

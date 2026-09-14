@@ -43,7 +43,7 @@ MtMoon_1F_EventScript_ItemMoonStone::
 	end
 
 MtMoon_B2F_EventScript_ItemStarPiece::
-	finditem ITEM_STAR_PIECE
+	finditem ITEM_MAXIES_GLASSES_CHARM
 	end
 
 MtMoon_B2F_EventScript_ItemTM46::
@@ -67,7 +67,7 @@ SSAnne_1F_Room2_EventScript_ItemTM31::
 	end
 
 SSAnne_2F_Room2_EventScript_ItemStardust::
-	finditem ITEM_STARDUST
+	finditem ITEM_ARCHIES_BANDANA_CHARM
 	end
 
 SSAnne_2F_Room4_EventScript_ItemXAttack::
@@ -519,11 +519,11 @@ SeafoamIslands_B4F_EventScript_ItemUltraBall::
 	end
 
 FourIsland_EventScript_ItemStarPiece::
-	finditem ITEM_STAR_PIECE
+	finditem ITEM_MAXIES_GLASSES_CHARM
 	end
 
 FourIsland_EventScript_ItemStardust::
-	finditem ITEM_STARDUST
+	finditem ITEM_ARCHIES_BANDANA_CHARM
 	end
 
 OneIsland_KindleRoad_EventScript_ItemEther::

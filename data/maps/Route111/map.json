@@ -361,7 +361,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_STARDUST",
+      "trainer_sight_or_berry_tree_id": "ITEM_ARCHIES_BANDANA_CHARM",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_BIRCHBAG_1_10"
     },
@@ -1067,7 +1067,7 @@
       "x": 26,
       "y": 70,
       "elevation": 0,
-      "item": "ITEM_STARDUST",
+      "item": "ITEM_ARCHIES_BANDANA_CHARM",
       "flag": "FLAG_MINTY_CHARM_STARTER_UNLOCKED"
     },
     {

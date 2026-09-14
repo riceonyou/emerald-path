@@ -3,33 +3,33 @@ mapscripts Hoenn1_Alt_3_MapScripts {
 }
 
 script Hoenn1_Alt_3_EventScript_Aron{
-	trainerbattle_single(TRAINER_ARON, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_ARON, format("Hey how's it goin'? Have you heard the new DJ Ambipom album? It's absolutely mad!"), format("Sick battle, sick vibes."))
+	msgbox(format("I've been getting into producing lately and it's pretty tough."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_Alt_3_EventScript_Zubat{
-	trainerbattle_single(TRAINER_ZUBAT, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_ZUBAT, format("Eeeek! You scared me!\pOh... Let's battle."), format("Uuuuuu..."))
+	msgbox(format("Meow.\p............\p.............................\pWas that a good meow?"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn1_Alt_3_EventScript_Spoink{
-	trainerbattle_single(TRAINER_SPOINK, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SPOINK, format("I used to work at a zoo as a zoo animal, y'know? It was totally fun. The guests loved me."), format("Oof. Oink."))
+	msgbox(format("Be careful in the cave. It's dark!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn1_Alt_3_EventScript_Mawile{
-	trainerbattle_double(TRAINER_MAWILESABELEYE, format("test"), format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_double(TRAINER_MAWILESABELEYE, format("It'd be nice if they had a vending machine here. I could really use a cool drink right now."), format("Ahhh you got me."), format("test"))
+	msgbox(format("Let's go to the store for some snacks, Sableye."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn1_Alt_3_EventScript_Sabeleye{
 	trainerbattle_double(TRAINER_MAWILESABELEYE, format("test"), format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	msgbox(format("Let's go Mawile! I'm starving!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

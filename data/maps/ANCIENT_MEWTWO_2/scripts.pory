@@ -17,6 +17,7 @@ script ANCIENT_MEWTWO_EventScript_TalkToMewtwo{
             I have gained an interest in
             the science behind cloning and have
             managed to develop this item.")
+    waitmessage
     giveitem(ITEM_CLONING_CHARM, 1)
     setvar(VAR_CLONING_CHARM_COUNT, 3)
     waitmessage
@@ -26,6 +27,7 @@ script ANCIENT_MEWTWO_EventScript_TalkToMewtwo{
 
             And as an extra gift for you,
             I shall give you this Psychic TM.")
+    waitmessage
     giveitem(ITEM_TM_PSYCHIC, 1)
     waitmessage
     playfanfare(MUS_OBTAIN_ITEM)

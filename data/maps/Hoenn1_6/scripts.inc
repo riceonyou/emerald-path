@@ -184,7 +184,8 @@ Hoenn1_7_EventScript_Nincada_Text_0:
 
 Hoenn1_7_EventScript_Nincada_Text_1:
 # 65 "data/maps/Hoenn1_6/scripts.pory"
-	.string "What? What do you mean he's bald now?$"
+	.string "What?\p"
+	.string "What do you mean he shaved it off?$"
 
 Hoenn1_7_EventScript_Nincada_Text_2:
 # 66 "data/maps/Hoenn1_6/scripts.pory"

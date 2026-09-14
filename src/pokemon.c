@@ -1419,7 +1419,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
             isShiny = TRUE;
             FlagClear(FLAG_NEXT_GIVE_MON_SHINY);
         }
-        else if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
+        else if (CheckBagHasItem(ITEM_SUPER_SHINY_CHARM, 1))
         {
             isShiny = TRUE;
         }

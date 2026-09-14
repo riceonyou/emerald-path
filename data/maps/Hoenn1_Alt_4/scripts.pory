@@ -19,15 +19,15 @@ script Hoenn1_Alt_4_EventScript_Rival{
 }
 
 script Hoenn1_Alt_4_EventScript_Trapinch{
-	trainerbattle_single(TRAINER_TRAPINCH, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_TRAPINCH, format("Sigh...\pSometimes I wish I could walk on 2 legs.\pI just wonder how it feels having arms..."), format("Thanks for the battle."))
+	msgbox(format("My big head makes it impossible to balance myself when I try to stand on 2 feet."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn1_Alt_4_EventScript_Meditite{
-	trainerbattle_single(TRAINER_MEDITITE, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_MEDITITE, format("Ommm...\pI'm meditating.\pOmmmmmm..."), format("Back to meditating. Ommmmm..."))
+	msgbox(format("Ommmm....."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

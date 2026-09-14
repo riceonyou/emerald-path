@@ -5616,8 +5616,8 @@ static u16 SampleResortGorgeousMon(void)
 static const u16 sResortGorgeousDeluxeRewards[] = {
     ITEM_SPDEF_BOTTLE_CAP,
     ITEM_SPDEF_GOLD_BOTTLE_CAP,
-    ITEM_STARDUST,
-    ITEM_STAR_PIECE,
+    ITEM_ARCHIES_BANDANA_CHARM,
+    ITEM_MAXIES_GLASSES_CHARM,
     ITEM_HP_GOLD_BOTTLE_CAP,
     ITEM_RARE_CANDY
 };

@@ -13,56 +13,56 @@ script Hoenn2_4_KecShop_Shiny {
     call(KecShop_Shiny)
 }
 
-script Hoenn2_4_Azumarill{
-	trainerbattle_single(TRAINER_AZUMARILL, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
-	waitmessage
-    end
-}
+// script Hoenn2_4_Azumarill{
+// 	trainerbattle_single(TRAINER_AZUMARILL, format("test"), format("test"))
+// 	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+// 	waitmessage
+//     end
+// }
 
 script Hoenn2_4_Doduo{
-	trainerbattle_single(TRAINER_DODUO, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_DODUO, format("Apparently this used to be a path meant for bicycles ridden by humans, but most pokemon can't ride bicycles so we just use it asa a bridge."), format("You're too good for me."))
+	msgbox(format("I'd like to try riding a bicycle one day."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_4_Loudred{
-	trainerbattle_single(TRAINER_LOUDRED, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_LOUDRED, format("HELLO! LETS BATTLE!"), format("YOU GOT ME!"))
+	msgbox(format("Oh, sorry was I too loud? I'll tone it down."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_4_Electrode{
-	trainerbattle_single(TRAINER_ELECTRODE, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_ELECTRODE, format("I used to work as a ball.\pAs in others would play soccer or volleyball with me.\pOf course that meeant I couldn't explode."), format("Well played."))
+	msgbox(format("It was thrilling being right amongst the action of top level players."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_4_Volbeat{
-	trainerbattle_double(TRAINER_VOLBEATILLUMISE, "test", "test", "text")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_double(TRAINER_VOLBEATILLUMISE, format("Let's have a doubles battle!"), format("That was intense!"), "text")
+	msgbox(format("Me and Illumise are going to have some tea after this."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn2_4_Illumise{
-	trainerbattle_double(TRAINER_VOLBEATILLUMISE, "test", "test", "text")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_double(TRAINER_VOLBEATILLUMISE, format("test"), format("test"), "text")
+	msgbox(format("My favourite tea? Just regular black usually.\pThough at night I prefer something without caffeine."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_4_Plusle{
-	trainerbattle_double(TRAINER_PLUSLEMINUN, "test", "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_double(TRAINER_PLUSLEMINUN, format("Hey look minun. It's a challenger. Let's gettem!"), format("Darn it! You got us!"), format("test"))
+	msgbox(format("Every once in a while you'll run into a double battle like with us! Make sure you're prepared!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 script Hoenn2_4_Minun{
-	trainerbattle_double(TRAINER_PLUSLEMINUN, "test", "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_double(TRAINER_PLUSLEMINUN, format("test"), format("test"), format("test"))
+	msgbox(format("I love double battles with Plusle!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

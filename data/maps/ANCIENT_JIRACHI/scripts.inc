@@ -20,114 +20,80 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi::
 # 15 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmessage
 # 16 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	giveitem ITEM_MAX_REVIVE, 2
-# 17 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_1
-# 18 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	giveitem ITEM_TM_DOOM_DESIRE, 1
-# 19 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	waitmessage
-# 20 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_2
+	applymovement 1, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_0
 # 21 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	closemessage
-# 22 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	applymovement LOCALID_PLAYER, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_0
-# 27 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmovement
-# 28 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	applymovement 1, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_1
+# 22 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	giveitem ITEM_MAX_REVIVE, 2
+# 23 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_1
+# 24 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	applymovement 1, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_0
+# 29 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	waitmovement
+# 30 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	giveitem ITEM_TM_DOOM_DESIRE, 1
+# 31 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	waitmessage
+# 32 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_2
+# 33 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	closemessage
+# 34 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	applymovement LOCALID_PLAYER, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_1
 # 39 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmovement
 # 40 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	applymovement LOCALID_PLAYER, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_2
-# 44 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	waitmovement
-# 45 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	special BufferCommonItem
-# 46 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	giveitem VAR_RESULT, 1
-# 47 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	special BufferUncommonItem
-# 48 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	giveitem VAR_RESULT, 1
-# 49 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3
-# 50 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	waitmessage
+	applymovement 1, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_2
 # 51 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	waitmovement
 # 52 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	applymovement LOCALID_PLAYER, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_3
+# 57 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	waitmovement
+# 58 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	special BufferCommonItem
+# 59 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	giveitem VAR_RESULT, 1
+# 60 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	special BufferUncommonItem
+# 61 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	giveitem VAR_RESULT, 1
+# 62 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3
+# 63 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	waitmessage
+# 64 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 65 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_4
-# 53 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 66 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_5
-# 55 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 68 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	special WarpToNextAct
-# 56 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 69 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	releaseall
 	return
 
 
-# 22 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 16 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_0:
-# 23 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	jump_in_place_up
-# 24 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_left
-# 25 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	face_down
+# 17 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	lock_facing_direction
+# 18 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_down
+# 18 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_down
+# 19 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	unlock_facing_direction
 	step_end
 
-# 28 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 34 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_1:
-# 29 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_down
-# 29 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_down
-# 29 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_down
-# 29 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_down
-# 29 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_down
-# 30 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_right
-# 30 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_right
-# 31 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_in_place_fast_down
-# 31 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_in_place_fast_down
-# 31 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_in_place_fast_down
-# 32 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_left
-# 32 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_left
-# 32 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_left
-# 32 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_left
-# 33 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_up
-# 33 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_up
-# 34 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_in_place_fast_left
-# 34 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_in_place_fast_left
-# 34 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_in_place_fast_left
 # 35 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_right
-# 35 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_right
+	jump_in_place_up
 # 36 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_up
-# 36 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_up
-# 36 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	walk_fast_up
+	walk_fast_left
 # 37 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	face_down
 	step_end
@@ -135,9 +101,62 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_1:
 # 40 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_2:
 # 41 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_down
+# 41 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_down
+# 41 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_down
+# 41 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_down
+# 41 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_down
+# 42 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	walk_fast_right
 # 42 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	face_up
+	walk_fast_right
+# 43 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_fast_down
+# 43 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_fast_down
+# 43 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_fast_down
+# 44 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_left
+# 44 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_left
+# 44 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_left
+# 44 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_left
+# 45 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_up
+# 45 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_up
+# 46 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_fast_left
+# 46 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_fast_left
+# 46 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_in_place_fast_left
+# 47 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_right
+# 47 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_right
+# 48 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_up
+# 48 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_up
+# 48 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_up
+# 49 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	face_down
+	step_end
+
+# 52 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_3:
+# 53 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	walk_fast_right
+# 54 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	step_end
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_0:
@@ -154,12 +173,12 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_0:
 	.string "Revives.$"
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_1:
-# 17 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 23 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "Oh. And I don't need this Doom Desire TM\n"
 	.string "anymore.$"
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_2:
-# 20 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 32 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "..........\p"
 	.string "..............\p"
 	.string "What...?\p"
@@ -173,14 +192,14 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_2:
 	.string "can give you lying around...$"
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3:
-# 49 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 62 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "There ya go! Happy? Now go to the next\n"
 	.string "path and let me get back to sleep!$"
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_4:
-# 52 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 65 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "The level cap has been raised to 30$"
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_5:
-# 53 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 66 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "Get on with it!\nShoo, shoo!$"

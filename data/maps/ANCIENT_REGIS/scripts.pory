@@ -26,6 +26,8 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     //GIVE ANCIENT REWARD
     switch (var(VAR_0x8000)) {
         case 0://Regirock
+            playmoncry(SPECIES_REGIROCK, CRY_MODE_ENCOUNTER)
+            waitmoncry
             msgbox("Boop beep boop. You have succesfully\ncompleted the first path. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a fossil pokemon.")
             waitmessage
             fadescreen(FADE_TO_BLACK)
@@ -37,6 +39,8 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             
             
         case 1://Regice
+            playmoncry(SPECIES_REGICE, CRY_MODE_ENCOUNTER)
+            waitmoncry
             msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is an ice pokemon.")
             waitmessage
             fadescreen(FADE_TO_BLACK)
@@ -48,6 +52,8 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             
 
         case 2://Registeel
+            playmoncry(SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER)
+            waitmoncry
             msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a steel pokemon.")
             waitmessage
             fadescreen(FADE_TO_BLACK)

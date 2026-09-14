@@ -36,7 +36,7 @@ text Zigzagoon_Intro{
 }
  
 text Zigzagoon_Outro{
-    "Goon :("
+    format("You beat me :(\pDon't worry about healing your pokemon though. They get automatically healed after every fight.")
 }
  
 text PostBattle_Zigzagoon{

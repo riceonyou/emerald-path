@@ -202,7 +202,7 @@
       "x": 33,
       "y": 7,
       "elevation": 3,
-      "item": "ITEM_STARDUST",
+      "item": "ITEM_ARCHIES_BANDANA_CHARM",
       "flag": "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_STARDUST",
       "quantity": 1,
       "underfoot": false

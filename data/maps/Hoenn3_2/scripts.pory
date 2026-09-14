@@ -14,36 +14,36 @@ script Hoenn3_2_KecShop_Shiny {
 }
 
 script Hoenn3_2_Skarmory{
-	trainerbattle_single(TRAINER_SKARMORY, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SKARMORY, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_2_Zangoose{
-	trainerbattle_single(TRAINER_ZANGOOSE, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_ZANGOOSE, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_2_Seviper{
-	trainerbattle_single(TRAINER_SEVIPER, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SEVIPER, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_2_Spinda{
-	trainerbattle_single(TRAINER_SPINDA, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SPINDA, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_2_Ninetales{
-	trainerbattle_single(TRAINER_NINETALES, "test", "test")
-	msgbox("test", MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_NINETALES, format("test"), format("test"))
+	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

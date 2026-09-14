@@ -27,8 +27,8 @@ script Hoenn1_Alt_1_Sign {
 }
 
 script Hoenn1_Alt_1_EventScript_Rattata{
-	trainerbattle_single(TRAINER_RATTATA, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_RATTATA, format("Hey there.\p...What am I doing here in Hoenn?\lWell I was born here... My parents moved here from Kanto."), format("Yeah you beat me."))
+	msgbox(format("Whatever."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

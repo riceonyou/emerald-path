@@ -417,3 +417,6 @@ const u16 gMetatileAttributes_LugiaAltar[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_AutmnRuins[] = INCBIN_U16("data/tilesets/secondary/autmn_ruins/metatiles.bin");
 const u16 gMetatileAttributes_AutmnRuins[] = INCBIN_U16("data/tilesets/secondary/autmn_ruins/metatile_attributes.bin");
+
+const u16 gMetatiles_LugiaAltar2[] = INCBIN_U16("data/tilesets/secondary/lugia_altar_2/metatiles.bin");
+const u16 gMetatileAttributes_LugiaAltar2[] = INCBIN_U16("data/tilesets/secondary/lugia_altar_2/metatile_attributes.bin");

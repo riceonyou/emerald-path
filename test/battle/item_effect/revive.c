@@ -23,7 +23,10 @@ SINGLE_BATTLE_TEST("Max Revive restores a fainted battler's HP fully")
 {
     GIVEN {
         ASSUME(gItemsInfo[ITEM_MAX_REVIVE].battleUsage == EFFECT_ITEM_REVIVE);
-        PLAYER(SPECIES_WYNAUT) { HP(1); MaxHP(200); }
+        PLAYER(SPECIES_WYNAUT) {
+            HP(1); MaxHP(200);
+            MovesWithPP({MOVE_SCRATCH, 0}, {MOVE_CONFUSION, 0}, {MOVE_GROWL, 0}, {MOVE_TAIL_WHIP, 0});
+        }
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -34,6 +37,10 @@ SINGLE_BATTLE_TEST("Max Revive restores a fainted battler's HP fully")
         MESSAGE("Wynaut had its HP restored.");
     } THEN {
         EXPECT_EQ(player->hp, 200);
+        EXPECT_EQ(player->pp[0], GetMovePP(MOVE_SCRATCH));
+        EXPECT_EQ(player->pp[1], GetMovePP(MOVE_CONFUSION));
+        EXPECT_EQ(player->pp[2], GetMovePP(MOVE_GROWL));
+        EXPECT_EQ(player->pp[3], GetMovePP(MOVE_TAIL_WHIP));
     }
 }
 

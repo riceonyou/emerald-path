@@ -92,7 +92,9 @@ Hoenn1_BirchBag_6::
 
 Hoenn1_3_EventScript_Lotad_Text_0:
 # 27 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Hola. Me llamo Lotad.$"
+	.string "Hola. Me llamo Lotad. You can view a\n"
+	.string "summary of my team by selecting the\l"
+	.string "ENEMY option in battle.$"
 
 Hoenn1_3_EventScript_Lotad_Text_1:
 # 27 "data/maps/Hoenn1_3/scripts.pory"

@@ -771,8 +771,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_KLUTZ] =
     {
         .name = _("Klutz"),
-        .description = COMPOUND_STRING("Can't use items. Sometimes dodges moves."),
-        .aiRating = -1,
+        .description = COMPOUND_STRING("Can't use items. 0.1 to dodge."),
+        .aiRating = 4,
     },
 
     [ABILITY_MOLD_BREAKER] =

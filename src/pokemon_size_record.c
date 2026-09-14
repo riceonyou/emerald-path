@@ -196,19 +196,19 @@ void CompareSeedotSize(void)
 
 void InitLotadSizeRecord(void)
 {
-    VarSet(VAR_LOTAD_SIZE_RECORD, DEFAULT_MAX_SIZE);
+    VarSet(VAR_CURRENT_PATH, DEFAULT_MAX_SIZE);
 }
 
 void GetLotadSizeRecordInfo(void)
 {
-    u16 *sizeRecord = GetVarPointer(VAR_LOTAD_SIZE_RECORD);
+    u16 *sizeRecord = GetVarPointer(VAR_CURRENT_PATH);
 
     GetMonSizeRecordInfo(SPECIES_LOTAD, sizeRecord);
 }
 
 void CompareLotadSize(void)
 {
-    u16 *sizeRecord = GetVarPointer(VAR_LOTAD_SIZE_RECORD);
+    u16 *sizeRecord = GetVarPointer(VAR_CURRENT_PATH);
 
     gSpecialVar_Result = CompareMonSize(SPECIES_LOTAD, sizeRecord);
 }

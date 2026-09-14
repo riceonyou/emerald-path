@@ -1547,10 +1547,19 @@ extern const u32 gItemIcon_RegiKnucklesCharm[];
 extern const u16 gItemIconPalette_RegiKnucklesCharm[];
 extern const u32 gItemIcon_OranCharm[];
 extern const u16 gItemIconPalette_OranCharm[];
+extern const u32 gItemIcon_TintedCharm[];
+extern const u16 gItemIconPalette_TintedCharm[];
+extern const u32 gItemIcon_MintyCharm[];
+extern const u16 gItemIconPalette_MintyCharm[];
+extern const u32 gItemIcon_HoOhFeatherCharm[];
+extern const u16 gItemIconPalette_HoOhFeatherCharm[];
 
 
-extern const u32 gItemIcon_PocketBirchBagCharm[];
-extern const u16 gItemIconPalette_PocketBirchBagCharm[];
+
+extern const u32 gItemIcon_PocketBirchBag[];
+extern const u16 gItemIconPalette_PocketBirchBag[];
+
+
 
 // Form-changing Key Items
 extern const u32 gItemIcon_RotomCatalog[];

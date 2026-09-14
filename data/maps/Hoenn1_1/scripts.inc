@@ -109,7 +109,10 @@ Zigzagoon_Intro::
 
 Zigzagoon_Outro::
 # 38 "data/maps/Hoenn1_1/scripts.pory"
-	.string "Goon :($"
+	.string "You beat me :(\p"
+	.string "Don't worry about healing your pokemon\n"
+	.string "though. They get automatically healed\l"
+	.string "after every fight.$"
 
 PostBattle_Zigzagoon::
 # 42 "data/maps/Hoenn1_1/scripts.pory"

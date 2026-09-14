@@ -1899,9 +1899,9 @@
 #define FLAG_NORMAL_CHARM_STARTER_UNLOCKED                  0
 #define FLAG_MINTY_CHARM_STARTER_UNLOCKED                  0
 #define FLAG_NEW_DIFFICULTY_UNLOCKED                     0
-#define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    0
-#define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   0
-#define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                0
+#define FLAG_HOENN1_ALT_UNLOCKED                    0
+#define FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED                   0
+#define FLAG_UNOWN_BUDDY_CHARM_UNLOCKED                0
 #define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               0
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               0
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          0
@@ -2531,7 +2531,7 @@
 #define FLAG_WARPED_INTO_NEW_ACT                   0
 #define FLAG_PHIONE_EGG_HATCHED               0
 #define FLAG_GIVE_MINTY_CHARM_MINT                0
-#define FLAG_LANDMARK_SEASHORE_HOUSE                0
+#define FLAG_HOOH_FEATHER_USED                0
 #define FLAG_LANDMARK_NEW_MAUVILLE                  0
 #define FLAG_LANDMARK_OLD_LADY_REST_SHOP            0
 #define FLAG_LANDMARK_TRICK_HOUSE                   0

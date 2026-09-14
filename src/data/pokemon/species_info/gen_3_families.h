@@ -8202,7 +8202,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 150,
     #endif
         .evYield_SpAttack = 2,
-        .itemCommon = ITEM_STARDUST,
+        .itemCommon = ITEM_ARCHIES_BANDANA_CHARM,
         .itemRare = ITEM_MOON_STONE,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 25,
@@ -8283,7 +8283,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 150,
     #endif
         .evYield_Attack = 2,
-        .itemCommon = ITEM_STARDUST,
+        .itemCommon = ITEM_ARCHIES_BANDANA_CHARM,
         .itemRare = ITEM_SUN_STONE,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 25,
@@ -13376,8 +13376,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 215,
     #endif
         .evYield_HP = 3,
-        .itemCommon = ITEM_STAR_PIECE,
-        .itemRare = ITEM_STAR_PIECE,
+        .itemCommon = ITEM_MAXIES_GLASSES_CHARM,
+        .itemRare = ITEM_MAXIES_GLASSES_CHARM,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 120,
         .friendship = 100,
