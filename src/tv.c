@@ -835,7 +835,7 @@ u8 FindAnyTVShowOnTheAir(void)
 
 void UpdateTVScreensOnMap(int width, int height)
 {
-    FlagSet(FLAG_ITEM_GLIMMORANITE_UNLOCKED);
+    //FlagSet(FLAG_ITEM_GLIMMORANITE_UNLOCKED);
     switch (CheckForPlayersHouseNews())
     {
     case PLAYERS_HOUSE_TV_LATI:

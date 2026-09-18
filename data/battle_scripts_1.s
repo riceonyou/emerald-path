@@ -2680,7 +2680,7 @@ BattleScript_EffectConfuse::
 	jumpifsubstituteblocks BattleScript_ButItFailed
 	jumpifvolatile BS_TARGET, VOLATILE_CONFUSION, BattleScript_AlreadyConfused
 	jumpifterrainaffected BS_TARGET, STATUS_FIELD_MISTY_TERRAIN, BattleScript_MistyTerrainPrevents
-	accuracycheck BattleScript_ButItFailed
+	accuracycheck BattleScript_MoveMissedPause
 	jumpifsafeguard BattleScript_SafeguardProtected
 	attackanimation
 	waitanimation
@@ -3591,7 +3591,7 @@ BattleScript_EffectDarkVoid::
 BattleScript_EffectNonVolatileStatus::
 	attackcanceler
 	trynonvolatilestatus
-	accuracycheck BattleScript_ButItFailed
+	accuracycheck BattleScript_MoveMissedPause
 	attackanimation
 	waitanimation
 	setnonvolatilestatus TRIGGER_ON_MOVE

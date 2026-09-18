@@ -8,25 +8,25 @@ script Hoenn3_1_ONFRAME {
 }
 
 script Hoenn3_1_Vibrava{
-	trainerbattle_single(TRAINER_FLYGON, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_FLYGON, format("Yo. Who's your favourite rapper?"), format("Damn you strong."))
+	msgbox(format("Have you heard of Piledriver by Minamoto Osamaro?\pPiledriver. Ore nanka no kokoro ni aita.\pHe made that song with just his phone. The kid's been tearing up the Japanese rap scene."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_1_Cacturne{
-	trainerbattle_single(TRAINER_CACTURNE, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_CACTURNE, format("My favourite food spot? It's a chain spot but KFC I guess. What's yours?"), format("You fried me."))
+	msgbox(format("The KFC at the xxxxxx intersection is the best. They always give me an extra wicked wing when I order a fill up box."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
-script Hoenn3_1_Claydol{
-	trainerbattle_single(TRAINER_CLAYDOL, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
-	waitmessage
-    end
-}
+// script Hoenn3_1_Claydol{
+// 	trainerbattle_single(TRAINER_CLAYDOL, format("test"), format("test"))
+// 	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+// 	waitmessage
+//     end
+// }
 
 script Hoenn3_1_EventScript_BirchBag{
  

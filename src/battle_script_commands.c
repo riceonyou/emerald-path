@@ -6287,7 +6287,8 @@ static void Cmd_getmoneyreward(void)
         money = GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentA);
 
         u32 coinsamount;
-        coinsamount = (money * (90 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/2)) / 30;
+        coinsamount = (money * (90 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/2)) / 25;
+        coinsamount = coinsamount + 8;
         coinsamount = coinsamount * (1 + (VarGet(VAR_CURRENT_DIFFICULTY) * 2)/3);
         AddCoins(coinsamount);
         VarSet(VAR_COINS_COLLECTED_IN_A_RUN, VarGet(VAR_COINS_COLLECTED_IN_A_RUN) + coinsamount);

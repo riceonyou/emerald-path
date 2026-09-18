@@ -1,0 +1,143 @@
+mapscripts ANCIENT_DEOXYS_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[ VAR_TEMP_1, 0: ANCIENT_DEOXYS_ONWARP]
+    MAP_SCRIPT_ON_LOAD: ANCIENT_DEOXYS_LOAD_DEOXYS
+}
+
+
+script ANCIENT_DEOXYS_ONWARP {
+    setvar(VAR_TEMP_1, 1)
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
+    }
+
+script ANCIENT_DEOXYS_LOAD_DEOXYS{
+    switch (var(VAR_0x8000)) {
+        case 0:
+            setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(DEOXYS_ATTACK))
+        case 1:
+            setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(DEOXYS_DEFENSE))
+        case 2:
+            setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(DEOXYS_SPEED))
+    }
+}
+
+script ANCIENT_DEOXYS_EventScript_TalkToDeoxys{
+    lockall
+    faceplayer
+    //GIVE ANCIENT REWARD
+    switch (var(VAR_0x8000)) {
+        case 0://Regirock
+            playmoncry(SPECIES_DEOXYS_ATTACK, CRY_MODE_ENCOUNTER)
+            waitmoncry
+            msgbox("Boop beep boop. You have succesfully\ncompleted the first path. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a fossil pokemon.")
+            waitmessage
+            fadescreen(FADE_TO_BLACK)
+            setvar(VAR_0x8000, 28)
+            special(LoadBirchBagPoolById)
+            special(ChooseBirchBagPokemonWeighted)
+            waitstate
+            playfanfare(MUS_EVOLVED)
+	        msgbox("You received a\n{STR_VAR_1}!")
+            
+            
+        case 1://Regice
+            playmoncry(SPECIES_DEOXYS_DEFENSE, CRY_MODE_ENCOUNTER)
+            waitmoncry
+            msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is an ice pokemon.")
+            waitmessage
+            fadescreen(FADE_TO_BLACK)
+            setvar(VAR_0x8000, 32)
+            special(LoadBirchBagPoolById)
+            special(ChooseBirchBagPokemonWeighted)
+            waitstate
+            playfanfare(MUS_EVOLVED)
+	        msgbox("You received a\n{STR_VAR_1}!")
+            
+
+        case 2://DEOXYSteel
+            playmoncry(SPECIES_DEOXYS_SPEED, CRY_MODE_ENCOUNTER)
+            waitmoncry
+            msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a steel pokemon.")
+            waitmessage
+            fadescreen(FADE_TO_BLACK)
+            setvar(VAR_0x8000, 31)
+            special(LoadBirchBagPoolById)
+            special(ChooseBirchBagPokemonWeighted)
+            waitstate
+            playfanfare(MUS_EVOLVED)
+	        msgbox("You received a\n{STR_VAR_1}!")
+            
+    }
+    waitmessage
+    msgbox("You will also be given the Regi Knuckles.\nBeep.")
+    waitmessage
+    giveitem(ITEM_REGI_KNUCKLES_CHARM, 1)
+    msgbox("The Regi Knuckles power up your\npunching moves and makes them\lunable to miss. Boop.\pIt also comes with a punching TM\nof your choice. Beep.")
+    waitmessage
+    setvar(VAR_0x8000, 0)
+    setvar(VAR_0x8001, 0)
+    setvar(VAR_0x8002, 0)
+    setvar(VAR_0x8003, 0)
+    while (var(VAR_0x8000) != 3) {
+        randomelement(ITEM_TM_ICE_PUNCH, ITEM_TM_FIRE_PUNCH, ITEM_TM_THUNDER_PUNCH, ITEM_TM_DRAIN_PUNCH, ITEM_TM_DIZZY_PUNCH, ITEM_TM_SHADOW_PUNCH, ITEM_TM_SUCKER_PUNCH)
+        if (var(VAR_RESULT) != VAR_0x8002 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8001) == 0){
+            copyvar(VAR_0x8001, VAR_RESULT)
+            addvar(VAR_0x8000, 1)
+        }
+        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8002) == 0){
+            copyvar(VAR_0x8002, VAR_RESULT)
+            addvar(VAR_0x8000, 1)
+        }
+        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8002 && var(VAR_0x8003) == 0){
+            copyvar(VAR_0x8003, VAR_RESULT)
+            addvar(VAR_0x8000, 1)
+        }
+    }
+    if (var(VAR_0x8001) == ITEM_TM_ICE_PUNCH || var(VAR_0x8002) == ITEM_TM_ICE_PUNCH || var(VAR_0x8003) == ITEM_TM_ICE_PUNCH){
+        dynmultipush("Ice Punch TM", ITEM_TM_ICE_PUNCH)    
+    }
+    if (var(VAR_0x8001) == ITEM_TM_FIRE_PUNCH || var(VAR_0x8002) == ITEM_TM_FIRE_PUNCH || var(VAR_0x8003) == ITEM_TM_FIRE_PUNCH) {
+        dynmultipush("Fire Punch TM", ITEM_TM_FIRE_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_THUNDER_PUNCH || var(VAR_0x8002) == ITEM_TM_THUNDER_PUNCH || var(VAR_0x8003) == ITEM_TM_THUNDER_PUNCH) {
+        dynmultipush("Thunder Punch TM", ITEM_TM_THUNDER_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_DRAIN_PUNCH || var(VAR_0x8002) == ITEM_TM_DRAIN_PUNCH || var(VAR_0x8003) == ITEM_TM_DRAIN_PUNCH) {
+        dynmultipush("Drain Punch TM", ITEM_TM_DRAIN_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_DIZZY_PUNCH || var(VAR_0x8002) == ITEM_TM_DIZZY_PUNCH || var(VAR_0x8003) == ITEM_TM_DIZZY_PUNCH) {
+        dynmultipush("Dizzy Punch TM", ITEM_TM_DIZZY_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_SHADOW_PUNCH || var(VAR_0x8002) == ITEM_TM_SHADOW_PUNCH || var(VAR_0x8003) == ITEM_TM_SHADOW_PUNCH) {
+        dynmultipush("Shadow Punch TM", ITEM_TM_SHADOW_PUNCH)
+    }
+    if (var(VAR_0x8001) == ITEM_TM_SUCKER_PUNCH || var(VAR_0x8002) == ITEM_TM_SUCKER_PUNCH || var(VAR_0x8003) == ITEM_TM_SUCKER_PUNCH) {
+        dynmultipush("Sucker Punch TM", ITEM_TM_SUCKER_PUNCH)
+    }
+
+    dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+    switch (var(VAR_RESULT)) {
+        case ITEM_TM_ICE_PUNCH:
+            giveitem(ITEM_TM_ICE_PUNCH, 1)
+        case ITEM_TM_FIRE_PUNCH:
+            giveitem(ITEM_TM_FIRE_PUNCH, 1)
+        case ITEM_TM_THUNDER_PUNCH:
+            giveitem(ITEM_TM_THUNDER_PUNCH, 1)
+        case ITEM_TM_DRAIN_PUNCH:
+            giveitem(ITEM_TM_DRAIN_PUNCH, 1)
+        case ITEM_TM_DIZZY_PUNCH:
+            giveitem(ITEM_TM_DIZZY_PUNCH, 1)
+        case ITEM_TM_SHADOW_PUNCH:
+            giveitem(ITEM_TM_SHADOW_PUNCH, 1)
+        case ITEM_TM_SUCKER_PUNCH:
+            giveitem(ITEM_TM_SUCKER_PUNCH, 1)
+        
+    }
+    waitmessage
+
+
+    msgbox("Beep boop boop.\lYou will now proceed to the next path.")
+    //TELEPORT TO NEXT STAGE
+    special(WarpToNextAct)
+    
+    releaseall
+}

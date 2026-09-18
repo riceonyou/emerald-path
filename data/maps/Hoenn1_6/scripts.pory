@@ -86,7 +86,7 @@ script Hoenn1_9_EventScript_BirchBag{
 
 script Hoenn1_1_Itemball_4{
     lockall
-    giveitem(ITEM_RARE_CANDY, 1)
+    call(GiveCommonItem)
     removeobject(HOENN1_4_ITEM)
     setflag(FLAG_ITEM_1_4)
     releaseall
@@ -95,7 +95,7 @@ script Hoenn1_1_Itemball_4{
 
 script Hoenn1_1_Itemball_5{
     lockall
-    giveitem(ITEM_TM_TOXIC, 1)
+    call(GiveCommonItem)
     removeobject(HOENN1_5_ITEM)
     setflag(FLAG_ITEM_1_5)
     releaseall

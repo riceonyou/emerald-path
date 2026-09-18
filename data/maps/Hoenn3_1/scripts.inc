@@ -19,9 +19,9 @@ Hoenn3_1_ONFRAME::
 
 Hoenn3_1_Vibrava::
 # 11 "data/maps/Hoenn3_1/scripts.pory"
-	trainerbattle_single TRAINER_FLYGON, Hoenn3_1_Vibrava_Text_0, Hoenn3_1_Vibrava_Text_0
+	trainerbattle_single TRAINER_FLYGON, Hoenn3_1_Vibrava_Text_0, Hoenn3_1_Vibrava_Text_1
 # 12 "data/maps/Hoenn3_1/scripts.pory"
-	msgbox Hoenn3_1_Vibrava_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn3_1_Vibrava_Text_2, MSGBOX_AUTOCLOSE
 # 13 "data/maps/Hoenn3_1/scripts.pory"
 	waitmessage
 	end
@@ -29,20 +29,10 @@ Hoenn3_1_Vibrava::
 
 Hoenn3_1_Cacturne::
 # 18 "data/maps/Hoenn3_1/scripts.pory"
-	trainerbattle_single TRAINER_CACTURNE, Hoenn3_1_Vibrava_Text_0, Hoenn3_1_Vibrava_Text_0
+	trainerbattle_single TRAINER_CACTURNE, Hoenn3_1_Cacturne_Text_0, Hoenn3_1_Cacturne_Text_1
 # 19 "data/maps/Hoenn3_1/scripts.pory"
-	msgbox Hoenn3_1_Vibrava_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn3_1_Cacturne_Text_2, MSGBOX_AUTOCLOSE
 # 20 "data/maps/Hoenn3_1/scripts.pory"
-	waitmessage
-	end
-
-
-Hoenn3_1_Claydol::
-# 25 "data/maps/Hoenn3_1/scripts.pory"
-	trainerbattle_single TRAINER_CLAYDOL, Hoenn3_1_Vibrava_Text_0, Hoenn3_1_Vibrava_Text_0
-# 26 "data/maps/Hoenn3_1/scripts.pory"
-	msgbox Hoenn3_1_Vibrava_Text_0, MSGBOX_AUTOCLOSE
-# 27 "data/maps/Hoenn3_1/scripts.pory"
 	waitmessage
 	end
 
@@ -81,4 +71,32 @@ Hoenn3_5_EventScript_BirchBag::
 
 Hoenn3_1_Vibrava_Text_0:
 # 11 "data/maps/Hoenn3_1/scripts.pory"
-	.string "test$"
+	.string "Yo. Who's your favourite rapper?$"
+
+Hoenn3_1_Vibrava_Text_1:
+# 11 "data/maps/Hoenn3_1/scripts.pory"
+	.string "Damn you strong.$"
+
+Hoenn3_1_Vibrava_Text_2:
+# 12 "data/maps/Hoenn3_1/scripts.pory"
+	.string "Have you heard of Piledriver by\n"
+	.string "Minamoto Osamaro?\p"
+	.string "Piledriver. Ore nanka no kokoro ni aita.\p"
+	.string "He made that song with just his phone.\n"
+	.string "The kid's been tearing up the Japanese\l"
+	.string "rap scene.$"
+
+Hoenn3_1_Cacturne_Text_0:
+# 18 "data/maps/Hoenn3_1/scripts.pory"
+	.string "My favourite food spot? It's a chain\n"
+	.string "spot but KFC I guess. What's yours?$"
+
+Hoenn3_1_Cacturne_Text_1:
+# 18 "data/maps/Hoenn3_1/scripts.pory"
+	.string "You fried me.$"
+
+Hoenn3_1_Cacturne_Text_2:
+# 19 "data/maps/Hoenn3_1/scripts.pory"
+	.string "The KFC at the xxxxxx intersection is\n"
+	.string "the best. They always give me an extra\l"
+	.string "wicked wing when I order a fill up box.$"

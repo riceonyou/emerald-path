@@ -34,36 +34,34 @@ ANCIENT_KYOGRE_EventScript_Kyogre::
 # 27 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitstate
 # 28 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_2
+	playfanfare MUS_EVOLVED
 # 29 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_2
 # 30 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	giveitem ITEM_TM_RAIN_DANCE, 1
+	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_3
 # 31 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitmessage
 # 32 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_TM_RAIN_DANCE, 1
 # 33 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_3
-# 34 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitmessage
-# 35 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 34 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	applymovement 1, ANCIENT_KYOGRE_EventScript_Kyogre_Movement_0
+# 41 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+	waitmovement
 # 42 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	waitmovement
-# 43 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	msgbox ANCIENT_KYOGRE_EventScript_Kyogre_Text_4
-# 44 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 43 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	applymovement 1, ANCIENT_KYOGRE_EventScript_Kyogre_Movement_0
-# 51 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 50 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitmovement
-# 52 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 51 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
-# 53 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 52 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	waitmoncry
-# 55 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 54 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	special WarpToNextAct
-# 56 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 55 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	releaseall
 	return
 
@@ -102,15 +100,15 @@ ANCIENT_KYOGRE_EventScript_Kyogre_Text_1:
 	.string "that item, won't it?$"
 
 ANCIENT_KYOGRE_EventScript_Kyogre_Text_2:
-# 28 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	.string "And please take a Rain Dance TM too.$"
+# 29 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_KYOGRE_EventScript_Kyogre_Text_3:
-# 33 "data/maps/ANCIENT_KYOGRE/scripts.pory"
-	.string "The level cap has been raised to 50$"
+# 30 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+	.string "And please take a Rain Dance TM too.$"
 
 ANCIENT_KYOGRE_EventScript_Kyogre_Text_4:
-# 43 "data/maps/ANCIENT_KYOGRE/scripts.pory"
+# 42 "data/maps/ANCIENT_KYOGRE/scripts.pory"
 	.string "Next up is the final path! It'll be\n"
 	.string "different to all the earlier paths in\l"
 	.string "that there won't be any birch bags or\l"

@@ -204,9 +204,9 @@
     F(SCALE_SHOT) \
     F(MISTY_EXPLOSION) \
     F(PAIN_SPLIT) \
-    F(PSYCH_UP) \
+    F(MEGA_DRAIN) \
     F(DOUBLE_EDGE) \
-    F(ENDEAVOR) \
+    F(AURORA_BEAM) \
     F(PETAL_BLIZZARD) \
     F(TEMPER_FLARE) \
     F(WHIRLPOOL) \

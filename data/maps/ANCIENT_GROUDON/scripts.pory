@@ -24,12 +24,11 @@ script ANCIENT_GROUDON_EventScript_Groudon{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
+    playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
     msgbox(format("And please take a Sunny Day TM too."))
     waitmessage
     giveitem(ITEM_TM_SUNNY_DAY, 1)
-    waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 50")
     waitmessage
     applymovement(1, moves(
         jump_in_place_down_up

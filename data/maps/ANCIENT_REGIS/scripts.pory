@@ -36,6 +36,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
+	        msgbox("You received a\n{STR_VAR_1}!")
             
             
         case 1://Regice
@@ -49,6 +50,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
+	        msgbox("You received a\n{STR_VAR_1}!")
             
 
         case 2://Registeel
@@ -62,6 +64,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
+	        msgbox("You received a\n{STR_VAR_1}!")
             
     }
     waitmessage
@@ -131,8 +134,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     }
     waitmessage
 
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 30")
+
     msgbox("Beep boop boop.\lYou will now proceed to the next path.")
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)

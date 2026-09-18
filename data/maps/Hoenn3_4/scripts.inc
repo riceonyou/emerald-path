@@ -6,7 +6,7 @@ Hoenn3_4_Lunatone::
 # 5 "data/maps/Hoenn3_4/scripts.pory"
 	trainerbattle_double TRAINER_SOLROCKLUNATONE, Hoenn3_4_Lunatone_Text_0, Hoenn3_4_Lunatone_Text_0, Hoenn3_4_Lunatone_Text_0
 # 6 "data/maps/Hoenn3_4/scripts.pory"
-	msgbox Hoenn3_4_Lunatone_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn3_4_Lunatone_Text_1, MSGBOX_AUTOCLOSE
 # 7 "data/maps/Hoenn3_4/scripts.pory"
 	waitmessage
 	end
@@ -14,9 +14,9 @@ Hoenn3_4_Lunatone::
 
 Hoenn3_4_Solrock::
 # 12 "data/maps/Hoenn3_4/scripts.pory"
-	trainerbattle_double TRAINER_SOLROCKLUNATONE, Hoenn3_4_Lunatone_Text_0, Hoenn3_4_Lunatone_Text_0, Hoenn3_4_Lunatone_Text_0
+	trainerbattle_double TRAINER_SOLROCKLUNATONE, Hoenn3_4_Solrock_Text_0, Hoenn3_4_Solrock_Text_1, Hoenn3_4_Lunatone_Text_0
 # 13 "data/maps/Hoenn3_4/scripts.pory"
-	msgbox Hoenn3_4_Lunatone_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn3_4_Solrock_Text_2, MSGBOX_AUTOCLOSE
 # 14 "data/maps/Hoenn3_4/scripts.pory"
 	waitmessage
 	end
@@ -24,9 +24,9 @@ Hoenn3_4_Solrock::
 
 Hoenn3_4_Whiscash::
 # 19 "data/maps/Hoenn3_4/scripts.pory"
-	trainerbattle_single TRAINER_WHISCASH, Hoenn3_4_Lunatone_Text_0, Hoenn3_4_Lunatone_Text_0
+	trainerbattle_single TRAINER_WHISCASH, Hoenn3_4_Whiscash_Text_0, Hoenn3_4_Whiscash_Text_1
 # 20 "data/maps/Hoenn3_4/scripts.pory"
-	msgbox Hoenn3_4_Lunatone_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn3_4_Whiscash_Text_2, MSGBOX_AUTOCLOSE
 # 21 "data/maps/Hoenn3_4/scripts.pory"
 	waitmessage
 	end
@@ -105,3 +105,35 @@ Hoenn3_Itemball_10::
 Hoenn3_4_Lunatone_Text_0:
 # 5 "data/maps/Hoenn3_4/scripts.pory"
 	.string "test$"
+
+Hoenn3_4_Lunatone_Text_1:
+# 6 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Solrock get's too worked up about a 10\n"
+	.string "year old game. Sorry about that.$"
+
+Hoenn3_4_Solrock_Text_0:
+# 12 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Can you believe we're not in pokemon\n"
+	.string "sun and moon? How dare they.$"
+
+Hoenn3_4_Solrock_Text_1:
+# 12 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Thanks for the battle.$"
+
+Hoenn3_4_Solrock_Text_2:
+# 13 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Grrr gamefreak grrr...$"
+
+Hoenn3_4_Whiscash_Text_0:
+# 19 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Did you that muddy water is buffed in\n"
+	.string "this game? It always reduces accuracy\l"
+	.string "and is a bit more accurate!$"
+
+Hoenn3_4_Whiscash_Text_1:
+# 19 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Ptooey.$"
+
+Hoenn3_4_Whiscash_Text_2:
+# 20 "data/maps/Hoenn3_4/scripts.pory"
+	.string "Damn I thought I had you!$"

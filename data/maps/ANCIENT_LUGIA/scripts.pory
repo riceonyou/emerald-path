@@ -9,7 +9,7 @@ script ANCIENT_LUGIA_ONWARP {
 script ANCIENT_LUGIA_EventScript_TalkToLugia{
     lockall
     faceplayer
-    msgbox(format("Oh, hey...\pUmm...\pCould you talk to me from below the altar? It's a lot cooler that way, no?"))
+    msgbox(format("Oh, hey...\pUmm......\pCould you talk to me from below the altar? It's a lot cooler that way, no?"))
     waitmessage
     applymovement(1, moves(
         face_down
@@ -20,25 +20,32 @@ script ANCIENT_LUGIA_EventScript_TalkToLugia{
 
 script ANCIENT_LUGIA_EventScript_Sign{
     lockall
-    //faceplayer
     //GIVE ANCIENT REWARD
-    msgbox("Heya!\nGood job on beating the first path!\lI've got a bunch of goodies to give you!\lHere's a water pokemon!")
+    playmoncry(SPECIES_LUGIA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox(format("Good job on defeating the first path! Please let on of my flying pokemon friends join you!"))
     waitmessage
+    applymovement(1, moves(
+        walk_in_place_down * 2
+    ))
+    waitmovement
     fadescreen(FADE_TO_BLACK)
     setvar(VAR_0x8000, 38)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    
-    msgbox("And a Rain Dance TM!")
-    giveitem(ITEM_TM_RAIN_DANCE, 1)
+    playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
+    msgbox(format("And have one of my moulten back plates!\nWith that, now your pokemon won't take bonus super-effective damage on the first turn of the battle!."))
     waitmessage
-    msgbox("And a Phione Egg!\lThe egg will hatch into a phione\lafter you complete the next act!\lPhione is a great rain pokemon!")
-    giveitem(ITEM_PHIONE_EGG_CHARM, 1)
+    applymovement(1, moves(
+        walk_in_place_down * 2
+    ))
+    waitmovement
+    giveitem(ITEM_LUGIA_PLATE_CHARM, 1)
     waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 30")
-    msgbox("That's all from me!\lNow lets get ya to the next path!")
+
+    msgbox("I hope the rest of your journey\ngoes well!")
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

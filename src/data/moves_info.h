@@ -8902,7 +8902,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_WATER,
-        .accuracy = 85 + 15,
+        .accuracy = 85 + 5,
         .pp = 10,
         .target = TARGET_BOTH,
         .priority = 0,

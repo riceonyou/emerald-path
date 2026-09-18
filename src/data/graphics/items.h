@@ -1796,6 +1796,21 @@ const u16 gItemIconPalette_MintyCharm[] = INCBIN_U16("graphics/items/icon_palett
 const u32 gItemIcon_HoOhFeatherCharm[] = INCBIN_U32("graphics/items/icons/HoOhFeatherCharm.4bpp.smol");
 const u16 gItemIconPalette_HoOhFeatherCharm[] = INCBIN_U16("graphics/items/icon_palettes/HoOhFeatherCharm.gbapal");
 
+const u32 gItemIcon_LugiaPlateCharm[] = INCBIN_U32("graphics/items/icons/LugiaScale.4bpp.smol");
+const u16 gItemIconPalette_LugiaPlateCharm[] = INCBIN_U16("graphics/items/icon_palettes/LugiaScale.gbapal");
+
+const u32 gItemIcon_UnownBuddyCharm[] = INCBIN_U32("graphics/items/icons/UnownBuddy.4bpp.smol");
+const u16 gItemIconPalette_UnownBuddyCharm[] = INCBIN_U16("graphics/items/icon_palettes/UnownBuddy.gbapal");
+
+const u32 gItemIcon_BruxishFlossCharm[] = INCBIN_U32("graphics/items/icons/BruxishFloss.4bpp.smol");
+const u16 gItemIconPalette_BruxishFlossCharm[] = INCBIN_U16("graphics/items/icon_palettes/BruxishFloss.gbapal");
+
+const u32 gItemIcon_MaxieGlassesCharm[] = INCBIN_U32("graphics/items/icons/MaxieGlasses.4bpp.smol");
+const u16 gItemIconPalette_MaxieGlassesCharm[] = INCBIN_U16("graphics/items/icon_palettes/MaxieGlasses.gbapal");
+
+const u32 gItemIcon_ArchieBandanaCharm[] = INCBIN_U32("graphics/items/icons/ArchieBandana.4bpp.smol");
+const u16 gItemIconPalette_ArchieBandanaCharm[] = INCBIN_U16("graphics/items/icon_palettes/ArchieBandana.gbapal");
+
 
 
 

@@ -40,22 +40,22 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin::
 	special ChooseBirchBagPokemonWeighted
 # 26 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitstate
+# 27 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	playfanfare MUS_EVOLVED
 # 28 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1
 # 29 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	giveitem ITEM_TM_BULLET_SEED, 1
-# 30 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	waitmessage
-# 31 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2
-# 35 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	giveitem ITEM_ORAN_CHARM, 1
-# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 30 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	giveitem ITEM_TM_BULLET_SEED, 1
+# 31 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitmessage
-# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 32 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3
+# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	giveitem ITEM_ORAN_CHARM, 1
+# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	waitmessage
 # 39 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitmessage
 # 40 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
@@ -81,18 +81,18 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_0:
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_1:
 # 28 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	.string "And a Bullet Seed TM!$"
+	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2:
-# 31 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 29 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	.string "And a Bullet Seed TM!$"
+
+ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3:
+# 32 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "And an Oran Charm! With this charm,\n"
 	.string "everytime you enter a battle, your\l"
 	.string "pokemon without items will\l"
 	.string "automatically be given an oran berry!$"
-
-ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3:
-# 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	.string "The level cap has been raised to 30$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4:
 # 42 "data/maps/ANCIENT_SHAYMIN/scripts.pory"

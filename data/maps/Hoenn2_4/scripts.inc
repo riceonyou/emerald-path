@@ -20,21 +20,11 @@ Hoenn2_4_KecShop_Shiny::
 	return
 
 
-Hoenn2_4_Azumarill::
-# 17 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_single TRAINER_AZUMARILL, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
-# 18 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
-# 19 "data/maps/Hoenn2_4/scripts.pory"
-	waitmessage
-	end
-
-
 Hoenn2_4_Doduo::
 # 24 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_single TRAINER_DODUO, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_single TRAINER_DODUO, Hoenn2_4_Doduo_Text_0, Hoenn2_4_Doduo_Text_1
 # 25 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Doduo_Text_2, MSGBOX_AUTOCLOSE
 # 26 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -42,9 +32,9 @@ Hoenn2_4_Doduo::
 
 Hoenn2_4_Loudred::
 # 31 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_single TRAINER_LOUDRED, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_single TRAINER_LOUDRED, Hoenn2_4_Loudred_Text_0, Hoenn2_4_Loudred_Text_1
 # 32 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Loudred_Text_2, MSGBOX_AUTOCLOSE
 # 33 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -52,9 +42,9 @@ Hoenn2_4_Loudred::
 
 Hoenn2_4_Electrode::
 # 38 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_single TRAINER_ELECTRODE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_single TRAINER_ELECTRODE, Hoenn2_4_Electrode_Text_0, Hoenn2_4_Electrode_Text_1
 # 39 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Electrode_Text_2, MSGBOX_AUTOCLOSE
 # 40 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -62,9 +52,9 @@ Hoenn2_4_Electrode::
 
 Hoenn2_4_Volbeat::
 # 45 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Volbeat_Text_0
+	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Volbeat_Text_0, Hoenn2_4_Volbeat_Text_1, Hoenn2_4_Volbeat_Text_2
 # 46 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Volbeat_Text_3, MSGBOX_AUTOCLOSE
 # 47 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -72,9 +62,9 @@ Hoenn2_4_Volbeat::
 
 Hoenn2_4_Illumise::
 # 51 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Volbeat_Text_0
+	trainerbattle_double TRAINER_VOLBEATILLUMISE, Hoenn2_4_Illumise_Text_0, Hoenn2_4_Illumise_Text_0, Hoenn2_4_Volbeat_Text_2
 # 52 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Illumise_Text_1, MSGBOX_AUTOCLOSE
 # 53 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -82,9 +72,9 @@ Hoenn2_4_Illumise::
 
 Hoenn2_4_Plusle::
 # 58 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Plusle_Text_0, Hoenn2_4_Plusle_Text_1, Hoenn2_4_Illumise_Text_0
 # 59 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Plusle_Text_2, MSGBOX_AUTOCLOSE
 # 60 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -92,9 +82,9 @@ Hoenn2_4_Plusle::
 
 Hoenn2_4_Minun::
 # 64 "data/maps/Hoenn2_4/scripts.pory"
-	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0, Hoenn2_4_Azumarill_Text_0
+	trainerbattle_double TRAINER_PLUSLEMINUN, Hoenn2_4_Illumise_Text_0, Hoenn2_4_Illumise_Text_0, Hoenn2_4_Illumise_Text_0
 # 65 "data/maps/Hoenn2_4/scripts.pory"
-	msgbox Hoenn2_4_Azumarill_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_4_Minun_Text_0, MSGBOX_AUTOCLOSE
 # 66 "data/maps/Hoenn2_4/scripts.pory"
 	waitmessage
 	end
@@ -244,10 +234,94 @@ Hoenn2_4_Itemball_5::
 	end
 
 
-Hoenn2_4_Azumarill_Text_0:
-# 17 "data/maps/Hoenn2_4/scripts.pory"
-	.string "test$"
+Hoenn2_4_Doduo_Text_0:
+# 24 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Apparently this used to be a path meant\n"
+	.string "for bicycles ridden by humans, but most\l"
+	.string "pokemon can't ride bicycles so we just\l"
+	.string "use it asa a bridge.$"
+
+Hoenn2_4_Doduo_Text_1:
+# 24 "data/maps/Hoenn2_4/scripts.pory"
+	.string "You're too good for me.$"
+
+Hoenn2_4_Doduo_Text_2:
+# 25 "data/maps/Hoenn2_4/scripts.pory"
+	.string "I'd like to try riding a bicycle one day.$"
+
+Hoenn2_4_Loudred_Text_0:
+# 31 "data/maps/Hoenn2_4/scripts.pory"
+	.string "HELLO! LETS BATTLE!$"
+
+Hoenn2_4_Loudred_Text_1:
+# 31 "data/maps/Hoenn2_4/scripts.pory"
+	.string "YOU GOT ME!$"
+
+Hoenn2_4_Loudred_Text_2:
+# 32 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Oh, sorry was I too loud? I'll tone it\n"
+	.string "down.$"
+
+Hoenn2_4_Electrode_Text_0:
+# 38 "data/maps/Hoenn2_4/scripts.pory"
+	.string "I used to work as a ball.\p"
+	.string "As in others would play soccer or\n"
+	.string "volleyball with me.\p"
+	.string "Of course that meeant I couldn't\n"
+	.string "explode.$"
+
+Hoenn2_4_Electrode_Text_1:
+# 38 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Well played.$"
+
+Hoenn2_4_Electrode_Text_2:
+# 39 "data/maps/Hoenn2_4/scripts.pory"
+	.string "It was thrilling being right amongst the\n"
+	.string "action of top level players.$"
 
 Hoenn2_4_Volbeat_Text_0:
 # 45 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Let's have a doubles battle!$"
+
+Hoenn2_4_Volbeat_Text_1:
+# 45 "data/maps/Hoenn2_4/scripts.pory"
+	.string "That was intense!$"
+
+Hoenn2_4_Volbeat_Text_2:
+# 45 "data/maps/Hoenn2_4/scripts.pory"
 	.string "text$"
+
+Hoenn2_4_Volbeat_Text_3:
+# 46 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Me and Illumise are going to have some\n"
+	.string "tea after this.$"
+
+Hoenn2_4_Illumise_Text_0:
+# 51 "data/maps/Hoenn2_4/scripts.pory"
+	.string "test$"
+
+Hoenn2_4_Illumise_Text_1:
+# 52 "data/maps/Hoenn2_4/scripts.pory"
+	.string "My favourite tea? Just regular black\n"
+	.string "usually.\p"
+	.string "Though at night I prefer something\n"
+	.string "without caffeine.$"
+
+Hoenn2_4_Plusle_Text_0:
+# 58 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Hey look minun. It's a challenger. Let's\n"
+	.string "gettem!$"
+
+Hoenn2_4_Plusle_Text_1:
+# 58 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Darn it! You got us!$"
+
+Hoenn2_4_Plusle_Text_2:
+# 59 "data/maps/Hoenn2_4/scripts.pory"
+	.string "Every once in a while you'll run into a\n"
+	.string "double battle like with us! Make sure\l"
+	.string "you're prepared!$"
+
+Hoenn2_4_Minun_Text_0:
+# 65 "data/maps/Hoenn2_4/scripts.pory"
+	.string "I love double battles with Plusle!$"

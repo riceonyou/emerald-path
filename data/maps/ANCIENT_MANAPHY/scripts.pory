@@ -12,27 +12,29 @@ script ANCIENT_MANAPHY_EventScript_TalkToManaphy{
     //GIVE ANCIENT REWARD
     playmoncry(SPECIES_MANAPHY, CRY_MODE_ENCOUNTER)
     waitmoncry
-    msgbox("Heya!\nGood job on beating the first path!\lI've got a bunch of goodies to give you!\lHere's a water pokemon!")
+    msgbox("Heya!\nGood job on beating the first path!\lI've got a bunch of goodies to give you!\nHere's a water pokemon!")
     waitmessage
     fadescreen(FADE_TO_BLACK)
     setvar(VAR_0x8000, 29)
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    
+    playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
     msgbox("And a Rain Dance TM!")
     giveitem(ITEM_TM_RAIN_DANCE, 1)
     waitmessage
-    msgbox("And a Phione Egg!\lThe egg will hatch into a phione\lafter you complete the next act!\lPhione is a great rain pokemon!")
+    msgbox("And a Phione Egg!\lThe egg will hatch into a phione\nafter you complete the next act!\nPhione is a great rain pokemon!")
     giveitem(ITEM_PHIONE_EGG_CHARM, 1)
     waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 30")
+
     msgbox("That's all from me!\lNow lets get ya to the next path!")
     applymovement(1, moves(
         jump_in_place_left_right
     ))
     waitmovement
+    playmoncry(SPECIES_MANAPHY, CRY_MODE_ENCOUNTER)
+    waitmoncry
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

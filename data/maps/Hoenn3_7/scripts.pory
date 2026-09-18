@@ -2,22 +2,22 @@ mapscripts Hoenn3_7_MapScripts {
 }
 
 script Hoenn3_7_Wigglytuff{
-	trainerbattle_single(TRAINER_WIGGLYTUFF, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_WIGGLYTUFF, format("Let's get this over with. The supermarket I go to does mark downs around this time so I want to get there quick."), format("Nice. Good game."))
+	msgbox(format("One time I got a pack of 3 steaks for only 5 dollars. My life peaked there."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_7_Sandslash{
-	trainerbattle_single(TRAINER_SANDSLASH, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SANDSLASH, format("You ever think of changing jobs? I'd like to be a bus driver someday. But the thought of driving a vehicle that big scares me."), format("Shoot!"))
+	msgbox(format("I can't imagine myself having to make a tight turn in a bus so I think I'll give up on that dream."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_7_Slaking{
-	trainerbattle_single(TRAINER_SLAKING, "test", "test", Hoenn3_7_Slaking_Defeated)
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SLAKING, format("Oh hello. I'm the leader of this path. Defeat me and you'll only have the final path!"), "Your skills are no joke!", Hoenn3_7_Slaking_Defeated)
+	msgbox(format("Talk to abra over there to continue matey.\l.............\lI don't know why I added that sorry."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
@@ -25,8 +25,6 @@ script Hoenn3_7_Slaking{
 
 script Hoenn3_7_Slaking_Defeated{
 	setflag(FLAG_DEFEATED_PATH_LEADER)
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
-	waitmessage
 	end
 }
 

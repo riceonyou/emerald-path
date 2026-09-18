@@ -321,7 +321,22 @@ FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED,\
 FLAG_POCKET_BIRCH_BAG_UNLOCKED,\
 FLAG_NEW_DIFFICULTY_UNLOCKED,\
 FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED,\
-FLAG_UNOWN_BUDDY_CHARM_UNLOCKED
+FLAG_UNOWN_BUDDY_CHARM_UNLOCKED,\
+FLAG_TM_SNARL_UNLOCKED,\
+FLAG_TM_ELECTROWEB_UNLOCKED,\
+FLAG_TM_AURORA_BEAM_UNLOCKED,\
+FLAG_TM_PSYBEAM_UNLOCKED,\
+FLAG_TM_FLAMETHROWER_UNLOCKED,\
+FLAG_TM_ICE_BEAM_UNLOCKED,\
+FLAG_TM_THUNDERBOLT_UNLOCKED,\
+FLAG_TM_SCALD_UNLOCKED,\
+FLAG_TM_MEGA_DRAIN_UNLOCKED,\
+FLAG_TM_SLUDGE_BOMB_UNLOCKED,\
+FLAG_TM_DUAL_WINGBEAT_UNLOCKED,\
+FLAG_TM_LEECH_LIFE_UNLOCKED,\
+FLAG_TM_PLAY_ROUGH_UNLOCKED,\
+FLAG_TM_SHADOW_BALL_UNLOCKED,\
+FLAG_TM_EARTH_POWER_UNLOCKED
 
 // Flags listed above are restored after whiteout state reset
 
@@ -970,6 +985,21 @@ void SetKecShopBuyables(void)
     FlagClear(FLAG_TM_ROCK_SMASH_BUYABLE);
     FlagClear(FLAG_TM_SWIFT_BUYABLE);
     FlagClear(FLAG_TM_CUT_BUYABLE);
+    FlagClear(FLAG_TM_SNARL_BUYABLE);
+    FlagClear(FLAG_TM_ELECTROWEB_BUYABLE);
+    FlagClear(FLAG_TM_AURORA_BEAM_BUYABLE);
+    FlagClear(FLAG_TM_PSYBEAM_BUYABLE);
+    FlagClear(FLAG_TM_FLAMETHROWER_BUYABLE);
+    FlagClear(FLAG_TM_ICE_BEAM_BUYABLE);
+    FlagClear(FLAG_TM_THUNDERBOLT_BUYABLE);
+    FlagClear(FLAG_TM_SCALD_BUYABLE);
+    FlagClear(FLAG_TM_MEGA_DRAIN_BUYABLE);
+    FlagClear(FLAG_TM_SLUDGE_BOMB_BUYABLE);
+    FlagClear(FLAG_TM_DUAL_WINGBEAT_BUYABLE);
+    FlagClear(FLAG_TM_LEECH_LIFE_BUYABLE);
+    FlagClear(FLAG_TM_PLAY_ROUGH_BUYABLE);
+    FlagClear(FLAG_TM_SHADOW_BALL_BUYABLE);
+    FlagClear(FLAG_TM_EARTH_POWER_BUYABLE);
 
     //=======================Regular Shop=============================
     if (FlagGet(FLAG_RARE_CANDY_UNLOCKED)){
@@ -983,6 +1013,51 @@ void SetKecShopBuyables(void)
     }
     if (FlagGet(FLAG_POCKET_BIRCH_BAG_UNLOCKED)){
         FlagSet(FLAG_POCKET_BIRCH_BAG_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_SNARL_UNLOCKED)){
+        FlagSet(FLAG_TM_SNARL_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_ELECTROWEB_UNLOCKED)){
+        FlagSet(FLAG_TM_ELECTROWEB_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_AURORA_BEAM_UNLOCKED)){
+        FlagSet(FLAG_TM_AURORA_BEAM_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_PSYBEAM_UNLOCKED)){
+        FlagSet(FLAG_TM_PSYBEAM_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_FLAMETHROWER_UNLOCKED)){
+        FlagSet(FLAG_TM_FLAMETHROWER_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_ICE_BEAM_UNLOCKED)){
+        FlagSet(FLAG_TM_ICE_BEAM_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_THUNDERBOLT_UNLOCKED)){
+        FlagSet(FLAG_TM_THUNDERBOLT_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_SCALD_UNLOCKED)){
+        FlagSet(FLAG_TM_SCALD_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_MEGA_DRAIN_UNLOCKED)){
+        FlagSet(FLAG_TM_MEGA_DRAIN_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_SLUDGE_BOMB_UNLOCKED)){
+        FlagSet(FLAG_TM_SLUDGE_BOMB_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_DUAL_WINGBEAT_UNLOCKED)){
+        FlagSet(FLAG_TM_DUAL_WINGBEAT_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_LEECH_LIFE_UNLOCKED)){
+        FlagSet(FLAG_TM_LEECH_LIFE_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_PLAY_ROUGH_UNLOCKED)){
+        FlagSet(FLAG_TM_PLAY_ROUGH_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_SHADOW_BALL_UNLOCKED)){
+        FlagSet(FLAG_TM_SHADOW_BALL_BUYABLE);
+    }
+    if (FlagGet(FLAG_TM_EARTH_POWER_UNLOCKED)){
+        FlagSet(FLAG_TM_EARTH_POWER_BUYABLE);
     }
 
 
@@ -1121,7 +1196,7 @@ void WarpToNextAncient(void)
 				}; 
                 break;
         case (2):
-                u8 rand2 = Random() % 2;
+                u8 rand2 = Random() % 3;
 				switch (rand2) {
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_MEWTWO_2), MAP_NUM(MAP_ANCIENT_MEWTWO_2), WARP_ID_NONE, 4, 8);
@@ -1129,6 +1204,12 @@ void WarpToNextAncient(void)
                         break;
                     case 1:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_JIRACHI), MAP_NUM(MAP_ANCIENT_JIRACHI), WARP_ID_NONE, 12, 11);
+						DoWarp();
+                        break;
+                    case 2:
+                        u8 randdeoxys = Random() % 3;
+                        VarSet(VAR_0x8000, randdeoxys);
+                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_DEOXYS), MAP_NUM(MAP_ANCIENT_DEOXYS), WARP_ID_NONE, 17, 16);
 						DoWarp();
                         break;
 				}; 
@@ -1179,7 +1260,12 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
 {
     u8 currentact = VarGet(VAR_CURRENT_ACT);
     FlagClear(FLAG_WARPED_INTO_NEW_ACT);
-    VarSet(VAR_CURRENT_ACT, currentact + 1);
+    
+    if (VarGet(VAR_CURRENT_ACT) >= 4){
+        VarSet(VAR_CURRENT_ACT, 0);
+    }else{
+        VarSet(VAR_CURRENT_ACT, currentact + 1);
+    }
     UpdateLevelCap();
 
     // Do start of every act checks and stuff
@@ -1192,8 +1278,10 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                 
                 //Only for act 0.
                 DetermineRival();
-                SetMoney(&gSaveBlock1Ptr->money, 0);
-                VarSet(VAR_COINS_COLLECTED_IN_A_RUN, 0);
+                if (CheckBagHasItem(ITEM_LUMP_SUM_CHARM, 1))
+                    SetMoney(&gSaveBlock1Ptr->money, 1500);
+                else
+                    SetMoney(&gSaveBlock1Ptr->money, 0);
                 
                 if (VarGet(VAR_CURRENT_DIFFICULTY) > 1){
                     FlagSet(FLAG_BIRCHBAG_1_9);
@@ -1329,7 +1417,7 @@ void ResetPokemonAndItems(void)
     // Clear Bag and give back starting items
     ClearBag();
 
-    AddBagItem(ITEM_CANDY_JAR, 1);
+    //AddBagItem(ITEM_CANDY_JAR, 1);
 
     if(FlagGet(FLAG_ITEM_VENUSAURITE_UNLOCKED)){AddBagItem(ITEM_VENUSAURITE, 1);}
     if(FlagGet(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)){AddBagItem(ITEM_CHARIZARDITE_X, 1);}
@@ -1448,6 +1536,8 @@ void DoWhiteOut(void)
     else
     {
         ResetPokemonAndItems();
+        VarSet(VAR_CURRENT_ACT, 0);
+        UpdateLevelCap();
         ClearWhiteoutFlags();
         Overworld_ResetStateAfterWhiteOut();
         SetWarpHub();

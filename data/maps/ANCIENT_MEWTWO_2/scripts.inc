@@ -40,15 +40,13 @@ ANCIENT_MEWTWO_EventScript_TalkToMewtwo::
 	giveitem ITEM_TM_PSYCHIC, 1
 # 32 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	waitmessage
-# 33 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 34 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_2
-# 36 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	msgbox ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_3
-# 38 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+# 35 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+	waitmessage
+# 37 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	special WarpToNextAct
-# 39 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
+# 38 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	releaseall
 	return
 
@@ -72,8 +70,4 @@ ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_1:
 
 ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_2:
 # 34 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
-	.string "The level cap has been raised to 42$"
-
-ANCIENT_MEWTWO_EventScript_TalkToMewtwo_Text_3:
-# 36 "data/maps/ANCIENT_MEWTWO_2/scripts.pory"
 	.string "I wish you well on your next path.$"

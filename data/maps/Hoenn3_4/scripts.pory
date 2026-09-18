@@ -3,21 +3,21 @@ mapscripts Hoenn3_4_MapScripts {
 
 script Hoenn3_4_Lunatone{
 	trainerbattle_double(TRAINER_SOLROCKLUNATONE, "test", format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	msgbox(format("Solrock get's too worked up about a 10 year old game. Sorry about that."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_4_Solrock{
-	trainerbattle_double(TRAINER_SOLROCKLUNATONE, "test", format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_double(TRAINER_SOLROCKLUNATONE, format("Can you believe we're not in pokemon sun and moon? How dare they."), format("Thanks for the battle."), format("test"))
+	msgbox(format("Grrr gamefreak grrr..."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_4_Whiscash{
-	trainerbattle_single(TRAINER_WHISCASH, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_WHISCASH, format("Did you that muddy water is buffed in this game? It always reduces accuracy and is a bit more accurate!"), format("Ptooey."))
+	msgbox(format("Damn I thought I had you!"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

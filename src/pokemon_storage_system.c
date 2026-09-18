@@ -1,6 +1,7 @@
 #include "global.h"
 #include "malloc.h"
 #include "battle.h"
+#include "caps.h"
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"

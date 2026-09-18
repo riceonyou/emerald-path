@@ -28,9 +28,9 @@ Hoenn1_Alt_4_EventScript_Rival::
 
 Hoenn1_Alt_4_EventScript_Trapinch::
 # 22 "data/maps/Hoenn1_Alt_4/scripts.pory"
-	trainerbattle_single TRAINER_TRAPINCH, Hoenn1_Alt_4_EventScript_Trapinch_Text_0, Hoenn1_Alt_4_EventScript_Trapinch_Text_0
+	trainerbattle_single TRAINER_TRAPINCH, Hoenn1_Alt_4_EventScript_Trapinch_Text_0, Hoenn1_Alt_4_EventScript_Trapinch_Text_1
 # 23 "data/maps/Hoenn1_Alt_4/scripts.pory"
-	msgbox Hoenn1_Alt_4_EventScript_Trapinch_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_Alt_4_EventScript_Trapinch_Text_2, MSGBOX_AUTOCLOSE
 # 24 "data/maps/Hoenn1_Alt_4/scripts.pory"
 	waitmessage
 	end
@@ -38,9 +38,9 @@ Hoenn1_Alt_4_EventScript_Trapinch::
 
 Hoenn1_Alt_4_EventScript_Meditite::
 # 29 "data/maps/Hoenn1_Alt_4/scripts.pory"
-	trainerbattle_single TRAINER_MEDITITE, Hoenn1_Alt_4_EventScript_Trapinch_Text_0, Hoenn1_Alt_4_EventScript_Trapinch_Text_0
+	trainerbattle_single TRAINER_MEDITITE, Hoenn1_Alt_4_EventScript_Meditite_Text_0, Hoenn1_Alt_4_EventScript_Meditite_Text_1
 # 30 "data/maps/Hoenn1_Alt_4/scripts.pory"
-	msgbox Hoenn1_Alt_4_EventScript_Trapinch_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn1_Alt_4_EventScript_Meditite_Text_2, MSGBOX_AUTOCLOSE
 # 31 "data/maps/Hoenn1_Alt_4/scripts.pory"
 	waitmessage
 	end
@@ -80,4 +80,30 @@ Hoenn1_Alt_4_EventScript_BirchBag_9::
 
 Hoenn1_Alt_4_EventScript_Trapinch_Text_0:
 # 22 "data/maps/Hoenn1_Alt_4/scripts.pory"
-	.string "test$"
+	.string "Sigh...\p"
+	.string "Sometimes I wish I could walk on 2 legs.\p"
+	.string "I just wonder how it feels having arms...$"
+
+Hoenn1_Alt_4_EventScript_Trapinch_Text_1:
+# 22 "data/maps/Hoenn1_Alt_4/scripts.pory"
+	.string "Thanks for the battle.$"
+
+Hoenn1_Alt_4_EventScript_Trapinch_Text_2:
+# 23 "data/maps/Hoenn1_Alt_4/scripts.pory"
+	.string "My big head makes it impossible to\n"
+	.string "balance myself when I try to stand on 2\l"
+	.string "feet.$"
+
+Hoenn1_Alt_4_EventScript_Meditite_Text_0:
+# 29 "data/maps/Hoenn1_Alt_4/scripts.pory"
+	.string "Ommm...\p"
+	.string "I'm meditating.\p"
+	.string "Ommmmmm...$"
+
+Hoenn1_Alt_4_EventScript_Meditite_Text_1:
+# 29 "data/maps/Hoenn1_Alt_4/scripts.pory"
+	.string "Back to meditating. Ommmmm...$"
+
+Hoenn1_Alt_4_EventScript_Meditite_Text_2:
+# 30 "data/maps/Hoenn1_Alt_4/scripts.pory"
+	.string "Ommmm.....$"

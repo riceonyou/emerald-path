@@ -61,21 +61,21 @@ ANCIENT_HOOH_EventScript_Sign::
 # 36 "data/maps/ANCIENT_HOOH/scripts.pory"
 	waitstate
 # 37 "data/maps/ANCIENT_HOOH/scripts.pory"
-	msgbox ANCIENT_HOOH_EventScript_Sign_Text_1
+	playfanfare MUS_EVOLVED
 # 38 "data/maps/ANCIENT_HOOH/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_HOOH_EventScript_Sign_Text_1
 # 39 "data/maps/ANCIENT_HOOH/scripts.pory"
-	applymovement 1, ANCIENT_HOOH_EventScript_Sign_Movement_0
-# 42 "data/maps/ANCIENT_HOOH/scripts.pory"
-	waitmovement
-# 43 "data/maps/ANCIENT_HOOH/scripts.pory"
-	giveitem ITEM_HOOH_FEATHER_CHARM, 1
-# 44 "data/maps/ANCIENT_HOOH/scripts.pory"
-	waitmessage
-# 45 "data/maps/ANCIENT_HOOH/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 47 "data/maps/ANCIENT_HOOH/scripts.pory"
 	msgbox ANCIENT_HOOH_EventScript_Sign_Text_2
+# 40 "data/maps/ANCIENT_HOOH/scripts.pory"
+	waitmessage
+# 41 "data/maps/ANCIENT_HOOH/scripts.pory"
+	applymovement 1, ANCIENT_HOOH_EventScript_Sign_Movement_0
+# 44 "data/maps/ANCIENT_HOOH/scripts.pory"
+	waitmovement
+# 45 "data/maps/ANCIENT_HOOH/scripts.pory"
+	giveitem ITEM_HOOH_FEATHER_CHARM, 1
+# 46 "data/maps/ANCIENT_HOOH/scripts.pory"
+	waitmessage
 # 48 "data/maps/ANCIENT_HOOH/scripts.pory"
 	msgbox ANCIENT_HOOH_EventScript_Sign_Text_3
 # 50 "data/maps/ANCIENT_HOOH/scripts.pory"
@@ -112,15 +112,15 @@ ANCIENT_HOOH_EventScript_Sign_Text_0:
 	.string "path. Please take a pokemon with you.$"
 
 ANCIENT_HOOH_EventScript_Sign_Text_1:
-# 37 "data/maps/ANCIENT_HOOH/scripts.pory"
+# 38 "data/maps/ANCIENT_HOOH/scripts.pory"
+	.string "You received a\n{STR_VAR_1}!$"
+
+ANCIENT_HOOH_EventScript_Sign_Text_2:
+# 39 "data/maps/ANCIENT_HOOH/scripts.pory"
 	.string "And a special gift. A freshly plucked\n"
 	.string "feather of my own. When you lose a fight\l"
 	.string "while you have this, instead of losing\l"
 	.string "the run, you will get another chance.$"
-
-ANCIENT_HOOH_EventScript_Sign_Text_2:
-# 47 "data/maps/ANCIENT_HOOH/scripts.pory"
-	.string "The level cap has been raised to 30$"
 
 ANCIENT_HOOH_EventScript_Sign_Text_3:
 # 48 "data/maps/ANCIENT_HOOH/scripts.pory"

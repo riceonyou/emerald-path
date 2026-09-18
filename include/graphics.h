@@ -1553,6 +1553,16 @@ extern const u32 gItemIcon_MintyCharm[];
 extern const u16 gItemIconPalette_MintyCharm[];
 extern const u32 gItemIcon_HoOhFeatherCharm[];
 extern const u16 gItemIconPalette_HoOhFeatherCharm[];
+extern const u32 gItemIcon_LugiaPlateCharm[];
+extern const u16 gItemIconPalette_LugiaPlateCharm[];
+extern const u32 gItemIcon_UnownBuddyCharm[];
+extern const u16 gItemIconPalette_UnownBuddyCharm[];
+extern const u32 gItemIcon_BruxishFlossCharm[];
+extern const u16 gItemIconPalette_BruxishFlossCharm[];
+extern const u32 gItemIcon_MaxieGlassesCharm[];
+extern const u16 gItemIconPalette_MaxieGlassesCharm[];
+extern const u32 gItemIcon_ArchieBandanaCharm[];
+extern const u16 gItemIconPalette_ArchieBandanaCharm[];
 
 
 

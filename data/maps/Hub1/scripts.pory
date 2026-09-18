@@ -33,12 +33,21 @@ script AfterWarpIntoNewAct{
 			clearflag(FLAG_GIVE_MINTY_CHARM_MINT)
         }
 
+		//Announce level cap updated
+		if(var(VAR_CURRENT_ACT) > 1){
+			playfanfare(MUS_OBTAIN_ITEM)
+			buffernumberstring(STR_VAR_1, VAR_LEVEL_CAP)
+			msgbox(format("The level cap has been raised to {STR_VAR_1}!\pYou can level your pokemon up to the cap via the party menu."))
+		}
+
+
 		//Hub stuff
 		if (var(VAR_CURRENT_ACT) == 0){
 			
 			if(var(VAR_COINS_COLLECTED_IN_A_RUN) > 0){
 				buffernumberstring(STR_VAR_1, VAR_COINS_COLLECTED_IN_A_RUN)
 				msgbox("You managed to collect\n{STR_VAR_1} COINS in your last run!")
+				setvar(VAR_COINS_COLLECTED_IN_A_RUN, 0)
 			}
 
 			//UNLOCKS
@@ -383,11 +392,9 @@ script HUB1_ONFRAME {
 		}
 		special(UpdatePlayerSprite)
 		special(UpdateTransformedPlayerPalette)
-		releaseall
-		
-		lockall
-		msgbox("Use this item to level up your\nPokemon.")
-		giveitem(ITEM_CANDY_JAR)
+
+		// msgbox("Use this item to level up your\nPokemon.")
+		// giveitem(ITEM_CANDY_JAR)
 
 		releaseall
 	}
@@ -473,33 +480,33 @@ script Hub_Event_Script_Miltank{
 	faceplayer
 	setvar(VAR_TEMP_A, 0)
     
-	if(!flag(FLAG_BULBASAUR_UNLOCKED)){dynmultipush("Bulbasaur (¥500)",SPECIES_BULBASAUR) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_CHARMANDER_UNLOCKED)){dynmultipush("Charmander (¥500)",SPECIES_CHARMANDER) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_SQUIRTLE_UNLOCKED)){dynmultipush("Squirtle (¥500)",SPECIES_SQUIRTLE) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_CHIKORITA_UNLOCKED)){dynmultipush("Chikorita (¥500)",SPECIES_CHIKORITA) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_CYNDAQUIL_UNLOCKED)){dynmultipush("Cyndaquil (¥500)",SPECIES_CYNDAQUIL) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_TOTODILE_UNLOCKED)){dynmultipush("Totodile (¥500)",SPECIES_TOTODILE) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_TREECKO_UNLOCKED)){dynmultipush("Treecko (¥500)",SPECIES_TREECKO) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_TORCHIC_UNLOCKED)){dynmultipush("Torchic (¥500)",SPECIES_TORCHIC) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_MUDKIP_UNLOCKED)){dynmultipush("Mudkip (¥500)",SPECIES_MUDKIP) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_TURTWIG_UNLOCKED)){dynmultipush("Turtwig (¥500)",SPECIES_TURTWIG) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_CHIMCHAR_UNLOCKED)){dynmultipush("Chimchar (¥500)",SPECIES_CHIMCHAR) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_PIPLUP_UNLOCKED)){dynmultipush("Piplup (¥500)",SPECIES_PIPLUP) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_SNIVY_UNLOCKED)){dynmultipush("Snivy (¥500)",SPECIES_SNIVY) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_TEPIG_UNLOCKED)){dynmultipush("Tepig (¥500)",SPECIES_TEPIG) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_OSHAWOTT_UNLOCKED)){dynmultipush("Oshawott (¥500)",SPECIES_OSHAWOTT) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_CHESPIN_UNLOCKED)){dynmultipush("Chespin (¥500)",SPECIES_CHESPIN) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_FENNEKIN_UNLOCKED)){dynmultipush("Fennekin (¥500)",SPECIES_FENNEKIN) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_FROAKIE_UNLOCKED)){dynmultipush("Froakie (¥500)",SPECIES_FROAKIE) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_ROWLET_UNLOCKED)){dynmultipush("Rowlet (¥500)",SPECIES_ROWLET) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_LITTEN_UNLOCKED)){dynmultipush("Litten (¥500)",SPECIES_LITTEN) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_POPPLIO_UNLOCKED)){dynmultipush("Popplio (¥500)",SPECIES_POPPLIO) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_GROOKEY_UNLOCKED)){dynmultipush("Grookey (¥500)",SPECIES_GROOKEY) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_SCORBUNNY_UNLOCKED)){dynmultipush("Scorbunny (¥500)",SPECIES_SCORBUNNY) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_SOBBLE_UNLOCKED)){dynmultipush("Sobble (¥500)",SPECIES_SOBBLE) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_SPRIGATITO_UNLOCKED)){dynmultipush("Sprigatito (¥500)",SPECIES_SPRIGATITO) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_FUECOCO_UNLOCKED)){dynmultipush("Fuecoco (¥500)",SPECIES_FUECOCO) addvar(VAR_TEMP_A,1)}
-	if(!flag(FLAG_QUAXLY_UNLOCKED)){dynmultipush("Quaxly (¥500)",SPECIES_QUAXLY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_BULBASAUR_UNLOCKED)){dynmultipush("Bulbasaur (500C)",SPECIES_BULBASAUR) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHARMANDER_UNLOCKED)){dynmultipush("Charmander (500C)",SPECIES_CHARMANDER) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SQUIRTLE_UNLOCKED)){dynmultipush("Squirtle (500C)",SPECIES_SQUIRTLE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHIKORITA_UNLOCKED)){dynmultipush("Chikorita (500C)",SPECIES_CHIKORITA) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CYNDAQUIL_UNLOCKED)){dynmultipush("Cyndaquil (500C)",SPECIES_CYNDAQUIL) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TOTODILE_UNLOCKED)){dynmultipush("Totodile (500C)",SPECIES_TOTODILE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TREECKO_UNLOCKED)){dynmultipush("Treecko (500C)",SPECIES_TREECKO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TORCHIC_UNLOCKED)){dynmultipush("Torchic (500C)",SPECIES_TORCHIC) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_MUDKIP_UNLOCKED)){dynmultipush("Mudkip (500C)",SPECIES_MUDKIP) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TURTWIG_UNLOCKED)){dynmultipush("Turtwig (500C)",SPECIES_TURTWIG) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHIMCHAR_UNLOCKED)){dynmultipush("Chimchar (500C)",SPECIES_CHIMCHAR) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_PIPLUP_UNLOCKED)){dynmultipush("Piplup (500C)",SPECIES_PIPLUP) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SNIVY_UNLOCKED)){dynmultipush("Snivy (500C)",SPECIES_SNIVY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_TEPIG_UNLOCKED)){dynmultipush("Tepig (500C)",SPECIES_TEPIG) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_OSHAWOTT_UNLOCKED)){dynmultipush("Oshawott (500C)",SPECIES_OSHAWOTT) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_CHESPIN_UNLOCKED)){dynmultipush("Chespin (500C)",SPECIES_CHESPIN) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_FENNEKIN_UNLOCKED)){dynmultipush("Fennekin (500C)",SPECIES_FENNEKIN) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_FROAKIE_UNLOCKED)){dynmultipush("Froakie (500C)",SPECIES_FROAKIE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_ROWLET_UNLOCKED)){dynmultipush("Rowlet (500C)",SPECIES_ROWLET) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_LITTEN_UNLOCKED)){dynmultipush("Litten (500C)",SPECIES_LITTEN) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_POPPLIO_UNLOCKED)){dynmultipush("Popplio (500C)",SPECIES_POPPLIO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_GROOKEY_UNLOCKED)){dynmultipush("Grookey (500C)",SPECIES_GROOKEY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SCORBUNNY_UNLOCKED)){dynmultipush("Scorbunny (500C)",SPECIES_SCORBUNNY) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SOBBLE_UNLOCKED)){dynmultipush("Sobble (500C)",SPECIES_SOBBLE) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_SPRIGATITO_UNLOCKED)){dynmultipush("Sprigatito (500C)",SPECIES_SPRIGATITO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_FUECOCO_UNLOCKED)){dynmultipush("Fuecoco (500C)",SPECIES_FUECOCO) addvar(VAR_TEMP_A,1)}
+	if(!flag(FLAG_QUAXLY_UNLOCKED)){dynmultipush("Quaxly (500C)",SPECIES_QUAXLY) addvar(VAR_TEMP_A,1)}
 	
 	if (var(VAR_TEMP_A) != 0){
 		showcoinsbox(21, 11)
@@ -923,12 +930,12 @@ script KecShop {
 		dynmultipush("Lum Berry (¥200)",ITEM_LUM_BERRY)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_RARE_CANDY_BUYABLE)){
-		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
-		addvar(VAR_TEMP_A, 1)
-	}
 	if(flag(FLAG_SERIOUS_MINT_BUYABLE)){
 		dynmultipush("Serious Mint (¥500)",ITEM_SERIOUS_MINT)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_RARE_CANDY_BUYABLE)){
+		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_POCKET_BIRCH_BAG_BUYABLE)){
@@ -987,7 +994,7 @@ script KecShop {
 
 	if(var(VAR_TEMP_A) != 0){
 		showmoneybox(18, 10)
-		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_ORAN_BERRY:
 				if(checkmoney(200)){
@@ -1094,8 +1101,32 @@ script KecShop {
 script KecShop_Shiny {
     lockall
     msgbox("Welcome to the Kecleon Brother's shop!")
-	if(flag(FLAG_TM_ROCK_SMASH_BUYABLE)){
-		dynmultipush("TM Rock Smash (¥900)",ITEM_TM_ROCK_SMASH)
+	if(flag(FLAG_TM_NOBLE_ROAR_BUYABLE)){
+		dynmultipush("TM Noble Roar (¥200)",ITEM_TM_NOBLE_ROAR)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_CHARM_BUYABLE)){
+		dynmultipush("TM Charm (¥200)",ITEM_TM_CHARM)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_FAKE_TEARS_BUYABLE)){
+		dynmultipush("TM Fake Tears (¥200)",ITEM_TM_FAKE_TEARS)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_CONFUSE_RAY_BUYABLE)){
+		dynmultipush("TM Confuse Ray (¥300)",ITEM_TM_CONFUSE_RAY)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_THUNDER_WAVE_BUYABLE)){
+		dynmultipush("TM Thunder Wave (¥300)",ITEM_TM_THUNDER_WAVE)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_WILL_O_WISP_BUYABLE)){
+		dynmultipush("TM Will-O-Wisp (¥500)",ITEM_TM_WILL_O_WISP)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_TOXIC_BUYABLE)){
+		dynmultipush("TM Toxic (¥500)",ITEM_TM_TOXIC)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_SWIFT_BUYABLE)){
@@ -1106,42 +1137,78 @@ script KecShop_Shiny {
 		dynmultipush("TM Cut (¥500)",ITEM_TM_CUT)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_NOBLE_ROAR_BUYABLE)){
-		dynmultipush("TM Noble Roar (¥400)",ITEM_TM_NOBLE_ROAR)
+	if(flag(FLAG_TM_ROCK_SMASH_BUYABLE)){
+		dynmultipush("TM Rock Smash (¥500)",ITEM_TM_ROCK_SMASH)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_CHARM_BUYABLE)){
-		dynmultipush("TM Charm (¥400)",ITEM_TM_CHARM)
+	if(flag(FLAG_TM_SNARL_BUYABLE)){
+		dynmultipush("TM Snarl (¥500)",ITEM_TM_SNARL)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_FAKE_TEARS_BUYABLE)){
-		dynmultipush("TM Fake Tears (¥400)",ITEM_TM_FAKE_TEARS)
+	if(flag(FLAG_TM_ELECTROWEB_BUYABLE)){
+		dynmultipush("TM Electroweb (¥500)",ITEM_TM_ELECTROWEB)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_CONFUSE_RAY_BUYABLE)){
-		dynmultipush("TM Confuse Ray (¥800)",ITEM_TM_CONFUSE_RAY)
+	if(flag(FLAG_TM_AURORA_BEAM_BUYABLE)){
+		dynmultipush("TM Aurora Beam (¥500)",ITEM_TM_AURORA_BEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_THUNDER_WAVE_BUYABLE)){
-		dynmultipush("TM Thunder Wave (¥800)",ITEM_TM_THUNDER_WAVE)
+	if(flag(FLAG_TM_PSYBEAM_BUYABLE)){
+		dynmultipush("TM Psybeam (¥500)",ITEM_TM_PSYBEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_WILL_O_WISP_BUYABLE)){
-		dynmultipush("TM Will-O-Wisp (¥800)",ITEM_TM_WILL_O_WISP)
+	if(flag(FLAG_TM_FLAMETHROWER_BUYABLE)){
+		dynmultipush("TM Flamethrower (¥1200)",ITEM_TM_FLAMETHROWER)
 		addvar(VAR_TEMP_A, 1)
 	}
-	if(flag(FLAG_TM_TOXIC_BUYABLE)){
-		dynmultipush("TM Toxic (¥800)",ITEM_TM_TOXIC)
+	if(flag(FLAG_TM_ICE_BEAM_BUYABLE)){
+		dynmultipush("TM Ice Beam (¥1200)",ITEM_TM_ICE_BEAM)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_THUNDERBOLT_BUYABLE)){
+		dynmultipush("TM Thunderbolt (¥1200)",ITEM_TM_THUNDERBOLT)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_SCALD_BUYABLE)){
+		dynmultipush("TM Scald (¥1000)",ITEM_TM_SCALD)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_MEGA_DRAIN_BUYABLE)){
+		dynmultipush("TM Mega Drain (¥800)",ITEM_TM_MEGA_DRAIN)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_SLUDGE_BOMB_BUYABLE)){
+		dynmultipush("TM Sludge Bomb (¥1000)",ITEM_TM_SLUDGE_BOMB)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_DUAL_WINGBEAT_BUYABLE)){
+		dynmultipush("TM Dual Wingbeat (¥900)",ITEM_TM_DUAL_WINGBEAT)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_LEECH_LIFE_BUYABLE)){
+		dynmultipush("TM Leech Life (¥1000)",ITEM_TM_LEECH_LIFE)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_PLAY_ROUGH_BUYABLE)){
+		dynmultipush("TM Play Rough (¥1000)",ITEM_TM_PLAY_ROUGH)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_SHADOW_BALL_BUYABLE)){
+		dynmultipush("TM Shadow Ball (¥1000)",ITEM_TM_SHADOW_BALL)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(flag(FLAG_TM_EARTH_POWER_BUYABLE)){
+		dynmultipush("TM Earth Power (¥1000)",ITEM_TM_EARTH_POWER)
 		addvar(VAR_TEMP_A, 1)
 	}
 
-		if(var(VAR_TEMP_A) != 0){
+	if(var(VAR_TEMP_A) != 0){
 		showmoneybox(18, 10)
-		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_TM_NOBLE_ROAR:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(200)){
+						removemoney(200)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_NOBLE_ROAR)
@@ -1151,8 +1218,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_ROCK_SMASH:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(500)){
+						removemoney(500)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_ROCK_SMASH)
@@ -1162,8 +1229,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_SWIFT:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(500)){
+						removemoney(500)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_SWIFT)
@@ -1173,8 +1240,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_CUT:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(500)){
+						removemoney(500)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_CUT)
@@ -1184,8 +1251,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_CHARM:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(200)){
+						removemoney(200)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_CHARM)
@@ -1195,8 +1262,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_FAKE_TEARS:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(200)){
+						removemoney(200)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_FAKE_TEARS)
@@ -1206,8 +1273,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_CONFUSE_RAY:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(300)){
+						removemoney(300)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_CONFUSE_RAY)
@@ -1217,8 +1284,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_THUNDER_WAVE:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(300)){
+						removemoney(300)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_THUNDER_WAVE)
@@ -1228,8 +1295,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_WILL_O_WISP:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(500)){
+						removemoney(500)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_WILL_O_WISP)
@@ -1239,8 +1306,8 @@ script KecShop_Shiny {
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
 			case ITEM_TM_TOXIC:
-				if(checkmoney(400)){
-						removemoney(400)
+				if(checkmoney(500)){
+						removemoney(500)
 						updatemoneybox
 						playse(SE_SHOP)
 						giveitem(ITEM_TM_TOXIC)
@@ -1249,6 +1316,171 @@ script KecShop_Shiny {
 					else{
 						msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
 					}
+			case ITEM_TM_SNARL:
+				if(checkmoney(500)){
+					removemoney(500)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_SNARL)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_ELECTROWEB:
+				if(checkmoney(500)){
+					removemoney(500)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_ELECTROWEB)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_AURORA_BEAM:
+				if(checkmoney(500)){
+					removemoney(500)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_AURORA_BEAM)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_PSYBEAM:
+				if(checkmoney(500)){
+					removemoney(500)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_PSYBEAM)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_FLAMETHROWER:
+				if(checkmoney(1200)){
+					removemoney(1200)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_FLAMETHROWER)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_ICE_BEAM:
+				if(checkmoney(1200)){
+					removemoney(1200)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_ICE_BEAM)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_THUNDERBOLT:
+				if(checkmoney(1200)){
+					removemoney(1200)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_THUNDERBOLT)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_SCALD:
+				if(checkmoney(1000)){
+					removemoney(1000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_SCALD)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_MEGA_DRAIN:
+				if(checkmoney(800)){
+					removemoney(800)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_MEGA_DRAIN)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_SLUDGE_BOMB:
+				if(checkmoney(1000)){
+					removemoney(1000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_SLUDGE_BOMB)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_DUAL_WINGBEAT:
+				if(checkmoney(900)){
+					removemoney(900)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_DUAL_WINGBEAT)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_LEECH_LIFE:
+				if(checkmoney(1000)){
+					removemoney(1000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_LEECH_LIFE)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_PLAY_ROUGH:
+				if(checkmoney(1000)){
+					removemoney(1000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_PLAY_ROUGH)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_SHADOW_BALL:
+				if(checkmoney(1000)){
+					removemoney(1000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_SHADOW_BALL)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
+			case ITEM_TM_EARTH_POWER:
+				if(checkmoney(1000)){
+					removemoney(1000)
+					updatemoneybox
+					playse(SE_SHOP)
+					giveitem(ITEM_TM_EARTH_POWER)
+					msgbox("Thank you for your purchase!")
+				}
+				else{
+					msgbox("I'm sorry. You don't have the money to\nbuy that, kec.")
+				}
 		
 		}
 		hidemoneybox
@@ -1298,7 +1530,7 @@ script Hub_Event_Script_Kecleon {
 
 	if(var(VAR_TEMP_A) != 0){
 		showcoinsbox(21, 11)
-		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_LUM_BERRY:
 				if(!flag(FLAG_LUM_BERRY_UNLOCKED)){
@@ -1400,10 +1632,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 	faceplayer
     setvar(VAR_TEMP_A, 0)
 	msgbox("Howdy! Would you like me to\nstock a new TM?")
-	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
-		dynmultipush("TM Rock Smash (¥900)",ITEM_TM_ROCK_SMASH)
-		addvar(VAR_TEMP_A, 1)
-	}
 	if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
 		dynmultipush("TM Noble Roar (¥400)",ITEM_TM_NOBLE_ROAR)
 		addvar(VAR_TEMP_A, 1)
@@ -1432,11 +1660,75 @@ script Hub_Event_Script_Shiny_Kecleon {
 		dynmultipush("TM Toxic (¥800)",ITEM_TM_TOXIC)
 		addvar(VAR_TEMP_A, 1)
 	}
+	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
+		dynmultipush("TM Rock Smash (¥900)",ITEM_TM_ROCK_SMASH)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_SNARL_UNLOCKED)){
+		dynmultipush("TM Snarl (¥900)",ITEM_TM_SNARL)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_ELECTROWEB_UNLOCKED)){
+		dynmultipush("TM Electroweb (¥900)",ITEM_TM_ELECTROWEB)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_AURORA_BEAM_UNLOCKED)){
+		dynmultipush("TM Aurora Beam (¥900)",ITEM_TM_AURORA_BEAM)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_PSYBEAM_UNLOCKED)){
+		dynmultipush("TM Psybeam (¥900)",ITEM_TM_PSYBEAM)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_MEGA_DRAIN_UNLOCKED)){
+		dynmultipush("TM Mega Drain (¥900)",ITEM_TM_MEGA_DRAIN)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_FLAMETHROWER_UNLOCKED)){
+		dynmultipush("TM Flamethrower (¥1200)",ITEM_TM_FLAMETHROWER)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_ICE_BEAM_UNLOCKED)){
+		dynmultipush("TM Ice Beam (¥1200)",ITEM_TM_ICE_BEAM)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_THUNDERBOLT_UNLOCKED)){
+		dynmultipush("TM Thunderbolt (¥1200)",ITEM_TM_THUNDERBOLT)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_SCALD_UNLOCKED)){
+		dynmultipush("TM Scald (¥1200)",ITEM_TM_SCALD)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_SLUDGE_BOMB_UNLOCKED)){
+		dynmultipush("TM Sludge Bomb (¥1200)",ITEM_TM_SLUDGE_BOMB)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_DUAL_WINGBEAT_UNLOCKED)){
+		dynmultipush("TM Dual Wingbeat (¥1200)",ITEM_TM_DUAL_WINGBEAT)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_LEECH_LIFE_UNLOCKED)){
+		dynmultipush("TM Leech Life (¥1200)",ITEM_TM_LEECH_LIFE)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_PLAY_ROUGH_UNLOCKED)){
+		dynmultipush("TM Play Rough (¥1200)",ITEM_TM_PLAY_ROUGH)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_SHADOW_BALL_UNLOCKED)){
+		dynmultipush("TM Shadow Ball (¥1200)",ITEM_TM_SHADOW_BALL)
+		addvar(VAR_TEMP_A, 1)
+	}
+	if(!flag(FLAG_TM_EARTH_POWER_UNLOCKED)){
+		dynmultipush("TM Earth Power (¥1200)",ITEM_TM_EARTH_POWER)
+		addvar(VAR_TEMP_A, 1)
+	}
 
 
 	if(var(VAR_TEMP_A) != 0){
 		showcoinsbox(21, 11)
-		dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_TM_NOBLE_ROAR:
 				if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
@@ -1579,6 +1871,231 @@ script Hub_Event_Script_Shiny_Kecleon {
 						else{
 							msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
 						}
+				}
+			case ITEM_TM_SNARL:
+				if(!flag(FLAG_TM_SNARL_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=900){
+						setflag(FLAG_TM_SNARL_UNLOCKED)
+						giveitem(ITEM_TM_SNARL, 1)
+						removecoins(900)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Snarl as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_ELECTROWEB:
+				if(!flag(FLAG_TM_ELECTROWEB_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=900){
+						setflag(FLAG_TM_ELECTROWEB_UNLOCKED)
+						giveitem(ITEM_TM_ELECTROWEB, 1)
+						removecoins(900)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Electroweb as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_AURORA_BEAM:
+				if(!flag(FLAG_TM_AURORA_BEAM_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=900){
+						setflag(FLAG_TM_AURORA_BEAM_UNLOCKED)
+						giveitem(ITEM_TM_AURORA_BEAM, 1)
+						removecoins(900)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Aurora Beam as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_PSYBEAM:
+				if(!flag(FLAG_TM_PSYBEAM_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=900){
+						setflag(FLAG_TM_PSYBEAM_UNLOCKED)
+						giveitem(ITEM_TM_PSYBEAM, 1)
+						removecoins(900)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Psybeam as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_FLAMETHROWER:
+				if(!flag(FLAG_TM_FLAMETHROWER_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_FLAMETHROWER_UNLOCKED)
+						giveitem(ITEM_TM_FLAMETHROWER, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Flamethrower as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_ICE_BEAM:
+				if(!flag(FLAG_TM_ICE_BEAM_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_ICE_BEAM_UNLOCKED)
+						giveitem(ITEM_TM_ICE_BEAM, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Ice Beam as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_THUNDERBOLT:
+				if(!flag(FLAG_TM_THUNDERBOLT_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_THUNDERBOLT_UNLOCKED)
+						giveitem(ITEM_TM_THUNDERBOLT, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Thunderbolt as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_SCALD:
+				if(!flag(FLAG_TM_SCALD_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_SCALD_UNLOCKED)
+						giveitem(ITEM_TM_SCALD, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Scald as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_MEGA_DRAIN:
+				if(!flag(FLAG_TM_MEGA_DRAIN_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_MEGA_DRAIN_UNLOCKED)
+						giveitem(ITEM_TM_MEGA_DRAIN, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Mega Drain as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_SLUDGE_BOMB:
+				if(!flag(FLAG_TM_SLUDGE_BOMB_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_SLUDGE_BOMB_UNLOCKED)
+						giveitem(ITEM_TM_SLUDGE_BOMB, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Sludge Bomb as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_DUAL_WINGBEAT:
+				if(!flag(FLAG_TM_DUAL_WINGBEAT_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_DUAL_WINGBEAT_UNLOCKED)
+						giveitem(ITEM_TM_DUAL_WINGBEAT, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Dual Wingbeat as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_LEECH_LIFE:
+				if(!flag(FLAG_TM_LEECH_LIFE_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_LEECH_LIFE_UNLOCKED)
+						giveitem(ITEM_TM_LEECH_LIFE, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Leech Life as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_PLAY_ROUGH:
+				if(!flag(FLAG_TM_PLAY_ROUGH_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_PLAY_ROUGH_UNLOCKED)
+						giveitem(ITEM_TM_PLAY_ROUGH, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Play Rough as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_SHADOW_BALL:
+				if(!flag(FLAG_TM_SHADOW_BALL_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_SHADOW_BALL_UNLOCKED)
+						giveitem(ITEM_TM_SHADOW_BALL, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Shadow Ball as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
+				}
+			case ITEM_TM_EARTH_POWER:
+				if(!flag(FLAG_TM_EARTH_POWER_UNLOCKED)){
+					checkcoins(VAR_RESULT)
+					if(var(VAR_RESULT)>=1200){
+						setflag(FLAG_TM_EARTH_POWER_UNLOCKED)
+						giveitem(ITEM_TM_EARTH_POWER, 1)
+						removecoins(1200)
+						updatecoinsbox(0,0)
+						playse(SE_SHOP)
+						msgbox("You've unlocked TM Earth Power as a\nstocked item!\pThank you for your purchase!")
+					}
+					else{
+						msgbox("I'm sorry. You don't have the coins to\nstock that item, kec.")
+					}
 				}
 		}
 	}else{
@@ -3058,8 +3575,12 @@ script Hub_Event_Script_Diancie {
 }
 
 script Hub_Event_Script_Marowak {
+	faceplayer
 	msgbox(format("Hi. My dojo is closed right now. Maybe it will open in a future update."))
 	closemessage
+	applymovement(1, moves(
+        face_down
+    ))
 }
 
 
@@ -3072,13 +3593,13 @@ script Hub_Event_Script_Chimecho {
 		closemessage
 	backtocharmslist:
 		dynmultipush("Shiny Starter Charm", ITEM_SHINY_STARTER_CHARM) 
-		dynmultipush("Lump Sum Charm", ITEM_LUMP_SUM_CHARM)   
-		dynmultipush("Berry Pack Charm", ITEM_BERRY_PACK_CHARM) 
-		if(flag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)){dynmultipush("Tinted Charm", ITEM_TINTED_CHARM) }
+		dynmultipush("Lump Sum", ITEM_LUMP_SUM_CHARM)   
+		dynmultipush("Berry Pack", ITEM_BERRY_PACK_CHARM) 
+		if(flag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)){dynmultipush("Tinted Scope", ITEM_TINTED_CHARM) }
 		if(flag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)){dynmultipush("Normal Charm", ITEM_NORMAL_CHARM) }
-		if(flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)){dynmultipush("Minty Charm", ITEM_MINTY_CHARM) }
-		if(flag(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED)){dynmultipush("Bruxish Floss Charm", ITEM_BRUXISH_FLOSS_CHARM) }
-		if(flag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)){dynmultipush("Unown Buddy Charm", ITEM_UNOWN_BUDDY_CHARM) }
+		if(flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)){dynmultipush("Mint Pot", ITEM_MINTY_CHARM) }
+		if(flag(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED)){dynmultipush("Bruxish Floss", ITEM_BRUXISH_FLOSS_CHARM) }
+		if(flag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)){dynmultipush("Unown Buddy", ITEM_UNOWN_BUDDY_CHARM) }
 
 		dynmultistack(0, 0, FALSE, 8, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch (var(VAR_RESULT)){
@@ -3101,7 +3622,7 @@ script Hub_Event_Script_Chimecho {
 			case ITEM_BRUXISH_FLOSS_CHARM:
 				msgbox(format("Your biting moves do 1.2 dmg."))
 			case ITEM_UNOWN_BUDDY_CHARM:
-				msgbox(format("Get an extra unown at the start of the run"))
+				msgbox(format("Get an extra unown at the start of the run."))
 		}
 		closemessage
 		goto(backtocharmslist)	
@@ -3119,19 +3640,25 @@ script GiveStarterCharm {
         dynmultipush("Shiny Starter Charm", ITEM_SHINY_STARTER_CHARM)    
     }
 	if (var(VAR_0x8001) == ITEM_LUMP_SUM_CHARM || var(VAR_0x8002) == ITEM_LUMP_SUM_CHARM || var(VAR_0x8003) == ITEM_LUMP_SUM_CHARM) {
-        dynmultipush("Lump Sum Charm", ITEM_LUMP_SUM_CHARM)    
+        dynmultipush("Lump Sum", ITEM_LUMP_SUM_CHARM)    
     }
 	if (var(VAR_0x8001) == ITEM_BERRY_PACK_CHARM || var(VAR_0x8002) == ITEM_BERRY_PACK_CHARM || var(VAR_0x8003) == ITEM_BERRY_PACK_CHARM) {
-        dynmultipush("Berry Pack Charm", ITEM_BERRY_PACK_CHARM)    
+        dynmultipush("Berry Pack", ITEM_BERRY_PACK_CHARM)    
     }
 	if (var(VAR_0x8001) == ITEM_TINTED_CHARM || var(VAR_0x8002) == ITEM_TINTED_CHARM || var(VAR_0x8003) == ITEM_TINTED_CHARM) {
-        dynmultipush("Tinted Charm", ITEM_TINTED_CHARM)    
+        dynmultipush("Tinted Scope", ITEM_TINTED_CHARM)    
     }
 	if (var(VAR_0x8001) == ITEM_NORMAL_CHARM || var(VAR_0x8002) == ITEM_NORMAL_CHARM || var(VAR_0x8003) == ITEM_NORMAL_CHARM) {
         dynmultipush("Normal Charm", ITEM_NORMAL_CHARM)    
     }
 	if (var(VAR_0x8001) == ITEM_MINTY_CHARM || var(VAR_0x8002) == ITEM_MINTY_CHARM || var(VAR_0x8003) == ITEM_MINTY_CHARM) {
-        dynmultipush("Minty Charm", ITEM_MINTY_CHARM)    
+        dynmultipush("Mint Pot", ITEM_MINTY_CHARM)    
+    }
+	if (var(VAR_0x8001) == ITEM_BRUXISH_FLOSS_CHARM || var(VAR_0x8002) == ITEM_BRUXISH_FLOSS_CHARM || var(VAR_0x8003) == ITEM_BRUXISH_FLOSS_CHARM) {
+        dynmultipush("Bruxish Floss", ITEM_BRUXISH_FLOSS_CHARM)    
+    }
+	if (var(VAR_0x8001) == ITEM_UNOWN_BUDDY_CHARM || var(VAR_0x8002) == ITEM_UNOWN_BUDDY_CHARM || var(VAR_0x8003) == ITEM_UNOWN_BUDDY_CHARM) {
+        dynmultipush("Unown Buddy", ITEM_UNOWN_BUDDY_CHARM)    
     }
     dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
     switch (var(VAR_RESULT)) {
@@ -3163,7 +3690,7 @@ script GiveStarterCharm {
             giveitem(ITEM_BRUXISH_FLOSS_CHARM, 1)
 		case ITEM_UNOWN_BUDDY_CHARM:
             giveitem(ITEM_UNOWN_BUDDY_CHARM, 1)
-			givemon(SPECIES_UNOWN, 14,)
+			givemon(SPECIES_UNOWN, 14)
 
     }
 	msgbox("Good luck on your run!")
@@ -3174,6 +3701,7 @@ script GiveStarterCharm {
 //==================================DIALOGUE ONLY NPCS=======================================
 script Hub_Event_Script_Golem {
 	lockall
+	faceplayer
 	if(!flag(FLAG_MEGA_SHOP_UNLOCKED)){
 		msgbox(format("Diancie over there has a large mega stone collection.\pI wonder if she'll start selling them one day... I've heard that getting to the 4th path might do it...\pNot that I would be able to make use of one anyway... I wish I had a mega evolution..."))
 	}else{
@@ -3185,6 +3713,7 @@ script Hub_Event_Script_Golem {
 
 script Hub_Event_Script_Togedemaru {
 	lockall
+	faceplayer
 	random(2)
 	switch(var(VAR_RESULT)){
 		case 0:
@@ -3199,28 +3728,40 @@ script Hub_Event_Script_Togedemaru {
 
 script Hub_Event_Script_Klang {
 	lockall
-	msgbox(format(""))
+	faceplayer
+	msgbox(format("Hello."))
 	waitmessage
 	releaseall
 }
 
 script Hub_Event_Script_Bruxish {
 	lockall
-	msgbox(format("You want to know how I have such beatiful teeth? Well you've got to take good car of them of course! Make sure to brush twice a day, and floss every night!"))
-	waitmessage
+	faceplayer
+	if(!flag(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED)){
+		msgbox(format("You want to know how I have such beatiful teeth? Well you've got to take good care of them of course! Make sure to brush twice a day, and floss every night!"))
+		setflag(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED)
+		playfanfare(MUS_EVOLVED)
+		msgbox("You unlocked Bruxish Floss as\na starter charm!")
+		waitmessage
+	}else{
+		msgbox("Don't forget to floss everyday!")
+		waitmessage
+	}
 	releaseall
 }
 
 script Hub_Event_Script_Simisage {
 	lockall
-	msgbox(format(""))
+	faceplayer
+	msgbox(format("Hi. Did you know that in this game, a pokemon can learn any TM. That means even a grass-type like me can learn a fire-type move by TM!\pBut of course I won't get a same type attack bonus from it."))
 	waitmessage
 	releaseall	
 }
 
 script Hub_Event_Script_Woobat {
 	lockall
-	msgbox(format("Did you know that some abilities got changed? Like my ability Klutz. It still doesn't let me use items, but it also gives me a 10% chance to dodge moves!"))
+	faceplayer
+	msgbox(format("Did you know that some abilities got changed in this game? Like my ability Klutz. It still doesn't let me use items, but it also gives me a 10% chance to dodge moves!"))
 	waitmessage
 	releaseall
 }
@@ -3228,14 +3769,24 @@ script Hub_Event_Script_Woobat {
 
 script Hub_Event_Script_Unown {
 	lockall
-	msgbox(format("Hi. I know I'm a pretty weak pokemon, but If you choose me, you'll get another unown for free, thanks to my Herd ability!"))
-	waitmessage
+	faceplayer
+	if(!flag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)){
+		msgbox(format("Hi. I know I'm a pretty weak pokemon, but If you choose me, you'll get an extra unown for free, thanks to my Herd ability!"))
+		setflag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)
+		msgbox("You unlocked Unown Buddy as\na starter charm!")
+		playfanfare(MUS_EVOLVED)
+		waitmessage
+	}else{
+		msgbox("If you choose me, you'll get an\nextra unown as well!")
+		waitmessage
+	}
 	releaseall
 }
 
 script Hub_Event_Script_Smoliv {
 	lockall
-	msgbox(format(""))
+	faceplayer
+	msgbox(format("Hey.\pYou should know that the money you get during a run (¥) is different to the money you spend when you're here at the hub (Coins)."))
 	waitmessage
 	releaseall
 }

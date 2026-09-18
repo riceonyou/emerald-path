@@ -34,6 +34,8 @@ script ANCIENT_HOOH_EventScript_Sign{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
+    playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
     msgbox(format("And a special gift. A freshly plucked feather of my own. When you lose a fight while you have this, instead of losing the run, you will get another chance."))
     waitmessage
     applymovement(1, moves(
@@ -42,9 +44,7 @@ script ANCIENT_HOOH_EventScript_Sign{
     waitmovement
     giveitem(ITEM_HOOH_FEATHER_CHARM, 1)
     waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    
-    msgbox("The level cap has been raised to 30")
+
     msgbox("I wish you well on your journey.")
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)

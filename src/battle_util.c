@@ -9040,6 +9040,12 @@ uq4_12_t CalcTypeEffectivenessMultiplier(struct BattleContext *ctx)
         }
     }
 
+    if (gBattleTurnCounter == 0
+     && GetBattlerSide(ctx->battlerDef) == B_SIDE_PLAYER
+     && CheckBagHasItem(ITEM_LUGIA_PLATE_CHARM, 1)
+     && modifier > UQ_4_12(1.0))
+        modifier = UQ_4_12(1.0);
+
     if (ctx->updateFlags)
         UpdateMoveResultFlags(modifier, &gBattleStruct->moveResultFlags[ctx->battlerDef]);
     return modifier;

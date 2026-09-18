@@ -745,7 +745,6 @@ static const struct BirchBagWeightedChoice AllMiddleOrSingle_Pool[] = {
     {SPECIES_CHIMECHO, 5},
     {SPECIES_HUNTAIL, 5},
     {SPECIES_GOREBYSS, 5},
-    {SPECIES_EMPOLEON, 5},
 
     {SPECIES_BIBAREL, 5},
     {SPECIES_KRICKETUNE, 5},

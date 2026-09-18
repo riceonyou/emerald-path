@@ -63,15 +63,9 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi::
 	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3
 # 63 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmessage
-# 64 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 65 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_4
-# 66 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_5
-# 68 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	special WarpToNextAct
-# 69 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 66 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	releaseall
 	return
 
@@ -195,11 +189,3 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3:
 # 62 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "There ya go! Happy? Now go to the next\n"
 	.string "path and let me get back to sleep!$"
-
-ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_4:
-# 65 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	.string "The level cap has been raised to 30$"
-
-ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_5:
-# 66 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	.string "Get on with it!\nShoo, shoo!$"

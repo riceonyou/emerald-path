@@ -38,41 +38,49 @@ ANCIENT_LUGIA_EventScript_TalkToLugia::
 ANCIENT_LUGIA_EventScript_Sign::
 # 22 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	lockall
+# 24 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
 # 25 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_0
+	waitmoncry
 # 26 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_0
 # 27 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	waitmessage
 # 28 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	setvar VAR_0x8000, 38
-# 29 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	special LoadBirchBagPoolById
-# 30 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
+	applymovement 1, ANCIENT_LUGIA_EventScript_Sign_Movement_0
 # 31 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	waitstate
+	waitmovement
+# 32 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	fadescreen FADE_TO_BLACK
 # 33 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_1
+	setvar VAR_0x8000, 38
 # 34 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	giveitem ITEM_TM_RAIN_DANCE, 1
+	special LoadBirchBagPoolById
 # 35 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	waitmessage
+	special ChooseBirchBagPokemonWeighted
 # 36 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_2
+	waitstate
 # 37 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	giveitem ITEM_PHIONE_EGG_CHARM, 1
+	playfanfare MUS_EVOLVED
 # 38 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_1
 # 39 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_2
 # 40 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_3
+	waitmessage
 # 41 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_4
-# 43 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	special WarpToNextAct
+	applymovement 1, ANCIENT_LUGIA_EventScript_Sign_Movement_0
 # 44 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	waitmovement
+# 45 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	giveitem ITEM_LUGIA_PLATE_CHARM, 1
+# 46 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	waitmessage
+# 48 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_3
+# 50 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	special WarpToNextAct
+# 51 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	releaseall
 	return
 
@@ -83,29 +91,38 @@ ANCIENT_LUGIA_EventScript_TalkToLugia_Movement_0:
 	face_down
 	step_end
 
+# 28 "data/maps/ANCIENT_LUGIA/scripts.pory"
+ANCIENT_LUGIA_EventScript_Sign_Movement_0:
+# 29 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	walk_in_place_down
+# 29 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	walk_in_place_down
+	step_end
+
 ANCIENT_LUGIA_EventScript_TalkToLugia_Text_0:
 # 12 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	.string "Oh, hey...\p"
-	.string "Umm...\p"
+	.string "Umm......\p"
 	.string "Could you talk to me from below the\n"
 	.string "altar? It's a lot cooler that way, no?$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_0:
-# 25 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	.string "Heya!\nGood job on beating the first path!\lI've got a bunch of goodies to give you!\lHere's a water pokemon!$"
+# 26 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	.string "Good job on defeating the first path!\n"
+	.string "Please let on of my flying pokemon\l"
+	.string "friends join you!$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_1:
-# 33 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	.string "And a Rain Dance TM!$"
+# 38 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_2:
-# 36 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	.string "And a Phione Egg!\lThe egg will hatch into a phione\lafter you complete the next act!\lPhione is a great rain pokemon!$"
+# 39 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	.string "And have one of my moulten back plates!\n"
+	.string "With that, now your pokemon won't take\l"
+	.string "bonus super-effective damage on the\l"
+	.string "first turn of the battle!.$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_3:
-# 40 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	.string "The level cap has been raised to 30$"
-
-ANCIENT_LUGIA_EventScript_Sign_Text_4:
-# 41 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	.string "That's all from me!\lNow lets get ya to the next path!$"
+# 48 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	.string "I hope the rest of your journey\ngoes well!$"

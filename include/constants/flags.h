@@ -698,21 +698,21 @@
 #define FLAG_TM_ROCK_SMASH_UNLOCKED  0x27E 
 #define FLAG_TM_SWIFT_UNLOCKED  0x27F 
 #define FLAG_TM_CUT_UNLOCKED  0x280 
-#define FLAG_UNUSED_0x281  0x281 
-#define FLAG_UNUSED_0x282  0x282 
-#define FLAG_UNUSED_0x283  0x283 
-#define FLAG_UNUSED_0x284  0x284 
-#define FLAG_UNUSED_0x285  0x285 
-#define FLAG_UNUSED_0x286  0x286 
-#define FLAG_UNUSED_0x287  0x287 
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
+#define FLAG_TM_SNARL_UNLOCKED  0x281 
+#define FLAG_TM_ELECTROWEB_UNLOCKED  0x282 
+#define FLAG_TM_AURORA_BEAM_UNLOCKED  0x283 
+#define FLAG_TM_PSYBEAM_UNLOCKED  0x284 
+#define FLAG_TM_FLAMETHROWER_UNLOCKED  0x285 
+#define FLAG_TM_ICE_BEAM_UNLOCKED  0x286 
+#define FLAG_TM_THUNDERBOLT_UNLOCKED  0x287 
+#define FLAG_TM_SCALD_UNLOCKED  0x288
+#define FLAG_TM_MEGA_DRAIN_UNLOCKED  0x289
+#define FLAG_TM_SLUDGE_BOMB_UNLOCKED  0x28A
+#define FLAG_TM_DUAL_WINGBEAT_UNLOCKED  0x28B
+#define FLAG_TM_LEECH_LIFE_UNLOCKED  0x28C
+#define FLAG_TM_PLAY_ROUGH_UNLOCKED 0x28D
+#define FLAG_TM_SHADOW_BALL_UNLOCKED  0x28E
+#define FLAG_TM_EARTH_POWER_UNLOCKED  0x28F
 #define FLAG_UNUSED_0x290  0x290 // Unused Flag
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
@@ -785,21 +785,21 @@
 #define FLAG_TM_ROCK_SMASH_BUYABLE                          0x2DB
 #define FLAG_TM_SWIFT_BUYABLE                    0x2DC
 #define FLAG_TM_CUT_BUYABLE              0x2DD
-#define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0x2DF
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
-#define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
-#define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
-#define FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY                           0x2E3
-#define FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN                            0x2E4
-#define FLAG_HIDE_ROUTE_109_MR_BRINEY                               0x2E5
-#define FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT                          0x2E6
-#define FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN                       0x2E7
-#define FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT                          0x2E8
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN            0x2E9
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY                    0x2EA
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION                  0x2EB
-#define FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER                0x2EC
+#define FLAG_TM_SNARL_BUYABLE                                 0x2DE
+#define FLAG_TM_ELECTROWEB_BUYABLE      0x2DF
+#define FLAG_TM_AURORA_BEAM_BUYABLE          0x2E0
+#define FLAG_TM_PSYBEAM_BUYABLE             0x2E1
+#define FLAG_TM_FLAMETHROWER_BUYABLE                               0x2E2
+#define FLAG_TM_ICE_BEAM_BUYABLE                           0x2E3
+#define FLAG_TM_THUNDERBOLT_BUYABLE                            0x2E4
+#define FLAG_TM_SCALD_BUYABLE                               0x2E5
+#define FLAG_TM_MEGA_DRAIN_BUYABLE                          0x2E6
+#define FLAG_TM_SLUDGE_BOMB_BUYABLE                       0x2E7
+#define FLAG_TM_DUAL_WINGBEAT_BUYABLE                          0x2E8
+#define FLAG_TM_LEECH_LIFE_BUYABLE            0x2E9
+#define FLAG_TM_PLAY_ROUGH_BUYABLE                    0x2EA
+#define FLAG_TM_SHADOW_BALL_BUYABLE                  0x2EB
+#define FLAG_TM_EARTH_POWER_BUYABLE                0x2EC
 #define FLAG_HIDE_SLATEPORT_CITY_SCOTT                              0x2ED
 #define FLAG_HIDE_ROUTE_101_ZIGZAGOON                               0x2EE
 #define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
@@ -1359,7 +1359,7 @@
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
 
-// Badges
+// Badges DON"T USE COS SOME AFFECT BATTLE STUFF LIKE INCREASE STATS
 #define FLAG_BADGE01_GET                      (SYSTEM_FLAGS + 0x7)
 #define FLAG_BADGE02_GET                      (SYSTEM_FLAGS + 0x8)
 #define FLAG_BADGE03_GET                      (SYSTEM_FLAGS + 0x9)

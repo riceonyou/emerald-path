@@ -3092,8 +3092,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_ArchieBandanaCharm,
+        .iconPalette = gItemIconPalette_ArchieBandanaCharm,
     },
 
     [ITEM_MAXIES_GLASSES_CHARM] =
@@ -3109,30 +3109,30 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_MaxieGlassesCharm,
+        .iconPalette = gItemIconPalette_MaxieGlassesCharm,
     },
 
     [ITEM_LUGIA_PLATE_CHARM] =
     {
-        .name = ITEM_NAME("Lugia Plate Charm"),
+        .name = ITEM_NAME("Lugia's Plate"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "All your current pokemon,\n"
-            "and future pokemon become\n"
-            "shiny."),
+            "On the first turn of the\n"
+            "battle, super-effective moves\n"
+            "on you do normal damage."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_LugiaPlateCharm,
+        .iconPalette = gItemIconPalette_LugiaPlateCharm,
     },
 
     [ITEM_BRUXISH_FLOSS_CHARM] =
     {
-        .name = ITEM_NAME("Bruxish Floss Charm"),
+        .name = ITEM_NAME("Bruxish's Floss"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -3142,13 +3142,13 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_BruxishFlossCharm,
+        .iconPalette = gItemIconPalette_BruxishFlossCharm,
     },
 
     [ITEM_UNOWN_BUDDY_CHARM] =
     {
-        .name = ITEM_NAME("Unown Buddy Charm"),
+        .name = ITEM_NAME("Unown Buddy"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -3158,8 +3158,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_OvalCharm,
-        .iconPalette = gItemIconPalette_OvalCharm,
+        .iconPic = gItemIcon_UnownBuddyCharm,
+        .iconPalette = gItemIconPalette_UnownBuddyCharm,
     },
 
     [ITEM_RED_SHARD] =
@@ -12986,7 +12986,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_PSYBEAM] =
     {
-        .name = ITEM_NAME("TM16"),
+        .name = ITEM_NAME("TM Psybeam"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13140,7 +13140,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_SNARL] =
     {
-        .name = ITEM_NAME("TM30"),
+        .name = ITEM_NAME("TM Snarl"),
         .price = 3000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -13855,7 +13855,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_LEECH_LIFE] =
     {
-        .name = ITEM_NAME("TM95"),
+        .name = ITEM_NAME("TM Leech Life"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14064,7 +14064,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_SHADOW_BALL] =
     {
-        .name = ITEM_NAME("TM114"),
+        .name = ITEM_NAME("TM Shadow Ball"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14185,7 +14185,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_FLAMETHROWER] =
     {
-        .name = ITEM_NAME("TM125"),
+        .name = ITEM_NAME("TM Flamethrower"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14196,7 +14196,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_THUNDERBOLT] =
     {
-        .name = ITEM_NAME("TM126"),
+        .name = ITEM_NAME("TM Thunderbolt"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14207,7 +14207,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_PLAY_ROUGH] =
     {
-        .name = ITEM_NAME("TM127"),
+        .name = ITEM_NAME("TM Play Rough"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14273,7 +14273,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_EARTH_POWER] =
     {
-        .name = ITEM_NAME("TM133"),
+        .name = ITEM_NAME("TM Earth Power"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14295,7 +14295,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_ICE_BEAM] =
     {
-        .name = ITEM_NAME("TM135"),
+        .name = ITEM_NAME("TM Ice Beam"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14438,7 +14438,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_SLUDGE_BOMB] =
     {
-        .name = ITEM_NAME("TM148"),
+        .name = ITEM_NAME("TM Sludge Bomb"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14878,7 +14878,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_SCALD] =
     {
-        .name = ITEM_NAME("TM188"),
+        .name = ITEM_NAME("TM Scald"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14977,7 +14977,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_DUAL_WINGBEAT] =
     {
-        .name = ITEM_NAME("TM197"),
+        .name = ITEM_NAME("TM Dual Wingbeat"),
         .price = 5000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -15041,9 +15041,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_PSYCH_UP] =
+    [ITEM_TM_MEGA_DRAIN] =
     {
-        .name = ITEM_NAME("TM203"),
+        .name = ITEM_NAME("TM Mega Drain"),
         .price = 1000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -15063,9 +15063,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_ENDEAVOR] =
+    [ITEM_TM_AURORA_BEAM] =
     {
-        .name = ITEM_NAME("TM205"),
+        .name = ITEM_NAME("TM Aurora Beam"),
         .price = 1000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -15131,7 +15131,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_ELECTROWEB] =
     {
-        .name = ITEM_NAME("TM211"),
+        .name = ITEM_NAME("TM Electroweb"),
         .price = 8000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -17896,7 +17896,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PHIONE_EGG_CHARM] =
     {
-        .name = ITEM_NAME("Phione Egg Charm"),
+        .name = ITEM_NAME("Phione Egg"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17931,7 +17931,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_REGI_KNUCKLES_CHARM] =
     {
-        .name = ITEM_NAME("Regi Knuckles Charm"),
+        .name = ITEM_NAME("Regi Knuckles"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17948,7 +17948,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CLONING_CHARM] =
     {
-        .name = ITEM_NAME("Cloning Charm"),
+        .name = ITEM_NAME("Cloning DNA"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17981,7 +17981,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_LUMP_SUM_CHARM] =
     {
-        .name = ITEM_NAME("Lump Sum Charm"),
+        .name = ITEM_NAME("Lump Sum"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17996,7 +17996,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BERRY_PACK_CHARM] =
     {
-        .name = ITEM_NAME("Berry Pack Charm"),
+        .name = ITEM_NAME("Berry Pack"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -18013,7 +18013,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_HOOH_FEATHER_CHARM] =
     {
-        .name = ITEM_NAME("Ho-Oh Feather Charm"),
+        .name = ITEM_NAME("Ho-Oh's Feather"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -18044,7 +18044,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_MINTY_CHARM] =
     {
-        .name = ITEM_NAME("Minty Charm"),
+        .name = ITEM_NAME("Mint Pot"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -18060,7 +18060,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TINTED_CHARM] =
     {
-        .name = ITEM_NAME("Tinted Charm"),
+        .name = ITEM_NAME("Tinted Scope"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(

@@ -102,7 +102,7 @@ Hoenn1_1_Itemball_4::
 # 88 "data/maps/Hoenn1_6/scripts.pory"
 	lockall
 # 89 "data/maps/Hoenn1_6/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 1
+	call GiveCommonItem
 # 90 "data/maps/Hoenn1_6/scripts.pory"
 	removeobject HOENN1_4_ITEM
 # 91 "data/maps/Hoenn1_6/scripts.pory"
@@ -116,7 +116,7 @@ Hoenn1_1_Itemball_5::
 # 97 "data/maps/Hoenn1_6/scripts.pory"
 	lockall
 # 98 "data/maps/Hoenn1_6/scripts.pory"
-	giveitem ITEM_TM_TOXIC, 1
+	call GiveCommonItem
 # 99 "data/maps/Hoenn1_6/scripts.pory"
 	removeobject HOENN1_5_ITEM
 # 100 "data/maps/Hoenn1_6/scripts.pory"

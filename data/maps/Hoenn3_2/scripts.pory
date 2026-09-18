@@ -14,36 +14,36 @@ script Hoenn3_2_KecShop_Shiny {
 }
 
 script Hoenn3_2_Skarmory{
-	trainerbattle_single(TRAINER_SKARMORY, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SKARMORY, format("Do you remember Geronimo Stilton? The children's book series about the rat. I loved those books."), format("Good games."))
+	msgbox(format("And can't forget the Thea sisters spinoff. I loves those too."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_2_Zangoose{
-	trainerbattle_single(TRAINER_ZANGOOSE, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_ZANGOOSE, format("Hi! I always keep a pack of wet wipes with me wherever I go."), format("You wiped the floor with me!"))
+	msgbox(format("Wet wipes are so useful. I can clean my hands, my face, my phone..."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn3_2_Seviper{
-	trainerbattle_single(TRAINER_SEVIPER, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_SEVIPER, format("My favourite beatboxer? It's Hiss of course!"), format("Blaaargh"))
+	msgbox(format("Bsss kla kla pow\pbuh kah mmka mmka buh kah mmka mmka."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
-script Hoenn3_2_Spinda{
-	trainerbattle_single(TRAINER_SPINDA, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
-	waitmessage
-    end
-}
+// script Hoenn3_2_Spinda{
+// 	trainerbattle_single(TRAINER_SPINDA, format("test"), format("test"))
+// 	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+// 	waitmessage
+//     end
+// }
 
 script Hoenn3_2_Ninetales{
-	trainerbattle_single(TRAINER_NINETALES, format("test"), format("test"))
-	msgbox(format("test"), MSGBOX_AUTOCLOSE) 
+	trainerbattle_single(TRAINER_NINETALES, format("I watched all of Naruto recently cos all my friends said it was weird I hadn't watched it yet. It was pretty good."), format("You got me dattebayo."))
+	msgbox(format("I watched Boruto too. I just loved the parts when all the kids were eating burgers and the samurai girl ate a mountain of chips. They're so precious."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

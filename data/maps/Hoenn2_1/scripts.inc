@@ -29,9 +29,9 @@ Hoenn2_1_Pelipper::
 
 Hoenn2_1_Wailmer::
 # 21 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_WAILMER, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
+	trainerbattle_single TRAINER_WAILMER, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_1
 # 22 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Wailmer_Text_2, MSGBOX_AUTOCLOSE
 # 23 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -39,9 +39,9 @@ Hoenn2_1_Wailmer::
 
 Hoenn2_1_Sharpedo::
 # 30 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_SHARPEDO, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
+	trainerbattle_single TRAINER_SHARPEDO, Hoenn2_1_Sharpedo_Text_0, Hoenn2_1_Sharpedo_Text_1
 # 31 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Sharpedo_Text_2, MSGBOX_AUTOCLOSE
 # 32 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -49,9 +49,9 @@ Hoenn2_1_Sharpedo::
 
 Hoenn2_1_Crawdaunt::
 # 39 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_CRAWDAUNT, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
+	trainerbattle_single TRAINER_CRAWDAUNT, Hoenn2_1_Crawdaunt_Text_0, Hoenn2_1_Crawdaunt_Text_1
 # 40 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Crawdaunt_Text_2, MSGBOX_AUTOCLOSE
 # 41 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -59,9 +59,9 @@ Hoenn2_1_Crawdaunt::
 
 Hoenn2_1_Dusclops::
 # 48 "data/maps/Hoenn2_1/scripts.pory"
-	trainerbattle_single TRAINER_DUSCLOPS, Hoenn2_1_Wailmer_Text_0, Hoenn2_1_Wailmer_Text_0
+	trainerbattle_single TRAINER_DUSCLOPS, Hoenn2_1_Dusclops_Text_0, Hoenn2_1_Dusclops_Text_1
 # 49 "data/maps/Hoenn2_1/scripts.pory"
-	msgbox Hoenn2_1_Wailmer_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Hoenn2_1_Dusclops_Text_0, MSGBOX_AUTOCLOSE
 # 50 "data/maps/Hoenn2_1/scripts.pory"
 	waitmessage
 	end
@@ -154,8 +154,61 @@ Hoenn2_1_Pelipper_Text_1:
 
 Hoenn2_1_Pelipper_Text_2:
 # 13 "data/maps/Hoenn2_1/scripts.pory"
-	.string "Fly you to the next path? No thanks!$"
+	.string "You want me to fly you to the next\n"
+	.string "path? No thanks!$"
 
 Hoenn2_1_Wailmer_Text_0:
 # 21 "data/maps/Hoenn2_1/scripts.pory"
-	.string "test$"
+	.string "Hmm...\p"
+	.string "I have this pack of miso paste in the\n"
+	.string "fridge that I haven't touched in years.\l"
+	.string "You think its safe to eat?$"
+
+Hoenn2_1_Wailmer_Text_1:
+# 21 "data/maps/Hoenn2_1/scripts.pory"
+	.string "Thanks for the battle.$"
+
+Hoenn2_1_Wailmer_Text_2:
+# 22 "data/maps/Hoenn2_1/scripts.pory"
+	.string "I'll check my miso paste when I get\n"
+	.string "home. And then maybe I'll buy some tofu\l"
+	.string "and make miso soup.$"
+
+Hoenn2_1_Sharpedo_Text_0:
+# 30 "data/maps/Hoenn2_1/scripts.pory"
+	.string "My son's been singing Baby Sharpedo on\n"
+	.string "repeat and it's driving me crazy.\l"
+	.string "Someone please save me.$"
+
+Hoenn2_1_Sharpedo_Text_1:
+# 30 "data/maps/Hoenn2_1/scripts.pory"
+	.string "You got me.$"
+
+Hoenn2_1_Sharpedo_Text_2:
+# 31 "data/maps/Hoenn2_1/scripts.pory"
+	.string "Daddy Sharpedo doo doo do-\p"
+	.string "Nooo!$"
+
+Hoenn2_1_Crawdaunt_Text_0:
+# 39 "data/maps/Hoenn2_1/scripts.pory"
+	.string "Watch out for my Crabhammer! In this\n"
+	.string "game, it has a critical ratio of 2!$"
+
+Hoenn2_1_Crawdaunt_Text_1:
+# 39 "data/maps/Hoenn2_1/scripts.pory"
+	.string "My Crabhammer wasn't good enough...$"
+
+Hoenn2_1_Crawdaunt_Text_2:
+# 40 "data/maps/Hoenn2_1/scripts.pory"
+	.string "If a move has a 1 critical ratio, then it\n"
+	.string "has a 1 in 8 chance to critically strike.\l"
+	.string "If it has a 2 critical ratio, it has a 1 in\l"
+	.string "2 chance to critically strike!$"
+
+Hoenn2_1_Dusclops_Text_0:
+# 48 "data/maps/Hoenn2_1/scripts.pory"
+	.string "Boo.$"
+
+Hoenn2_1_Dusclops_Text_1:
+# 48 "data/maps/Hoenn2_1/scripts.pory"
+	.string "Boo hoo hoo.$"

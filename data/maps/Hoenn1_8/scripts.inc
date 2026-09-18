@@ -89,12 +89,12 @@ Hoenn1_8_EventScript_Nosepass_Text_0:
 Hoenn1_8_EventScript_Nosepass_Text_1:
 # 23 "data/maps/Hoenn1_8/scripts.pory"
 	.string "Congratulations. You have defeated me.\n"
-	.string "Talk to the Abra to continue. Before\l"
+	.string "Talk to the Abra to continue.$"
+
+Hoenn1_8_EventScript_Nosepass_Text_2:
+# 24 "data/maps/Hoenn1_8/scripts.pory"
+	.string "Talk to the Abra to continue. Before\n"
 	.string "you head to the next path though, you\l"
 	.string "will be teleported to a location of a\l"
 	.string "legendary pokemon with special rewards\l"
 	.string "for you.$"
-
-Hoenn1_8_EventScript_Nosepass_Text_2:
-# 24 "data/maps/Hoenn1_8/scripts.pory"
-	.string "Talk to the Abra to continue.$"

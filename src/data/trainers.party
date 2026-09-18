@@ -75,7 +75,7 @@ Comments can be added as C comment blocks
 === TRAINER_ZIGZAGOON ===
 Name: ZIGZAGOON
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Zigzagoon
 Gender: Male
 Music: Male
 Double Battle: No
@@ -94,7 +94,7 @@ Level: 9
 === TRAINER_POOCHYENA ===
 Name: POOCHYENA
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Poochyena
 Gender: Male
 Music: Male
 Double Battle: No
@@ -122,7 +122,7 @@ Level: 9
 === TRAINER_WINGULL ===
 Name: WINGULL
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Wingull
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -151,7 +151,7 @@ Level: 9
 === TRAINER_LOTAD ===
 Name: LOTAD
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Lotad
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -183,7 +183,7 @@ Level: 10
 === TRAINER_ODDISH ===
 Name: ODDISH
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Oddish
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -211,7 +211,7 @@ Level: 9
 === TRAINER_WURMPLE ===
 Name: WURMPLE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Wurmple
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -238,7 +238,7 @@ Level: 10
 === TRAINER_SHROOMISH ===
 Name: SHROOMISH
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Shroomish
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -270,7 +270,7 @@ Level: 10
 === TRAINER_SURSKIT ===
 Name: SURSKIT
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Surskit
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -304,7 +304,7 @@ Level: 10
 === TRAINER_SEEDOT ===
 Name: SEEDOT
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Seedot
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -318,7 +318,7 @@ Level: 11
 - Synthesis
 
 Slugma
-Level: 11
+Level: 10
 - Incinerate
 - Fire Spin
 - Rock Throw
@@ -333,7 +333,7 @@ Level: 10
 === TRAINER_SLAKOTH ===
 Name: SLAKOTH
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Slakoth
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -356,7 +356,7 @@ Level: 10
 === TRAINER_NINCADA ===
 Name: NINCADA
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Nincada
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -371,7 +371,7 @@ Level: 11
 
 Nincada @ Oran Berry
 Nature: Adamant
-Level: 12
+Level: 11
 - Fury Swipes
 - Mud-Slap
 - Bug Bite
@@ -386,7 +386,7 @@ Level: 10
 === TRAINER_SKITTY ===
 Name: SKITTY
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Skitty
 Gender: Female
 Music: Female
 Double Battle: No
@@ -407,7 +407,7 @@ Level: 12
 === TRAINER_TAILLOW ===
 Name: TAILLOW
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Taillow
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -421,7 +421,7 @@ Level: 12
 - Facade
 
 Cetoddle
-Level: 12
+Level: 10
 - Ice Shard
 - Charm
 - Body Slam
@@ -434,7 +434,7 @@ Level: 11
 - Self-Destruct
 
 Buizel @ Wacan Berry
-Level: 11
+Level: 10
 - Aqua Jet
 - Bite
 - Bulk Up
@@ -443,15 +443,14 @@ Level: 11
 === TRAINER_WHISMUR ===
 Name: WHISMUR
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Whismur
 Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Electrike @ Oran Berry
-Level: 12
+Level: 11
 - Spark
 - Quick Attack
 - Roar
@@ -466,14 +465,14 @@ Level: 12
 - Swagger
 
 Growlithe
-Level: 11
+Level: 10
 - Flame Wheel
 - Leer
 - Roar
 - Dig
 
 Binacle
-Level: 11
+Level: 10
 - Mud Slap
 - Clamp
 - Slash
@@ -481,7 +480,7 @@ Level: 11
 === TRAINER_LEADER_NOSEPASS ===
 Name: NOSEPASS
 Class: Leader
-Pic: Substitute
+Pic: Nosepass
 Gender: Male
 Music: Cool
 Double Battle: No
@@ -511,7 +510,7 @@ Level: 12
 
 Bronzor @ Lum Berry
 Nature: Relaxed
-Level: 13
+Level: 12
 - Hypnosis
 - Gyro Ball
 - Calm Mind
@@ -534,7 +533,7 @@ Level: 11
 === TRAINER_PELIPPER ===
 Name: PELIPPER
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Pelipper
 Gender: Male
 Music: Suspicious
 Double Battle: No
@@ -564,7 +563,7 @@ Level: 24
 === TRAINER_CRAWDAUNT ===
 Name: CRAWDAUNT
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Crawdaunt
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -596,7 +595,7 @@ Level: 25
 === TRAINER_SHARPEDO ===
 Name: SHARPEDO
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Sharpedo
 Gender: Male
 Music: Swimmer
 Double Battle: No
@@ -635,7 +634,7 @@ Level: 28
 === TRAINER_DUSCLOPS ===
 Name: Dusclops
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Dusclops
 Gender: Female
 Music: Cool
 Double Battle: No
@@ -665,7 +664,7 @@ Level: 26
 === TRAINER_WAILMER ===
 Name: WAILMER
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Wailmer
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -738,10 +737,9 @@ Level: 25
 === TRAINER_DODUO ===
 Name: DODUO
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Doduo
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -785,7 +783,7 @@ Level: 26
 === TRAINER_LOUDRED ===
 Name: LOUDRED
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Loudred
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -816,7 +814,7 @@ Level: 27
 === TRAINER_ELECTRODE ===
 Name: ELECTRODE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Electrode
 Gender: Female
 Music: Female
 Double Battle: No
@@ -856,7 +854,7 @@ Level: 25
 === TRAINER_PLUSLEMINUN ===
 Name: PM
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Plusle
 Gender: Male
 Music: Magma
 Double Battle: Yes
@@ -904,7 +902,7 @@ Level: 24
 === TRAINER_VOLBEATILLUMISE ===
 Name: VI
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Volbeat
 Gender: Male
 Music: Aqua
 Double Battle: Yes
@@ -951,7 +949,7 @@ Level: 26
 === TRAINER_ROSELIA ===
 Name: ROSELIA
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Roselia
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -991,7 +989,7 @@ Level: 27
 === TRAINER_SWALOT ===
 Name: SWALOT
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Swalot
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -1040,7 +1038,7 @@ Level: 24
 === TRAINER_MAGNETON ===
 Name: MAGNETON
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Magneton
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -1073,7 +1071,7 @@ Level: 26
 === TRAINER_LEADER_MANECTRIC ===
 Name: MANECTRIC
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Manectric
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -1127,7 +1125,7 @@ Level: 29
 === TRAINER_FLYGON ===
 Name: FLYGON
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Flygon
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -1135,21 +1133,21 @@ AI: Basic Trainer / Randomize Party Indices
 
 Flygon @ Choice Scarf
 Nature: Jolly
-Level: 37
+Level: 36
 - Earthquake
 - Outrage
 - U-turn
 - Stone Edge
 
 Flamigo
-Level: 38
+Level: 37
 - Swords Dance
 - Close Combat
 - Acrobatics
 - Roost
 
 Tsareena
-Level: 37
+Level: 36
 - Power Whip
 - Knock Off
 - Rapid Spin
@@ -1158,7 +1156,7 @@ Level: 37
 === TRAINER_CACTURNE ===
 Name: CACTURNE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Cacturne
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -1166,31 +1164,28 @@ AI: Basic Trainer / Randomize Party Indices
 
 Cacturne @ Rocky Helmet
 Nature: Adamant
-Level: 40
+Level: 38
 - Seed Bomb
 - Sucker Punch
 - Spikes
 - Swords Dance
 
-Mightyena @ Life Orb
-Adamant Nature
-Level: 39
+Mightyena
+Level: 37
 - Crunch
 - Sucker Punch
 - Play Rough
 - Iron Tail
 
-Jellicent @ Rocky Helmet
-Nature: Calm
-Level: 40
+Jellicent
+Level: 36
 - Surf
 - Shadow Ball
 - Dazzling Gleam
 - Will-O-Wisp
 
 Druddigon @ Rocky Helmet
-Nature: Adamant
-Level: 40
+Level: 36
 - Dragon Claw
 - Glare
 - Fire Punch
@@ -1199,32 +1194,29 @@ Level: 40
 === TRAINER_CLAYDOL ===
 Name: CLAYDOL
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Claydol
 Gender: Male
 Music: Aqua
-Items: Super Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Claydol @ Mental Herb
 Nature: Relaxed
-Level: 40
+Level: 38
 - Trick Room
 - Earth Power
 - Psychic
 - Explosion
 
-Golurk @ Soft Sand
-Nature: Brave
-Level: 40
+Golurk
+Level: 37
 - Earthquake
 - Shadow Punch
 - Drain Punch
 - Ice Punch
 
-Escavalier @ Metal Coat
-Nature: Brave
-Level: 40
+Escavalier
+Level: 37
 - Iron Head
 - Megahorn
 - Knock Off
@@ -1233,7 +1225,7 @@ Level: 40
 === TRAINER_SKARMORY ===
 Name: SKARMORY
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Skarmory
 Gender: Male
 Music: Intense
 Double Battle: No
@@ -1241,31 +1233,28 @@ AI: Basic Trainer / Randomize Party Indices
 
 Skarmory @ Rocky Helmet
 Nature: Impish
-Level: 40
+Level: 39
 - Spikes
 - Iron Head
 - Roost
 - Whirlwind
 
-Frosmoth @ Focus Sash
-Nature: Timid
-Level: 39
+Frosmoth
+Level: 37
 - Quiver Dance
 - Ice Beam
 - Bug Buzz
 - Stun Spore
 
 Revavroom @ Air Balloon
-Nature: Adamant
-Level: 40
+Level: 36
 - Shift Gear
 - Iron Head
 - Poison Jab
 - Zen Headbutt
 
-Gourgeist @ Leftovers
-Nature: Impish
-Level: 40
+Gourgeist
+Level: 37
 - Power Whip
 - Shadow Sneak
 - Leech Seed
@@ -1274,7 +1263,7 @@ Level: 40
 === TRAINER_SPINDA ===
 Name: SPINDA
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Spinda
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1282,40 +1271,30 @@ AI: Basic Trainer / Randomize Party Indices
 
 Spinda @ Silk Scarf
 Nature: Jolly
-Level: 40
+Level: 41
 - Superpower
 - Body Slam
 - Sucker Punch
 - Dizzy Punch
 
-Noivern @ Wide Lens
-Nature: Timid
-Level: 39
+Noivern
+Level: 38
 - Hurricane
 - Air Slash
 - Flamethrower
 - Roost
 
-Crobat @ Sharp Beak
-Nature: Jolly
-Level: 39
+Crobat
+Level: 37
 - Confuse Ray
 - Cross Poison
 - Acrobatics
 - U-turn
 
-Slowking @ Leftovers
-Nature: Calm
-Level: 39
-- Water Pulse
-- Psychic
-- Yawn
-- Psybeam
-
 === TRAINER_NINETALES ===
 Name: NINETALES
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Ninetales
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1323,7 +1302,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Ninetales @ Charcoal
 Nature: Timid
-Level: 40
+Level: 38
 - Flamethrower
 - Solar Beam
 - Will-O-Wisp
@@ -1331,23 +1310,21 @@ Level: 40
 
 Ninetales-Alola @ Light Clay
 Nature: Timid
-Level: 40
+Level: 38
 - Aurora Veil
 - Blizzard
 - Moonblast
 - Encore
 
-Floatzel @ Mystic Water
-Nature: Jolly
-Level: 39
+Floatzel
+Level: 38
 - Wave Crash
 - Ice Fang
 - Crunch
 - Aqua Jet
 
-Cinccino @ Silk Scarf
-Nature: Jolly
-Level: 39
+Cinccino
+Level: 38
 - Tail Slap
 - Bullet Seed
 - Rock Blast
@@ -1356,7 +1333,7 @@ Level: 39
 === TRAINER_ZANGOOSE ===
 Name: ZANGOOSE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Zangoose
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -1371,8 +1348,7 @@ Level: 40
 - Quick Attack
 
 Lycanroc-Dusk @ Hard Stone
-Nature: Jolly
-Level: 39
+Level: 38
 - Accelerock
 - Rock Slide
 - Fire Fang
@@ -1380,7 +1356,7 @@ Level: 39
 
 Clawitzer
 Nature: Modest
-Level: 40
+Level: 38
 - Water Pulse
 - Dark Pulse
 - Aura Sphere
@@ -1389,7 +1365,7 @@ Level: 40
 === TRAINER_SEVIPER ===
 Name: SEVIPER
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Seviper
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -1404,14 +1380,13 @@ Level: 40
 - Sucker Punch
 
 Arbok @ Black Sludge
-Nature: Jolly
-Level: 39
+Level: 38
 - Gunk Shot
 - Crunch
 - Earthquake
 - Glare
 
-Kingdra @ Dragon Fang
+Kingdra
 Nature: Modest
 Level: 38
 - Surf
@@ -1419,18 +1394,12 @@ Level: 38
 - Ice Beam
 - Focus Energy
 
-Drapion @ Scope Lens
-Nature: Jolly
-Level: 39
-- Cross Poison
-- Night Slash
-- Ice Fang
-- Swords Dance
+
 
 === TRAINER_SOLROCKLUNATONE ===
 Name: SL
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Solrock
 Gender: Female
 Music: Girl
 Double Battle: Yes
@@ -1452,17 +1421,16 @@ Level: 40
 - Light Screen
 - Moonlight
 
-Heliolisk @ Magnet
-Nature: Timid
-Level: 39
+Heliolisk
+Level: 38
 - Thunderbolt
 - Hyper Voice
 - Surf
 - Volt Switch
 
-Clefable @ Leftovers
+Clefable
 Nature: Bold
-Level: 39
+Level: 38
 - Moonblast
 - Follow Me
 - Helping Hand
@@ -1471,7 +1439,7 @@ Level: 39
 === TRAINER_LINOONE ===
 Name: LINOONE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Linoone
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -1485,16 +1453,14 @@ Level: 40
 - Shadow Claw
 - Belly Drum
 
-Grafaiai @ Black Sludge
-Nature: Jolly
+Grafaiai
 Level: 39
 - Poison Jab
 - Knock Off
 - Encore
 - Parting Shot
 
-Kilowattrel @ Magnet
-Nature: Timid
+Kilowattrel
 Level: 39
 - Thunderbolt
 - Air Slash
@@ -1503,7 +1469,7 @@ Level: 39
 
 Obstagoon
 Nature: Jolly
-Level: 40
+Level: 37
 - Facade
 - Sucker Punch
 - Close Combat
@@ -1512,32 +1478,29 @@ Level: 40
 === TRAINER_CRADILY ===
 Name: CRADILY
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Cradily
 Gender: Male
 Music: Aqua
-Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Cradily @ Leftovers
 Nature: Calm
-Level: 40
+Level: 39
 - Ingrain
 - Giga Drain
 - Ancient Power
 - Recover
 
 Milotic @ Leftovers
-Nature: Bold
-Level: 39
+Level: 37
 - Aqua Ring
 - Scald
 - Ice Beam
 - Recover
 
-Goodra @ Leftovers
-Nature: Calm
-Level: 40
+Goodra
+Level: 38
 - Life Dew
 - Dragon Pulse
 - Flamethrower
@@ -1546,7 +1509,7 @@ Level: 40
 === TRAINER_ARMALDO ===
 Name: ARMALDO
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Armaldo
 Gender: Female
 Music: Suspicious
 Double Battle: No
@@ -1554,81 +1517,75 @@ AI: Basic Trainer / Randomize Party Indices
 
 Armaldo @ Silver Powder
 Nature: Adamant
-Level: 40
+Level: 39
 - X-Scissor
 - Rock Slide
 - Aqua Jet
 - Swords Dance
 
-Tyrantrum @ Hard Stone
-Nature: Jolly
-Level: 40
+Tyrantrum
+Level: 37
 - Rock Slide
 - Dragon Claw
 - Psychic Fangs
 - Crunch
 
 Dragalge @ Black Sludge
-Nature: Modest
-Level: 39
+Level: 38
 - Sludge Bomb
 - Dragon Pulse
 - Surf
 - Flip Turn
 
-Copperajah @ Metal Coat
-Nature: Adamant
-Level: 40
-- Heavy Slam
-- High Horsepower
-- Rock Slide
-- Play Rough
-
 === TRAINER_WHISCASH ===
 Name: WHISCASH
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Whiscash
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Whiscash @ Leftovers
-Nature: Adamant
 Level: 40
 - Earthquake
-- Waterfall
+- Muddy Water
 - Dragon Dance
 - Ice Fang
 
 Toedscruel
-Nature: Timid
-Level: 39
+Level: 38
 - Earth Power
 - Giga Drain
 - Spore
 - Rapid Spin
 
-Eelektrik @ Eviolite
+Eelektross
 Nature: Modest
-Level: 40
+Level: 37
 - Thunderbolt
 - Flamethrower
 - Giga Drain
 - Volt Switch
 
 Weezing-Galar
-Nature: Bold
-Level: 40
+Level: 37
 - Strange Steam
 - Sludge Bomb
 - Will-O-Wisp
 - Pain Split
 
+Drapion @ Scope Lens
+Level: 38
+- Cross Poison
+- Night Slash
+- Ice Fang
+- Swords Dance
+
 === TRAINER_SANDSLASH ===
 Name: SANDSLASH
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Sandslash
 Gender: Female
 Music: Female
 Double Battle: No
@@ -1642,17 +1599,15 @@ Level: 40
 - Rock Slide
 - Swords Dance
 
-Gliscor @ Sharp Beak
-Nature: Jolly
-Level: 39
+Gliscor
+Level: 38
 - Earthquake
 - Acrobatics
 - U-turn
 - Roost
 
-Durant @ Metal Coat
-Nature: Jolly
-Level: 39
+Durant @ Sitrus Berry
+Level: 40
 - Iron Head
 - X-Scissor
 - Crunch
@@ -1666,10 +1621,18 @@ Level: 40
 - Earthquake
 - Rock Slide
 
+Slowking @ Leftovers
+Nature: Calm
+Level: 36
+- Water Pulse
+- Psychic
+- Yawn
+- Psybeam
+
 === TRAINER_WIGGLYTUFF ===
 Name: WIGGLYTUFF
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Wigglytuff
 Gender: Female
 Music: Female
 Double Battle: No
@@ -1684,14 +1647,13 @@ Level: 40
 - Sing
 
 Drifblim @ Sitrus Berry
-Nature: Timid
-Level: 39
+Level: 38
 - Shadow Ball
 - Air Slash
 - Strength Sap
 - Will-O-Wisp
 
-Bellibolt @ Leftovers
+Bellibolt
 Nature: Modest
 Level: 39
 - Thunderbolt
@@ -1699,26 +1661,32 @@ Level: 39
 - Mud Shot
 - Slack Off
 
-Qwilfish-Hisui @ Black Sludge
-Nature: Jolly
-Level: 40
+Overqwil
+Level: 37
 - Barb Barrage
 - Aqua Tail
 - Crunch
 - Swords Dance
 
+Copperajah
+Level: 38
+- Heavy Slam
+- High Horsepower
+- Rock Slide
+- Play Rough
+
 === TRAINER_SLAKING ===
 Name: SLAKING
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Slaking
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Zoroark-Hisui @ Leftovers
+Zoroark-Hisui
 Nature: Timid
-Level: 40
+Level: 39
 - Will-O-Wisp
 - Hex
 - Hyper Voice
@@ -1726,28 +1694,26 @@ Level: 40
 
 Porygon-Z @ Choice Specs
 Nature: Timid
-Level: 40
+Level: 39
 - Tri Attack
 
-Clodsire @ Black Sludge
-Nature: Careful
+Clodsire
 Level: 39
 - Earthquake
 - Poison Jab
 - Recover
 - Toxic
 
-Basculegion @ Mystic Water
+Basculegion
 Nature: Adamant
-Level: 40
+Level: 41
 - Wave Crash
 - Last Respects
 - Aqua Jet
 - Crunch
 
 Snorlax @ Chesto Berry
-Nature: Adamant
-Level: 40
+Level: 41
 - Body Slam
 - Crunch
 - Rest
@@ -2047,7 +2013,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 === TRAINER_MEGAABSOL ===
 Name: MEGAABSOL
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Absol-Mega
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -2104,7 +2070,7 @@ Level: 49
 === TRAINER_MEGASABLEYE ===
 Name: MSABLEYE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Sableye-Mega
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -2156,7 +2122,7 @@ Level: 48
 === TRAINER_MEGAGLALIE ===
 Name: MGLALIE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Glalie-Mega
 Gender: Male
 Music: Interviewer
 Double Battle: Yes
@@ -2208,7 +2174,7 @@ Level: 47
 === TRAINER_MEGASALAMENCE ===
 Name: MSALAMENCE
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Salamence-Mega
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -2259,7 +2225,7 @@ Level: 47
 === TRAINER_MEGAGARDEVOIR ===
 Name: MGARDEVOIR
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Gardevoir-Mega
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -2272,7 +2238,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_MEGASWAMPERT ===
 Name: SWAMPERT
 Class: Pkmn Trainer 1
-Pic: Substitute
+Pic: Swampert-Mega
 Gender: Female
 Music: Girl
 Double Battle: No
@@ -3018,7 +2984,6 @@ Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Female
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -3333,7 +3298,6 @@ Class: Pkmn Trainer 1
 Pic: Substitute
 Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices / Try To Faint / Force Setup First Turn
 
@@ -3385,7 +3349,6 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
-Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -4978,7 +4941,7 @@ Level: 39
 === TRAINER_MEGASCEPTILE ===
 Name: MSCEPTILE
 Class: Rival
-Pic: Substitute
+Pic: Sceptile-Mega
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -5148,7 +5111,7 @@ Level: 38
 === TRAINER_MBLAZIKEN ===
 Name: MBLAZIKEN
 Class: Rival
-Pic: Substitute
+Pic: Blaziken-Mega
 Gender: Male
 Music: Cool
 Items: Hyper Potion

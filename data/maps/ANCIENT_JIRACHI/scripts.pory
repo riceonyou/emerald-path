@@ -61,9 +61,6 @@ script ANCIENT_JIRACHI_EventScript_TalkToJirachi{
     giveitem(VAR_RESULT, 1)
     msgbox(format("There ya go! Happy? Now go to the next path and let me get back to sleep!"))
     waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 30")
-    msgbox("Get on with it!\nShoo, shoo!")
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

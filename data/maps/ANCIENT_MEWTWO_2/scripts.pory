@@ -30,10 +30,9 @@ script ANCIENT_MEWTWO_EventScript_TalkToMewtwo{
     waitmessage
     giveitem(ITEM_TM_PSYCHIC, 1)
     waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 42")
 
     msgbox("I wish you well on your next path.")
+    waitmessage
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     releaseall

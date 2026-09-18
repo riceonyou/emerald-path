@@ -25,12 +25,11 @@ script ANCIENT_KYOGRE_EventScript_Kyogre{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
+    playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
     msgbox(format("And please take a Rain Dance TM too."))
     waitmessage
     giveitem(ITEM_TM_RAIN_DANCE, 1)
-    waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 50")
     waitmessage
     applymovement(1, moves(
         face_left

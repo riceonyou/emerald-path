@@ -24,7 +24,8 @@ script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
     special(LoadBirchBagPoolById)
     special(ChooseBirchBagPokemonWeighted)
     waitstate
-    
+    playfanfare(MUS_EVOLVED)
+	msgbox("You received a\n{STR_VAR_1}!")
     msgbox("And a Bullet Seed TM!")
     giveitem(ITEM_TM_BULLET_SEED, 1)
     waitmessage
@@ -34,8 +35,7 @@ script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
             automatically be given an oran berry!")
     giveitem(ITEM_ORAN_CHARM, 1)
     waitmessage
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("The level cap has been raised to 30")
+
     waitmessage
     playmoncry(SPECIES_MANAPHY, CRY_MODE_ENCOUNTER)
     waitmoncry

@@ -124,19 +124,18 @@ Hoenn1_4_EventScript_Wingull_Text_2:
 
 Hoenn1_4_EventScript_Seedot_Text_0:
 # 60 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Hi. I'm about to sow some of my seed\n"
-	.string "inside of you >:)\p"
-	.string "...Just kidding. I'm going to sow it on\n"
-	.string "the ground. Because of my seed sower\l"
-	.string "ability.$"
+	.string "Hi. I'm about to sow some of my seed...\p"
+	.string "Where? I'm going to sow it on the\n"
+	.string "ground.\n"
+	.string "Because of my seed sower ability.$"
 
 Hoenn1_4_EventScript_Seedot_Text_1:
 # 60 "data/maps/Hoenn1_3/scripts.pory"
-	.string "Sorry for that joke earlier... By the\n"
-	.string "way, if you already didn't know, you can\l"
-	.string "access your PC through the start menu.\l"
-	.string "If your party is full, any pokemon given\l"
-	.string "to you will automatically go to there.$"
+	.string "By the way, if you already didn't know,\n"
+	.string "you can access your PC through the\l"
+	.string "start menu. If your party is full, any\l"
+	.string "pokemon given to you will automatically\l"
+	.string "go to there.$"
 
 Hoenn1_4_EventScript_Seedot_Text_2:
 # 61 "data/maps/Hoenn1_3/scripts.pory"
