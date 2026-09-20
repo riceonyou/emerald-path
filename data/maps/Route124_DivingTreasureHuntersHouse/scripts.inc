@@ -28,7 +28,7 @@ Route124_DivingTreasureHuntersHouse_EventScript_CheckPlayerHasShard::
 
 Route124_DivingTreasureHuntersHouse_EventScript_GetPlayersShards::
 	setvar VAR_TEMP_1, 0
-	checkitem ITEM_RED_SHARD
+	checkitem ITEM_DEOXYS_MUTATION_CHARM
 	call_if_eq VAR_RESULT, TRUE, Route124_DivingTreasureHuntersHouse_EventScript_HasRedShard
 	checkitem ITEM_YELLOW_SHARD
 	call_if_eq VAR_RESULT, TRUE, Route124_DivingTreasureHuntersHouse_EventScript_HasYellowShard
@@ -218,7 +218,7 @@ Route124_DivingTreasureHuntersHouse_EventScript_ShardOptionsRYBG::
 	end
 
 Route124_DivingTreasureHuntersHouse_EventScript_TradeRedShard::
-	setvar VAR_0x8008, ITEM_RED_SHARD
+	setvar VAR_0x8008, ITEM_DEOXYS_MUTATION_CHARM
 	setvar VAR_0x8009, ITEM_FIRE_STONE
 	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeShard
 

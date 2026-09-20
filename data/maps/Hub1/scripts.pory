@@ -248,7 +248,7 @@ script HUB1_ONFRAME {
 		setvar(VAR_LEVEL_CAP, 14)
 
 		//Intro
-		msgbox("Welcome to Pokemon Path!\pTo start a run, talk to\nProfessor Birch up ahead.\pNow choose a pokemon to\nstart your adventure with.")
+		msgbox("Welcome to Pokemon Path!\pTo start, please choose\na starter pokemon.")
 		
 		//Give starter pokemon
 		dynmultipush("Bulbasaur", SPECIES_BULBASAUR)
@@ -390,11 +390,15 @@ script HUB1_ONFRAME {
 				setflag(FLAG_QUAXLY_UNLOCKED)
 				setvar(VAR_STARTER_MON, SPECIES_QUAXLY)
 		}
-		special(UpdatePlayerSprite)
+		
 		special(UpdateTransformedPlayerPalette)
+		special(UpdatePlayerSprite)
+		releaseall
 
+		lockall
 		// msgbox("Use this item to level up your\nPokemon.")
 		// giveitem(ITEM_CANDY_JAR)
+		msgbox(format("Nice choice!\pNow for an introduction...\pThis area is the Hub.\nYou start every run and end every run here.\pIn the hub, you can unlock new starter pokemon, new shop items, and more.\pTo start a run, talk to professor Birch above you.\pEach run, you must go through paths, collecting pokemon, gathering items and battling trainers.\pThat's the gist of it.\pNow go ahead and start a run when you're ready!"))	
 
 		releaseall
 	}
@@ -3729,7 +3733,7 @@ script Hub_Event_Script_Togedemaru {
 script Hub_Event_Script_Klang {
 	lockall
 	faceplayer
-	msgbox(format("Hello."))
+	msgbox(format("Hello. You should know that the items your pokemon are holding before a battle are restored at the end of a battle.\pThis means that the berries your pokemon consume will be returned.\pIt also means any item you might steal during a battle are not kept."))
 	waitmessage
 	releaseall
 }

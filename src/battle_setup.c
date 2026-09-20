@@ -893,7 +893,7 @@ enum BattleTransition GetTrainerBattleTransition(void)
         minPartyCount = 1;
         break;
     case TRAINER_BATTLE_TYPE_DOUBLES:
-        minPartyCount = 2; // double battles always at least have 2 Pokémon.
+        minPartyCount = 1;//2; // double battles always at least have 2 Pokémon.
         break;
     }
 
@@ -1369,6 +1369,11 @@ void BattleSetup_StartTrainerBattle(void)
             FillHillTrainerParty();
 
         SetHillTrainerFlag();
+    }
+    else if (FlagGet(FLAG_FORCE_DOUBLES_BATTLE))
+    {
+        FlagClear(FLAG_FORCE_DOUBLES_BATTLE);
+        gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
     }
     else if (GetTrainerBattleType(TRAINER_BATTLE_PARAM.opponentA) == TRAINER_BATTLE_TYPE_DOUBLES)
     {

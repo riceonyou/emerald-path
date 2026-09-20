@@ -25,117 +25,58 @@ script ANCIENT_DEOXYS_EventScript_TalkToDeoxys{
     faceplayer
     //GIVE ANCIENT REWARD
     switch (var(VAR_0x8000)) {
-        case 0://Regirock
+        case 0:
             playmoncry(SPECIES_DEOXYS_ATTACK, CRY_MODE_ENCOUNTER)
             waitmoncry
-            msgbox("Boop beep boop. You have succesfully\ncompleted the first path. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a fossil pokemon.")
+            msgbox(format("Hello. I am Deoxys. This is outer space. I have some rewards for thee. Firstly an offensive pokemon."))
             waitmessage
             fadescreen(FADE_TO_BLACK)
-            setvar(VAR_0x8000, 28)
+            setvar(VAR_0x8000, 40)
             special(LoadBirchBagPoolById)
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
 	        msgbox("You received a\n{STR_VAR_1}!")
+            msgbox("And secondly, a strong TM!")
+            giveitem(ITEM_TM_PHOTON_GEYSER, 1)
             
             
-        case 1://Regice
+        case 1:
             playmoncry(SPECIES_DEOXYS_DEFENSE, CRY_MODE_ENCOUNTER)
             waitmoncry
-            msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is an ice pokemon.")
+            msgbox(format("Hello. I am Deoxys. This is outer space. I have some rewards for thee. Firstly a defensive pokemon."))
             waitmessage
             fadescreen(FADE_TO_BLACK)
-            setvar(VAR_0x8000, 32)
+            setvar(VAR_0x8000, 41)
             special(LoadBirchBagPoolById)
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
 	        msgbox("You received a\n{STR_VAR_1}!")
+            msgbox("And secondly, a strong TM!")
+            giveitem(ITEM_TM_SILK_TRAP, 1)
             
 
-        case 2://DEOXYSteel
+        case 2:
             playmoncry(SPECIES_DEOXYS_SPEED, CRY_MODE_ENCOUNTER)
             waitmoncry
-            msgbox("Boop beep boop. You have succesfully\nbeaten the first act. Beep.\pAs a result, you will be given these\nrewards. Boop.\lThe first reward is a steel pokemon.")
+            msgbox(format("Hello. I am Deoxys. This is outer space. I have some rewards for thee. Firstly a speedy pokemon."))
             waitmessage
             fadescreen(FADE_TO_BLACK)
-            setvar(VAR_0x8000, 31)
+            setvar(VAR_0x8000, 42)
             special(LoadBirchBagPoolById)
             special(ChooseBirchBagPokemonWeighted)
             waitstate
             playfanfare(MUS_EVOLVED)
 	        msgbox("You received a\n{STR_VAR_1}!")
-            
+            msgbox("And secondly, a strong TM!")
+            giveitem(ITEM_TM_EXTREME_SPEED, 1)
     }
     waitmessage
-    msgbox("You will also be given the Regi Knuckles.\nBeep.")
+    msgbox(format("And lastly, a charm for you."))
     waitmessage
-    giveitem(ITEM_REGI_KNUCKLES_CHARM, 1)
-    msgbox("The Regi Knuckles power up your\npunching moves and makes them\lunable to miss. Boop.\pIt also comes with a punching TM\nof your choice. Beep.")
-    waitmessage
-    setvar(VAR_0x8000, 0)
-    setvar(VAR_0x8001, 0)
-    setvar(VAR_0x8002, 0)
-    setvar(VAR_0x8003, 0)
-    while (var(VAR_0x8000) != 3) {
-        randomelement(ITEM_TM_ICE_PUNCH, ITEM_TM_FIRE_PUNCH, ITEM_TM_THUNDER_PUNCH, ITEM_TM_DRAIN_PUNCH, ITEM_TM_DIZZY_PUNCH, ITEM_TM_SHADOW_PUNCH, ITEM_TM_SUCKER_PUNCH)
-        if (var(VAR_RESULT) != VAR_0x8002 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8001) == 0){
-            copyvar(VAR_0x8001, VAR_RESULT)
-            addvar(VAR_0x8000, 1)
-        }
-        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8003 && var(VAR_0x8002) == 0){
-            copyvar(VAR_0x8002, VAR_RESULT)
-            addvar(VAR_0x8000, 1)
-        }
-        if (var(VAR_RESULT) != VAR_0x8001 && var(VAR_RESULT) != VAR_0x8002 && var(VAR_0x8003) == 0){
-            copyvar(VAR_0x8003, VAR_RESULT)
-            addvar(VAR_0x8000, 1)
-        }
-    }
-    if (var(VAR_0x8001) == ITEM_TM_ICE_PUNCH || var(VAR_0x8002) == ITEM_TM_ICE_PUNCH || var(VAR_0x8003) == ITEM_TM_ICE_PUNCH){
-        dynmultipush("Ice Punch TM", ITEM_TM_ICE_PUNCH)    
-    }
-    if (var(VAR_0x8001) == ITEM_TM_FIRE_PUNCH || var(VAR_0x8002) == ITEM_TM_FIRE_PUNCH || var(VAR_0x8003) == ITEM_TM_FIRE_PUNCH) {
-        dynmultipush("Fire Punch TM", ITEM_TM_FIRE_PUNCH)
-    }
-    if (var(VAR_0x8001) == ITEM_TM_THUNDER_PUNCH || var(VAR_0x8002) == ITEM_TM_THUNDER_PUNCH || var(VAR_0x8003) == ITEM_TM_THUNDER_PUNCH) {
-        dynmultipush("Thunder Punch TM", ITEM_TM_THUNDER_PUNCH)
-    }
-    if (var(VAR_0x8001) == ITEM_TM_DRAIN_PUNCH || var(VAR_0x8002) == ITEM_TM_DRAIN_PUNCH || var(VAR_0x8003) == ITEM_TM_DRAIN_PUNCH) {
-        dynmultipush("Drain Punch TM", ITEM_TM_DRAIN_PUNCH)
-    }
-    if (var(VAR_0x8001) == ITEM_TM_DIZZY_PUNCH || var(VAR_0x8002) == ITEM_TM_DIZZY_PUNCH || var(VAR_0x8003) == ITEM_TM_DIZZY_PUNCH) {
-        dynmultipush("Dizzy Punch TM", ITEM_TM_DIZZY_PUNCH)
-    }
-    if (var(VAR_0x8001) == ITEM_TM_SHADOW_PUNCH || var(VAR_0x8002) == ITEM_TM_SHADOW_PUNCH || var(VAR_0x8003) == ITEM_TM_SHADOW_PUNCH) {
-        dynmultipush("Shadow Punch TM", ITEM_TM_SHADOW_PUNCH)
-    }
-    if (var(VAR_0x8001) == ITEM_TM_SUCKER_PUNCH || var(VAR_0x8002) == ITEM_TM_SUCKER_PUNCH || var(VAR_0x8003) == ITEM_TM_SUCKER_PUNCH) {
-        dynmultipush("Sucker Punch TM", ITEM_TM_SUCKER_PUNCH)
-    }
-
-    dynmultistack(0,0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
-    switch (var(VAR_RESULT)) {
-        case ITEM_TM_ICE_PUNCH:
-            giveitem(ITEM_TM_ICE_PUNCH, 1)
-        case ITEM_TM_FIRE_PUNCH:
-            giveitem(ITEM_TM_FIRE_PUNCH, 1)
-        case ITEM_TM_THUNDER_PUNCH:
-            giveitem(ITEM_TM_THUNDER_PUNCH, 1)
-        case ITEM_TM_DRAIN_PUNCH:
-            giveitem(ITEM_TM_DRAIN_PUNCH, 1)
-        case ITEM_TM_DIZZY_PUNCH:
-            giveitem(ITEM_TM_DIZZY_PUNCH, 1)
-        case ITEM_TM_SHADOW_PUNCH:
-            giveitem(ITEM_TM_SHADOW_PUNCH, 1)
-        case ITEM_TM_SUCKER_PUNCH:
-            giveitem(ITEM_TM_SUCKER_PUNCH, 1)
-        
-    }
-    waitmessage
-
-
-    msgbox("Beep boop boop.\lYou will now proceed to the next path.")
+    giveitem(ITEM_DEOXYS_MUTATION_CHARM, 1)
+    msgbox(format("The Deoxys Mutation causes your pokemon to boost a random stat every other turn. I hope it provides you the boost needed to defeat the next and final path, haha.\pNow off you go."))
     //TELEPORT TO NEXT STAGE
     special(WarpToNextAct)
     

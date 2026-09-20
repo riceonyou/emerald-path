@@ -3162,19 +3162,21 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_UnownBuddyCharm,
     },
 
-    [ITEM_RED_SHARD] =
+    [ITEM_DEOXYS_MUTATION_CHARM] =
     {
-        .name = ITEM_NAME("Red Shard"),
-        .price = (I_PRICE >= GEN_7) ? 1000 : 200,
-        .description = sShardsDesc,
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SHARD,
+        .name = ITEM_NAME("Deoxys Mutation"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "At the end of every\n"
+            "other turn, raise a\n"
+            "random stat."),
+        .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 30,
-        .iconPic = gItemIcon_Shard,
-        .iconPalette = gItemIconPalette_RedShard,
+        .iconPic = gItemIcon_CloningCharm,
+        .iconPalette = gItemIconPalette_CloningCharm,
     },
 
     [ITEM_BLUE_SHARD] =
@@ -14392,9 +14394,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_FIRE_PLEDGE] =
+    [ITEM_TM_EXTREME_SPEED] =
     {
-        .name = ITEM_NAME("TM144"),
+        .name = ITEM_NAME("TM Extreme Speed"),
         .price = 10000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14403,9 +14405,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_WATER_PLEDGE] =
+    [ITEM_TM_SILK_TRAP] =
     {
-        .name = ITEM_NAME("TM145"),
+        .name = ITEM_NAME("TM Silk Trap"),
         .price = 10000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -14414,9 +14416,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_GRASS_PLEDGE] =
+    [ITEM_TM_PHOTON_GEYSER] =
     {
-        .name = ITEM_NAME("TM146"),
+        .name = ITEM_NAME("TM Photon Geyser"),
         .price = 10000,
         .description = sPlaceholderDesc,
         .importance = I_REUSABLE_TMS,
@@ -17948,7 +17950,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CLONING_CHARM] =
     {
-        .name = ITEM_NAME("Cloning DNA"),
+        .name = ITEM_NAME("Cloning Device"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -17959,8 +17961,8 @@ const struct ItemInfo gItemsInfo[] =
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_CloningCharm,
-        .iconPalette = gItemIconPalette_CloningCharm,
+        .iconPic = gItemIcon_CloningDeviceCharm,
+        .iconPalette = gItemIconPalette_CloningDeviceCharm,
     },
 
     [ITEM_SHINY_STARTER_CHARM] =

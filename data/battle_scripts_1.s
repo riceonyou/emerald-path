@@ -6129,6 +6129,15 @@ BattleScript_MoodyLower:
 BattleScript_MoodyEnd:
 	end2
 
+BattleScript_DeoxysMutationCharmActivates::
+	printstring STRINGID_DEOXYSMUTATIONACTIVATED
+	waitmessage B_WAIT_TIME_LONG
+	statbuffchange BS_ATTACKER, STAT_CHANGE_CERTAIN | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_DeoxysMutationCharmEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_DeoxysMutationCharmEnd:
+	end2
+
 BattleScript_EmergencyExit::
 	pause 5
 	call BattleScript_AbilityPopUpScripting

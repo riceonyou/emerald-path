@@ -1832,9 +1832,13 @@ static void SetBattlerMonData(enum BattlerId battler, struct Pokemon *party, u32
         break;
     case REQUEST_HELDITEM_BATTLE:
         SetMonData(&party[monId], MON_DATA_HELD_ITEM, &gBattleResources->bufferA[battler][3]);
+        // Any in-battle change to a party mon's held item is eligible for restoration after battle (see TryRestoreHeldItems)
+        gBattleStruct->itemLost[GetBattlerSide(battler)][monId][0].stolen = TRUE;
         break;
     case REQUEST_HELDITEM_BATTLE_TWO:
         SetMonData(&party[monId], MON_DATA_HELD_ITEM_TWO, &gBattleResources->bufferA[battler][3]);
+        if (MAX_MON_ITEMS > 1)
+            gBattleStruct->itemLost[GetBattlerSide(battler)][monId][1].stolen = TRUE;
         break;
     case REQUEST_MOVES_PP_BATTLE:
         for (i = 0; i < MAX_MON_MOVES; i++)

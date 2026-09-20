@@ -145,9 +145,9 @@
     F(FIRE_BLAST) \
     F(HYDRO_PUMP) \
     F(BLIZZARD) \
-    F(FIRE_PLEDGE) \
-    F(WATER_PLEDGE) \
-    F(GRASS_PLEDGE) \
+    F(EXTREME_SPEED) \
+    F(SILK_TRAP) \
+    F(PHOTON_GEYSER) \
     F(WILD_CHARGE) \
     F(SLUDGE_BOMB) \
     F(EARTHQUAKE) \

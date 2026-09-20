@@ -9977,27 +9977,18 @@ void TryRestoreHeldItems(void)
 {
     u32 i, j;
     u16 lostItem;
-    bool32 returnNPCItems = B_RETURN_STOLEN_NPC_ITEMS >= GEN_5 && gBattleTypeFlags & BATTLE_TYPE_TRAINER;
 
+    // Every party mon leaves battle holding whatever item it entered with:
+    // consumed berries/items return, and anything stolen mid-battle (in either
+    // direction) reverts to the mon's pre-battle item instead of being kept.
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        // Check if held items should be restored after battle based on generation
-        if (B_RESTORE_HELD_BATTLE_ITEMS >= GEN_9 || returnNPCItems)
+        for (j = 0; j < MAX_MON_ITEMS; j++)
         {
-            for (j = 0; j < MAX_MON_ITEMS; j++)
+            if (gBattleStruct->itemLost[B_SIDE_PLAYER][i][j].stolen)
             {
-                if (gBattleStruct->itemLost[B_SIDE_PLAYER][i][j].stolen)
-                {
-                    lostItem = gBattleStruct->itemLost[B_SIDE_PLAYER][i][j].originalItem;
-
-                    // Check if the lost item is a berry and the mon is not holding it
-                    if (GetItemPocket(lostItem) == POCKET_BERRIES && GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM + j) != lostItem)
-                        lostItem = ITEM_NONE;
-
-                    // Check if the lost item should be restored
-                    if ((lostItem != ITEM_NONE || returnNPCItems) && GetItemPocket(lostItem) != POCKET_BERRIES)
-                        SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM + j, &lostItem);
-                }
+                lostItem = gBattleStruct->itemLost[B_SIDE_PLAYER][i][j].originalItem;
+                SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM + j, &lostItem);
             }
         }
     }

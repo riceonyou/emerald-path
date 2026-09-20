@@ -540,21 +540,21 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Pelipper @ Wacan Berry
-Level: 25
+Level: 24
 - Weather Ball
 - Tailwind
 - Wing Attack
 - Supersonic
 
 Rabsca
-Level: 24
+Level: 23
 - Weather Ball
 - Extrasensory
 - Bug Bite
 - Recover
 
 Gumshoos
-Level: 24
+Level: 23
 - Super Fang
 - Double-Edge
 - Yawn
@@ -603,7 +603,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Sharpedo @ Assault Vest
 Nature: Jolly
-Level: 25
+Level: 23
 - Crunch
 - Ice Fang
 - Poison Fang
@@ -611,7 +611,7 @@ Level: 25
 
 Luxio
 Nature: Adamant
-Level: 26
+Level: 24
 - Thunder Fang
 - Fire Fang
 - Bite
@@ -626,7 +626,7 @@ Level: 25
 
 Clauncher
 Nature: Modest
-Level: 28
+Level: 27
 - Water Pulse
 - Aura Sphere
 - Sludge Wave
@@ -648,14 +648,14 @@ Level: 25
 - Will O Wisp
 
 Primeape
-Level: 25  
+Level: 23  
 - Cross Chop
 - Rage Fist
 - Rage
 - Stomping Tantrum
 
 Maractus
-Level: 26  
+Level: 25  
 - Giga Drain
 - Leech Seed
 - Spiky Shield
@@ -680,7 +680,7 @@ Level: 26
 
 Munchlax @ Sitrus Berry
 Nature: Careful
-Level: 26
+Level: 25
 - Body Slam
 - Covet
 - Curse
@@ -688,7 +688,7 @@ Level: 26
 
 Numel @ Charcoal
 Nature: Quiet
-Level: 27
+Level: 25
 - Magnitude
 - Bulldoze
 - Heat Crash
@@ -696,7 +696,7 @@ Level: 27
 
 Eelektrik
 Nature: Modest
-Level: 24
+Level: 25
 - Thunderbolt
 - Volt Switch
 - Acid Spray
@@ -752,7 +752,7 @@ Level: 27
 - Agility
 
 Klang
-Level: 25
+Level: 24
 - Charge Beam
 - Gear Grind
 - Thunder Wave
@@ -766,7 +766,7 @@ Level: 24
 - Protect
 - Sing
 
-Ribombee @ Silver Powder
+Ribombee
 Level: 24
 - Pollen Puff
 - Draining Kiss
@@ -789,8 +789,8 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Noibat @ Lum Berry
-Level: 29
+Noibat
+Level: 27
 - Dual Wingbeat
 - X-Scissor
 - Tailwind
@@ -798,14 +798,14 @@ Level: 29
 
 Loudred @ Silk Scarf
 Nature: Modest
-Level: 27
+Level: 26
 - Hyper Voice
 - Fire Blast
 - Sleep Talk
 - Rest
 
-SPECIES_TOXTRICITY_AMPED @ Sitrus Berry
-Level: 27
+SPECIES_TOXTRICITY_AMPED
+Level: 25
 - Overdrive
 - Boomburst
 - Poison Jab
@@ -862,7 +862,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Plusle @ Oran Berry
 Nature: Modest
-Level: 27
+Level: 26
 - Thunderbolt
 - Grass Knot
 - Hidden Power 
@@ -870,14 +870,14 @@ Level: 27
 
 Minun @ Oran Berry
 Nature: Timid
-Level: 27
+Level: 26
 - Helping Hand
 - Super Fang
 - Sing
 - Charm
 
 Togetic
-Level: 24
+Level: 23
 - Follow Me
 - Air Cutter
 - Yawn
@@ -885,7 +885,7 @@ Level: 24
 
 Mienfoo @ Black Belt
 Nature: Jolly
-Level: 26
+Level: 25
 - Drain Punch
 - Fake Out
 - Knock Off
@@ -893,7 +893,7 @@ Level: 26
 
 Raboot
 Nature: Jolly
-Level: 24
+Level: 23
 - Fire Spin
 - Low Sweep
 - Bounce
@@ -910,7 +910,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Volbeat @ Light Clay
 Nature: Bold
-Level: 27
+Level: 26
 - Tail Glow
 - Dazzling Gleam
 - Light Screen
@@ -918,7 +918,7 @@ Level: 27
 
 Illumise @ Sitrus Berry
 Nature: Calm
-Level: 27
+Level: 26
 - Encore
 - Charm
 - Tailwind
@@ -926,20 +926,20 @@ Level: 27
 
 Gloom
 Nature: Calm
-Level: 25
+Level: 24
 - Sludge Bomb
 - Strength Sap
 - Giga Drain
 - Bullet Seed
 
-Shroodle @ Black Sludge
-Level: 27
+Shroodle
+Level: 25
 - Parting Shot
 - Knock Off
 - Taunt
 - Poison Jab
 
-Baltoy @ Salac Berry
+Baltoy
 Level: 26
 - Extrasensory
 - Self-Destruct
@@ -957,7 +957,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Thwackey
 Nature: Careful
-Level: 27
+Level: 25
 - Knock Off
 - Grassy Glide
 - Double Hit
@@ -971,8 +971,8 @@ Level: 27
 - Sleep Powder
 - Leech Seed
 
-Comfey @ Black Sludge
-Level: 27
+Comfey
+Level: 25
 - Draining Kiss
 - Vine Whip
 - Sleep Powder
@@ -980,7 +980,7 @@ Level: 27
 
 Chimecho @ Focus Sash
 Nature: Calm
-Level: 27
+Level: 25
 - Icy Wind
 - Psychic
 - Charge Beam
@@ -997,7 +997,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Swalot @ Chesto Berry
 Nature: Careful
-Level: 26
+Level: 27
 - Curse
 - Poison Jab
 - Body Slam
@@ -1013,13 +1013,13 @@ Level: 24
 
 Gastrodon @ Leftovers
 Nature: Calm
-Level: 24
+Level: 23
 - Muddy Water
 - Earth Power
 - Recover
 - Yawn
 
-Duosion @ Twisted Spoon
+Duosion
 Nature: Modest
 Level: 25
 - Future Sight
@@ -1051,9 +1051,9 @@ Level: 27
 - Thunder Wave
 - Volt Switch
 
-Metang @ Occa Berry
+Metang
 Nature: Adamant
-Level: 27
+Level: 25
 - Zen Headbutt
 - Bullet Punch
 - Metal Claw
@@ -1061,7 +1061,7 @@ Level: 27
 
 Beheeyem @ Lum Berry
 Nature: Bold
-Level: 26
+Level: 25
 - Psybeam
 - Charge Beam
 - Shadow Ball
@@ -1101,7 +1101,7 @@ Level: 28
 
 Vaporeon @ Leftovers
 Nature: Bold
-Level: 26
+Level: 25
 - Scald
 - Toxic
 - Wish
@@ -1109,7 +1109,7 @@ Level: 26
 
 Lycanroc
 Nature: Adamant
-Level: 27
+Level: 26
 - Rock Slide
 - Crunch
 - Accelerock
@@ -1133,21 +1133,21 @@ AI: Basic Trainer / Randomize Party Indices
 
 Flygon @ Choice Scarf
 Nature: Jolly
-Level: 36
+Level: 35
 - Earthquake
 - Outrage
 - U-turn
 - Stone Edge
 
 Flamigo
-Level: 37
+Level: 35
 - Swords Dance
 - Close Combat
 - Acrobatics
 - Roost
 
 Tsareena
-Level: 36
+Level: 35
 - Power Whip
 - Knock Off
 - Rapid Spin
@@ -1164,14 +1164,14 @@ AI: Basic Trainer / Randomize Party Indices
 
 Cacturne @ Rocky Helmet
 Nature: Adamant
-Level: 38
+Level: 36
 - Seed Bomb
 - Sucker Punch
 - Spikes
 - Swords Dance
 
 Mightyena
-Level: 37
+Level: 36
 - Crunch
 - Sucker Punch
 - Play Rough
@@ -1202,21 +1202,21 @@ AI: Basic Trainer / Randomize Party Indices
 
 Claydol @ Mental Herb
 Nature: Relaxed
-Level: 38
+Level: 37
 - Trick Room
 - Earth Power
 - Psychic
 - Explosion
 
 Golurk
-Level: 37
+Level: 36
 - Earthquake
 - Shadow Punch
 - Drain Punch
 - Ice Punch
 
 Escavalier
-Level: 37
+Level: 36
 - Iron Head
 - Megahorn
 - Knock Off
@@ -1233,14 +1233,14 @@ AI: Basic Trainer / Randomize Party Indices
 
 Skarmory @ Rocky Helmet
 Nature: Impish
-Level: 39
+Level: 37
 - Spikes
 - Iron Head
 - Roost
 - Whirlwind
 
 Frosmoth
-Level: 37
+Level: 35
 - Quiver Dance
 - Ice Beam
 - Bug Buzz
@@ -1254,7 +1254,7 @@ Level: 36
 - Zen Headbutt
 
 Gourgeist
-Level: 37
+Level: 35
 - Power Whip
 - Shadow Sneak
 - Leech Seed
@@ -1278,7 +1278,7 @@ Level: 41
 - Dizzy Punch
 
 Noivern
-Level: 38
+Level: 37
 - Hurricane
 - Air Slash
 - Flamethrower
@@ -1302,7 +1302,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Ninetales @ Charcoal
 Nature: Timid
-Level: 38
+Level: 36
 - Flamethrower
 - Solar Beam
 - Will-O-Wisp
@@ -1310,21 +1310,21 @@ Level: 38
 
 Ninetales-Alola @ Light Clay
 Nature: Timid
-Level: 38
+Level: 36
 - Aurora Veil
 - Blizzard
 - Moonblast
 - Encore
 
 Floatzel
-Level: 38
+Level: 35
 - Wave Crash
 - Ice Fang
 - Crunch
 - Aqua Jet
 
 Cinccino
-Level: 38
+Level: 35
 - Tail Slap
 - Bullet Seed
 - Rock Blast
@@ -1348,7 +1348,7 @@ Level: 40
 - Quick Attack
 
 Lycanroc-Dusk @ Hard Stone
-Level: 38
+Level: 36
 - Accelerock
 - Rock Slide
 - Fire Fang
@@ -1356,7 +1356,7 @@ Level: 38
 
 Clawitzer
 Nature: Modest
-Level: 38
+Level: 36
 - Water Pulse
 - Dark Pulse
 - Aura Sphere
@@ -1380,7 +1380,7 @@ Level: 40
 - Sucker Punch
 
 Arbok @ Black Sludge
-Level: 38
+Level: 36
 - Gunk Shot
 - Crunch
 - Earthquake
@@ -1388,7 +1388,7 @@ Level: 38
 
 Kingdra
 Nature: Modest
-Level: 38
+Level: 36
 - Surf
 - Dragon Pulse
 - Ice Beam
@@ -1407,7 +1407,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Solrock @ Heat Rock
 Nature: Adamant
-Level: 40
+Level: 39
 - Rock Slide
 - Zen Headbutt
 - Sunny Day
@@ -1415,14 +1415,14 @@ Level: 40
 
 Lunatone @ Light Clay
 Nature: Modest
-Level: 40
+Level: 39
 - Psychic
 - Power Gem
 - Light Screen
 - Moonlight
 
 Heliolisk
-Level: 38
+Level: 36
 - Thunderbolt
 - Hyper Voice
 - Surf
@@ -1430,7 +1430,7 @@ Level: 38
 
 Clefable
 Nature: Bold
-Level: 38
+Level: 36
 - Moonblast
 - Follow Me
 - Helping Hand
@@ -1447,21 +1447,21 @@ AI: Basic Trainer / Randomize Party Indices
 
 Linoone @ Silk Scarf
 Nature: Jolly
-Level: 40
+Level: 39
 - Extreme Speed
 - Double-Edge
 - Shadow Claw
 - Belly Drum
 
 Grafaiai
-Level: 39
+Level: 37
 - Poison Jab
 - Knock Off
 - Encore
 - Parting Shot
 
 Kilowattrel
-Level: 39
+Level: 37
 - Thunderbolt
 - Air Slash
 - Volt Switch
@@ -1469,7 +1469,7 @@ Level: 39
 
 Obstagoon
 Nature: Jolly
-Level: 37
+Level: 36
 - Facade
 - Sucker Punch
 - Close Combat
@@ -1486,7 +1486,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Cradily @ Leftovers
 Nature: Calm
-Level: 39
+Level: 37
 - Ingrain
 - Giga Drain
 - Ancient Power
@@ -1500,7 +1500,7 @@ Level: 37
 - Recover
 
 Goodra
-Level: 38
+Level: 37
 - Life Dew
 - Dragon Pulse
 - Flamethrower
@@ -1517,21 +1517,21 @@ AI: Basic Trainer / Randomize Party Indices
 
 Armaldo @ Silver Powder
 Nature: Adamant
-Level: 39
+Level: 37
 - X-Scissor
 - Rock Slide
 - Aqua Jet
 - Swords Dance
 
-Tyrantrum
+Tyrantrum @ Choice Band
 Level: 37
 - Rock Slide
 - Dragon Claw
 - Psychic Fangs
 - Crunch
 
-Dragalge @ Black Sludge
-Level: 38
+Dragalge
+Level: 37
 - Sludge Bomb
 - Dragon Pulse
 - Surf
@@ -1562,7 +1562,7 @@ Level: 38
 
 Eelektross
 Nature: Modest
-Level: 37
+Level: 36
 - Thunderbolt
 - Flamethrower
 - Giga Drain
@@ -1576,7 +1576,7 @@ Level: 37
 - Pain Split
 
 Drapion @ Scope Lens
-Level: 38
+Level: 36
 - Cross Poison
 - Night Slash
 - Ice Fang
@@ -1593,14 +1593,14 @@ AI: Basic Trainer / Randomize Party Indices
 
 Sandslash @ Soft Sand
 Nature: Adamant
-Level: 40
+Level: 39
 - Earthquake
 - Iron Head
 - Rock Slide
 - Swords Dance
 
 Gliscor
-Level: 38
+Level: 37
 - Earthquake
 - Acrobatics
 - U-turn
@@ -1615,7 +1615,7 @@ Level: 40
 
 Sandslash-Alola @ Assault Vest
 Nature: Adamant
-Level: 40
+Level: 39
 - Icicle Crash
 - Iron Head
 - Earthquake
@@ -1623,7 +1623,7 @@ Level: 40
 
 Slowking @ Leftovers
 Nature: Calm
-Level: 36
+Level: 35
 - Water Pulse
 - Psychic
 - Yawn
@@ -1647,7 +1647,7 @@ Level: 40
 - Sing
 
 Drifblim @ Sitrus Berry
-Level: 38
+Level: 37
 - Shadow Ball
 - Air Slash
 - Strength Sap
@@ -1655,21 +1655,21 @@ Level: 38
 
 Bellibolt
 Nature: Modest
-Level: 39
+Level: 37
 - Thunderbolt
 - Parabolic Charge
 - Mud Shot
 - Slack Off
 
 Overqwil
-Level: 37
+Level: 36
 - Barb Barrage
 - Aqua Tail
 - Crunch
 - Swords Dance
 
 Copperajah
-Level: 38
+Level: 36
 - Heavy Slam
 - High Horsepower
 - Rock Slide
@@ -1686,7 +1686,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Zoroark-Hisui
 Nature: Timid
-Level: 39
+Level: 38
 - Will-O-Wisp
 - Hex
 - Hyper Voice
@@ -1706,14 +1706,14 @@ Level: 39
 
 Basculegion
 Nature: Adamant
-Level: 41
+Level: 38
 - Wave Crash
 - Last Respects
 - Aqua Jet
 - Crunch
 
 Snorlax @ Chesto Berry
-Level: 41
+Level: 40
 - Body Slam
 - Crunch
 - Rest
@@ -2012,16 +2012,16 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MEGAABSOL ===
 Name: MEGAABSOL
-Class: Pkmn Trainer 1
+Class: Leader
 Pic: Absol-Mega
 Gender: Male
 Music: Interviewer
-Double Battle: Yes
+Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Absol-Mega @ Scope Lens
 Nature: Jolly
-Level: 48
+Level: 46
 - Knock Off
 - Play Rough
 - Sucker Punch
@@ -2029,7 +2029,7 @@ Level: 48
 
 Houndoom-Mega @ Wise Glasses
 Nature: Timid
-Level: 47
+Level: 43
 - Dark Pulse
 - Flamethrower
 - Sludge Bomb
@@ -2037,7 +2037,7 @@ Level: 47
 
 Vespiquen (F)
 Nature: Adamant
-Level: 48
+Level: 44
 - Attack Order  
 - Defend Order  
 - Heal Order  
@@ -2045,7 +2045,7 @@ Level: 48
 
 Moltres @ Heavy-Duty Boots
 Nature: Timid
-Level: 48
+Level: 43
 - Flamethrower
 - Hurricane
 - Roost
@@ -2053,7 +2053,7 @@ Level: 48
 
 Yveltal @ Life Orb
 Nature: Timid
-Level: 48
+Level: 44
 - Dark Pulse
 - Oblivion Wing
 - Focus Blast
@@ -2061,7 +2061,7 @@ Level: 48
 
 Mimikyu @ Life Orb
 Nature: Jolly
-Level: 49
+Level: 45
 - Play Rough
 - Shadow Sneak
 - Shadow Claw
@@ -2069,50 +2069,50 @@ Level: 49
 
 === TRAINER_MEGASABLEYE ===
 Name: MSABLEYE
-Class: Pkmn Trainer 1
+Class: Leader
 Pic: Sableye-Mega
 Gender: Male
 Music: Interviewer
-Double Battle: Yes
+Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Sableye-Mega @ Leftovers
-Level: 48
+Level: 46
 - Shadow Claw
 - Reflect
 - Light Screen
 - Will O Wisp
 
 Giratina-Altered
-Level: 46
+Level: 43
 - Shadow Force
 - Dragon Claw
 - Shadow Sneak
 - Earth Power
 
 Milotic
-Level: 48
+Level: 45
 - Hydro Pump
 - Ice Beam
 - Disarming Voice
 - Hypnosis
 
 Gholdengo
-Level: 47
+Level: 44
 - Make It Rain
 - Confuse Ray
 - Ominous Wind
 - Nasty Plot
 
 Enamorus-Therian
-Level: 47
+Level: 43
 - Draining Kiss
 - Mystical Fire
 - Calm Mind
 - Extrasensory
 
 Sinistcha
-Level: 48
+Level: 44
 - Matcha Gotcha
 - Foul Play
 - Memento
@@ -2121,51 +2121,51 @@ Level: 48
 
 === TRAINER_MEGAGLALIE ===
 Name: MGLALIE
-Class: Pkmn Trainer 1
+Class: Leader
 Pic: Glalie-Mega
 Gender: Male
 Music: Interviewer
-Double Battle: Yes
+Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Glalie-Mega
 Nature: Adamant
-Level: 49
+Level: 46
 - Explosion
 - Body Slam
 - Toxic
 - Crunch
 
 Kyurem
-Level: 48
+Level: 43
 - Glaciate
 - Outrage
 - Blizzard
 - Ancient Power
 
 Abomasnow-Mega
-Level: 48
+Level: 45
 - Blizzard
 - Giga Drain
 - Earthquake
 - Ice Shard
 
 Slowking-Galar @ Black Sludge
-Level: 48
+Level: 44
 - Sludge Bomb
 - Psychic
 - Flamethrower
 - Chilly Reception
 
 Ho-Oh @ Leftovers
-Level: 47
+Level: 43
 - Sacred Fire
 - Brave Bird
 - Earthquake
 - Recover
 
 Unfezant @ Scope Lens
-Level: 47
+Level: 45
 - Drill Peck
 - Return
 - Night Slash
@@ -2173,7 +2173,7 @@ Level: 47
 
 === TRAINER_MEGASALAMENCE ===
 Name: MSALAMENCE
-Class: Pkmn Trainer 1
+Class: Leader
 Pic: Salamence-Mega
 Gender: Female
 Music: Girl
@@ -2181,42 +2181,42 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Salamence-Mega
-Level: 49
+Level: 46
 - Double-Edge
 - Dragon Dance
 - Earthquake
 - Roost
 
 Dragapult
-Level: 48
+Level: 44
 - Shadow Ball
 - Dragon Darts
 - Flamethrower
 - Thunderbolt
 
 Walking Wake
-Level: 48
+Level: 44
 - Hydro Steam
 - Draco Meteor
 - Flamethrower
 - Flip Turn
 
 Zacian-Crowned
-Level: 47
+Level: 43
 - Behemoth Blade
 - Play Rough
 - Close Combat
 - Swords Dance
 
 Garbodor @ Black Sludge
-Level: 48
+Level: 45
 - Gunk Shot
 - Drain Punch
 - Toxic Spikes
 - Spikes
 
 Kangaskhan-Mega
-Level: 47
+Level: 45
 - Fake Out
 - Double-Edge
 - Power-Up Punch
@@ -2237,7 +2237,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MEGASWAMPERT ===
 Name: SWAMPERT
-Class: Pkmn Trainer 1
+Class: Leader
 Pic: Swampert-Mega
 Gender: Female
 Music: Girl
@@ -2252,35 +2252,35 @@ Level: 50
 - Stealth Rock
 
 Zapdos @ Heavy-Duty Boots
-Level: 49
+Level: 48
 - Thunder
 - Hurricane
 - Roost
 - Volt Switch
 
 Suicune @ Leftovers
-Level: 49
+Level: 48
 - Scald
 - Ice Beam
 - Calm Mind
 - Rest
 
 Basculegion
-Level: 50
+Level: 48
 - Wave Crash
 - Last Respects
 - Aqua Jet
 - Psychic Fangs
 
 Archeops
-Level: 50
+Level: 48
 - Head Smash
 - Acrobatics
 - Earthquake
 - U-turn
 
 Darkrai
-Level: 49
+Level: 48
 - Dark Pulse
 - Sludge Bomb
 - Dark Void
@@ -2373,7 +2373,7 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Barboach   
-Level: 11  
+Level: 10  
 - Water Pulse
 - Mud Bomb
 - Magnitude
@@ -2401,7 +2401,7 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Aron @ Oran Berry
-Level: 11  
+Level: 10  
 - Rock Tomb
 - Iron Head
 - Roar
@@ -2467,7 +2467,7 @@ Level: 11
 - Bounce
 
 Spinarak
-Level: 11  
+Level: 10  
 - Pounce
 - Sucker Punch
 - Spider Web
@@ -2526,7 +2526,7 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Trapinch @ Lum Berry
-Level: 12  
+Level: 11  
 - Feint Attack
 - Rock Slide
 - Mud Slap
@@ -2563,7 +2563,7 @@ Level: 12
 - Thunder Punch
 
 Toxel
-Level: 11  
+Level: 10  
 - Nuzzle
 - Tearful Look
 - Acid
@@ -2592,21 +2592,21 @@ Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
 Ralts @ Twisted Spoon
-Level: 13
+Level: 12
 - Psybeam
 - Magical Leaf
 - Will O Wisp
 - Ice Punch
 
 Yungoos  
-Level: 12 
+Level: 11 
 - Fire Fang  
 - Bite  
 - Swagger  
 - Bulldoze
 
 Shellder @ White Herb
-Level: 12  
+Level: 11  
 - Toxic  
 - Whirlpool  
 - Swift  
@@ -2629,7 +2629,7 @@ Level: 12
 - Bite
 
 Gible
-Level: 11  
+Level: 10  
 - Dragon Breath 
 - Sand Tomb
 - Sand Attack
@@ -2665,13 +2665,13 @@ Level: 12
 - Spite
 
 Timburr
-Level: 11  
+Level: 10  
 - Rock Throw
 - Bulk Up
 - Drain Punch
 
 Yamper @ Oran Berry
-Level: 11  
+Level: 10  
 - Bite
 - Spark
 - Charm
@@ -4826,7 +4826,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Treecko
+Treecko @ Oran Berry
 Level: 12
 - Absorb
 - Quick Attack
@@ -4842,7 +4842,7 @@ Level: 11
 
 Starly
 Nature: Jolly
-Level: 12
+Level: 11
 - Quick Attack
 - Wing Attack
 - Tackle
@@ -4859,23 +4859,23 @@ AI: Basic Trainer / Randomize Party Indices
 
 Grovyle @ Miracle Seed
 Nature: Jolly
-Level: 29
+Level: 28
 - Leaf Blade
 - Quick Attack
 - Mega Drain
 - Detect
 
-Luxio @ Magnet
+Luxio
 Nature: Adamant
-Level: 29
+Level: 26
 - Spark
 - Bite
 - Thunder Wave
 - Ice Fang
 
-Staravia @ Sharp Beak
+Staravia
 Nature: Jolly
-Level: 28
+Level: 26
 - Aerial Ace
 - Quick Attack
 - Double Team
@@ -4883,7 +4883,7 @@ Level: 28
 
 Pinsir @ Silver Powder
 Nature: Jolly
-Level: 26
+Level: 24
 - X-Scissor
 - Brick Break
 - Rock Tomb
@@ -4914,7 +4914,7 @@ Level: 39
 - Ice Fang
 - Volt Switch
 
-Staraptor @ Sharp Beak
+Staraptor
 Nature: Jolly
 Level: 39
 - Brave Bird
@@ -4930,7 +4930,7 @@ Level: 39
 - Rock Tomb
 - Swords Dance
 
-Gothitelle @ Leftovers
+Gothitelle
 Nature: Bold
 Level: 39
 - Psychic
@@ -4949,7 +4949,7 @@ AI: Basic Trainer / Randomize Party Indices
 
 Sceptile-Mega @ Choice Band  
 Nature: Jolly
-Level: 50
+Level: 45
 - Leaf Blade
 - Dragon Claw
 - Rock Slide
@@ -4957,7 +4957,7 @@ Level: 50
 
 Luxray @ Magnet
 Nature: Adamant
-Level: 48
+Level: 44
 - Wild Charge
 - Crunch
 - Ice Fang
@@ -4965,7 +4965,7 @@ Level: 48
 
 Staraptor-Mega @ Sharp Beak
 Nature: Jolly
-Level: 48
+Level: 42
 - Brave Bird
 - Close Combat
 - Protect
@@ -4973,7 +4973,7 @@ Level: 48
 
 Pinsir-Mega @ Silver Powder
 Nature: Jolly
-Level: 48
+Level: 43
 - Body Slam
 - Feint
 - Lunge
@@ -4981,7 +4981,7 @@ Level: 48
 
 Gothitelle @ Light Clay
 Nature: Bold
-Level: 48
+Level: 45
 - Psychic
 - Thunder Wave
 - Reflect
@@ -4989,7 +4989,7 @@ Level: 48
 
 Fezandipiti @ Heavy-Duty Boots
 Nature: Bold
-Level: 48
+Level: 43
 - Beat Up
 - Heat Wave
 - Roost
@@ -5019,7 +5019,7 @@ Level: 11
 - Covet
 
 Pidove
-Level: 12
+Level: 11
 - Peck
 - Quick Attack
 - Air Cutter
@@ -5035,29 +5035,29 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Combusken
-Level: 29
+Combusken @ Sitrus Berry
+Level: 28
 - Double Kick
 - Flame Charge
 - Aerial Ace
 - Protect
 
-Tranquill
-Level: 29
+Tranquill @ Sharp Beak
+Level: 26
 - Feather Dance
 - Swagger
 - Air Slash
 - Swift
 
 Tinkatuff
-Level: 28
+Level: 26
 - Brutal Swing
 - Play Rough
 - Rock Smash
 - Metal Claw
 
 Swadloon
-Level: 29
+Level: 27
 - Struggle Bug
 - Protect
 - Sticky Web
@@ -5073,29 +5073,29 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Blaziken
+Blaziken @ Leftovers
 Level: 40
 - Flamethrower
 - Blaze Kick
 - Bulk Up
 - Low Sweep
 
-Unfezant
-Level: 39
+Unfezant @ Sharp Beak
+Level: 37
 - Tailwind
 - Brave Bird
 - Hurricane
 - Heat Wave
 
-Tinkaton
-Level: 38
+Tinkaton @ Occa Berry
+Level: 37
 - Gigaton Hammer
 - Knock Off
 - Play Rough
 - Flatter
 
 Leavanny
-Level: 39
+Level: 38
 - X-Scissor
 - Leaf Blade
 - Slash
@@ -5118,43 +5118,43 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
-Blaziken-Mega
-Level: 50
+Blaziken-Mega @ Leftovers
+Level: 45
 - Fire Blast
 - Blaze Kick
 - Bulk Up
 - Low Sweep
 
-Unfezant
-Level: 49
+Unfezant @ Sharp Beak
+Level: 44
 - Tailwind
 - Brave Bird
 - Hurricane
 - Uproar
 
-Tinkaton
-Level: 48
+Tinkaton @ Occa Berry
+Level: 44
 - Gigaton Hammer
 - Knock Off
 - Play Rough
 - Flatter
 
-Leavanny
-Level: 48
+Leavanny @ Life Orb
+Level: 44
 - X-Scissor
 - Leaf Blade
 - Slash
 - Swords Dance
 
 Kabutops
-Level: 48
+Level: 44
 - Liquidation
 - Ancient Power
 - Leech Life
 - Stealth Rock
 
-Cobalion
-Level: 47
+Cobalion @ Sitrus Berry
+Level: 45
 - Sacred Sword
 - Iron Head
 - Close Combat

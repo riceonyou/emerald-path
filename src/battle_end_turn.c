@@ -7,6 +7,8 @@
 #include "battle_ai_util.h"
 #include "battle_gimmick.h"
 #include "battle_scripts.h"
+#include "item.h"
+#include "random.h"
 #include "constants/battle.h"
 #include "constants/battle_string_ids.h"
 #include "constants/abilities.h"
@@ -1403,6 +1405,38 @@ static bool32 HandleEndTurnDynamax(enum BattlerId battler)
     return effect;
 }
 
+static bool32 HandleEndTurnDeoxysMutationCharm(enum BattlerId battler)
+{
+    bool32 effect = FALSE;
+
+    gBattleStruct->eventState.endTurnBattler++;
+
+    if (GetBattlerSide(battler) == B_SIDE_PLAYER
+     && (gBattleTurnCounter & 1)
+     && IsBattlerAlive(battler)
+     && CheckBagHasItem(ITEM_DEOXYS_MUTATION_CHARM, 1))
+    {
+        enum Stat stat;
+
+        for (stat = STAT_ATK; stat < NUM_STATS; stat++)
+        {
+            if (CompareStat(battler, stat, MAX_STAT_STAGE, CMP_LESS_THAN))
+                break;
+        }
+
+        if (stat != NUM_STATS)
+        {
+            stat = RandomUniformExcept(RNG_DEOXYS_MUTATION_CHARM, STAT_ATK, NUM_STATS - 1, MoodyCantRaiseStat);
+            gBattleScripting.battler = battler;
+            SET_STATCHANGER(stat, 1, FALSE);
+            BattleScriptExecute(BattleScript_DeoxysMutationCharmActivates);
+            effect = TRUE;
+        }
+    }
+
+    return effect;
+}
+
 static bool32 TryEndTurnTrainerSlide(enum BattlerId battler)
 {
     return ((ShouldDoTrainerSlide(battler, TRAINER_SLIDE_LAST_LOW_HP) != TRAINER_SLIDE_TARGET_NONE)
@@ -1522,6 +1556,7 @@ static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
     [ENDTURN_FORM_CHANGE] = HandleEndTurnFormChange,
     [ENDTURN_EJECT_PACK] = HandleEndTurnEjectPack,
     [ENDTURN_DYNAMAX] = HandleEndTurnDynamax,
+    [ENDTURN_DEOXYS_MUTATION_CHARM] = HandleEndTurnDeoxysMutationCharm,
     [ENDTURN_TRAINER_A_SLIDES] = HandleEndTurnTrainerASlides,
     [ENDTURN_TRAINER_B_SLIDES] = HandleEndTurnTrainerBSlides,
     [ENDTURN_TRAINER_PARTNER_SLIDES] = HandleEndTurnTrainerPartnerSlides,

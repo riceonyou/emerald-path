@@ -387,6 +387,7 @@ extern const u8 BattleScript_FriskMsgWithPopup[];
 extern const u8 BattleScript_FriskMsgWithPopup2[];
 extern const u8 BattleScript_FriskMsgWithPopup3[];
 extern const u8 BattleScript_MoodyActivates[];
+extern const u8 BattleScript_DeoxysMutationCharmActivates[];
 extern const u8 BattleScript_EmergencyExit[];
 extern const u8 BattleScript_EmergencyExitEnd2[];
 extern const u8 BattleScript_CheekPouchActivates[];

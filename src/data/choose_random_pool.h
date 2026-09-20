@@ -42,6 +42,73 @@ enum BirchBagPoolId {
     BIRCH_BAG_POOL_HOOH,
     BIRCH_BAG_POOL_LUGIA,
     BIRCH_BAG_POOL_KYOGRE,
+    BIRCH_BAG_POOL_DEOXYS_ATK,
+    BIRCH_BAG_POOL_DEOXYS_DEF,
+    BIRCH_BAG_POOL_DEOXYS_SPE,
+    BIRCH_BAG_POOL_REGIGIGAS,
+};
+
+static const struct BirchBagWeightedChoice Regigigas_Pool[] = {
+    {SPECIES_REGICE,5},
+    {SPECIES_REGIDRAGO,5},
+    {SPECIES_REGIELEKI,5},
+    {SPECIES_REGIROCK,5},
+    {SPECIES_REGISTEEL,5},
+    {SPECIES_REGIGIGAS,1},
+};
+
+static const struct BirchBagWeightedChoice Deoxys_Atk_Pool[] = {
+    {SPECIES_ALAKAZAM,5},
+    {SPECIES_GENGAR,5},
+    {SPECIES_KARTANA,2},
+    {SPECIES_SNEASLER,5},
+    {SPECIES_CHANDELURE,5},
+    {SPECIES_BLACEPHALON,2},
+    {SPECIES_SIRFETCHD,5},
+    {SPECIES_HAXORUS,5},
+    {SPECIES_ARMAROUGE,5},
+    {SPECIES_CERULEDGE,5},
+    {SPECIES_PORYGON_Z,5},
+    {SPECIES_RHYPERIOR,5},
+    {SPECIES_CONKELDURR,5},
+    {SPECIES_BAXCALIBUR,5},
+    {SPECIES_HATTERENE,5},
+};
+
+static const struct BirchBagWeightedChoice Deoxys_Def_Pool[] = {
+    {SPECIES_SHUCKLE,5},
+    {SPECIES_STAKATAKA,2},
+    {SPECIES_AVALUGG,4},
+    {SPECIES_AVALUGG_HISUI,4},
+    {SPECIES_STEELIX,5},
+    {SPECIES_AGGRON,5},
+    {SPECIES_CLOYSTER,5},
+    {SPECIES_BASTIODON,5},
+    {SPECIES_TOXAPEX,5},
+    {SPECIES_BLISSEY,5},
+    {SPECIES_CARBINK,5},
+    {SPECIES_PROBOPASS,5},
+    {SPECIES_FLORGES,5},
+    {SPECIES_GOODRA_HISUI,5},
+    {SPECIES_GUZZLORD,2},
+    {SPECIES_WAILORD,5},
+};
+
+static const struct BirchBagWeightedChoice Deoxys_Spe_Pool[] = {
+    {SPECIES_NINJASK,5},
+    {SPECIES_PHEROMOSA,2},
+    {SPECIES_ELECTRODE,4},
+    {SPECIES_ELECTRODE_HISUI,4},
+    {SPECIES_ACCELGOR,5},
+    {SPECIES_FLUTTER_MANE,1},
+    {SPECIES_CHIEN_PAO,1},
+    {SPECIES_JOLTEON,5},
+    {SPECIES_CROBAT,5},
+    {SPECIES_AERODACTYL,5},
+    {SPECIES_RAICHU_ALOLA,5},
+    {SPECIES_JUMPLUFF,5},
+    {SPECIES_ZEBSTRIKA,5},
+    {SPECIES_REVAVROOM,5},
 };
 
 static const struct BirchBagWeightedChoice Registeel_Pool[] = {
@@ -490,6 +557,18 @@ void LoadBirchBagPoolById(void)
         break;
     case BIRCH_BAG_POOL_KYOGRE:
         SetBirchBagWeightedChoices(Kyogre_Pool, ARRAY_COUNT(Kyogre_Pool));
+        break;
+    case BIRCH_BAG_POOL_DEOXYS_ATK:
+        SetBirchBagWeightedChoices(Deoxys_Atk_Pool, ARRAY_COUNT(Deoxys_Atk_Pool));
+        break;
+    case BIRCH_BAG_POOL_DEOXYS_DEF:
+        SetBirchBagWeightedChoices(Deoxys_Def_Pool, ARRAY_COUNT(Deoxys_Def_Pool));
+        break;
+    case BIRCH_BAG_POOL_DEOXYS_SPE:
+        SetBirchBagWeightedChoices(Deoxys_Spe_Pool, ARRAY_COUNT(Deoxys_Spe_Pool));
+        break;
+    case BIRCH_BAG_POOL_REGIGIGAS:
+        SetBirchBagWeightedChoices(Regigigas_Pool, ARRAY_COUNT(Regigigas_Pool));
         break;
     }
 }

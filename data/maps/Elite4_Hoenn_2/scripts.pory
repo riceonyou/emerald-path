@@ -2,9 +2,23 @@ mapscripts Elite4_Hoenn_2_MapScripts {
 }
 
 script Elite4_Hoenn_2_EventScript_MegaAbsol{
-
-	trainerbattle_single(TRAINER_MEGAABSOL, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	msgbox(format("Welcome to the Elite 4.\pFrom here, you will fight 4 extremely strong trainers, and the champion.\pPlease note that there is a special rule with battling the Elite 4.\pThat is, you must battle 2 of us as a SINGLES battle, and 2 of us as a DOUBLES battle.\pYou may choose which one of us to battle in which format.\pNow, how would you like to battle me?"))
+	
+	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
+		dynmultipush("SINGLES", 0)
+	}
+	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
+		dynmultipush("DOUBLES", 1)
+	}
+	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+	if(var(VAR_RESULT) == 0){
+		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
+	}
+	if(var(VAR_RESULT) == 1){
+		setflag(FLAG_FORCE_DOUBLES_BATTLE)
+		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
+	}
+	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -12,8 +26,23 @@ script Elite4_Hoenn_2_EventScript_MegaAbsol{
 
 script Elite4_Hoenn_2_EventScript_MegaSableye{
 
-	trainerbattle_single(TRAINER_MEGASABLEYE, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	msgbox(format("How would you like to battle me?"))
+	
+	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
+		dynmultipush("SINGLES", 0)
+	}
+	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
+		dynmultipush("DOUBLES", 1)
+	}
+	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+	if(var(VAR_RESULT) == 0){
+		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
+	}
+	if(var(VAR_RESULT) == 1){
+		setflag(FLAG_FORCE_DOUBLES_BATTLE)
+		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
+	}
+	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -21,8 +50,23 @@ script Elite4_Hoenn_2_EventScript_MegaSableye{
 
 script Elite4_Hoenn_2_EventScript_MegaGlalie{
 
-	trainerbattle_single(TRAINER_MEGAGLALIE, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	msgbox(format("How would you like to battle me?"))
+	
+	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
+		dynmultipush("SINGLES", 0)
+	}
+	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
+		dynmultipush("DOUBLES", 1)
+	}
+	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+	if(var(VAR_RESULT) == 0){
+		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
+	}
+	if(var(VAR_RESULT) == 1){
+		setflag(FLAG_FORCE_DOUBLES_BATTLE)
+		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
+	}
+	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -30,8 +74,23 @@ script Elite4_Hoenn_2_EventScript_MegaGlalie{
 
 script Elite4_Hoenn_2_EventScript_MegaSalamence{
 
-	trainerbattle_single(TRAINER_MEGASALAMENCE, "test.", "test.")
-	msgbox("test.", MSGBOX_AUTOCLOSE) 
+	msgbox(format("How would you like to battle me?"))
+	
+	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
+		dynmultipush("SINGLES", 0)
+	}
+	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
+		dynmultipush("DOUBLES", 1)
+	}
+	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+	if(var(VAR_RESULT) == 0){
+		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
+	}
+	if(var(VAR_RESULT) == 1){
+		setflag(FLAG_FORCE_DOUBLES_BATTLE)
+		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
+	}
+	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 
@@ -39,10 +98,42 @@ script Elite4_Hoenn_2_EventScript_MegaSalamence{
 
 script Elite4_Hoenn_2_EventScript_MegaSwampert{
 
-	trainerbattle_single(TRAINER_MEGASWAMPERT, "test.", "test.")
+	trainerbattle_single(TRAINER_MEGASWAMPERT, "I am the champion.\pYou have done well to get this far.\pNow let us have a wonderful\nfinal battle.", "You are the champion.", Elite4_Hoenn_2_CHAMPION_DEFEATED)
 	msgbox("test.", MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
+
+}
+
+script Elite4_Hoenn_2_CHAMPION_DEFEATED{
+
+	msgbox("Congratulations.\pYou have conquered all 4 paths.\pYou are truly great.\pGood job.\pEtcetra etcetra...\pNow go back to the Hub.", MSGBOX_AUTOCLOSE) 
+	waitmessage
+	applymovement(LOCALID_PLAYER, moves(
+        face_down
+        jump_in_place_down * 2
+		delay_8
+		face_left
+		face_up
+		face_right
+		face_down
+		delay_16
+		jump_in_place_down
+		walk_down
+		walk_up
+		walk_left
+		walk_right * 2
+		walk_left
+		face_down
+    ))
+	waitmovement
+    applymovement(LOCALID_PLAYER, moves(
+		jump_in_place_down * 10
+    ))
+	msgbox("Yipee!")
+	waitmessage
+	special(WarpToNextAct)
+	end
 
 }
 

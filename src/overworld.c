@@ -1,5 +1,6 @@
 #include "global.h"
 #include "overworld.h"
+#include "battle.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -1169,34 +1170,35 @@ void WarpToNextAncient(void)
 
     switch (currentact){
         case (1):
-                u8 rand1 = Random() % 5;
+                u8 rand1 = Random() % 6;
 				switch (rand1) {
 					case 0:
+                    case 1:
                         u8 randregi = Random() % 3;
                         VarSet(VAR_0x8000, randregi);
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_REGIS), MAP_NUM(MAP_ANCIENT_REGIS), WARP_ID_NONE, 8, 12);
 						DoWarp();
                         break;
-                    case 1:
+                    case 2:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_MANAPHY), MAP_NUM(MAP_ANCIENT_MANAPHY), WARP_ID_NONE, 8, 11);
 						DoWarp();
                         break;
-                    case 2:
+                    case 3:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_SHAYMIN), MAP_NUM(MAP_ANCIENT_SHAYMIN), WARP_ID_NONE, 6, 13);
 						DoWarp();
                         break;
-                    case 3:
+                    case 4:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_HOOH), MAP_NUM(MAP_ANCIENT_HOOH), WARP_ID_NONE, 5, 11);
 						DoWarp();
                         break;
-                    case 4:
+                    case 5:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_LUGIA), MAP_NUM(MAP_ANCIENT_LUGIA), WARP_ID_NONE, 5, 11);
 						DoWarp();
                         break;
 				}; 
                 break;
         case (2):
-                u8 rand2 = Random() % 3;
+                u8 rand2 = Random() % 2;
 				switch (rand2) {
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_MEWTWO_2), MAP_NUM(MAP_ANCIENT_MEWTWO_2), WARP_ID_NONE, 4, 8);
@@ -1206,16 +1208,10 @@ void WarpToNextAncient(void)
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_JIRACHI), MAP_NUM(MAP_ANCIENT_JIRACHI), WARP_ID_NONE, 12, 11);
 						DoWarp();
                         break;
-                    case 2:
-                        u8 randdeoxys = Random() % 3;
-                        VarSet(VAR_0x8000, randdeoxys);
-                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_DEOXYS), MAP_NUM(MAP_ANCIENT_DEOXYS), WARP_ID_NONE, 17, 16);
-						DoWarp();
-                        break;
 				}; 
                 break;
         case (3):
-                u8 rand3 = Random() % 2;
+                u8 rand3 = Random() % 4;
 				switch (rand3) {
 					case 0:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_KYOGRE), MAP_NUM(MAP_ANCIENT_KYOGRE), WARP_ID_NONE, 8, 11);
@@ -1223,6 +1219,13 @@ void WarpToNextAncient(void)
                         break;
                     case 1:
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_GROUDON), MAP_NUM(MAP_ANCIENT_GROUDON), WARP_ID_NONE, 8, 11);
+						DoWarp();
+                        break;
+                    case 2:
+                    case 3:
+                        u8 randdeoxys = Random() % 3;
+                        VarSet(VAR_0x8000, randdeoxys);
+                        SetWarpDestination(MAP_GROUP(MAP_ANCIENT_DEOXYS), MAP_NUM(MAP_ANCIENT_DEOXYS), WARP_ID_NONE, 17, 16);
 						DoWarp();
                         break;
 				}; 
@@ -1294,6 +1297,10 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                     FlagSet(FLAG_BIRCHBAG_3_8);
                 }
 
+                VarSet(VAR_ELITE4_DOUBLES_BATTLE_COUNT, 0);
+                VarSet(VAR_ELITE4_SINGLES_BATTLE_COUNT, 0);
+
+                //DO ALT ACTS
                 u8 numact1s = 1;
                 if (FlagGet(FLAG_HOENN1_ALT_UNLOCKED))
                     numact1s += 1;
@@ -1359,7 +1366,6 @@ void WarpToNextAct(void) //UPDATE AS YOU ADD NEW ACTS!!
                 }
                 ResetPokemonAndItems();
                 ClearWhiteoutFlags();
-                VarSet(VAR_CURRENT_ACT, 0);
                 ClearMoney();
 
                 SetWarpHub();
@@ -1508,6 +1514,13 @@ void DoWhiteOut(void)
 {
     if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
     {
+        if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+         && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL | BATTLE_TYPE_PYRAMID)))
+        {
+            ClearTrainerFlag(TRAINER_BATTLE_PARAM.opponentA);
+            if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
+                ClearTrainerFlag(TRAINER_BATTLE_PARAM.opponentB);
+        }
         u8 CurrentPath = VarGet(VAR_CURRENT_PATH);
         switch (CurrentPath)
         {

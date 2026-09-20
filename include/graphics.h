@@ -1564,7 +1564,8 @@ extern const u16 gItemIconPalette_MaxieGlassesCharm[];
 extern const u32 gItemIcon_ArchieBandanaCharm[];
 extern const u16 gItemIconPalette_ArchieBandanaCharm[];
 
-
+extern const u32 gItemIcon_CloningDeviceCharm[];
+extern const u16 gItemIconPalette_CloningDeviceCharm[];
 
 extern const u32 gItemIcon_PocketBirchBag[];
 extern const u16 gItemIconPalette_PocketBirchBag[];

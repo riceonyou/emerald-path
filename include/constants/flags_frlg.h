@@ -2532,7 +2532,7 @@
 #define FLAG_PHIONE_EGG_HATCHED               0
 #define FLAG_GIVE_MINTY_CHARM_MINT                0
 #define FLAG_HOOH_FEATHER_USED                0
-#define FLAG_LANDMARK_NEW_MAUVILLE                  0
+#define FLAG_FORCE_DOUBLES_BATTLE                  0
 #define FLAG_LANDMARK_OLD_LADY_REST_SHOP            0
 #define FLAG_LANDMARK_TRICK_HOUSE                   0
 #define FLAG_LANDMARK_WINSTRATE_FAMILY              0

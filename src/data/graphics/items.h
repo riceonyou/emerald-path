@@ -1811,6 +1811,8 @@ const u16 gItemIconPalette_MaxieGlassesCharm[] = INCBIN_U16("graphics/items/icon
 const u32 gItemIcon_ArchieBandanaCharm[] = INCBIN_U32("graphics/items/icons/ArchieBandana.4bpp.smol");
 const u16 gItemIconPalette_ArchieBandanaCharm[] = INCBIN_U16("graphics/items/icon_palettes/ArchieBandana.gbapal");
 
+const u32 gItemIcon_CloningDeviceCharm[] = INCBIN_U32("graphics/items/icons/CloningDevice.4bpp.smol");
+const u16 gItemIconPalette_CloningDeviceCharm[] = INCBIN_U16("graphics/items/icon_palettes/CloningDevice.gbapal");
 
 
 

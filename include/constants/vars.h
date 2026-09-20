@@ -107,8 +107,8 @@
 #define VAR_SHINY_RATE                        0x4055
 #define VAR_CURRENT_RIVAL                      0x4056 // 0 is treecko, 1 is torchic,
 #define VAR_COINS_COLLECTED_IN_A_RUN                         0x4057 //0 at start of every run. At end of run tells you how many coins you got
-#define VAR_SLATEPORT_CITY_STATE                         0x4058
-#define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var
+#define VAR_ELITE4_DOUBLES_BATTLE_COUNT                         0x4058
+#define VAR_ELITE4_SINGLES_BATTLE_COUNT                          0x4059
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
 #define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var

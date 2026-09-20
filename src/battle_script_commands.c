@@ -6287,8 +6287,8 @@ static void Cmd_getmoneyreward(void)
         money = GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentA);
 
         u32 coinsamount;
-        coinsamount = (money * (90 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/2)) / 25;
-        coinsamount = coinsamount + 8;
+        coinsamount = (money * (90 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/2)) / 20;
+        coinsamount = coinsamount + 20 + (10 * (1 + (VarGet(VAR_CURRENT_DIFFICULTY))/2));
         coinsamount = coinsamount * (1 + (VarGet(VAR_CURRENT_DIFFICULTY) * 2)/3);
         AddCoins(coinsamount);
         VarSet(VAR_COINS_COLLECTED_IN_A_RUN, VarGet(VAR_COINS_COLLECTED_IN_A_RUN) + coinsamount);
@@ -11361,7 +11361,11 @@ static void Cmd_givecaughtmon(void)
                     StringCopy(gStringVar1, GetBoxNamePtr(GetPCBoxToSendMon()));
                     ZeroMonData(&gPlayerParty[gSelectedMonPartyId]);
                     for(int i = 0; i < MAX_MON_ITEMS; i++)
+                    {
                         gBattleStruct->itemLost[B_SIDE_PLAYER][gSelectedMonPartyId][i].originalItem = ITEM_NONE;
+                        // This slot is about to hold the newly caught mon, so drop any pending item restoration for the mon that used to occupy it
+                        gBattleStruct->itemLost[B_SIDE_PLAYER][gSelectedMonPartyId][i].stolen = FALSE;
+                    }
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWAPPED_INTO_PARTY;
                     gSelectedMonPartyId = PARTY_SIZE;
                     gBattleCommunication[MULTIUSE_STATE] = GIVECAUGHTMON_GIVE_AND_SHOW_MSG;
