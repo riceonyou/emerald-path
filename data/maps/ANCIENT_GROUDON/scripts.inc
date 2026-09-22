@@ -38,30 +38,32 @@ ANCIENT_GROUDON_EventScript_Groudon::
 # 28 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_2
 # 29 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_3
+	waitfanfare
 # 30 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_3
 # 31 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	giveitem ITEM_TM_SUNNY_DAY, 1
-# 32 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitmessage
+# 32 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	giveitem ITEM_TM_SUNNY_DAY, 1
 # 33 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	waitmessage
+# 34 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	applymovement 1, ANCIENT_GROUDON_EventScript_Groudon_Movement_0
-# 38 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	waitmovement
 # 39 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_4
-# 40 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	applymovement 1, ANCIENT_GROUDON_EventScript_Groudon_Movement_1
-# 47 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitmovement
+# 40 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	msgbox ANCIENT_GROUDON_EventScript_Groudon_Text_4
+# 41 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	applymovement 1, ANCIENT_GROUDON_EventScript_Groudon_Movement_1
 # 48 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
+	waitmovement
 # 49 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
+# 50 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	waitmoncry
-# 51 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	special WarpToNextAct
 # 52 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	special WarpToNextAct
+# 53 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	releaseall
 	return
 
@@ -76,17 +78,17 @@ ANCIENT_GROUDON_EventScript_Groudon_Movement_0:
 	face_player
 	step_end
 
-# 40 "data/maps/ANCIENT_GROUDON/scripts.pory"
-ANCIENT_GROUDON_EventScript_Groudon_Movement_1:
 # 41 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	face_left
+ANCIENT_GROUDON_EventScript_Groudon_Movement_1:
 # 42 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	face_up
+	face_left
 # 43 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	face_right
+	face_up
 # 44 "data/maps/ANCIENT_GROUDON/scripts.pory"
-	face_down
+	face_right
 # 45 "data/maps/ANCIENT_GROUDON/scripts.pory"
+	face_down
+# 46 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	face_player
 	step_end
 
@@ -112,11 +114,11 @@ ANCIENT_GROUDON_EventScript_Groudon_Text_2:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_3:
-# 29 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 30 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "And please take a Sunny Day TM too.$"
 
 ANCIENT_GROUDON_EventScript_Groudon_Text_4:
-# 39 "data/maps/ANCIENT_GROUDON/scripts.pory"
+# 40 "data/maps/ANCIENT_GROUDON/scripts.pory"
 	.string "The final path lays before you. It'll be\n"
 	.string "different to all the earlier paths in\l"
 	.string "that there won't be any birch bags or\l"

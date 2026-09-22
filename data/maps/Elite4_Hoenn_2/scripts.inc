@@ -213,84 +213,86 @@ Elite4_Hoenn_2_EventScript_MegaSwampert::
 
 
 Elite4_Hoenn_2_CHAMPION_DEFEATED::
+# 109 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	playbgm MUS_VICTORY_LEAGUE, 0
 # 110 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	msgbox Elite4_Hoenn_2_CHAMPION_DEFEATED_Text_0, MSGBOX_AUTOCLOSE
 # 111 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	waitmessage
-# 112 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 113 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	applymovement LOCALID_PLAYER, Elite4_Hoenn_2_CHAMPION_DEFEATED_Movement_0
-# 129 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	waitmovement
 # 130 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	waitmovement
+# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	applymovement LOCALID_PLAYER, Elite4_Hoenn_2_CHAMPION_DEFEATED_Movement_1
-# 133 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	msgbox Elite4_Hoenn_2_CHAMPION_DEFEATED_Text_1
 # 134 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	waitmessage
+	msgbox Elite4_Hoenn_2_CHAMPION_DEFEATED_Text_1
 # 135 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	waitmessage
+# 136 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	special WarpToNextAct
 	end
 
 
-# 112 "data/maps/Elite4_Hoenn_2/scripts.pory"
-Elite4_Hoenn_2_CHAMPION_DEFEATED_Movement_0:
 # 113 "data/maps/Elite4_Hoenn_2/scripts.pory"
+Elite4_Hoenn_2_CHAMPION_DEFEATED_Movement_0:
+# 114 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	face_down
-# 114 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	jump_in_place_down
-# 114 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 115 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
 # 115 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	delay_8
-# 116 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	face_left
-# 117 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	face_up
-# 118 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	face_right
-# 119 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	face_down
-# 120 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	delay_16
-# 121 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
+# 116 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	delay_8
+# 117 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	face_left
+# 118 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	face_up
+# 119 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	face_right
+# 120 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	face_down
+# 121 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	delay_16
 # 122 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	walk_down
+	jump_in_place_down
 # 123 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	walk_up
+	walk_down
 # 124 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	walk_up
+# 125 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	walk_left
-# 125 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	walk_right
-# 125 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 126 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	walk_right
 # 126 "data/maps/Elite4_Hoenn_2/scripts.pory"
-	walk_left
+	walk_right
 # 127 "data/maps/Elite4_Hoenn_2/scripts.pory"
+	walk_left
+# 128 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	face_down
 	step_end
 
-# 130 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
 Elite4_Hoenn_2_CHAMPION_DEFEATED_Movement_1:
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
-# 131 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 132 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	jump_in_place_down
 	step_end
 
@@ -353,5 +355,5 @@ Elite4_Hoenn_2_CHAMPION_DEFEATED_Text_0:
 	.string "Congratulations.\pYou have conquered all 4 paths.\pYou are truly great.\pGood job.\pEtcetra etcetra...\pNow go back to the Hub.$"
 
 Elite4_Hoenn_2_CHAMPION_DEFEATED_Text_1:
-# 133 "data/maps/Elite4_Hoenn_2/scripts.pory"
+# 134 "data/maps/Elite4_Hoenn_2/scripts.pory"
 	.string "Yipee!$"

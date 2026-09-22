@@ -23,11 +23,12 @@ script AfterWarpIntoNewAct{
 			playfanfare(MUS_EVOLVED)
 			clearflag(FLAG_PHIONE_EGG_HATCHED)
 			msgbox("Your Phione egg hatched into a Phione!")
+			waitfanfare
         }
 
 		//Give Minty Charm Mint
         if (flag(FLAG_GIVE_MINTY_CHARM_MINT)){
-			msgbox("Your Minty Charm activated!")
+			msgbox("Your Mint Pot activated!")
 			randomelement(ITEM_LONELY_MINT, ITEM_ADAMANT_MINT, ITEM_NAUGHTY_MINT, ITEM_BRAVE_MINT, ITEM_BOLD_MINT, ITEM_IMPISH_MINT, ITEM_LAX_MINT, ITEM_RELAXED_MINT, ITEM_MODEST_MINT, ITEM_MILD_MINT, ITEM_RASH_MINT, ITEM_QUIET_MINT, ITEM_CALM_MINT, ITEM_GENTLE_MINT, ITEM_CAREFUL_MINT, ITEM_SASSY_MINT, ITEM_SERIOUS_MINT)
 			giveitem(VAR_RESULT)
 			clearflag(FLAG_GIVE_MINTY_CHARM_MINT)
@@ -38,6 +39,7 @@ script AfterWarpIntoNewAct{
 			playfanfare(MUS_OBTAIN_ITEM)
 			buffernumberstring(STR_VAR_1, VAR_LEVEL_CAP)
 			msgbox(format("The level cap has been raised to {STR_VAR_1}!\pYou can level your pokemon up to the cap via the party menu."))
+			waitfanfare
 		}
 
 
@@ -46,6 +48,7 @@ script AfterWarpIntoNewAct{
 			
 			if(var(VAR_COINS_COLLECTED_IN_A_RUN) > 0){
 				buffernumberstring(STR_VAR_1, VAR_COINS_COLLECTED_IN_A_RUN)
+				playfanfare(MUS_OBTAIN_ITEM)
 				msgbox("You managed to collect\n{STR_VAR_1} COINS in your last run!")
 				setvar(VAR_COINS_COLLECTED_IN_A_RUN, 0)
 			}
@@ -54,25 +57,35 @@ script AfterWarpIntoNewAct{
 			//starter charms
 			if((!flag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 0)){
 				setflag(FLAG_MINTY_CHARM_STARTER_UNLOCKED)
-				msgbox(format("You've unlocked the Minty Charm as a starter charm!"))
+				playfanfare(MUS_OBTAIN_ITEM)
+				msgbox(format("You've unlocked the Mint Pot as a starter charm!"))
+				waitfanfare
 			}
 			if((!flag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 3)){
 				setflag(FLAG_TINTED_CHARM_STARTER_UNLOCKED)
-				msgbox(format("You've unlocked the Tinted Charm as a starter charm!"))
+				playfanfare(MUS_OBTAIN_ITEM)
+				msgbox(format("You've unlocked the Tinted Scope as a starter charm!"))
+				waitfanfare
 			}
 			if((!flag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)) && (var(VAR_TOTAL_RUNS) > 6)){
 				setflag(FLAG_NORMAL_CHARM_STARTER_UNLOCKED)
+				playfanfare(MUS_OBTAIN_ITEM)
 				msgbox(format("You've unlocked the Normal Charm as a starter charm!"))
+				waitfanfare
 			}
 			//difficulty
 			if(flag(FLAG_NEW_DIFFICULTY_UNLOCKED)){
+				playfanfare(MUS_OBTAIN_ITEM)
 				msgbox(format("You've unlocked a new difficulty!"))
+				waitfanfare
 				clearflag(FLAG_NEW_DIFFICULTY_UNLOCKED)
 			}
 			//new alt path
 			if((!flag(FLAG_HOENN1_ALT_UNLOCKED)) && (var(VAR_ACT1_WINS) > 1)){
 				setflag(FLAG_HOENN1_ALT_UNLOCKED)
+				playfanfare(MUS_OBTAIN_ITEM)
 				msgbox(format("You've unlocked an alternate first path! Each time you enter a path, you now have a chance to enter the alternate path."))
+				waitfanfare
 			}
 		}
 		releaseall
@@ -103,7 +116,9 @@ script Act1BirchBag{
     special(ChooseBirchBagPokemonWeighted)
 	waitstate
 	playfanfare(MUS_EVOLVED)
+	
 	msgbox("You received a\n{STR_VAR_1}!")
+	waitfanfare
 }
 script Act2BirchBag{
 	playse(SE_CLICK)
@@ -113,7 +128,9 @@ script Act2BirchBag{
     special(ChooseBirchBagPokemonWeighted)
 	waitstate
 	playfanfare(MUS_EVOLVED)
+	
 	msgbox("You received a\n{STR_VAR_1}!")
+	waitfanfare
 }
 script Act3BirchBag{
 	playse(SE_CLICK)
@@ -123,17 +140,19 @@ script Act3BirchBag{
     special(ChooseBirchBagPokemonWeighted)
 	waitstate
 	playfanfare(MUS_EVOLVED)
+	
 	msgbox("You received a\n{STR_VAR_1}!")
+	waitfanfare
 }
 
 script AbraTeleport{
 	lockall
 	if(!flag(FLAG_DEFEATED_PATH_LEADER)){
-		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next act.")
+		msgbox("You'll have to defeat the leader first\nbefore I can teleport you\lto the next path.")
 		releaseall
 	}
 	else{
-		msgbox("Would you like to teleport\nto the next act?", MSGBOX_YESNO)
+		msgbox("Would you like to teleport\nto the next path?", MSGBOX_YESNO)
 		switch (var(VAR_RESULT)) {
 			case YES:
 				msgbox("Alright then! Here we go!")
@@ -217,7 +236,6 @@ script HUB1_Run_Stats_Sign {
 
     buffernumberstring(STR_VAR_1, VAR_TOTAL_RUNS)
     buffernumberstring(STR_VAR_2, VAR_ACT1_WINS)
-    buffernumberstring(STR_VAR_3, VAR_ACT2_WINS)
     msgbox("Total Runs: {STR_VAR_1}\nAct 1 Wins: {STR_VAR_2}")
     waitmessage
 
@@ -246,8 +264,15 @@ script HUB1_ONFRAME {
 		setflag(FLAG_SYS_NEW_GAME)
 		setvar(VAR_SHINY_RATE, 4096)//4096 originally
 		setvar(VAR_LEVEL_CAP, 14)
+		setvar(VAR_CURRENT_DIFFICULTY, 0)
+		setvar(VAR_CURRENT_ACT, 0)
+		setvar(VAR_TOTAL_RUNS, 0)
+		setvar(VAR_ACT1_WINS, 0)
+		setvar(VAR_ACT2_WINS, 0)
+		setvar(VAR_ACT3_WINS, 0)
+		setvar(VAR_ACT4_WINS, 0)
 
-		//Intro
+		//Intro	
 		msgbox("Welcome to Pokemon Path!\pTo start, please choose\na starter pokemon.")
 		
 		//Give starter pokemon
@@ -398,7 +423,7 @@ script HUB1_ONFRAME {
 		lockall
 		// msgbox("Use this item to level up your\nPokemon.")
 		// giveitem(ITEM_CANDY_JAR)
-		msgbox(format("Nice choice!\pNow for an introduction...\pThis area is the Hub.\nYou start every run and end every run here.\pIn the hub, you can unlock new starter pokemon, new shop items, and more.\pTo start a run, talk to professor Birch above you.\pEach run, you must go through paths, collecting pokemon, gathering items and battling trainers.\pThat's the gist of it.\pNow go ahead and start a run when you're ready!"))	
+		msgbox(format("Nice choice!\pNow for an introduction...\pThis area is the Hub.\nYou start every run and end every run here.\pIn the hub, you can unlock new starter pokemon, new shop items, and more.\pTo start a run, talk to professor Birch above you.\pEach run, you must go through paths, collecting pokemon from birch bags, gathering items and battling trainers.\pThat's the gist of it.\pNow go ahead and start a run when you're ready!"))	
 
 		releaseall
 	}
@@ -967,37 +992,37 @@ script KecShop {
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPDEF_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Sp. Def Bottle Cap (¥300)",ITEM_SPDEF_BOTTLE_CAP)
+		dynmultipush("SpDef Bottle Cap (¥300)",ITEM_SPDEF_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_HP_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("HP Gold Bottle Cap (¥700)",ITEM_HP_GOLD_BOTTLE_CAP)
+		dynmultipush("HP Gold Bottle Cap (¥600)",ITEM_HP_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Attack Gold Bottle Cap (¥700)",ITEM_ATK_GOLD_BOTTLE_CAP)
+		dynmultipush("Atk Gold Bottle Cap (¥600)",ITEM_ATK_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_DEF_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Defense Gold Bottle Cap (¥700)",ITEM_DEF_GOLD_BOTTLE_CAP)
+		dynmultipush("Defense Gold Bottle Cap (¥600)",ITEM_DEF_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPEED_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Speed Gold Bottle Cap (¥700)",ITEM_SPEED_GOLD_BOTTLE_CAP)
+		dynmultipush("Spe Gold Bottle Cap (¥600)",ITEM_SPEED_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Sp. Atk Gold Bottle Cap (¥700)",ITEM_SPATK_GOLD_BOTTLE_CAP)
+		dynmultipush("SpAtk Gold Bottle Cap (¥600)",ITEM_SPATK_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPDEF_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Sp. Def Gold Bottle Cap (¥700)",ITEM_SPDEF_GOLD_BOTTLE_CAP)
+		dynmultipush("SpDef Gold Bottle Cap (¥600)",ITEM_SPDEF_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 
 	if(var(VAR_TEMP_A) != 0){
-		showmoneybox(18, 10)
+		showmoneybox(18, 11)
 		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_ORAN_BERRY:
@@ -1084,8 +1109,8 @@ script KecShop {
 			case ITEM_SPEED_GOLD_BOTTLE_CAP:
 			case ITEM_SPATK_GOLD_BOTTLE_CAP:
 			case ITEM_SPDEF_GOLD_BOTTLE_CAP:
-				if(checkmoney(700)){
-					removemoney(700)
+				if(checkmoney(600)){
+					removemoney(600)
 					updatemoneybox
 					playse(SE_SHOP)
 					giveitem(VAR_RESULT)
@@ -1207,7 +1232,7 @@ script KecShop_Shiny {
 	}
 
 	if(var(VAR_TEMP_A) != 0){
-		showmoneybox(18, 10)
+		showmoneybox(18, 11)
 		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_TM_NOBLE_ROAR:
@@ -1502,32 +1527,32 @@ script Hub_Event_Script_Kecleon {
     setvar(VAR_TEMP_A, 0)
 	msgbox("Hey there! Would you like me to\nstock an item?")
 	if(!flag(FLAG_RARE_CANDY_UNLOCKED)){
-		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
+		dynmultipush("Rare Candy (2000C)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	
 	if(!flag(FLAG_LUM_BERRY_UNLOCKED)){
-		dynmultipush("Lum Berry (¥500)",ITEM_LUM_BERRY)
+		dynmultipush("Lum Berry (500C)",ITEM_LUM_BERRY)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 	if(!flag(FLAG_SERIOUS_MINT_UNLOCKED)){
-		dynmultipush("Serious Mint (¥2000)",ITEM_SERIOUS_MINT)
+		dynmultipush("Serious Mint (2000C)",ITEM_SERIOUS_MINT)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 	if(!flag(FLAG_IV_BOTTLE_CAPS_UNLOCKED)){
-		dynmultipush("Bottle Caps (¥1000)",ITEM_HP_BOTTLE_CAP)
+		dynmultipush("Bottle Caps (1000C)",ITEM_HP_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 	if(!flag(FLAG_IV_GOLD_BOTTLE_CAPS_UNLOCKED)){
-		dynmultipush("Gold Bottle Caps (¥2000)",ITEM_HP_GOLD_BOTTLE_CAP)
+		dynmultipush("Gold Bottle Caps (2000C)",ITEM_HP_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 	if(!flag(FLAG_POCKET_BIRCH_BAG_UNLOCKED)){
-		dynmultipush("Pkt Birch Bag (¥1000)",ITEM_POCKET_BIRCH_BAG)
+		dynmultipush("Pkt Birch Bag (1000C)",ITEM_POCKET_BIRCH_BAG)
 		addvar(VAR_TEMP_A, 1)
 	}
 
@@ -1637,95 +1662,95 @@ script Hub_Event_Script_Shiny_Kecleon {
     setvar(VAR_TEMP_A, 0)
 	msgbox("Howdy! Would you like me to\nstock a new TM?")
 	if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
-		dynmultipush("TM Noble Roar (¥400)",ITEM_TM_NOBLE_ROAR)
+		dynmultipush("TM Noble Roar (400C)",ITEM_TM_NOBLE_ROAR)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_CHARM_UNLOCKED)){
-		dynmultipush("TM Charm (¥400)",ITEM_TM_CHARM)
+		dynmultipush("TM Charm (400C)",ITEM_TM_CHARM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_FAKE_TEARS_UNLOCKED)){
-		dynmultipush("TM Fake Tears (¥400)",ITEM_TM_FAKE_TEARS)
+		dynmultipush("TM Fake Tears (400C)",ITEM_TM_FAKE_TEARS)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_CONFUSE_RAY_UNLOCKED)){
-		dynmultipush("TM Confuse Ray (¥800)",ITEM_TM_CONFUSE_RAY)
+		dynmultipush("TM Confuse Ray (800C)",ITEM_TM_CONFUSE_RAY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_THUNDER_WAVE_UNLOCKED)){
-		dynmultipush("TM Thunder Wave (¥800)",ITEM_TM_THUNDER_WAVE)
+		dynmultipush("TM Thunder Wave (800C)",ITEM_TM_THUNDER_WAVE)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_WILL_O_WISP_UNLOCKED)){
-		dynmultipush("TM Will-O-Wisp (¥800)",ITEM_TM_WILL_O_WISP)
+		dynmultipush("TM Will-O-Wisp (800C)",ITEM_TM_WILL_O_WISP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_TOXIC_UNLOCKED)){
-		dynmultipush("TM Toxic (¥800)",ITEM_TM_TOXIC)
+		dynmultipush("TM Toxic (800C)",ITEM_TM_TOXIC)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_ROCK_SMASH_UNLOCKED)){
-		dynmultipush("TM Rock Smash (¥900)",ITEM_TM_ROCK_SMASH)
+		dynmultipush("TM Rock Smash (900C)",ITEM_TM_ROCK_SMASH)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_SNARL_UNLOCKED)){
-		dynmultipush("TM Snarl (¥900)",ITEM_TM_SNARL)
+		dynmultipush("TM Snarl (900C)",ITEM_TM_SNARL)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_ELECTROWEB_UNLOCKED)){
-		dynmultipush("TM Electroweb (¥900)",ITEM_TM_ELECTROWEB)
+		dynmultipush("TM Electroweb (900C)",ITEM_TM_ELECTROWEB)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_AURORA_BEAM_UNLOCKED)){
-		dynmultipush("TM Aurora Beam (¥900)",ITEM_TM_AURORA_BEAM)
+		dynmultipush("TM Aurora Beam (900C)",ITEM_TM_AURORA_BEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_PSYBEAM_UNLOCKED)){
-		dynmultipush("TM Psybeam (¥900)",ITEM_TM_PSYBEAM)
+		dynmultipush("TM Psybeam (900C)",ITEM_TM_PSYBEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_MEGA_DRAIN_UNLOCKED)){
-		dynmultipush("TM Mega Drain (¥900)",ITEM_TM_MEGA_DRAIN)
+		dynmultipush("TM Mega Drain (900C)",ITEM_TM_MEGA_DRAIN)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_FLAMETHROWER_UNLOCKED)){
-		dynmultipush("TM Flamethrower (¥1200)",ITEM_TM_FLAMETHROWER)
+		dynmultipush("TM Flamethrower (1200C)",ITEM_TM_FLAMETHROWER)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_ICE_BEAM_UNLOCKED)){
-		dynmultipush("TM Ice Beam (¥1200)",ITEM_TM_ICE_BEAM)
+		dynmultipush("TM Ice Beam (1200C)",ITEM_TM_ICE_BEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_THUNDERBOLT_UNLOCKED)){
-		dynmultipush("TM Thunderbolt (¥1200)",ITEM_TM_THUNDERBOLT)
+		dynmultipush("TM Thunderbolt (1200C)",ITEM_TM_THUNDERBOLT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_SCALD_UNLOCKED)){
-		dynmultipush("TM Scald (¥1200)",ITEM_TM_SCALD)
+		dynmultipush("TM Scald (1200C)",ITEM_TM_SCALD)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_SLUDGE_BOMB_UNLOCKED)){
-		dynmultipush("TM Sludge Bomb (¥1200)",ITEM_TM_SLUDGE_BOMB)
+		dynmultipush("TM Sludge Bomb (1200C)",ITEM_TM_SLUDGE_BOMB)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_DUAL_WINGBEAT_UNLOCKED)){
-		dynmultipush("TM Dual Wingbeat (¥1200)",ITEM_TM_DUAL_WINGBEAT)
+		dynmultipush("TM Dual Wingbeat (1200C)",ITEM_TM_DUAL_WINGBEAT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_LEECH_LIFE_UNLOCKED)){
-		dynmultipush("TM Leech Life (¥1200)",ITEM_TM_LEECH_LIFE)
+		dynmultipush("TM Leech Life (1200C)",ITEM_TM_LEECH_LIFE)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_PLAY_ROUGH_UNLOCKED)){
-		dynmultipush("TM Play Rough (¥1200)",ITEM_TM_PLAY_ROUGH)
+		dynmultipush("TM Play Rough (1200C)",ITEM_TM_PLAY_ROUGH)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_SHADOW_BALL_UNLOCKED)){
-		dynmultipush("TM Shadow Ball (¥1200)",ITEM_TM_SHADOW_BALL)
+		dynmultipush("TM Shadow Ball (1200C)",ITEM_TM_SHADOW_BALL)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(!flag(FLAG_TM_EARTH_POWER_UNLOCKED)){
-		dynmultipush("TM Earth Power (¥1200)",ITEM_TM_EARTH_POWER)
+		dynmultipush("TM Earth Power (1200C)",ITEM_TM_EARTH_POWER)
 		addvar(VAR_TEMP_A, 1)
 	}
 
@@ -1851,7 +1876,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 						if(var(VAR_RESULT)>=800){
 							setflag(FLAG_TM_WILL_O_WISP_UNLOCKED)
-							giveitem(ITEM_TM_WILL_O_WISP, 1)
 							removecoins(800)
 							updatecoinsbox(0,0)
 							playse(SE_SHOP)
@@ -1866,7 +1890,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 						if(var(VAR_RESULT)>=800){
 							setflag(FLAG_TM_TOXIC_UNLOCKED)
-							giveitem(ITEM_TM_TOXIC, 1)
 							removecoins(800)
 							updatecoinsbox(0,0)
 							playse(SE_SHOP)
@@ -1881,7 +1904,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=900){
 						setflag(FLAG_TM_SNARL_UNLOCKED)
-						giveitem(ITEM_TM_SNARL, 1)
 						removecoins(900)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1896,7 +1918,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=900){
 						setflag(FLAG_TM_ELECTROWEB_UNLOCKED)
-						giveitem(ITEM_TM_ELECTROWEB, 1)
 						removecoins(900)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1911,7 +1932,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=900){
 						setflag(FLAG_TM_AURORA_BEAM_UNLOCKED)
-						giveitem(ITEM_TM_AURORA_BEAM, 1)
 						removecoins(900)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1926,7 +1946,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=900){
 						setflag(FLAG_TM_PSYBEAM_UNLOCKED)
-						giveitem(ITEM_TM_PSYBEAM, 1)
 						removecoins(900)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1941,7 +1960,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_FLAMETHROWER_UNLOCKED)
-						giveitem(ITEM_TM_FLAMETHROWER, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1956,7 +1974,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_ICE_BEAM_UNLOCKED)
-						giveitem(ITEM_TM_ICE_BEAM, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1971,7 +1988,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_THUNDERBOLT_UNLOCKED)
-						giveitem(ITEM_TM_THUNDERBOLT, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -1986,7 +2002,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_SCALD_UNLOCKED)
-						giveitem(ITEM_TM_SCALD, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2001,7 +2016,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_MEGA_DRAIN_UNLOCKED)
-						giveitem(ITEM_TM_MEGA_DRAIN, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2016,7 +2030,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_SLUDGE_BOMB_UNLOCKED)
-						giveitem(ITEM_TM_SLUDGE_BOMB, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2031,7 +2044,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_DUAL_WINGBEAT_UNLOCKED)
-						giveitem(ITEM_TM_DUAL_WINGBEAT, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2046,7 +2058,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_LEECH_LIFE_UNLOCKED)
-						giveitem(ITEM_TM_LEECH_LIFE, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2061,7 +2072,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_PLAY_ROUGH_UNLOCKED)
-						giveitem(ITEM_TM_PLAY_ROUGH, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2076,7 +2086,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_SHADOW_BALL_UNLOCKED)
-						giveitem(ITEM_TM_SHADOW_BALL, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2091,7 +2100,6 @@ script Hub_Event_Script_Shiny_Kecleon {
 					checkcoins(VAR_RESULT)
 					if(var(VAR_RESULT)>=1200){
 						setflag(FLAG_TM_EARTH_POWER_UNLOCKED)
-						giveitem(ITEM_TM_EARTH_POWER, 1)
 						removecoins(1200)
 						updatecoinsbox(0,0)
 						playse(SE_SHOP)
@@ -2133,323 +2141,328 @@ script Hub_Event_Script_Diancie {
 		setflag(FLAG_ITEM_CHARIZARDITE_Y_BUYABLE)
 		setflag(FLAG_ITEM_BLASTOISINITE_BUYABLE)
 		setflag(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)
-		msgbox("There aren't so many gems I want to,
-				sell right now. But I might sell more
+		msgbox("You should know that you can
+				mega evolve your pokemon by
+				using them on your pokemon like
+				a regular evolution stone.
+				There aren't so many mega stones
+				I want to sell right now.
+				But I might sell more
 				in the future.")
 	}
 	elif(flag(FLAG_ITEM_CHARIZARDITE_X_UNLOCKED)){
 		setvar(VAR_TEMP_A, 0)
 		if(flag(FLAG_ITEM_VENUSAURITE_BUYABLE)){
-			dynmultipush("Venusaurite (¥1000)",ITEM_VENUSAURITE)
+			dynmultipush("Venusaurite (1000C)",ITEM_VENUSAURITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CHARIZARDITE_Y_BUYABLE)){
-			dynmultipush("Charizardite Y (¥1000)",ITEM_CHARIZARDITE_Y)
+			dynmultipush("Charizardite Y (1000C)",ITEM_CHARIZARDITE_Y)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_BLASTOISINITE_BUYABLE)){
-			dynmultipush("Blastoisinite (¥1000)",ITEM_BLASTOISINITE)
+			dynmultipush("Blastoisinite (1000C)",ITEM_BLASTOISINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_BEEDRILLITE_BUYABLE)){
-			dynmultipush("Beedrillite (¥1000)",ITEM_BEEDRILLITE)
+			dynmultipush("Beedrillite (1000C)",ITEM_BEEDRILLITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_PIDGEOTITE_BUYABLE)){
-			dynmultipush("Pidgeotite (¥1000)",ITEM_PIDGEOTITE)
+			dynmultipush("Pidgeotite (1000C)",ITEM_PIDGEOTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_ALAKAZITE_BUYABLE)){
-			dynmultipush("Alakazite (¥1000)",ITEM_ALAKAZITE)
+			dynmultipush("Alakazite (1000C)",ITEM_ALAKAZITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SLOWBRONITE_BUYABLE)){
-			dynmultipush("Slowbronite (¥1000)",ITEM_SLOWBRONITE)
+			dynmultipush("Slowbronite (1000C)",ITEM_SLOWBRONITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GENGARITE_BUYABLE)){
-			dynmultipush("Gengarite (¥1000)",ITEM_GENGARITE)
+			dynmultipush("Gengarite (1000C)",ITEM_GENGARITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_KANGASKHANITE_BUYABLE)){
-			dynmultipush("Kangaskhanite (¥1000)",ITEM_KANGASKHANITE)
+			dynmultipush("Kangaskhanite (1000C)",ITEM_KANGASKHANITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_PINSIRITE_BUYABLE)){
-			dynmultipush("Pinsirite (¥1000)",ITEM_PINSIRITE)
+			dynmultipush("Pinsirite (1000C)",ITEM_PINSIRITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GYARADOSITE_BUYABLE)){
-			dynmultipush("Gyaradosite (¥1000)",ITEM_GYARADOSITE)
+			dynmultipush("Gyaradosite (1000C)",ITEM_GYARADOSITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_AERODACTYLITE_BUYABLE)){
-			dynmultipush("Aerodactylite (¥1000)",ITEM_AERODACTYLITE)
+			dynmultipush("Aerodactylite (1000C)",ITEM_AERODACTYLITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_AMPHAROSITE_BUYABLE)){
-			dynmultipush("Ampharosite (¥1000)",ITEM_AMPHAROSITE)
+			dynmultipush("Ampharosite (1000C)",ITEM_AMPHAROSITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_STEELIXITE_BUYABLE)){
-			dynmultipush("Steelixite (¥1000)",ITEM_STEELIXITE)
+			dynmultipush("Steelixite (1000C)",ITEM_STEELIXITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SCIZORITE_BUYABLE)){
-			dynmultipush("Scizorite (¥1000)",ITEM_SCIZORITE)
+			dynmultipush("Scizorite (1000C)",ITEM_SCIZORITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_HERACRONITE_BUYABLE)){
-			dynmultipush("Heracronite (¥1000)",ITEM_HERACRONITE)
+			dynmultipush("Heracronite (1000C)",ITEM_HERACRONITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_HOUNDOOMINITE_BUYABLE)){
-			dynmultipush("Houndoominite (¥1000)",ITEM_HOUNDOOMINITE)
+			dynmultipush("Houndoominite (1000C)",ITEM_HOUNDOOMINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_TYRANITARITE_BUYABLE)){
-			dynmultipush("Tyranitarite (¥1000)",ITEM_TYRANITARITE)
+			dynmultipush("Tyranitarite (1000C)",ITEM_TYRANITARITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SCEPTILITE_BUYABLE)){
-			dynmultipush("Sceptilite (¥1000)",ITEM_SCEPTILITE)
+			dynmultipush("Sceptilite (1000C)",ITEM_SCEPTILITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_BLAZIKENITE_BUYABLE)){
-			dynmultipush("Blazikenite (¥1000)",ITEM_BLAZIKENITE)
+			dynmultipush("Blazikenite (1000C)",ITEM_BLAZIKENITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SWAMPERTITE_BUYABLE)){
-			dynmultipush("Swampertite (¥1000)",ITEM_SWAMPERTITE)
+			dynmultipush("Swampertite (1000C)",ITEM_SWAMPERTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GARDEVOIRITE_BUYABLE)){
-			dynmultipush("Gardevoirite (¥1000)",ITEM_GARDEVOIRITE)
+			dynmultipush("Gardevoirite (1000C)",ITEM_GARDEVOIRITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SABLENITE_BUYABLE)){
-			dynmultipush("Sablenite (¥1000)",ITEM_SABLENITE)
+			dynmultipush("Sablenite (1000C)",ITEM_SABLENITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_MAWILITE_BUYABLE)){
-			dynmultipush("Mawilite (¥1000)",ITEM_MAWILITE)
+			dynmultipush("Mawilite (1000C)",ITEM_MAWILITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_AGGRONITE_BUYABLE)){
-			dynmultipush("Aggronite (¥1000)",ITEM_AGGRONITE)
+			dynmultipush("Aggronite (1000C)",ITEM_AGGRONITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_MEDICHAMITE_BUYABLE)){
-			dynmultipush("Medichamite (¥1000)",ITEM_MEDICHAMITE)
+			dynmultipush("Medichamite (1000C)",ITEM_MEDICHAMITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_MANECTITE_BUYABLE)){
-			dynmultipush("Manectite (¥1000)",ITEM_MANECTITE)
+			dynmultipush("Manectite (1000C)",ITEM_MANECTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SHARPEDONITE_BUYABLE)){
-			dynmultipush("Sharpedonite (¥1000)",ITEM_SHARPEDONITE)
+			dynmultipush("Sharpedonite (1000C)",ITEM_SHARPEDONITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CAMERUPTITE_BUYABLE)){
-			dynmultipush("Cameruptite (¥1000)",ITEM_CAMERUPTITE)
+			dynmultipush("Cameruptite (1000C)",ITEM_CAMERUPTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_ALTARIANITE_BUYABLE)){
-			dynmultipush("Altarianite (¥1000)",ITEM_ALTARIANITE)
+			dynmultipush("Altarianite (1000C)",ITEM_ALTARIANITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_BANETTITE_BUYABLE)){
-			dynmultipush("Banettite (¥1000)",ITEM_BANETTITE)
+			dynmultipush("Banettite (1000C)",ITEM_BANETTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_ABSOLITE_BUYABLE)){
-			dynmultipush("Absolite (¥1000)",ITEM_ABSOLITE)
+			dynmultipush("Absolite (1000C)",ITEM_ABSOLITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GLALITITE_BUYABLE)){
-			dynmultipush("Glalitite (¥1000)",ITEM_GLALITITE)
+			dynmultipush("Glalitite (1000C)",ITEM_GLALITITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SALAMENCITE_BUYABLE)){
-			dynmultipush("Salamencite (¥1000)",ITEM_SALAMENCITE)
+			dynmultipush("Salamencite (1000C)",ITEM_SALAMENCITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_METAGROSSITE_BUYABLE)){
-			dynmultipush("Metagrossite (¥1000)",ITEM_METAGROSSITE)
+			dynmultipush("Metagrossite (1000C)",ITEM_METAGROSSITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_LOPUNNITE_BUYABLE)){
-			dynmultipush("Lopunnite (¥1000)",ITEM_LOPUNNITE)
+			dynmultipush("Lopunnite (1000C)",ITEM_LOPUNNITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GARCHOMPITE_BUYABLE)){
-			dynmultipush("Garchompite (¥1000)",ITEM_GARCHOMPITE)
+			dynmultipush("Garchompite (1000C)",ITEM_GARCHOMPITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_LUCARIONITE_BUYABLE)){
-			dynmultipush("Lucarionite (¥1000)",ITEM_LUCARIONITE)
+			dynmultipush("Lucarionite (1000C)",ITEM_LUCARIONITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_ABOMASITE_BUYABLE)){
-			dynmultipush("Abomasite (¥1000)",ITEM_ABOMASITE)
+			dynmultipush("Abomasite (1000C)",ITEM_ABOMASITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GALLADITE_BUYABLE)){
-			dynmultipush("Galladite (¥1000)",ITEM_GALLADITE)
+			dynmultipush("Galladite (1000C)",ITEM_GALLADITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CLEFABLITE_BUYABLE)){
-			dynmultipush("Clefablite (¥1000)",ITEM_CLEFABLITE)
+			dynmultipush("Clefablite (1000C)",ITEM_CLEFABLITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_VICTREEBELITE_BUYABLE)){
-			dynmultipush("Victreebelite (¥1000)",ITEM_VICTREEBELITE)
+			dynmultipush("Victreebelite (1000C)",ITEM_VICTREEBELITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_STARMINITE_BUYABLE)){
-			dynmultipush("Starminite (¥1000)",ITEM_STARMINITE)
+			dynmultipush("Starminite (1000C)",ITEM_STARMINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_DRAGONINITE_BUYABLE)){
-			dynmultipush("Dragoninite (¥1000)",ITEM_DRAGONINITE)
+			dynmultipush("Dragoninite (1000C)",ITEM_DRAGONINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_MEGANIUMITE_BUYABLE)){
-			dynmultipush("Meganiumite (¥1000)",ITEM_MEGANIUMITE)
+			dynmultipush("Meganiumite (1000C)",ITEM_MEGANIUMITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_FERALIGITE_BUYABLE)){
-			dynmultipush("Feraligite (¥1000)",ITEM_FERALIGITE)
+			dynmultipush("Feraligite (1000C)",ITEM_FERALIGITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SKARMORITE_BUYABLE)){
-			dynmultipush("Skarmorite (¥1000)",ITEM_SKARMORITE)
+			dynmultipush("Skarmorite (1000C)",ITEM_SKARMORITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_FROSLASSITE_BUYABLE)){
-			dynmultipush("Froslassite (¥1000)",ITEM_FROSLASSITE)
+			dynmultipush("Froslassite (1000C)",ITEM_FROSLASSITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_EMBOARITE_BUYABLE)){
-			dynmultipush("Emboarite (¥1000)",ITEM_EMBOARITE)
+			dynmultipush("Emboarite (1000C)",ITEM_EMBOARITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_EXCADRITE_BUYABLE)){
-			dynmultipush("Excadrite (¥1000)",ITEM_EXCADRITE)
+			dynmultipush("Excadrite (1000C)",ITEM_EXCADRITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SCOLIPITE_BUYABLE)){
-			dynmultipush("Scolipite (¥1000)",ITEM_SCOLIPITE)
+			dynmultipush("Scolipite (1000C)",ITEM_SCOLIPITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SCRAFTINITE_BUYABLE)){
-			dynmultipush("Scraftinite (¥1000)",ITEM_SCRAFTINITE)
+			dynmultipush("Scraftinite (1000C)",ITEM_SCRAFTINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_EELEKTROSSITE_BUYABLE)){
-			dynmultipush("Eelektrossite (¥1000)",ITEM_EELEKTROSSITE)
+			dynmultipush("Eelektrossite (1000C)",ITEM_EELEKTROSSITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CHANDELURITE_BUYABLE)){
-			dynmultipush("Chandelurite (¥1000)",ITEM_CHANDELURITE)
+			dynmultipush("Chandelurite (1000C)",ITEM_CHANDELURITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CHESNAUGHTITE_BUYABLE)){
-			dynmultipush("Chesnaughtite (¥1000)",ITEM_CHESNAUGHTITE)
+			dynmultipush("Chesnaughtite (1000C)",ITEM_CHESNAUGHTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_DELPHOXITE_BUYABLE)){
-			dynmultipush("Delphoxite (¥1000)",ITEM_DELPHOXITE)
+			dynmultipush("Delphoxite (1000C)",ITEM_DELPHOXITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GRENINJITE_BUYABLE)){
-			dynmultipush("Greninjite (¥1000)",ITEM_GRENINJITE)
+			dynmultipush("Greninjite (1000C)",ITEM_GRENINJITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_PYROARITE_BUYABLE)){
-			dynmultipush("Pyroarite (¥1000)",ITEM_PYROARITE)
+			dynmultipush("Pyroarite (1000C)",ITEM_PYROARITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_MALAMARITE_BUYABLE)){
-			dynmultipush("Malamarite (¥1000)",ITEM_MALAMARITE)
+			dynmultipush("Malamarite (1000C)",ITEM_MALAMARITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_BARBARACITE_BUYABLE)){
-			dynmultipush("Barbaracite (¥1000)",ITEM_BARBARACITE)
+			dynmultipush("Barbaracite (1000C)",ITEM_BARBARACITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_DRAGALGITE_BUYABLE)){
-			dynmultipush("Dragalgite (¥1000)",ITEM_DRAGALGITE)
+			dynmultipush("Dragalgite (1000C)",ITEM_DRAGALGITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_HAWLUCHANITE_BUYABLE)){
-			dynmultipush("Hawluchanite (¥1000)",ITEM_HAWLUCHANITE)
+			dynmultipush("Hawluchanite (1000C)",ITEM_HAWLUCHANITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_DRAMPANITE_BUYABLE)){
-			dynmultipush("Drampanite (¥1000)",ITEM_DRAMPANITE)
+			dynmultipush("Drampanite (1000C)",ITEM_DRAMPANITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_FALINKSITE_BUYABLE)){
-			dynmultipush("Falinksite (¥1000)",ITEM_FALINKSITE)
+			dynmultipush("Falinksite (1000C)",ITEM_FALINKSITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_RAICHUNITE_X_BUYABLE)){
-			dynmultipush("Raichunite X (¥1000)",ITEM_RAICHUNITE_X)
+			dynmultipush("Raichunite X (1000C)",ITEM_RAICHUNITE_X)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_RAICHUNITE_Y_BUYABLE)){
-			dynmultipush("Raichunite Y (¥1000)",ITEM_RAICHUNITE_Y)
+			dynmultipush("Raichunite Y (1000C)",ITEM_RAICHUNITE_Y)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CHIMECHITE_BUYABLE)){
-			dynmultipush("Chimechite (¥1000)",ITEM_CHIMECHITE)
+			dynmultipush("Chimechite (1000C)",ITEM_CHIMECHITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_STARAPTITE_BUYABLE)){
-			dynmultipush("Staraptite (¥1000)",ITEM_STARAPTITE)
+			dynmultipush("Staraptite (1000C)",ITEM_STARAPTITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GOLURKITE_BUYABLE)){
-			dynmultipush("Golurkite (¥1000)",ITEM_GOLURKITE)
+			dynmultipush("Golurkite (1000C)",ITEM_GOLURKITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_MEOWSTICITE_BUYABLE)){
-			dynmultipush("Meowsticite (¥1000)",ITEM_MEOWSTICITE)
+			dynmultipush("Meowsticite (1000C)",ITEM_MEOWSTICITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_CRABOMINITE_BUYABLE)){
-			dynmultipush("Crabominite (¥1000)",ITEM_CRABOMINITE)
+			dynmultipush("Crabominite (1000C)",ITEM_CRABOMINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GOLISOPITE_BUYABLE)){
-			dynmultipush("Golisopite (¥1000)",ITEM_GOLISOPITE)
+			dynmultipush("Golisopite (1000C)",ITEM_GOLISOPITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_SCOVILLAINITE_BUYABLE)){
-			dynmultipush("Scovillainite (¥1000)",ITEM_SCOVILLAINITE)
+			dynmultipush("Scovillainite (1000C)",ITEM_SCOVILLAINITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_GLIMMORANITE_BUYABLE)){
-			dynmultipush("Glimmoranite (¥1000)",ITEM_GLIMMORANITE)
+			dynmultipush("Glimmoranite (1000C)",ITEM_GLIMMORANITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 		if(flag(FLAG_ITEM_BAXCALIBRITE_BUYABLE)){
-			dynmultipush("Baxcalibrite (¥1000)",ITEM_BAXCALIBRITE)
+			dynmultipush("Baxcalibrite (1000C)",ITEM_BAXCALIBRITE)
 			addvar(VAR_TEMP_A, 1)
 		}
 
 		if(var(VAR_TEMP_A) != 0){
 
 			if(flag(FLAG_NEW_MEGA_BUYABLE)){
-				msgbox("Hello! Good news! I have a new
-						Mega Stone in stock!
+				msgbox("Hello! Good news!
+						I have new stock!
 						Please take a look!")
 				clearflag(FLAG_NEW_MEGA_BUYABLE)
 			}
 			else{
-				msgbox("Hello! Would you like to\nbuy a Mega Stone?")
+				msgbox("Would you like to\nbuy a Mega Stone?")
 			}
 			showcoinsbox(21, 11)
 			dynmultistack(0, 0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
@@ -3616,7 +3629,7 @@ script Hub_Event_Script_Chimecho {
 			case ITEM_LUMP_SUM_CHARM:
 				msgbox(format("Gain ¥1500."))
 			case ITEM_BERRY_PACK_CHARM:
-				msgbox(format("Gain an oran berry, a sitrus berry, a lum berry and a berry juice."))
+				msgbox(format("Gain an oran berry, a sitrus berry, and a lum berry."))
 			case ITEM_TINTED_CHARM:
 				msgbox(format("Your not very effective moves do 1.5 times more damage."))
 			case ITEM_NORMAL_CHARM:
@@ -3682,7 +3695,6 @@ script GiveStarterCharm {
             giveitem(ITEM_BERRY_PACK_CHARM, 1)
 			giveitem(ITEM_ORAN_BERRY, 1)
 			giveitem(ITEM_SITRUS_BERRY, 1)
-			giveitem(ITEM_BERRY_JUICE, 1)
 			giveitem(ITEM_LUM_BERRY, 1)
 		case ITEM_TINTED_CHARM:
             giveitem(ITEM_TINTED_CHARM, 1)
@@ -3746,6 +3758,7 @@ script Hub_Event_Script_Bruxish {
 		setflag(FLAG_BRUXISH_FLOSS_CHARM_UNLOCKED)
 		playfanfare(MUS_EVOLVED)
 		msgbox("You unlocked Bruxish Floss as\na starter charm!")
+		waitfanfare
 		waitmessage
 	}else{
 		msgbox("Don't forget to floss everyday!")
@@ -3777,8 +3790,9 @@ script Hub_Event_Script_Unown {
 	if(!flag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)){
 		msgbox(format("Hi. I know I'm a pretty weak pokemon, but If you choose me, you'll get an extra unown for free, thanks to my Herd ability!"))
 		setflag(FLAG_UNOWN_BUDDY_CHARM_UNLOCKED)
-		msgbox("You unlocked Unown Buddy as\na starter charm!")
 		playfanfare(MUS_EVOLVED)
+		msgbox("You unlocked Unown Buddy as\na starter charm!")
+		waitfanfare
 		waitmessage
 	}else{
 		msgbox("If you choose me, you'll get an\nextra unown as well!")

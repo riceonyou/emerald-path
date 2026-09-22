@@ -1437,9 +1437,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
             }
 
             rand = Random() & (ShinyRate - 1);
-            if (rand == 0)
-                isShiny = TRUE;
-                
+            isShiny = (rand == 0);
         }
     }
 

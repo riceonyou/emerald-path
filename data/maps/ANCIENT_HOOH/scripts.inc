@@ -65,22 +65,24 @@ ANCIENT_HOOH_EventScript_Sign::
 # 38 "data/maps/ANCIENT_HOOH/scripts.pory"
 	msgbox ANCIENT_HOOH_EventScript_Sign_Text_1
 # 39 "data/maps/ANCIENT_HOOH/scripts.pory"
-	msgbox ANCIENT_HOOH_EventScript_Sign_Text_2
+	waitfanfare
 # 40 "data/maps/ANCIENT_HOOH/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_HOOH_EventScript_Sign_Text_2
 # 41 "data/maps/ANCIENT_HOOH/scripts.pory"
-	applymovement 1, ANCIENT_HOOH_EventScript_Sign_Movement_0
-# 44 "data/maps/ANCIENT_HOOH/scripts.pory"
-	waitmovement
-# 45 "data/maps/ANCIENT_HOOH/scripts.pory"
-	giveitem ITEM_HOOH_FEATHER_CHARM, 1
-# 46 "data/maps/ANCIENT_HOOH/scripts.pory"
 	waitmessage
-# 48 "data/maps/ANCIENT_HOOH/scripts.pory"
+# 42 "data/maps/ANCIENT_HOOH/scripts.pory"
+	applymovement 1, ANCIENT_HOOH_EventScript_Sign_Movement_0
+# 45 "data/maps/ANCIENT_HOOH/scripts.pory"
+	waitmovement
+# 46 "data/maps/ANCIENT_HOOH/scripts.pory"
+	giveitem ITEM_HOOH_FEATHER_CHARM, 1
+# 47 "data/maps/ANCIENT_HOOH/scripts.pory"
+	waitmessage
+# 49 "data/maps/ANCIENT_HOOH/scripts.pory"
 	msgbox ANCIENT_HOOH_EventScript_Sign_Text_3
-# 50 "data/maps/ANCIENT_HOOH/scripts.pory"
-	special WarpToNextAct
 # 51 "data/maps/ANCIENT_HOOH/scripts.pory"
+	special WarpToNextAct
+# 52 "data/maps/ANCIENT_HOOH/scripts.pory"
 	releaseall
 	return
 
@@ -116,12 +118,12 @@ ANCIENT_HOOH_EventScript_Sign_Text_1:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_HOOH_EventScript_Sign_Text_2:
-# 39 "data/maps/ANCIENT_HOOH/scripts.pory"
+# 40 "data/maps/ANCIENT_HOOH/scripts.pory"
 	.string "And a special gift. A freshly plucked\n"
 	.string "feather of my own. When you lose a fight\l"
 	.string "while you have this, instead of losing\l"
 	.string "the run, you will get another chance.$"
 
 ANCIENT_HOOH_EventScript_Sign_Text_3:
-# 48 "data/maps/ANCIENT_HOOH/scripts.pory"
+# 49 "data/maps/ANCIENT_HOOH/scripts.pory"
 	.string "I wish you well on your journey.$"

@@ -2,7 +2,7 @@
   "id": "MAP_HUB1",
   "name": "Hub1",
   "layout": "LAYOUT_HUB1",
-  "music": "MUS_DUMMY",
+  "music": "MUS_FORTREE",
   "region_map_section": "MAPSEC_AG_Hub",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

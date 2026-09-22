@@ -8921,10 +8921,10 @@ static void Cmd_trysetencore(void)
         }
     }
 
-    if ((IsMoveEncoreBanned(gLastMoves[gBattlerTarget]))
-     || i == MAX_MON_MOVES
-     || gLastMoves[gBattlerTarget] == MOVE_NONE
+    if (gLastMoves[gBattlerTarget] == MOVE_NONE
      || gLastMoves[gBattlerTarget] == MOVE_UNAVAILABLE
+     || IsMoveEncoreBanned(gLastMoves[gBattlerTarget])
+     || i == MAX_MON_MOVES
      || gBattleMons[gBattlerTarget].pp[i] == 0
      || gBattleMons[gBattlerTarget].volatiles.encoredMove != MOVE_NONE
      || GetMoveEffect(gChosenMoveByBattler[gBattlerTarget]) == EFFECT_SHELL_TRAP)
@@ -13600,7 +13600,7 @@ void BS_JumpIfIntimidateAbilityPrevented(void)
     else if (SearchTraits(battlerTraits, ABILITY_OBLIVIOUS))
         ability = ABILITY_OBLIVIOUS;
 
-    if (SearchTraits(battlerTraits, ABILITY_GUARD_DOG))
+    if (SearchTraits(battlerTraits, ABILITY_GUARD_DOG) && gDisplayAbility != ABILITY_ILLUMINATE)
     {
         gLastUsedAbility = ability = ABILITY_GUARD_DOG;
         gBattlerAbility = gBattlerTarget;
@@ -13608,8 +13608,9 @@ void BS_JumpIfIntimidateAbilityPrevented(void)
         gBattlescriptCurrInstr = BattleScript_IntimidateInReverse;
         RecordAbilityBattle(gBattlerTarget, ABILITY_GUARD_DOG);
     }
-    else if (ability != ABILITY_NONE && GetConfig(B_UPDATED_INTIMIDATE) >= GEN_8)
+    else if (ability != ABILITY_NONE && GetConfig(B_UPDATED_INTIMIDATE) >= GEN_8 && gDisplayAbility != ABILITY_ILLUMINATE)
     {
+        // Inner Focus/Scrappy/Own Tempo/Oblivious are Intimidate-specific immunities and don't apply to Illuminate
         gLastUsedAbility = ability;
         gBattlerAbility = gBattlerTarget;
         PushTraitStack(gBattlerTarget, ability);

@@ -49,23 +49,23 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi::
 	waitmovement
 # 52 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	applymovement LOCALID_PLAYER, ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_3
-# 57 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 56 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmovement
-# 58 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 57 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	special BufferCommonItem
+# 58 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	giveitem VAR_RESULT, 1
 # 59 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	giveitem VAR_RESULT, 1
-# 60 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	special BufferUncommonItem
-# 61 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 60 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	giveitem VAR_RESULT, 1
-# 62 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 61 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	msgbox ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3
-# 63 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 62 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmessage
-# 65 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 64 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	special WarpToNextAct
-# 66 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 65 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	releaseall
 	return
 
@@ -151,6 +151,7 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi_Movement_3:
 # 53 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	walk_fast_right
 # 54 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+	face_up
 	step_end
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_0:
@@ -186,6 +187,6 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_2:
 	.string "can give you lying around...$"
 
 ANCIENT_JIRACHI_EventScript_TalkToJirachi_Text_3:
-# 62 "data/maps/ANCIENT_JIRACHI/scripts.pory"
+# 61 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	.string "There ya go! Happy? Now go to the next\n"
 	.string "path and let me get back to sleep!$"

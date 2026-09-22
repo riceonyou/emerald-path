@@ -106,9 +106,10 @@ script Elite4_Hoenn_2_EventScript_MegaSwampert{
 }
 
 script Elite4_Hoenn_2_CHAMPION_DEFEATED{
-
+	playbgm(MUS_VICTORY_LEAGUE, 0)
 	msgbox("Congratulations.\pYou have conquered all 4 paths.\pYou are truly great.\pGood job.\pEtcetra etcetra...\pNow go back to the Hub.", MSGBOX_AUTOCLOSE) 
 	waitmessage
+	
 	applymovement(LOCALID_PLAYER, moves(
         face_down
         jump_in_place_down * 2

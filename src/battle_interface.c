@@ -2398,6 +2398,8 @@ enum
     TAG_LAST_BALL_WINDOW,
 };
 
+#define MOVE_INFO_WINDOW_TAG 0xE722
+
 static const u32 sAbilityPopUpGfx[] = INCBIN_U32("graphics/battle_interface/ability_pop_up.4bpp");
 static const u16 sAbilityPopUpPalette[] = INCBIN_U16("graphics/battle_interface/ability_pop_up.gbapal");
 
@@ -2721,7 +2723,9 @@ static void Task_FreeAbilityPopUpGfx(u8 taskId)
             if (IndexOfSpriteTileTag(TAG_ABILITY_POP_UP_PLAYER1 + battler) != 0xFF)
                 FreeSpriteTilesByTag(TAG_ABILITY_POP_UP_PLAYER1 + battler);
         }
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
+        if (GetSpriteTileStartByTag(TAG_LAST_BALL_WINDOW) == 0xFFFF
+         && GetSpriteTileStartByTag(MOVE_INFO_WINDOW_TAG) == 0xFFFF)
+            FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
         DestroyTask(taskId);
     }
 }
@@ -2759,8 +2763,6 @@ static const struct SpriteTemplate sSpriteTemplate_LastUsedBallWindow =
     .oam = &sOamData_LastUsedBall,
     .callback = SpriteCB_LastUsedBallWin
 };
-
-#define MOVE_INFO_WINDOW_TAG 0xE722
 
 static const struct OamData sOamData_MoveInfoWindow =
 {
@@ -2896,7 +2898,8 @@ void TryAddLastUsedBallItemSprites(void)
 static void DestroyLastUsedBallWinGfx(struct Sprite *sprite)
 {
     FreeSpriteTilesByTag(TAG_LAST_BALL_WINDOW);
-    if (GetSpriteTileStartByTag(MOVE_INFO_WINDOW_TAG) == 0xFFFF)
+    if (GetSpriteTileStartByTag(MOVE_INFO_WINDOW_TAG) == 0xFFFF
+     && !IsAnyAbilityPopUpActive())
         FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
     DestroySprite(sprite);
     gBattleStruct->ballSpriteIds[1] = MAX_SPRITES;
@@ -2937,7 +2940,8 @@ void TryToHideMoveInfoWindow(void)
 static void DestroyMoveInfoWinGfx(struct Sprite *sprite)
 {
     FreeSpriteTilesByTag(MOVE_INFO_WINDOW_TAG);
-    if (GetSpriteTileStartByTag(TAG_LAST_BALL_WINDOW) == 0xFFFF)
+    if (GetSpriteTileStartByTag(TAG_LAST_BALL_WINDOW) == 0xFFFF
+     && !IsAnyAbilityPopUpActive())
         FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
     DestroySprite(sprite);
     gBattleStruct->moveInfoSpriteId = MAX_SPRITES;

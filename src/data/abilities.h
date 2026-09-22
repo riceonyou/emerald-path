@@ -354,7 +354,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PRESSURE] =
     {
         .name = _("Pressure"),
-        .description = COMPOUND_STRING("Removes foe's stat buffs."),
+        .description = COMPOUND_STRING("Increase PP usage. Removes foe's buffs."),
         .aiRating = 5,
     },
 
@@ -806,7 +806,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FOREWARN] =
     {
         .name = _("Forewarn"),
-        .description = COMPOUND_STRING("Removes PP from enemy."),
+        .description = COMPOUND_STRING("Reveals and removes PP from enemy move."),
         .aiRating = 2,
     },
 

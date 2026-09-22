@@ -38,30 +38,32 @@ ANCIENT_1_EventScript_Regigigas::
 # 30 "data/maps/ANCIENT1/scripts.pory"
 	msgbox ANCIENT_1_EventScript_Regigigas_Text_2
 # 31 "data/maps/ANCIENT1/scripts.pory"
-	msgbox ANCIENT_1_EventScript_Regigigas_Text_3
+	waitfanfare
 # 32 "data/maps/ANCIENT1/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_1_EventScript_Regigigas_Text_3
 # 33 "data/maps/ANCIENT1/scripts.pory"
-	giveitem ITEM_TM_RAIN_DANCE, 1
-# 34 "data/maps/ANCIENT1/scripts.pory"
 	waitmessage
+# 34 "data/maps/ANCIENT1/scripts.pory"
+	giveitem ITEM_TM_RAIN_DANCE, 1
 # 35 "data/maps/ANCIENT1/scripts.pory"
+	waitmessage
+# 36 "data/maps/ANCIENT1/scripts.pory"
 	applymovement 1, ANCIENT_1_EventScript_Regigigas_Movement_0
-# 42 "data/maps/ANCIENT1/scripts.pory"
-	waitmovement
 # 43 "data/maps/ANCIENT1/scripts.pory"
-	msgbox ANCIENT_1_EventScript_Regigigas_Text_4
-# 44 "data/maps/ANCIENT1/scripts.pory"
-	applymovement 1, ANCIENT_1_EventScript_Regigigas_Movement_0
-# 51 "data/maps/ANCIENT1/scripts.pory"
 	waitmovement
+# 44 "data/maps/ANCIENT1/scripts.pory"
+	msgbox ANCIENT_1_EventScript_Regigigas_Text_4
+# 45 "data/maps/ANCIENT1/scripts.pory"
+	applymovement 1, ANCIENT_1_EventScript_Regigigas_Movement_0
 # 52 "data/maps/ANCIENT1/scripts.pory"
-	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+	waitmovement
 # 53 "data/maps/ANCIENT1/scripts.pory"
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+# 54 "data/maps/ANCIENT1/scripts.pory"
 	waitmoncry
-# 55 "data/maps/ANCIENT1/scripts.pory"
-	special WarpToNextAct
 # 56 "data/maps/ANCIENT1/scripts.pory"
+	special WarpToNextAct
+# 57 "data/maps/ANCIENT1/scripts.pory"
 	releaseall
 	return
 
@@ -104,11 +106,11 @@ ANCIENT_1_EventScript_Regigigas_Text_2:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_1_EventScript_Regigigas_Text_3:
-# 31 "data/maps/ANCIENT1/scripts.pory"
+# 32 "data/maps/ANCIENT1/scripts.pory"
 	.string "And please take a Rain Dance TM too.$"
 
 ANCIENT_1_EventScript_Regigigas_Text_4:
-# 43 "data/maps/ANCIENT1/scripts.pory"
+# 44 "data/maps/ANCIENT1/scripts.pory"
 	.string "Next up is the final path! It'll be\n"
 	.string "different to all the earlier paths in\l"
 	.string "that there won't be any birch bags or\l"

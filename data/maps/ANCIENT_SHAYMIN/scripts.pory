@@ -26,6 +26,7 @@ script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
     waitstate
     playfanfare(MUS_EVOLVED)
 	msgbox("You received a\n{STR_VAR_1}!")
+    waitfanfare
     msgbox("And a Bullet Seed TM!")
     giveitem(ITEM_TM_BULLET_SEED, 1)
     waitmessage

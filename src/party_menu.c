@@ -6333,7 +6333,10 @@ static void PartyMenuTryEvolution(u8 taskId)
     }
     else
     {
-        if (!sLevelToCapAction && gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD && CheckBagHasItem(gSpecialVar_ItemId, 1))
+        // No evolution: Level to Cap should return to the party menu instead of exiting to the field
+        if (sLevelToCapAction)
+            gTasks[taskId].func = Task_LevelToCapNoEffectAfterText;
+        else if (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD && CheckBagHasItem(gSpecialVar_ItemId, 1))
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
         else
             gTasks[taskId].func = Task_ClosePartyMenuAfterText;
@@ -6473,6 +6476,7 @@ static void Task_IVBottleCap(u8 taskId)
 
         gPartyMenuUseExitCallback = TRUE;
         SetMonData(mon, MON_DATA_HP_IV + ivIndex, &newIv);
+        CalculateMonStats(mon);
         RemoveBagItem(gSpecialVar_ItemId, 1);
         GetMonNickname(mon, gStringVar1);
         switch (ivIndex)

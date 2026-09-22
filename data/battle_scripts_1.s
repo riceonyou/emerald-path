@@ -6341,12 +6341,7 @@ BattleScript_IntimidateInReverse::
 	copybyte sBATTLER, gBattlerTarget
 	call BattleScript_AbilityPopUpTarget
 	pause B_WAIT_TIME_SHORT
-	jumpifhalfword CMP_EQUAL, gDisplayAbility, ABILITY_ILLUMINATE, BattleScript_IntimidateInReverseIlluminate
 	modifybattlerstatstage BS_TARGET, STAT_ATK, INCREASE, 1, BattleScript_IntimidateLoopIncrement, ANIM_ON
-	call BattleScript_TryIntimidateHoldEffects
-	goto BattleScript_IntimidateLoopIncrement
-BattleScript_IntimidateInReverseIlluminate:
-	modifybattlerstatstage BS_TARGET, STAT_SPATK, INCREASE, 1, BattleScript_IntimidateLoopIncrement, ANIM_ON
 	call BattleScript_TryIntimidateHoldEffects
 	goto BattleScript_IntimidateLoopIncrement
 

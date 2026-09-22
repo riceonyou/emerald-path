@@ -675,7 +675,7 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
     case 0:  // YES
         // Return the starter choice and exit.
         if (IsSelectionShiny[gTasks[taskId].tStarterSelection]){
-            FlagSet(FLAG_GIVE_SHINY_NEXT_MON);
+            FlagSet(FLAG_NEXT_GIVE_MON_SHINY);
         }
         gSpecialVar_Result = gTasks[taskId].tStarterSelection;
         ResetAllPicSprites();
@@ -1000,7 +1000,7 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
         for (i = 0; i < CopyOfMonsToCreate; i++)
         {
             u32 personality = GetMonPersonality(chosenSpecies, MON_GENDER_RANDOM, NATURE_RANDOM, RANDOM_UNOWN_LETTER);
-            if (FlagGet(FLAG_GIVE_SHINY_NEXT_MON)){
+            if (FlagGet(FLAG_NEXT_GIVE_MON_SHINY)){
                 u8 isShiny = TRUE;
                 CreateMon(&mon, chosenSpecies, VarGet(VAR_LEVEL_CAP), personality, OTID_STRUCT_PLAYER_ID);
                 SetBoxMonData(&mon.box, MON_DATA_IS_SHINY, &isShiny);
@@ -1008,7 +1008,7 @@ static void CB2_GiveBirchBagPokemonNoBattle(void)
                 CalculateMonStats(&mon);
                 GiveMonInitialMoveset(&mon);
                 GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
-                FlagClear(FLAG_GIVE_SHINY_NEXT_MON);
+                FlagClear(FLAG_NEXT_GIVE_MON_SHINY);
 
             }else{
                 u8 isShiny = FALSE;

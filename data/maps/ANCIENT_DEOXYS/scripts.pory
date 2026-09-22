@@ -10,7 +10,7 @@ script ANCIENT_DEOXYS_ONWARP {
     }
 
 script ANCIENT_DEOXYS_LOAD_DEOXYS{
-    switch (var(VAR_0x8000)) {
+    switch (var(VAR_WHICH_ANCIENT)) {
         case 0:
             setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(DEOXYS_ATTACK))
         case 1:
@@ -24,7 +24,7 @@ script ANCIENT_DEOXYS_EventScript_TalkToDeoxys{
     lockall
     faceplayer
     //GIVE ANCIENT REWARD
-    switch (var(VAR_0x8000)) {
+    switch (var(VAR_WHICH_ANCIENT)) {
         case 0:
             playmoncry(SPECIES_DEOXYS_ATTACK, CRY_MODE_ENCOUNTER)
             waitmoncry
@@ -37,6 +37,7 @@ script ANCIENT_DEOXYS_EventScript_TalkToDeoxys{
             waitstate
             playfanfare(MUS_EVOLVED)
 	        msgbox("You received a\n{STR_VAR_1}!")
+            waitfanfare
             msgbox("And secondly, a strong TM!")
             giveitem(ITEM_TM_PHOTON_GEYSER, 1)
             
@@ -53,6 +54,7 @@ script ANCIENT_DEOXYS_EventScript_TalkToDeoxys{
             waitstate
             playfanfare(MUS_EVOLVED)
 	        msgbox("You received a\n{STR_VAR_1}!")
+            waitfanfare
             msgbox("And secondly, a strong TM!")
             giveitem(ITEM_TM_SILK_TRAP, 1)
             
@@ -69,6 +71,7 @@ script ANCIENT_DEOXYS_EventScript_TalkToDeoxys{
             waitstate
             playfanfare(MUS_EVOLVED)
 	        msgbox("You received a\n{STR_VAR_1}!")
+            waitfanfare
             msgbox("And secondly, a strong TM!")
             giveitem(ITEM_TM_EXTREME_SPEED, 1)
     }

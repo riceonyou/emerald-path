@@ -21,7 +21,7 @@ ANCIENT_DEOXYS_ONWARP::
 
 ANCIENT_DEOXYS_LOAD_DEOXYS::
 # 13 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	switch VAR_0x8000
+	switch VAR_WHICH_ANCIENT
 # 14 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	case 0, ANCIENT_DEOXYS_LOAD_DEOXYS_2
 # 16 "data/maps/ANCIENT_DEOXYS/scripts.pory"
@@ -52,27 +52,27 @@ ANCIENT_DEOXYS_EventScript_TalkToDeoxys::
 # 25 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	faceplayer
 # 27 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	switch VAR_0x8000
+	switch VAR_WHICH_ANCIENT
 # 28 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	case 0, ANCIENT_DEOXYS_EventScript_TalkToDeoxys_3
-# 44 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 45 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	case 1, ANCIENT_DEOXYS_EventScript_TalkToDeoxys_4
-# 60 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 62 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	case 2, ANCIENT_DEOXYS_EventScript_TalkToDeoxys_5
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_1:
-# 75 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitmessage
-# 76 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_5
-# 77 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitmessage
 # 78 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	giveitem ITEM_DEOXYS_MUTATION_CHARM, 1
+	waitmessage
 # 79 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_6
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_5
+# 80 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	waitmessage
 # 81 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	giveitem ITEM_DEOXYS_MUTATION_CHARM, 1
+# 82 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_6
+# 84 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	special WarpToNextAct
-# 83 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 86 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	releaseall
 	return
 
@@ -100,66 +100,72 @@ ANCIENT_DEOXYS_EventScript_TalkToDeoxys_3:
 # 39 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_1
 # 40 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2
+	waitfanfare
 # 41 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2
+# 42 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	giveitem ITEM_TM_PHOTON_GEYSER, 1
 	goto ANCIENT_DEOXYS_EventScript_TalkToDeoxys_1
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_4:
-# 45 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	playmoncry SPECIES_DEOXYS_DEFENSE, CRY_MODE_ENCOUNTER
 # 46 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_DEOXYS_DEFENSE, CRY_MODE_ENCOUNTER
 # 47 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_3
+	waitmoncry
 # 48 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_3
 # 49 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	waitmessage
 # 50 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	setvar VAR_0x8000, 41
+	fadescreen FADE_TO_BLACK
 # 51 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	special LoadBirchBagPoolById
+	setvar VAR_0x8000, 41
 # 52 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
+	special LoadBirchBagPoolById
 # 53 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitstate
+	special ChooseBirchBagPokemonWeighted
 # 54 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	playfanfare MUS_EVOLVED
+	waitstate
 # 55 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_1
+	playfanfare MUS_EVOLVED
 # 56 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_1
 # 57 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	waitfanfare
+# 58 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2
+# 59 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	giveitem ITEM_TM_SILK_TRAP, 1
 	goto ANCIENT_DEOXYS_EventScript_TalkToDeoxys_1
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_5:
-# 61 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	playmoncry SPECIES_DEOXYS_SPEED, CRY_MODE_ENCOUNTER
-# 62 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitmoncry
 # 63 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_4
+	playmoncry SPECIES_DEOXYS_SPEED, CRY_MODE_ENCOUNTER
 # 64 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitmessage
+	waitmoncry
 # 65 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_4
 # 66 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	setvar VAR_0x8000, 42
+	waitmessage
 # 67 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	special LoadBirchBagPoolById
+	fadescreen FADE_TO_BLACK
 # 68 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	special ChooseBirchBagPokemonWeighted
+	setvar VAR_0x8000, 42
 # 69 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	waitstate
+	special LoadBirchBagPoolById
 # 70 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	playfanfare MUS_EVOLVED
+	special ChooseBirchBagPokemonWeighted
 # 71 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_1
+	waitstate
 # 72 "data/maps/ANCIENT_DEOXYS/scripts.pory"
-	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2
+	playfanfare MUS_EVOLVED
 # 73 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_1
+# 74 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	waitfanfare
+# 75 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+	msgbox ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2
+# 76 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	giveitem ITEM_TM_EXTREME_SPEED, 1
 	goto ANCIENT_DEOXYS_EventScript_TalkToDeoxys_1
 
@@ -175,27 +181,27 @@ ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_1:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_2:
-# 40 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 41 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	.string "And secondly, a strong TM!$"
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_3:
-# 47 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 48 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	.string "Hello. I am Deoxys. This is outer space.\n"
 	.string "I have some rewards for thee. Firstly a\l"
 	.string "defensive pokemon.$"
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_4:
-# 63 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 65 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	.string "Hello. I am Deoxys. This is outer space.\n"
 	.string "I have some rewards for thee. Firstly a\l"
 	.string "speedy pokemon.$"
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_5:
-# 76 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 79 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	.string "And lastly, a charm for you.$"
 
 ANCIENT_DEOXYS_EventScript_TalkToDeoxys_Text_6:
-# 79 "data/maps/ANCIENT_DEOXYS/scripts.pory"
+# 82 "data/maps/ANCIENT_DEOXYS/scripts.pory"
 	.string "The Deoxys Mutation causes your\n"
 	.string "pokemon to boost a random stat every\l"
 	.string "other turn. I hope it provides you the\l"

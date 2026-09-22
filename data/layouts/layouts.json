@@ -9538,8 +9538,8 @@
     {
       "id": "LAYOUT_HOENN4_1",
       "name": "Hoenn4_1_Layout",
-      "width": 16,
-      "height": 15,
+      "width": 23,
+      "height": 17,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/Hoenn4_1/border.bin",
@@ -9569,7 +9569,7 @@
       "id": "LAYOUT_HOENN4_2",
       "name": "Hoenn4_2_Layout",
       "width": 21,
-      "height": 28,
+      "height": 29,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Hoenn4_2/border.bin",
@@ -9854,6 +9854,16 @@
       "secondary_tileset": "gTileset_Space",
       "border_filepath": "data/layouts/ANCIENT_DEOXYS/border.bin",
       "blockdata_filepath": "data/layouts/ANCIENT_DEOXYS/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOENN4_UNDERWATER",
+      "name": "Hoenn4_Underwater_Layout",
+      "width": 22,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Hoenn4_Underwater/border.bin",
+      "blockdata_filepath": "data/layouts/Hoenn4_Underwater/map.bin"
     }
   ]
 }

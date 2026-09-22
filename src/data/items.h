@@ -12825,7 +12825,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Noble Roar"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Noble Roar\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12836,7 +12839,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM02"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Charm\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12847,7 +12853,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM03"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fake Tears\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12858,7 +12867,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Dizzy Punch"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dizzy Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12869,7 +12881,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Rock Smash"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Rock Smash\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12880,7 +12895,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Shadow Punch"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Shadow Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12891,7 +12909,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Sucker Punch"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sucker Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12902,7 +12923,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM08"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fire Fang\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12913,7 +12937,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM09"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Thunder Fang\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12924,7 +12951,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM10"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Ice Fang\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12935,7 +12965,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM11"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Water Pulse\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12946,7 +12979,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM12"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Low Kick\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12957,7 +12993,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM13"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Acid Spray\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12968,7 +13007,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM14"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Acrobatics\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12979,7 +13021,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM15"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Struggle Bug\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12990,7 +13035,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Psybeam"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Psybeam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13001,7 +13049,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM17"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Confuse Ray\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13012,7 +13063,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM18"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Thief\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13023,7 +13077,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM19"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Disarming Voice\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13034,7 +13091,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM20"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Trailblaze\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13045,7 +13105,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM21"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Pounce\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13056,7 +13119,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM22"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Chilling Water\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13067,7 +13133,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM23"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Charge Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13078,7 +13147,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM24"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fire Spin\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13089,7 +13161,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM25"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Facade\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13100,7 +13175,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM26"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Poison Tail\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13111,7 +13189,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM27"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Aerial Ace\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13122,7 +13203,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM28"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Bulldoze\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13133,7 +13217,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Doom Desire"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Doom Desire\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13144,7 +13231,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Snarl"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Snarl\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13155,7 +13245,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM31"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Metal Claw\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13166,7 +13259,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM32"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Swift\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13177,7 +13273,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM33"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Magical Leaf\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13188,7 +13287,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM34"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Icy Wind\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13199,7 +13301,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM35"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Mud Shot\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13210,7 +13315,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM36"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Rock Tomb\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13221,7 +13329,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM37"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Draining Kiss\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13232,7 +13343,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM38"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Flame Charge\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13243,7 +13357,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM39"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Low Sweep\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13254,7 +13371,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM40"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Air Cutter\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13265,7 +13385,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM41"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Stored Power\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13276,7 +13399,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM42"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Night Shade\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13287,7 +13413,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM43"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fling\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13298,7 +13427,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM44"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dragon Tail\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13309,7 +13441,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM45"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Venoshock\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13320,7 +13455,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM46"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Avalanche\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13331,7 +13469,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM47"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Endure\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13342,7 +13483,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM48"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Volt Switch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13353,7 +13497,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM49"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sunny Day\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13364,7 +13511,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Rain Dance"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Rain Dance\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13375,7 +13525,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM51"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sandstorm\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13386,7 +13539,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM52"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Snowscape\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13397,7 +13553,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM53"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Smart Strike\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13408,7 +13567,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM54"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Psyshock\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13419,7 +13581,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM55"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dig\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13430,7 +13595,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM56"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Bullet Seed\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13441,7 +13609,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM57"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "False Swipe\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13452,7 +13623,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM58"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Brick Break\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13463,7 +13637,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM59"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Zen Headbutt\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13474,7 +13651,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM60"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "U Turn\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13485,7 +13665,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM61"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Shadow Claw\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13496,7 +13679,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM62"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Foul Play\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13507,7 +13693,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM63"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Psychic Fangs\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13518,7 +13707,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM64"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Bulk Up\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13529,7 +13721,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM65"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Air Slash\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13540,7 +13735,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM66"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Body Slam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13551,7 +13749,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Fire Punch"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fire Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13562,7 +13763,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Thunder Punch"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Thunder Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13573,7 +13777,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Ice Punch"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Ice Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13584,7 +13791,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM70"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sleep Talk\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13595,7 +13805,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM71"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Seed Bomb\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13606,7 +13819,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM72"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Electro Ball\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13617,7 +13833,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Drain Punch"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Drain Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13628,7 +13847,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM74"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Reflect\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13639,7 +13861,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM75"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Light Screen\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13650,7 +13875,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM76"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Rock Blast\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13661,7 +13889,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM77"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Waterfall\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13672,7 +13903,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM78"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dragon Claw\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13683,7 +13917,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM79"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dazzling Gleam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13694,7 +13931,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM80"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Metronome\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13705,7 +13945,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM81"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Grass Knot\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13716,7 +13959,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM82"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Thunder Wave\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13727,7 +13973,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM83"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Poison Jab\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13738,7 +13987,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM84"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Stomping Tantrum\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13749,7 +14001,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM85"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Rest\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13760,7 +14015,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM86"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Rock Slide\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13771,7 +14029,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM87"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Taunt\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13782,7 +14043,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM88"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Swords Dance\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13793,7 +14057,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM89"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Body Press\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13804,7 +14071,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM90"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Spikes\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13815,7 +14085,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM91"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Toxic Spikes\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13826,7 +14099,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM92"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Imprison\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13837,7 +14113,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM93"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Flash Cannon\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13848,7 +14127,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM94"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dark Pulse\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13859,7 +14141,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Leech Life"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Leech Life\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13870,7 +14155,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM96"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Eerie Impulse\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13881,7 +14169,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM97"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fly\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13892,7 +14183,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM98"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Skill Swap\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13903,7 +14197,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM99"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Iron Head\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13914,7 +14211,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM100"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dragon Dance\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13925,7 +14225,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM101"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Power Gem\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13936,7 +14239,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM102"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Gunk Shot\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13947,7 +14253,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM103"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Substitute\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13958,7 +14267,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM104"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Iron Defense\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13969,7 +14281,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM105"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "X Scissor\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13980,7 +14295,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM106"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Drill Run\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13991,7 +14309,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM107"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Will O Wisp\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14002,7 +14323,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM108"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Crunch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14013,7 +14337,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM109"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Trick\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14022,9 +14349,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM_LIQUIDATION] =
     {
-        .name = ITEM_NAME("TM110"),
+        .name = ITEM_NAME("TM Liquidation"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Liquidation\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14035,7 +14365,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Giga Drain"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Giga Drain\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14046,7 +14379,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM112"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Aura Sphere\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14057,7 +14393,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM113"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Tailwind\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14068,7 +14407,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Shadow Ball"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Shadow Ball\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14079,7 +14421,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM115"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dragon Pulse\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14090,7 +14435,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM116"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Stealth Rock\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14101,7 +14449,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM117"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hyper Voice\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14112,7 +14463,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM118"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Heat Wave\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14123,7 +14477,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM119"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Energy Ball\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14134,7 +14491,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Psychic"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Psychic\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14145,7 +14505,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM121"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Heavy Slam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14156,7 +14519,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM122"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Encore\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14167,7 +14533,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM123"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Surf\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14178,7 +14547,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM124"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Ice Spinner\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14189,7 +14561,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Flamethrower"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Flamethrower\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14200,7 +14575,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Thunderbolt"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Thunderbolt\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14211,7 +14589,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Play Rough"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Play Rough\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14222,7 +14603,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM128"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Amnesia\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14233,7 +14617,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM129"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Calm Mind\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14244,7 +14631,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM130"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Helping Hand\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14255,7 +14645,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM131"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Pollen Puff\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14266,7 +14659,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM132"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Baton Pass\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14277,7 +14673,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Earth Power"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Earth Power\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14288,7 +14687,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM134"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Reversal\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14299,7 +14701,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Ice Beam"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Ice Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14310,7 +14715,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM136"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Electric Terrain\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14321,7 +14729,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM137"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Grassy Terrain\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14332,7 +14743,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM138"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Psychic Terrain\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14343,7 +14757,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM139"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Misty Terrain\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14354,7 +14771,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM140"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Nasty Plot\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14365,7 +14785,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM141"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Fire Blast\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14376,7 +14799,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM142"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hydro Pump\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14387,7 +14813,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM143"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Blizzard\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14398,7 +14827,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Extreme Speed"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Extreme Speed\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14409,7 +14841,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Silk Trap"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Silk Trap\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14420,7 +14855,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Photon Geyser"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Photon Geyser\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14431,7 +14869,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM147"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Wild Charge\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14442,7 +14883,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Sludge Bomb"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sludge Bomb\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14453,7 +14897,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM149"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Earthquake\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14464,7 +14911,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM150"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Stone Edge\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14475,7 +14925,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM151"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Phantom Force\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14486,7 +14939,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM152"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Giga Impact\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14497,7 +14953,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM153"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Blast Burn\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14508,7 +14967,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM154"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hydro Cannon\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14519,7 +14981,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM155"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Frenzy Plant\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14530,7 +14995,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM156"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Outrage\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14541,7 +15009,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM157"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Overheat\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14552,7 +15023,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM158"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Focus Blast\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14563,7 +15037,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM159"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Leaf Storm\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14574,7 +15051,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM160"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hurricane\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14585,7 +15065,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM161"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Trick Room\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14596,7 +15079,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM162"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Bug Buzz\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14607,7 +15093,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM163"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hyper Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14618,7 +15107,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM164"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Brave Bird\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14629,7 +15121,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM165"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Flare Blitz\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14640,7 +15135,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM166"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Thunder\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14651,7 +15149,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM167"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Close Combat\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14662,7 +15163,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM168"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Solar Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14673,7 +15177,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM169"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Draco Meteor\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14684,7 +15191,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM170"),
         .price = 10000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Steel Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14695,7 +15205,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM171"),
         .price = 0,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Tera Blast\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14706,7 +15219,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM172"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Roar\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14717,7 +15233,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM173"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Charge\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14728,7 +15247,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM174"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Haze\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14739,7 +15261,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM175"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Toxic\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14750,7 +15275,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM176"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sand Tomb\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14761,7 +15289,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM177"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Spite\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14772,7 +15303,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM178"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Gravity\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14783,7 +15317,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM179"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Smack Down\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14794,7 +15331,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM180"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Gyro Ball\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14805,7 +15345,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM181"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Knock Off\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14816,7 +15359,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM182"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Bug Bite\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14827,7 +15373,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM183"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Super Fang\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14838,7 +15387,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM184"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Vacuum Wave\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14849,7 +15401,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM185"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Lunge\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14860,7 +15415,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM186"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "High Horsepower\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14871,7 +15429,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM187"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Icicle Spear\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14882,7 +15443,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Scald"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Scald\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14893,7 +15457,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM189"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Heat Crash\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14904,7 +15471,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM190"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Solar Blade\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14915,7 +15485,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM191"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Uproar\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14926,7 +15499,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM192"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Focus Punch\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14937,7 +15513,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM193"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Weather Ball\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14948,7 +15527,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM194"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Grassy Glide\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14959,7 +15541,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM195"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Burning Jealousy\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14970,7 +15555,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM196"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Flip Turn\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14981,7 +15569,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Dual Wingbeat"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dual Wingbeat\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14992,7 +15583,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM198"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Poltergeist\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15003,7 +15597,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM199"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Lash Out\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15014,7 +15611,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM200"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Scale Shot\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15025,7 +15625,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM201"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Misty Explosion\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15036,7 +15639,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM202"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Pain Split\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15047,7 +15653,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Mega Drain"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Mega Drain\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15058,7 +15667,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM204"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Double Edge\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15069,7 +15681,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Aurora Beam"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Aurora Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15080,7 +15695,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM206"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Petal Blizzard\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15091,7 +15709,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM207"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Temper Flare\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15102,7 +15723,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM208"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Whirlpool\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15113,7 +15737,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM209"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Muddy Water\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15124,7 +15751,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM210"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Supercell Slam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15135,7 +15765,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Electroweb"),
         .price = 8000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Electroweb\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15146,7 +15779,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM212"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Triple Axel\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15157,7 +15793,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM213"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Coaching\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15168,7 +15807,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM214"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Sludge Wave\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15179,7 +15821,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM215"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Scorching Sands\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15190,7 +15835,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM216"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Feather Dance\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15201,7 +15849,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM217"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Future Sight\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15212,7 +15863,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM218"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Expanding Force\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15223,7 +15877,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM219"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Skitter Smack\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15234,7 +15891,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM220"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Meteor Beam\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15245,7 +15905,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM221"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Throat Chop\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15256,7 +15919,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM222"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Breaking Swipe\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15267,7 +15933,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM223"),
         .price = 3000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Metal Sound\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15278,7 +15947,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM224"),
         .price = 1000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Curse\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15289,7 +15961,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM225"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hard Press\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15300,7 +15975,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM226"),
         .price = 2000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Dragon Cheer\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15311,7 +15989,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM227"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Alluring Voice\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15322,7 +16003,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM228"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Psychic Noise\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15333,7 +16017,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM Cut"),
         .price = 500,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Cut\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15344,7 +16031,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM230"),
         .price = 5000,
-        .description = sPlaceholderDesc,
+        .description = COMPOUND_STRING(
+            "Teaches\n"
+            "Hidden Power\n"
+            "to a pokemon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -17971,8 +18661,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "Your starter pokemon\n"
-            "becomes shiny."),
+            "Your starter\n"
+            "pokemon becomes\n"
+            "shiny."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
@@ -18003,8 +18694,8 @@ const struct ItemInfo gItemsInfo[] =
         .importance = 1,
         .description = COMPOUND_STRING(
             "Gain an oran berry,\n"
-            "a sitrus berry, a lum\n"
-            "berry and a berry juice."),
+            "a sitrus berry, and\n"
+            "a lum berry."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
@@ -18019,9 +18710,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "The next time you lose a\n"
-            "fight, you get another\n"
-            "chance."),
+            "The next time you lose\n"
+            "a fight, you get\n"
+            "another chance."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
@@ -18051,7 +18742,8 @@ const struct ItemInfo gItemsInfo[] =
         .importance = 1,
         .description = COMPOUND_STRING(
             "Gain a random mint at\n"
-            "the start of each path."),
+            "mint at the start\n"
+            "of each path."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
@@ -18066,8 +18758,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "Your not very effective moves\n"
-            "do 1.5 times more damage."),
+            "Your not very\n"
+            "effective moves do\n"
+            "1.5 times more damage."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,
         .type = ITEM_USE_BAG_MENU,
@@ -18082,7 +18775,8 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
-            "Your normal moves do 1.1 times\n"
+            "Your normal moves\n"
+            "do 1.1 times\n"
             "more damage."),
         .pocket = POCKET_CHARMS,
         .heldSlot = 0,

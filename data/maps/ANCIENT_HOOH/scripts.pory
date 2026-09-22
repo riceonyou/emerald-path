@@ -36,6 +36,7 @@ script ANCIENT_HOOH_EventScript_Sign{
     waitstate
     playfanfare(MUS_EVOLVED)
 	msgbox("You received a\n{STR_VAR_1}!")
+    waitfanfare
     msgbox(format("And a special gift. A freshly plucked feather of my own. When you lose a fight while you have this, instead of losing the run, you will get another chance."))
     waitmessage
     applymovement(1, moves(

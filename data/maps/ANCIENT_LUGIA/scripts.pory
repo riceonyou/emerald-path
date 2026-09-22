@@ -36,6 +36,7 @@ script ANCIENT_LUGIA_EventScript_Sign{
     waitstate
     playfanfare(MUS_EVOLVED)
 	msgbox("You received a\n{STR_VAR_1}!")
+    waitfanfare
     msgbox(format("And have one of my moulten back plates!\nWith that, now your pokemon won't take bonus super-effective damage on the first turn of the battle!."))
     waitmessage
     applymovement(1, moves(

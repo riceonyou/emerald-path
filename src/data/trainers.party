@@ -2012,7 +2012,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MEGAABSOL ===
 Name: MEGAABSOL
-Class: Leader
+Class: Elite Four
 Pic: Absol-Mega
 Gender: Male
 Music: Interviewer
@@ -2069,7 +2069,7 @@ Level: 45
 
 === TRAINER_MEGASABLEYE ===
 Name: MSABLEYE
-Class: Leader
+Class: Elite Four
 Pic: Sableye-Mega
 Gender: Male
 Music: Interviewer
@@ -2121,7 +2121,7 @@ Level: 44
 
 === TRAINER_MEGAGLALIE ===
 Name: MGLALIE
-Class: Leader
+Class: Elite Four
 Pic: Glalie-Mega
 Gender: Male
 Music: Interviewer
@@ -2173,7 +2173,7 @@ Level: 45
 
 === TRAINER_MEGASALAMENCE ===
 Name: MSALAMENCE
-Class: Leader
+Class: Elite Four
 Pic: Salamence-Mega
 Gender: Female
 Music: Girl
@@ -2224,7 +2224,7 @@ Level: 45
 
 === TRAINER_MEGAGARDEVOIR ===
 Name: MGARDEVOIR
-Class: Pkmn Trainer 1
+Class: Elite Four
 Pic: Gardevoir-Mega
 Gender: Female
 Music: Girl
@@ -2237,7 +2237,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MEGASWAMPERT ===
 Name: SWAMPERT
-Class: Leader
+Class: Champion
 Pic: Swampert-Mega
 Gender: Female
 Music: Girl
@@ -4820,7 +4820,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 === TRAINER_TREECKO ===
 Name: Treecko
 Class: Rival
-Pic: Substitute
+Pic: Treecko
 Gender: Male
 Music: Male
 Double Battle: No
@@ -4851,7 +4851,7 @@ Level: 11
 === TRAINER_GROVYLE ===
 Name: Grovyle
 Class: Rival
-Pic: Substitute
+Pic: Grovyle
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -4892,7 +4892,7 @@ Level: 24
 === TRAINER_SCEPTILE ===
 Name: Sceptile
 Class: Rival
-Pic: Substitute
+Pic: Sceptile
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -4998,7 +4998,7 @@ Level: 43
 === TRAINER_TORCHIC ===
 Name: Torchic
 Class: Rival
-Pic: Substitute
+Pic: Torchic
 Gender: Male
 Music: Girl
 Double Battle: No
@@ -5028,10 +5028,9 @@ Level: 11
 === TRAINER_COMBUSKEN ===
 Name: Combusken
 Class: Rival
-Pic: Substitute
+Pic: Combusken
 Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -5066,10 +5065,9 @@ Level: 27
 === TRAINER_BLAZIKEN ===
 Name: BLAZIKEN
 Class: Rival
-Pic: Substitute
+Pic: Blaziken
 Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 
@@ -5114,7 +5112,6 @@ Class: Rival
 Pic: Blaziken-Mega
 Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Randomize Party Indices
 

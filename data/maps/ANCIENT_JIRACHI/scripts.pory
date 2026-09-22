@@ -51,7 +51,6 @@ script ANCIENT_JIRACHI_EventScript_TalkToJirachi{
     waitmovement
     applymovement(LOCALID_PLAYER, moves(
         walk_fast_right
-        step_end
         face_up
     ))
     waitmovement

@@ -28,7 +28,7 @@ script Hoenn1_6_EventScript_Shroomish{
 
 script Hoenn1_6_EventScript_Surskit{
  
-	trainerbattle_single(TRAINER_SURSKIT, format("Did you know I secret oil from my feet to skate on water?"), format("Did you know that I am known to compete with Dewpider over food?"))
+	trainerbattle_single(TRAINER_SURSKIT, format("Did you know I secrete oil from my feet to skate on water?"), format("Did you know that I am known to compete with Dewpider over food?"))
 	msgbox(format("Did you know the antenna on my head secretes a thick, sugary syrup or a sweet scent?\n- Bulbapedia"), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

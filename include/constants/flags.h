@@ -1338,7 +1338,7 @@
 #define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
 #define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
 
-#define FLAG_GIVE_SHINY_NEXT_MON                                           0x4FF
+#define FLAG_UNUSEDDDFEWGEWG                                          0x4FF//unused
 
 // Trainer Flags
 // Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused

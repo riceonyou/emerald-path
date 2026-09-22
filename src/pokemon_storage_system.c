@@ -8067,6 +8067,22 @@ static bool8 SetMenuTexts_Mon(void)
     }
 
     SetMenuText(MENU_SUMMARY);
+    
+    // Only allow bagging a held item when no Pokémon is currently being held/moved,
+    // since moving items around while a Pokémon is in hand can cause bugs.
+    if (!IsMonBeingMoved())
+    {
+        u32 i;
+        for (i = 0; i < MAX_MON_ITEMS; i++)
+        {
+            if (sStorage->displayMonItemId[i] != ITEM_NONE && !ItemIsMail(sStorage->displayMonItemId[i]))
+            {
+                SetMenuText(MENU_BAG);
+                break;
+            }
+        }
+    }
+
     if (sStorage->boxOption == OPTION_MOVE_MONS)
     {
         if (sCursorArea == CURSOR_AREA_IN_BOX)
@@ -8078,6 +8094,9 @@ static bool8 SetMenuTexts_Mon(void)
     SetMenuText(MENU_MARK);
     //if (sStorage->boxOption != OPTION_SELECT_MON)
         //SetMenuText(MENU_RELEASE);
+
+
+
     SetMenuText(MENU_CANCEL);
     return TRUE;
 }
@@ -8379,7 +8398,7 @@ static const u8 *const sMenuTexts[] =
     [MENU_GIVE]       = gPCText_Give,
     [MENU_GIVE_2]     = gPCText_Give,
     [MENU_SWITCH]     = COMPOUND_STRING("SWITCH"),
-    [MENU_BAG]        = COMPOUND_STRING("BAG"),
+    [MENU_BAG]        = COMPOUND_STRING("BAG ITEM"),
     [MENU_INFO]       = COMPOUND_STRING("INFO"),
     [MENU_SCENERY_1]  = COMPOUND_STRING("SCENERY 1"),
     [MENU_SCENERY_2]  = COMPOUND_STRING("SCENERY 2"),
@@ -9355,9 +9374,6 @@ static void MoveItemFromMonToBag(u8 cursorArea, u8 cursorPos)
     u8 id, slot = 0;
     enum Item itemId;
 
-    if (sStorage->boxOption != OPTION_MOVE_ITEMS)
-        return;
-
     for (u16 i = 0; i < MAX_MON_ITEMS; i++)
     {
         if (sStorage->displayMonItemId[i] != ITEM_NONE && !ItemIsMail(sStorage->displayMonItemId[i]))
@@ -9368,23 +9384,29 @@ static void MoveItemFromMonToBag(u8 cursorArea, u8 cursorPos)
     }
 
     itemId = ITEM_NONE;
-    id = GetItemIconIdxByPosition(cursorArea, cursorPos);
-    if (!ItemIsMail(sStorage->displayMonItemId[0]))
+    // The item icon sprites used for the disappear animation only exist in Move Items mode
+    if (sStorage->boxOption == OPTION_MOVE_ITEMS)
     {
-        SetItemIconAffineAnim(id, ITEM_ANIM_DISAPPEAR);
-        SetItemIconCallback(id, ITEM_CB_WAIT_ANIM, cursorArea, cursorPos);
+        id = GetItemIconIdxByPosition(cursorArea, cursorPos);
+        if (!ItemIsMail(sStorage->displayMonItemId[0]))
+        {
+            SetItemIconAffineAnim(id, ITEM_ANIM_DISAPPEAR);
+            SetItemIconCallback(id, ITEM_CB_WAIT_ANIM, cursorArea, cursorPos);
+        }
     }
     if (cursorArea == CURSOR_AREA_IN_BOX)
     {
         SetCurrentBoxMonData(cursorPos, MON_DATA_HELD_ITEM + slot, &itemId);
-        SetBoxMonIconObjMode(cursorPos, ST_OAM_OBJ_BLEND);
+        if (sStorage->boxOption == OPTION_MOVE_ITEMS)
+            SetBoxMonIconObjMode(cursorPos, ST_OAM_OBJ_BLEND);
         SetMonFormPSS_ItemHold(&gPokemonStoragePtr->boxes[StorageGetCurrentBox()][cursorPos]);
     }
     else
     {
         struct Pokemon *mon = &gPlayerParty[cursorPos];
         SetMonData(&gPlayerParty[cursorPos], MON_DATA_HELD_ITEM + slot, &itemId);
-        SetPartyMonIconObjMode(cursorPos, ST_OAM_OBJ_BLEND);
+        if (sStorage->boxOption == OPTION_MOVE_ITEMS)
+            SetPartyMonIconObjMode(cursorPos, ST_OAM_OBJ_BLEND);
         SetMonFormPSS_ItemHold(&mon->box);
     }
 }

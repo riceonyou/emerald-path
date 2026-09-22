@@ -28,6 +28,7 @@ script ANCIENT_1_EventScript_Regigigas{
     waitstate
     playfanfare(MUS_EVOLVED)
 	msgbox("You received a\n{STR_VAR_1}!")
+    waitfanfare
     msgbox(format("And please take a Rain Dance TM too."))
     waitmessage
     giveitem(ITEM_TM_RAIN_DANCE, 1)

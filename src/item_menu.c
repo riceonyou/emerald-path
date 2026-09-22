@@ -1029,6 +1029,7 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
 static void PrintItemDescription(int itemIndex)
 {
     const u8 *str;
+    u32 fontId;
     if (itemIndex != LIST_CANCEL)
     {
         str = GetItemDescription(GetBagItemId(gBagPosition.pocket, itemIndex));
@@ -1041,7 +1042,8 @@ static void PrintItemDescription(int itemIndex)
         str = gStringVar4;
     }
     FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(0));
-    BagMenu_Print(WIN_DESCRIPTION, FONT_NORMAL, str, 3, 1, 0, 0, 0, COLORID_NORMAL);
+    fontId = GetFontIdToFit(str, FONT_NORMAL, 0, WindowWidthPx(WIN_DESCRIPTION) - 5);
+    BagMenu_Print(WIN_DESCRIPTION, fontId, str, 3, 1, 0, 0, 0, COLORID_NORMAL);
 }
 
 static void BagMenu_PrintCursor(u8 listTaskId, u8 colorIndex)

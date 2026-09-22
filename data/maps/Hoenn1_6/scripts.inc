@@ -141,7 +141,7 @@ Hoenn1_6_EventScript_Shroomish_Text_2:
 
 Hoenn1_6_EventScript_Surskit_Text_0:
 # 31 "data/maps/Hoenn1_6/scripts.pory"
-	.string "Did you know I secret oil from my feet\n"
+	.string "Did you know I secrete oil from my feet\n"
 	.string "to skate on water?$"
 
 Hoenn1_6_EventScript_Surskit_Text_1:

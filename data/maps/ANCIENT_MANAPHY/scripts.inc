@@ -45,37 +45,39 @@ ANCIENT_MANAPHY_EventScript_TalkToManaphy::
 # 23 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_1
 # 24 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2
+	waitfanfare
 # 25 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	giveitem ITEM_TM_RAIN_DANCE, 1
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2
 # 26 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	waitmessage
+	giveitem ITEM_TM_LIQUIDATION, 1
 # 27 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3
-# 28 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	giveitem ITEM_PHIONE_EGG_CHARM, 1
-# 29 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	waitmessage
-# 31 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_4
+# 28 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3
+# 29 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	giveitem ITEM_PHIONE_EGG_CHARM, 1
+# 30 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	waitmessage
 # 32 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	msgbox ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_4
+# 33 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	applymovement 1, ANCIENT_MANAPHY_EventScript_TalkToManaphy_Movement_0
-# 35 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	waitmovement
 # 36 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	playmoncry SPECIES_MANAPHY, CRY_MODE_ENCOUNTER
+	waitmovement
 # 37 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	playmoncry SPECIES_MANAPHY, CRY_MODE_ENCOUNTER
+# 38 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	waitmoncry
-# 39 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	special WarpToNextAct
 # 40 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	special WarpToNextAct
+# 41 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	releaseall
 	return
 
 
-# 32 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-ANCIENT_MANAPHY_EventScript_TalkToManaphy_Movement_0:
 # 33 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+ANCIENT_MANAPHY_EventScript_TalkToManaphy_Movement_0:
+# 34 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	jump_in_place_left_right
 	step_end
 
@@ -88,13 +90,13 @@ ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_1:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_2:
-# 24 "data/maps/ANCIENT_MANAPHY/scripts.pory"
-	.string "And a Rain Dance TM!$"
+# 25 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+	.string "And a Liquidation TM!$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_3:
-# 27 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 28 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "And a Phione Egg!\lThe egg will hatch into a phione\nafter you complete the next act!\nPhione is a great rain pokemon!$"
 
 ANCIENT_MANAPHY_EventScript_TalkToManaphy_Text_4:
-# 31 "data/maps/ANCIENT_MANAPHY/scripts.pory"
+# 32 "data/maps/ANCIENT_MANAPHY/scripts.pory"
 	.string "That's all from me!\lNow lets get ya to the next path!$"

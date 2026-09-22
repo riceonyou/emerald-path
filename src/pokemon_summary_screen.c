@@ -3785,7 +3785,8 @@ static void PrintMonAbilityName(void)
 static void PrintMonAbilityDescription(void)
 {
     enum Ability ability = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilitiesInfo[ability].description, 0, 17, 0, 0);
+    u8 windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY);
+    PrintTextOnWindowToFitPx(windowId, gAbilitiesInfo[ability].description, 0, 17, 0, 0, WindowWidthPx(windowId));
 }
 
 static void BufferMonTrainerMemo(void)
@@ -4030,7 +4031,8 @@ static void PrintEggMemo(void)
         else
         {
             PrintTextOnWindow(AddWindowFromTemplateList(sPageTraitsTemplate, innateIndex), gAbilitiesInfo[trait].name, x, 1, 0, 1);
-            PrintTextOnWindow(AddWindowFromTemplateList(sPageTraitsTemplate, innateIndex), gAbilitiesInfo[trait].description, 0, 17, 0, 0);
+            u8 windowId = AddWindowFromTemplateList(sPageTraitsTemplate, innateIndex);
+            PrintTextOnWindowToFitPx(windowId, gAbilitiesInfo[trait].description, 0, 17, 0, 0, WindowWidthPx(windowId) - 1);
         }
     }
 #endif

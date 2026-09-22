@@ -65,22 +65,24 @@ ANCIENT_LUGIA_EventScript_Sign::
 # 38 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_1
 # 39 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_2
+	waitfanfare
 # 40 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	waitmessage
+	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_2
 # 41 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	applymovement 1, ANCIENT_LUGIA_EventScript_Sign_Movement_0
-# 44 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	waitmovement
-# 45 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	giveitem ITEM_LUGIA_PLATE_CHARM, 1
-# 46 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	waitmessage
-# 48 "data/maps/ANCIENT_LUGIA/scripts.pory"
+# 42 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	applymovement 1, ANCIENT_LUGIA_EventScript_Sign_Movement_0
+# 45 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	waitmovement
+# 46 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	giveitem ITEM_LUGIA_PLATE_CHARM, 1
+# 47 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	waitmessage
+# 49 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	msgbox ANCIENT_LUGIA_EventScript_Sign_Text_3
-# 50 "data/maps/ANCIENT_LUGIA/scripts.pory"
-	special WarpToNextAct
 # 51 "data/maps/ANCIENT_LUGIA/scripts.pory"
+	special WarpToNextAct
+# 52 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	releaseall
 	return
 
@@ -117,12 +119,12 @@ ANCIENT_LUGIA_EventScript_Sign_Text_1:
 	.string "You received a\n{STR_VAR_1}!$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_2:
-# 39 "data/maps/ANCIENT_LUGIA/scripts.pory"
+# 40 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	.string "And have one of my moulten back plates!\n"
 	.string "With that, now your pokemon won't take\l"
 	.string "bonus super-effective damage on the\l"
 	.string "first turn of the battle!.$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_3:
-# 48 "data/maps/ANCIENT_LUGIA/scripts.pory"
+# 49 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	.string "I hope the rest of your journey\ngoes well!$"

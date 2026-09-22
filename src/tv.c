@@ -2777,8 +2777,10 @@ void ConvertIntToDecimalString(u8 varIdx, int value)
 
 size_t CountDigits(int value)
 {
+    if (value == 0)
+        return 1;
+    
     u32 count = 0;
-
     while (value > 0)
     {
         value /= 10;

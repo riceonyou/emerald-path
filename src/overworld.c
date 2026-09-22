@@ -1,6 +1,6 @@
 #include "global.h"
 #include "overworld.h"
-#include "battle.h"
+//
 #include "battle_pyramid.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -1175,7 +1175,7 @@ void WarpToNextAncient(void)
 					case 0:
                     case 1:
                         u8 randregi = Random() % 3;
-                        VarSet(VAR_0x8000, randregi);
+                        VarSet(VAR_WHICH_ANCIENT, randregi);
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_REGIS), MAP_NUM(MAP_ANCIENT_REGIS), WARP_ID_NONE, 8, 12);
 						DoWarp();
                         break;
@@ -1224,7 +1224,7 @@ void WarpToNextAncient(void)
                     case 2:
                     case 3:
                         u8 randdeoxys = Random() % 3;
-                        VarSet(VAR_0x8000, randdeoxys);
+                        VarSet(VAR_WHICH_ANCIENT, randdeoxys);
                         SetWarpDestination(MAP_GROUP(MAP_ANCIENT_DEOXYS), MAP_NUM(MAP_ANCIENT_DEOXYS), WARP_ID_NONE, 17, 16);
 						DoWarp();
                         break;
@@ -1514,13 +1514,13 @@ void DoWhiteOut(void)
 {
     if (CheckBagHasItem(ITEM_HOOH_FEATHER_CHARM, 1))
     {
-        if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-         && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL | BATTLE_TYPE_PYRAMID)))
-        {
-            ClearTrainerFlag(TRAINER_BATTLE_PARAM.opponentA);
-            if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-                ClearTrainerFlag(TRAINER_BATTLE_PARAM.opponentB);
-        }
+        // if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        //  && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL | BATTLE_TYPE_PYRAMID)))
+        // {
+        //     ClearTrainerFlag(TRAINER_BATTLE_PARAM.opponentA);
+        //     if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
+        //         ClearTrainerFlag(TRAINER_BATTLE_PARAM.opponentB);
+        // }
         u8 CurrentPath = VarGet(VAR_CURRENT_PATH);
         switch (CurrentPath)
         {

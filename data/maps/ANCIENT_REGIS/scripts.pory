@@ -10,7 +10,7 @@ script ANCIENT_REGIS_ONWARP {
     }
 
 script ANCIENT_REGIS_LOAD_REGIS{
-    switch (var(VAR_0x8000)) {
+    switch (var(VAR_WHICH_ANCIENT)) {
         case 0:
             setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SPECIES(REGIROCK))
         case 1:
@@ -24,7 +24,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
     lockall
     faceplayer
     //GIVE ANCIENT REWARD
-    switch (var(VAR_0x8000)) {
+    switch (var(VAR_WHICH_ANCIENT)) {
         case 0://Regirock
             playmoncry(SPECIES_REGIROCK, CRY_MODE_ENCOUNTER)
             waitmoncry
@@ -67,6 +67,7 @@ script ANCIENT_REGIS_EventScript_TalkToRegi{
 	        msgbox("You received a\n{STR_VAR_1}!")
             
     }
+    waitfanfare
     waitmessage
     msgbox("You will also be given the Regi Knuckles.\nBeep.")
     waitmessage
