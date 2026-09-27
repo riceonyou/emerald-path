@@ -323,6 +323,11 @@ void NuzlockeHandleFaint(struct Pokemon *mon)
     {
         SetMonDead(mon, TRUE);
     }
+    // Revived (e.g. by a Revive/Max Revive) mons are no longer considered dead
+    else if (IsMonDead(mon))
+    {
+        SetMonDead(mon, FALSE);
+    }
 }
 
 void NuzlockeHandleWhiteout(void)

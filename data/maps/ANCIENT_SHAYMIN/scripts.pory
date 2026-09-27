@@ -30,13 +30,11 @@ script ANCIENT_SHAYMIN_EventScript_TalkToShaymin{
     msgbox("And a Bullet Seed TM!")
     giveitem(ITEM_TM_BULLET_SEED, 1)
     waitmessage
-    msgbox("And an Oran Charm! With this charm,
-            everytime you enter a battle, your
-            pokemon without items will
-            automatically be given an oran berry!")
+    msgbox(format("And an Oran Charm! With this charm, your Oran Berries heal a quarter of your HP, on top of the 10HP!"))
     giveitem(ITEM_ORAN_CHARM, 1)
     waitmessage
-
+    msgbox("And take an Oran Berry too.")
+    giveitem(ITEM_ORAN_BERRY, 1)
     waitmessage
     playmoncry(SPECIES_MANAPHY, CRY_MODE_ENCOUNTER)
     waitmoncry

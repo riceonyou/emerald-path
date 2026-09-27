@@ -89,7 +89,7 @@ Hoenn3_7_Slaking_Text_1:
 
 Hoenn3_7_Slaking_Text_2:
 # 20 "data/maps/Hoenn3_7/scripts.pory"
-	.string "Talk to abra over there to continue\n"
+	.string "Talk to abra over there to continue,\n"
 	.string "matey.\l"
 	.string ".............\l"
 	.string "I don't know why I added that sorry.$"

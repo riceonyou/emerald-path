@@ -86,7 +86,7 @@ Hoenn1_Alt_3_Itemball_5::
 # 64 "data/maps/Hoenn1_Alt_3/scripts.pory"
 	lockall
 # 65 "data/maps/Hoenn1_Alt_3/scripts.pory"
-	call GiveCommonItem
+	call GiveUncommonItem
 # 66 "data/maps/Hoenn1_Alt_3/scripts.pory"
 	removeobject HOENN1_ALT_ITEM_5
 # 67 "data/maps/Hoenn1_Alt_3/scripts.pory"

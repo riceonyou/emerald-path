@@ -54,9 +54,9 @@ script ANCIENT_JIRACHI_EventScript_TalkToJirachi{
         face_up
     ))
     waitmovement
-    special(BufferCommonItem)
-    giveitem(VAR_RESULT, 1)
     special(BufferUncommonItem)
+    giveitem(VAR_RESULT, 1)
+    special(BufferRareItem)
     giveitem(VAR_RESULT, 1)
     msgbox(format("There ya go! Happy? Now go to the next path and let me get back to sleep!"))
     waitmessage

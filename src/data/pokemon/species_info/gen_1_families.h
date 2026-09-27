@@ -1167,10 +1167,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_CATERPIE] =
     {
         .baseHP        = 45,
-        .baseAttack    = 30 + 10,
+        .baseAttack    = 30 + 20,
         .baseDefense   = 35,
         .baseSpeed     = 45,
-        .baseSpAttack  = 20 + 20,
+        .baseSpAttack  = 20 + 30,
         .baseSpDefense = 20 + 5,
         .types = MON_TYPES(TYPE_BUG),
         .catchRate = 255,
@@ -1482,10 +1482,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_WEEDLE] =
     {
         .baseHP        = 40,
-        .baseAttack    = 35 + 10,
+        .baseAttack    = 35 + 20,
         .baseDefense   = 30,
         .baseSpeed     = 50,
-        .baseSpAttack  = 20 + 5,
+        .baseSpAttack  = 20 + 15,
         .baseSpDefense = 20 +10,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 255,

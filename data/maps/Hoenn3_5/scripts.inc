@@ -114,5 +114,5 @@ Hoenn3_5_Linoone_Text_1:
 
 Hoenn3_5_Linoone_Text_2:
 # 20 "data/maps/Hoenn3_5/scripts.pory"
-	.string "Linoone noone noone.\p"
+	.string "Linoone noone noone......\p"
 	.string "Someone, anyone.$"

@@ -23,7 +23,7 @@ script ANCIENT_LUGIA_EventScript_Sign{
     //GIVE ANCIENT REWARD
     playmoncry(SPECIES_LUGIA, CRY_MODE_ENCOUNTER)
     waitmoncry
-    msgbox(format("Good job on defeating the first path! Please let on of my flying pokemon friends join you!"))
+    msgbox(format("Good job on defeating the first path! Please let one of my flying pokemon friends join you!"))
     waitmessage
     applymovement(1, moves(
         walk_in_place_down * 2

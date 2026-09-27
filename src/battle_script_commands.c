@@ -6293,7 +6293,7 @@ static void Cmd_getmoneyreward(void)
         AddCoins(coinsamount);
         VarSet(VAR_COINS_COLLECTED_IN_A_RUN, VarGet(VAR_COINS_COLLECTED_IN_A_RUN) + coinsamount);
         
-        money = (money * (80 + (Random() % 41)) * (1 + VarGet(VAR_CURRENT_ACT)/10) + 10);
+        money = 15 + (money * (90 + (Random() % 31)) * (1 + VarGet(VAR_CURRENT_ACT)/10) + 10);
 
         if (VarGet(VAR_CURRENT_DIFFICULTY) > 2)
             money = money * 0.7;

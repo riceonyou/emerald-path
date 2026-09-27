@@ -2,102 +2,192 @@ mapscripts Elite4_Hoenn_2_MapScripts {
 }
 
 script Elite4_Hoenn_2_EventScript_MegaAbsol{
-	msgbox(format("Welcome to the Elite 4.\pFrom here, you will fight 4 extremely strong trainers, and the champion.\pPlease note that there is a special rule with battling the Elite 4.\pThat is, you must battle 2 of us as a SINGLES battle, and 2 of us as a DOUBLES battle.\pYou may choose which one of us to battle in which format.\pNow, how would you like to battle me?"))
+	if(!defeated(TRAINER_MEGAABSOL)){
+		lockall
+		applymovement(megaabsol, moves(
+			face_player
+			emote_exclamation_mark
+			delay_16
+			delay_16
+		))			
+		waitmovement
+		applymovement(megaabsol, moves(
+			walk_right * 1
+		))
+		waitmovement
+		msgbox(format("Welcome to the Elite 4.\pFrom here, you will fight 4 extremely strong trainers, and the champion.\pPlease note that there is a special rule with battling the Elite 4.\pThat is, you must battle 2 of us as a SINGLES battle, and 2 of us as a DOUBLES battle.\pYou may choose which one of us to battle in which format.\pNow, how would you like to battle me?"))
+		if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) < 2){
+			dynmultipush("SINGLES", 0)
+			
+		}
+		if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) < 2){
+			dynmultipush("DOUBLES", 1)
+		}
+		dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+		copyvar(VAR_0x8000, VAR_RESULT)
+		if(var(VAR_0x8000) == 0){
+			addvar(VAR_ELITE4_SINGLES_BATTLE_COUNT, 1)
+			msgbox("A singles battle it is.\nI hope you are prepared.")
+			trainerbattle_no_intro(TRAINER_MEGAABSOL, "An exhilirating battle.")
+		}
+		if(var(VAR_0x8000) == 1){
+			addvar(VAR_ELITE4_DOUBLES_BATTLE_COUNT, 1)
+			msgbox("A doubles battle it is.\nI hope you are prepared.")
+			setflag(FLAG_FORCE_DOUBLES_BATTLE)
+			trainerbattle_no_intro(TRAINER_MEGAABSOL, "An exhilirating battle.")
+		}
+		msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE)
+		waitmessage
+		releaseall
+	}
 	
-	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
-		dynmultipush("SINGLES", 0)
-	}
-	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
-		dynmultipush("DOUBLES", 1)
-	}
-	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
-	if(var(VAR_RESULT) == 0){
-		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
-	}
-	if(var(VAR_RESULT) == 1){
-		setflag(FLAG_FORCE_DOUBLES_BATTLE)
-		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
-	}
-	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
+}
+script MegaAbsol{
+	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE)
 	waitmessage
-    end
-
+    releaseall
 }
 
 script Elite4_Hoenn_2_EventScript_MegaSableye{
-
-	msgbox(format("How would you like to battle me?"))
-	
-	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
-		dynmultipush("SINGLES", 0)
+	if(!defeated(TRAINER_MEGASABLEYE)){
+		lockall
+		applymovement(megasableye, moves(
+			face_player
+			emote_exclamation_mark
+			delay_16
+			delay_16
+		))			
+		waitmovement
+		applymovement(megasableye, moves(
+			walk_left * 1
+		))
+		waitmovement
+		msgbox(format("How would you like to battle me?"))
+		if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) < 2){
+			dynmultipush("SINGLES", 0)
+		}
+		if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) < 2){
+			dynmultipush("DOUBLES", 1)
+		}
+		dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+		copyvar(VAR_0x8000, VAR_RESULT)
+		if(var(VAR_0x8000) == 0){
+			addvar(VAR_ELITE4_SINGLES_BATTLE_COUNT, 1)
+			msgbox("Ready or not, here I come!")
+			trainerbattle_no_intro(TRAINER_MEGASABLEYE, "Gaaaah! You got me!")
+		}
+		if(var(VAR_0x8000) == 1){
+			addvar(VAR_ELITE4_DOUBLES_BATTLE_COUNT, 1)
+			setflag(FLAG_FORCE_DOUBLES_BATTLE)
+			msgbox("Ready or not, here I come!")
+			trainerbattle_no_intro(TRAINER_MEGASABLEYE, "Gaaaah! You got me!")
+		}
+		msgbox("Good luck, my friend!", MSGBOX_AUTOCLOSE) 
+		waitmessage
+		releaseall
 	}
-	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
-		dynmultipush("DOUBLES", 1)
-	}
-	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
-	if(var(VAR_RESULT) == 0){
-		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
-	}
-	if(var(VAR_RESULT) == 1){
-		setflag(FLAG_FORCE_DOUBLES_BATTLE)
-		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
-	}
-	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
+}
+script MegaSableye{
+	msgbox("Good luck, my friend!", MSGBOX_AUTOCLOSE)
 	waitmessage
-    end
-
+    releaseall
 }
 
 script Elite4_Hoenn_2_EventScript_MegaGlalie{
-
-	msgbox(format("How would you like to battle me?"))
+	if(!defeated(TRAINER_MEGAGLALIE)){
+		lockall
+		applymovement(megaglalie, moves(
+			face_player
+			emote_exclamation_mark
+			delay_16
+			delay_16
+		))			
+		waitmovement
+		applymovement(megaglalie, moves(
+			walk_right * 1
+		))
+		waitmovement
+		msgbox(format("How would you like to battle me?"))
+		if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) < 2){
+			dynmultipush("SINGLES", 0)
+		}
+		if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) < 2){
+			dynmultipush("DOUBLES", 1)
+		}
+		dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+		copyvar(VAR_0x8000, VAR_RESULT)
+		if(var(VAR_0x8000) == 0){
+			addvar(VAR_ELITE4_SINGLES_BATTLE_COUNT, 1)
+			msgbox("Chompa chompa. Let's do this.")
+			trainerbattle_no_intro(TRAINER_MEGAGLALIE, "Womp womp.")
+		}
+		if(var(VAR_0x8000) == 1){
+			addvar(VAR_ELITE4_DOUBLES_BATTLE_COUNT, 1)
+			setflag(FLAG_FORCE_DOUBLES_BATTLE)
+			msgbox("Chompa chompa. Let's do this.")
+			trainerbattle_no_intro(TRAINER_MEGAGLALIE, "Womp womp.")
+		}
+		msgbox("ROAARRR.\pGood luck!", MSGBOX_AUTOCLOSE) 
+		waitmessage
+		releaseall
+	}
 	
-	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
-		dynmultipush("SINGLES", 0)
-	}
-	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
-		dynmultipush("DOUBLES", 1)
-	}
-	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
-	if(var(VAR_RESULT) == 0){
-		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
-	}
-	if(var(VAR_RESULT) == 1){
-		setflag(FLAG_FORCE_DOUBLES_BATTLE)
-		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
-	}
-	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
-	waitmessage
-    end
 
+}
+script MegaGlalie{
+	msgbox("ROAARRR.\pGood luck!", MSGBOX_AUTOCLOSE)
+	waitmessage
+    releaseall
 }
 
 script Elite4_Hoenn_2_EventScript_MegaSalamence{
-
-	msgbox(format("How would you like to battle me?"))
+	if(!defeated(TRAINER_MEGASALAMENCE)){
+		lockall
+		applymovement(megasalamence, moves(
+			face_player
+			emote_exclamation_mark
+			delay_16
+			delay_16
+		))			
+		waitmovement
+		applymovement(megasalamence, moves(
+			walk_left * 1
+		))
+		waitmovement
+		msgbox(format("How would you like to battle me?"))
+		if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) < 2){
+			dynmultipush("SINGLES", 0)
+		}
+		if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) < 2){
+			dynmultipush("DOUBLES", 1)
+		}
+		dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+		copyvar(VAR_0x8000, VAR_RESULT)
+		if(var(VAR_0x8000) == 0){
+			addvar(VAR_ELITE4_SINGLES_BATTLE_COUNT, 1)
+			msgbox("I will be your last challenge\nbefore the champion.\pLet's see if you're worthy.")
+			trainerbattle_no_intro(TRAINER_MEGASALAMENCE, "You truly are worthy.")
+		}
+		if(var(VAR_0x8000) == 1){
+			addvar(VAR_ELITE4_DOUBLES_BATTLE_COUNT, 1)
+			setflag(FLAG_FORCE_DOUBLES_BATTLE)
+			msgbox("I will be your last challenge\nbefore the champion.\pLet's see if you're worthy.")
+			trainerbattle_no_intro(TRAINER_MEGASALAMENCE, "You truly are worthy.")
+		}
+		msgbox("You truly are worthy.", MSGBOX_AUTOCLOSE) 
+		waitmessage
+		releaseall
+	}
 	
-	if(var(VAR_ELITE4_SINGLES_BATTLE_COUNT) <= 2){
-		dynmultipush("SINGLES", 0)
-	}
-	if(var(VAR_ELITE4_DOUBLES_BATTLE_COUNT) <= 2){
-		dynmultipush("DOUBLES", 1)
-	}
-	dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
-	if(var(VAR_RESULT) == 0){
-		trainerbattle_single(TRAINER_MEGAABSOL, "A singles battle it is.\nI hope you are prepared.", "An exhilirating battle.")
-	}
-	if(var(VAR_RESULT) == 1){
-		setflag(FLAG_FORCE_DOUBLES_BATTLE)
-		trainerbattle_double(TRAINER_MEGAABSOL, "A doubles battle it is.\nI hope you are prepared.", "An exhilirating battle.", "test.")
-	}
-	msgbox("I wish you good luck.", MSGBOX_AUTOCLOSE) 
+}
+script MegaSalamence{
+	msgbox("You truly are worthy.", MSGBOX_AUTOCLOSE)
 	waitmessage
-    end
-
+    releaseall
 }
 
 script Elite4_Hoenn_2_EventScript_MegaSwampert{
-
+	faceplayer
 	trainerbattle_single(TRAINER_MEGASWAMPERT, "I am the champion.\pYou have done well to get this far.\pNow let us have a wonderful\nfinal battle.", "You are the champion.", Elite4_Hoenn_2_CHAMPION_DEFEATED)
 	msgbox("test.", MSGBOX_AUTOCLOSE) 
 	waitmessage
@@ -106,10 +196,9 @@ script Elite4_Hoenn_2_EventScript_MegaSwampert{
 }
 
 script Elite4_Hoenn_2_CHAMPION_DEFEATED{
-	playbgm(MUS_VICTORY_LEAGUE, 0)
 	msgbox("Congratulations.\pYou have conquered all 4 paths.\pYou are truly great.\pGood job.\pEtcetra etcetra...\pNow go back to the Hub.", MSGBOX_AUTOCLOSE) 
 	waitmessage
-	
+	playbgm(MUS_VICTORY_LEAGUE, 0)
 	applymovement(LOCALID_PLAYER, moves(
         face_down
         jump_in_place_down * 2
@@ -129,7 +218,7 @@ script Elite4_Hoenn_2_CHAMPION_DEFEATED{
     ))
 	waitmovement
     applymovement(LOCALID_PLAYER, moves(
-		jump_in_place_down * 10
+		jump_in_place_down * 20
     ))
 	msgbox("Yipee!")
 	waitmessage
@@ -137,4 +226,5 @@ script Elite4_Hoenn_2_CHAMPION_DEFEATED{
 	end
 
 }
+
 

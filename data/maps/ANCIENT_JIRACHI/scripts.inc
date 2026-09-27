@@ -52,11 +52,11 @@ ANCIENT_JIRACHI_EventScript_TalkToJirachi::
 # 56 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	waitmovement
 # 57 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	special BufferCommonItem
+	special BufferUncommonItem
 # 58 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	giveitem VAR_RESULT, 1
 # 59 "data/maps/ANCIENT_JIRACHI/scripts.pory"
-	special BufferUncommonItem
+	special BufferRareItem
 # 60 "data/maps/ANCIENT_JIRACHI/scripts.pory"
 	giveitem VAR_RESULT, 1
 # 61 "data/maps/ANCIENT_JIRACHI/scripts.pory"

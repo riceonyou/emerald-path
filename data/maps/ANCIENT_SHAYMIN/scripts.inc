@@ -54,21 +54,25 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin::
 	waitmessage
 # 33 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3
-# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 34 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	giveitem ITEM_ORAN_CHARM, 1
+# 35 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	waitmessage
+# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4
+# 37 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	giveitem ITEM_ORAN_BERRY, 1
 # 38 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitmessage
-# 40 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	waitmessage
-# 41 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 39 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	playmoncry SPECIES_MANAPHY, CRY_MODE_ENCOUNTER
-# 42 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 40 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	waitmoncry
-# 43 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4
-# 48 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 41 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	msgbox ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_5
+# 46 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	special WarpToNextAct
-# 49 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 47 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	releaseall
 	return
 
@@ -91,13 +95,16 @@ ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_2:
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_3:
 # 33 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
-	.string "And an Oran Charm! With this charm,\n"
-	.string "everytime you enter a battle, your\l"
-	.string "pokemon without items will\l"
-	.string "automatically be given an oran berry!$"
+	.string "And an Oran Charm! With this charm, your\n"
+	.string "Oran Berries heal a quarter of your HP,\l"
+	.string "on top of the 10HP!$"
 
 ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_4:
-# 43 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+# 36 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
+	.string "And take an Oran Berry too.$"
+
+ANCIENT_SHAYMIN_EventScript_TalkToShaymin_Text_5:
+# 41 "data/maps/ANCIENT_SHAYMIN/scripts.pory"
 	.string "I hope my gifts will help you out.\p"
 	.string "Now time to get you to the next\n"
 	.string "path.$"

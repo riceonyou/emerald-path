@@ -21,7 +21,7 @@ script Hoenn2_4_KecShop_Shiny {
 // }
 
 script Hoenn2_4_Doduo{
-	trainerbattle_single(TRAINER_DODUO, format("Apparently this used to be a path meant for bicycles ridden by humans, but most pokemon can't ride bicycles so we just use it asa a bridge."), format("You're too good for me."))
+	trainerbattle_single(TRAINER_DODUO, format("Apparently this used to be a path meant for bicycles ridden by humans, but most pokemon can't ride bicycles so we just use it as a bridge."), format("You're too good for me."))
 	msgbox(format("I'd like to try riding a bicycle one day."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end

@@ -912,6 +912,8 @@ static u32 ItemHealHp(enum BattlerId battler, enum Item itemId, enum HealAmount 
         else
             healAmount = GetItemHoldEffectParam(itemId);
 
+        if (GetBattlerSide(battler) == B_SIDE_PLAYER && CheckBagHasItem(ITEM_ORAN_CHARM, 1) && itemId == ITEM_ORAN_BERRY)
+            healAmount += (GetNonDynamaxMaxHP(battler) * 25 / 100);
         if (BattlerHasTrait(battler, ABILITY_RIPEN) && GetItemPocket(itemId) == POCKET_BERRIES)
             healAmount *= 2;
 

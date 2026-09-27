@@ -239,7 +239,7 @@ Hoenn2_4_Doduo_Text_0:
 	.string "Apparently this used to be a path meant\n"
 	.string "for bicycles ridden by humans, but most\l"
 	.string "pokemon can't ride bicycles so we just\l"
-	.string "use it asa a bridge.$"
+	.string "use it as a bridge.$"
 
 Hoenn2_4_Doduo_Text_1:
 # 24 "data/maps/Hoenn2_4/scripts.pory"

@@ -17,7 +17,7 @@ script Hoenn3_5_Armaldo{
 
 script Hoenn3_5_Linoone{
 	trainerbattle_single(TRAINER_LINOONE, format("Don't think I can't put up a fight just because Obstagoon is stronger than me, linoone!"), format("Noone linoone :("))
-	msgbox(format("Linoone noone noone.\pSomeone, anyone."), MSGBOX_AUTOCLOSE) 
+	msgbox(format("Linoone noone noone......\pSomeone, anyone."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }

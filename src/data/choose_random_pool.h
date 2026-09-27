@@ -289,7 +289,7 @@ static const struct BirchBagWeightedChoice Fossil_Pool[] = {
 };
 
 static const struct BirchBagWeightedChoice Groudon_Pool[] = {
-    {SPECIES_CHARIZARD_MEGA_Y,2},
+    {SPECIES_CHARIZARD_MEGA_Y,4},
     {SPECIES_NINETALES,9},
     {SPECIES_BELLOSSOM,9},
     {SPECIES_FLAREON,9},
@@ -301,8 +301,6 @@ static const struct BirchBagWeightedChoice Groudon_Pool[] = {
     {SPECIES_TORKOAL,9},
     {SPECIES_SOLROCK,9},
     {SPECIES_HEATMOR,1},
-    {SPECIES_HELIOLISK,9},
-    {SPECIES_CENTISKORCH,9},
     {SPECIES_GOUGING_FIRE,1},
 };
 

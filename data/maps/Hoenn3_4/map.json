@@ -97,7 +97,7 @@
     },
     {
       "local_id": "Hoenn3_Ball9",
-      "graphics_id": "OBJ_EVENT_GFX_BALL_GREAT",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 18,
       "y": 14,
       "elevation": 0,
@@ -111,7 +111,7 @@
     },
     {
       "local_id": "Hoenn3_Ball10",
-      "graphics_id": "OBJ_EVENT_GFX_BALL_GREAT",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 20,
       "y": 14,
       "elevation": 0,

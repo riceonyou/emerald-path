@@ -98,12 +98,12 @@ Hoenn2_6_Manectric_Text_1:
 
 Hoenn2_6_Manectric_Text_2:
 # 20 "data/maps/Hoenn2_6/scripts.pory"
-	.string "Congratulations of beating me.\p"
+	.string "Congratulations on beating me.\p"
 	.string "Talk to abra over there to continue.$"
 
 Hoenn2_6_Manectric_Defeated_Text_0:
 # 27 "data/maps/Hoenn2_6/scripts.pory"
-	.string "Congratulations of beating me.\pTalk to abra over there to continue.$"
+	.string "Congratulations on beating me.\pTalk to abra over there to continue.$"
 
 Hoenn2_6_Magneton_Text_0:
 # 33 "data/maps/Hoenn2_6/scripts.pory"

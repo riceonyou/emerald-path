@@ -31,6 +31,8 @@ script AfterWarpIntoNewAct{
 			msgbox("Your Mint Pot activated!")
 			randomelement(ITEM_LONELY_MINT, ITEM_ADAMANT_MINT, ITEM_NAUGHTY_MINT, ITEM_BRAVE_MINT, ITEM_BOLD_MINT, ITEM_IMPISH_MINT, ITEM_LAX_MINT, ITEM_RELAXED_MINT, ITEM_MODEST_MINT, ITEM_MILD_MINT, ITEM_RASH_MINT, ITEM_QUIET_MINT, ITEM_CALM_MINT, ITEM_GENTLE_MINT, ITEM_CAREFUL_MINT, ITEM_SASSY_MINT, ITEM_SERIOUS_MINT)
 			giveitem(VAR_RESULT)
+			randomelement(ITEM_LONELY_MINT, ITEM_ADAMANT_MINT, ITEM_NAUGHTY_MINT, ITEM_BRAVE_MINT, ITEM_BOLD_MINT, ITEM_IMPISH_MINT, ITEM_LAX_MINT, ITEM_RELAXED_MINT, ITEM_MODEST_MINT, ITEM_MILD_MINT, ITEM_RASH_MINT, ITEM_QUIET_MINT, ITEM_CALM_MINT, ITEM_GENTLE_MINT, ITEM_CAREFUL_MINT, ITEM_SASSY_MINT, ITEM_SERIOUS_MINT)
+			giveitem(VAR_RESULT)
 			clearflag(FLAG_GIVE_MINTY_CHARM_MINT)
         }
 
@@ -84,7 +86,7 @@ script AfterWarpIntoNewAct{
 			if((!flag(FLAG_HOENN1_ALT_UNLOCKED)) && (var(VAR_ACT1_WINS) > 1)){
 				setflag(FLAG_HOENN1_ALT_UNLOCKED)
 				playfanfare(MUS_OBTAIN_ITEM)
-				msgbox(format("You've unlocked an alternate first path! Each time you enter a path, you now have a chance to enter the alternate path."))
+				msgbox(format("You've unlocked an alternate first path! Each time you enter a path, you have a chance to enter an alternate path."))
 				waitfanfare
 			}
 		}
@@ -937,7 +939,7 @@ script Hub_Event_Script_Chansey{
 			releaseall
 		}
 	}else{
-		msgbox("You don't have any starter pokemon yet.\pPlease consider adopting some pokemon\nfrom my friend Miltank to the right.")
+		msgbox("You don't have any starter pokemon yet.\pPlease consider adopting some pokemon\nfrom my friend Miltank to your right.")
 		waitmessage
 		releaseall}
 }
@@ -951,78 +953,79 @@ script KecShop_Sign {
 
 script KecShop {
     lockall
-    msgbox("Welcome to the Kecleon Brother's shop!")
-	dynmultipush("Oran Berry (¥200)",ITEM_ORAN_BERRY)
-	dynmultipush("Mem. Mushroom (¥200)",ITEM_MEMORY_MUSHROOM)
+    msgbox("Welcome to the Kecleon Brother's shop!\nWould you like to buy an item?")
+	dynmultipush("{FONT_NARROW}Mem. Mushroom (¥200)",ITEM_MEMORY_MUSHROOM)
+	dynmultipush("{FONT_NARROW}Oran Berry (¥200)",ITEM_ORAN_BERRY)
 	addvar(VAR_TEMP_A, 1)
 	if(flag(FLAG_LUM_BERRY_BUYABLE)){
-		dynmultipush("Lum Berry (¥200)",ITEM_LUM_BERRY)
+		dynmultipush("{FONT_NARROW}Lum Berry (¥200)",ITEM_LUM_BERRY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SERIOUS_MINT_BUYABLE)){
-		dynmultipush("Serious Mint (¥500)",ITEM_SERIOUS_MINT)
+		dynmultipush("{FONT_NARROW}Serious Mint (¥500)",ITEM_SERIOUS_MINT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_RARE_CANDY_BUYABLE)){
-		dynmultipush("Rare Candy (¥2000)",ITEM_RARE_CANDY)
+		dynmultipush("{FONT_NARROW}Rare Candy (¥2000)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_POCKET_BIRCH_BAG_BUYABLE)){
-		dynmultipush("Pkt Birch Bag (¥2000)",ITEM_POCKET_BIRCH_BAG)
+		dynmultipush("{FONT_NARROW}Pkt Birch Bag (¥2000)",ITEM_POCKET_BIRCH_BAG)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_HP_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("HP Bottle Cap (¥300)",ITEM_HP_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}HP Bottle Cap (¥300)",ITEM_HP_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_ATK_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Attack Bottle Cap (¥300)",ITEM_ATK_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Atk Bottle Cap (¥300)",ITEM_ATK_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_DEF_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Defense Bottle Cap (¥300)",ITEM_DEF_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Def Bottle Cap (¥300)",ITEM_DEF_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPEED_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Speed Bottle Cap (¥300)",ITEM_SPEED_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Spe Bottle Cap (¥300)",ITEM_SPEED_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPATK_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Sp. Atk Bottle Cap (¥300)",ITEM_SPATK_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Sp. Atk Bottle Cap (¥300)",ITEM_SPATK_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPDEF_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("SpDef Bottle Cap (¥300)",ITEM_SPDEF_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}SpDef Bottle Cap (¥300)",ITEM_SPDEF_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_HP_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("HP Gold Bottle Cap (¥600)",ITEM_HP_GOLD_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}HP Gold Bottle Cap (¥600)",ITEM_HP_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_ATK_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Atk Gold Bottle Cap (¥600)",ITEM_ATK_GOLD_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Atk Gold Bottle Cap (¥600)",ITEM_ATK_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_DEF_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Defense Gold Bottle Cap (¥600)",ITEM_DEF_GOLD_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Def Gold Bottle Cap (¥600)",ITEM_DEF_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPEED_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("Spe Gold Bottle Cap (¥600)",ITEM_SPEED_GOLD_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROW}Spe Gold Bottle Cap (¥600)",ITEM_SPEED_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPATK_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("SpAtk Gold Bottle Cap (¥600)",ITEM_SPATK_GOLD_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROWER}SpAtk Gold Bottle Cap (¥600)",ITEM_SPATK_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_SPDEF_GOLD_BOTTLE_CAP_BUYABLE)){
-		dynmultipush("SpDef Gold Bottle Cap (¥600)",ITEM_SPDEF_GOLD_BOTTLE_CAP)
+		dynmultipush("{FONT_NARROWER}SpDef Gold Bottle Cap (¥600)",ITEM_SPDEF_GOLD_BOTTLE_CAP)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 
 	if(var(VAR_TEMP_A) != 0){
-		showmoneybox(18, 11)
+		
+		showmoneybox(18, 10)
 		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_ORAN_BERRY:
@@ -1129,110 +1132,110 @@ script KecShop {
 
 script KecShop_Shiny {
     lockall
-    msgbox("Welcome to the Kecleon Brother's shop!")
+    msgbox("Welcome to the Kecleon Brother's shop!\nWould you like to buy an item?")
 	if(flag(FLAG_TM_NOBLE_ROAR_BUYABLE)){
-		dynmultipush("TM Noble Roar (¥200)",ITEM_TM_NOBLE_ROAR)
+		dynmultipush("{FONT_NARROW}TM Noble Roar (¥200)",ITEM_TM_NOBLE_ROAR)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_CHARM_BUYABLE)){
-		dynmultipush("TM Charm (¥200)",ITEM_TM_CHARM)
+		dynmultipush("{FONT_NARROW}TM Charm (¥200)",ITEM_TM_CHARM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_FAKE_TEARS_BUYABLE)){
-		dynmultipush("TM Fake Tears (¥200)",ITEM_TM_FAKE_TEARS)
+		dynmultipush("{FONT_NARROW}TM Fake Tears (¥200)",ITEM_TM_FAKE_TEARS)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_CONFUSE_RAY_BUYABLE)){
-		dynmultipush("TM Confuse Ray (¥300)",ITEM_TM_CONFUSE_RAY)
+		dynmultipush("{FONT_NARROW}TM Confuse Ray (¥300)",ITEM_TM_CONFUSE_RAY)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_THUNDER_WAVE_BUYABLE)){
-		dynmultipush("TM Thunder Wave (¥300)",ITEM_TM_THUNDER_WAVE)
+		dynmultipush("{FONT_NARROW}TM Thunder Wave (¥300)",ITEM_TM_THUNDER_WAVE)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_WILL_O_WISP_BUYABLE)){
-		dynmultipush("TM Will-O-Wisp (¥500)",ITEM_TM_WILL_O_WISP)
+		dynmultipush("{FONT_NARROW}TM Will-O-Wisp (¥500)",ITEM_TM_WILL_O_WISP)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_TOXIC_BUYABLE)){
-		dynmultipush("TM Toxic (¥500)",ITEM_TM_TOXIC)
+		dynmultipush("{FONT_NARROW}TM Toxic (¥500)",ITEM_TM_TOXIC)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_SWIFT_BUYABLE)){
-		dynmultipush("TM Swift (¥500)",ITEM_TM_SWIFT)
+		dynmultipush("{FONT_NARROW}TM Swift (¥500)",ITEM_TM_SWIFT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_CUT_BUYABLE)){
-		dynmultipush("TM Cut (¥500)",ITEM_TM_CUT)
+		dynmultipush("{FONT_NARROW}TM Cut (¥500)",ITEM_TM_CUT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_ROCK_SMASH_BUYABLE)){
-		dynmultipush("TM Rock Smash (¥500)",ITEM_TM_ROCK_SMASH)
+		dynmultipush("{FONT_NARROW}TM Rock Smash (¥500)",ITEM_TM_ROCK_SMASH)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_SNARL_BUYABLE)){
-		dynmultipush("TM Snarl (¥500)",ITEM_TM_SNARL)
+		dynmultipush("{FONT_NARROW}TM Snarl (¥500)",ITEM_TM_SNARL)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_ELECTROWEB_BUYABLE)){
-		dynmultipush("TM Electroweb (¥500)",ITEM_TM_ELECTROWEB)
+		dynmultipush("{FONT_NARROW}TM Electroweb (¥500)",ITEM_TM_ELECTROWEB)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_AURORA_BEAM_BUYABLE)){
-		dynmultipush("TM Aurora Beam (¥500)",ITEM_TM_AURORA_BEAM)
+		dynmultipush("{FONT_NARROW}TM Aurora Beam (¥500)",ITEM_TM_AURORA_BEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_PSYBEAM_BUYABLE)){
-		dynmultipush("TM Psybeam (¥500)",ITEM_TM_PSYBEAM)
+		dynmultipush("{FONT_NARROW}TM Psybeam (¥500)",ITEM_TM_PSYBEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_FLAMETHROWER_BUYABLE)){
-		dynmultipush("TM Flamethrower (¥1200)",ITEM_TM_FLAMETHROWER)
+		dynmultipush("{FONT_NARROW}TM Flamethrower (¥1200)",ITEM_TM_FLAMETHROWER)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_ICE_BEAM_BUYABLE)){
-		dynmultipush("TM Ice Beam (¥1200)",ITEM_TM_ICE_BEAM)
+		dynmultipush("{FONT_NARROW}TM Ice Beam (¥1200)",ITEM_TM_ICE_BEAM)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_THUNDERBOLT_BUYABLE)){
-		dynmultipush("TM Thunderbolt (¥1200)",ITEM_TM_THUNDERBOLT)
+		dynmultipush("{FONT_NARROW}TM Thunderbolt (¥1200)",ITEM_TM_THUNDERBOLT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_SCALD_BUYABLE)){
-		dynmultipush("TM Scald (¥1000)",ITEM_TM_SCALD)
+		dynmultipush("{FONT_NARROW}TM Scald (¥1000)",ITEM_TM_SCALD)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_MEGA_DRAIN_BUYABLE)){
-		dynmultipush("TM Mega Drain (¥800)",ITEM_TM_MEGA_DRAIN)
+		dynmultipush("{FONT_NARROW}TM Mega Drain (¥800)",ITEM_TM_MEGA_DRAIN)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_SLUDGE_BOMB_BUYABLE)){
-		dynmultipush("TM Sludge Bomb (¥1000)",ITEM_TM_SLUDGE_BOMB)
+		dynmultipush("{FONT_NARROW}TM Sludge Bomb (¥1000)",ITEM_TM_SLUDGE_BOMB)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_DUAL_WINGBEAT_BUYABLE)){
-		dynmultipush("TM Dual Wingbeat (¥900)",ITEM_TM_DUAL_WINGBEAT)
+		dynmultipush("{FONT_NARROW}TM Dual Wingbeat (¥900)",ITEM_TM_DUAL_WINGBEAT)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_LEECH_LIFE_BUYABLE)){
-		dynmultipush("TM Leech Life (¥1000)",ITEM_TM_LEECH_LIFE)
+		dynmultipush("{FONT_NARROW}TM Leech Life (¥1000)",ITEM_TM_LEECH_LIFE)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_PLAY_ROUGH_BUYABLE)){
-		dynmultipush("TM Play Rough (¥1000)",ITEM_TM_PLAY_ROUGH)
+		dynmultipush("{FONT_NARROW}TM Play Rough (¥1000)",ITEM_TM_PLAY_ROUGH)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_SHADOW_BALL_BUYABLE)){
-		dynmultipush("TM Shadow Ball (¥1000)",ITEM_TM_SHADOW_BALL)
+		dynmultipush("{FONT_NARROW}TM Shadow Ball (¥1000)",ITEM_TM_SHADOW_BALL)
 		addvar(VAR_TEMP_A, 1)
 	}
 	if(flag(FLAG_TM_EARTH_POWER_BUYABLE)){
-		dynmultipush("TM Earth Power (¥1000)",ITEM_TM_EARTH_POWER)
+		dynmultipush("{FONT_NARROW}TM Earth Power (¥1000)",ITEM_TM_EARTH_POWER)
 		addvar(VAR_TEMP_A, 1)
 	}
 
 	if(var(VAR_TEMP_A) != 0){
-		showmoneybox(18, 11)
+		showmoneybox(18, 10)
 		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_TM_NOBLE_ROAR:
@@ -1525,7 +1528,7 @@ script Hub_Event_Script_Kecleon {
 	lockall
 	faceplayer
     setvar(VAR_TEMP_A, 0)
-	msgbox("Hey there! Would you like me to\nstock an item?")
+	
 	if(!flag(FLAG_RARE_CANDY_UNLOCKED)){
 		dynmultipush("Rare Candy (2000C)",ITEM_RARE_CANDY)
 		addvar(VAR_TEMP_A, 1)
@@ -1556,8 +1559,8 @@ script Hub_Event_Script_Kecleon {
 		addvar(VAR_TEMP_A, 1)
 	}
 
-
 	if(var(VAR_TEMP_A) != 0){
+		msgbox("Hey there! Would you like me to\nstock an item?")
 		showcoinsbox(21, 11)
 		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
@@ -1660,7 +1663,7 @@ script Hub_Event_Script_Shiny_Kecleon {
 	lockall
 	faceplayer
     setvar(VAR_TEMP_A, 0)
-	msgbox("Howdy! Would you like me to\nstock a new TM?")
+	
 	if(!flag(FLAG_TM_NOBLE_ROAR_UNLOCKED)){
 		dynmultipush("TM Noble Roar (400C)",ITEM_TM_NOBLE_ROAR)
 		addvar(VAR_TEMP_A, 1)
@@ -1757,6 +1760,7 @@ script Hub_Event_Script_Shiny_Kecleon {
 
 	if(var(VAR_TEMP_A) != 0){
 		showcoinsbox(21, 11)
+		msgbox("Howdy! Would you like me to\nstock a new TM?")
 		dynmultistack(0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 		switch(var(VAR_RESULT)){
 			case ITEM_TM_NOBLE_ROAR:
@@ -3635,7 +3639,7 @@ script Hub_Event_Script_Chimecho {
 			case ITEM_NORMAL_CHARM:
 				msgbox(format("Your normal moves do 1.1 times more damage."))
 			case ITEM_MINTY_CHARM:
-				msgbox(format("Gain a random mint at the start of each path."))
+				msgbox(format("Gain 2 random mints at the start of each path."))
 			case ITEM_BRUXISH_FLOSS_CHARM:
 				msgbox(format("Your biting moves do 1.2 dmg."))
 			case ITEM_UNOWN_BUDDY_CHARM:

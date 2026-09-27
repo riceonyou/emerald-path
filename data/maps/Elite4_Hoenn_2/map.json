@@ -2,7 +2,7 @@
   "id": "MAP_ELITE4_HOENN_2",
   "name": "Elite4_Hoenn_2",
   "layout": "LAYOUT_ELITE4_HOENN_2",
-  "music": "MUS_EVER_GRANDE",
+  "music": "MUS_VICTORY_ROAD",
   "region_map_section": "MAPSEC_AG_Elite4_Hoenn",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "megaabsol",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ABSOL_MEGA)",
       "x": 3,
       "y": 17,
@@ -22,12 +23,13 @@
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Elite4_Hoenn_2_EventScript_MegaAbsol",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MegaAbsol",
       "flag": "0"
     },
     {
+      "local_id": "megaglalie",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GLALIE_MEGA)",
       "x": 3,
       "y": 11,
@@ -35,12 +37,13 @@
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Elite4_Hoenn_2_EventScript_MegaGlalie",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MegaGlalie",
       "flag": "0"
     },
     {
+      "local_id": "megasableye",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE_MEGA)",
       "x": 7,
       "y": 14,
@@ -48,12 +51,13 @@
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Elite4_Hoenn_2_EventScript_MegaSableye",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MegaSableye",
       "flag": "0"
     },
     {
+      "local_id": "megasalamence",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SALAMENCE_MEGA)",
       "x": 7,
       "y": 8,
@@ -61,9 +65,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Elite4_Hoenn_2_EventScript_MegaSalamence",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MegaSalamence",
       "flag": "0"
     },
     {
@@ -89,6 +93,43 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Elite4_Hoenn_2_EventScript_MegaAbsol"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Elite4_Hoenn_2_EventScript_MegaSableye"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Elite4_Hoenn_2_EventScript_MegaGlalie"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Elite4_Hoenn_2_EventScript_MegaSalamence"
+    }
+  ],
   "bg_events": []
 }

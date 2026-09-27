@@ -62,7 +62,7 @@ script Hoenn1_Alt_3_Itemball_4{
 
 script Hoenn1_Alt_3_Itemball_5{
     lockall
-    call(GiveCommonItem)
+    call(GiveUncommonItem)
     removeobject(HOENN1_ALT_ITEM_5)
     setflag(FLAG_ITEM_1_5)
     releaseall

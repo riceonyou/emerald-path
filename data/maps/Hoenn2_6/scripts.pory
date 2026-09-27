@@ -17,14 +17,14 @@ script Hoenn2_6_Swalot{
 
 script Hoenn2_6_Manectric{
 	trainerbattle_single(TRAINER_LEADER_MANECTRIC, format("Hey there. I'm the leader of this path. I won't go easy on you!"), "Good battle! You were truly worthy\nof the victory!", Hoenn2_6_Manectric_Defeated)
-	msgbox(format("Congratulations of beating me.\pTalk to abra over there to continue."), MSGBOX_AUTOCLOSE) 
+	msgbox(format("Congratulations on beating me.\pTalk to abra over there to continue."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
 
 script Hoenn2_6_Manectric_Defeated{
 	setflag(FLAG_DEFEATED_PATH_LEADER)
-	msgbox("Congratulations of beating me.\pTalk to abra over there to continue.", MSGBOX_AUTOCLOSE) 
+	msgbox("Congratulations on beating me.\pTalk to abra over there to continue.", MSGBOX_AUTOCLOSE) 
 	waitmessage
 	end
 }

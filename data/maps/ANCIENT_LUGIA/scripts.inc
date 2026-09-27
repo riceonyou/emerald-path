@@ -111,7 +111,7 @@ ANCIENT_LUGIA_EventScript_TalkToLugia_Text_0:
 ANCIENT_LUGIA_EventScript_Sign_Text_0:
 # 26 "data/maps/ANCIENT_LUGIA/scripts.pory"
 	.string "Good job on defeating the first path!\n"
-	.string "Please let on of my flying pokemon\l"
+	.string "Please let one of my flying pokemon\l"
 	.string "friends join you!$"
 
 ANCIENT_LUGIA_EventScript_Sign_Text_1:

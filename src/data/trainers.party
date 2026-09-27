@@ -1696,6 +1696,7 @@ Porygon-Z @ Choice Specs
 Nature: Timid
 Level: 39
 - Tri Attack
+- Shadow Ball
 
 Clodsire
 Level: 39
@@ -1712,11 +1713,11 @@ Level: 38
 - Aqua Jet
 - Crunch
 
-Snorlax @ Chesto Berry
+Snorlax @ Sitrus Berry
 Level: 40
 - Body Slam
 - Crunch
-- Rest
+- Curse
 - Earthquake
 
 Slaking @ Silk Scarf
@@ -5125,7 +5126,7 @@ Level: 45
 Unfezant @ Sharp Beak
 Level: 44
 - Tailwind
-- Brave Bird
+- Heat Wave
 - Hurricane
 - Uproar
 

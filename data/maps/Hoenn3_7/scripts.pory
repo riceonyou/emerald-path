@@ -17,7 +17,7 @@ script Hoenn3_7_Sandslash{
 
 script Hoenn3_7_Slaking{
 	trainerbattle_single(TRAINER_SLAKING, format("Oh hello. I'm the leader of this path. Defeat me and you'll only have the final path!"), "Your skills are no joke!", Hoenn3_7_Slaking_Defeated)
-	msgbox(format("Talk to abra over there to continue matey.\l.............\lI don't know why I added that sorry."), MSGBOX_AUTOCLOSE) 
+	msgbox(format("Talk to abra over there to continue, matey.\l.............\lI don't know why I added that sorry."), MSGBOX_AUTOCLOSE) 
 	waitmessage
     end
 }
