@@ -1847,3 +1847,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ANCIENT_DEOXYS/scripts.inc"
 
 	.include "data/maps/Hoenn4_Underwater/scripts.inc"
+
+	.include "data/maps/ANCIENT_AUTUMN_RUINS/scripts.inc"

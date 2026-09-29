@@ -196,15 +196,15 @@ Level: 11
 - Acid
 - Sleep Powder
 
-Bellsprout @ Oran Berry
+Bellsprout
 Level: 10
-- Vine Whip
-- Acid Spray
+- Poison Jab
+- Razor Leaf
 
 Budew @ Big Root
 Nature: Timid
 Level: 9
-- Mega Drain
+- Giga Drain
 - Sleep Powder
 - Stun Spore
 
@@ -223,8 +223,8 @@ Level: 11
 - Bug Bite
 - Poison Sting
 
-Caterpie
-Level: 10
+Caterpie @ Oran Berry
+Level: 11
 - Skitter Smack
 - Lunge
 - Fake Tears
@@ -294,12 +294,14 @@ Level: 10
 - Flame Wheel
 - Smog
 - Mach Punch
+- Fire Punch
 
 Elekid
 Level: 10
 - Volt Switch
 - Brick Break
 - Light Screen
+- Thunder Punch
 
 === TRAINER_SEEDOT ===
 Name: SEEDOT
@@ -378,7 +380,7 @@ Level: 11
 
 Mareanie @ Loaded Dice
 Level: 10
-- Pin Missile
+- Baneful Bunker
 - Peck
 - Poison Sting
 - Infestation
@@ -476,6 +478,7 @@ Level: 10
 - Mud Slap
 - Clamp
 - Slash
+- Razor Shell
 
 === TRAINER_LEADER_NOSEPASS ===
 Name: NOSEPASS

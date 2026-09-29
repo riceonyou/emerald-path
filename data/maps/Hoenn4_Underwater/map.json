@@ -23,11 +23,11 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
+      "x": 16,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_HOENN4_2",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_HOENN4_3",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

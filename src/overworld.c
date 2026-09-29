@@ -337,7 +337,8 @@ FLAG_TM_DUAL_WINGBEAT_UNLOCKED,\
 FLAG_TM_LEECH_LIFE_UNLOCKED,\
 FLAG_TM_PLAY_ROUGH_UNLOCKED,\
 FLAG_TM_SHADOW_BALL_UNLOCKED,\
-FLAG_TM_EARTH_POWER_UNLOCKED
+FLAG_TM_EARTH_POWER_UNLOCKED,\
+FLAG_HOENN1_ALT_UNLOCKED
 
 // Flags listed above are restored after whiteout state reset
 
@@ -1604,9 +1605,9 @@ void DoWhiteOut(void)
     }
     else
     {
-        ResetPokemonAndItems();
         VarSet(VAR_CURRENT_ACT, 0);
         UpdateLevelCap();
+        ResetPokemonAndItems();
         ClearWhiteoutFlags();
         Overworld_ResetStateAfterWhiteOut();
         SetWarpHub();

@@ -9864,6 +9864,16 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Hoenn4_Underwater/border.bin",
       "blockdata_filepath": "data/layouts/Hoenn4_Underwater/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_AUTUMN_RUINS",
+      "name": "ANCIENT_AUTUMN_RUINS_Layout",
+      "width": 11,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_AutmnRuins",
+      "border_filepath": "data/layouts/ANCIENT_AUTUMN_RUINS/border.bin",
+      "blockdata_filepath": "data/layouts/ANCIENT_AUTUMN_RUINS/map.bin"
     }
   ]
 }
